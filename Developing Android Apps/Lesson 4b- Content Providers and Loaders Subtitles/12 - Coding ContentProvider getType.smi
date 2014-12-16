@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+Let's go back to coding the content provider. The first
+<SYNC Start=4190><P Class=KRCC>
+&nbsp;
+<SYNC Start=4191><P Class=KRCC>
+of the required content provider methods we're going to implement
+<SYNC Start=6860><P Class=KRCC>
+&nbsp;
+<SYNC Start=6861><P Class=KRCC>
+is getType. getType is used to return the mime type
+<SYNC Start=10130><P Class=KRCC>
+&nbsp;
+<SYNC Start=10131><P Class=KRCC>
+associated with the data at the given URI. We use
+<SYNC Start=13420><P Class=KRCC>
+&nbsp;
+<SYNC Start=13421><P Class=KRCC>
+the URI matcher we built earlier to match the given
+<SYNC Start=16010><P Class=KRCC>
+&nbsp;
+<SYNC Start=16011><P Class=KRCC>
+URI against the expressions we've compiled in. For each match,
+<SYNC Start=19890><P Class=KRCC>
+&nbsp;
+<SYNC Start=19891><P Class=KRCC>
+we return a unique mime time, that starts with either
+<SYNC Start=22690><P Class=KRCC>
+&nbsp;
+<SYNC Start=22691><P Class=KRCC>
+V and D Android cursor item, for a single record or
+<SYNC Start=25400><P Class=KRCC>
+&nbsp;
+<SYNC Start=25401><P Class=KRCC>
+V and D Android cursor dir for multiple items.
+<SYNC Start=28153><P Class=KRCC>
+&nbsp;
+<SYNC Start=28154><P Class=KRCC>
+We've nicely already defined these strings in our WeatherContract, in
+<SYNC Start=31167><P Class=KRCC>
+&nbsp;
+<SYNC Start=31168><P Class=KRCC>
+our tests, we're getting the type. We're going to compose
+<SYNC Start=34535><P Class=KRCC>
+&nbsp;
+<SYNC Start=34536><P Class=KRCC>
+URIs, using the standard methods we have, inside of our
+<SYNC Start=37615><P Class=KRCC>
+&nbsp;
+<SYNC Start=37616><P Class=KRCC>
+WeatherContract. Then, we're going to pass these in to
+<SYNC Start=41440><P Class=KRCC>
+&nbsp;
+<SYNC Start=41441><P Class=KRCC>
+our content provider, through the ContentResolver. Which is how you
+<SYNC Start=44810><P Class=KRCC>
+&nbsp;
+<SYNC Start=44811><P Class=KRCC>
+call all functions in content provider. And we're going to
+<SYNC Start=48800><P Class=KRCC>
+&nbsp;
+<SYNC Start=48801><P Class=KRCC>
+make sure it matches what we have in the contract.
+<SYNC Start=51380><P Class=KRCC>
+&nbsp;
+<SYNC Start=51381><P Class=KRCC>
+I've placed the actual values as comments so you can
+<SYNC Start=54930><P Class=KRCC>
+&nbsp;
+<SYNC Start=54931><P Class=KRCC>
+see, really, what's going on. Note that some of these returning
+<SYNC Start=57830><P Class=KRCC>
+&nbsp;
+<SYNC Start=57831><P Class=KRCC>
+type directory, which means they're going to return a list
+<SYNC Start=60150><P Class=KRCC>
+&nbsp;
+<SYNC Start=60151><P Class=KRCC>
+of different items in their cursor. While others are returning type
+<SYNC Start=63030><P Class=KRCC>
+&nbsp;
+<SYNC Start=63031><P Class=KRCC>
+item, which means they will only return a single item.
+<SYNC Start=66020><P Class=KRCC>
+&nbsp;
+<SYNC Start=66021><P Class=KRCC>
+Next, we're going to have you finish up getType. You're going to add
+<SYNC Start=69230><P Class=KRCC>
+&nbsp;
+<SYNC Start=69231><P Class=KRCC>
+the appropriate cases in this switch statement. But to return mime
+<SYNC Start=71970><P Class=KRCC>
+&nbsp;
+<SYNC Start=71971><P Class=KRCC>
+types, the remaining URI types that we aren't yet handling. No,
+<SYNC Start=76270><P Class=KRCC>
+&nbsp;
+<SYNC Start=76271><P Class=KRCC>
+there are only two to add, and they
+<SYNC Start=77960><P Class=KRCC>
+&nbsp;
+<SYNC Start=77961><P Class=KRCC>
+really look just like the ones in WeatherContract.</BODY>
+</SAMI>

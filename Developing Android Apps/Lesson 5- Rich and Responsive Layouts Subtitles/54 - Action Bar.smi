@@ -1,0 +1,170 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=190><P Class=KRCC>
+Earlier, we learned about styles and how you can apply them
+<SYNC Start=2450><P Class=KRCC>
+&nbsp;
+<SYNC Start=2451><P Class=KRCC>
+to an individual View. If you want to apply it to
+<SYNC Start=5420><P Class=KRCC>
+&nbsp;
+<SYNC Start=5421><P Class=KRCC>
+all of the views in an activity or application, you can
+<SYNC Start=8270><P Class=KRCC>
+&nbsp;
+<SYNC Start=8271><P Class=KRCC>
+do it by specifying a theme attribute on the activity or
+<SYNC Start=11330><P Class=KRCC>
+&nbsp;
+<SYNC Start=11331><P Class=KRCC>
+application tag in the Android manifest. Now we style the action
+<SYNC Start=15620><P Class=KRCC>
+&nbsp;
+<SYNC Start=15621><P Class=KRCC>
+bar to look like these visual mocks. This is the settings,
+<SYNC Start=18820><P Class=KRCC>
+&nbsp;
+<SYNC Start=18821><P Class=KRCC>
+detail and main activity. For all cases, we want the background
+<SYNC Start=22040><P Class=KRCC>
+&nbsp;
+<SYNC Start=22041><P Class=KRCC>
+color to be this blue hex color. Then we notice that the
+<SYNC Start=25220><P Class=KRCC>
+&nbsp;
+<SYNC Start=25221><P Class=KRCC>
+styling of the settings and detail activities look very similar.
+<SYNC Start=28300><P Class=KRCC>
+&nbsp;
+<SYNC Start=28301><P Class=KRCC>
+They both have the app icon and the activity title. On
+<SYNC Start=31070><P Class=KRCC>
+&nbsp;
+<SYNC Start=31071><P Class=KRCC>
+the other hand, main activity just shows the logo. It's a
+<SYNC Start=33670><P Class=KRCC>
+&nbsp;
+<SYNC Start=33671><P Class=KRCC>
+different attribute than the app icon, and this was provided in
+<SYNC Start=36740><P Class=KRCC>
+&nbsp;
+<SYNC Start=36741><P Class=KRCC>
+asset drop earlier and it's called ic_logo. Because of these similarities,
+<SYNC Start=41840><P Class=KRCC>
+&nbsp;
+<SYNC Start=41841><P Class=KRCC>
+we can use the same theme for these two activities and
+<SYNC Start=44530><P Class=KRCC>
+&nbsp;
+<SYNC Start=44531><P Class=KRCC>
+we can create a new theme for the main activity. In
+<SYNC Start=47700><P Class=KRCC>
+&nbsp;
+<SYNC Start=47701><P Class=KRCC>
+the case of our app, we use app theme here and
+<SYNC Start=50450><P Class=KRCC>
+&nbsp;
+<SYNC Start=50451><P Class=KRCC>
+we use forecast theme here. We customize the themes in
+<SYNC Start=54050><P Class=KRCC>
+&nbsp;
+<SYNC Start=54051><P Class=KRCC>
+the styles file in the base values folder. The app
+<SYNC Start=57480><P Class=KRCC>
+&nbsp;
+<SYNC Start=57481><P Class=KRCC>
+theme inherits from the dark action bar system theme but
+<SYNC Start=61140><P Class=KRCC>
+&nbsp;
+<SYNC Start=61141><P Class=KRCC>
+we override the action bar style to be our own.
+<SYNC Start=64040><P Class=KRCC>
+&nbsp;
+<SYNC Start=64041><P Class=KRCC>
+This is defined here. We give it a parent ActionBar
+<SYNC Start=66480><P Class=KRCC>
+&nbsp;
+<SYNC Start=66481><P Class=KRCC>
+style, and then we specify the background to be the
+<SYNC Start=69135><P Class=KRCC>
+&nbsp;
+<SYNC Start=69136><P Class=KRCC>
+sunshine_blue color. Remember that this will be used in the
+<SYNC Start=71970><P Class=KRCC>
+&nbsp;
+<SYNC Start=71971><P Class=KRCC>
+settings activity and the detail activity. Then for the main
+<SYNC Start=75480><P Class=KRCC>
+&nbsp;
+<SYNC Start=75481><P Class=KRCC>
+activity, we declare the ForecastTheme. We inherit from the AppTheme, in
+<SYNC Start=79500><P Class=KRCC>
+&nbsp;
+<SYNC Start=79501><P Class=KRCC>
+case there's more attributes that got added here, and then we'll be
+<SYNC Start=82370><P Class=KRCC>
+&nbsp;
+<SYNC Start=82371><P Class=KRCC>
+able to inherit it for free. But we override the action bar
+<SYNC Start=84990><P Class=KRCC>
+&nbsp;
+<SYNC Start=84991><P Class=KRCC>
+style to be this one. We set the logo because that's displayed
+<SYNC Start=88110><P Class=KRCC>
+&nbsp;
+<SYNC Start=88111><P Class=KRCC>
+in the main activity, and we set the display options so
+<SYNC Start=91220><P Class=KRCC>
+&nbsp;
+<SYNC Start=91221><P Class=KRCC>
+that we can show the logo. For more information on the action
+<SYNC Start=93880><P Class=KRCC>
+&nbsp;
+<SYNC Start=93881><P Class=KRCC>
+bar display options, you can see the list here. For backward compatibility,
+<SYNC Start=97790><P Class=KRCC>
+&nbsp;
+<SYNC Start=97791><P Class=KRCC>
+we needed to find these action bar styles in the base values
+<SYNC Start=100680><P Class=KRCC>
+&nbsp;
+<SYNC Start=100681><P Class=KRCC>
+folder as well in the values V14 folder. The action bar compact class in the
+<SYNC Start=105220><P Class=KRCC>
+&nbsp;
+<SYNC Start=105221><P Class=KRCC>
+support library handles action bar behavior up
+<SYNC Start=107570><P Class=KRCC>
+&nbsp;
+<SYNC Start=107571><P Class=KRCC>
+through honeycomb. And then for ice cream sandwich
+<SYNC Start=110070><P Class=KRCC>
+&nbsp;
+<SYNC Start=110071><P Class=KRCC>
+and above, it goes through the framework
+<SYNC Start=111760><P Class=KRCC>
+&nbsp;
+<SYNC Start=111761><P Class=KRCC>
+implementation of the action bar. You can see
+<SYNC Start=114150><P Class=KRCC>
+&nbsp;
+<SYNC Start=114151><P Class=KRCC>
+the code for the two files below. Go ahead and make these two changes now.</BODY>
+</SAMI>

@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=410><P Class=KRCC>
+To make the preferences appear on the phone, we
+<SYNC Start=2650><P Class=KRCC>
+&nbsp;
+<SYNC Start=2651><P Class=KRCC>
+need to modify settings activity. In the on-create method
+<SYNC Start=5730><P Class=KRCC>
+&nbsp;
+<SYNC Start=5731><P Class=KRCC>
+we're going to replace this to do with some code.
+<SYNC Start=8270><P Class=KRCC>
+&nbsp;
+<SYNC Start=9290><P Class=KRCC>
+We're going to call addPreferencesFromResource with the pref_general xml
+<SYNC Start=14111><P Class=KRCC>
+&nbsp;
+<SYNC Start=14112><P Class=KRCC>
+that we defined. Then we need to bind the
+<SYNC Start=16700><P Class=KRCC>
+&nbsp;
+<SYNC Start=16701><P Class=KRCC>
+preference summary to the value of the location preference.
+<SYNC Start=20780><P Class=KRCC>
+&nbsp;
+<SYNC Start=20781><P Class=KRCC>
+This means that when the user changes the preference,
+<SYNC Start=23320><P Class=KRCC>
+&nbsp;
+<SYNC Start=23321><P Class=KRCC>
+the summary value underneath the label will be updated.
+<SYNC Start=26820><P Class=KRCC>
+&nbsp;
+<SYNC Start=26821><P Class=KRCC>
+If you look at the declaration of this method,
+<SYNC Start=29090><P Class=KRCC>
+&nbsp;
+<SYNC Start=29091><P Class=KRCC>
+we see that for a given preference, it sets a
+<SYNC Start=31640><P Class=KRCC>
+&nbsp;
+<SYNC Start=31641><P Class=KRCC>
+preference change listener on it. If you scroll to
+<SYNC Start=34590><P Class=KRCC>
+&nbsp;
+<SYNC Start=34591><P Class=KRCC>
+the top, you see that the settings activity actually implements
+<SYNC Start=37870><P Class=KRCC>
+&nbsp;
+<SYNC Start=37871><P Class=KRCC>
+the interface on preference change listener. That method is
+<SYNC Start=41580><P Class=KRCC>
+&nbsp;
+<SYNC Start=41581><P Class=KRCC>
+found down below, where we override the on preference change
+<SYNC Start=44990><P Class=KRCC>
+&nbsp;
+<SYNC Start=44991><P Class=KRCC>
+method. Remember that our location preference is actually an
+<SYNC Start=48380><P Class=KRCC>
+&nbsp;
+<SYNC Start=48381><P Class=KRCC>
+edit text preference. So, it won't fall into this case,
+<SYNC Start=52010><P Class=KRCC>
+&nbsp;
+<SYNC Start=52011><P Class=KRCC>
+but it will fall in this case down here. Then,
+<SYNC Start=54940><P Class=KRCC>
+&nbsp;
+<SYNC Start=54941><P Class=KRCC>
+in the settings UI you can see that the summary
+<SYNC Start=56970><P Class=KRCC>
+&nbsp;
+<SYNC Start=56971><P Class=KRCC>
+is now this value. Make these changes in your app.
+<SYNC Start=60240><P Class=KRCC>
+&nbsp;
+<SYNC Start=60241><P Class=KRCC>
+See the instructor notes for the lines of code you need.</BODY>
+</SAMI>

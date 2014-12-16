@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+There's a number of different content providers available to
+<SYNC Start=2500><P Class=KRCC>
+&nbsp;
+<SYNC Start=2501><P Class=KRCC>
+access different kinds of media stored in different locations.
+<SYNC Start=6030><P Class=KRCC>
+&nbsp;
+<SYNC Start=6031><P Class=KRCC>
+To access audio media stored in the internal data store, you'd use the
+<SYNC Start=10095><P Class=KRCC>
+&nbsp;
+<SYNC Start=10096><P Class=KRCC>
+INTERNAL_CONTENT_URI provided in the MediaStore.Audio.Media class.</BODY>
+</SAMI>

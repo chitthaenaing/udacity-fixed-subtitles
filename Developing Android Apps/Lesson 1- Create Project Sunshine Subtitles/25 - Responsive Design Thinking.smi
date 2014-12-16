@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=5><P Class=KRCC>
+Responsive design, I know. [LAUGH] It's fun to resize your web browser and
+<SYNC Start=5080><P Class=KRCC>
+&nbsp;
+<SYNC Start=5081><P Class=KRCC>
+see which sites resize gratefully and which sites remain defiantly large with
+<SYNC Start=10210><P Class=KRCC>
+&nbsp;
+<SYNC Start=10211><P Class=KRCC>
+gross horizontal scroll bars. But responsive design is not just for
+<SYNC Start=14470><P Class=KRCC>
+&nbsp;
+<SYNC Start=14471><P Class=KRCC>
+the web. Today, the lines between phones and tablets are disappearing. So
+<SYNC Start=19580><P Class=KRCC>
+&nbsp;
+<SYNC Start=19581><P Class=KRCC>
+it's important to think about your UI will scale in our multiscreen world.
+<SYNC Start=24140><P Class=KRCC>
+&nbsp;
+<SYNC Start=24141><P Class=KRCC>
+Don't be overwhelmed. Just like designing responsive layouts for the web,
+<SYNC Start=28840><P Class=KRCC>
+&nbsp;
+<SYNC Start=28841><P Class=KRCC>
+build your layouts to be reasonably flexible or within a common device size.
+<SYNC Start=33760><P Class=KRCC>
+&nbsp;
+<SYNC Start=33761><P Class=KRCC>
+Then you can set break points, providing alternative layouts for
+<SYNC Start=37000><P Class=KRCC>
+&nbsp;
+<SYNC Start=37001><P Class=KRCC>
+those various sizes. Think about it this way,
+<SYNC Start=41350><P Class=KRCC>
+&nbsp;
+<SYNC Start=41351><P Class=KRCC>
+small phone, large phone, medium tablet, and large tablet.</BODY>
+</SAMI>

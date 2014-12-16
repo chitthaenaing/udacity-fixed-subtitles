@@ -1,0 +1,198 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=470><P Class=KRCC>
+But it will be a while before we can test this in our code. We still are going
+<SYNC Start=4600><P Class=KRCC>
+&nbsp;
+<SYNC Start=4601><P Class=KRCC>
+to implement a whole layer on top of it along with a bunch of UI changes.
+<SYNC Start=8870><P Class=KRCC>
+&nbsp;
+<SYNC Start=8871><P Class=KRCC>
+Fortunately, we can implement J unit test here to help. And now for
+<SYNC Start=13740><P Class=KRCC>
+&nbsp;
+<SYNC Start=13741><P Class=KRCC>
+some magic. We'll add a directory to the source directory of our Android studio
+<SYNC Start=18610><P Class=KRCC>
+&nbsp;
+<SYNC Start=18611><P Class=KRCC>
+project called Android test. And then, another one underneath it called Java.
+<SYNC Start=23640><P Class=KRCC>
+&nbsp;
+<SYNC Start=25460><P Class=KRCC>
+This is the way we tell Android studio there's a test target in cradle for
+<SYNC Start=29380><P Class=KRCC>
+&nbsp;
+<SYNC Start=29381><P Class=KRCC>
+our app. Now we create a test package that matches our main package with
+<SYNC Start=34400><P Class=KRCC>
+&nbsp;
+<SYNC Start=34401><P Class=KRCC>
+an extra test directory on the end. Create a new class called full
+<SYNC Start=39650><P Class=KRCC>
+&nbsp;
+<SYNC Start=39651><P Class=KRCC>
+test suite in the test package. Add this code. This
+<SYNC Start=46300><P Class=KRCC>
+&nbsp;
+<SYNC Start=46301><P Class=KRCC>
+is some boiler plate code that will allow us to add tests in additional classes.
+<SYNC Start=49970><P Class=KRCC>
+&nbsp;
+<SYNC Start=52350><P Class=KRCC>
+Next, we'll create a TestDb class that extends Android test case [NOISE] and
+<SYNC Start=59747><P Class=KRCC>
+&nbsp;
+<SYNC Start=59748><P Class=KRCC>
+add a test that creates our Db. The way this works is that the test runner
+<SYNC Start=64824><P Class=KRCC>
+&nbsp;
+<SYNC Start=64825><P Class=KRCC>
+will execute every function in our class that begins with test in the order that
+<SYNC Start=68822><P Class=KRCC>
+&nbsp;
+<SYNC Start=68823><P Class=KRCC>
+they are declared in the class. Each test should have a failure path that
+<SYNC Start=72950><P Class=KRCC>
+&nbsp;
+<SYNC Start=72951><P Class=KRCC>
+uses an assert. We start by deleting the database before testing it. So,
+<SYNC Start=77810><P Class=KRCC>
+&nbsp;
+<SYNC Start=77811><P Class=KRCC>
+we have a clean test. Now, to run the test we go to the app start drop down.
+<SYNC Start=84180><P Class=KRCC>
+&nbsp;
+<SYNC Start=84181><P Class=KRCC>
+And select Edit Configurations. We select Plus to add a new configuration. And
+<SYNC Start=88740><P Class=KRCC>
+&nbsp;
+<SYNC Start=88741><P Class=KRCC>
+select Android Tests Against Module App. Now we name the test.
+<SYNC Start=94710><P Class=KRCC>
+&nbsp;
+<SYNC Start=94711><P Class=KRCC>
+Now note that it tends to target the emulator by default. So,
+<SYNC Start=98190><P Class=KRCC>
+&nbsp;
+<SYNC Start=98191><P Class=KRCC>
+I want to use an actual device I'm going to select Show Chooser Dialogue.
+<SYNC Start=102000><P Class=KRCC>
+&nbsp;
+<SYNC Start=102001><P Class=KRCC>
+Now we can just run the test against our device. And, it passes. So
+<SYNC Start=108680><P Class=KRCC>
+&nbsp;
+<SYNC Start=108681><P Class=KRCC>
+let's create a data base insert and read test. At the beginning of it,
+<SYNC Start=114160><P Class=KRCC>
+&nbsp;
+<SYNC Start=114161><P Class=KRCC>
+we'll insert a single record into each table. We'll begin with some dummy
+<SYNC Start=118270><P Class=KRCC>
+&nbsp;
+<SYNC Start=118271><P Class=KRCC>
+data for our location. We'll use the dbHelper to get a writeable database.
+<SYNC Start=124450><P Class=KRCC>
+&nbsp;
+<SYNC Start=124451><P Class=KRCC>
+This is exactly how we will use the database when we code it up in our project.
+<SYNC Start=128180><P Class=KRCC>
+&nbsp;
+<SYNC Start=129870><P Class=KRCC>
+We'll then create a ContentValues object, which is a handy helper object that
+<SYNC Start=134110><P Class=KRCC>
+&nbsp;
+<SYNC Start=134111><P Class=KRCC>
+Android uses to store values and keys. We'll store our dummy data into
+<SYNC Start=138280><P Class=KRCC>
+&nbsp;
+<SYNC Start=138281><P Class=KRCC>
+the columns from our LocationEntry contract. Note that in order to make it
+<SYNC Start=142870><P Class=KRCC>
+&nbsp;
+<SYNC Start=142871><P Class=KRCC>
+work with this abbreviated syntax, I did have to add some extra imports up here.
+<SYNC Start=146870><P Class=KRCC>
+&nbsp;
+<SYNC Start=148320><P Class=KRCC>
+We then insert the data into our data base, and verified that we got a row back.
+<SYNC Start=153490><P Class=KRCC>
+&nbsp;
+<SYNC Start=153491><P Class=KRCC>
+Now I find that it's helpful to put log messages into my test cases.
+<SYNC Start=157180><P Class=KRCC>
+&nbsp;
+<SYNC Start=158500><P Class=KRCC>
+Now we'll use the database read operations to pull our dummy data back out of
+<SYNC Start=163170><P Class=KRCC>
+&nbsp;
+<SYNC Start=163171><P Class=KRCC>
+the data base. We're making use of a custom projection here which, in theory,
+<SYNC Start=167930><P Class=KRCC>
+&nbsp;
+<SYNC Start=167931><P Class=KRCC>
+would make it easy to use our database cursor to query for the values we want.
+<SYNC Start=172470><P Class=KRCC>
+&nbsp;
+<SYNC Start=172471><P Class=KRCC>
+We use a custom projection here. Although, it's not required.
+<SYNC Start=176260><P Class=KRCC>
+&nbsp;
+<SYNC Start=176261><P Class=KRCC>
+If the custom projection wasn't there, we would simply return all columns.
+<SYNC Start=179580><P Class=KRCC>
+&nbsp;
+<SYNC Start=180730><P Class=KRCC>
+A database cursor is a control structure that enables traversal over
+<SYNC Start=184220><P Class=KRCC>
+&nbsp;
+<SYNC Start=184221><P Class=KRCC>
+the records in a database. In Android, this is represented by a cursor object.
+<SYNC Start=189220><P Class=KRCC>
+&nbsp;
+<SYNC Start=190530><P Class=KRCC>
+The cursor object allows one to traverse between records in a query and
+<SYNC Start=194380><P Class=KRCC>
+&nbsp;
+<SYNC Start=194381><P Class=KRCC>
+get the contents of any individual column from a query.
+<SYNC Start=197360><P Class=KRCC>
+&nbsp;
+<SYNC Start=198920><P Class=KRCC>
+Now, we use cursor.moveToFirst to populate our cursor with our row of data.
+<SYNC Start=204330><P Class=KRCC>
+&nbsp;
+<SYNC Start=204331><P Class=KRCC>
+We can then pull out our data by index. Finally assert
+<SYNC Start=209790><P Class=KRCC>
+&nbsp;
+<SYNC Start=209791><P Class=KRCC>
+if it doesn't match our dummy data. And now, we get to run our tests again.
+<SYNC Start=215049><P Class=KRCC>
+&nbsp;
+<SYNC Start=215050><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=219620><P Class=KRCC>
+&nbsp;
+<SYNC Start=219621><P Class=KRCC>
+And they passed.</BODY>
+</SAMI>

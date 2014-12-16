@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+Using the screen support page, and whatever technical
+<SYNC Start=3114><P Class=KRCC>
+&nbsp;
+<SYNC Start=3115><P Class=KRCC>
+specification details you can find on the internet, what
+<SYNC Start=6078><P Class=KRCC>
+&nbsp;
+<SYNC Start=6079><P Class=KRCC>
+are the sizes and densities of these two devices,
+<SYNC Start=8619><P Class=KRCC>
+&nbsp;
+<SYNC Start=8620><P Class=KRCC>
+the Nexus One and the Nexus 5? For these
+<SYNC Start=11190><P Class=KRCC>
+&nbsp;
+<SYNC Start=11191><P Class=KRCC>
+purposes, the screen size should be one of
+<SYNC Start=13080><P Class=KRCC>
+&nbsp;
+<SYNC Start=13081><P Class=KRCC>
+the available buckets, small, normal, large, or extra large.
+<SYNC Start=17580><P Class=KRCC>
+&nbsp;
+<SYNC Start=17581><P Class=KRCC>
+And, the pixel density should always refer to one
+<SYNC Start=19580><P Class=KRCC>
+&nbsp;
+<SYNC Start=19581><P Class=KRCC>
+of our buckets, LDPI, MDPI, HDPI, XHDPI, or XXHDPI.</BODY>
+</SAMI>

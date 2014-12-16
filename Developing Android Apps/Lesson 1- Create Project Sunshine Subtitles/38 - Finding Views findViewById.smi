@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=110><P Class=KRCC>
+Here's the solution for
+<SYNC Start=1320><P Class=KRCC>
+&nbsp;
+<SYNC Start=1321><P Class=KRCC>
+binding an adapter to a ListView within the PlaceholderFragment class. First,
+<SYNC Start=6689><P Class=KRCC>
+&nbsp;
+<SYNC Start=6690><P Class=KRCC>
+we find the ListView in the view hierarchy by using the findViewById call and
+<SYNC Start=11280><P Class=KRCC>
+&nbsp;
+<SYNC Start=11281><P Class=KRCC>
+then, we set the adapter to it. The adapter will supply list item layouts to
+<SYNC Start=16510><P Class=KRCC>
+&nbsp;
+<SYNC Start=16511><P Class=KRCC>
+the ListView based on the weekForecast data. Note that the rootView here
+<SYNC Start=22690><P Class=KRCC>
+&nbsp;
+<SYNC Start=22691><P Class=KRCC>
+refers to the root view of the fragment, which we just inflated up above here.</BODY>
+</SAMI>

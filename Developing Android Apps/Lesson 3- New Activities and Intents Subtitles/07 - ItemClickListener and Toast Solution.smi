@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=360><P Class=KRCC>
+Done already? Let me show you how it's done. As I said before, we
+<SYNC Start=4810><P Class=KRCC>
+&nbsp;
+<SYNC Start=4811><P Class=KRCC>
+get the forecast by calling getItem from
+<SYNC Start=7640><P Class=KRCC>
+&nbsp;
+<SYNC Start=7641><P Class=KRCC>
+the forecast adapter. And here's how we actually
+<SYNC Start=10940><P Class=KRCC>
+&nbsp;
+<SYNC Start=10941><P Class=KRCC>
+display the toast. Note that the context
+<SYNC Start=14542><P Class=KRCC>
+&nbsp;
+<SYNC Start=14543><P Class=KRCC>
+is actually available through getActivity in our
+<SYNC Start=17023><P Class=KRCC>
+&nbsp;
+<SYNC Start=17024><P Class=KRCC>
+fragment. However, it won't do anything unless
+<SYNC Start=20982><P Class=KRCC>
+&nbsp;
+<SYNC Start=20983><P Class=KRCC>
+we also show the toast. Displaying a toast
+<SYNC Start=25450><P Class=KRCC>
+&nbsp;
+<SYNC Start=25451><P Class=KRCC>
+is useful to see how an Android interaction works. But this method should
+<SYNC Start=29170><P Class=KRCC>
+&nbsp;
+<SYNC Start=29171><P Class=KRCC>
+really be used to start our detail activity. This is what we'll do next.</BODY>
+</SAMI>

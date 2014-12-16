@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1340><P Class=KRCC>
+A much simpler table. Just a standard primary key, a few values, and
+<SYNC Start=6510><P Class=KRCC>
+&nbsp;
+<SYNC Start=6511><P Class=KRCC>
+a few constraints. Note that we use ON CONFLICT IGNORE. This means in insert
+<SYNC Start=11860><P Class=KRCC>
+&nbsp;
+<SYNC Start=11861><P Class=KRCC>
+into the database with the same key will not actually update the database at
+<SYNC Start=15430><P Class=KRCC>
+&nbsp;
+<SYNC Start=15431><P Class=KRCC>
+all. And therefore will also not return an ID in the Android helper functions.</BODY>
+</SAMI>

@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=390><P Class=KRCC>
+Now it's time to launch the SettingsAactivity from the menu item.
+<SYNC Start=4430><P Class=KRCC>
+&nbsp;
+<SYNC Start=4431><P Class=KRCC>
+We need to launch it from two places, the MainActivity and the DetailActivity.
+<SYNC Start=7950><P Class=KRCC>
+&nbsp;
+<SYNC Start=9150><P Class=KRCC>
+Afterwards, compile and run the app to make sure that it works. This is what it
+<SYNC Start=13000><P Class=KRCC>
+&nbsp;
+<SYNC Start=13001><P Class=KRCC>
+should look like. From the MainActivity, if you tap on Settings menu,
+<SYNC Start=16883><P Class=KRCC>
+&nbsp;
+<SYNC Start=16884><P Class=KRCC>
+it should bring you to the SettingsActivity. It is expected for it to be blank,
+<SYNC Start=22030><P Class=KRCC>
+&nbsp;
+<SYNC Start=22031><P Class=KRCC>
+because we haven't populated it yet. Now let's try the DetailActivity.
+<SYNC Start=26320><P Class=KRCC>
+&nbsp;
+<SYNC Start=26321><P Class=KRCC>
+If you tap on the Forecast, you can go into the DetailActivity and
+<SYNC Start=29940><P Class=KRCC>
+&nbsp;
+<SYNC Start=29941><P Class=KRCC>
+then, you can go into the SettingsActivity. Complete the task and
+<SYNC Start=33710><P Class=KRCC>
+&nbsp;
+<SYNC Start=33711><P Class=KRCC>
+then verify that your app behavior is like this.</BODY>
+</SAMI>

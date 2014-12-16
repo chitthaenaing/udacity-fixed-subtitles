@@ -1,0 +1,118 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+The most important thing you have to remember is that
+<SYNC Start=2260><P Class=KRCC>
+&nbsp;
+<SYNC Start=2261><P Class=KRCC>
+every time you transfer data, no matter how small, the radio
+<SYNC Start=5850><P Class=KRCC>
+&nbsp;
+<SYNC Start=5851><P Class=KRCC>
+could stay powered up for nearly half a minute. So every
+<SYNC Start=10130><P Class=KRCC>
+&nbsp;
+<SYNC Start=10131><P Class=KRCC>
+decision you make will be based on minimizing the number of
+<SYNC Start=12790><P Class=KRCC>
+&nbsp;
+<SYNC Start=12791><P Class=KRCC>
+times that this happens. But of course there's a balance here.
+<SYNC Start=16540><P Class=KRCC>
+&nbsp;
+<SYNC Start=16541><P Class=KRCC>
+You want to download all the data a user is likely
+<SYNC Start=19180><P Class=KRCC>
+&nbsp;
+<SYNC Start=19181><P Class=KRCC>
+to need for the current section in a single burst over
+<SYNC Start=21940><P Class=KRCC>
+&nbsp;
+<SYNC Start=21941><P Class=KRCC>
+a single connection at full capacity. But of course, you don't
+<SYNC Start=25520><P Class=KRCC>
+&nbsp;
+<SYNC Start=25521><P Class=KRCC>
+just want to pull down everything wasting battery power and bandwidth
+<SYNC Start=29060><P Class=KRCC>
+&nbsp;
+<SYNC Start=29061><P Class=KRCC>
+downloading data that's never going to be used. Now I could go
+<SYNC Start=31980><P Class=KRCC>
+&nbsp;
+<SYNC Start=31981><P Class=KRCC>
+on for hours on this topic, but Dan's getting impatient. And
+<SYNC Start=34750><P Class=KRCC>
+&nbsp;
+<SYNC Start=34751><P Class=KRCC>
+you can learn the details on how to implement each of
+<SYNC Start=36740><P Class=KRCC>
+&nbsp;
+<SYNC Start=36741><P Class=KRCC>
+these best practices, including pre-fetching,
+<SYNC Start=39600><P Class=KRCC>
+&nbsp;
+<SYNC Start=39601><P Class=KRCC>
+batching and bundling, burying your
+<SYNC Start=41340><P Class=KRCC>
+&nbsp;
+<SYNC Start=41341><P Class=KRCC>
+update frequency, and minimizing your payloads by watching the series of
+<SYNC Start=44930><P Class=KRCC>
+&nbsp;
+<SYNC Start=44931><P Class=KRCC>
+Dev Lite videos or reading the developer guides linked to in
+<SYNC Start=47690><P Class=KRCC>
+&nbsp;
+<SYNC Start=47691><P Class=KRCC>
+the instructor notes below. Now before I leave it to Dan
+<SYNC Start=50670><P Class=KRCC>
+&nbsp;
+<SYNC Start=50671><P Class=KRCC>
+to show you how to implement a sync adapter for
+<SYNC Start=52910><P Class=KRCC>
+&nbsp;
+<SYNC Start=52911><P Class=KRCC>
+Sunshine that takes advantage of a lot of the best practices
+<SYNC Start=55820><P Class=KRCC>
+&nbsp;
+<SYNC Start=55821><P Class=KRCC>
+I just described, let's consider what the best practice would be
+<SYNC Start=58940><P Class=KRCC>
+&nbsp;
+<SYNC Start=58941><P Class=KRCC>
+if you were building something like a news reader app. How
+<SYNC Start=61570><P Class=KRCC>
+&nbsp;
+<SYNC Start=61571><P Class=KRCC>
+much data should you download when the app is first started?
+<SYNC Start=65030><P Class=KRCC>
+&nbsp;
+<SYNC Start=65031><P Class=KRCC>
+Just the front page of headlines, all the stories and images
+<SYNC Start=68280><P Class=KRCC>
+&nbsp;
+<SYNC Start=68281><P Class=KRCC>
+linked to from that front page? Every story available, but none
+<SYNC Start=71960><P Class=KRCC>
+&nbsp;
+<SYNC Start=71961><P Class=KRCC>
+of the images? Or every story and every image currently available?</BODY>
+</SAMI>

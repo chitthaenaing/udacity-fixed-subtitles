@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+In order to launch the SettingsActivity, we modify
+<SYNC Start=3118><P Class=KRCC>
+&nbsp;
+<SYNC Start=3119><P Class=KRCC>
+Mainactivity.java, in the On options item selected method.
+<SYNC Start=7070><P Class=KRCC>
+&nbsp;
+<SYNC Start=7071><P Class=KRCC>
+When the Settings Menu Item is selected, we
+<SYNC Start=9360><P Class=KRCC>
+&nbsp;
+<SYNC Start=9361><P Class=KRCC>
+create a new, explicit intent, to the SettingsActivity Class.
+<SYNC Start=13590><P Class=KRCC>
+&nbsp;
+<SYNC Start=13591><P Class=KRCC>
+We call Start activity, to launch this intent.
+<SYNC Start=16700><P Class=KRCC>
+&nbsp;
+<SYNC Start=16701><P Class=KRCC>
+We don't call StartActivity for result because we're
+<SYNC Start=19290><P Class=KRCC>
+&nbsp;
+<SYNC Start=19291><P Class=KRCC>
+not expecting a result from the SettingsActivity. Similarly
+<SYNC Start=22640><P Class=KRCC>
+&nbsp;
+<SYNC Start=22641><P Class=KRCC>
+in the detail activity class, when the settings menu
+<SYNC Start=25400><P Class=KRCC>
+&nbsp;
+<SYNC Start=25401><P Class=KRCC>
+is selected, we launch a new intent to SettingsActivity.</BODY>
+</SAMI>

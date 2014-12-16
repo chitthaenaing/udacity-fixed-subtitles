@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+The solution is to lauch an explicit intent to
+<SYNC Start=3360><P Class=KRCC>
+&nbsp;
+<SYNC Start=3361><P Class=KRCC>
+the Detail Activity Class. We'll go to On Create View,
+<SYNC Start=7750><P Class=KRCC>
+&nbsp;
+<SYNC Start=7751><P Class=KRCC>
+where our On Item click listener is defined. To
+<SYNC Start=10610><P Class=KRCC>
+&nbsp;
+<SYNC Start=10611><P Class=KRCC>
+pass in the Weather Forecast information, we can use an
+<SYNC Start=13460><P Class=KRCC>
+&nbsp;
+<SYNC Start=13461><P Class=KRCC>
+intent extra, which is a key value pair in
+<SYNC Start=16000><P Class=KRCC>
+&nbsp;
+<SYNC Start=16001><P Class=KRCC>
+the Intent. We use the key name, Intent.extratext, but we
+<SYNC Start=20090><P Class=KRCC>
+&nbsp;
+<SYNC Start=20091><P Class=KRCC>
+can use any string for the key. As long as
+<SYNC Start=22800><P Class=KRCC>
+&nbsp;
+<SYNC Start=22801><P Class=KRCC>
+we use the same key when reading the information out.
+<SYNC Start=26110><P Class=KRCC>
+&nbsp;
+<SYNC Start=26111><P Class=KRCC>
+Just as in the toast, we obtain the forecast
+<SYNC Start=29150><P Class=KRCC>
+&nbsp;
+<SYNC Start=29151><P Class=KRCC>
+data from the current list item, by calling get
+<SYNC Start=31850><P Class=KRCC>
+&nbsp;
+<SYNC Start=31851><P Class=KRCC>
+item on the adapter at the given position. Once
+<SYNC Start=34600><P Class=KRCC>
+&nbsp;
+<SYNC Start=34601><P Class=KRCC>
+we've added the intent, we just start the activity.</BODY>
+</SAMI>

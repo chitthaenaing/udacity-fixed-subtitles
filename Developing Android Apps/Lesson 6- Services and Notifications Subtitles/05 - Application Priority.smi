@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=570><P Class=KRCC>
+That's right. Maps isn't visible or running any
+<SYNC Start=3040><P Class=KRCC>
+&nbsp;
+<SYNC Start=3041><P Class=KRCC>
+services, so it's the most likely to be killed.
+<SYNC Start=5625><P Class=KRCC>
+&nbsp;
+<SYNC Start=5626><P Class=KRCC>
+G-mail is running a service, but it's not interacting
+<SYNC Start=8290><P Class=KRCC>
+&nbsp;
+<SYNC Start=8291><P Class=KRCC>
+directly with the user while Google Music and the
+<SYNC Start=10790><P Class=KRCC>
+&nbsp;
+<SYNC Start=10791><P Class=KRCC>
+camera app are. Of those two, the Music app
+<SYNC Start=13870><P Class=KRCC>
+&nbsp;
+<SYNC Start=13871><P Class=KRCC>
+must have been in the foreground for longer than
+<SYNC Start=15690><P Class=KRCC>
+&nbsp;
+<SYNC Start=15691><P Class=KRCC>
+the camera. So it's got a slightly lower priority,
+<SYNC Start=18980><P Class=KRCC>
+&nbsp;
+<SYNC Start=18981><P Class=KRCC>
+though neither are in any danger of being killed.</BODY>
+</SAMI>

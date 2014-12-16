@@ -1,0 +1,39 @@
+1
+00:00:00,320 --> 00:00:02,930
+As I said before, early versions of Android
+
+2
+00:00:02,930 --> 00:00:07,130
+didn't have the loader model. The original deprecated model
+
+3
+00:00:07,130 --> 00:00:09,908
+caused frame rate drops whenever many applications had to
+
+4
+00:00:09,908 --> 00:00:14,750
+re-query their databases. Even simple ones. Databases get far
+
+5
+00:00:14,750 --> 00:00:16,329
+more complex than what we have here in
+
+6
+00:00:16,329 --> 00:00:19,630
+Sunshine. So the first answer is a definite yes.
+
+7
+00:00:20,660 --> 00:00:22,980
+We noted how things like AsyncTask are bound to
+
+8
+00:00:22,980 --> 00:00:25,450
+the UI, so something as little as an orientation
+
+9
+00:00:25,450 --> 00:00:28,780
+change could kill the query. So that's another definite
+
+10
+00:00:28,780 --> 00:00:33,224
+yes. So the third option is just a non-starter.

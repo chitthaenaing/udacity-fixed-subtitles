@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=360><P Class=KRCC>
+Now that we're storing the data we downloaded in
+<SYNC Start=2310><P Class=KRCC>
+&nbsp;
+<SYNC Start=2311><P Class=KRCC>
+a sensible fashion, we're ready to build rich UIs
+<SYNC Start=5300><P Class=KRCC>
+&nbsp;
+<SYNC Start=5301><P Class=KRCC>
+for each of our activities. That means learning about
+<SYNC Start=8210><P Class=KRCC>
+&nbsp;
+<SYNC Start=8211><P Class=KRCC>
+fragments and how we can use them to create
+<SYNC Start=10180><P Class=KRCC>
+&nbsp;
+<SYNC Start=10181><P Class=KRCC>
+complex user interfaces that can easily be adapted to
+<SYNC Start=13370><P Class=KRCC>
+&nbsp;
+<SYNC Start=13371><P Class=KRCC>
+work seamlessly on a range of different devices and
+<SYNC Start=15850><P Class=KRCC>
+&nbsp;
+<SYNC Start=15851><P Class=KRCC>
+screens. But first I'd like to tell you a
+<SYNC Start=18440><P Class=KRCC>
+&nbsp;
+<SYNC Start=18441><P Class=KRCC>
+little more about the principles behind great Android design.</BODY>
+</SAMI>

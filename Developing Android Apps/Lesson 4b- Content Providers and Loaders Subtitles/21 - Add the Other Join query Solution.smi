@@ -1,0 +1,126 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=480><P Class=KRCC>
+All right. You're done. Let's look at the solution. All
+<SYNC Start=4500><P Class=KRCC>
+&nbsp;
+<SYNC Start=4501><P Class=KRCC>
+right. We'll move to WeatherProvider. We start by creating a
+<SYNC Start=8270><P Class=KRCC>
+&nbsp;
+<SYNC Start=8271><P Class=KRCC>
+third selection query up at the top of our provider,
+<SYNC Start=10830><P Class=KRCC>
+&nbsp;
+<SYNC Start=10831><P Class=KRCC>
+much like the second query except that we search for
+<SYNC Start=13670><P Class=KRCC>
+&nbsp;
+<SYNC Start=13671><P Class=KRCC>
+the exact date. Rather than a greater than or equal
+<SYNC Start=16420><P Class=KRCC>
+&nbsp;
+<SYNC Start=16421><P Class=KRCC>
+date. We then add a function that uses the weather
+<SYNC Start=18850><P Class=KRCC>
+&nbsp;
+<SYNC Start=18851><P Class=KRCC>
+contract. Functions to get the date and postal code from
+<SYNC Start=21690><P Class=KRCC>
+&nbsp;
+<SYNC Start=21691><P Class=KRCC>
+the URI. We use the new query we just wrote.
+<SYNC Start=25810><P Class=KRCC>
+&nbsp;
+<SYNC Start=25811><P Class=KRCC>
+And the same SQLI query builder we used before, since it only defines the join.
+<SYNC Start=30100><P Class=KRCC>
+&nbsp;
+<SYNC Start=32200><P Class=KRCC>
+And then we just call this function in the
+<SYNC Start=33920><P Class=KRCC>
+&nbsp;
+<SYNC Start=33921><P Class=KRCC>
+weather with location and date switch statement in our
+<SYNC Start=36500><P Class=KRCC>
+&nbsp;
+<SYNC Start=36501><P Class=KRCC>
+query. That's it. Those are all the queries we
+<SYNC Start=40670><P Class=KRCC>
+&nbsp;
+<SYNC Start=40671><P Class=KRCC>
+plan to use for Sunshine, but we still need to
+<SYNC Start=43760><P Class=KRCC>
+&nbsp;
+<SYNC Start=43761><P Class=KRCC>
+test. Let's go back to test provider. As you
+<SYNC Start=47000><P Class=KRCC>
+&nbsp;
+<SYNC Start=47001><P Class=KRCC>
+can see, our test has a very, very good model
+<SYNC Start=51020><P Class=KRCC>
+&nbsp;
+<SYNC Start=51021><P Class=KRCC>
+already. Let's fix up some of these old tests
+<SYNC Start=53620><P Class=KRCC>
+&nbsp;
+<SYNC Start=53621><P Class=KRCC>
+and close the weather cursor. Now, we can simply copy
+<SYNC Start=57510><P Class=KRCC>
+&nbsp;
+<SYNC Start=57511><P Class=KRCC>
+this test over. It turns out that the exact
+<SYNC Start=60490><P Class=KRCC>
+&nbsp;
+<SYNC Start=60491><P Class=KRCC>
+same data is required for our new URI. All
+<SYNC Start=63910><P Class=KRCC>
+&nbsp;
+<SYNC Start=63911><P Class=KRCC>
+we have to do is to build weather location
+<SYNC Start=66000><P Class=KRCC>
+&nbsp;
+<SYNC Start=66001><P Class=KRCC>
+with date, instead of saying weather location with start
+<SYNC Start=68790><P Class=KRCC>
+&nbsp;
+<SYNC Start=68791><P Class=KRCC>
+date, and we should get the same result. Let's
+<SYNC Start=72010><P Class=KRCC>
+&nbsp;
+<SYNC Start=73210><P Class=KRCC>
+see if that's really true by running our tests.
+<SYNC Start=75754><P Class=KRCC>
+&nbsp;
+<SYNC Start=75755><P Class=KRCC>
+[SOUND] And our test passed. So, we've now implemented
+<SYNC Start=80216><P Class=KRCC>
+&nbsp;
+<SYNC Start=80217><P Class=KRCC>
+all of the queries, but we're not done with our
+<SYNC Start=82627><P Class=KRCC>
+&nbsp;
+<SYNC Start=82628><P Class=KRCC>
+content provider yet. After all, we're not writing
+<SYNC Start=85920><P Class=KRCC>
+&nbsp;
+<SYNC Start=85921><P Class=KRCC>
+any data into the database through our content provider</BODY>
+</SAMI>

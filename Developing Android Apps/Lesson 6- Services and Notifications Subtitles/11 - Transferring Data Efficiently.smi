@@ -1,0 +1,62 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=460><P Class=KRCC>
+Now, at first glass, reducing the payload of each transfer, and
+<SYNC Start=3600><P Class=KRCC>
+&nbsp;
+<SYNC Start=3601><P Class=KRCC>
+only transmitting data when it's required seems like a sound approach.
+<SYNC Start=7330><P Class=KRCC>
+&nbsp;
+<SYNC Start=7331><P Class=KRCC>
+You're reducing the amount of data being transferred, so that's less
+<SYNC Start=9830><P Class=KRCC>
+&nbsp;
+<SYNC Start=9831><P Class=KRCC>
+data on the network. That's less superfluous work being done storing processing
+<SYNC Start=14300><P Class=KRCC>
+&nbsp;
+<SYNC Start=14301><P Class=KRCC>
+data on the device. It's basically a case of putting off
+<SYNC Start=17730><P Class=KRCC>
+&nbsp;
+<SYNC Start=17731><P Class=KRCC>
+any work, until you actually know you need to do it.
+<SYNC Start=20040><P Class=KRCC>
+&nbsp;
+<SYNC Start=20041><P Class=KRCC>
+But it turns out that this approach has it's drawbacks, compared
+<SYNC Start=22630><P Class=KRCC>
+&nbsp;
+<SYNC Start=22631><P Class=KRCC>
+to the big cookie model of all of that work up front.
+<SYNC Start=26220><P Class=KRCC>
+&nbsp;
+<SYNC Start=26221><P Class=KRCC>
+So, overall, this is a better solution. But let's take a closer look at the big
+<SYNC Start=30110><P Class=KRCC>
+&nbsp;
+<SYNC Start=30111><P Class=KRCC>
+cookie model. And to do that, we really
+<SYNC Start=31670><P Class=KRCC>
+&nbsp;
+<SYNC Start=31671><P Class=KRCC>
+need to understand the underlying cell radio state machine.</BODY>
+</SAMI>

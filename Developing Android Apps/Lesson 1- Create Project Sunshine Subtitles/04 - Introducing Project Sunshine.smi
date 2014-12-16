@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=630><P Class=KRCC>
+In the course, we're going to build a weather app called Sunshine. The main
+<SYNC Start=4770><P Class=KRCC>
+&nbsp;
+<SYNC Start=4771><P Class=KRCC>
+screen is a list of this week's forecast, with an emphasized presentation for
+<SYNC Start=9800><P Class=KRCC>
+&nbsp;
+<SYNC Start=9801><P Class=KRCC>
+today's weather. With just a quick glance, I can decide if,
+<SYNC Start=14870><P Class=KRCC>
+&nbsp;
+<SYNC Start=14871><P Class=KRCC>
+today is a stay inside, in code day. Or if I should code from the park,
+<SYNC Start=20560><P Class=KRCC>
+&nbsp;
+<SYNC Start=20561><P Class=KRCC>
+instead. We have icons to indicate conditions, like snow,
+<SYNC Start=26256><P Class=KRCC>
+&nbsp;
+<SYNC Start=26257><P Class=KRCC>
+rain, fog or sunshine. We can scroll through the list,
+<SYNC Start=30790><P Class=KRCC>
+&nbsp;
+<SYNC Start=30791><P Class=KRCC>
+to see a long range forecast. With a click on one of the forecasts,
+<SYNC Start=34730><P Class=KRCC>
+&nbsp;
+<SYNC Start=34731><P Class=KRCC>
+will bring up a detailed view containing the rest of the weathery goodness,
+<SYNC Start=38900><P Class=KRCC>
+&nbsp;
+<SYNC Start=38901><P Class=KRCC>
+which also gives us the ability to share the weather with our friends.
+<SYNC Start=43390><P Class=KRCC>
+&nbsp;
+<SYNC Start=43391><P Class=KRCC>
+We can go to Settings and change the unit of measure, as well as the location.
+<SYNC Start=48940><P Class=KRCC>
+&nbsp;
+<SYNC Start=48941><P Class=KRCC>
+The app can even post system wide notifications, to let us know about weather
+<SYNC Start=53500><P Class=KRCC>
+&nbsp;
+<SYNC Start=53501><P Class=KRCC>
+conditions without even entering the app. So, you might ask, why are we
+<SYNC Start=58930><P Class=KRCC>
+&nbsp;
+<SYNC Start=58931><P Class=KRCC>
+building a weather app? We chose the weather app because it's a simple concept,
+<SYNC Start=63120><P Class=KRCC>
+&nbsp;
+<SYNC Start=63121><P Class=KRCC>
+which touches most of the core APIs we want to teach and everyone can relate to
+<SYNC Start=67590><P Class=KRCC>
+&nbsp;
+<SYNC Start=67591><P Class=KRCC>
+weather, unless you're in a bunker. By the end of the course, you'll be able
+<SYNC Start=72090><P Class=KRCC>
+&nbsp;
+<SYNC Start=72091><P Class=KRCC>
+to use those APIs and concepts to build your own app for your final project.</BODY>
+</SAMI>

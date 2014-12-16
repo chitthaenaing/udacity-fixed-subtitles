@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+The answer is setOnItemClickListener. We should register
+<SYNC Start=4380><P Class=KRCC>
+&nbsp;
+<SYNC Start=4381><P Class=KRCC>
+an OnItemClickListener with the list view via the
+<SYNC Start=6980><P Class=KRCC>
+&nbsp;
+<SYNC Start=6981><P Class=KRCC>
+setOnItemClickListener method. Then, when an item in the
+<SYNC Start=10440><P Class=KRCC>
+&nbsp;
+<SYNC Start=10441><P Class=KRCC>
+list view is clicked, the callback is invoked.</BODY>
+</SAMI>

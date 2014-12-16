@@ -1,0 +1,174 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=590><P Class=KRCC>
+One of the most powerful features of Android, since the
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+start of the platform has been the ability to deliver
+<SYNC Start=5550><P Class=KRCC>
+&nbsp;
+<SYNC Start=5551><P Class=KRCC>
+timely notifications to users. We're going to add a simple
+<SYNC Start=9100><P Class=KRCC>
+&nbsp;
+<SYNC Start=9101><P Class=KRCC>
+one to our weather app. This simple notification will show the
+<SYNC Start=12480><P Class=KRCC>
+&nbsp;
+<SYNC Start=12481><P Class=KRCC>
+weather icon for the forecast, the forecast text, and the
+<SYNC Start=16730><P Class=KRCC>
+&nbsp;
+<SYNC Start=16731><P Class=KRCC>
+high and low temperature for the day. One of the key
+<SYNC Start=19420><P Class=KRCC>
+&nbsp;
+<SYNC Start=19421><P Class=KRCC>
+things we wanted to point out is how not to
+<SYNC Start=21870><P Class=KRCC>
+&nbsp;
+<SYNC Start=21871><P Class=KRCC>
+be spammy with our notification. Our app will display at most
+<SYNC Start=25920><P Class=KRCC>
+&nbsp;
+<SYNC Start=25921><P Class=KRCC>
+a single notification. It really wouldn't make sense if these
+<SYNC Start=29080><P Class=KRCC>
+&nbsp;
+<SYNC Start=29081><P Class=KRCC>
+notifications stacked up anyhow. They don't display enough information to
+<SYNC Start=33120><P Class=KRCC>
+&nbsp;
+<SYNC Start=33121><P Class=KRCC>
+give context. The key thing with notifications is to deliver
+<SYNC Start=36250><P Class=KRCC>
+&nbsp;
+<SYNC Start=36251><P Class=KRCC>
+a useful morsel of information, formatted in a standard way, so
+<SYNC Start=39970><P Class=KRCC>
+&nbsp;
+<SYNC Start=39971><P Class=KRCC>
+that it harmonizes with the rest of the system. We'll
+<SYNC Start=42760><P Class=KRCC>
+&nbsp;
+<SYNC Start=42761><P Class=KRCC>
+start by adding a string for the preference for the
+<SYNC Start=45440><P Class=KRCC>
+&nbsp;
+<SYNC Start=45441><P Class=KRCC>
+last time we sent a notification to the user. As
+<SYNC Start=48140><P Class=KRCC>
+&nbsp;
+<SYNC Start=48141><P Class=KRCC>
+well as a format string for the body of the notification.
+<SYNC Start=51210><P Class=KRCC>
+&nbsp;
+<SYNC Start=51211><P Class=KRCC>
+Let's implement the notification inside of our sync adapter.
+<SYNC Start=54610><P Class=KRCC>
+&nbsp;
+<SYNC Start=54611><P Class=KRCC>
+Our notification will be based upon what is in
+<SYNC Start=56670><P Class=KRCC>
+&nbsp;
+<SYNC Start=56671><P Class=KRCC>
+the database. So, we'll create projection and column indices
+<SYNC Start=60100><P Class=KRCC>
+&nbsp;
+<SYNC Start=60101><P Class=KRCC>
+value in our sync adapter, for the weather id. Description,
+<SYNC Start=64110><P Class=KRCC>
+&nbsp;
+<SYNC Start=64111><P Class=KRCC>
+max and then temperature, let's add a function to
+<SYNC Start=67320><P Class=KRCC>
+&nbsp;
+<SYNC Start=67321><P Class=KRCC>
+notify us of the weather. We'll add some additional
+<SYNC Start=70020><P Class=KRCC>
+&nbsp;
+<SYNC Start=70021><P Class=KRCC>
+constants up here. One for day in mili's and
+<SYNC Start=73430><P Class=KRCC>
+&nbsp;
+<SYNC Start=73431><P Class=KRCC>
+one so that we an use the same notification ID.
+<SYNC Start=76220><P Class=KRCC>
+&nbsp;
+<SYNC Start=76221><P Class=KRCC>
+Reusing the notification ID means that our application will only
+<SYNC Start=79060><P Class=KRCC>
+&nbsp;
+<SYNC Start=79061><P Class=KRCC>
+post at most one notification. And then finally, we'll call
+<SYNC Start=83260><P Class=KRCC>
+&nbsp;
+<SYNC Start=83261><P Class=KRCC>
+this function at a reasonable place within our on perform
+<SYNC Start=85750><P Class=KRCC>
+&nbsp;
+<SYNC Start=85751><P Class=KRCC>
+sync function within our sync adapter. Inside of notify weather, we'll
+<SYNC Start=89540><P Class=KRCC>
+&nbsp;
+<SYNC Start=89541><P Class=KRCC>
+check to see whether or not, we've actually shown notification
+<SYNC Start=91761><P Class=KRCC>
+&nbsp;
+<SYNC Start=91762><P Class=KRCC>
+that day. If we haven't, then we'll talk to the database.
+<SYNC Start=96010><P Class=KRCC>
+&nbsp;
+<SYNC Start=96011><P Class=KRCC>
+Get a cursor for the current resolver for the current
+<SYNC Start=98140><P Class=KRCC>
+&nbsp;
+<SYNC Start=98141><P Class=KRCC>
+day, and then fetch the data, but one thing were not
+<SYNC Start=101320><P Class=KRCC>
+&nbsp;
+<SYNC Start=101321><P Class=KRCC>
+doing is actually showing the notification. Now all right, were getting near
+<SYNC Start=105770><P Class=KRCC>
+&nbsp;
+<SYNC Start=105771><P Class=KRCC>
+the end. Implement a weather notification,
+<SYNC Start=108970><P Class=KRCC>
+&nbsp;
+<SYNC Start=108971><P Class=KRCC>
+build our notification using Notification Compat.builder
+<SYNC Start=113380><P Class=KRCC>
+&nbsp;
+<SYNC Start=113381><P Class=KRCC>
+pointing to a Pending Intent built by the v4 compatible. TaskStackBuilder and
+<SYNC Start=119910><P Class=KRCC>
+&nbsp;
+<SYNC Start=119911><P Class=KRCC>
+sent with the NotificationManager. Hint: an
+<SYNC Start=123770><P Class=KRCC>
+&nbsp;
+<SYNC Start=123771><P Class=KRCC>
+explicit intent to our main activity is
+<SYNC Start=126860><P Class=KRCC>
+&nbsp;
+<SYNC Start=126861><P Class=KRCC>
+a good idea here. There's lots of documentation on this you'll want to read.</BODY>
+</SAMI>

@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=240><P Class=KRCC>
+Well we're done with the core of our content provider,
+<SYNC Start=2450><P Class=KRCC>
+&nbsp;
+<SYNC Start=2451><P Class=KRCC>
+but there's still one more optional method that'll make things
+<SYNC Start=4990><P Class=KRCC>
+&nbsp;
+<SYNC Start=4991><P Class=KRCC>
+much more efficient. We'll start by hitting Ctrl+O to look
+<SYNC Start=9250><P Class=KRCC>
+&nbsp;
+<SYNC Start=9251><P Class=KRCC>
+at the functions we can override. It turns out there's
+<SYNC Start=11940><P Class=KRCC>
+&nbsp;
+<SYNC Start=11941><P Class=KRCC>
+a function called bulkInsert. Anyone out there who has done
+<SYNC Start=15780><P Class=KRCC>
+&nbsp;
+<SYNC Start=15781><P Class=KRCC>
+database work knows that putting a bunch of inserts into
+<SYNC Start=18210><P Class=KRCC>
+&nbsp;
+<SYNC Start=18211><P Class=KRCC>
+a single transaction is usually much faster than inserting them
+<SYNC Start=21610><P Class=KRCC>
+&nbsp;
+<SYNC Start=21611><P Class=KRCC>
+individually. Bulk insert allows us to do just that. The default
+<SYNC Start=25860><P Class=KRCC>
+&nbsp;
+<SYNC Start=25861><P Class=KRCC>
+implementation just calls insert a bunch of times, but
+<SYNC Start=28500><P Class=KRCC>
+&nbsp;
+<SYNC Start=28501><P Class=KRCC>
+we can wrap it in a transaction if we implement
+<SYNC Start=30610><P Class=KRCC>
+&nbsp;
+<SYNC Start=30611><P Class=KRCC>
+it ourselves. We're only going to add support for
+<SYNC Start=33250><P Class=KRCC>
+&nbsp;
+<SYNC Start=33251><P Class=KRCC>
+weather forecast transactions here, since they're the only we insert
+<SYNC Start=36520><P Class=KRCC>
+&nbsp;
+<SYNC Start=36521><P Class=KRCC>
+in bulk. We start by calling db.beginTransaction. For each
+<SYNC Start=41150><P Class=KRCC>
+&nbsp;
+<SYNC Start=41151><P Class=KRCC>
+ContentValues passed in, we insert and update the number of
+<SYNC Start=44340><P Class=KRCC>
+&nbsp;
+<SYNC Start=44341><P Class=KRCC>
+records inserted. When we're done, we set the transaction
+<SYNC Start=47890><P Class=KRCC>
+&nbsp;
+<SYNC Start=47891><P Class=KRCC>
+to be successful. Otherwise our records will not be committed,
+<SYNC Start=50840><P Class=KRCC>
+&nbsp;
+<SYNC Start=50841><P Class=KRCC>
+and then rely on the finally statement to end the
+<SYNC Start=53020><P Class=KRCC>
+&nbsp;
+<SYNC Start=53021><P Class=KRCC>
+transaction. In the default case, we just call the super
+<SYNC Start=56500><P Class=KRCC>
+&nbsp;
+<SYNC Start=56501><P Class=KRCC>
+class. Remember, it does the insert, just not optimally. And
+<SYNC Start=60640><P Class=KRCC>
+&nbsp;
+<SYNC Start=60641><P Class=KRCC>
+that's it, that's all we have to do to implement bulkInsert.</BODY>
+</SAMI>

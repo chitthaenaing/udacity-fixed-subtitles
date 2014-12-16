@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=480><P Class=KRCC>
+For the next step, let's do an exercise that focuses
+<SYNC Start=2719><P Class=KRCC>
+&nbsp;
+<SYNC Start=2720><P Class=KRCC>
+on extracting out the value of one of those attributes. We're
+<SYNC Start=6400><P Class=KRCC>
+&nbsp;
+<SYNC Start=6401><P Class=KRCC>
+going to do this exercise a little bit differently. You'll implement this
+<SYNC Start=9480><P Class=KRCC>
+&nbsp;
+<SYNC Start=9481><P Class=KRCC>
+on the Udacity platform. And we'll be able to verify that
+<SYNC Start=12740><P Class=KRCC>
+&nbsp;
+<SYNC Start=12741><P Class=KRCC>
+your code is correct. After this video, you'll see an IDE
+<SYNC Start=16420><P Class=KRCC>
+&nbsp;
+<SYNC Start=16421><P Class=KRCC>
+like this. Where it contains some starter code, as well as
+<SYNC Start=18870><P Class=KRCC>
+&nbsp;
+<SYNC Start=18871><P Class=KRCC>
+some j unit tests in a separate tab. In particular, we
+<SYNC Start=22790><P Class=KRCC>
+&nbsp;
+<SYNC Start=22791><P Class=KRCC>
+want you to implement this function, to get the max temperature
+<SYNC Start=25780><P Class=KRCC>
+&nbsp;
+<SYNC Start=25781><P Class=KRCC>
+for a day. You're given a weather JSON
+<SYNC Start=28160><P Class=KRCC>
+&nbsp;
+<SYNC Start=28161><P Class=KRCC>
+string, formatted the same way as you would get
+<SYNC Start=30390><P Class=KRCC>
+&nbsp;
+<SYNC Start=30391><P Class=KRCC>
+from the Open Weather Map service. And you
+<SYNC Start=32700><P Class=KRCC>
+&nbsp;
+<SYNC Start=32701><P Class=KRCC>
+also get the day index that we care about.
+<SYNC Start=35910><P Class=KRCC>
+&nbsp;
+<SYNC Start=35911><P Class=KRCC>
+Feel free to play around with the code
+<SYNC Start=37340><P Class=KRCC>
+&nbsp;
+<SYNC Start=37341><P Class=KRCC>
+in Android Studio, or a separate development environment, before
+<SYNC Start=40520><P Class=KRCC>
+&nbsp;
+<SYNC Start=40521><P Class=KRCC>
+you paste your answer here. Or you can use
+<SYNC Start=43070><P Class=KRCC>
+&nbsp;
+<SYNC Start=43071><P Class=KRCC>
+the Udacity IDE. Whichever feels more natural to you.</BODY>
+</SAMI>

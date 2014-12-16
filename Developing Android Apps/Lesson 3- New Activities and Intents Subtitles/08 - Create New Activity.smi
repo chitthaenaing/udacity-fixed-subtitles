@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=280><P Class=KRCC>
+You're going to use Android Studio to create the
+<SYNC Start=3180><P Class=KRCC>
+&nbsp;
+<SYNC Start=3181><P Class=KRCC>
+detail activity from the blank activity with fragment template.
+<SYNC Start=7140><P Class=KRCC>
+&nbsp;
+<SYNC Start=7141><P Class=KRCC>
+The template asks for the hierarchical parent of detail
+<SYNC Start=9980><P Class=KRCC>
+&nbsp;
+<SYNC Start=9981><P Class=KRCC>
+activity, which defines the up button noted by the
+<SYNC Start=13680><P Class=KRCC>
+&nbsp;
+<SYNC Start=13681><P Class=KRCC>
+app icon, and a left pointing carrot here. But
+<SYNC Start=18320><P Class=KRCC>
+&nbsp;
+<SYNC Start=18321><P Class=KRCC>
+what does up mean? If you mapped out a
+<SYNC Start=20910><P Class=KRCC>
+&nbsp;
+<SYNC Start=20911><P Class=KRCC>
+hierarchy of all screens in the sunshine app, the
+<SYNC Start=23630><P Class=KRCC>
+&nbsp;
+<SYNC Start=23631><P Class=KRCC>
+root of the tree would be the main activity, and
+<SYNC Start=26150><P Class=KRCC>
+&nbsp;
+<SYNC Start=26151><P Class=KRCC>
+it's child would be the detail activity. So, the
+<SYNC Start=29260><P Class=KRCC>
+&nbsp;
+<SYNC Start=29261><P Class=KRCC>
+app goes to the main activity. While the back button
+<SYNC Start=32960><P Class=KRCC>
+&nbsp;
+<SYNC Start=32961><P Class=KRCC>
+can achieve the same effect, it can also bring
+<SYNC Start=35530><P Class=KRCC>
+&nbsp;
+<SYNC Start=35531><P Class=KRCC>
+you back home or to another app, depending on your
+<SYNC Start=37920><P Class=KRCC>
+&nbsp;
+<SYNC Start=37921><P Class=KRCC>
+history of screens. Up will always navigate you within
+<SYNC Start=41440><P Class=KRCC>
+&nbsp;
+<SYNC Start=41441><P Class=KRCC>
+the same app to the parent, regardless of how you
+<SYNC Start=44290><P Class=KRCC>
+&nbsp;
+<SYNC Start=44291><P Class=KRCC>
+arrived at this screen. Create the detail activity now,
+<SYNC Start=49050><P Class=KRCC>
+&nbsp;
+<SYNC Start=49051><P Class=KRCC>
+and look at how the activity is declared in the
+<SYNC Start=51220><P Class=KRCC>
+&nbsp;
+<SYNC Start=51221><P Class=KRCC>
+Android manifest file.</BODY>
+</SAMI>

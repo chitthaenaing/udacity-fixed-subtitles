@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=560><P Class=KRCC>
+So now go ahead an add logging statement to the onpause, onresume, onstop,
+<SYNC Start=5190><P Class=KRCC>
+&nbsp;
+<SYNC Start=5191><P Class=KRCC>
+onstart and oncreate and ondestroy life cycle handlers for the main activity.
+<SYNC Start=11430><P Class=KRCC>
+&nbsp;
+<SYNC Start=11431><P Class=KRCC>
+Start the app and try rotating your phone. Now observe the logs.
+<SYNC Start=15550><P Class=KRCC>
+&nbsp;
+<SYNC Start=15551><P Class=KRCC>
+Whats the sequence of these lifecycle events that your activity goes through,
+<SYNC Start=19670><P Class=KRCC>
+&nbsp;
+<SYNC Start=19671><P Class=KRCC>
+simply by changing its orientation.</BODY>
+</SAMI>

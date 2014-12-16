@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+We build a wider detail fragment layout, using a
+<SYNC Start=2250><P Class=KRCC>
+&nbsp;
+<SYNC Start=2251><P Class=KRCC>
+horizontal linear layout composed of three vertical linear layouts. This
+<SYNC Start=6310><P Class=KRCC>
+&nbsp;
+<SYNC Start=6311><P Class=KRCC>
+is what the XML code looks like. And you
+<SYNC Start=8280><P Class=KRCC>
+&nbsp;
+<SYNC Start=8281><P Class=KRCC>
+can see it linked below. Then we use layout aliasing
+<SYNC Start=11020><P Class=KRCC>
+&nbsp;
+<SYNC Start=11021><P Class=KRCC>
+to override the fragment detail layout. In the values-land
+<SYNC Start=14232><P Class=KRCC>
+&nbsp;
+<SYNC Start=14233><P Class=KRCC>
+and values-sw600dp folders, we create res.xml files. In both files,
+<SYNC Start=20100><P Class=KRCC>
+&nbsp;
+<SYNC Start=20101><P Class=KRCC>
+we alias fragment detail through fragment detail wide. And
+<SYNC Start=23200><P Class=KRCC>
+&nbsp;
+<SYNC Start=23201><P Class=KRCC>
+now we have a more responsive layout to wider screens.</BODY>
+</SAMI>

@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=110><P Class=KRCC>
+So, we need to build an app that adapts well to
+<SYNC Start=2160><P Class=KRCC>
+&nbsp;
+<SYNC Start=2161><P Class=KRCC>
+all different devices. But there's so many types of devices. So,
+<SYNC Start=5360><P Class=KRCC>
+&nbsp;
+<SYNC Start=5361><P Class=KRCC>
+where do we begin? Well, we can start by grouping them
+<SYNC Start=7680><P Class=KRCC>
+&nbsp;
+<SYNC Start=7681><P Class=KRCC>
+into buckets based on physical size. We can have a bucket for
+<SYNC Start=10930><P Class=KRCC>
+&nbsp;
+<SYNC Start=10931><P Class=KRCC>
+phones and a bucket for seven inch tablets. And a bucket
+<SYNC Start=15390><P Class=KRCC>
+&nbsp;
+<SYNC Start=15391><P Class=KRCC>
+for ten inch tablets as well. You can go even more granular
+<SYNC Start=19320><P Class=KRCC>
+&nbsp;
+<SYNC Start=19321><P Class=KRCC>
+based on screen width. But these are the most common buckets
+<SYNC Start=22060><P Class=KRCC>
+&nbsp;
+<SYNC Start=22061><P Class=KRCC>
+that you'll need. Now, classifying based on size alone is not enough.
+<SYNC Start=26260><P Class=KRCC>
+&nbsp;
+<SYNC Start=26261><P Class=KRCC>
+Even among devices of the same size, there's still
+<SYNC Start=28950><P Class=KRCC>
+&nbsp;
+<SYNC Start=28951><P Class=KRCC>
+a wide range of screen densities. Screen density is calculated
+<SYNC Start=32870><P Class=KRCC>
+&nbsp;
+<SYNC Start=32871><P Class=KRCC>
+from the number of dots per inch on the device
+<SYNC Start=35270><P Class=KRCC>
+&nbsp;
+<SYNC Start=35271><P Class=KRCC>
+or DPI. Scale starts off with low density devices, also
+<SYNC Start=38990><P Class=KRCC>
+&nbsp;
+<SYNC Start=38991><P Class=KRCC>
+known as LDPI devices. It has about 120 dots
+<SYNC Start=42120><P Class=KRCC>
+&nbsp;
+<SYNC Start=42121><P Class=KRCC>
+per inch, then it increases to medium density, high density
+<SYNC Start=45870><P Class=KRCC>
+&nbsp;
+<SYNC Start=45871><P Class=KRCC>
+all the way to extra, extra, extra high density devices
+<SYNC Start=48960><P Class=KRCC>
+&nbsp;
+<SYNC Start=48961><P Class=KRCC>
+were the number of dots per inch is much higher.
+<SYNC Start=51400><P Class=KRCC>
+&nbsp;
+<SYNC Start=51401><P Class=KRCC>
+So, how do we build an app that accounts for
+<SYNC Start=53260><P Class=KRCC>
+&nbsp;
+<SYNC Start=53261><P Class=KRCC>
+all these different screen densities? Well, when we specify layout dimensions,
+<SYNC Start=57390><P Class=KRCC>
+&nbsp;
+<SYNC Start=57391><P Class=KRCC>
+we quickly realize that we can't use pixels. For example,
+<SYNC Start=61590><P Class=KRCC>
+&nbsp;
+<SYNC Start=61591><P Class=KRCC>
+a 48 pixel button that looks fine on an MDPI device
+<SYNC Start=64360><P Class=KRCC>
+&nbsp;
+<SYNC Start=64361><P Class=KRCC>
+will look much smaller on a higher density device where
+<SYNC Start=67810><P Class=KRCC>
+&nbsp;
+<SYNC Start=67811><P Class=KRCC>
+the pixels are more compacted and the physical size of 48
+<SYNC Start=71180><P Class=KRCC>
+&nbsp;
+<SYNC Start=71181><P Class=KRCC>
+pixels is much smaller. The user wants a button to be
+<SYNC Start=73870><P Class=KRCC>
+&nbsp;
+<SYNC Start=73871><P Class=KRCC>
+easily tappable, and so it shouldn't change based on screen density.
+<SYNC Start=77220><P Class=KRCC>
+&nbsp;
+<SYNC Start=77221><P Class=KRCC>
+So we need a consistent unit of measure to define physical
+<SYNC Start=79970><P Class=KRCC>
+&nbsp;
+<SYNC Start=79971><P Class=KRCC>
+size, and in Android we call that density-independent pixels or dips
+<SYNC Start=84610><P Class=KRCC>
+&nbsp;
+<SYNC Start=84611><P Class=KRCC>
+or dp for short. That way, a 48 dp button will
+<SYNC Start=88460><P Class=KRCC>
+&nbsp;
+<SYNC Start=88461><P Class=KRCC>
+be the same physical size across all these different screen densities.</BODY>
+</SAMI>

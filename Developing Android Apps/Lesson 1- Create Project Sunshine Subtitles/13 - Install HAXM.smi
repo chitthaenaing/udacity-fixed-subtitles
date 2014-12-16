@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+I know you're excited to run the app. And I'm going to show you how to do it
+<SYNC Start=2969><P Class=KRCC>
+&nbsp;
+<SYNC Start=2970><P Class=KRCC>
+without a physical device, because we'll be using the emulator. But
+<SYNC Start=5970><P Class=KRCC>
+&nbsp;
+<SYNC Start=5971><P Class=KRCC>
+first, we need to install one more component from the Android SDK Manager.
+<SYNC Start=9460><P Class=KRCC>
+&nbsp;
+<SYNC Start=9461><P Class=KRCC>
+Click on this button to open up the Android SDK Manager. Scroll to the bottom of
+<SYNC Start=13500><P Class=KRCC>
+&nbsp;
+<SYNC Start=13501><P Class=KRCC>
+the list to find HAXM. It stands for hardware accelerated execution manager. And
+<SYNC Start=18030><P Class=KRCC>
+&nbsp;
+<SYNC Start=18031><P Class=KRCC>
+it will speed up our emulator. So go ahead and deselect the other packages, and
+<SYNC Start=22220><P Class=KRCC>
+&nbsp;
+<SYNC Start=22221><P Class=KRCC>
+just install this one. Accept the license, and
+<SYNC Start=24730><P Class=KRCC>
+&nbsp;
+<SYNC Start=24731><P Class=KRCC>
+then continue. We have to do one more step after this to install HAXM.
+<SYNC Start=27990><P Class=KRCC>
+&nbsp;
+<SYNC Start=27991><P Class=KRCC>
+I'll show you the remaining steps on a Mac, but for the other platforms you can
+<SYNC Start=31840><P Class=KRCC>
+&nbsp;
+<SYNC Start=31841><P Class=KRCC>
+check the link below. First, find Android Studio under the applications folder,
+<SYNC Start=35310><P Class=KRCC>
+&nbsp;
+<SYNC Start=35311><P Class=KRCC>
+and then hit show package contents. Then, in the SDK folder,
+<SYNC Start=39010><P Class=KRCC>
+&nbsp;
+<SYNC Start=39011><P Class=KRCC>
+there'll be an extras folder containing an Intel folder with the HAXM folder.
+<SYNC Start=43690><P Class=KRCC>
+&nbsp;
+<SYNC Start=43691><P Class=KRCC>
+Then, we click on the DMG file, open it up and
+<SYNC Start=47160><P Class=KRCC>
+&nbsp;
+<SYNC Start=47161><P Class=KRCC>
+then continue. Step through this installer, and the default values are fine.
+<SYNC Start=51160><P Class=KRCC>
+&nbsp;
+<SYNC Start=51161><P Class=KRCC>
+Once installation is complete, you can close all the windows.</BODY>
+</SAMI>

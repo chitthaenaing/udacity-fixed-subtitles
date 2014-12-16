@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=260><P Class=KRCC>
+Now we have to test this. Let's go back to
+<SYNC Start=2610><P Class=KRCC>
+&nbsp;
+<SYNC Start=2611><P Class=KRCC>
+test provider once more. It'll be helpful to parameterize our tests
+<SYNC Start=5930><P Class=KRCC>
+&nbsp;
+<SYNC Start=5931><P Class=KRCC>
+a little bit more, both for location and for date.
+<SYNC Start=10510><P Class=KRCC>
+&nbsp;
+<SYNC Start=10511><P Class=KRCC>
+All right, now that we've parameterized our tests, let's go back
+<SYNC Start=13780><P Class=KRCC>
+&nbsp;
+<SYNC Start=13781><P Class=KRCC>
+at looking into our insert read provider. For the weather,
+<SYNC Start=16840><P Class=KRCC>
+&nbsp;
+<SYNC Start=16841><P Class=KRCC>
+we're currently using the raw content URI to query. But we
+<SYNC Start=20740><P Class=KRCC>
+&nbsp;
+<SYNC Start=20741><P Class=KRCC>
+can also query on additional data. By cutting and pasting
+<SYNC Start=23290><P Class=KRCC>
+&nbsp;
+<SYNC Start=23291><P Class=KRCC>
+this text, we can try the text with different query parameters.
+<SYNC Start=26130><P Class=KRCC>
+&nbsp;
+<SYNC Start=26131><P Class=KRCC>
+We'll close the cursor because it's good
+<SYNC Start=27920><P Class=KRCC>
+&nbsp;
+<SYNC Start=27921><P Class=KRCC>
+practice. Now for our second weather query,
+<SYNC Start=30150><P Class=KRCC>
+&nbsp;
+<SYNC Start=31600><P Class=KRCC>
+we're going to test the first of
+<SYNC Start=32720><P Class=KRCC>
+&nbsp;
+<SYNC Start=32721><P Class=KRCC>
+our new URIs: WeatherEntry.buildweatherlocation and we can use
+<SYNC Start=40010><P Class=KRCC>
+&nbsp;
+<SYNC Start=40011><P Class=KRCC>
+our new task location parameter. Alright, let's
+<SYNC Start=44180><P Class=KRCC>
+&nbsp;
+<SYNC Start=44181><P Class=KRCC>
+try running this test. And our test
+<SYNC Start=47220><P Class=KRCC>
+&nbsp;
+<SYNC Start=47221><P Class=KRCC>
+passed. Alright. We're going to add one more
+<SYNC Start=49370><P Class=KRCC>
+&nbsp;
+<SYNC Start=49371><P Class=KRCC>
+test with a slight variation on the query
+<SYNC Start=51580><P Class=KRCC>
+&nbsp;
+<SYNC Start=51581><P Class=KRCC>
+using build weather location with start
+<SYNC Start=53340><P Class=KRCC>
+&nbsp;
+<SYNC Start=53341><P Class=KRCC>
+date, instead. So, we're going to use test
+<SYNC Start=55420><P Class=KRCC>
+&nbsp;
+<SYNC Start=55421><P Class=KRCC>
+location as well as test date. And now, let's run those tests. And
+<SYNC Start=60910><P Class=KRCC>
+&nbsp;
+<SYNC Start=60911><P Class=KRCC>
+our tests pass. Now, sometimes it's
+<SYNC Start=62890><P Class=KRCC>
+&nbsp;
+<SYNC Start=62891><P Class=KRCC>
+useful to actually demonstrate a test failure.
+<SYNC Start=66020><P Class=KRCC>
+&nbsp;
+<SYNC Start=66021><P Class=KRCC>
+Let's put in a date that's certainly going to fail, 20150624. We would
+<SYNC Start=69420><P Class=KRCC>
+&nbsp;
+<SYNC Start=73560><P Class=KRCC>
+expect this test to fail. Let's try it and indeed it fails. So
+<SYNC Start=79360><P Class=KRCC>
+&nbsp;
+<SYNC Start=79361><P Class=KRCC>
+we're pretty sure that our tests are actually doing what we expect them to.</BODY>
+</SAMI>

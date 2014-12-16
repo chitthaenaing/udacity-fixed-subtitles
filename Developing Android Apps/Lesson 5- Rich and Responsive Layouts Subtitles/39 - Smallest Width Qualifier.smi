@@ -1,0 +1,146 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+We mentioned this several times. Put the SW in
+<SYNC Start=2130><P Class=KRCC>
+&nbsp;
+<SYNC Start=2131><P Class=KRCC>
+the resource folder name stands for smallest width. To drive
+<SYNC Start=6190><P Class=KRCC>
+&nbsp;
+<SYNC Start=6191><P Class=KRCC>
+home that point, let's walk through a hypothetical situation. Say
+<SYNC Start=9280><P Class=KRCC>
+&nbsp;
+<SYNC Start=9281><P Class=KRCC>
+you have an app directory structure like this. We have
+<SYNC Start=11760><P Class=KRCC>
+&nbsp;
+<SYNC Start=11761><P Class=KRCC>
+some layouts defined in the base layout folder and
+<SYNC Start=14140><P Class=KRCC>
+&nbsp;
+<SYNC Start=14141><P Class=KRCC>
+we override some of those in the layout-sw600dp folder. We
+<SYNC Start=18070><P Class=KRCC>
+&nbsp;
+<SYNC Start=18071><P Class=KRCC>
+also override one of these in the layout-sw720dp folder. Let's
+<SYNC Start=22790><P Class=KRCC>
+&nbsp;
+<SYNC Start=22791><P Class=KRCC>
+look at which layouts would be applied on which device.
+<SYNC Start=25320><P Class=KRCC>
+&nbsp;
+<SYNC Start=25321><P Class=KRCC>
+Say your app is running on a Nexxus five.
+<SYNC Start=27740><P Class=KRCC>
+&nbsp;
+<SYNC Start=27741><P Class=KRCC>
+The Nexxus five has dimensions 360 dp by six 640
+<SYNC Start=30510><P Class=KRCC>
+&nbsp;
+<SYNC Start=30511><P Class=KRCC>
+dp. Of the two, the smallest width is 360 dp.
+<SYNC Start=33610><P Class=KRCC>
+&nbsp;
+<SYNC Start=33611><P Class=KRCC>
+So we use this number to compare it against the
+<SYNC Start=36350><P Class=KRCC>
+&nbsp;
+<SYNC Start=36351><P Class=KRCC>
+folder names. 360 dp is less than 600 and
+<SYNC Start=39950><P Class=KRCC>
+&nbsp;
+<SYNC Start=39951><P Class=KRCC>
+is less than, 720 so all the layouts will come
+<SYNC Start=43020><P Class=KRCC>
+&nbsp;
+<SYNC Start=43021><P Class=KRCC>
+from the space layout folder. For the Nexus 72012 version,
+<SYNC Start=47420><P Class=KRCC>
+&nbsp;
+<SYNC Start=47421><P Class=KRCC>
+the dimensions are 600 dp by 960 dp. Of the
+<SYNC Start=50950><P Class=KRCC>
+&nbsp;
+<SYNC Start=50951><P Class=KRCC>
+two sides 600 dp is the smaller width. So you compare
+<SYNC Start=54470><P Class=KRCC>
+&nbsp;
+<SYNC Start=54471><P Class=KRCC>
+this against the folder names. It turns out that the smallest width
+<SYNC Start=57830><P Class=KRCC>
+&nbsp;
+<SYNC Start=57831><P Class=KRCC>
+is greater than or equal to 600 dp, so for the
+<SYNC Start=60710><P Class=KRCC>
+&nbsp;
+<SYNC Start=60711><P Class=KRCC>
+detail and the item layout, we pull it from this folder. Now
+<SYNC Start=63800><P Class=KRCC>
+&nbsp;
+<SYNC Start=63801><P Class=KRCC>
+the main .xml file is not declared in this folder, so
+<SYNC Start=66370><P Class=KRCC>
+&nbsp;
+<SYNC Start=66371><P Class=KRCC>
+we fall back to a less specific folder, which turns out to
+<SYNC Start=69020><P Class=KRCC>
+&nbsp;
+<SYNC Start=69021><P Class=KRCC>
+be this one in the base layout folder. For the Nexus ten,
+<SYNC Start=71968><P Class=KRCC>
+&nbsp;
+<SYNC Start=71969><P Class=KRCC>
+the dimensions are 800 dp by 1280 dp. Of the two sides,
+<SYNC Start=75920><P Class=KRCC>
+&nbsp;
+<SYNC Start=75921><P Class=KRCC>
+800 dp is the smallest width. Now this device satisfies
+<SYNC Start=79220><P Class=KRCC>
+&nbsp;
+<SYNC Start=79221><P Class=KRCC>
+the categories for all of these because 800 is greater than
+<SYNC Start=82100><P Class=KRCC>
+&nbsp;
+<SYNC Start=82101><P Class=KRCC>
+720 and greater than 600. However, the system chooses the
+<SYNC Start=84990><P Class=KRCC>
+&nbsp;
+<SYNC Start=84991><P Class=KRCC>
+most specific folder first. So it will choose this item layout
+<SYNC Start=88550><P Class=KRCC>
+&nbsp;
+<SYNC Start=88551><P Class=KRCC>
+over these two. Since the detail layout is not defined
+<SYNC Start=91050><P Class=KRCC>
+&nbsp;
+<SYNC Start=91051><P Class=KRCC>
+here, it will fall back to a less specific folder, which
+<SYNC Start=93820><P Class=KRCC>
+&nbsp;
+<SYNC Start=93821><P Class=KRCC>
+is this one. Then for the main.xml file, it's not declared
+<SYNC Start=96810><P Class=KRCC>
+&nbsp;
+<SYNC Start=96811><P Class=KRCC>
+in either of these, so it falls back to this one.</BODY>
+</SAMI>

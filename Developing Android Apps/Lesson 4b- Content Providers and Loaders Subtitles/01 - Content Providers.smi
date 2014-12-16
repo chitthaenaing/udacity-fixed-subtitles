@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=720><P Class=KRCC>
+Now that we have a database, we can take
+<SYNC Start=2650><P Class=KRCC>
+&nbsp;
+<SYNC Start=2651><P Class=KRCC>
+advantage of an Android pattern to bind our view to
+<SYNC Start=5420><P Class=KRCC>
+&nbsp;
+<SYNC Start=5421><P Class=KRCC>
+our data model known as a content provider. A content
+<SYNC Start=9220><P Class=KRCC>
+&nbsp;
+<SYNC Start=9221><P Class=KRCC>
+provider allows us to think of our view data in
+<SYNC Start=11810><P Class=KRCC>
+&nbsp;
+<SYNC Start=11811><P Class=KRCC>
+terms of URIs which is a convenient structure for
+<SYNC Start=15010><P Class=KRCC>
+&nbsp;
+<SYNC Start=15011><P Class=KRCC>
+our applications. We can have views display different data based
+<SYNC Start=19020><P Class=KRCC>
+&nbsp;
+<SYNC Start=19021><P Class=KRCC>
+upon which URI is currently active. As it turns out,
+<SYNC Start=23130><P Class=KRCC>
+&nbsp;
+<SYNC Start=23131><P Class=KRCC>
+a URI is the primary data member for those Intents,
+<SYNC Start=26270><P Class=KRCC>
+&nbsp;
+<SYNC Start=26271><P Class=KRCC>
+that Rato so gloriously described. With a combination
+<SYNC Start=30300><P Class=KRCC>
+&nbsp;
+<SYNC Start=30301><P Class=KRCC>
+of content providers and intents, one can nicely
+<SYNC Start=33310><P Class=KRCC>
+&nbsp;
+<SYNC Start=33311><P Class=KRCC>
+decouple the data being displayed from the view.
+<SYNC Start=35730><P Class=KRCC>
+&nbsp;
+<SYNC Start=36910><P Class=KRCC>
+And there's one other great thing we get from
+<SYNC Start=38940><P Class=KRCC>
+&nbsp;
+<SYNC Start=38941><P Class=KRCC>
+using URI with a data location. It's easy
+<SYNC Start=42020><P Class=KRCC>
+&nbsp;
+<SYNC Start=42021><P Class=KRCC>
+to have our database notify components that are registered
+<SYNC Start=44890><P Class=KRCC>
+&nbsp;
+<SYNC Start=44891><P Class=KRCC>
+to observe that location which causes our cursor
+<SYNC Start=48060><P Class=KRCC>
+&nbsp;
+<SYNC Start=48061><P Class=KRCC>
+to update our list and show the latest data.
+<SYNC Start=50990><P Class=KRCC>
+&nbsp;
+<SYNC Start=50991><P Class=KRCC>
+Content providers can return all sorts of data but typically, they return either
+<SYNC Start=55190><P Class=KRCC>
+&nbsp;
+<SYNC Start=55191><P Class=KRCC>
+a list of items, or a single item. Here's how one might modify our
+<SYNC Start=59440><P Class=KRCC>
+&nbsp;
+<SYNC Start=59441><P Class=KRCC>
+query to select the data for a specific date, rather than a range of
+<SYNC Start=63440><P Class=KRCC>
+&nbsp;
+<SYNC Start=63441><P Class=KRCC>
+days which in this case also contains more information for the viewer to see.</BODY>
+</SAMI>

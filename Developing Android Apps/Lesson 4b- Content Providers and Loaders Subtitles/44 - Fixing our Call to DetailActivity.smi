@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=8><P Class=KRCC>
+Alright, you're done. Let's start by uncommenting out that text.
+<SYNC Start=6010><P Class=KRCC>
+&nbsp;
+<SYNC Start=6011><P Class=KRCC>
+As you can see, you need that four cast string
+<SYNC Start=7860><P Class=KRCC>
+&nbsp;
+<SYNC Start=7861><P Class=KRCC>
+to pass on to our detail activity. So what do
+<SYNC Start=10550><P Class=KRCC>
+&nbsp;
+<SYNC Start=10551><P Class=KRCC>
+we use to get that four cast string? Well we're lucky
+<SYNC Start=13920><P Class=KRCC>
+&nbsp;
+<SYNC Start=13921><P Class=KRCC>
+here, because we actually get the adapter view cast in.
+<SYNC Start=16520><P Class=KRCC>
+&nbsp;
+<SYNC Start=17580><P Class=KRCC>
+All we have to do is cast it at simple
+<SYNC Start=19100><P Class=KRCC>
+&nbsp;
+<SYNC Start=19101><P Class=KRCC>
+cursor adaptor and then we can get the cursor. We
+<SYNC Start=22190><P Class=KRCC>
+&nbsp;
+<SYNC Start=22191><P Class=KRCC>
+can move it to our position. Then, we can use string.format
+<SYNC Start=25650><P Class=KRCC>
+&nbsp;
+<SYNC Start=25651><P Class=KRCC>
+to get a formatted string based on the values
+<SYNC Start=27870><P Class=KRCC>
+&nbsp;
+<SYNC Start=27871><P Class=KRCC>
+of our columns. Note, once again the nice use
+<SYNC Start=30460><P Class=KRCC>
+&nbsp;
+<SYNC Start=30461><P Class=KRCC>
+of our column intendacies. One ending curly brace and
+<SYNC Start=34800><P Class=KRCC>
+&nbsp;
+<SYNC Start=34801><P Class=KRCC>
+let's move that intend stuff into there. And that's it.
+<SYNC Start=38640><P Class=KRCC>
+&nbsp;
+<SYNC Start=39990><P Class=KRCC>
+Now we'll be able to click on it again
+<SYNC Start=41860><P Class=KRCC>
+&nbsp;
+<SYNC Start=41861><P Class=KRCC>
+and it'll actually go to our normal detail view.
+<SYNC Start=44490><P Class=KRCC>
+&nbsp;
+<SYNC Start=44491><P Class=KRCC>
+Let's try it out. So here we are, there's
+<SYNC Start=47990><P Class=KRCC>
+&nbsp;
+<SYNC Start=47991><P Class=KRCC>
+our list view and we go right into details. Pretty
+<SYNC Start=51542><P Class=KRCC>
+&nbsp;
+<SYNC Start=51543><P Class=KRCC>
+cool. However, if we change our temperature units to imperial here
+<SYNC Start=56180><P Class=KRCC>
+&nbsp;
+<SYNC Start=57280><P Class=KRCC>
+doesn't actually update. It would be nice if that, it was
+<SYNC Start=60560><P Class=KRCC>
+&nbsp;
+<SYNC Start=60561><P Class=KRCC>
+based on the same kind of cursor model we have here.
+<SYNC Start=63480><P Class=KRCC>
+&nbsp;
+<SYNC Start=63481><P Class=KRCC>
+Something that was observing with the
+<SYNC Start=64837><P Class=KRCC>
+&nbsp;
+<SYNC Start=64838><P Class=KRCC>
+content observer and would actually update.
+<SYNC Start=66501><P Class=KRCC>
+&nbsp;
+<SYNC Start=66502><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=69567><P Class=KRCC>
+&nbsp;
+<SYNC Start=69568><P Class=KRCC>
+When we changed our setting.</BODY>
+</SAMI>

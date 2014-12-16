@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+Using SQLI makes it easy to delete, update, and insert rows using highly
+<SYNC Start=5380><P Class=KRCC>
+&nbsp;
+<SYNC Start=5381><P Class=KRCC>
+expressive queries. One can even add new columns as you revision your database.
+<SYNC Start=11600><P Class=KRCC>
+&nbsp;
+<SYNC Start=11601><P Class=KRCC>
+It's not a surprise that just about popular app makes some use of SQLI to
+<SYNC Start=16020><P Class=KRCC>
+&nbsp;
+<SYNC Start=16021><P Class=KRCC>
+Android. It's a very popular and important component of the Android solution.
+<SYNC Start=20980><P Class=KRCC>
+&nbsp;
+<SYNC Start=20981><P Class=KRCC>
+Android also provides a huge set of helper functions to make working with
+<SYNC Start=24620><P Class=KRCC>
+&nbsp;
+<SYNC Start=24621><P Class=KRCC>
+databases easy, including functions to automate query building.
+<SYNC Start=28530><P Class=KRCC>
+&nbsp;
+<SYNC Start=28531><P Class=KRCC>
+Display ListView is populated by queries and even compile statements. For
+<SYNC Start=33180><P Class=KRCC>
+&nbsp;
+<SYNC Start=33181><P Class=KRCC>
+more information about databases in Android, see the instructor nodes. One thing
+<SYNC Start=38780><P Class=KRCC>
+&nbsp;
+<SYNC Start=38781><P Class=KRCC>
+that I wanted to mention is that we're teaching you the fundamentals of how to
+<SYNC Start=42100><P Class=KRCC>
+&nbsp;
+<SYNC Start=42101><P Class=KRCC>
+build database in a content provider on Android. The idea is that once you
+<SYNC Start=46740><P Class=KRCC>
+&nbsp;
+<SYNC Start=46741><P Class=KRCC>
+are done with this class, you'll have a good understanding of how it all works,
+<SYNC Start=50530><P Class=KRCC>
+&nbsp;
+<SYNC Start=50531><P Class=KRCC>
+even if you end up using a library to help build your database and
+<SYNC Start=53720><P Class=KRCC>
+&nbsp;
+<SYNC Start=53721><P Class=KRCC>
+content provider in your future applications. That's it for
+<SYNC Start=57100><P Class=KRCC>
+&nbsp;
+<SYNC Start=57101><P Class=KRCC>
+a brief intro into storage on Android. If you want to learn more,
+<SYNC Start=60840><P Class=KRCC>
+&nbsp;
+<SYNC Start=60841><P Class=KRCC>
+go to developer.android.com and search on Data Storage.</BODY>
+</SAMI>

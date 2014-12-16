@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=210><P Class=KRCC>
+Once the user's location preference has been stored. When do
+<SYNC Start=2969><P Class=KRCC>
+&nbsp;
+<SYNC Start=2970><P Class=KRCC>
+we make use of it? We need the preferred location on
+<SYNC Start=6340><P Class=KRCC>
+&nbsp;
+<SYNC Start=6341><P Class=KRCC>
+we query the weather service. Luckily, in lesson 2, we
+<SYNC Start=10380><P Class=KRCC>
+&nbsp;
+<SYNC Start=10381><P Class=KRCC>
+modified fetch weather task to accept a location parameter. We hard
+<SYNC Start=14390><P Class=KRCC>
+&nbsp;
+<SYNC Start=14391><P Class=KRCC>
+coded it to be the Mountain View zip code. But
+<SYNC Start=16550><P Class=KRCC>
+&nbsp;
+<SYNC Start=16551><P Class=KRCC>
+now we should use the location stored in shared preferences. We
+<SYNC Start=19960><P Class=KRCC>
+&nbsp;
+<SYNC Start=19961><P Class=KRCC>
+haven't explicitly shown you how to do this. So you might
+<SYNC Start=22570><P Class=KRCC>
+&nbsp;
+<SYNC Start=22571><P Class=KRCC>
+need to do some digging around. On the Ander developer site
+<SYNC Start=25210><P Class=KRCC>
+&nbsp;
+<SYNC Start=25211><P Class=KRCC>
+to figure out how to do it. Once
+<SYNC Start=27550><P Class=KRCC>
+&nbsp;
+<SYNC Start=27551><P Class=KRCC>
+you've made the change, check the box to continue.</BODY>
+</SAMI>

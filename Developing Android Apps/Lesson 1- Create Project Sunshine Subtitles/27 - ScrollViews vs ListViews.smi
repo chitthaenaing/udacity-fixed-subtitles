@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=110><P Class=KRCC>
+On the surface, creating a list of items is simple enough.
+<SYNC Start=3260><P Class=KRCC>
+&nbsp;
+<SYNC Start=3261><P Class=KRCC>
+Android includes a Scroll View into which you can place any
+<SYNC Start=6350><P Class=KRCC>
+&nbsp;
+<SYNC Start=6351><P Class=KRCC>
+linear layout that in turn arranges each item it contains into a vertical list.
+<SYNC Start=11740><P Class=KRCC>
+&nbsp;
+<SYNC Start=11741><P Class=KRCC>
+Note the items which have fallen off the bottom off the linear layout. And
+<SYNC Start=15550><P Class=KRCC>
+&nbsp;
+<SYNC Start=15551><P Class=KRCC>
+therefore aren't currently visible in that UI. The Scroll View,
+<SYNC Start=19630><P Class=KRCC>
+&nbsp;
+<SYNC Start=19631><P Class=KRCC>
+as the name suggests, will let the user scroll through the contents of
+<SYNC Start=22660><P Class=KRCC>
+&nbsp;
+<SYNC Start=22661><P Class=KRCC>
+the layout it contains. But there's a challenge associated with that approach on
+<SYNC Start=26320><P Class=KRCC>
+&nbsp;
+<SYNC Start=26321><P Class=KRCC>
+a device with limited memory, and where touch responsiveness is
+<SYNC Start=29160><P Class=KRCC>
+&nbsp;
+<SYNC Start=29161><P Class=KRCC>
+critically important. If you have 50 items in a list and
+<SYNC Start=32900><P Class=KRCC>
+&nbsp;
+<SYNC Start=32901><P Class=KRCC>
+can fit 10 items on screen at any given time. What's the minimum number of
+<SYNC Start=37250><P Class=KRCC>
+&nbsp;
+<SYNC Start=37251><P Class=KRCC>
+views you'd need to create in order to scroll through every item on the list?
+<SYNC Start=41150><P Class=KRCC>
+&nbsp;
+<SYNC Start=42200><P Class=KRCC>
+The answer might not be immediately obvious but think about ways in which you
+<SYNC Start=46090><P Class=KRCC>
+&nbsp;
+<SYNC Start=46091><P Class=KRCC>
+can be more efficient in your use of the views used to display the entire list.</BODY>
+</SAMI>

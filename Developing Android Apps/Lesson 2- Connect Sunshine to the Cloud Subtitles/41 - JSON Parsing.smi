@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=410><P Class=KRCC>
+We want the FetchWeatherTask to return an array
+<SYNC Start=2800><P Class=KRCC>
+&nbsp;
+<SYNC Start=2801><P Class=KRCC>
+of string forecasts. That means we need to
+<SYNC Start=5520><P Class=KRCC>
+&nbsp;
+<SYNC Start=5521><P Class=KRCC>
+modify the return type of the async task.
+<SYNC Start=8380><P Class=KRCC>
+&nbsp;
+<SYNC Start=9730><P Class=KRCC>
+Then in the doInBackground method, after we've read
+<SYNC Start=12630><P Class=KRCC>
+&nbsp;
+<SYNC Start=12631><P Class=KRCC>
+in the input string, we perform this code.
+<SYNC Start=15390><P Class=KRCC>
+&nbsp;
+<SYNC Start=16850><P Class=KRCC>
+We call the helper method getWeatherDataFromJson and we
+<SYNC Start=20200><P Class=KRCC>
+&nbsp;
+<SYNC Start=20201><P Class=KRCC>
+pass in the forecastJson string as well as
+<SYNC Start=22660><P Class=KRCC>
+&nbsp;
+<SYNC Start=22661><P Class=KRCC>
+the number of forecast days. We also catch
+<SYNC Start=25475><P Class=KRCC>
+&nbsp;
+<SYNC Start=25476><P Class=KRCC>
+any Json exceptions if there's a problem with parsing. We
+<SYNC Start=30180><P Class=KRCC>
+&nbsp;
+<SYNC Start=30181><P Class=KRCC>
+wanted to verify that the string array of forecast data
+<SYNC Start=33080><P Class=KRCC>
+&nbsp;
+<SYNC Start=33081><P Class=KRCC>
+is correct. So, within the getWeatherDataFromJson method, we added some
+<SYNC Start=37960><P Class=KRCC>
+&nbsp;
+<SYNC Start=37961><P Class=KRCC>
+logging statements to print out each element of the array.</BODY>
+</SAMI>

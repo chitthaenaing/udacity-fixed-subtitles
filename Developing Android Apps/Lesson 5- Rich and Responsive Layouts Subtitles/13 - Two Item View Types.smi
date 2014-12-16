@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=110><P Class=KRCC>
+Once a forecast adapter works, we want to modify it so
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+that it can return a second item view type for the
+<SYNC Start=5420><P Class=KRCC>
+&nbsp;
+<SYNC Start=5421><P Class=KRCC>
+today list item. Normally in the sub class, getViewTypeCount return to
+<SYNC Start=9377><P Class=KRCC>
+&nbsp;
+<SYNC Start=9378><P Class=KRCC>
+one, but we're going to override it so it returns two for
+<SYNC Start=12033><P Class=KRCC>
+&nbsp;
+<SYNC Start=12034><P Class=KRCC>
+the two different layouts. But how does it know when to
+<SYNC Start=14930><P Class=KRCC>
+&nbsp;
+<SYNC Start=14931><P Class=KRCC>
+use one there or the other? Well, we override getItemViewType so
+<SYNC Start=19180><P Class=KRCC>
+&nbsp;
+<SYNC Start=19181><P Class=KRCC>
+that when the position in the list is zero, then we
+<SYNC Start=21530><P Class=KRCC>
+&nbsp;
+<SYNC Start=21531><P Class=KRCC>
+say that it's the TODAY view type. Otherwise, it's the FUTURE_DAY
+<SYNC Start=25790><P Class=KRCC>
+&nbsp;
+<SYNC Start=25791><P Class=KRCC>
+view type. These two view types are declared up
+<SYNC Start=28430><P Class=KRCC>
+&nbsp;
+<SYNC Start=28431><P Class=KRCC>
+above. These are just integer representations of the view type.
+<SYNC Start=32659><P Class=KRCC>
+&nbsp;
+<SYNC Start=32660><P Class=KRCC>
+The numbering has to start at zero because these values
+<SYNC Start=35320><P Class=KRCC>
+&nbsp;
+<SYNC Start=35321><P Class=KRCC>
+can not be greater than or equal to getViewTypeCount. So,
+<SYNC Start=38880><P Class=KRCC>
+&nbsp;
+<SYNC Start=38881><P Class=KRCC>
+the possible values for us are zero and one,
+<SYNC Start=40870><P Class=KRCC>
+&nbsp;
+<SYNC Start=40871><P Class=KRCC>
+so that we know that zero always maps to the
+<SYNC Start=43435><P Class=KRCC>
+&nbsp;
+<SYNC Start=43436><P Class=KRCC>
+view_type_today and that one always maps to view_type_future_day. We're going to
+<SYNC Start=47780><P Class=KRCC>
+&nbsp;
+<SYNC Start=47781><P Class=KRCC>
+use this information in the new View method. Remember that
+<SYNC Start=50790><P Class=KRCC>
+&nbsp;
+<SYNC Start=50791><P Class=KRCC>
+previously we inflated the list_item_forecast.xml. Now, we're going to use
+<SYNC Start=55670><P Class=KRCC>
+&nbsp;
+<SYNC Start=55671><P Class=KRCC>
+the getItemViewType to determine whether we should use one
+<SYNC Start=58280><P Class=KRCC>
+&nbsp;
+<SYNC Start=58281><P Class=KRCC>
+layout or the other. Fill in the to do
+<SYNC Start=60210><P Class=KRCC>
+&nbsp;
+<SYNC Start=60211><P Class=KRCC>
+to address this behavior. LayoutId refers to resource ID,
+<SYNC Start=64170><P Class=KRCC>
+&nbsp;
+<SYNC Start=64171><P Class=KRCC>
+which is in the form of r.layout.something. We don't
+<SYNC Start=67890><P Class=KRCC>
+&nbsp;
+<SYNC Start=67891><P Class=KRCC>
+have to reform the bindView method because it will
+<SYNC Start=69780><P Class=KRCC>
+&nbsp;
+<SYNC Start=69781><P Class=KRCC>
+continue to work. That's because the IDs are the
+<SYNC Start=72580><P Class=KRCC>
+&nbsp;
+<SYNC Start=72581><P Class=KRCC>
+same between the today layout and the future day layout.
+<SYNC Start=76040><P Class=KRCC>
+&nbsp;
+<SYNC Start=76041><P Class=KRCC>
+This is what your app should look like when you're
+<SYNC Start=77490><P Class=KRCC>
+&nbsp;
+<SYNC Start=77491><P Class=KRCC>
+done. The today layout is different from the rest of the
+<SYNC Start=80020><P Class=KRCC>
+&nbsp;
+<SYNC Start=80021><P Class=KRCC>
+days. Go ahead and make these changes in your app and
+<SYNC Start=82760><P Class=KRCC>
+&nbsp;
+<SYNC Start=82761><P Class=KRCC>
+then finish the To Do. Check this box when you're done.</BODY>
+</SAMI>

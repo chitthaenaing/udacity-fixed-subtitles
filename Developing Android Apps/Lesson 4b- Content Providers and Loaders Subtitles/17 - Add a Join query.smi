@@ -1,0 +1,126 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+When we first defined our tables we defined
+<SYNC Start=2760><P Class=KRCC>
+&nbsp;
+<SYNC Start=2761><P Class=KRCC>
+the relationships in terms of constraints. Now, we
+<SYNC Start=6510><P Class=KRCC>
+&nbsp;
+<SYNC Start=6511><P Class=KRCC>
+are going to implement that relationship into our
+<SYNC Start=8630><P Class=KRCC>
+&nbsp;
+<SYNC Start=8631><P Class=KRCC>
+query using a join this join will allow us
+<SYNC Start=12220><P Class=KRCC>
+&nbsp;
+<SYNC Start=12221><P Class=KRCC>
+to query the weather table for values from
+<SYNC Start=14690><P Class=KRCC>
+&nbsp;
+<SYNC Start=14691><P Class=KRCC>
+a specific location setting. We'll start by adding a
+<SYNC Start=18520><P Class=KRCC>
+&nbsp;
+<SYNC Start=18521><P Class=KRCC>
+SQL Ite query builder class variable at the
+<SYNC Start=21570><P Class=KRCC>
+&nbsp;
+<SYNC Start=21571><P Class=KRCC>
+top of weather provider. We'll initialize the SQLI to
+<SYNC Start=25280><P Class=KRCC>
+&nbsp;
+<SYNC Start=25281><P Class=KRCC>
+query builder in the static constructor for the
+<SYNC Start=27120><P Class=KRCC>
+&nbsp;
+<SYNC Start=27121><P Class=KRCC>
+class, describing the join between both tables. Note,
+<SYNC Start=31830><P Class=KRCC>
+&nbsp;
+<SYNC Start=31831><P Class=KRCC>
+since both tables have a column named _ID.
+<SYNC Start=35700><P Class=KRCC>
+&nbsp;
+<SYNC Start=35701><P Class=KRCC>
+We must explicitly use the table name in
+<SYNC Start=37980><P Class=KRCC>
+&nbsp;
+<SYNC Start=37981><P Class=KRCC>
+order to disambiguate which underscore ID we are
+<SYNC Start=40600><P Class=KRCC>
+&nbsp;
+<SYNC Start=40601><P Class=KRCC>
+talking about in the join. Then we can
+<SYNC Start=43050><P Class=KRCC>
+&nbsp;
+<SYNC Start=43051><P Class=KRCC>
+define the query. The query is to find
+<SYNC Start=46030><P Class=KRCC>
+&nbsp;
+<SYNC Start=46031><P Class=KRCC>
+using the question mark replacement syntax. These question marks
+<SYNC Start=50600><P Class=KRCC>
+&nbsp;
+<SYNC Start=50601><P Class=KRCC>
+will be replaced by the query parameters. Since we
+<SYNC Start=53350><P Class=KRCC>
+&nbsp;
+<SYNC Start=53351><P Class=KRCC>
+allow people to specify the start date in the URI,
+<SYNC Start=56460><P Class=KRCC>
+&nbsp;
+<SYNC Start=56461><P Class=KRCC>
+we're also going to add a second selection, which includes
+<SYNC Start=60160><P Class=KRCC>
+&nbsp;
+<SYNC Start=60161><P Class=KRCC>
+checking to see whether date text is greater than or
+<SYNC Start=62800><P Class=KRCC>
+&nbsp;
+<SYNC Start=62801><P Class=KRCC>
+equal to our parameter. Next, we'll add a method to
+<SYNC Start=65630><P Class=KRCC>
+&nbsp;
+<SYNC Start=65631><P Class=KRCC>
+get the weather by location entry, using the same query
+<SYNC Start=68550><P Class=KRCC>
+&nbsp;
+<SYNC Start=68551><P Class=KRCC>
+builder. Note, that we fetch the parameters from our URI.
+<SYNC Start=71970><P Class=KRCC>
+&nbsp;
+<SYNC Start=73240><P Class=KRCC>
+And though the string arrays, they can be substituted into
+<SYNC Start=75620><P Class=KRCC>
+&nbsp;
+<SYNC Start=75621><P Class=KRCC>
+our query. Note that if URI does not contain a start date we actually use
+<SYNC Start=80620><P Class=KRCC>
+&nbsp;
+<SYNC Start=80621><P Class=KRCC>
+a different selection. Finally, we add the function
+<SYNC Start=83950><P Class=KRCC>
+&nbsp;
+<SYNC Start=83951><P Class=KRCC>
+into the query routine of our content provider.</BODY>
+</SAMI>

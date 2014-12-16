@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=260><P Class=KRCC>
+Well now we're getting somewhere. All we have to do is run those table creation
+<SYNC Start=5120><P Class=KRCC>
+&nbsp;
+<SYNC Start=5121><P Class=KRCC>
+queries by calling exact sequel at the end of our on create function. But wait,
+<SYNC Start=10274><P Class=KRCC>
+&nbsp;
+<SYNC Start=10275><P Class=KRCC>
+there's another function in our SQliteOpenHelper, onUpgrade. You might think,
+<SYNC Start=15220><P Class=KRCC>
+&nbsp;
+<SYNC Start=15221><P Class=KRCC>
+why should I care about those?
+<SYNC Start=16830><P Class=KRCC>
+&nbsp;
+<SYNC Start=16831><P Class=KRCC>
+I'm not upgrading anything yet. To make our development lives easier we're
+<SYNC Start=21040><P Class=KRCC>
+&nbsp;
+<SYNC Start=21041><P Class=KRCC>
+going to implement the most standard kind of onUpgrade there is.
+<SYNC Start=24270><P Class=KRCC>
+&nbsp;
+<SYNC Start=24271><P Class=KRCC>
+You see onUpgrade only fires if you change the version of your database.
+<SYNC Start=29265><P Class=KRCC>
+&nbsp;
+<SYNC Start=29266><P Class=KRCC>
+Now remember, we passed that version into the SQliteOpenHelper base constructor,
+<SYNC Start=34480><P Class=KRCC>
+&nbsp;
+<SYNC Start=34481><P Class=KRCC>
+ages ago. Since we are going to be using our database as a cache for web data
+<SYNC Start=39110><P Class=KRCC>
+&nbsp;
+<SYNC Start=39111><P Class=KRCC>
+and not for user generated content, we'll drop the tables. This is helpful if we
+<SYNC Start=44360><P Class=KRCC>
+&nbsp;
+<SYNC Start=44361><P Class=KRCC>
+want to change the database in the future. If we were using user data, we'd do
+<SYNC Start=48500><P Class=KRCC>
+&nbsp;
+<SYNC Start=48501><P Class=KRCC>
+something like use alter table to add new columns. So, now we have a database.</BODY>
+</SAMI>

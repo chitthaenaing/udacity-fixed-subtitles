@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+If you answered Async Task, then you are correct.
+<SYNC Start=3790><P Class=KRCC>
+&nbsp;
+<SYNC Start=3791><P Class=KRCC>
+To understand why we chose Async Task as the answer,
+<SYNC Start=6930><P Class=KRCC>
+&nbsp;
+<SYNC Start=6931><P Class=KRCC>
+we can check the developer documentation. In this API
+<SYNC Start=9900><P Class=KRCC>
+&nbsp;
+<SYNC Start=9901><P Class=KRCC>
+guide on processes and threads, we can scroll to the
+<SYNC Start=13670><P Class=KRCC>
+&nbsp;
+<SYNC Start=13671><P Class=KRCC>
+Worker threads section. Right away, if you want to follow
+<SYNC Start=16730><P Class=KRCC>
+&nbsp;
+<SYNC Start=16731><P Class=KRCC>
+along, the link is included below. Say, for example, that
+<SYNC Start=20810><P Class=KRCC>
+&nbsp;
+<SYNC Start=20811><P Class=KRCC>
+you want to download an image from the network
+<SYNC Start=23170><P Class=KRCC>
+&nbsp;
+<SYNC Start=23171><P Class=KRCC>
+at this URL and then you want to update the
+<SYNC Start=26040><P Class=KRCC>
+&nbsp;
+<SYNC Start=26041><P Class=KRCC>
+UI so that it displays this bitmap. Well, creating
+<SYNC Start=30020><P Class=KRCC>
+&nbsp;
+<SYNC Start=30021><P Class=KRCC>
+your own thread to download the image is a
+<SYNC Start=32250><P Class=KRCC>
+&nbsp;
+<SYNC Start=32251><P Class=KRCC>
+valid option, but there's a lot of overhead to
+<SYNC Start=35170><P Class=KRCC>
+&nbsp;
+<SYNC Start=35171><P Class=KRCC>
+handle in making you app actually thread safe. After
+<SYNC Start=38790><P Class=KRCC>
+&nbsp;
+<SYNC Start=38791><P Class=KRCC>
+you download your image, you cannot directly update the
+<SYNC Start=41750><P Class=KRCC>
+&nbsp;
+<SYNC Start=41751><P Class=KRCC>
+UI from a background thread. However, Android has several
+<SYNC Start=45070><P Class=KRCC>
+&nbsp;
+<SYNC Start=45071><P Class=KRCC>
+options to run code that manipulates the UI to
+<SYNC Start=47500><P Class=KRCC>
+&nbsp;
+<SYNC Start=47501><P Class=KRCC>
+run from other threads. In this example, yet another
+<SYNC Start=51280><P Class=KRCC>
+&nbsp;
+<SYNC Start=51281><P Class=KRCC>
+runnable is created to get the bitmap result back onto
+<SYNC Start=54220><P Class=KRCC>
+&nbsp;
+<SYNC Start=54221><P Class=KRCC>
+the main thread to update the image view. This solution
+<SYNC Start=57810><P Class=KRCC>
+&nbsp;
+<SYNC Start=57811><P Class=KRCC>
+is a little cumbersome because you have to manage two
+<SYNC Start=60220><P Class=KRCC>
+&nbsp;
+<SYNC Start=60221><P Class=KRCC>
+runnables here. To abstract away this complexity we can use
+<SYNC Start=64099><P Class=KRCC>
+&nbsp;
+<SYNC Start=64100><P Class=KRCC>
+an async task and then to kick off the async
+<SYNC Start=66960><P Class=KRCC>
+&nbsp;
+<SYNC Start=66961><P Class=KRCC>
+task. For example, when someone clicks a button, then you
+<SYNC Start=70400><P Class=KRCC>
+&nbsp;
+<SYNC Start=70401><P Class=KRCC>
+just initialize the task, and then you can call execute
+<SYNC Start=73030><P Class=KRCC>
+&nbsp;
+<SYNC Start=73031><P Class=KRCC>
+on it, and then pass in any parameters that are needed.
+<SYNC Start=76730><P Class=KRCC>
+&nbsp;
+<SYNC Start=76731><P Class=KRCC>
+Notice that when you're extending the Async class, there's a
+<SYNC Start=79470><P Class=KRCC>
+&nbsp;
+<SYNC Start=79471><P Class=KRCC>
+couple of generics that you need to specify. The first is
+<SYNC Start=82750><P Class=KRCC>
+&nbsp;
+<SYNC Start=82751><P Class=KRCC>
+the type that will be passed into the do in
+<SYNC Start=84670><P Class=KRCC>
+&nbsp;
+<SYNC Start=84671><P Class=KRCC>
+background method. So, if you want to pass in this image URL
+<SYNC Start=88520><P Class=KRCC>
+&nbsp;
+<SYNC Start=88521><P Class=KRCC>
+that is specified string here and then in doing background
+<SYNC Start=91310><P Class=KRCC>
+&nbsp;
+<SYNC Start=91311><P Class=KRCC>
+you'll get a string parameter. The second one is for the
+<SYNC Start=94690><P Class=KRCC>
+&nbsp;
+<SYNC Start=94691><P Class=KRCC>
+type of object that you'll get when you get progress
+<SYNC Start=97380><P Class=KRCC>
+&nbsp;
+<SYNC Start=97381><P Class=KRCC>
+updates as a task gets executed. We're not using that here,
+<SYNC Start=101670><P Class=KRCC>
+&nbsp;
+<SYNC Start=101671><P Class=KRCC>
+so it's okay to specify that as void. And the third type is type of results
+<SYNC Start=108000><P Class=KRCC>
+&nbsp;
+<SYNC Start=108001><P Class=KRCC>
+that we'll be sending back to the main thread through the onPostExecute method</BODY>
+</SAMI>

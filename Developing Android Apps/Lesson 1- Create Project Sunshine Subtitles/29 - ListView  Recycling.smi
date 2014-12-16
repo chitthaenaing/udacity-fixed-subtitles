@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=375><P Class=KRCC>
+ListView starts by requesting a view for every visible item, however many you
+<SYNC Start=4120><P Class=KRCC>
+&nbsp;
+<SYNC Start=4121><P Class=KRCC>
+can fit onto the screen. It'll also create a couple in either direction to make
+<SYNC Start=8770><P Class=KRCC>
+&nbsp;
+<SYNC Start=8771><P Class=KRCC>
+sure we can scroll without seeing a flicker as a new view is created and
+<SYNC Start=11830><P Class=KRCC>
+&nbsp;
+<SYNC Start=11831><P Class=KRCC>
+populated. Then it creates new items just in time. So it's next in line to
+<SYNC Start=16470><P Class=KRCC>
+&nbsp;
+<SYNC Start=16471><P Class=KRCC>
+be visible to the user. So if the user never scrolls to the bottom of the list,
+<SYNC Start=20550><P Class=KRCC>
+&nbsp;
+<SYNC Start=20551><P Class=KRCC>
+the ListView will never request that view from the adapter. But this is really
+<SYNC Start=24220><P Class=KRCC>
+&nbsp;
+<SYNC Start=24221><P Class=KRCC>
+just a half measure. As you can see, if the user keeps scrolling, we could
+<SYNC Start=27780><P Class=KRCC>
+&nbsp;
+<SYNC Start=27781><P Class=KRCC>
+potentially just keep adding new views, even if they disappear off the top of
+<SYNC Start=31430><P Class=KRCC>
+&nbsp;
+<SYNC Start=31431><P Class=KRCC>
+the screen. Eventually that's going to lead to the same impact in memory use and
+<SYNC Start=35080><P Class=KRCC>
+&nbsp;
+<SYNC Start=35081><P Class=KRCC>
+performance as if we had just created all of these views directly at
+<SYNC Start=38230><P Class=KRCC>
+&nbsp;
+<SYNC Start=38231><P Class=KRCC>
+the beginning. The solution is recycling each view as it scrolls off the screen,
+<SYNC Start=42980><P Class=KRCC>
+&nbsp;
+<SYNC Start=42981><P Class=KRCC>
+allowing it to be reused when we need to show another item as it
+<SYNC Start=46270><P Class=KRCC>
+&nbsp;
+<SYNC Start=46271><P Class=KRCC>
+moves into view at the top or bottom. So rather than having to create and
+<SYNC Start=50080><P Class=KRCC>
+&nbsp;
+<SYNC Start=50081><P Class=KRCC>
+then hold in memory each item of the list as it comes in to view,
+<SYNC Start=53710><P Class=KRCC>
+&nbsp;
+<SYNC Start=53711><P Class=KRCC>
+we only need to do the creation step for the number of visible items and
+<SYNC Start=57400><P Class=KRCC>
+&nbsp;
+<SYNC Start=57401><P Class=KRCC>
+couple on either side. Then whenever a new list item comes into view,
+<SYNC Start=61850><P Class=KRCC>
+&nbsp;
+<SYNC Start=61851><P Class=KRCC>
+we just update the data displayed in one of our items in our recycle bin.
+<SYNC Start=66130><P Class=KRCC>
+&nbsp;
+<SYNC Start=66131><P Class=KRCC>
+The result? Less memory overhead, smoother scrolling and
+<SYNC Start=69200><P Class=KRCC>
+&nbsp;
+<SYNC Start=69201><P Class=KRCC>
+less view management you have to do yourself. This same recycling behavior is
+<SYNC Start=73680><P Class=KRCC>
+&nbsp;
+<SYNC Start=73681><P Class=KRCC>
+implemented across all AdapterView descended classes, such as GridView and
+<SYNC Start=78420><P Class=KRCC>
+&nbsp;
+<SYNC Start=78421><P Class=KRCC>
+ListView, which also introduces the reason that the adapter isn't built
+<SYNC Start=81830><P Class=KRCC>
+&nbsp;
+<SYNC Start=81831><P Class=KRCC>
+directly into these controls themself. By keeping them separate,
+<SYNC Start=85960><P Class=KRCC>
+&nbsp;
+<SYNC Start=85961><P Class=KRCC>
+your adapter defines how to display each element of the underlying data,
+<SYNC Start=90050><P Class=KRCC>
+&nbsp;
+<SYNC Start=90051><P Class=KRCC>
+while the adapter view implementation itself is responsible for
+<SYNC Start=93480><P Class=KRCC>
+&nbsp;
+<SYNC Start=93481><P Class=KRCC>
+controlling how each of these elements is laid out. Be it a list or
+<SYNC Start=97800><P Class=KRCC>
+&nbsp;
+<SYNC Start=97801><P Class=KRCC>
+a grid in these particular instances.</BODY>
+</SAMI>

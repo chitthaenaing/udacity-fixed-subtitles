@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+In our code, we're going to initialize the adapter within the placeholder
+<SYNC Start=3780><P Class=KRCC>
+&nbsp;
+<SYNC Start=3781><P Class=KRCC>
+fragment on create view method. Because that's where we want the list view to
+<SYNC Start=7530><P Class=KRCC>
+&nbsp;
+<SYNC Start=7531><P Class=KRCC>
+be populated with data. We're using a array adapter, and we can initialize it
+<SYNC Start=11790><P Class=KRCC>
+&nbsp;
+<SYNC Start=11791><P Class=KRCC>
+with four parameters. A context, the ID of a list item layout,
+<SYNC Start=16295><P Class=KRCC>
+&nbsp;
+<SYNC Start=16296><P Class=KRCC>
+the ID of a text view within that list item layout, as well as a list of data.
+<SYNC Start=21870><P Class=KRCC>
+&nbsp;
+<SYNC Start=21871><P Class=KRCC>
+We'll go through each of these parameters one by one now. First, for
+<SYNC Start=25560><P Class=KRCC>
+&nbsp;
+<SYNC Start=25561><P Class=KRCC>
+context. It contained global information about the App environment.
+<SYNC Start=29800><P Class=KRCC>
+&nbsp;
+<SYNC Start=29801><P Class=KRCC>
+It allows us to access system services and resources, as well as the application
+<SYNC Start=34520><P Class=KRCC>
+&nbsp;
+<SYNC Start=34521><P Class=KRCC>
+specific resources that we've defined. We use the fragments containing activity
+<SYNC Start=39600><P Class=KRCC>
+&nbsp;
+<SYNC Start=39601><P Class=KRCC>
+as the context. So, we're going to call getActivity for our parameter here.
+<SYNC Start=44520><P Class=KRCC>
+&nbsp;
+<SYNC Start=44521><P Class=KRCC>
+Since the adapter needs to know the layout for each list item, and
+<SYNC Start=48120><P Class=KRCC>
+&nbsp;
+<SYNC Start=48121><P Class=KRCC>
+needs some reference to the XML layouts that we've defined. The r.java class is
+<SYNC Start=52990><P Class=KRCC>
+&nbsp;
+<SYNC Start=52991><P Class=KRCC>
+a generated file that creates human readable identifiers for our resources. For
+<SYNC Start=58210><P Class=KRCC>
+&nbsp;
+<SYNC Start=58211><P Class=KRCC>
+the list item layout, we refer to it in code as r.layout.list_item forecast.
+<SYNC Start=63490><P Class=KRCC>
+&nbsp;
+<SYNC Start=63491><P Class=KRCC>
+This was the name of the XML file that we created earlier. Next,
+<SYNC Start=67546><P Class=KRCC>
+&nbsp;
+<SYNC Start=67547><P Class=KRCC>
+the array adapter needs to know how to take the weather forecast string and
+<SYNC Start=71630><P Class=KRCC>
+&nbsp;
+<SYNC Start=71631><P Class=KRCC>
+set that to be displayed in a text view. So you pass in the ID of the text view
+<SYNC Start=76110><P Class=KRCC>
+&nbsp;
+<SYNC Start=76111><P Class=KRCC>
+that we defined earlier, in the list item layout. Even though these two resource
+<SYNC Start=80820><P Class=KRCC>
+&nbsp;
+<SYNC Start=80821><P Class=KRCC>
+IDs look similar, one starts with R.layout while the other starts with R.id.
+<SYNC Start=85938><P Class=KRCC>
+&nbsp;
+<SYNC Start=85939><P Class=KRCC>
+R.layout refers to a layout file, while an ID refers to a specific [UNKNOWN]
+<SYNC Start=90663><P Class=KRCC>
+&nbsp;
+<SYNC Start=90664><P Class=KRCC>
+element with the matching ID attribute. And lastly, we pass in a week forecast,
+<SYNC Start=95694><P Class=KRCC>
+&nbsp;
+<SYNC Start=95695><P Class=KRCC>
+which is the array list of forecast data that we defined earlier.
+<SYNC Start=100400><P Class=KRCC>
+&nbsp;
+<SYNC Start=100401><P Class=KRCC>
+Now go ahead and initialize your adapter. Check this box when you're done.</BODY>
+</SAMI>

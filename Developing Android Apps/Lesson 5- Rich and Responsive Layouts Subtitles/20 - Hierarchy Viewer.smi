@@ -1,0 +1,158 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+Here you can see hierarchy view lets you select from
+<SYNC Start=3240><P Class=KRCC>
+&nbsp;
+<SYNC Start=3241><P Class=KRCC>
+a list of devices with physical and virtual on the left,
+<SYNC Start=6400><P Class=KRCC>
+&nbsp;
+<SYNC Start=6401><P Class=KRCC>
+each of which then contains each of the running activities
+<SYNC Start=8720><P Class=KRCC>
+&nbsp;
+<SYNC Start=8721><P Class=KRCC>
+and applications running on that device. You simply select the activity
+<SYNC Start=12880><P Class=KRCC>
+&nbsp;
+<SYNC Start=12881><P Class=KRCC>
+from the application that you want to profile. Then, hit
+<SYNC Start=15810><P Class=KRCC>
+&nbsp;
+<SYNC Start=15811><P Class=KRCC>
+the Load View hierarchy button here, and you'll see a representation
+<SYNC Start=19430><P Class=KRCC>
+&nbsp;
+<SYNC Start=19431><P Class=KRCC>
+of the selected activity's entire view hierarchy represented here in the
+<SYNC Start=23250><P Class=KRCC>
+&nbsp;
+<SYNC Start=23251><P Class=KRCC>
+Tree View, from left to right. You can see that the
+<SYNC Start=25400><P Class=KRCC>
+&nbsp;
+<SYNC Start=25401><P Class=KRCC>
+entire hierarchy is also shown here, in the overview and the layout
+<SYNC Start=28780><P Class=KRCC>
+&nbsp;
+<SYNC Start=28781><P Class=KRCC>
+itself is shown in a wire frame here. Clicking on any view,
+<SYNC Start=32030><P Class=KRCC>
+&nbsp;
+<SYNC Start=32031><P Class=KRCC>
+at any point within the hierarchy, will show you what is displayed,
+<SYNC Start=34910><P Class=KRCC>
+&nbsp;
+<SYNC Start=34911><P Class=KRCC>
+showing us the number of views which are contained within the hierarchy
+<SYNC Start=37889><P Class=KRCC>
+&nbsp;
+<SYNC Start=37890><P Class=KRCC>
+from this point onwards. You can also obtain the performance metrics to
+<SYNC Start=42310><P Class=KRCC>
+&nbsp;
+<SYNC Start=42311><P Class=KRCC>
+find out how long it takes to measure, layout and draw each
+<SYNC Start=45230><P Class=KRCC>
+&nbsp;
+<SYNC Start=45231><P Class=KRCC>
+element of the hierarchy. It's a powerful tool and you can find
+<SYNC Start=48480><P Class=KRCC>
+&nbsp;
+<SYNC Start=48481><P Class=KRCC>
+out more about how to use it to optimize your layouts and
+<SYNC Start=50750><P Class=KRCC>
+&nbsp;
+<SYNC Start=50751><P Class=KRCC>
+views in the videos and guides linked to from the
+<SYNC Start=52720><P Class=KRCC>
+&nbsp;
+<SYNC Start=52721><P Class=KRCC>
+instructor notes below. For now, note that we can use
+<SYNC Start=55680><P Class=KRCC>
+&nbsp;
+<SYNC Start=55681><P Class=KRCC>
+it to find surprisingly deeply nested layouts that need to
+<SYNC Start=59230><P Class=KRCC>
+&nbsp;
+<SYNC Start=59231><P Class=KRCC>
+be flattened. For example, here we have a layout we
+<SYNC Start=61780><P Class=KRCC>
+&nbsp;
+<SYNC Start=61781><P Class=KRCC>
+can describe using one of two techniques. One solution is
+<SYNC Start=65150><P Class=KRCC>
+&nbsp;
+<SYNC Start=65151><P Class=KRCC>
+using two nested linear layouts. But a better solution would
+<SYNC Start=69530><P Class=KRCC>
+&nbsp;
+<SYNC Start=69531><P Class=KRCC>
+be using a relative layout. The relative layout is one
+<SYNC Start=72576><P Class=KRCC>
+&nbsp;
+<SYNC Start=72577><P Class=KRCC>
+level shallower. Another tip is to avoid using the frame layout
+<SYNC Start=76010><P Class=KRCC>
+&nbsp;
+<SYNC Start=76011><P Class=KRCC>
+as the root for layout that will always be inserted
+<SYNC Start=78200><P Class=KRCC>
+&nbsp;
+<SYNC Start=78201><P Class=KRCC>
+as a child into another one. In these circumstances, the merge
+<SYNC Start=81940><P Class=KRCC>
+&nbsp;
+<SYNC Start=81941><P Class=KRCC>
+tag is a better alternative. This will be eliminated when the
+<SYNC Start=84790><P Class=KRCC>
+&nbsp;
+<SYNC Start=84791><P Class=KRCC>
+layout is included into the parents hierarchy. To help you remember
+<SYNC Start=88090><P Class=KRCC>
+&nbsp;
+<SYNC Start=88091><P Class=KRCC>
+all of these tips and tips, Android has a powerful static
+<SYNC Start=90630><P Class=KRCC>
+&nbsp;
+<SYNC Start=90631><P Class=KRCC>
+analysis tool called Lint. As you can see here in the
+<SYNC Start=93410><P Class=KRCC>
+&nbsp;
+<SYNC Start=93411><P Class=KRCC>
+lint window, in addition to the layout warnings we've already talked
+<SYNC Start=96790><P Class=KRCC>
+&nbsp;
+<SYNC Start=96791><P Class=KRCC>
+about, it also checks from
+<SYNC Start=97990><P Class=KRCC>
+&nbsp;
+<SYNC Start=97991><P Class=KRCC>
+everything from accessibility problems, missing translations,
+<SYNC Start=100990><P Class=KRCC>
+&nbsp;
+<SYNC Start=100991><P Class=KRCC>
+and hard coded strings. You can find all the things lint checks
+<SYNC Start=104210><P Class=KRCC>
+&nbsp;
+<SYNC Start=104211><P Class=KRCC>
+for at the developer tools page linked to in the instructor notes</BODY>
+</SAMI>

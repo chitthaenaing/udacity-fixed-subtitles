@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=400><P Class=KRCC>
+Because it's being created within an activity, it can be
+<SYNC Start=2710><P Class=KRCC>
+&nbsp;
+<SYNC Start=2711><P Class=KRCC>
+terminated as simply as rotating the phone into a different
+<SYNC Start=5400><P Class=KRCC>
+&nbsp;
+<SYNC Start=5401><P Class=KRCC>
+orientation. So, should only ever be used for tasks whose
+<SYNC Start=8710><P Class=KRCC>
+&nbsp;
+<SYNC Start=8711><P Class=KRCC>
+lifecycle is tied to the host activity, and is expected
+<SYNC Start=12050><P Class=KRCC>
+&nbsp;
+<SYNC Start=12051><P Class=KRCC>
+to run for only a second or two. On mobile,
+<SYNC Start=15420><P Class=KRCC>
+&nbsp;
+<SYNC Start=15421><P Class=KRCC>
+it's unwise to assume that even the most trivial network
+<SYNC Start=18100><P Class=KRCC>
+&nbsp;
+<SYNC Start=18101><P Class=KRCC>
+access is going to happen quickly. So a better approach
+<SYNC Start=21680><P Class=KRCC>
+&nbsp;
+<SYNC Start=21681><P Class=KRCC>
+would be to use a service. An application component without
+<SYNC Start=25770><P Class=KRCC>
+&nbsp;
+<SYNC Start=25771><P Class=KRCC>
+the UI that's less likely to be
+<SYNC Start=27220><P Class=KRCC>
+&nbsp;
+<SYNC Start=27221><P Class=KRCC>
+interrupted. Possibly scheduled using an inexact repeating alarm.
+<SYNC Start=30820><P Class=KRCC>
+&nbsp;
+<SYNC Start=32970><P Class=KRCC>
+Even better, Android has a specialized solution know
+<SYNC Start=35860><P Class=KRCC>
+&nbsp;
+<SYNC Start=35861><P Class=KRCC>
+as Async Adapter. And it's designed especially to schedule
+<SYNC Start=39170><P Class=KRCC>
+&nbsp;
+<SYNC Start=39171><P Class=KRCC>
+your background data syncs as efficiently as possible. Better
+<SYNC Start=42700><P Class=KRCC>
+&nbsp;
+<SYNC Start=42701><P Class=KRCC>
+still would be using Google Cloud Messaging. This lets
+<SYNC Start=46830><P Class=KRCC>
+&nbsp;
+<SYNC Start=46831><P Class=KRCC>
+you notify your Async Adapter of changes on the
+<SYNC Start=48740><P Class=KRCC>
+&nbsp;
+<SYNC Start=48741><P Class=KRCC>
+server side. So you're only ever initiating network requests
+<SYNC Start=52460><P Class=KRCC>
+&nbsp;
+<SYNC Start=52461><P Class=KRCC>
+from your app when you know there's something to
+<SYNC Start=54510><P Class=KRCC>
+&nbsp;
+<SYNC Start=54511><P Class=KRCC>
+be updated on the server. For now we're concentrating
+<SYNC Start=58030><P Class=KRCC>
+&nbsp;
+<SYNC Start=58031><P Class=KRCC>
+on making our app work when it's in the foreground. But we'll return to
+<SYNC Start=61340><P Class=KRCC>
+&nbsp;
+<SYNC Start=61341><P Class=KRCC>
+look at these approaches to invisibly updating
+<SYNC Start=63340><P Class=KRCC>
+&nbsp;
+<SYNC Start=63341><P Class=KRCC>
+your app from the background a little
+<SYNC Start=64890><P Class=KRCC>
+&nbsp;
+<SYNC Start=64891><P Class=KRCC>
+later. For now, keep in mind that the Refresh button and the new thread
+<SYNC Start=69200><P Class=KRCC>
+&nbsp;
+<SYNC Start=69201><P Class=KRCC>
+solution is just a place holder while we hook up the rest of the app.</BODY>
+</SAMI>

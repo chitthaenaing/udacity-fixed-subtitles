@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=330><P Class=KRCC>
+So, how did the system know that the Maps
+<SYNC Start=2330><P Class=KRCC>
+&nbsp;
+<SYNC Start=2331><P Class=KRCC>
+app could handle this Intent? The activity within the
+<SYNC Start=5564><P Class=KRCC>
+&nbsp;
+<SYNC Start=5565><P Class=KRCC>
+Maps app included an intent filter like this one
+<SYNC Start=9720><P Class=KRCC>
+&nbsp;
+<SYNC Start=9721><P Class=KRCC>
+within its manifest entry. It indicates that the Maps
+<SYNC Start=13140><P Class=KRCC>
+&nbsp;
+<SYNC Start=13141><P Class=KRCC>
+app is capable of performing this view action on
+<SYNC Start=17100><P Class=KRCC>
+&nbsp;
+<SYNC Start=17101><P Class=KRCC>
+all data which has a geo scheme. You can
+<SYNC Start=19980><P Class=KRCC>
+&nbsp;
+<SYNC Start=19981><P Class=KRCC>
+use intent filters for your activities to define the
+<SYNC Start=22250><P Class=KRCC>
+&nbsp;
+<SYNC Start=22251><P Class=KRCC>
+actions they're capable of performing, and optionally, the kind
+<SYNC Start=25470><P Class=KRCC>
+&nbsp;
+<SYNC Start=25471><P Class=KRCC>
+of data that they can perform it on. So,
+<SYNC Start=27700><P Class=KRCC>
+&nbsp;
+<SYNC Start=27701><P Class=KRCC>
+when you use an implicit intent to address or
+<SYNC Start=30194><P Class=KRCC>
+&nbsp;
+<SYNC Start=30195><P Class=KRCC>
+request to start an activity, much like you did
+<SYNC Start=32630><P Class=KRCC>
+&nbsp;
+<SYNC Start=32631><P Class=KRCC>
+with Catherine and the openweathermap.org link, Android resolves this request
+<SYNC Start=37600><P Class=KRCC>
+&nbsp;
+<SYNC Start=37601><P Class=KRCC>
+by checking the intent filters of every activity that's
+<SYNC Start=40850><P Class=KRCC>
+&nbsp;
+<SYNC Start=40851><P Class=KRCC>
+installed on the device until it finds the best possible
+<SYNC Start=44150><P Class=KRCC>
+&nbsp;
+<SYNC Start=44151><P Class=KRCC>
+match. If multiple activities match, as in the case
+<SYNC Start=47880><P Class=KRCC>
+&nbsp;
+<SYNC Start=47881><P Class=KRCC>
+with the web url, the user is given a choice.</BODY>
+</SAMI>

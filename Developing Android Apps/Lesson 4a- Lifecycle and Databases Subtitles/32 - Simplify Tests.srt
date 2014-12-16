@@ -1,0 +1,11 @@
+1
+00:00:00,180 --> 00:00:04,850
+All right. Now for a little bit of an open ended exercise.
+
+2
+00:00:04,850 --> 00:00:10,420
+How could we simplify our test code? Write up a solution. A hint here is
+
+3
+00:00:10,420 --> 00:00:13,880
+that we can take advantage of the read property of the content value structure.

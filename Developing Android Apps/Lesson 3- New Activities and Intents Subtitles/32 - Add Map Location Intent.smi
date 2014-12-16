@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=340><P Class=KRCC>
+Add a menu option to view the user's preferred location on a map. It
+<SYNC Start=4440><P Class=KRCC>
+&nbsp;
+<SYNC Start=4441><P Class=KRCC>
+will be handled by any maps app that's available on your device. If there
+<SYNC Start=9410><P Class=KRCC>
+&nbsp;
+<SYNC Start=9411><P Class=KRCC>
+is no map app on your device, handle this case gracefully to avoid a
+<SYNC Start=13240><P Class=KRCC>
+&nbsp;
+<SYNC Start=13241><P Class=KRCC>
+crash. You might want to recall that
+<SYNC Start=15620><P Class=KRCC>
+&nbsp;
+<SYNC Start=15621><P Class=KRCC>
+we use SharedPreferences to store the preferred location.</BODY>
+</SAMI>

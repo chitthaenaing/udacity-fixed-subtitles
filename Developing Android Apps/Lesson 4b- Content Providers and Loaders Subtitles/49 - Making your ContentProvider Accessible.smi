@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+It's actually quite straightforward to make your apps content provider
+<SYNC Start=3480><P Class=KRCC>
+&nbsp;
+<SYNC Start=3481><P Class=KRCC>
+available to third party apps. The key is to modify
+<SYNC Start=6880><P Class=KRCC>
+&nbsp;
+<SYNC Start=6881><P Class=KRCC>
+the export flag in the manifest entry here to true.
+<SYNC Start=10640><P Class=KRCC>
+&nbsp;
+<SYNC Start=10641><P Class=KRCC>
+As simple as that. Any app that knows the content URI
+<SYNC Start=14174><P Class=KRCC>
+&nbsp;
+<SYNC Start=14175><P Class=KRCC>
+can use the content resolve or access it the same
+<SYNC Start=16667><P Class=KRCC>
+&nbsp;
+<SYNC Start=16668><P Class=KRCC>
+that you do. Now depending on the sensitivity of your
+<SYNC Start=19480><P Class=KRCC>
+&nbsp;
+<SYNC Start=19481><P Class=KRCC>
+data, you may want to protect it by requiring specific
+<SYNC Start=22660><P Class=KRCC>
+&nbsp;
+<SYNC Start=22661><P Class=KRCC>
+permissions to read or write to the database. So if you
+<SYNC Start=25440><P Class=KRCC>
+&nbsp;
+<SYNC Start=25441><P Class=KRCC>
+want to, you can effectively limit access only to other
+<SYNC Start=28080><P Class=KRCC>
+&nbsp;
+<SYNC Start=28081><P Class=KRCC>
+apps you have created, or to third party apps, which know
+<SYNC Start=30620><P Class=KRCC>
+&nbsp;
+<SYNC Start=30621><P Class=KRCC>
+the permissions and users agree to. Then you just need to
+<SYNC Start=34270><P Class=KRCC>
+&nbsp;
+<SYNC Start=34271><P Class=KRCC>
+publish this contract, to interact with the content provider, specifically the
+<SYNC Start=38050><P Class=KRCC>
+&nbsp;
+<SYNC Start=38051><P Class=KRCC>
+URI and column names. And you've created a simple API
+<SYNC Start=41590><P Class=KRCC>
+&nbsp;
+<SYNC Start=41591><P Class=KRCC>
+for all of your data. And as simple as that, you've
+<SYNC Start=44120><P Class=KRCC>
+&nbsp;
+<SYNC Start=44121><P Class=KRCC>
+created a new API, just for your data. This is exactly
+<SYNC Start=47890><P Class=KRCC>
+&nbsp;
+<SYNC Start=47891><P Class=KRCC>
+the same approach, used by many of the native content providers,
+<SYNC Start=50910><P Class=KRCC>
+&nbsp;
+<SYNC Start=50911><P Class=KRCC>
+including the Contacts Database, Media Store, Calendar and Call Log.</BODY>
+</SAMI>

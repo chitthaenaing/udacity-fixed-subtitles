@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=430><P Class=KRCC>
+Once you've learned how to pars JSON data, it's pretty
+<SYNC Start=2800><P Class=KRCC>
+&nbsp;
+<SYNC Start=2801><P Class=KRCC>
+straight forward to be able to pars the rest of the
+<SYNC Start=4990><P Class=KRCC>
+&nbsp;
+<SYNC Start=4991><P Class=KRCC>
+fields that we need. Since this isn't a course on
+<SYNC Start=7550><P Class=KRCC>
+&nbsp;
+<SYNC Start=7551><P Class=KRCC>
+Java or JSON, we're going to provide you with the parsing
+<SYNC Start=10520><P Class=KRCC>
+&nbsp;
+<SYNC Start=10521><P Class=KRCC>
+code in the gist below. And this is what the
+<SYNC Start=13210><P Class=KRCC>
+&nbsp;
+<SYNC Start=13211><P Class=KRCC>
+gist looks like. There are three helper methods. The first is
+<SYNC Start=16800><P Class=KRCC>
+&nbsp;
+<SYNC Start=16801><P Class=KRCC>
+for formatting dates. The second is for rounding temperatures. The third
+<SYNC Start=21280><P Class=KRCC>
+&nbsp;
+<SYNC Start=21281><P Class=KRCC>
+is for turning a forecastJsonStr, into an array of weather forecasts.
+<SYNC Start=25380><P Class=KRCC>
+&nbsp;
+<SYNC Start=26420><P Class=KRCC>
+Update the Fetch Weather Tasks to use these helpful functions. And
+<SYNC Start=29780><P Class=KRCC>
+&nbsp;
+<SYNC Start=29781><P Class=KRCC>
+the do in background method should return a string array of
+<SYNC Start=32170><P Class=KRCC>
+&nbsp;
+<SYNC Start=32171><P Class=KRCC>
+forecasts. You can log the output to check that the array
+<SYNC Start=35410><P Class=KRCC>
+&nbsp;
+<SYNC Start=35411><P Class=KRCC>
+is correct. The format of one day's forecast should look like this.</BODY>
+</SAMI>

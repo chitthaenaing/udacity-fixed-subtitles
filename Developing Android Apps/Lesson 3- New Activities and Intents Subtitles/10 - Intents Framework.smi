@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=560><P Class=KRCC>
+To move from one activity. In this case,
+<SYNC Start=3240><P Class=KRCC>
+&nbsp;
+<SYNC Start=3241><P Class=KRCC>
+the MainActivity in our sunshine app, to another, here
+<SYNC Start=6210><P Class=KRCC>
+&nbsp;
+<SYNC Start=6211><P Class=KRCC>
+the DetailActivity, we call StartActivity. But note that when
+<SYNC Start=11300><P Class=KRCC>
+&nbsp;
+<SYNC Start=11301><P Class=KRCC>
+using the StartActivity method, rather than specifying the class
+<SYNC Start=14490><P Class=KRCC>
+&nbsp;
+<SYNC Start=14491><P Class=KRCC>
+name of the activity to start directly, that
+<SYNC Start=16900><P Class=KRCC>
+&nbsp;
+<SYNC Start=16901><P Class=KRCC>
+class name is packaged explicitly within an intent. The
+<SYNC Start=20590><P Class=KRCC>
+&nbsp;
+<SYNC Start=20591><P Class=KRCC>
+basic premise is simple. Whenever you need your app
+<SYNC Start=22990><P Class=KRCC>
+&nbsp;
+<SYNC Start=22991><P Class=KRCC>
+components to communicate with each other, or the system,
+<SYNC Start=25950><P Class=KRCC>
+&nbsp;
+<SYNC Start=25951><P Class=KRCC>
+you use intents to identify the
+<SYNC Start=27420><P Class=KRCC>
+&nbsp;
+<SYNC Start=27421><P Class=KRCC>
+target destination. Starting activities within your
+<SYNC Start=30950><P Class=KRCC>
+&nbsp;
+<SYNC Start=30951><P Class=KRCC>
+app is the simplest example. [SOUND]
+<SYNC Start=32912><P Class=KRCC>
+&nbsp;
+<SYNC Start=32913><P Class=KRCC>
+With your intent explicitly indicating the target
+<SYNC Start=38050><P Class=KRCC>
+&nbsp;
+<SYNC Start=38051><P Class=KRCC>
+using the context and a class name of the activity. Intents that use the
+<SYNC Start=44136><P Class=KRCC>
+&nbsp;
+<SYNC Start=44137><P Class=KRCC>
+name of the component you're targeting directly, are known as explicit intents.</BODY>
+</SAMI>

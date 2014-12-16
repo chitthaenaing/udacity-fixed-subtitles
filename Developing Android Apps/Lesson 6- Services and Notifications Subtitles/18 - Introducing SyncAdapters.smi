@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+The SyncManager does schedule your SyncAdapter
+<SYNC Start=2487><P Class=KRCC>
+&nbsp;
+<SYNC Start=2488><P Class=KRCC>
+jobs. But they don't have anything
+<SYNC Start=4720><P Class=KRCC>
+&nbsp;
+<SYNC Start=4721><P Class=KRCC>
+to do with what goes over
+<SYNC Start=5600><P Class=KRCC>
+&nbsp;
+<SYNC Start=5601><P Class=KRCC>
+the wire. There's no standard synchronization protocol.
+<SYNC Start=9400><P Class=KRCC>
+&nbsp;
+<SYNC Start=9401><P Class=KRCC>
+And while they're to tied to AccountManager, they've nothing to do with storing
+<SYNC Start=12820><P Class=KRCC>
+&nbsp;
+<SYNC Start=12821><P Class=KRCC>
+account information. However, they will auto
+<SYNC Start=16280><P Class=KRCC>
+&nbsp;
+<SYNC Start=16281><P Class=KRCC>
+retry requests, if network conditions are spotty.</BODY>
+</SAMI>

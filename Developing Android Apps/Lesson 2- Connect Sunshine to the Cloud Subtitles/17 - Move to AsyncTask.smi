@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=420><P Class=KRCC>
+For the solution within forecast fragment, we
+<SYNC Start=3460><P Class=KRCC>
+&nbsp;
+<SYNC Start=3461><P Class=KRCC>
+implemented FetchWeather/task, which extends AsyncTask. The generics
+<SYNC Start=8310><P Class=KRCC>
+&nbsp;
+<SYNC Start=8311><P Class=KRCC>
+we use are just Void, and this is fine for now. Then within the doInBackground
+<SYNC Start=13518><P Class=KRCC>
+&nbsp;
+<SYNC Start=13519><P Class=KRCC>
+method, we copied our networking codes snippet,
+<SYNC Start=16014><P Class=KRCC>
+&nbsp;
+<SYNC Start=16015><P Class=KRCC>
+here. It's the same, except [INAUDIBLE] in
+<SYNC Start=18610><P Class=KRCC>
+&nbsp;
+<SYNC Start=18611><P Class=KRCC>
+certain cases we return null instead of
+<SYNC Start=21600><P Class=KRCC>
+&nbsp;
+<SYNC Start=21601><P Class=KRCC>
+setting the forecast JSON string to be null.
+<SYNC Start=24010><P Class=KRCC>
+&nbsp;
+<SYNC Start=25010><P Class=KRCC>
+Previously, the code was an on create view, which expected us
+<SYNC Start=28770><P Class=KRCC>
+&nbsp;
+<SYNC Start=28771><P Class=KRCC>
+inflate and return a view. So it's important that it got
+<SYNC Start=31370><P Class=KRCC>
+&nbsp;
+<SYNC Start=31371><P Class=KRCC>
+to the rest of the code. Even if there was an
+<SYNC Start=33510><P Class=KRCC>
+&nbsp;
+<SYNC Start=33511><P Class=KRCC>
+error in the networking code. Now that the networking code is in
+<SYNC Start=37110><P Class=KRCC>
+&nbsp;
+<SYNC Start=37111><P Class=KRCC>
+a sync task, there's really nothing that comes after this in
+<SYNC Start=40060><P Class=KRCC>
+&nbsp;
+<SYNC Start=40061><P Class=KRCC>
+the given background method. So it's fine to just bail early
+<SYNC Start=42890><P Class=KRCC>
+&nbsp;
+<SYNC Start=42891><P Class=KRCC>
+whenever there's an error. Also know that for our log messages,
+<SYNC Start=46430><P Class=KRCC>
+&nbsp;
+<SYNC Start=46431><P Class=KRCC>
+we've defined a log tag constant. At the top of this task.
+<SYNC Start=50230><P Class=KRCC>
+&nbsp;
+<SYNC Start=51640><P Class=KRCC>
+This log tag is defined to be the name of the FetchWeatherTask.class. The
+<SYNC Start=55940><P Class=KRCC>
+&nbsp;
+<SYNC Start=55941><P Class=KRCC>
+reason we use this syntax instead
+<SYNC Start=57670><P Class=KRCC>
+&nbsp;
+<SYNC Start=57671><P Class=KRCC>
+of declaring a string FetchWeatherTask, it because
+<SYNC Start=61170><P Class=KRCC>
+&nbsp;
+<SYNC Start=61171><P Class=KRCC>
+we want these two to be in sync. If you ever rename the
+<SYNC Start=64370><P Class=KRCC>
+&nbsp;
+<SYNC Start=64371><P Class=KRCC>
+class then it will throw an exception unless you also update it here.</BODY>
+</SAMI>

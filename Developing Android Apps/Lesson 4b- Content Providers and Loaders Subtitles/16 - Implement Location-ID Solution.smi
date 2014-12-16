@@ -1,0 +1,138 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=920><P Class=KRCC>
+All right, you're done. Let's go look at the
+<SYNC Start=3860><P Class=KRCC>
+&nbsp;
+<SYNC Start=3861><P Class=KRCC>
+solution. Where we left off last time as you can
+<SYNC Start=6520><P Class=KRCC>
+&nbsp;
+<SYNC Start=6521><P Class=KRCC>
+see we have two empty queries for LOCATION_ID and
+<SYNC Start=10316><P Class=KRCC>
+&nbsp;
+<SYNC Start=10317><P Class=KRCC>
+LOCATION. These two queries look a lot like the queries
+<SYNC Start=13390><P Class=KRCC>
+&nbsp;
+<SYNC Start=13391><P Class=KRCC>
+we have for weather. For LOCATION_ID this looks almost
+<SYNC Start=17191><P Class=KRCC>
+&nbsp;
+<SYNC Start=17192><P Class=KRCC>
+exactly like what we do for weather. Except we use
+<SYNC Start=20430><P Class=KRCC>
+&nbsp;
+<SYNC Start=20431><P Class=KRCC>
+a hard coded query, rather than relying on the one
+<SYNC Start=23090><P Class=KRCC>
+&nbsp;
+<SYNC Start=23091><P Class=KRCC>
+passed into the function. Since we know that this is
+<SYNC Start=25920><P Class=KRCC>
+&nbsp;
+<SYNC Start=25921><P Class=KRCC>
+always going to be a long integer value, it is
+<SYNC Start=28800><P Class=KRCC>
+&nbsp;
+<SYNC Start=28801><P Class=KRCC>
+easy to just build the value into the query string. Location,
+<SYNC Start=32439><P Class=KRCC>
+&nbsp;
+<SYNC Start=32440><P Class=KRCC>
+on the other hand, looks almost exactly like the weather
+<SYNC Start=35950><P Class=KRCC>
+&nbsp;
+<SYNC Start=35951><P Class=KRCC>
+query. We just pass all the parameters into the database. You
+<SYNC Start=39580><P Class=KRCC>
+&nbsp;
+<SYNC Start=39581><P Class=KRCC>
+didn't think you're going to get away without testing, did you?
+<SYNC Start=42540><P Class=KRCC>
+&nbsp;
+<SYNC Start=42541><P Class=KRCC>
+Don't worry, it's really easy to add this test. It turns
+<SYNC Start=45370><P Class=KRCC>
+&nbsp;
+<SYNC Start=45371><P Class=KRCC>
+out that calling our function within the provider, works almost
+<SYNC Start=48490><P Class=KRCC>
+&nbsp;
+<SYNC Start=48491><P Class=KRCC>
+exactly the same as the way we did the weather table.
+<SYNC Start=50670><P Class=KRCC>
+&nbsp;
+<SYNC Start=51680><P Class=KRCC>
+All we have to do is replace WeatherEntry.CONTENT_URI with
+<SYNC Start=55241><P Class=KRCC>
+&nbsp;
+<SYNC Start=55242><P Class=KRCC>
+LocationEntry.CONTENT_URI. And of course we still have to delete the
+<SYNC Start=60445><P Class=KRCC>
+&nbsp;
+<SYNC Start=60446><P Class=KRCC>
+two columns that we can't support. Now that will actually
+<SYNC Start=63160><P Class=KRCC>
+&nbsp;
+<SYNC Start=63161><P Class=KRCC>
+work. So, let's test that to make sure that works.
+<SYNC Start=65379><P Class=KRCC>
+&nbsp;
+<SYNC Start=66620><P Class=KRCC>
+And our test passed, as expected. The interesting thing about
+<SYNC Start=70010><P Class=KRCC>
+&nbsp;
+<SYNC Start=70011><P Class=KRCC>
+this test is that it's just only testing the first
+<SYNC Start=72170><P Class=KRCC>
+&nbsp;
+<SYNC Start=72171><P Class=KRCC>
+query and it just happens to work because we deleted
+<SYNC Start=74490><P Class=KRCC>
+&nbsp;
+<SYNC Start=74491><P Class=KRCC>
+the database before the start. It'd be much more interesting
+<SYNC Start=76890><P Class=KRCC>
+&nbsp;
+<SYNC Start=76891><P Class=KRCC>
+to query for the row that we just inserted. And this will test the
+<SYNC Start=79950><P Class=KRCC>
+&nbsp;
+<SYNC Start=79951><P Class=KRCC>
+other query. Now, let's run the test again. And those also passed. So, we have
+<SYNC Start=85450><P Class=KRCC>
+&nbsp;
+<SYNC Start=85451><P Class=KRCC>
+some of our queries from our content
+<SYNC Start=86870><P Class=KRCC>
+&nbsp;
+<SYNC Start=86871><P Class=KRCC>
+provider functioning. But, unfortunately, we still have
+<SYNC Start=89800><P Class=KRCC>
+&nbsp;
+<SYNC Start=89801><P Class=KRCC>
+to do some of the more complicated
+<SYNC Start=91140><P Class=KRCC>
+&nbsp;
+<SYNC Start=91141><P Class=KRCC>
+things in the provider. Let's talk about joins.</BODY>
+</SAMI>

@@ -1,0 +1,118 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+Beto mentioned that we should provide bit maps at different resolutions.
+<SYNC Start=3680><P Class=KRCC>
+&nbsp;
+<SYNC Start=3681><P Class=KRCC>
+In our app, the 48 dib icon on the Nexus S
+<SYNC Start=6700><P Class=KRCC>
+&nbsp;
+<SYNC Start=6701><P Class=KRCC>
+looks to be about the same size as on the Nexus
+<SYNC Start=8910><P Class=KRCC>
+&nbsp;
+<SYNC Start=8911><P Class=KRCC>
+4, and on the Nexus 5. However, in reality, this asset
+<SYNC Start=12830><P Class=KRCC>
+&nbsp;
+<SYNC Start=12831><P Class=KRCC>
+that's being displayed is actually a lot bigger in terms of
+<SYNC Start=15360><P Class=KRCC>
+&nbsp;
+<SYNC Start=15361><P Class=KRCC>
+pixels compared to this one. To confirm, we can check out
+<SYNC Start=18540><P Class=KRCC>
+&nbsp;
+<SYNC Start=18541><P Class=KRCC>
+the app resource folders. In the drawable folders, we see that
+<SYNC Start=21940><P Class=KRCC>
+&nbsp;
+<SYNC Start=21941><P Class=KRCC>
+our app has a 48 by 48 pixel launcher icon for
+<SYNC Start=25320><P Class=KRCC>
+&nbsp;
+<SYNC Start=25321><P Class=KRCC>
+mdpi devices located in the drawable mdpi folder. To
+<SYNC Start=29068><P Class=KRCC>
+&nbsp;
+<SYNC Start=29069><P Class=KRCC>
+make an equivalent icon for the higher density devices,
+<SYNC Start=31900><P Class=KRCC>
+&nbsp;
+<SYNC Start=31901><P Class=KRCC>
+we need to make that icon progressively larger. To
+<SYNC Start=34780><P Class=KRCC>
+&nbsp;
+<SYNC Start=34781><P Class=KRCC>
+know exactly how big to make these images and
+<SYNC Start=37390><P Class=KRCC>
+&nbsp;
+<SYNC Start=37391><P Class=KRCC>
+what the dibbed pixel conversion should be, we use
+<SYNC Start=40370><P Class=KRCC>
+&nbsp;
+<SYNC Start=40371><P Class=KRCC>
+an mdpi device as the baseline. This is where
+<SYNC Start=43270><P Class=KRCC>
+&nbsp;
+<SYNC Start=43271><P Class=KRCC>
+one dib equals one pixel. Then on the HDPI
+<SYNC Start=46573><P Class=KRCC>
+&nbsp;
+<SYNC Start=46574><P Class=KRCC>
+device one dib equals 1.5 pixels. And then it increases
+<SYNC Start=50793><P Class=KRCC>
+&nbsp;
+<SYNC Start=50794><P Class=KRCC>
+from there, all the way to an xx HDPI
+<SYNC Start=53030><P Class=KRCC>
+&nbsp;
+<SYNC Start=53031><P Class=KRCC>
+device, where one dib equals four pixels. For more info
+<SYNC Start=56570><P Class=KRCC>
+&nbsp;
+<SYNC Start=56571><P Class=KRCC>
+on the conversions, see the link below. Following those
+<SYNC Start=59121><P Class=KRCC>
+&nbsp;
+<SYNC Start=59122><P Class=KRCC>
+rules, these are the sizes of the launcher icon in
+<SYNC Start=61461><P Class=KRCC>
+&nbsp;
+<SYNC Start=61462><P Class=KRCC>
+our drawable folders. The MDPI one is 48 pixels
+<SYNC Start=65319><P Class=KRCC>
+&nbsp;
+<SYNC Start=65320><P Class=KRCC>
+by 48 pixels. The one for HDPI is 1.5 times
+<SYNC Start=69250><P Class=KRCC>
+&nbsp;
+<SYNC Start=69251><P Class=KRCC>
+the size of this one. From an XHDPI device,
+<SYNC Start=73360><P Class=KRCC>
+&nbsp;
+<SYNC Start=73361><P Class=KRCC>
+the icon is two times the size of the MDPI
+<SYNC Start=75970><P Class=KRCC>
+&nbsp;
+<SYNC Start=75971><P Class=KRCC>
+one, and for an XXHDPI device, the icon is the three times the size of this one.</BODY>
+</SAMI>

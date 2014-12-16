@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=8><P Class=KRCC>
+To finish [INAUDIBLE] to do we modify the
+<SYNC Start=2530><P Class=KRCC>
+&nbsp;
+<SYNC Start=2531><P Class=KRCC>
+new view method to choose layout ID based on
+<SYNC Start=5350><P Class=KRCC>
+&nbsp;
+<SYNC Start=5351><P Class=KRCC>
+view type. If the view type is today then
+<SYNC Start=8080><P Class=KRCC>
+&nbsp;
+<SYNC Start=8081><P Class=KRCC>
+we use this resource ID. This points to the
+<SYNC Start=10880><P Class=KRCC>
+&nbsp;
+<SYNC Start=10881><P Class=KRCC>
+layout xml file list item forecast today. If the
+<SYNC Start=14430><P Class=KRCC>
+&nbsp;
+<SYNC Start=14431><P Class=KRCC>
+list type is for a future day, then we
+<SYNC Start=16350><P Class=KRCC>
+&nbsp;
+<SYNC Start=16351><P Class=KRCC>
+use this resource ID. This points to the list
+<SYNC Start=19380><P Class=KRCC>
+&nbsp;
+<SYNC Start=19381><P Class=KRCC>
+item forecast layout xml. Then we inflate that layout.</BODY>
+</SAMI>

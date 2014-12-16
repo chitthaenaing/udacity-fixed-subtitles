@@ -1,0 +1,138 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+Currently, this is our forecast list. It looks okay, but
+<SYNC Start=3150><P Class=KRCC>
+&nbsp;
+<SYNC Start=3151><P Class=KRCC>
+it would be nice if we could show the degree
+<SYNC Start=4689><P Class=KRCC>
+&nbsp;
+<SYNC Start=4690><P Class=KRCC>
+symbol for these temperature values. Using this notation is best
+<SYNC Start=8310><P Class=KRCC>
+&nbsp;
+<SYNC Start=8311><P Class=KRCC>
+practice. It will help the translator know how to reorder the
+<SYNC Start=11580><P Class=KRCC>
+&nbsp;
+<SYNC Start=11581><P Class=KRCC>
+text and the parameters so that it fits the local
+<SYNC Start=14290><P Class=KRCC>
+&nbsp;
+<SYNC Start=14291><P Class=KRCC>
+language. Now let's look at how we can use this
+<SYNC Start=16790><P Class=KRCC>
+&nbsp;
+<SYNC Start=16791><P Class=KRCC>
+method to format temperatures within our app. Within the string.xml
+<SYNC Start=20930><P Class=KRCC>
+&nbsp;
+<SYNC Start=20931><P Class=KRCC>
+file, we declared the format temperature string resource. We use xliff
+<SYNC Start=25400><P Class=KRCC>
+&nbsp;
+<SYNC Start=25401><P Class=KRCC>
+tag to denote that this is where the decimal temperature
+<SYNC Start=28250><P Class=KRCC>
+&nbsp;
+<SYNC Start=28251><P Class=KRCC>
+value will go. This is followed by the unit code
+<SYNC Start=30850><P Class=KRCC>
+&nbsp;
+<SYNC Start=30851><P Class=KRCC>
+character for the degrees symbol. In the utility class, in
+<SYNC Start=33940><P Class=KRCC>
+&nbsp;
+<SYNC Start=33941><P Class=KRCC>
+the format temperature method, we can use this string resource. Remember
+<SYNC Start=37770><P Class=KRCC>
+&nbsp;
+<SYNC Start=37771><P Class=KRCC>
+that, in this method, we take in a temperature and
+<SYNC Start=40090><P Class=KRCC>
+&nbsp;
+<SYNC Start=40091><P Class=KRCC>
+a user's preference for metric or imperial. Then, we return
+<SYNC Start=43530><P Class=KRCC>
+&nbsp;
+<SYNC Start=43531><P Class=KRCC>
+the converted temperature. We're going to modify this method so that
+<SYNC Start=47140><P Class=KRCC>
+&nbsp;
+<SYNC Start=47141><P Class=KRCC>
+it also returns the formatted string with a degrees symbol after
+<SYNC Start=50460><P Class=KRCC>
+&nbsp;
+<SYNC Start=50461><P Class=KRCC>
+the value. In order to do this. We need to past
+<SYNC Start=53240><P Class=KRCC>
+&nbsp;
+<SYNC Start=53241><P Class=KRCC>
+in a context. From the context we can get access to the
+<SYNC Start=56270><P Class=KRCC>
+&nbsp;
+<SYNC Start=56271><P Class=KRCC>
+string resource ID that we declared earlier. Then we passed in any
+<SYNC Start=60310><P Class=KRCC>
+&nbsp;
+<SYNC Start=60311><P Class=KRCC>
+additional parameters for that string template. In this case we only have
+<SYNC Start=63560><P Class=KRCC>
+&nbsp;
+<SYNC Start=63561><P Class=KRCC>
+one parameters so we pass in the temperature value. Then this
+<SYNC Start=66810><P Class=KRCC>
+&nbsp;
+<SYNC Start=66811><P Class=KRCC>
+fully formatted string gets returned to the caller. This method is used
+<SYNC Start=70350><P Class=KRCC>
+&nbsp;
+<SYNC Start=70351><P Class=KRCC>
+in the forecast list, as well in the detail page. So we
+<SYNC Start=73290><P Class=KRCC>
+&nbsp;
+<SYNC Start=73291><P Class=KRCC>
+also had to update the code there so that it would compile
+<SYNC Start=75740><P Class=KRCC>
+&nbsp;
+<SYNC Start=75741><P Class=KRCC>
+with this new parameter. And this is what the app looks like after
+<SYNC Start=79120><P Class=KRCC>
+&nbsp;
+<SYNC Start=79121><P Class=KRCC>
+the change. Go ahead and make the change in your code to add a
+<SYNC Start=82020><P Class=KRCC>
+&nbsp;
+<SYNC Start=82021><P Class=KRCC>
+string resource for displaying temperature in
+<SYNC Start=84160><P Class=KRCC>
+&nbsp;
+<SYNC Start=84161><P Class=KRCC>
+degrees. Check this box when you're done.
+<SYNC Start=86940><P Class=KRCC>
+&nbsp;
+<SYNC Start=86941><P Class=KRCC>
+And remember, use this notation going forward
+<SYNC Start=89620><P Class=KRCC>
+&nbsp;
+<SYNC Start=89621><P Class=KRCC>
+for when you need to format strings</BODY>
+</SAMI>

@@ -1,0 +1,230 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=220><P Class=KRCC>
+It's time to implement the red lines for the main activity. We
+<SYNC Start=2670><P Class=KRCC>
+&nbsp;
+<SYNC Start=2671><P Class=KRCC>
+can do one part together so that you get the hang of it.
+<SYNC Start=4939><P Class=KRCC>
+&nbsp;
+<SYNC Start=4940><P Class=KRCC>
+We begin by styling the list item Forecast Layout. The red line specifies
+<SYNC Start=9640><P Class=KRCC>
+&nbsp;
+<SYNC Start=9641><P Class=KRCC>
+that the image should be 32 dp by 32 dp. We could hard
+<SYNC Start=12240><P Class=KRCC>
+&nbsp;
+<SYNC Start=12241><P Class=KRCC>
+code the image view to be 32 by 32 dp, but it's actually
+<SYNC Start=15100><P Class=KRCC>
+&nbsp;
+<SYNC Start=15101><P Class=KRCC>
+the same as leaving it as wrapped content for height and width. To
+<SYNC Start=18330><P Class=KRCC>
+&nbsp;
+<SYNC Start=18331><P Class=KRCC>
+know what the icon size would be if we wrap content, we open
+<SYNC Start=21970><P Class=KRCC>
+&nbsp;
+<SYNC Start=21971><P Class=KRCC>
+up the MDPI version of the icon and we do verify that it
+<SYNC Start=25370><P Class=KRCC>
+&nbsp;
+<SYNC Start=25371><P Class=KRCC>
+is 32 pixels by 32 pixels. Whether we hard code it
+<SYNC Start=28450><P Class=KRCC>
+&nbsp;
+<SYNC Start=28451><P Class=KRCC>
+or just add wrap content, visually, the imagine will still look
+<SYNC Start=31400><P Class=KRCC>
+&nbsp;
+<SYNC Start=31401><P Class=KRCC>
+the same, but in the future it will be more flexible
+<SYNC Start=34310><P Class=KRCC>
+&nbsp;
+<SYNC Start=34311><P Class=KRCC>
+if we just specify wrap content in case the image size changes.
+<SYNC Start=38210><P Class=KRCC>
+&nbsp;
+<SYNC Start=38211><P Class=KRCC>
+Next we style the text. On ice cream sandwich and above,
+<SYNC Start=41150><P Class=KRCC>
+&nbsp;
+<SYNC Start=41151><P Class=KRCC>
+Roboto is the default font for text views. It is created
+<SYNC Start=44060><P Class=KRCC>
+&nbsp;
+<SYNC Start=44061><P Class=KRCC>
+specifically to satisfy the requirements of UI and to optimize for
+<SYNC Start=47310><P Class=KRCC>
+&nbsp;
+<SYNC Start=47311><P Class=KRCC>
+high density screens. The red line indicates that the font family is
+<SYNC Start=50510><P Class=KRCC>
+&nbsp;
+<SYNC Start=50511><P Class=KRCC>
+Roboto sans serif condensed, so we add that to the
+<SYNC Start=53130><P Class=KRCC>
+&nbsp;
+<SYNC Start=53131><P Class=KRCC>
+code. On the topic of font sizes, having too many font
+<SYNC Start=56240><P Class=KRCC>
+&nbsp;
+<SYNC Start=56241><P Class=KRCC>
+sizes in your app can confuse your user about the visual
+<SYNC Start=58820><P Class=KRCC>
+&nbsp;
+<SYNC Start=58821><P Class=KRCC>
+hierarchy of your app, as to what's important and what's not
+<SYNC Start=61540><P Class=KRCC>
+&nbsp;
+<SYNC Start=61541><P Class=KRCC>
+important. The Android design guide recommends these four type sizes
+<SYNC Start=65110><P Class=KRCC>
+&nbsp;
+<SYNC Start=65111><P Class=KRCC>
+for consistency with a platform and for user experience. In our
+<SYNC Start=68800><P Class=KRCC>
+&nbsp;
+<SYNC Start=68801><P Class=KRCC>
+app, we stick to the standard type sizes. And that's an
+<SYNC Start=71710><P Class=KRCC>
+&nbsp;
+<SYNC Start=71711><P Class=KRCC>
+intentional part of the design, such as the large temperature values.
+<SYNC Start=75540><P Class=KRCC>
+&nbsp;
+<SYNC Start=75541><P Class=KRCC>
+Hence, when the red line say that the date text
+<SYNC Start=77750><P Class=KRCC>
+&nbsp;
+<SYNC Start=77751><P Class=KRCC>
+should be 22sp for font size, we could specify Android
+<SYNC Start=81100><P Class=KRCC>
+&nbsp;
+<SYNC Start=81101><P Class=KRCC>
+text size to be 22sp, but the text appearance large
+<SYNC Start=84420><P Class=KRCC>
+&nbsp;
+<SYNC Start=84421><P Class=KRCC>
+attribute already maps to that value. Note that the font
+<SYNC Start=87210><P Class=KRCC>
+&nbsp;
+<SYNC Start=87211><P Class=KRCC>
+sizes are specified in S-P, not dips. S-P stands for
+<SYNC Start=90520><P Class=KRCC>
+&nbsp;
+<SYNC Start=90521><P Class=KRCC>
+scaled pixels, so you can scale with the device font
+<SYNC Start=93130><P Class=KRCC>
+&nbsp;
+<SYNC Start=93131><P Class=KRCC>
+size. In our app, we specify text appearance large and
+<SYNC Start=96771><P Class=KRCC>
+&nbsp;
+<SYNC Start=96772><P Class=KRCC>
+text appearance small, which will give up 22spand 14sp respectively.
+<SYNC Start=101090><P Class=KRCC>
+&nbsp;
+<SYNC Start=101091><P Class=KRCC>
+The default font color is black, so we don't need to specify
+<SYNC Start=103880><P Class=KRCC>
+&nbsp;
+<SYNC Start=103881><P Class=KRCC>
+the android text color attribute on our text views. Let's look at the
+<SYNC Start=107110><P Class=KRCC>
+&nbsp;
+<SYNC Start=107111><P Class=KRCC>
+spacing for the elements within the list item now. We have three children.
+<SYNC Start=110790><P Class=KRCC>
+&nbsp;
+<SYNC Start=110791><P Class=KRCC>
+The first one is 60 dp wide, with the image centered inside of
+<SYNC Start=113680><P Class=KRCC>
+&nbsp;
+<SYNC Start=113681><P Class=KRCC>
+it. So we can add a frame layout around the image view
+<SYNC Start=116124><P Class=KRCC>
+&nbsp;
+<SYNC Start=116125><P Class=KRCC>
+and set the gravity to be center on the image, that way the
+<SYNC Start=118601><P Class=KRCC>
+&nbsp;
+<SYNC Start=118602><P Class=KRCC>
+image centers itself within the parent. For the other two columns, we shouldn't
+<SYNC Start=122695><P Class=KRCC>
+&nbsp;
+<SYNC Start=122696><P Class=KRCC>
+hard code such high dp values. Because otherwise the layout won't scale across
+<SYNC Start=126150><P Class=KRCC>
+&nbsp;
+<SYNC Start=126151><P Class=KRCC>
+other devices. Instead, we can use linear layout weights, the weight of
+<SYNC Start=129650><P Class=KRCC>
+&nbsp;
+<SYNC Start=129651><P Class=KRCC>
+seven here, and the weight of five. We just tried different values
+<SYNC Start=132610><P Class=KRCC>
+&nbsp;
+<SYNC Start=132611><P Class=KRCC>
+until we got approximately equal to these values. The trick in doing
+<SYNC Start=136390><P Class=KRCC>
+&nbsp;
+<SYNC Start=136391><P Class=KRCC>
+red lines is that you want to match the visual specs, but
+<SYNC Start=139490><P Class=KRCC>
+&nbsp;
+<SYNC Start=139491><P Class=KRCC>
+you also want to be flexible in the code, so that it
+<SYNC Start=141910><P Class=KRCC>
+&nbsp;
+<SYNC Start=141911><P Class=KRCC>
+adapts to different screen sizes. And this is what the code looks
+<SYNC Start=144840><P Class=KRCC>
+&nbsp;
+<SYNC Start=144841><P Class=KRCC>
+like for the list_items_forecast layout. We
+<SYNC Start=146770><P Class=KRCC>
+&nbsp;
+<SYNC Start=146771><P Class=KRCC>
+have a horizontal linear layout, containing
+<SYNC Start=148930><P Class=KRCC>
+&nbsp;
+<SYNC Start=148931><P Class=KRCC>
+the frame layout with the image view. Then we have a vertical
+<SYNC Start=151530><P Class=KRCC>
+&nbsp;
+<SYNC Start=151531><P Class=KRCC>
+linear layout with weight seven. And then we have another vertical layout
+<SYNC Start=155050><P Class=KRCC>
+&nbsp;
+<SYNC Start=155051><P Class=KRCC>
+with weight five. We can check the link below for the full
+<SYNC Start=157620><P Class=KRCC>
+&nbsp;
+<SYNC Start=157621><P Class=KRCC>
+code file. This is what is looks like when you're done. These
+<SYNC Start=160650><P Class=KRCC>
+&nbsp;
+<SYNC Start=160651><P Class=KRCC>
+items looks polished, but we haven't gotten to the today item yet.</BODY>
+</SAMI>

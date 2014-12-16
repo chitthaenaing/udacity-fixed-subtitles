@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+One of the things you may have noticed, is that our app database continues
+<SYNC Start=3270><P Class=KRCC>
+&nbsp;
+<SYNC Start=3271><P Class=KRCC>
+to grow forever, eventually filling up the device. This is a great way to
+<SYNC Start=7900><P Class=KRCC>
+&nbsp;
+<SYNC Start=7901><P Class=KRCC>
+get out app uninstalled. So let's fix this. Add code to delete weather data that
+<SYNC Start=12930><P Class=KRCC>
+&nbsp;
+<SYNC Start=12931><P Class=KRCC>
+is more than one day old. Use the Calendar function to do data arithmetic.</BODY>
+</SAMI>

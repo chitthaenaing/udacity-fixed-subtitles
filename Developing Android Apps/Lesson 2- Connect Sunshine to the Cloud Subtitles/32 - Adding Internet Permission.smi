@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+Thanks Fredo! So, like old times, we're going to
+<SYNC Start=2960><P Class=KRCC>
+&nbsp;
+<SYNC Start=2961><P Class=KRCC>
+need to ask for permission. Go ahead and change
+<SYNC Start=5800><P Class=KRCC>
+&nbsp;
+<SYNC Start=5801><P Class=KRCC>
+the Android Manifest file, to request the Internet permission.
+<SYNC Start=8960><P Class=KRCC>
+&nbsp;
+<SYNC Start=8961><P Class=KRCC>
+And then tell us the exact string name of
+<SYNC Start=11730><P Class=KRCC>
+&nbsp;
+<SYNC Start=11731><P Class=KRCC>
+the permission that you used. Run the app
+<SYNC Start=14380><P Class=KRCC>
+&nbsp;
+<SYNC Start=14381><P Class=KRCC>
+again, to ensure that it doesn't crash. You can
+<SYNC Start=16760><P Class=KRCC>
+&nbsp;
+<SYNC Start=16761><P Class=KRCC>
+also log the output of the network call, to
+<SYNC Start=19070><P Class=KRCC>
+&nbsp;
+<SYNC Start=19071><P Class=KRCC>
+verify that you got the weather data back correctly.</BODY>
+</SAMI>

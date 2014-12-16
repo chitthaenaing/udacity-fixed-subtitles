@@ -1,0 +1,270 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=850><P Class=KRCC>
+All right, you're done. Let's take a look
+<SYNC Start=3360><P Class=KRCC>
+&nbsp;
+<SYNC Start=3361><P Class=KRCC>
+at the solution. Delete is actually pretty straight forward.
+<SYNC Start=7870><P Class=KRCC>
+&nbsp;
+<SYNC Start=7871><P Class=KRCC>
+Note that once again we have almost useless
+<SYNC Start=10140><P Class=KRCC>
+&nbsp;
+<SYNC Start=10141><P Class=KRCC>
+parameters. S actually refers to our selection while our
+<SYNC Start=13370><P Class=KRCC>
+&nbsp;
+<SYNC Start=13371><P Class=KRCC>
+strings here are actually our selection Rs. One
+<SYNC Start=16400><P Class=KRCC>
+&nbsp;
+<SYNC Start=16401><P Class=KRCC>
+little trickiness in delete is that if you actually
+<SYNC Start=19180><P Class=KRCC>
+&nbsp;
+<SYNC Start=19181><P Class=KRCC>
+put no selection in, it'll delete all the rows.
+<SYNC Start=22840><P Class=KRCC>
+&nbsp;
+<SYNC Start=22841><P Class=KRCC>
+I still want to make sure we notify the change.
+<SYNC Start=25710><P Class=KRCC>
+&nbsp;
+<SYNC Start=25711><P Class=KRCC>
+I've done the slide optimization here. It would be
+<SYNC Start=28090><P Class=KRCC>
+&nbsp;
+<SYNC Start=28091><P Class=KRCC>
+fine to just notify the change always, but I've decided
+<SYNC Start=31560><P Class=KRCC>
+&nbsp;
+<SYNC Start=31561><P Class=KRCC>
+if no rows have been deleted, then we should
+<SYNC Start=34140><P Class=KRCC>
+&nbsp;
+<SYNC Start=34141><P Class=KRCC>
+bother not notifying. Unless the selection is null, in which
+<SYNC Start=38280><P Class=KRCC>
+&nbsp;
+<SYNC Start=38281><P Class=KRCC>
+case we deleted all the rows, but again, it
+<SYNC Start=40940><P Class=KRCC>
+&nbsp;
+<SYNC Start=40941><P Class=KRCC>
+would be fine just to use notify change here even
+<SYNC Start=43780><P Class=KRCC>
+&nbsp;
+<SYNC Start=43781><P Class=KRCC>
+if no rows are actually deleted. After all, the intention
+<SYNC Start=47380><P Class=KRCC>
+&nbsp;
+<SYNC Start=47381><P Class=KRCC>
+was that rows would be deleted. Once again, let's take
+<SYNC Start=50730><P Class=KRCC>
+&nbsp;
+<SYNC Start=50731><P Class=KRCC>
+pity on someone who might have to maintain your code, and change
+<SYNC Start=53910><P Class=KRCC>
+&nbsp;
+<SYNC Start=53911><P Class=KRCC>
+these default parameter names to something
+<SYNC Start=55560><P Class=KRCC>
+&nbsp;
+<SYNC Start=55561><P Class=KRCC>
+more useful like selection and selectionargs.
+<SYNC Start=59670><P Class=KRCC>
+&nbsp;
+<SYNC Start=63770><P Class=KRCC>
+Other than that, update looks almost exactly like delete. Once
+<SYNC Start=67090><P Class=KRCC>
+&nbsp;
+<SYNC Start=67091><P Class=KRCC>
+again, we are returning the number of rows impacted by
+<SYNC Start=70080><P Class=KRCC>
+&nbsp;
+<SYNC Start=70081><P Class=KRCC>
+the update, and we don't bother notifying if no rows
+<SYNC Start=73100><P Class=KRCC>
+&nbsp;
+<SYNC Start=73101><P Class=KRCC>
+were impacted. Now that we've finished writing update and delete, we
+<SYNC Start=76530><P Class=KRCC>
+&nbsp;
+<SYNC Start=76531><P Class=KRCC>
+can go back to test provider and add some tests.
+<SYNC Start=79080><P Class=KRCC>
+&nbsp;
+<SYNC Start=79081><P Class=KRCC>
+First, let's remove test delete.db, the last test that doesn't depend
+<SYNC Start=83120><P Class=KRCC>
+&nbsp;
+<SYNC Start=83121><P Class=KRCC>
+on the provider. Instead, let's have a test that deletes
+<SYNC Start=86930><P Class=KRCC>
+&nbsp;
+<SYNC Start=86931><P Class=KRCC>
+all the records and checks to make sure they're actually deleted.
+<SYNC Start=90100><P Class=KRCC>
+&nbsp;
+<SYNC Start=90101><P Class=KRCC>
+Remember, passing a null query actually deletes all of the
+<SYNC Start=92970><P Class=KRCC>
+&nbsp;
+<SYNC Start=92971><P Class=KRCC>
+records in a table. So this is really straight-forward, just passing
+<SYNC Start=96340><P Class=KRCC>
+&nbsp;
+<SYNC Start=96341><P Class=KRCC>
+nulls. Since we're depending on the database for our deletes, it's
+<SYNC Start=99850><P Class=KRCC>
+&nbsp;
+<SYNC Start=99851><P Class=KRCC>
+not all that particularly important that we actually test the delete
+<SYNC Start=102770><P Class=KRCC>
+&nbsp;
+<SYNC Start=102771><P Class=KRCC>
+functions, although it would be nice to add that later on.
+<SYNC Start=106190><P Class=KRCC>
+&nbsp;
+<SYNC Start=106191><P Class=KRCC>
+The reason we'd want to add it is to make sure that
+<SYNC Start=108020><P Class=KRCC>
+&nbsp;
+<SYNC Start=108021><P Class=KRCC>
+our constraints are valid. And once we're done doing the deletes,
+<SYNC Start=111780><P Class=KRCC>
+&nbsp;
+<SYNC Start=111781><P Class=KRCC>
+we check to make sure that there are no rows left.
+<SYNC Start=113860><P Class=KRCC>
+&nbsp;
+<SYNC Start=115140><P Class=KRCC>
+Note that we have to delete weather entry before we delete location
+<SYNC Start=118040><P Class=KRCC>
+&nbsp;
+<SYNC Start=118041><P Class=KRCC>
+entry, because you've got constraints in the database that prevent weather entry
+<SYNC Start=121620><P Class=KRCC>
+&nbsp;
+<SYNC Start=121621><P Class=KRCC>
+from existing if location entries do not also exist and would also
+<SYNC Start=124740><P Class=KRCC>
+&nbsp;
+<SYNC Start=124741><P Class=KRCC>
+prevent the deletion of those entries. So let's check to see whether
+<SYNC Start=127640><P Class=KRCC>
+&nbsp;
+<SYNC Start=127641><P Class=KRCC>
+that actually works. All right, that passes. Good news. Now we can
+<SYNC Start=132610><P Class=KRCC>
+&nbsp;
+<SYNC Start=132611><P Class=KRCC>
+add the same test to the end to make sure we can
+<SYNC Start=134770><P Class=KRCC>
+&nbsp;
+<SYNC Start=134771><P Class=KRCC>
+delete all of the rows at the end and it still works.
+<SYNC Start=137700><P Class=KRCC>
+&nbsp;
+<SYNC Start=137701><P Class=KRCC>
+And as you can see, they still pass. So now we know we've
+<SYNC Start=140240><P Class=KRCC>
+&nbsp;
+<SYNC Start=140241><P Class=KRCC>
+deleted records before and after running tests. Now, let's try
+<SYNC Start=143810><P Class=KRCC>
+&nbsp;
+<SYNC Start=143811><P Class=KRCC>
+that update. We'll do just an update of the location.
+<SYNC Start=147170><P Class=KRCC>
+&nbsp;
+<SYNC Start=148350><P Class=KRCC>
+Again, let's start by deleting all records and inserting a
+<SYNC Start=151340><P Class=KRCC>
+&nbsp;
+<SYNC Start=151341><P Class=KRCC>
+record that we want to update. One of the nice things about
+<SYNC Start=154030><P Class=KRCC>
+&nbsp;
+<SYNC Start=154031><P Class=KRCC>
+content values is you can actually copy them using a
+<SYNC Start=156240><P Class=KRCC>
+&nbsp;
+<SYNC Start=156241><P Class=KRCC>
+copy constructor. After that, we can add the ID we
+<SYNC Start=160230><P Class=KRCC>
+&nbsp;
+<SYNC Start=160231><P Class=KRCC>
+want to update and then put the name of the city
+<SYNC Start=162660><P Class=KRCC>
+&nbsp;
+<SYNC Start=162661><P Class=KRCC>
+we want to update it to. In this case, from North Pole
+<SYNC Start=165440><P Class=KRCC>
+&nbsp;
+<SYNC Start=165441><P Class=KRCC>
+to Santa's Village. And then, finally, we call update.
+<SYNC Start=168420><P Class=KRCC>
+&nbsp;
+<SYNC Start=169600><P Class=KRCC>
+Assert that we've actually updated exactly one record as
+<SYNC Start=172175><P Class=KRCC>
+&nbsp;
+<SYNC Start=172176><P Class=KRCC>
+we'd expect, and then do a query on that,
+<SYNC Start=175600><P Class=KRCC>
+&nbsp;
+<SYNC Start=175601><P Class=KRCC>
+validating our cursor, making sure that our update actually works.
+<SYNC Start=178980><P Class=KRCC>
+&nbsp;
+<SYNC Start=178981><P Class=KRCC>
+And then finally, we close our cursor. It all
+<SYNC Start=181700><P Class=KRCC>
+&nbsp;
+<SYNC Start=181701><P Class=KRCC>
+looks pretty good. And let's see that it actually runs,
+<SYNC Start=184370><P Class=KRCC>
+&nbsp;
+<SYNC Start=184371><P Class=KRCC>
+and does the right thing. And our tests pass.
+<SYNC Start=187910><P Class=KRCC>
+&nbsp;
+<SYNC Start=187911><P Class=KRCC>
+So, we've now proved that we can update, delete, insert,
+<SYNC Start=191550><P Class=KRCC>
+&nbsp;
+<SYNC Start=191551><P Class=KRCC>
+and query and all this is fully tested.
+<SYNC Start=194250><P Class=KRCC>
+&nbsp;
+<SYNC Start=194251><P Class=KRCC>
+In other words, the bones of our application
+<SYNC Start=196280><P Class=KRCC>
+&nbsp;
+<SYNC Start=196281><P Class=KRCC>
+are finished, just waiting to attach our UI.
+<SYNC Start=199850><P Class=KRCC>
+&nbsp;
+<SYNC Start=199851><P Class=KRCC>
+Let's go through and attach some of our UI.</BODY>
+</SAMI>

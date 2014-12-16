@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=400><P Class=KRCC>
+Woo Hoo. Clicking our list items works.
+<SYNC Start=3320><P Class=KRCC>
+&nbsp;
+<SYNC Start=3321><P Class=KRCC>
+>> Woo Hoo. [CLAP]
+<SYNC Start=3920><P Class=KRCC>
+&nbsp;
+<SYNC Start=3921><P Class=KRCC>
+>> Our app is awesome.
+<SYNC Start=5730><P Class=KRCC>
+&nbsp;
+<SYNC Start=5731><P Class=KRCC>
+>> Yeah.
+<SYNC Start=5900><P Class=KRCC>
+&nbsp;
+<SYNC Start=5901><P Class=KRCC>
+>> But clicking on the settings menu does nothing. Whomp whomp. #sadtrombone.
+<SYNC Start=15070><P Class=KRCC>
+&nbsp;
+<SYNC Start=15071><P Class=KRCC>
+>> Mm, don't do that again. Let me save
+<SYNC Start=19990><P Class=KRCC>
+&nbsp;
+<SYNC Start=19991><P Class=KRCC>
+you from Dan. And let's go build the settings now.</BODY>
+</SAMI>

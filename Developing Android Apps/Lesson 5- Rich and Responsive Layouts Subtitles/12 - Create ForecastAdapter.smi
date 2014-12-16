@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+Here's the solution. In the utility class, we add the
+<SYNC Start=3210><P Class=KRCC>
+&nbsp;
+<SYNC Start=3211><P Class=KRCC>
+helper methods that were provide in the gist. We also
+<SYNC Start=6260><P Class=KRCC>
+&nbsp;
+<SYNC Start=6261><P Class=KRCC>
+declared these strings in the strings.xml file. In the Forecast
+<SYNC Start=9970><P Class=KRCC>
+&nbsp;
+<SYNC Start=9971><P Class=KRCC>
+Adapter Class, in the bind view method, we finish off the
+<SYNC Start=13000><P Class=KRCC>
+&nbsp;
+<SYNC Start=13001><P Class=KRCC>
+remaining to do's. After we read the high temperature value
+<SYNC Start=16210><P Class=KRCC>
+&nbsp;
+<SYNC Start=16211><P Class=KRCC>
+from the cursor, we go and try to find the
+<SYNC Start=18420><P Class=KRCC>
+&nbsp;
+<SYNC Start=18421><P Class=KRCC>
+text view, represented by the ID, list item high text
+<SYNC Start=21950><P Class=KRCC>
+&nbsp;
+<SYNC Start=21951><P Class=KRCC>
+view. Then we use a utility function to format the temperature
+<SYNC Start=25970><P Class=KRCC>
+&nbsp;
+<SYNC Start=25971><P Class=KRCC>
+so that it can be displayed in the text view. Then we do the
+<SYNC Start=28960><P Class=KRCC>
+&nbsp;
+<SYNC Start=28961><P Class=KRCC>
+same for the low temperature value. In the forecast fragment class, in the on
+<SYNC Start=32820><P Class=KRCC>
+&nbsp;
+<SYNC Start=32821><P Class=KRCC>
+create view method, we remove the use of the simple cursor adapter. Instead, we
+<SYNC Start=38230><P Class=KRCC>
+&nbsp;
+<SYNC Start=38231><P Class=KRCC>
+use the new forecast adapter and then we set it on the list view.</BODY>
+</SAMI>

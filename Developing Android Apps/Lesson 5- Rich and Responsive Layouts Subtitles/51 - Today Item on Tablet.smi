@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+Going back to the wire frames. In the phone layout, we
+<SYNC Start=2800><P Class=KRCC>
+&nbsp;
+<SYNC Start=2801><P Class=KRCC>
+wanted the today item to be a little bit bigger. But on
+<SYNC Start=5570><P Class=KRCC>
+&nbsp;
+<SYNC Start=5571><P Class=KRCC>
+the tablets, we just want it to look like all the
+<SYNC Start=7410><P Class=KRCC>
+&nbsp;
+<SYNC Start=7411><P Class=KRCC>
+other items, because we have an expanded detail pane here. To do
+<SYNC Start=11970><P Class=KRCC>
+&nbsp;
+<SYNC Start=11971><P Class=KRCC>
+this in the forecast adapter new view method, we should return
+<SYNC Start=15320><P Class=KRCC>
+&nbsp;
+<SYNC Start=15321><P Class=KRCC>
+the layout for a list item forecast not for the today layout.
+<SYNC Start=19060><P Class=KRCC>
+&nbsp;
+<SYNC Start=19061><P Class=KRCC>
+Then in the bind view method, for the today item, we
+<SYNC Start=21760><P Class=KRCC>
+&nbsp;
+<SYNC Start=21761><P Class=KRCC>
+should use the gray icon instead of the colored icon. These decisions
+<SYNC Start=25470><P Class=KRCC>
+&nbsp;
+<SYNC Start=25471><P Class=KRCC>
+get controlled by the return value of the getItemViewType method. Therefore,
+<SYNC Start=29140><P Class=KRCC>
+&nbsp;
+<SYNC Start=29141><P Class=KRCC>
+we modify the getItemViewType method so that at the zero position,
+<SYNC Start=32830><P Class=KRCC>
+&nbsp;
+<SYNC Start=32831><P Class=KRCC>
+if we have to use the special today layout, then we
+<SYNC Start=35080><P Class=KRCC>
+&nbsp;
+<SYNC Start=35081><P Class=KRCC>
+return view type today. Otherwise, if we shouldn't use the special
+<SYNC Start=38240><P Class=KRCC>
+&nbsp;
+<SYNC Start=38241><P Class=KRCC>
+today layout, then we should just return the view type for
+<SYNC Start=40620><P Class=KRCC>
+&nbsp;
+<SYNC Start=40621><P Class=KRCC>
+all future days. This Boolean is controlled by the setter method.
+<SYNC Start=43800><P Class=KRCC>
+&nbsp;
+<SYNC Start=43801><P Class=KRCC>
+To access this Boolean, we created a public setter method on
+<SYNC Start=46790><P Class=KRCC>
+&nbsp;
+<SYNC Start=46791><P Class=KRCC>
+the forecast adapter. But who knows how to set this value properly?
+<SYNC Start=50620><P Class=KRCC>
+&nbsp;
+<SYNC Start=50621><P Class=KRCC>
+Well the main activity knows whether it's one pane,
+<SYNC Start=52380><P Class=KRCC>
+&nbsp;
+<SYNC Start=52381><P Class=KRCC>
+or two pane UI. So, it can decide whether
+<SYNC Start=54730><P Class=KRCC>
+&nbsp;
+<SYNC Start=54731><P Class=KRCC>
+we should use the special today layout or not.
+<SYNC Start=56650><P Class=KRCC>
+&nbsp;
+<SYNC Start=57670><P Class=KRCC>
+We don't have access to the forecast adapter here, but
+<SYNC Start=60040><P Class=KRCC>
+&nbsp;
+<SYNC Start=60041><P Class=KRCC>
+we can plumb the value through the forecast fragment.
+<SYNC Start=63020><P Class=KRCC>
+&nbsp;
+<SYNC Start=63021><P Class=KRCC>
+To get access to the forecast fragment, we can ask
+<SYNC Start=65319><P Class=KRCC>
+&nbsp;
+<SYNC Start=65320><P Class=KRCC>
+the fragment manager and pass it the fragment ID.
+<SYNC Start=67350><P Class=KRCC>
+&nbsp;
+<SYNC Start=68600><P Class=KRCC>
+Finish changing the code so the app looks like this.</BODY>
+</SAMI>

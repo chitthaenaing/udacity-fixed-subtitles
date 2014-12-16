@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+As you know, there's always more changes that we wish
+<SYNC Start=3380><P Class=KRCC>
+&nbsp;
+<SYNC Start=3381><P Class=KRCC>
+we could do, if we just had a little more time.
+<SYNC Start=5873><P Class=KRCC>
+&nbsp;
+<SYNC Start=5874><P Class=KRCC>
+We're going to leave those as exercises to you, if you want to
+<SYNC Start=8458><P Class=KRCC>
+&nbsp;
+<SYNC Start=8459><P Class=KRCC>
+keep polishing up. For example, for simplicity, we had all tablet
+<SYNC Start=12200><P Class=KRCC>
+&nbsp;
+<SYNC Start=12201><P Class=KRCC>
+sizes and orientations use the same layout. However, 7 inch portrait
+<SYNC Start=16434><P Class=KRCC>
+&nbsp;
+<SYNC Start=16435><P Class=KRCC>
+would actually look better as a one pin UI. So you
+<SYNC Start=19273><P Class=KRCC>
+&nbsp;
+<SYNC Start=19274><P Class=KRCC>
+can modify your resource folders to make 7 inch portrait use
+<SYNC Start=22768><P Class=KRCC>
+&nbsp;
+<SYNC Start=22769><P Class=KRCC>
+the phone layout. You can also tweak the two pane behavior
+<SYNC Start=26220><P Class=KRCC>
+&nbsp;
+<SYNC Start=26221><P Class=KRCC>
+so that the today layout is auto selected when you first launch the
+<SYNC Start=29200><P Class=KRCC>
+&nbsp;
+<SYNC Start=29201><P Class=KRCC>
+app. Also, this should just say today instead of having the full date. That
+<SYNC Start=33420><P Class=KRCC>
+&nbsp;
+<SYNC Start=33421><P Class=KRCC>
+way, it'll look more like the other items. As you play around with the
+<SYNC Start=36880><P Class=KRCC>
+&nbsp;
+<SYNC Start=36881><P Class=KRCC>
+app, feel free to make changes you think would help improve the user experience.</BODY>
+</SAMI>

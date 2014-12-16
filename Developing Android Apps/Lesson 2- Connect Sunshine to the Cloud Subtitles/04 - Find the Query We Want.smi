@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=570><P Class=KRCC>
+Now, we should be able to figure out the most
+<SYNC Start=2170><P Class=KRCC>
+&nbsp;
+<SYNC Start=2171><P Class=KRCC>
+appropriate URL that our app should use. Based on the
+<SYNC Start=5530><P Class=KRCC>
+&nbsp;
+<SYNC Start=5531><P Class=KRCC>
+UX wireframes that we saw earlier, you noticed that we'll
+<SYNC Start=8360><P Class=KRCC>
+&nbsp;
+<SYNC Start=8361><P Class=KRCC>
+want one week's worth of data. For this quiz and for
+<SYNC Start=12080><P Class=KRCC>
+&nbsp;
+<SYNC Start=12081><P Class=KRCC>
+the example code that I'll be showing you later, we're
+<SYNC Start=15130><P Class=KRCC>
+&nbsp;
+<SYNC Start=15131><P Class=KRCC>
+going to be using the postal code for Mountain View which is
+<SYNC Start=18280><P Class=KRCC>
+&nbsp;
+<SYNC Start=18281><P Class=KRCC>
+94043. By all means, you should use your own location
+<SYNC Start=21260><P Class=KRCC>
+&nbsp;
+<SYNC Start=21261><P Class=KRCC>
+either specifying the postal code, city name or the latitude, longitude
+<SYNC Start=25760><P Class=KRCC>
+&nbsp;
+<SYNC Start=25761><P Class=KRCC>
+coordinates. Next we want their format from the server to be in JSON format,
+<SYNC Start=31190><P Class=KRCC>
+&nbsp;
+<SYNC Start=31191><P Class=KRCC>
+and we want the units to be reported in metric. But our UI will
+<SYNC Start=36590><P Class=KRCC>
+&nbsp;
+<SYNC Start=36591><P Class=KRCC>
+be able to display Celsius or Fahrenheit
+<SYNC Start=39240><P Class=KRCC>
+&nbsp;
+<SYNC Start=39241><P Class=KRCC>
+based on user preferences, and we'll just
+<SYNC Start=41170><P Class=KRCC>
+&nbsp;
+<SYNC Start=41171><P Class=KRCC>
+do the conversion ourself. Enter the URL
+<SYNC Start=44038><P Class=KRCC>
+&nbsp;
+<SYNC Start=44039><P Class=KRCC>
+that fulfills these requirements in the box below,</BODY>
+</SAMI>

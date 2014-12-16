@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=390><P Class=KRCC>
+Congratulations. You now know how to build an
+<SYNC Start=2780><P Class=KRCC>
+&nbsp;
+<SYNC Start=2781><P Class=KRCC>
+app that runs beautifully in the foreground, and efficiently
+<SYNC Start=5290><P Class=KRCC>
+&nbsp;
+<SYNC Start=5291><P Class=KRCC>
+in the background. In this lesson, you learned how
+<SYNC Start=7840><P Class=KRCC>
+&nbsp;
+<SYNC Start=7841><P Class=KRCC>
+to use services and think adapters, as well as
+<SYNC Start=10930><P Class=KRCC>
+&nbsp;
+<SYNC Start=10931><P Class=KRCC>
+creating rich notifications, all ways to provide a
+<SYNC Start=14020><P Class=KRCC>
+&nbsp;
+<SYNC Start=14021><P Class=KRCC>
+great user experience, even when your app isn't visible.
+<SYNC Start=17670><P Class=KRCC>
+&nbsp;
+<SYNC Start=17671><P Class=KRCC>
+Join me now for the final story time, as
+<SYNC Start=19720><P Class=KRCC>
+&nbsp;
+<SYNC Start=19721><P Class=KRCC>
+I take you into a possible future for Android.</BODY>
+</SAMI>

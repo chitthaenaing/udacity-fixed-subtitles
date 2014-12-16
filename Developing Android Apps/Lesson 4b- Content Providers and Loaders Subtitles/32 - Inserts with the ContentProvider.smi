@@ -1,0 +1,62 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=940><P Class=KRCC>
+All right. You're done. Let's take a look at my solution. All right. So, here's
+<SYNC Start=7092><P Class=KRCC>
+&nbsp;
+<SYNC Start=7093><P Class=KRCC>
+what our addLocation function looks like, locationSetting, cityName,
+<SYNC Start=10657><P Class=KRCC>
+&nbsp;
+<SYNC Start=10658><P Class=KRCC>
+latitude and longitude. Just like in our content
+<SYNC Start=14630><P Class=KRCC>
+&nbsp;
+<SYNC Start=14631><P Class=KRCC>
+provider test, we can use getContentResolver to query
+<SYNC Start=17230><P Class=KRCC>
+&nbsp;
+<SYNC Start=17231><P Class=KRCC>
+based upon the content URI. Remember that the
+<SYNC Start=20410><P Class=KRCC>
+&nbsp;
+<SYNC Start=20411><P Class=KRCC>
+default location entry CONTENT_URI passes all of the
+<SYNC Start=23390><P Class=KRCC>
+&nbsp;
+<SYNC Start=23391><P Class=KRCC>
+parameters into the database. So we can easily
+<SYNC Start=26240><P Class=KRCC>
+&nbsp;
+<SYNC Start=26241><P Class=KRCC>
+construct a query containing the location setting to see if
+<SYNC Start=29030><P Class=KRCC>
+&nbsp;
+<SYNC Start=29031><P Class=KRCC>
+it's in the database yet. If it's not, then the query
+<SYNC Start=32020><P Class=KRCC>
+&nbsp;
+<SYNC Start=32021><P Class=KRCC>
+will return an empty set and we should insert the new
+<SYNC Start=34710><P Class=KRCC>
+&nbsp;
+<SYNC Start=34711><P Class=KRCC>
+city name, location setting, latitude, and longitude into the database together.</BODY>
+</SAMI>

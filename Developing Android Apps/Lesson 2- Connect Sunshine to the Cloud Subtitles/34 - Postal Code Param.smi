@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=330><P Class=KRCC>
+Great work. Thumbs up. The data has landed safely on
+<SYNC Start=3850><P Class=KRCC>
+&nbsp;
+<SYNC Start=3851><P Class=KRCC>
+our phones. But I was thinking about it, and actually
+<SYNC Start=7065><P Class=KRCC>
+&nbsp;
+<SYNC Start=7066><P Class=KRCC>
+instead of hard coding our post code in, we'd really
+<SYNC Start=10057><P Class=KRCC>
+&nbsp;
+<SYNC Start=10058><P Class=KRCC>
+[SOUND] like our sun train app user, to be able
+<SYNC Start=12515><P Class=KRCC>
+&nbsp;
+<SYNC Start=12516><P Class=KRCC>
+to change their location in the settings. So let's make
+<SYNC Start=15726><P Class=KRCC>
+&nbsp;
+<SYNC Start=15727><P Class=KRCC>
+the FetchWeatherTask more flexible by having it take as input
+<SYNC Start=19183><P Class=KRCC>
+&nbsp;
+<SYNC Start=19184><P Class=KRCC>
+a postal code parameter. While we're doing that, we should
+<SYNC Start=22890><P Class=KRCC>
+&nbsp;
+<SYNC Start=22891><P Class=KRCC>
+also take this opportunity to do a little bit of refactoring.
+<SYNC Start=26340><P Class=KRCC>
+&nbsp;
+<SYNC Start=26341><P Class=KRCC>
+Instead of concatenating the strings for the server query
+<SYNC Start=29600><P Class=KRCC>
+&nbsp;
+<SYNC Start=29601><P Class=KRCC>
+URL, we should use a UriBuilder Class to build
+<SYNC Start=32369><P Class=KRCC>
+&nbsp;
+<SYNC Start=32370><P Class=KRCC>
+up he URL. We can declare a base URL
+<SYNC Start=35580><P Class=KRCC>
+&nbsp;
+<SYNC Start=35581><P Class=KRCC>
+and then append each pair of query PARAM and
+<SYNC Start=39120><P Class=KRCC>
+&nbsp;
+<SYNC Start=39121><P Class=KRCC>
+PARAM values onto it. This includes PARAM's for post
+<SYNC Start=43100><P Class=KRCC>
+&nbsp;
+<SYNC Start=43101><P Class=KRCC>
+code. JSON format, metric units, and date count. This'll
+<SYNC Start=46890><P Class=KRCC>
+&nbsp;
+<SYNC Start=46891><P Class=KRCC>
+make it easier in the future if we ever
+<SYNC Start=49080><P Class=KRCC>
+&nbsp;
+<SYNC Start=49081><P Class=KRCC>
+have to make these options configurable by the user.
+<SYNC Start=51610><P Class=KRCC>
+&nbsp;
+<SYNC Start=52710><P Class=KRCC>
+If you want to verify that the URL is built up properly. After
+<SYNC Start=55950><P Class=KRCC>
+&nbsp;
+<SYNC Start=55951><P Class=KRCC>
+you do these tasks, you can use verbose logging to print it out.</BODY>
+</SAMI>

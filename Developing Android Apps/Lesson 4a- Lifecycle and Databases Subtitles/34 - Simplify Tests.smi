@@ -1,0 +1,150 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=210><P Class=KRCC>
+Here's how I ended up simplifying things. I'd love to see great testing ideas.
+<SYNC Start=5060><P Class=KRCC>
+&nbsp;
+<SYNC Start=5061><P Class=KRCC>
+So, if you're particular to what you've created, post your solution to
+<SYNC Start=8540><P Class=KRCC>
+&nbsp;
+<SYNC Start=8541><P Class=KRCC>
+the forums. I'm starting off refactoring things a little bit. What I'm
+<SYNC Start=13280><P Class=KRCC>
+&nbsp;
+<SYNC Start=13281><P Class=KRCC>
+going to do is I'm going to add a function to get the location content values.
+<SYNC Start=17242><P Class=KRCC>
+&nbsp;
+<SYNC Start=17243><P Class=KRCC>
+This will be useful when we actually try to use these tests for
+<SYNC Start=19850><P Class=KRCC>
+&nbsp;
+<SYNC Start=19851><P Class=KRCC>
+some other things later on. And there we are. A function that'll
+<SYNC Start=23650><P Class=KRCC>
+&nbsp;
+<SYNC Start=23651><P Class=KRCC>
+return location content values. I'm also going to pull the city name out so
+<SYNC Start=28650><P Class=KRCC>
+&nbsp;
+<SYNC Start=28651><P Class=KRCC>
+we can use that for some validation steps later on. And there we are. It's now
+<SYNC Start=33690><P Class=KRCC>
+&nbsp;
+<SYNC Start=33691><P Class=KRCC>
+inside of the function. And then we're simply going to call that function to
+<SYNC Start=37010><P Class=KRCC>
+&nbsp;
+<SYNC Start=37011><P Class=KRCC>
+get our location content values and we can delete all those lines of code.
+<SYNC Start=40680><P Class=KRCC>
+&nbsp;
+<SYNC Start=40681><P Class=KRCC>
+Now, all of these columns, as I said before, are not very important, so
+<SYNC Start=45610><P Class=KRCC>
+&nbsp;
+<SYNC Start=45611><P Class=KRCC>
+we can delete them. And we can also null out the value in our query.
+<SYNC Start=50360><P Class=KRCC>
+&nbsp;
+<SYNC Start=50361><P Class=KRCC>
+The next thing I want to do is actually fix this validation step. What we can do
+<SYNC Start=53674><P Class=KRCC>
+&nbsp;
+<SYNC Start=53675><P Class=KRCC>
+is we can create a function that relies on the fact we can get the map and
+<SYNC Start=57866><P Class=KRCC>
+&nbsp;
+<SYNC Start=57867><P Class=KRCC>
+set from our content values. And then we can simply iterate through those.
+<SYNC Start=62300><P Class=KRCC>
+&nbsp;
+<SYNC Start=62301><P Class=KRCC>
+Then we can see if the values that we used to create the record actually past
+<SYNC Start=65838><P Class=KRCC>
+&nbsp;
+<SYNC Start=65839><P Class=KRCC>
+the values in the cursor that are returned. Now, back to our task. So,
+<SYNC Start=70410><P Class=KRCC>
+&nbsp;
+<SYNC Start=70411><P Class=KRCC>
+there's a lot of unnecessary code here now. All we have to do is call
+<SYNC Start=76105><P Class=KRCC>
+&nbsp;
+<SYNC Start=76106><P Class=KRCC>
+validateCursor with our values and our cursor. All right. So now we've
+<SYNC Start=81710><P Class=KRCC>
+&nbsp;
+<SYNC Start=81711><P Class=KRCC>
+converted the first test. We can do the same thing with the second test as well.
+<SYNC Start=85850><P Class=KRCC>
+&nbsp;
+<SYNC Start=85851><P Class=KRCC>
+First of all, let's do the same abstraction we did before. Now, of course,
+<SYNC Start=89140><P Class=KRCC>
+&nbsp;
+<SYNC Start=89141><P Class=KRCC>
+one of these values isn't going to be static, so we have to add that in.
+<SYNC Start=92400><P Class=KRCC>
+&nbsp;
+<SYNC Start=92401><P Class=KRCC>
+So now we can say, content values equals getWeatherContentValues.
+<SYNC Start=99250><P Class=KRCC>
+&nbsp;
+<SYNC Start=99251><P Class=KRCC>
+With our all important location row ID. Remember, our tables are linked.
+<SYNC Start=105240><P Class=KRCC>
+&nbsp;
+<SYNC Start=105241><P Class=KRCC>
+And then we can insert it into the database. Query for it.
+<SYNC Start=108830><P Class=KRCC>
+&nbsp;
+<SYNC Start=108831><P Class=KRCC>
+If the query is successful we can just call validateCursor again on our weather
+<SYNC Start=113160><P Class=KRCC>
+&nbsp;
+<SYNC Start=113161><P Class=KRCC>
+values with our weather cursor. So much less code.
+<SYNC Start=118620><P Class=KRCC>
+&nbsp;
+<SYNC Start=118621><P Class=KRCC>
+And that's it. Our test is vastly simplified and
+<SYNC Start=123870><P Class=KRCC>
+&nbsp;
+<SYNC Start=123871><P Class=KRCC>
+it will be useful to us later on. So now we can try running this test again to
+<SYNC Start=128520><P Class=KRCC>
+&nbsp;
+<SYNC Start=128521><P Class=KRCC>
+see if it still works after the refactoring. And there we are, test passed. Now,
+<SYNC Start=133318><P Class=KRCC>
+&nbsp;
+<SYNC Start=133319><P Class=KRCC>
+it'd probably be useful for us to actually print out some more data so
+<SYNC Start=135710><P Class=KRCC>
+&nbsp;
+<SYNC Start=135711><P Class=KRCC>
+we can see what was being tested. But, this simplification to our
+<SYNC Start=139340><P Class=KRCC>
+&nbsp;
+<SYNC Start=139341><P Class=KRCC>
+test is going to help us as we move forward. We're not done with testing yet.</BODY>
+</SAMI>

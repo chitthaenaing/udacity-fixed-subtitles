@@ -1,0 +1,226 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=770><P Class=KRCC>
+While it's great that we can query our database
+<SYNC Start=2780><P Class=KRCC>
+&nbsp;
+<SYNC Start=2781><P Class=KRCC>
+through the content provider, it would be nice if
+<SYNC Start=5160><P Class=KRCC>
+&nbsp;
+<SYNC Start=5161><P Class=KRCC>
+we could also use the content provider to put
+<SYNC Start=7200><P Class=KRCC>
+&nbsp;
+<SYNC Start=7201><P Class=KRCC>
+data in. We'll begin with the insert function. Let's fill
+<SYNC Start=12010><P Class=KRCC>
+&nbsp;
+<SYNC Start=12011><P Class=KRCC>
+the insert function with the same URI matcher code
+<SYNC Start=14710><P Class=KRCC>
+&nbsp;
+<SYNC Start=14711><P Class=KRCC>
+we had in the other content provider functions but with
+<SYNC Start=18200><P Class=KRCC>
+&nbsp;
+<SYNC Start=18201><P Class=KRCC>
+one change. We're only going to match the base
+<SYNC Start=21080><P Class=KRCC>
+&nbsp;
+<SYNC Start=21081><P Class=KRCC>
+URIs. There's a good reason for this. When we insert
+<SYNC Start=25770><P Class=KRCC>
+&nbsp;
+<SYNC Start=25771><P Class=KRCC>
+into our database, we want it to notify every
+<SYNC Start=28820><P Class=KRCC>
+&nbsp;
+<SYNC Start=28821><P Class=KRCC>
+content observer that might have data modified by our
+<SYNC Start=31630><P Class=KRCC>
+&nbsp;
+<SYNC Start=31631><P Class=KRCC>
+insert. It turns out that cursors register themselves as
+<SYNC Start=35370><P Class=KRCC>
+&nbsp;
+<SYNC Start=35371><P Class=KRCC>
+notify for descendents which means that notifying the root
+<SYNC Start=39370><P Class=KRCC>
+&nbsp;
+<SYNC Start=39371><P Class=KRCC>
+URI. We'll also notify all descendents of that URI.
+<SYNC Start=42760><P Class=KRCC>
+&nbsp;
+<SYNC Start=43770><P Class=KRCC>
+If we were to notify based on anything else
+<SYNC Start=45830><P Class=KRCC>
+&nbsp;
+<SYNC Start=45831><P Class=KRCC>
+other than the root URI. Then a cursor listening
+<SYNC Start=48730><P Class=KRCC>
+&nbsp;
+<SYNC Start=48731><P Class=KRCC>
+on the root URI will not get notified of a
+<SYNC Start=50780><P Class=KRCC>
+&nbsp;
+<SYNC Start=50781><P Class=KRCC>
+change that would certainly impact it. So we have to
+<SYNC Start=53690><P Class=KRCC>
+&nbsp;
+<SYNC Start=53691><P Class=KRCC>
+be very careful when doing that. For this reason it makes
+<SYNC Start=57060><P Class=KRCC>
+&nbsp;
+<SYNC Start=57061><P Class=KRCC>
+a lot of sense to only allow insertions at our
+<SYNC Start=59780><P Class=KRCC>
+&nbsp;
+<SYNC Start=59781><P Class=KRCC>
+root URI into our database. That way, it's very, very easy
+<SYNC Start=64390><P Class=KRCC>
+&nbsp;
+<SYNC Start=64391><P Class=KRCC>
+to handle notifications. It means that we also don't have
+<SYNC Start=67000><P Class=KRCC>
+&nbsp;
+<SYNC Start=67001><P Class=KRCC>
+to build a combination query for our insert. Containing a parameter
+<SYNC Start=70420><P Class=KRCC>
+&nbsp;
+<SYNC Start=70421><P Class=KRCC>
+coming from the URI. With the rest of the parameters
+<SYNC Start=72880><P Class=KRCC>
+&nbsp;
+<SYNC Start=72881><P Class=KRCC>
+coming from a function. So for weather we just pass the
+<SYNC Start=75850><P Class=KRCC>
+&nbsp;
+<SYNC Start=75851><P Class=KRCC>
+parameters into a database insert call. We should
+<SYNC Start=79760><P Class=KRCC>
+&nbsp;
+<SYNC Start=79761><P Class=KRCC>
+throw an exception if the insert fails. The
+<SYNC Start=82810><P Class=KRCC>
+&nbsp;
+<SYNC Start=82811><P Class=KRCC>
+only trick here is to make sure we
+<SYNC Start=84370><P Class=KRCC>
+&nbsp;
+<SYNC Start=84371><P Class=KRCC>
+return the correct value, which is a URI. Fortunately
+<SYNC Start=88470><P Class=KRCC>
+&nbsp;
+<SYNC Start=88471><P Class=KRCC>
+we made a function to build these URIs
+<SYNC Start=90700><P Class=KRCC>
+&nbsp;
+<SYNC Start=90701><P Class=KRCC>
+which contain the weather path followed by an
+<SYNC Start=92950><P Class=KRCC>
+&nbsp;
+<SYNC Start=92951><P Class=KRCC>
+ID. Let's go task this. Once again, we
+<SYNC Start=97480><P Class=KRCC>
+&nbsp;
+<SYNC Start=97481><P Class=KRCC>
+go to test provider and we modify our test.
+<SYNC Start=101190><P Class=KRCC>
+&nbsp;
+<SYNC Start=101191><P Class=KRCC>
+Because after all it's supposed to be test insert
+<SYNC Start=103520><P Class=KRCC>
+&nbsp;
+<SYNC Start=103521><P Class=KRCC>
+read provider. Here's our insert statement. Obviously it's still talking
+<SYNC Start=108390><P Class=KRCC>
+&nbsp;
+<SYNC Start=108391><P Class=KRCC>
+to the database. We're going to want to make it
+<SYNC Start=110280><P Class=KRCC>
+&nbsp;
+<SYNC Start=110281><P Class=KRCC>
+talk to the provider. As always, that's pretty straight forward.
+<SYNC Start=114220><P Class=KRCC>
+&nbsp;
+<SYNC Start=114221><P Class=KRCC>
+We always get our provider by using our content
+<SYNC Start=116170><P Class=KRCC>
+&nbsp;
+<SYNC Start=116171><P Class=KRCC>
+resolver so we can replace this insert statement with the
+<SYNC Start=119540><P Class=KRCC>
+&nbsp;
+<SYNC Start=119541><P Class=KRCC>
+db with a content resolver instead. And of course
+<SYNC Start=123340><P Class=KRCC>
+&nbsp;
+<SYNC Start=123341><P Class=KRCC>
+we don't use a content resolver against a table name.
+<SYNC Start=126260><P Class=KRCC>
+&nbsp;
+<SYNC Start=126261><P Class=KRCC>
+Instead we do it against the WeatherEntry.content URI.
+<SYNC Start=130120><P Class=KRCC>
+&nbsp;
+<SYNC Start=131250><P Class=KRCC>
+But there's still something wrong. Of course, we
+<SYNC Start=133940><P Class=KRCC>
+&nbsp;
+<SYNC Start=133941><P Class=KRCC>
+don't actually return the weather row ID, we
+<SYNC Start=136600><P Class=KRCC>
+&nbsp;
+<SYNC Start=136601><P Class=KRCC>
+return the URI. But we can still get a
+<SYNC Start=139440><P Class=KRCC>
+&nbsp;
+<SYNC Start=139441><P Class=KRCC>
+weather row ID. How do we do that?
+<SYNC Start=142390><P Class=KRCC>
+&nbsp;
+<SYNC Start=142391><P Class=KRCC>
+Quite simply. Using a helper function in content
+<SYNC Start=145850><P Class=KRCC>
+&nbsp;
+<SYNC Start=145851><P Class=KRCC>
+URI's, and we don't really need that insert.
+<SYNC Start=149240><P Class=KRCC>
+&nbsp;
+<SYNC Start=149241><P Class=KRCC>
+After all, we know that this content resolver function
+<SYNC Start=151520><P Class=KRCC>
+&nbsp;
+<SYNC Start=151521><P Class=KRCC>
+isn't actually going to return unless the value is true. Now that we
+<SYNC Start=155052><P Class=KRCC>
+&nbsp;
+<SYNC Start=155053><P Class=KRCC>
+finished that, let's run the test. And make sure that we can actually
+<SYNC Start=158052><P Class=KRCC>
+&nbsp;
+<SYNC Start=158053><P Class=KRCC>
+insert using our content provider. And our test passed. Well, you know what
+<SYNC Start=163783><P Class=KRCC>
+&nbsp;
+<SYNC Start=163784><P Class=KRCC>
+time it is. Time for you to write some of this as well.</BODY>
+</SAMI>

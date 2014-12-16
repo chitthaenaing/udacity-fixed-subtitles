@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=380><P Class=KRCC>
+In the Forecast Fragment, we want to modify the
+<SYNC Start=2715><P Class=KRCC>
+&nbsp;
+<SYNC Start=2716><P Class=KRCC>
+FetchWeatherTask, so that we can pass in the
+<SYNC Start=5070><P Class=KRCC>
+&nbsp;
+<SYNC Start=5071><P Class=KRCC>
+postal code parameter when we execute that task.
+<SYNC Start=8730><P Class=KRCC>
+&nbsp;
+<SYNC Start=8731><P Class=KRCC>
+You can click on this class, to jump
+<SYNC Start=11370><P Class=KRCC>
+&nbsp;
+<SYNC Start=11371><P Class=KRCC>
+to where it's defined or you can use this shortcut. And here you see that we
+<SYNC Start=16780><P Class=KRCC>
+&nbsp;
+<SYNC Start=16781><P Class=KRCC>
+modified the generic input type, to be a
+<SYNC Start=19640><P Class=KRCC>
+&nbsp;
+<SYNC Start=19641><P Class=KRCC>
+string so that the doInBackground method receives string params.
+<SYNC Start=25080><P Class=KRCC>
+&nbsp;
+<SYNC Start=25081><P Class=KRCC>
+Now, we only passed in one string param,
+<SYNC Start=27783><P Class=KRCC>
+&nbsp;
+<SYNC Start=27784><P Class=KRCC>
+94043. So when you see down here later, we
+<SYNC Start=30923><P Class=KRCC>
+&nbsp;
+<SYNC Start=30924><P Class=KRCC>
+can read out the zeroth position in the params
+<SYNC Start=33816><P Class=KRCC>
+&nbsp;
+<SYNC Start=33817><P Class=KRCC>
+array, to get that postal code. Notice that we're
+<SYNC Start=37520><P Class=KRCC>
+&nbsp;
+<SYNC Start=37521><P Class=KRCC>
+using the UI builder here, and we're appending query
+<SYNC Start=40590><P Class=KRCC>
+&nbsp;
+<SYNC Start=40591><P Class=KRCC>
+parameters, one by one. We define constants for these
+<SYNC Start=43830><P Class=KRCC>
+&nbsp;
+<SYNC Start=43831><P Class=KRCC>
+query params, as seen here. And for the values,
+<SYNC Start=47100><P Class=KRCC>
+&nbsp;
+<SYNC Start=47101><P Class=KRCC>
+we also define them up here. You can imagine
+<SYNC Start=50300><P Class=KRCC>
+&nbsp;
+<SYNC Start=50301><P Class=KRCC>
+that in the future these might be configured outside
+<SYNC Start=52590><P Class=KRCC>
+&nbsp;
+<SYNC Start=52591><P Class=KRCC>
+of this class, but for now we're just going
+<SYNC Start=54580><P Class=KRCC>
+&nbsp;
+<SYNC Start=54581><P Class=KRCC>
+to define them here. To verify that this URI
+<SYNC Start=57820><P Class=KRCC>
+&nbsp;
+<SYNC Start=57821><P Class=KRCC>
+was defined properly, we add a verbose log command
+<SYNC Start=61010><P Class=KRCC>
+&nbsp;
+<SYNC Start=61011><P Class=KRCC>
+to print out the built URI. Let's verify that
+<SYNC Start=64629><P Class=KRCC>
+&nbsp;
+<SYNC Start=64630><P Class=KRCC>
+the log we added actually shows up. In overflow
+<SYNC Start=67460><P Class=KRCC>
+&nbsp;
+<SYNC Start=67461><P Class=KRCC>
+menu we tap Refresh. Then we see the log
+<SYNC Start=70350><P Class=KRCC>
+&nbsp;
+<SYNC Start=70351><P Class=KRCC>
+tag FetchWeatherTask with our UI printed out. It says
+<SYNC Start=75300><P Class=KRCC>
+&nbsp;
+<SYNC Start=75301><P Class=KRCC>
+94043, jSON format metric units, seven days. So this looks correct.</BODY>
+</SAMI>

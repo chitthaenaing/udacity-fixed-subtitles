@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=500><P Class=KRCC>
+Replace the resource XML for the list item
+<SYNC Start=3220><P Class=KRCC>
+&nbsp;
+<SYNC Start=3221><P Class=KRCC>
+forecast to split up the single text field
+<SYNC Start=5630><P Class=KRCC>
+&nbsp;
+<SYNC Start=5631><P Class=KRCC>
+into multiple fields with the IDs below, while
+<SYNC Start=8640><P Class=KRCC>
+&nbsp;
+<SYNC Start=8641><P Class=KRCC>
+keeping the same approximate design. Note that you
+<SYNC Start=11793><P Class=KRCC>
+&nbsp;
+<SYNC Start=11794><P Class=KRCC>
+won't just be able to drag additional fields
+<SYNC Start=13324><P Class=KRCC>
+&nbsp;
+<SYNC Start=13325><P Class=KRCC>
+onto the existing list_item_forecast layout, since it contains
+<SYNC Start=15664><P Class=KRCC>
+&nbsp;
+<SYNC Start=15665><P Class=KRCC>
+only a text view, which means there is no view group to add additional views to.
+<SYNC Start=18380><P Class=KRCC>
+&nbsp;
+<SYNC Start=21920><P Class=KRCC>
+I recommend deleting list_item_forecast and creating a new
+<SYNC Start=25280><P Class=KRCC>
+&nbsp;
+<SYNC Start=25281><P Class=KRCC>
+file if you want to use the visual editor.</BODY>
+</SAMI>

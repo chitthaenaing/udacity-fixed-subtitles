@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+Next, we'll create the Today List Item. Since this layer is different from
+<SYNC Start=3630><P Class=KRCC>
+&nbsp;
+<SYNC Start=3631><P Class=KRCC>
+the other list items, we're going to need to create a new XML file under
+<SYNC Start=7790><P Class=KRCC>
+&nbsp;
+<SYNC Start=7791><P Class=KRCC>
+the resources layout folder. Use the same place holder image as you did before.
+<SYNC Start=12730><P Class=KRCC>
+&nbsp;
+<SYNC Start=12731><P Class=KRCC>
+Also use the same IDs that you declared in the list_ item_forecas_xml file.
+<SYNC Start=18250><P Class=KRCC>
+&nbsp;
+<SYNC Start=18251><P Class=KRCC>
+For example, in our code we called this list item icon, and
+<SYNC Start=21152><P Class=KRCC>
+&nbsp;
+<SYNC Start=21153><P Class=KRCC>
+we callled this list item date text view. So we use those same ID's for
+<SYNC Start=25110><P Class=KRCC>
+&nbsp;
+<SYNC Start=25111><P Class=KRCC>
+the elements in this XML file. You'll see why when we introduce view holders
+<SYNC Start=29390><P Class=KRCC>
+&nbsp;
+<SYNC Start=29391><P Class=KRCC>
+later. After you've finished adding it, make sure the app still compiles.
+<SYNC Start=33180><P Class=KRCC>
+&nbsp;
+<SYNC Start=33181><P Class=KRCC>
+You won't see any visual difference until the next step.</BODY>
+</SAMI>

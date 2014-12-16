@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+We created the today layout so why doesn't it show
+<SYNC Start=2250><P Class=KRCC>
+&nbsp;
+<SYNC Start=2251><P Class=KRCC>
+up? The reason is because we're using a simple CursorAdapter. Remember
+<SYNC Start=6910><P Class=KRCC>
+&nbsp;
+<SYNC Start=6911><P Class=KRCC>
+that it creates a list item for every row in the
+<SYNC Start=8960><P Class=KRCC>
+&nbsp;
+<SYNC Start=8961><P Class=KRCC>
+cursor but it only supports one item view type. That means
+<SYNC Start=12740><P Class=KRCC>
+&nbsp;
+<SYNC Start=12741><P Class=KRCC>
+that all list items must use the same layout. If
+<SYNC Start=15970><P Class=KRCC>
+&nbsp;
+<SYNC Start=15971><P Class=KRCC>
+we want today's forecast to look differently we're going to need
+<SYNC Start=18640><P Class=KRCC>
+&nbsp;
+<SYNC Start=18641><P Class=KRCC>
+to create a custom CursorAdapter. That way we can have multiple
+<SYNC Start=22120><P Class=KRCC>
+&nbsp;
+<SYNC Start=22121><P Class=KRCC>
+item view types. Then we can have different list item layouts
+<SYNC Start=25540><P Class=KRCC>
+&nbsp;
+<SYNC Start=25541><P Class=KRCC>
+based on what row of the cursor we're looking at.
+<SYNC Start=28130><P Class=KRCC>
+&nbsp;
+<SYNC Start=28131><P Class=KRCC>
+Note that the concept of item view types applies to
+<SYNC Start=30530><P Class=KRCC>
+&nbsp;
+<SYNC Start=30531><P Class=KRCC>
+adapters in general, not just the CursorAdapter. If you open
+<SYNC Start=34280><P Class=KRCC>
+&nbsp;
+<SYNC Start=34281><P Class=KRCC>
+up the documentation for CursorAdapter, you'll see that it's an abstract
+<SYNC Start=37730><P Class=KRCC>
+&nbsp;
+<SYNC Start=37731><P Class=KRCC>
+class. It contains two abstract methods that you'll need to
+<SYNC Start=40640><P Class=KRCC>
+&nbsp;
+<SYNC Start=40641><P Class=KRCC>
+override. The bindView method as well as the newView method.
+<SYNC Start=45052><P Class=KRCC>
+&nbsp;
+<SYNC Start=45053><P Class=KRCC>
+The newView method knows how to return a new list
+<SYNC Start=47260><P Class=KRCC>
+&nbsp;
+<SYNC Start=47261><P Class=KRCC>
+item layout, but doesn't contain data yet. The bindView method knows
+<SYNC Start=50560><P Class=KRCC>
+&nbsp;
+<SYNC Start=50561><P Class=KRCC>
+how to take an existing layout and update
+<SYNC Start=52670><P Class=KRCC>
+&nbsp;
+<SYNC Start=52671><P Class=KRCC>
+it with the data pointed to by the cursor</BODY>
+</SAMI>

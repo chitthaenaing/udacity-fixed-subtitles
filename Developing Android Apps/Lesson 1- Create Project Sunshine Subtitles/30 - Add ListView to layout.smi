@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+Thanks, Rado. Now that we know the distinct advantages of using a list view,
+<SYNC Start=4870><P Class=KRCC>
+&nbsp;
+<SYNC Start=4871><P Class=KRCC>
+we can use a list view to display the list of weather forecasts in our app.
+<SYNC Start=8750><P Class=KRCC>
+&nbsp;
+<SYNC Start=8751><P Class=KRCC>
+Now, which file in the layout folder should we modify to accomplish this?
+<SYNC Start=12580><P Class=KRCC>
+&nbsp;
+<SYNC Start=13640><P Class=KRCC>
+Well, we want to add the list view directly to the fragment. If you open up
+<SYNC Start=17150><P Class=KRCC>
+&nbsp;
+<SYNC Start=17151><P Class=KRCC>
+the fragment_main.xml file, you'll notice that the layout includes a relative
+<SYNC Start=21690><P Class=KRCC>
+&nbsp;
+<SYNC Start=21691><P Class=KRCC>
+layout as the parent view, as well as a child TextView. Modify this file so that
+<SYNC Start=26360><P Class=KRCC>
+&nbsp;
+<SYNC Start=26361><P Class=KRCC>
+we show a ListView instead of a TextView and assign it an ID ListViewForecast so
+<SYNC Start=31960><P Class=KRCC>
+&nbsp;
+<SYNC Start=31961><P Class=KRCC>
+we can reference it later. Also, since this layout only contains one child's
+<SYNC Start=36460><P Class=KRCC>
+&nbsp;
+<SYNC Start=36461><P Class=KRCC>
+view, it would be more efficient to actually switch to a FrameLayout instead of
+<SYNC Start=40380><P Class=KRCC>
+&nbsp;
+<SYNC Start=40381><P Class=KRCC>
+a RelativeLayout. After you make the changes, compile and
+<SYNC Start=43840><P Class=KRCC>
+&nbsp;
+<SYNC Start=43841><P Class=KRCC>
+run your app. You'll be a little underwhelmed with the blank screen, but
+<SYNC Start=48160><P Class=KRCC>
+&nbsp;
+<SYNC Start=48161><P Class=KRCC>
+that's okay. That's because we haven't populated the list view with data yet,
+<SYNC Start=52030><P Class=KRCC>
+&nbsp;
+<SYNC Start=52031><P Class=KRCC>
+and that will come in a later step. Check the box when you're done.</BODY>
+</SAMI>

@@ -1,0 +1,226 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=360><P Class=KRCC>
+As of July of 2013, one and a half
+<SYNC Start=3130><P Class=KRCC>
+&nbsp;
+<SYNC Start=3131><P Class=KRCC>
+million new Android devices were being activated every day.
+<SYNC Start=7560><P Class=KRCC>
+&nbsp;
+<SYNC Start=7561><P Class=KRCC>
+So it's hard to believe that just a few
+<SYNC Start=9080><P Class=KRCC>
+&nbsp;
+<SYNC Start=9081><P Class=KRCC>
+years ago, I started all meetings with potential developers explaining
+<SYNC Start=13960><P Class=KRCC>
+&nbsp;
+<SYNC Start=13961><P Class=KRCC>
+what Android was and convincing them that it was
+<SYNC Start=16079><P Class=KRCC>
+&nbsp;
+<SYNC Start=16080><P Class=KRCC>
+worth their time and effort developing for the platform.
+<SYNC Start=19560><P Class=KRCC>
+&nbsp;
+<SYNC Start=19561><P Class=KRCC>
+It wasn't until 2010 that we even shared numbers
+<SYNC Start=22150><P Class=KRCC>
+&nbsp;
+<SYNC Start=22151><P Class=KRCC>
+to indicate the growth of the platform, 100,000 daily activations
+<SYNC Start=26080><P Class=KRCC>
+&nbsp;
+<SYNC Start=26081><P Class=KRCC>
+in May of that year. Which quickly grew to
+<SYNC Start=28729><P Class=KRCC>
+&nbsp;
+<SYNC Start=28730><P Class=KRCC>
+500,000 in mid-2011 and crossed the million daily activations mark
+<SYNC Start=33290><P Class=KRCC>
+&nbsp;
+<SYNC Start=33291><P Class=KRCC>
+in 2012. That represents over a billion Android devices around
+<SYNC Start=37340><P Class=KRCC>
+&nbsp;
+<SYNC Start=37341><P Class=KRCC>
+the world, which is why I don't start my presentations
+<SYNC Start=39940><P Class=KRCC>
+&nbsp;
+<SYNC Start=39941><P Class=KRCC>
+asking if anyone in the room has an Android device
+<SYNC Start=42320><P Class=KRCC>
+&nbsp;
+<SYNC Start=42321><P Class=KRCC>
+anymore. To me though, the biggest surprise in those early
+<SYNC Start=45480><P Class=KRCC>
+&nbsp;
+<SYNC Start=45481><P Class=KRCC>
+days was how much effort was required to convince people
+<SYNC Start=48610><P Class=KRCC>
+&nbsp;
+<SYNC Start=48611><P Class=KRCC>
+that developing for mobile at all was a worthwhile investment.
+<SYNC Start=52580><P Class=KRCC>
+&nbsp;
+<SYNC Start=52581><P Class=KRCC>
+A huge number of people use their phones to go
+<SYNC Start=54700><P Class=KRCC>
+&nbsp;
+<SYNC Start=54701><P Class=KRCC>
+online and many of them use their phone as the main
+<SYNC Start=56810><P Class=KRCC>
+&nbsp;
+<SYNC Start=56811><P Class=KRCC>
+way to do so. One study by the Pew Research
+<SYNC Start=59808><P Class=KRCC>
+&nbsp;
+<SYNC Start=59809><P Class=KRCC>
+Internet Project in 2013 found that nearly two-thirds of mobile owners
+<SYNC Start=64163><P Class=KRCC>
+&nbsp;
+<SYNC Start=64164><P Class=KRCC>
+use their phones to go online, double the rate found
+<SYNC Start=67111><P Class=KRCC>
+&nbsp;
+<SYNC Start=67112><P Class=KRCC>
+in 2009. And that a third of phone users use mostly
+<SYNC Start=69810><P Class=KRCC>
+&nbsp;
+<SYNC Start=69811><P Class=KRCC>
+their phone to get online. Think about that for a second.
+<SYNC Start=73970><P Class=KRCC>
+&nbsp;
+<SYNC Start=73971><P Class=KRCC>
+These portable phones have become pocket computers constantly connected to the
+<SYNC Start=77730><P Class=KRCC>
+&nbsp;
+<SYNC Start=77731><P Class=KRCC>
+cloud to make the sum of human knowledge available
+<SYNC Start=80910><P Class=KRCC>
+&nbsp;
+<SYNC Start=80911><P Class=KRCC>
+to us at a touch and a glance. It's no
+<SYNC Start=83530><P Class=KRCC>
+&nbsp;
+<SYNC Start=83531><P Class=KRCC>
+wonder then that for a growing number of people,
+<SYNC Start=85870><P Class=KRCC>
+&nbsp;
+<SYNC Start=85871><P Class=KRCC>
+mobile isn't how to get online when you're away from
+<SYNC Start=88050><P Class=KRCC>
+&nbsp;
+<SYNC Start=88051><P Class=KRCC>
+your desk. It's actually displacing PCs as their primary
+<SYNC Start=91610><P Class=KRCC>
+&nbsp;
+<SYNC Start=91611><P Class=KRCC>
+computing platform. The change is so dramatic and the trend
+<SYNC Start=95460><P Class=KRCC>
+&nbsp;
+<SYNC Start=95461><P Class=KRCC>
+so clear that companies like Google, who depend entirely on
+<SYNC Start=99150><P Class=KRCC>
+&nbsp;
+<SYNC Start=99151><P Class=KRCC>
+the internet, have a mobile first policy, ensuring that the
+<SYNC Start=102800><P Class=KRCC>
+&nbsp;
+<SYNC Start=102801><P Class=KRCC>
+mobile experience is the first consideration when building
+<SYNC Start=105750><P Class=KRCC>
+&nbsp;
+<SYNC Start=105751><P Class=KRCC>
+new products. This trend is particularly evident amongst younger
+<SYNC Start=109930><P Class=KRCC>
+&nbsp;
+<SYNC Start=109931><P Class=KRCC>
+users who grew up using mobiles and especially
+<SYNC Start=112870><P Class=KRCC>
+&nbsp;
+<SYNC Start=112871><P Class=KRCC>
+in emerging markets like Africa and Asia, where the
+<SYNC Start=115340><P Class=KRCC>
+&nbsp;
+<SYNC Start=115341><P Class=KRCC>
+infrastructure to support ubiquitous broadband for desktops isn't
+<SYNC Start=119530><P Class=KRCC>
+&nbsp;
+<SYNC Start=119531><P Class=KRCC>
+as readily available. I saw this firsthand when I
+<SYNC Start=122300><P Class=KRCC>
+&nbsp;
+<SYNC Start=122301><P Class=KRCC>
+had the good fortune to visit Kenya a
+<SYNC Start=123960><P Class=KRCC>
+&nbsp;
+<SYNC Start=123961><P Class=KRCC>
+few years ago. Ubiquitous phones and passionate, talented developers
+<SYNC Start=128380><P Class=KRCC>
+&nbsp;
+<SYNC Start=128381><P Class=KRCC>
+weren't really familiar, but what really struck me was the degree
+<SYNC Start=132300><P Class=KRCC>
+&nbsp;
+<SYNC Start=132301><P Class=KRCC>
+to which mobile phones had become an integral part of people's
+<SYNC Start=135300><P Class=KRCC>
+&nbsp;
+<SYNC Start=135301><P Class=KRCC>
+everyday lives. It wasn't just checking email and posting to Facebook,
+<SYNC Start=138940><P Class=KRCC>
+&nbsp;
+<SYNC Start=138941><P Class=KRCC>
+it was using [UNKNOWN] to buy everything from groceries to bus
+<SYNC Start=141740><P Class=KRCC>
+&nbsp;
+<SYNC Start=141741><P Class=KRCC>
+fare. Mobiles was such a part of life that I heard
+<SYNC Start=145390><P Class=KRCC>
+&nbsp;
+<SYNC Start=145391><P Class=KRCC>
+rather than buying someone a drink to show that you're interested,
+<SYNC Start=148620><P Class=KRCC>
+&nbsp;
+<SYNC Start=148621><P Class=KRCC>
+you'd send them a phone credit so that they can call
+<SYNC Start=150440><P Class=KRCC>
+&nbsp;
+<SYNC Start=150441><P Class=KRCC>
+you if they felt the same way. In the transition of
+<SYNC Start=153420><P Class=KRCC>
+&nbsp;
+<SYNC Start=153421><P Class=KRCC>
+smartphones from tech accessory to a part of life to the
+<SYNC Start=156890><P Class=KRCC>
+&nbsp;
+<SYNC Start=156891><P Class=KRCC>
+main way you get online to how you pay for things,
+<SYNC Start=159180><P Class=KRCC>
+&nbsp;
+<SYNC Start=159181><P Class=KRCC>
+even how you flirt, represents a huge opportunity for us as
+<SYNC Start=163200><P Class=KRCC>
+&nbsp;
+<SYNC Start=163201><P Class=KRCC>
+developers. The question is, how are you going to change the world?</BODY>
+</SAMI>

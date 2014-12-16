@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=390><P Class=KRCC>
+Done already. Let's go to the solution. In the menu layout file for the main
+<SYNC Start=5689><P Class=KRCC>
+&nbsp;
+<SYNC Start=5690><P Class=KRCC>
+activity, called main.xml, we add another menu item
+<SYNC Start=10540><P Class=KRCC>
+&nbsp;
+<SYNC Start=10541><P Class=KRCC>
+that will always be in the overflow menu.
+<SYNC Start=12740><P Class=KRCC>
+&nbsp;
+<SYNC Start=14010><P Class=KRCC>
+We also define the string in the strings.xml file. The menu will be inflated in
+<SYNC Start=20280><P Class=KRCC>
+&nbsp;
+<SYNC Start=20281><P Class=KRCC>
+the main activity class, so we can handle
+<SYNC Start=22770><P Class=KRCC>
+&nbsp;
+<SYNC Start=22771><P Class=KRCC>
+the map menu item being inflated. By calling
+<SYNC Start=25550><P Class=KRCC>
+&nbsp;
+<SYNC Start=25551><P Class=KRCC>
+helper method called open preferred location in
+<SYNC Start=28230><P Class=KRCC>
+&nbsp;
+<SYNC Start=28231><P Class=KRCC>
+map. The helper method reads the users
+<SYNC Start=31650><P Class=KRCC>
+&nbsp;
+<SYNC Start=31651><P Class=KRCC>
+preferred location from shared preferences. Then we
+<SYNC Start=35650><P Class=KRCC>
+&nbsp;
+<SYNC Start=35651><P Class=KRCC>
+create a view intent, indicating it's location
+<SYNC Start=39240><P Class=KRCC>
+&nbsp;
+<SYNC Start=39241><P Class=KRCC>
+in the data URI. The format of the data URI was from the documentation
+<SYNC Start=44460><P Class=KRCC>
+&nbsp;
+<SYNC Start=44461><P Class=KRCC>
+page on common intents. Where you can append a postal code as a query parameter.
+<SYNC Start=49150><P Class=KRCC>
+&nbsp;
+<SYNC Start=50490><P Class=KRCC>
+Finally, we start an activity with [SOUND] this intent. Note
+<SYNC Start=54479><P Class=KRCC>
+&nbsp;
+<SYNC Start=54480><P Class=KRCC>
+that we only start the activity, if the activity resolves successfully.</BODY>
+</SAMI>

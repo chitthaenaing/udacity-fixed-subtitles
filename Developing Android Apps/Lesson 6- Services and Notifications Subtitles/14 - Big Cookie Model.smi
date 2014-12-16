@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+In this app, we see an example of a
+<SYNC Start=1900><P Class=KRCC>
+&nbsp;
+<SYNC Start=1901><P Class=KRCC>
+defragmented network traffic that uses the big cookie model. All
+<SYNC Start=5630><P Class=KRCC>
+&nbsp;
+<SYNC Start=5631><P Class=KRCC>
+the repeating transfers have been bundled together, and all
+<SYNC Start=8490><P Class=KRCC>
+&nbsp;
+<SYNC Start=8491><P Class=KRCC>
+the intermittent transfers have been
+<SYNC Start=10150><P Class=KRCC>
+&nbsp;
+<SYNC Start=10151><P Class=KRCC>
+largely replaced with aggressive prefetching.
+<SYNC Start=12200><P Class=KRCC>
+&nbsp;
+<SYNC Start=13220><P Class=KRCC>
+Obviously, you usually can't entirely predict what data users
+<SYNC Start=16440><P Class=KRCC>
+&nbsp;
+<SYNC Start=16441><P Class=KRCC>
+might need, nor can you ignore either client or service
+<SYNC Start=19840><P Class=KRCC>
+&nbsp;
+<SYNC Start=19841><P Class=KRCC>
+site changes the need to be synchronized. You can
+<SYNC Start=22380><P Class=KRCC>
+&nbsp;
+<SYNC Start=22381><P Class=KRCC>
+aim to minimize the number of radio state transitions through
+<SYNC Start=25270><P Class=KRCC>
+&nbsp;
+<SYNC Start=25271><P Class=KRCC>
+a combination of aggressive prefetching in addition to batching
+<SYNC Start=28140><P Class=KRCC>
+&nbsp;
+<SYNC Start=28141><P Class=KRCC>
+and queueing any transfers that aren't time critical and
+<SYNC Start=31300><P Class=KRCC>
+&nbsp;
+<SYNC Start=31301><P Class=KRCC>
+bundling these with user initiated time critical transfers, or
+<SYNC Start=35080><P Class=KRCC>
+&nbsp;
+<SYNC Start=35081><P Class=KRCC>
+those initiated from the server. If we compare the impact
+<SYNC Start=38050><P Class=KRCC>
+&nbsp;
+<SYNC Start=38051><P Class=KRCC>
+on the radio of the big cookie model compared
+<SYNC Start=40320><P Class=KRCC>
+&nbsp;
+<SYNC Start=40321><P Class=KRCC>
+to the previous on demand approach, you can see it's
+<SYNC Start=43150><P Class=KRCC>
+&nbsp;
+<SYNC Start=43151><P Class=KRCC>
+now idle nearly two thirds of the time. Even
+<SYNC Start=46500><P Class=KRCC>
+&nbsp;
+<SYNC Start=46501><P Class=KRCC>
+the active radio percentage has significantly dropped, thanks to improved
+<SYNC Start=50420><P Class=KRCC>
+&nbsp;
+<SYNC Start=50421><P Class=KRCC>
+download efficiency as a result of transmitting more data in one shot</BODY>
+</SAMI>

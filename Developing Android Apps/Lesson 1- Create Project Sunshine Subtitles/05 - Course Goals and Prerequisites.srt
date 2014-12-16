@@ -1,0 +1,87 @@
+1
+00:00:26,452 --> 00:00:30,939
+We're expecting you to already be familiar with object-oriented programming, and
+
+2
+00:00:30,939 --> 00:00:33,649
+to have experience with Java or a similar language.
+
+3
+00:00:33,649 --> 00:00:37,570
+Personally, I got started with Android after years of Delphi and C# development.
+
+4
+00:00:38,640 --> 00:00:42,560
+As engineers, we're trained to map our experiences in one language or
+
+5
+00:00:42,560 --> 00:00:46,470
+SDK into new ones. Looking for patterns and shortcuts we can get up to
+
+6
+00:00:46,470 --> 00:00:50,750
+speed as quickly as possible. But mobile, and Android in particular,
+
+7
+00:00:50,750 --> 00:00:54,220
+have some fundamental differences that mean some of our experience and
+
+8
+00:00:54,220 --> 00:00:58,910
+intuition will actually make us worse mobile engineers. We like to think of
+
+9
+00:00:58,910 --> 00:01:04,459
+Smartphones as computers that fit into our pockets. In a way that's true, but
+
+10
+00:01:04,459 --> 00:01:08,270
+the computers from the 90s, like this Powerhouse I was using nearly 20
+
+11
+00:01:08,270 --> 00:01:13,660
+years ago. With limited internet connectivity, low speed CPUs, and limited RAM,
+
+12
+00:01:13,660 --> 00:01:17,910
+on top of which, they're all running on batteries. As we go through the course,
+
+13
+00:01:17,910 --> 00:01:21,320
+I'll be returning to each of these key mobile challenges. Looking for
+
+14
+00:01:21,320 --> 00:01:23,160
+places where you're experienced on desktop or
+
+15
+00:01:23,160 --> 00:01:26,420
+server, or even other mobile platforms might lead you in the wrong direction.
+
+16
+00:01:26,420 --> 00:01:30,790
+I will also be back to tell you some stories from the early days of Android.
+
+17
+00:01:30,790 --> 00:01:35,190
+Stories that describe how the Android platform has evolved. And nowhere is
+
+18
+00:01:35,190 --> 00:01:39,830
+that more readily apparent than here, at the Android Lawn sculpture garden.
+
+19
+00:01:39,830 --> 00:01:42,620
+Join me here, at the very heart of Android, at the end of this lesson,
+
+20
+00:01:42,620 --> 00:01:47,030
+to find out how this sculpture garden of tasty treats, also tell us the story of
+
+21
+00:01:47,030 --> 00:01:50,840
+Android's history. For now, let's get back to building that weather app.
+
+22
+00:01:50,840 --> 00:01:52,790
+So, we'll cross to Dan, to take a look at some mocks.

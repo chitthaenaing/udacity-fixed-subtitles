@@ -1,0 +1,102 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+Building something that looks great in the visual layout editor is the easy
+<SYNC Start=3730><P Class=KRCC>
+&nbsp;
+<SYNC Start=3731><P Class=KRCC>
+part. You also need to consider different screens and orientations. As you
+<SYNC Start=8960><P Class=KRCC>
+&nbsp;
+<SYNC Start=8961><P Class=KRCC>
+begin to layout your UI, there's a temptation to build it pixel perfect for
+<SYNC Start=12460><P Class=KRCC>
+&nbsp;
+<SYNC Start=12461><P Class=KRCC>
+the device you happen to be using at the time. This is reinforced by
+<SYNC Start=16120><P Class=KRCC>
+&nbsp;
+<SYNC Start=16121><P Class=KRCC>
+the fact that your apps window doesn't generally change size while it's running.
+<SYNC Start=20320><P Class=KRCC>
+&nbsp;
+<SYNC Start=20321><P Class=KRCC>
+So you can't just grab the lower i-corner and grow and
+<SYNC Start=22720><P Class=KRCC>
+&nbsp;
+<SYNC Start=22721><P Class=KRCC>
+shrink your app to see how it behaves. But if you've ever developed for
+<SYNC Start=26530><P Class=KRCC>
+&nbsp;
+<SYNC Start=26531><P Class=KRCC>
+the web or desktop, you know this static approach is a bad idea.
+<SYNC Start=29660><P Class=KRCC>
+&nbsp;
+<SYNC Start=30760><P Class=KRCC>
+When Android first launched, HVGA 480 by 320 resolution screens were standard.
+<SYNC Start=36950><P Class=KRCC>
+&nbsp;
+<SYNC Start=36951><P Class=KRCC>
+As we began exploring how to build engaging user experiences on those devices,
+<SYNC Start=41260><P Class=KRCC>
+&nbsp;
+<SYNC Start=41261><P Class=KRCC>
+we could use absolute layouts to define the exact location of each
+<SYNC Start=44650><P Class=KRCC>
+&nbsp;
+<SYNC Start=44651><P Class=KRCC>
+screen element. But within a year, the first WVGA Android phones were released.
+<SYNC Start=50840><P Class=KRCC>
+&nbsp;
+<SYNC Start=50841><P Class=KRCC>
+And now Android runs on everything from phones to phablets, tablets, TVs and
+<SYNC Start=54850><P Class=KRCC>
+&nbsp;
+<SYNC Start=54851><P Class=KRCC>
+wearables with any screen size, resolution and aspect ratio you can imagine.
+<SYNC Start=60030><P Class=KRCC>
+&nbsp;
+<SYNC Start=60031><P Class=KRCC>
+So, just like desktop or web where you might use panels or
+<SYNC Start=63008><P Class=KRCC>
+&nbsp;
+<SYNC Start=63009><P Class=KRCC>
+CSS, your Android UI needs to scale based on the screen it's running within,
+<SYNC Start=67104><P Class=KRCC>
+&nbsp;
+<SYNC Start=67105><P Class=KRCC>
+which is why absolute layout was deprecated.
+<SYNC Start=69546><P Class=KRCC>
+&nbsp;
+<SYNC Start=69547><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=74284><P Class=KRCC>
+&nbsp;
+<SYNC Start=74285><P Class=KRCC>
+In favor of layouts like LinearLayout, RelativeLayout and
+<SYNC Start=77559><P Class=KRCC>
+&nbsp;
+<SYNC Start=77560><P Class=KRCC>
+GridLayout, they can dynamically resize and
+<SYNC Start=80063><P Class=KRCC>
+&nbsp;
+<SYNC Start=80064><P Class=KRCC>
+adapt to any screen, following the principles of responsive design.</BODY>
+</SAMI>

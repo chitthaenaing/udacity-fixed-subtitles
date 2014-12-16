@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+Let's create a weather provider class within the
+<SYNC Start=2510><P Class=KRCC>
+&nbsp;
+<SYNC Start=2511><P Class=KRCC>
+data package. We'll have it extend content provider. [SOUND]
+<SYNC Start=6236><P Class=KRCC>
+&nbsp;
+<SYNC Start=6237><P Class=KRCC>
+You can have the required method by heading
+<SYNC Start=8942><P Class=KRCC>
+&nbsp;
+<SYNC Start=8943><P Class=KRCC>
+Ctrl+I once more. Content providers implement functionality based upon
+<SYNC Start=13309><P Class=KRCC>
+&nbsp;
+<SYNC Start=13310><P Class=KRCC>
+the URI's. Each URI type is tied to
+<SYNC Start=15676><P Class=KRCC>
+&nbsp;
+<SYNC Start=15677><P Class=KRCC>
+an integer constant. Our content provider will implement five
+<SYNC Start=20220><P Class=KRCC>
+&nbsp;
+<SYNC Start=20221><P Class=KRCC>
+different types of URI's. Each one of these
+<SYNC Start=23280><P Class=KRCC>
+&nbsp;
+<SYNC Start=23281><P Class=KRCC>
+URI's will be used for different types of queries.
+<SYNC Start=25750><P Class=KRCC>
+&nbsp;
+<SYNC Start=27640><P Class=KRCC>
+For now, lets just add these constants into our weather provider class.
+<SYNC Start=31840><P Class=KRCC>
+&nbsp;
+<SYNC Start=33970><P Class=KRCC>
+Android provides a URI matcher class to help
+<SYNC Start=37010><P Class=KRCC>
+&nbsp;
+<SYNC Start=37011><P Class=KRCC>
+match URI's to our integer constants. It provides
+<SYNC Start=40850><P Class=KRCC>
+&nbsp;
+<SYNC Start=40851><P Class=KRCC>
+for an expression syntax to match various URI's.
+<SYNC Start=44640><P Class=KRCC>
+&nbsp;
+<SYNC Start=44641><P Class=KRCC>
+Now these are just examples. You're going to have
+<SYNC Start=47020><P Class=KRCC>
+&nbsp;
+<SYNC Start=47021><P Class=KRCC>
+to implement one of these very soon. Note,
+<SYNC Start=49840><P Class=KRCC>
+&nbsp;
+<SYNC Start=49841><P Class=KRCC>
+that there are two wildcards. The pound sign
+<SYNC Start=53630><P Class=KRCC>
+&nbsp;
+<SYNC Start=53631><P Class=KRCC>
+is used to match a number, while a star is used to match a string. Using this,
+<SYNC Start=59710><P Class=KRCC>
+&nbsp;
+<SYNC Start=59711><P Class=KRCC>
+you can very, very easily match any of the URI's
+<SYNC Start=63110><P Class=KRCC>
+&nbsp;
+<SYNC Start=63111><P Class=KRCC>
+that we would want to pass in to our content provider.</BODY>
+</SAMI>

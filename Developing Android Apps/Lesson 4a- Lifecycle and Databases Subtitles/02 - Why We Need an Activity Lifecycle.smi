@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=640><P Class=KRCC>
+Okay.
+<SYNC Start=1200><P Class=KRCC>
+&nbsp;
+<SYNC Start=1201><P Class=KRCC>
+So before Dan gets carried away with databases, let's look at
+<SYNC Start=4590><P Class=KRCC>
+&nbsp;
+<SYNC Start=4591><P Class=KRCC>
+what happens when you use an intent to transition between activities.
+<SYNC Start=8280><P Class=KRCC>
+&nbsp;
+<SYNC Start=8281><P Class=KRCC>
+Within Sunshine,
+<SYNC Start=9354><P Class=KRCC>
+&nbsp;
+<SYNC Start=9355><P Class=KRCC>
+if you tap on a list in the main activity it opens up the detail activity.
+<SYNC Start=13387><P Class=KRCC>
+&nbsp;
+<SYNC Start=16962><P Class=KRCC>
+But the main activity remains on the backstack.
+<SYNC Start=19230><P Class=KRCC>
+&nbsp;
+<SYNC Start=19231><P Class=KRCC>
+Ready to reappear as soon as you hit Back.
+<SYNC Start=22080><P Class=KRCC>
+&nbsp;
+<SYNC Start=22081><P Class=KRCC>
+Now, in that example, both activities are within the same app.
+<SYNC Start=25980><P Class=KRCC>
+&nbsp;
+<SYNC Start=25981><P Class=KRCC>
+But as we learned in lesson three, you can also watch the browser or
+<SYNC Start=29264><P Class=KRCC>
+&nbsp;
+<SYNC Start=29265><P Class=KRCC>
+maps app from sunshine.
+<SYNC Start=30507><P Class=KRCC>
+&nbsp;
+<SYNC Start=35091><P Class=KRCC>
+Or for that matter, the user can hit Home.
+<SYNC Start=37041><P Class=KRCC>
+&nbsp;
+<SYNC Start=41065><P Class=KRCC>
+And launch apps from there, or they can use the recent key or
+<SYNC Start=44521><P Class=KRCC>
+&nbsp;
+<SYNC Start=44522><P Class=KRCC>
+switch to another app using notifications.
+<SYNC Start=47160><P Class=KRCC>
+&nbsp;
+<SYNC Start=47161><P Class=KRCC>
+All of these options mean you can end up with a lot of apps on your back stack.
+<SYNC Start=50270><P Class=KRCC>
+&nbsp;
+<SYNC Start=57947><P Class=KRCC>
+Now, keep in mind that our resources on devices are extremely limited.
+<SYNC Start=62440><P Class=KRCC>
+&nbsp;
+<SYNC Start=62441><P Class=KRCC>
+So it's not a good idea to have dozens of apps sitting idle in the background.
+<SYNC Start=66700><P Class=KRCC>
+&nbsp;
+<SYNC Start=66701><P Class=KRCC>
+Android solves this for us,
+<SYNC Start=67880><P Class=KRCC>
+&nbsp;
+<SYNC Start=67881><P Class=KRCC>
+so you don't have to use those awful task killer apps.
+<SYNC Start=71320><P Class=KRCC>
+&nbsp;
+<SYNC Start=71321><P Class=KRCC>
+So, how does it do that?
+<SYNC Start=73010><P Class=KRCC>
+&nbsp;
+<SYNC Start=73011><P Class=KRCC>
+Well, it kills low priority applications that you haven't used in a while.
+<SYNC Start=77120><P Class=KRCC>
+&nbsp;
+<SYNC Start=77121><P Class=KRCC>
+We'll go into detail on exactly how it figures out which app needs to die,
+<SYNC Start=80840><P Class=KRCC>
+&nbsp;
+<SYNC Start=80841><P Class=KRCC>
+in lesson six.
+<SYNC Start=81740><P Class=KRCC>
+&nbsp;
+<SYNC Start=81741><P Class=KRCC>
+But for now, it's important to realize that your app isn't in
+<SYNC Start=85030><P Class=KRCC>
+&nbsp;
+<SYNC Start=85031><P Class=KRCC>
+control of its own destiny.
+<SYNC Start=87070><P Class=KRCC>
+&nbsp;
+<SYNC Start=87071><P Class=KRCC>
+It can be killed at any time.
+<SYNC Start=88612><P Class=KRCC>
+&nbsp;
+<SYNC Start=92589><P Class=KRCC>
+So you need to know, how to deal with that.
+<SYNC Start=94305><P Class=KRCC>
+&nbsp;
+<SYNC Start=94306><P Class=KRCC>
+And that means understanding the lifecycle of an activity and the signals we
+<SYNC Start=97846><P Class=KRCC>
+&nbsp;
+<SYNC Start=97847><P Class=KRCC>
+get from the framework to indicate its progress through the lifetime.</BODY>
+</SAMI>

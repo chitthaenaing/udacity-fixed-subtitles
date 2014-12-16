@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=460><P Class=KRCC>
+Now for the big quiz. In all seriousness, this is the most
+<SYNC Start=5170><P Class=KRCC>
+&nbsp;
+<SYNC Start=5171><P Class=KRCC>
+complicated exercise I've given you so far this lesson. I want you
+<SYNC Start=9880><P Class=KRCC>
+&nbsp;
+<SYNC Start=9881><P Class=KRCC>
+to implement the details view using the cursor loader and multiple text view
+<SYNC Start=14540><P Class=KRCC>
+&nbsp;
+<SYNC Start=14541><P Class=KRCC>
+widgets. And I've got some hints for you. Use loaders
+<SYNC Start=20290><P Class=KRCC>
+&nbsp;
+<SYNC Start=20291><P Class=KRCC>
+not adapters. What does this mean? Well, it makes sense. Your detail
+<SYNC Start=25660><P Class=KRCC>
+&nbsp;
+<SYNC Start=25661><P Class=KRCC>
+view does not contain a list so you don't
+<SYNC Start=27850><P Class=KRCC>
+&nbsp;
+<SYNC Start=27851><P Class=KRCC>
+need to use an adapter, but you can still
+<SYNC Start=30010><P Class=KRCC>
+&nbsp;
+<SYNC Start=30011><P Class=KRCC>
+use the loader pattern. The loader pattern will automatically
+<SYNC Start=34240><P Class=KRCC>
+&nbsp;
+<SYNC Start=34241><P Class=KRCC>
+observe for changes in the URI with a CursorLoader. The
+<SYNC Start=38080><P Class=KRCC>
+&nbsp;
+<SYNC Start=38081><P Class=KRCC>
+second thing you want to do is pass the date
+<SYNC Start=41600><P Class=KRCC>
+&nbsp;
+<SYNC Start=41601><P Class=KRCC>
+into your intent. The date is the important thing to
+<SYNC Start=44760><P Class=KRCC>
+&nbsp;
+<SYNC Start=44761><P Class=KRCC>
+the detail you need to have passed into it
+<SYNC Start=46860><P Class=KRCC>
+&nbsp;
+<SYNC Start=46861><P Class=KRCC>
+to properly query the content provider. Now remember, you can
+<SYNC Start=50670><P Class=KRCC>
+&nbsp;
+<SYNC Start=50671><P Class=KRCC>
+actually get the current location settings from the utility function. So
+<SYNC Start=55290><P Class=KRCC>
+&nbsp;
+<SYNC Start=55291><P Class=KRCC>
+all you really need is the date. I hope that helps.</BODY>
+</SAMI>

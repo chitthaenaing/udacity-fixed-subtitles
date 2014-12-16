@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=340><P Class=KRCC>
+On the tablet, there's a bug where if you select an item near
+<SYNC Start=3015><P Class=KRCC>
+&nbsp;
+<SYNC Start=3016><P Class=KRCC>
+the bottom of the list and then you rotate the device, the selected
+<SYNC Start=5952><P Class=KRCC>
+&nbsp;
+<SYNC Start=5953><P Class=KRCC>
+item is no longer scrolled into view. You have to manually scroll the
+<SYNC Start=8888><P Class=KRCC>
+&nbsp;
+<SYNC Start=8889><P Class=KRCC>
+list. That means we should store the position of the selected item in
+<SYNC Start=12270><P Class=KRCC>
+&nbsp;
+<SYNC Start=12271><P Class=KRCC>
+the savedInstanceState Bundle. If the app
+<SYNC Start=14430><P Class=KRCC>
+&nbsp;
+<SYNC Start=14431><P Class=KRCC>
+is killed, when it's restored, we should
+<SYNC Start=16120><P Class=KRCC>
+&nbsp;
+<SYNC Start=16121><P Class=KRCC>
+read the position back from the Bundle. If the list isn't populated at
+<SYNC Start=19030><P Class=KRCC>
+&nbsp;
+<SYNC Start=19031><P Class=KRCC>
+that time, then we should wait for the onLoadFinished callback to use a
+<SYNC Start=22220><P Class=KRCC>
+&nbsp;
+<SYNC Start=22221><P Class=KRCC>
+position to scroll to the selected item. Check these boxes when you're done.</BODY>
+</SAMI>

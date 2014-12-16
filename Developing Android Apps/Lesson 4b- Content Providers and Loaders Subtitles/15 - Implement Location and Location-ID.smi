@@ -1,0 +1,30 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=190><P Class=KRCC>
+Implement the queries for location and location ID in
+<SYNC Start=4050><P Class=KRCC>
+&nbsp;
+<SYNC Start=4051><P Class=KRCC>
+our content provider. Note that content URIs contains a
+<SYNC Start=8200><P Class=KRCC>
+&nbsp;
+<SYNC Start=8201><P Class=KRCC>
+function to get the ID from a standard URI that contains an ID on the end of it.</BODY>
+</SAMI>

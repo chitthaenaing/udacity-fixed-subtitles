@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=640><P Class=KRCC>
+So, now, we have a simple service. Wasn't that easy?
+<SYNC Start=4350><P Class=KRCC>
+&nbsp;
+<SYNC Start=4351><P Class=KRCC>
+But it still doesn't wake itself up. Fortunately, there's a system
+<SYNC Start=8140><P Class=KRCC>
+&nbsp;
+<SYNC Start=8141><P Class=KRCC>
+service for that. This is a good opportunity to introduce
+<SYNC Start=11430><P Class=KRCC>
+&nbsp;
+<SYNC Start=11431><P Class=KRCC>
+the AlarmManager. The AlarmManager allows you to tell the system that
+<SYNC Start=15020><P Class=KRCC>
+&nbsp;
+<SYNC Start=15021><P Class=KRCC>
+you want it to wake a component of your application
+<SYNC Start=17220><P Class=KRCC>
+&nbsp;
+<SYNC Start=17221><P Class=KRCC>
+up after a period of time and do some processing in
+<SYNC Start=19690><P Class=KRCC>
+&nbsp;
+<SYNC Start=19691><P Class=KRCC>
+the background. You can even have it wake up your
+<SYNC Start=22370><P Class=KRCC>
+&nbsp;
+<SYNC Start=22371><P Class=KRCC>
+application periodically but, what do we wake up in the background?
+<SYNC Start=26780><P Class=KRCC>
+&nbsp;
+<SYNC Start=26781><P Class=KRCC>
+That would be an Android component we haven't
+<SYNC Start=28810><P Class=KRCC>
+&nbsp;
+<SYNC Start=28811><P Class=KRCC>
+seen before called a Broadcast Receiver. A Broadcast Receiver
+<SYNC Start=32940><P Class=KRCC>
+&nbsp;
+<SYNC Start=32941><P Class=KRCC>
+is a special class, that is used to
+<SYNC Start=34770><P Class=KRCC>
+&nbsp;
+<SYNC Start=34771><P Class=KRCC>
+receive intent broadcast often from other applications. Typically a
+<SYNC Start=39270><P Class=KRCC>
+&nbsp;
+<SYNC Start=39271><P Class=KRCC>
+broadcast receiver will register an intent filter for
+<SYNC Start=42020><P Class=KRCC>
+&nbsp;
+<SYNC Start=42021><P Class=KRCC>
+these broadcasts. It's also one way the application will
+<SYNC Start=45690><P Class=KRCC>
+&nbsp;
+<SYNC Start=45691><P Class=KRCC>
+listen in on alarms. So let's add some alarm
+<SYNC Start=48980><P Class=KRCC>
+&nbsp;
+<SYNC Start=48981><P Class=KRCC>
+stuff. First, I'm going to add a Broadcast Receiver
+<SYNC Start=52530><P Class=KRCC>
+&nbsp;
+<SYNC Start=52531><P Class=KRCC>
+as a static inner class of Sunshine Service.
+<SYNC Start=56100><P Class=KRCC>
+&nbsp;
+<SYNC Start=56101><P Class=KRCC>
+Since this is an Android component, I'll register
+<SYNC Start=58760><P Class=KRCC>
+&nbsp;
+<SYNC Start=58761><P Class=KRCC>
+this Broadcast Receiver in the manifest. Note the
+<SYNC Start=62540><P Class=KRCC>
+&nbsp;
+<SYNC Start=62541><P Class=KRCC>
+way a static inner class is notated. Okay, I've
+<SYNC Start=66770><P Class=KRCC>
+&nbsp;
+<SYNC Start=66771><P Class=KRCC>
+given you the bones of a broadcast receiver
+<SYNC Start=69080><P Class=KRCC>
+&nbsp;
+<SYNC Start=69081><P Class=KRCC>
+that can handle an alarm, but now it's
+<SYNC Start=71180><P Class=KRCC>
+&nbsp;
+<SYNC Start=71181><P Class=KRCC>
+your turn. You can create a PendingIntent from
+<SYNC Start=74770><P Class=KRCC>
+&nbsp;
+<SYNC Start=74771><P Class=KRCC>
+an explicit intent to have the alarm manager activate
+<SYNC Start=77840><P Class=KRCC>
+&nbsp;
+<SYNC Start=77841><P Class=KRCC>
+your broadcast receiver. I recommend setting the alarm to something absurdly
+<SYNC Start=82390><P Class=KRCC>
+&nbsp;
+<SYNC Start=82391><P Class=KRCC>
+short, like five seconds, so you can easily test that it's working.</BODY>
+</SAMI>

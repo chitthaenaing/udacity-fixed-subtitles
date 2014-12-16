@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=680><P Class=KRCC>
+The simplicity of hitting run and having your app appear on an emulator,
+<SYNC Start=4090><P Class=KRCC>
+&nbsp;
+<SYNC Start=4091><P Class=KRCC>
+hides a lot of complexity. Remember that Android is a full software stack.
+<SYNC Start=8335><P Class=KRCC>
+&nbsp;
+<SYNC Start=8336><P Class=KRCC>
+Adspace is a Linux Kernel,
+<SYNC Start=12190><P Class=KRCC>
+&nbsp;
+<SYNC Start=12191><P Class=KRCC>
+which handles low level tasks like hardware fibers and panel management.
+<SYNC Start=16329><P Class=KRCC>
+&nbsp;
+<SYNC Start=16330><P Class=KRCC>
+On top of that, are some core C and C plus plus libraries like Libsc and
+<SYNC Start=20757><P Class=KRCC>
+&nbsp;
+<SYNC Start=20758><P Class=KRCC>
+SQLite and the Android Runtime. That includes cool Android libraries and
+<SYNC Start=25920><P Class=KRCC>
+&nbsp;
+<SYNC Start=25921><P Class=KRCC>
+the Android virtual machines, Dalvik or more recently ART. Your apps run
+<SYNC Start=31240><P Class=KRCC>
+&nbsp;
+<SYNC Start=31241><P Class=KRCC>
+within its own instance of the VM using the classes and services provided here
+<SYNC Start=36000><P Class=KRCC>
+&nbsp;
+<SYNC Start=36001><P Class=KRCC>
+in the application framework. On top of that, sits the application layer,
+<SYNC Start=40570><P Class=KRCC>
+&nbsp;
+<SYNC Start=40571><P Class=KRCC>
+which includes your app and every other app that's installed on the device. So,
+<SYNC Start=44970><P Class=KRCC>
+&nbsp;
+<SYNC Start=44971><P Class=KRCC>
+when you hit Run in Android Studio, the first thing that happens is your code
+<SYNC Start=48800><P Class=KRCC>
+&nbsp;
+<SYNC Start=48801><P Class=KRCC>
+gets compiled into byte code that can be run in the Android Virtual Machine.
+<SYNC Start=53320><P Class=KRCC>
+&nbsp;
+<SYNC Start=53321><P Class=KRCC>
+That then gets installed onto the device. In Android Studio,
+<SYNC Start=58030><P Class=KRCC>
+&nbsp;
+<SYNC Start=58031><P Class=KRCC>
+this is done using gradle, a build tool kit that manages dependencies and
+<SYNC Start=62020><P Class=KRCC>
+&nbsp;
+<SYNC Start=62021><P Class=KRCC>
+allows you to define custom build logic.
+<SYNC Start=63830><P Class=KRCC>
+&nbsp;
+<SYNC Start=63831><P Class=KRCC>
+You can manually start a gradle build in the IDE by selecting make project.
+<SYNC Start=69660><P Class=KRCC>
+&nbsp;
+<SYNC Start=69661><P Class=KRCC>
+You can also do this by going to the build menu and selecting make project from
+<SYNC Start=73060><P Class=KRCC>
+&nbsp;
+<SYNC Start=73061><P Class=KRCC>
+there, or you can use the gradle console to observe any logs or
+<SYNC Start=76980><P Class=KRCC>
+&nbsp;
+<SYNC Start=76981><P Class=KRCC>
+build errors, or open the gradle tasks window to see any available tasks.
+<SYNC Start=82070><P Class=KRCC>
+&nbsp;
+<SYNC Start=82071><P Class=KRCC>
+Double clicking on any of them will execute it. This will work from
+<SYNC Start=84930><P Class=KRCC>
+&nbsp;
+<SYNC Start=84931><P Class=KRCC>
+the command line too. Once you've navigated to the root of your project folder,
+<SYNC Start=89270><P Class=KRCC>
+&nbsp;
+<SYNC Start=89271><P Class=KRCC>
+you can run gradlew tasks to see all the tasks that you can run. You can learn
+<SYNC Start=94810><P Class=KRCC>
+&nbsp;
+<SYNC Start=94811><P Class=KRCC>
+more about gradle by checking out the links in the instructor notes. For now,
+<SYNC Start=99350><P Class=KRCC>
+&nbsp;
+<SYNC Start=99351><P Class=KRCC>
+note that we start with the project, which gradle then builds and
+<SYNC Start=103310><P Class=KRCC>
+&nbsp;
+<SYNC Start=103311><P Class=KRCC>
+then packages the byte code along with the external resources such as images,
+<SYNC Start=107820><P Class=KRCC>
+&nbsp;
+<SYNC Start=107821><P Class=KRCC>
+strings, and uixml into an application package. This is called an APK, and
+<SYNC Start=112530><P Class=KRCC>
+&nbsp;
+<SYNC Start=112531><P Class=KRCC>
+it's a specially formatted zip file. Once you've got your APK ready to go,
+<SYNC Start=117270><P Class=KRCC>
+&nbsp;
+<SYNC Start=117271><P Class=KRCC>
+it's signed and then pushed to the device using the Android Debug Bridge or
+<SYNC Start=122210><P Class=KRCC>
+&nbsp;
+<SYNC Start=122211><P Class=KRCC>
+ADB. If we return to the terminal, you can see that ADB lets you interact and
+<SYNC Start=127020><P Class=KRCC>
+&nbsp;
+<SYNC Start=127021><P Class=KRCC>
+debug apps on any device, physical or virtual. Things like pushing and
+<SYNC Start=130810><P Class=KRCC>
+&nbsp;
+<SYNC Start=130811><P Class=KRCC>
+pulling files, viewing logcat output, or
+<SYNC Start=133730><P Class=KRCC>
+&nbsp;
+<SYNC Start=133731><P Class=KRCC>
+even running a remote shell. So once Android's GDO has ADB installed the APK,
+<SYNC Start=139280><P Class=KRCC>
+&nbsp;
+<SYNC Start=139281><P Class=KRCC>
+it uses ADB again to launch the app by sending a stock command via the remote
+<SYNC Start=143410><P Class=KRCC>
+&nbsp;
+<SYNC Start=143411><P Class=KRCC>
+shell, by identifying the package and class name of your main activity.</BODY>
+</SAMI>

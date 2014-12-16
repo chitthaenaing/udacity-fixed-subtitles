@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=460><P Class=KRCC>
+After copying over the assets, updating the launcher icon
+<SYNC Start=3740><P Class=KRCC>
+&nbsp;
+<SYNC Start=3741><P Class=KRCC>
+in the Android manifest, and adding the Helper methods
+<SYNC Start=6270><P Class=KRCC>
+&nbsp;
+<SYNC Start=6271><P Class=KRCC>
+to the Utility class, we need to modify the
+<SYNC Start=8760><P Class=KRCC>
+&nbsp;
+<SYNC Start=8761><P Class=KRCC>
+DetailFragment and ForecastAdapter classes. In the DetailFragment class, in the
+<SYNC Start=13770><P Class=KRCC>
+&nbsp;
+<SYNC Start=13771><P Class=KRCC>
+onLoadFinished method, we read the weather condition code from
+<SYNC Start=16940><P Class=KRCC>
+&nbsp;
+<SYNC Start=16941><P Class=KRCC>
+the cursor, then we pass it into the Utility
+<SYNC Start=19670><P Class=KRCC>
+&nbsp;
+<SYNC Start=19671><P Class=KRCC>
+Helper method to get the colored icon for setting
+<SYNC Start=22340><P Class=KRCC>
+&nbsp;
+<SYNC Start=22341><P Class=KRCC>
+onto the image view. In the detail fragment on load
+<SYNC Start=25610><P Class=KRCC>
+&nbsp;
+<SYNC Start=25611><P Class=KRCC>
+finish method, we read the weather condition code from the cursor.
+<SYNC Start=29170><P Class=KRCC>
+&nbsp;
+<SYNC Start=29171><P Class=KRCC>
+Then we pass this into the Utility helper method, to get
+<SYNC Start=32299><P Class=KRCC>
+&nbsp;
+<SYNC Start=32300><P Class=KRCC>
+the Resource ID for the colored icon, in order to set
+<SYNC Start=35430><P Class=KRCC>
+&nbsp;
+<SYNC Start=35431><P Class=KRCC>
+it onto the Image View. The forecast adapter change is a
+<SYNC Start=38770><P Class=KRCC>
+&nbsp;
+<SYNC Start=38771><P Class=KRCC>
+little trickier because we want to use the colored icon for the
+<SYNC Start=41660><P Class=KRCC>
+&nbsp;
+<SYNC Start=41661><P Class=KRCC>
+today layout. And we want to use a grey icon for
+<SYNC Start=44420><P Class=KRCC>
+&nbsp;
+<SYNC Start=44421><P Class=KRCC>
+the other days. In order to distinguish between the other two,
+<SYNC Start=47470><P Class=KRCC>
+&nbsp;
+<SYNC Start=47471><P Class=KRCC>
+we call get item view type given the current cursor position.
+<SYNC Start=50700><P Class=KRCC>
+&nbsp;
+<SYNC Start=50701><P Class=KRCC>
+If the view type is today, then we get the weather condition
+<SYNC Start=53470><P Class=KRCC>
+&nbsp;
+<SYNC Start=53471><P Class=KRCC>
+code from the cursor. Then we get the resource ID for the
+<SYNC Start=56670><P Class=KRCC>
+&nbsp;
+<SYNC Start=56671><P Class=KRCC>
+colored image from the helper method. And then we set that onto
+<SYNC Start=59820><P Class=KRCC>
+&nbsp;
+<SYNC Start=59821><P Class=KRCC>
+the image view. If the view type is for a future day, then
+<SYNC Start=62770><P Class=KRCC>
+&nbsp;
+<SYNC Start=62771><P Class=KRCC>
+we read the whether condition code from the cursor. Then we pass
+<SYNC Start=66150><P Class=KRCC>
+&nbsp;
+<SYNC Start=66151><P Class=KRCC>
+it into the helper method to get the resource ID the gray
+<SYNC Start=69150><P Class=KRCC>
+&nbsp;
+<SYNC Start=69151><P Class=KRCC>
+icon and then we send that on to the image view. If
+<SYNC Start=72180><P Class=KRCC>
+&nbsp;
+<SYNC Start=72181><P Class=KRCC>
+you previously hard coded an image into the layout, then you should remove
+<SYNC Start=75830><P Class=KRCC>
+&nbsp;
+<SYNC Start=75831><P Class=KRCC>
+that value now. Otherwise, on app launch, it will load
+<SYNC Start=78860><P Class=KRCC>
+&nbsp;
+<SYNC Start=78861><P Class=KRCC>
+up the placeholder image and then flash to the actual
+<SYNC Start=81480><P Class=KRCC>
+&nbsp;
+<SYNC Start=81481><P Class=KRCC>
+icon. Now that the wire frame implementation for the phone
+<SYNC Start=85170><P Class=KRCC>
+&nbsp;
+<SYNC Start=85171><P Class=KRCC>
+UI is pretty much complete, let's look at the tablet UI.</BODY>
+</SAMI>

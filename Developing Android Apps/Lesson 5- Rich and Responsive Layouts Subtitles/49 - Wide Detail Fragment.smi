@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=140><P Class=KRCC>
+The solution of the previous quiz said that we
+<SYNC Start=2360><P Class=KRCC>
+&nbsp;
+<SYNC Start=2361><P Class=KRCC>
+had to define the wide detail fragment layout in two
+<SYNC Start=5030><P Class=KRCC>
+&nbsp;
+<SYNC Start=5031><P Class=KRCC>
+places. The layout-land and the layout-sw600dp folder. To avoid having
+<SYNC Start=9630><P Class=KRCC>
+&nbsp;
+<SYNC Start=9631><P Class=KRCC>
+multiple copies of this file, we should use layout aliasing.
+<SYNC Start=13050><P Class=KRCC>
+&nbsp;
+<SYNC Start=13051><P Class=KRCC>
+We can check the documentation for layout aliases to see
+<SYNC Start=15700><P Class=KRCC>
+&nbsp;
+<SYNC Start=15701><P Class=KRCC>
+an example. Say we have a main layout file that's
+<SYNC Start=18670><P Class=KRCC>
+&nbsp;
+<SYNC Start=18671><P Class=KRCC>
+for one pane UI. In the layout large and layout-sw600dp
+<SYNC Start=22177><P Class=KRCC>
+&nbsp;
+<SYNC Start=22178><P Class=KRCC>
+folders, we want a multi pane layout. In case you're
+<SYNC Start=25190><P Class=KRCC>
+&nbsp;
+<SYNC Start=25191><P Class=KRCC>
+wondering, layout large is for backward compatibility purposes for
+<SYNC Start=28380><P Class=KRCC>
+&nbsp;
+<SYNC Start=28381><P Class=KRCC>
+large devices prior to Android 3.2, that's when the SW
+<SYNC Start=32280><P Class=KRCC>
+&nbsp;
+<SYNC Start=32281><P Class=KRCC>
+qualifiers were introduced. So back to the point. To
+<SYNC Start=35340><P Class=KRCC>
+&nbsp;
+<SYNC Start=35341><P Class=KRCC>
+avoid code duplication, we can define the two pane layout
+<SYNC Start=38290><P Class=KRCC>
+&nbsp;
+<SYNC Start=38291><P Class=KRCC>
+in the base layout folder. Then, in the values-large
+<SYNC Start=41161><P Class=KRCC>
+&nbsp;
+<SYNC Start=41162><P Class=KRCC>
+and values-sw600dp folders, we can create a reference so that
+<SYNC Start=44870><P Class=KRCC>
+&nbsp;
+<SYNC Start=44871><P Class=KRCC>
+the main layout actually maps to the two pane layout.
+<SYNC Start=48100><P Class=KRCC>
+&nbsp;
+<SYNC Start=48101><P Class=KRCC>
+In the Java code, you can reference it as r.layout.main,
+<SYNC Start=50950><P Class=KRCC>
+&nbsp;
+<SYNC Start=50951><P Class=KRCC>
+but it's actually referencing the two pane layout.
+<SYNC Start=53640><P Class=KRCC>
+&nbsp;
+<SYNC Start=53641><P Class=KRCC>
+This is what the detail fragment should look
+<SYNC Start=55110><P Class=KRCC>
+&nbsp;
+<SYNC Start=55111><P Class=KRCC>
+like afterwards. And this is what the phone
+<SYNC Start=57070><P Class=KRCC>
+&nbsp;
+<SYNC Start=57071><P Class=KRCC>
+landscape view looks like. If you rotate the
+<SYNC Start=59610><P Class=KRCC>
+&nbsp;
+<SYNC Start=59611><P Class=KRCC>
+device, the phone portrait view should be different.
+<SYNC Start=62460><P Class=KRCC>
+&nbsp;
+<SYNC Start=62461><P Class=KRCC>
+In the next coding task, we're going to make
+<SYNC Start=64400><P Class=KRCC>
+&nbsp;
+<SYNC Start=64401><P Class=KRCC>
+the today list item look more like the other items in the list for the tablet.</BODY>
+</SAMI>

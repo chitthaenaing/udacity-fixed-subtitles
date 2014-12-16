@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=80><P Class=KRCC>
+We use the FragmentManager to begin a transaction, to look that
+<SYNC Start=2940><P Class=KRCC>
+&nbsp;
+<SYNC Start=2941><P Class=KRCC>
+we want to add this transaction to the back stack, and
+<SYNC Start=5580><P Class=KRCC>
+&nbsp;
+<SYNC Start=5581><P Class=KRCC>
+then use the replace command, specifying the container ID, whose contents
+<SYNC Start=9170><P Class=KRCC>
+&nbsp;
+<SYNC Start=9171><P Class=KRCC>
+we want to replace, and the new fragment we want to
+<SYNC Start=11590><P Class=KRCC>
+&nbsp;
+<SYNC Start=11591><P Class=KRCC>
+put in there. And we execute the transaction by calling commit.
+<SYNC Start=14700><P Class=KRCC>
+&nbsp;
+<SYNC Start=14701><P Class=KRCC>
+Now you can actually chain another of changes within the same
+<SYNC Start=18070><P Class=KRCC>
+&nbsp;
+<SYNC Start=18071><P Class=KRCC>
+transaction, so it's also possible to achieve much of the same
+<SYNC Start=21160><P Class=KRCC>
+&nbsp;
+<SYNC Start=21161><P Class=KRCC>
+effect by first removing the contents of container A and adding fragment
+<SYNC Start=25770><P Class=KRCC>
+&nbsp;
+<SYNC Start=25771><P Class=KRCC>
+B to that container.</BODY>
+</SAMI>

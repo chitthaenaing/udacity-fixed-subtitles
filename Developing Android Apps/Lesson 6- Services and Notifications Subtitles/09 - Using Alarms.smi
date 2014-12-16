@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=320><P Class=KRCC>
+All right, you're done. Let's look at the solution.
+<SYNC Start=3010><P Class=KRCC>
+&nbsp;
+<SYNC Start=3011><P Class=KRCC>
+As I said in the question, we're going to be
+<SYNC Start=5090><P Class=KRCC>
+&nbsp;
+<SYNC Start=5091><P Class=KRCC>
+working inside a forecast fragment in the update weather function.
+<SYNC Start=8720><P Class=KRCC>
+&nbsp;
+<SYNC Start=8721><P Class=KRCC>
+First, we're going to need to create a standard intent
+<SYNC Start=11220><P Class=KRCC>
+&nbsp;
+<SYNC Start=11221><P Class=KRCC>
+for our alarm receiver. We then add our location query
+<SYNC Start=14650><P Class=KRCC>
+&nbsp;
+<SYNC Start=14651><P Class=KRCC>
+as an extra. We then wrap that in a pending
+<SYNC Start=17920><P Class=KRCC>
+&nbsp;
+<SYNC Start=17921><P Class=KRCC>
+intent. A pending intent is a special kind of object
+<SYNC Start=21440><P Class=KRCC>
+&nbsp;
+<SYNC Start=21441><P Class=KRCC>
+that describes an intent. This allows other applications to implement
+<SYNC Start=25838><P Class=KRCC>
+&nbsp;
+<SYNC Start=25839><P Class=KRCC>
+the feature of the original intent that's used to
+<SYNC Start=28060><P Class=KRCC>
+&nbsp;
+<SYNC Start=28061><P Class=KRCC>
+create the pending intent. We're only going to use this
+<SYNC Start=30880><P Class=KRCC>
+&nbsp;
+<SYNC Start=30881><P Class=KRCC>
+pending intent once, so I set flag one shot.
+<SYNC Start=34542><P Class=KRCC>
+&nbsp;
+<SYNC Start=34543><P Class=KRCC>
+Then, we get the alarm service and set the alarm
+<SYNC Start=37480><P Class=KRCC>
+&nbsp;
+<SYNC Start=37481><P Class=KRCC>
+to trigger five seconds from now. But we still
+<SYNC Start=40900><P Class=KRCC>
+&nbsp;
+<SYNC Start=40901><P Class=KRCC>
+need for our alarm to do something. Back in the
+<SYNC Start=44100><P Class=KRCC>
+&nbsp;
+<SYNC Start=44101><P Class=KRCC>
+Broadcast Receiver, we need to send the standard intent
+<SYNC Start=46990><P Class=KRCC>
+&nbsp;
+<SYNC Start=46991><P Class=KRCC>
+to start our service, and that's it. Let's try running
+<SYNC Start=51070><P Class=KRCC>
+&nbsp;
+<SYNC Start=51071><P Class=KRCC>
+the app. All right, so now we've got the
+<SYNC Start=53460><P Class=KRCC>
+&nbsp;
+<SYNC Start=53461><P Class=KRCC>
+Alarm Manager getting in the way of our service. We
+<SYNC Start=56460><P Class=KRCC>
+&nbsp;
+<SYNC Start=56461><P Class=KRCC>
+hit refresh. It'll take us about five more seconds
+<SYNC Start=59760><P Class=KRCC>
+&nbsp;
+<SYNC Start=59761><P Class=KRCC>
+before we actually see the data now. And there we
+<SYNC Start=62660><P Class=KRCC>
+&nbsp;
+<SYNC Start=62661><P Class=KRCC>
+have it. A very, very simple alarm. Even with
+<SYNC Start=66930><P Class=KRCC>
+&nbsp;
+<SYNC Start=66931><P Class=KRCC>
+this updating in the background potentially, and using a service,
+<SYNC Start=69820><P Class=KRCC>
+&nbsp;
+<SYNC Start=69821><P Class=KRCC>
+we could still be more efficient in our use
+<SYNC Start=72170><P Class=KRCC>
+&nbsp;
+<SYNC Start=72171><P Class=KRCC>
+of phone resources. Rato can tell us more about that.</BODY>
+</SAMI>

@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+Now that we have the menu XML, add the code in
+<SYNC Start=2680><P Class=KRCC>
+&nbsp;
+<SYNC Start=2681><P Class=KRCC>
+the fragment to inflate it. You can leave a placeholder for
+<SYNC Start=5590><P Class=KRCC>
+&nbsp;
+<SYNC Start=5591><P Class=KRCC>
+when the Refresh button is selected. This is what it should
+<SYNC Start=9020><P Class=KRCC>
+&nbsp;
+<SYNC Start=9021><P Class=KRCC>
+look when you're done. You should see the Refresh menu item there,
+<SYNC Start=11740><P Class=KRCC>
+&nbsp;
+<SYNC Start=11741><P Class=KRCC>
+but tapping on it doesn't do anything. That's fine for now.
+<SYNC Start=14730><P Class=KRCC>
+&nbsp;
+<SYNC Start=14731><P Class=KRCC>
+If needed, you can look at mainactivity.java for reference. If you get
+<SYNC Start=18600><P Class=KRCC>
+&nbsp;
+<SYNC Start=18601><P Class=KRCC>
+stuck and don't see the menu item appear, try to answer
+<SYNC Start=21570><P Class=KRCC>
+&nbsp;
+<SYNC Start=21571><P Class=KRCC>
+this question first: what fragment method do you need to call in
+<SYNC Start=25630><P Class=KRCC>
+&nbsp;
+<SYNC Start=25631><P Class=KRCC>
+order to report that it has menu options to display?</BODY>
+</SAMI>

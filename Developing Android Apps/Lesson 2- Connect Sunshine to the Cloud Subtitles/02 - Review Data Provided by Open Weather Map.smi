@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=340><P Class=KRCC>
+On that note, we're going to make our sunshine app
+<SYNC Start=2320><P Class=KRCC>
+&nbsp;
+<SYNC Start=2321><P Class=KRCC>
+100 times better now by connecting it over the network
+<SYNC Start=5410><P Class=KRCC>
+&nbsp;
+<SYNC Start=5411><P Class=KRCC>
+to the OpenWeatherMap service. OpenWeatherMap provides a free weather data
+<SYNC Start=10360><P Class=KRCC>
+&nbsp;
+<SYNC Start=10361><P Class=KRCC>
+and forecast API. And the site is linked below, so
+<SYNC Start=13480><P Class=KRCC>
+&nbsp;
+<SYNC Start=13481><P Class=KRCC>
+you can follow along. By scrolling through the site,
+<SYNC Start=16570><P Class=KRCC>
+&nbsp;
+<SYNC Start=16571><P Class=KRCC>
+you can see what type of data is available. It
+<SYNC Start=19600><P Class=KRCC>
+&nbsp;
+<SYNC Start=19601><P Class=KRCC>
+also has example queries so you can click on this
+<SYNC Start=22540><P Class=KRCC>
+&nbsp;
+<SYNC Start=22541><P Class=KRCC>
+one to see what the weather is like in London.
+<SYNC Start=25440><P Class=KRCC>
+&nbsp;
+<SYNC Start=25441><P Class=KRCC>
+It includes a user friendly description of the weather
+<SYNC Start=28070><P Class=KRCC>
+&nbsp;
+<SYNC Start=28071><P Class=KRCC>
+condition, such as broken clouds, in this case. And
+<SYNC Start=31280><P Class=KRCC>
+&nbsp;
+<SYNC Start=31281><P Class=KRCC>
+we'll use this later in our app. For the
+<SYNC Start=34110><P Class=KRCC>
+&nbsp;
+<SYNC Start=34111><P Class=KRCC>
+full list of weather conditions, you can go back to
+<SYNC Start=37060><P Class=KRCC>
+&nbsp;
+<SYNC Start=37061><P Class=KRCC>
+the main page. And scroll down. And then, click
+<SYNC Start=40330><P Class=KRCC>
+&nbsp;
+<SYNC Start=40331><P Class=KRCC>
+on this link here for the Weather Condition Codes.
+<SYNC Start=42790><P Class=KRCC>
+&nbsp;
+<SYNC Start=43950><P Class=KRCC>
+And on this page, we have the full list
+<SYNC Start=45700><P Class=KRCC>
+&nbsp;
+<SYNC Start=45701><P Class=KRCC>
+of weather conditions. It contains everything, from scattered clouds to
+<SYNC Start=51000><P Class=KRCC>
+&nbsp;
+<SYNC Start=51001><P Class=KRCC>
+freezing rain, or even volcanic ash. I don't know
+<SYNC Start=55490><P Class=KRCC>
+&nbsp;
+<SYNC Start=55491><P Class=KRCC>
+about you, but hopefully that doesn't happen too often.</BODY>
+</SAMI>

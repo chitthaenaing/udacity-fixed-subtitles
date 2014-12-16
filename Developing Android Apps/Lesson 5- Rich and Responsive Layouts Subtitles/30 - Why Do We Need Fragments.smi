@@ -1,0 +1,210 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=990><P Class=KRCC>
+So now you know, where fragments are used and
+<SYNC Start=2810><P Class=KRCC>
+&nbsp;
+<SYNC Start=2811><P Class=KRCC>
+where we're going to use them in our app. You're
+<SYNC Start=5700><P Class=KRCC>
+&nbsp;
+<SYNC Start=5701><P Class=KRCC>
+probably starting to ask, why use fragments at all?
+<SYNC Start=9070><P Class=KRCC>
+&nbsp;
+<SYNC Start=9071><P Class=KRCC>
+If we want to group UI components, couldn't we just create
+<SYNC Start=11810><P Class=KRCC>
+&nbsp;
+<SYNC Start=11811><P Class=KRCC>
+a View Group or maybe a re-usable XML layout
+<SYNC Start=14520><P Class=KRCC>
+&nbsp;
+<SYNC Start=14521><P Class=KRCC>
+definition? Yes. But, the real power in fragments goes
+<SYNC Start=19240><P Class=KRCC>
+&nbsp;
+<SYNC Start=19241><P Class=KRCC>
+beyond grouping UI elements. They allow us to fully
+<SYNC Start=22220><P Class=KRCC>
+&nbsp;
+<SYNC Start=22221><P Class=KRCC>
+modularize our activities, including the life cycle events they receive
+<SYNC Start=26350><P Class=KRCC>
+&nbsp;
+<SYNC Start=26351><P Class=KRCC>
+in the app state that they maintain. Fragments were
+<SYNC Start=28990><P Class=KRCC>
+&nbsp;
+<SYNC Start=28991><P Class=KRCC>
+first introduced in Honeycomb to solve a particular problem. Honeycomb
+<SYNC Start=33090><P Class=KRCC>
+&nbsp;
+<SYNC Start=33091><P Class=KRCC>
+was the first Android release to support tablets, and
+<SYNC Start=36390><P Class=KRCC>
+&nbsp;
+<SYNC Start=36391><P Class=KRCC>
+it turned out, the best way for most apps to
+<SYNC Start=38680><P Class=KRCC>
+&nbsp;
+<SYNC Start=38681><P Class=KRCC>
+create a great tablet UI. Is put two or
+<SYNC Start=41780><P Class=KRCC>
+&nbsp;
+<SYNC Start=41781><P Class=KRCC>
+more, of their phone activities alongside each other. For example,
+<SYNC Start=46910><P Class=KRCC>
+&nbsp;
+<SYNC Start=46911><P Class=KRCC>
+if you had a phone app that started with a
+<SYNC Start=48710><P Class=KRCC>
+&nbsp;
+<SYNC Start=48711><P Class=KRCC>
+list activity like this, which you then clicked an item
+<SYNC Start=51520><P Class=KRCC>
+&nbsp;
+<SYNC Start=51521><P Class=KRCC>
+would open a detailed activity like this one. What
+<SYNC Start=54570><P Class=KRCC>
+&nbsp;
+<SYNC Start=54571><P Class=KRCC>
+we call a master detail flow. A good tablet
+<SYNC Start=57840><P Class=KRCC>
+&nbsp;
+<SYNC Start=57841><P Class=KRCC>
+UI would put them side by side like this.
+<SYNC Start=61060><P Class=KRCC>
+&nbsp;
+<SYNC Start=61061><P Class=KRCC>
+Functionally, clicking an item on this list, now replaces this
+<SYNC Start=64760><P Class=KRCC>
+&nbsp;
+<SYNC Start=64761><P Class=KRCC>
+activity on the right, rather than starting a new
+<SYNC Start=67310><P Class=KRCC>
+&nbsp;
+<SYNC Start=67311><P Class=KRCC>
+one, as it would have done on the phone.
+<SYNC Start=68680><P Class=KRCC>
+&nbsp;
+<SYNC Start=69760><P Class=KRCC>
+Now unfortunately, Android didn't always support embedding activities within
+<SYNC Start=73940><P Class=KRCC>
+&nbsp;
+<SYNC Start=73941><P Class=KRCC>
+other activities. At least, it didn't until we introduced fragments.
+<SYNC Start=78410><P Class=KRCC>
+&nbsp;
+<SYNC Start=78411><P Class=KRCC>
+Now if you just look at the UI elements, you could
+<SYNC Start=80260><P Class=KRCC>
+&nbsp;
+<SYNC Start=80261><P Class=KRCC>
+be excused for thinking you could achieve much the same thing
+<SYNC Start=83470><P Class=KRCC>
+&nbsp;
+<SYNC Start=83471><P Class=KRCC>
+using an activity that was built using U Groups and layouts,
+<SYNC Start=87870><P Class=KRCC>
+&nbsp;
+<SYNC Start=87871><P Class=KRCC>
+without bothering the fragments, which is true up to a point.
+<SYNC Start=92630><P Class=KRCC>
+&nbsp;
+<SYNC Start=92631><P Class=KRCC>
+But then you'd have to pass through all of the activity
+<SYNC Start=94712><P Class=KRCC>
+&nbsp;
+<SYNC Start=94713><P Class=KRCC>
+life cycle events, manage the state of each piece of the
+<SYNC Start=97860><P Class=KRCC>
+&nbsp;
+<SYNC Start=97861><P Class=KRCC>
+UI, keep track of the state of each of the portions
+<SYNC Start=100390><P Class=KRCC>
+&nbsp;
+<SYNC Start=100391><P Class=KRCC>
+as they changed. And remember, which screen elements were on screen
+<SYNC Start=103770><P Class=KRCC>
+&nbsp;
+<SYNC Start=103771><P Class=KRCC>
+at any given time, in order to maintain app state.
+<SYNC Start=106710><P Class=KRCC>
+&nbsp;
+<SYNC Start=107740><P Class=KRCC>
+All of which, is exactly what the Fragment Manager does
+<SYNC Start=110470><P Class=KRCC>
+&nbsp;
+<SYNC Start=110471><P Class=KRCC>
+for you, when you use Fragments. And that lets you
+<SYNC Start=113500><P Class=KRCC>
+&nbsp;
+<SYNC Start=113501><P Class=KRCC>
+take a step back and, and treat each fragment as though
+<SYNC Start=116230><P Class=KRCC>
+&nbsp;
+<SYNC Start=116231><P Class=KRCC>
+it were a mini activity. For example, in the world
+<SYNC Start=119240><P Class=KRCC>
+&nbsp;
+<SYNC Start=119241><P Class=KRCC>
+of activities, you start one activity from the other, and that
+<SYNC Start=122400><P Class=KRCC>
+&nbsp;
+<SYNC Start=122401><P Class=KRCC>
+transaction is recorded on the back stack. So, hitting the
+<SYNC Start=125400><P Class=KRCC>
+&nbsp;
+<SYNC Start=125401><P Class=KRCC>
+Back button, we'll undo that transaction and bring the first activity
+<SYNC Start=129090><P Class=KRCC>
+&nbsp;
+<SYNC Start=129091><P Class=KRCC>
+to the front. Now the same thing can
+<SYNC Start=131310><P Class=KRCC>
+&nbsp;
+<SYNC Start=131311><P Class=KRCC>
+happen with fragment transactions. In this case, rather
+<SYNC Start=133870><P Class=KRCC>
+&nbsp;
+<SYNC Start=133871><P Class=KRCC>
+than starting a new activity, we simply replace
+<SYNC Start=136580><P Class=KRCC>
+&nbsp;
+<SYNC Start=136581><P Class=KRCC>
+the list fragment with the detail fragment. And then
+<SYNC Start=139480><P Class=KRCC>
+&nbsp;
+<SYNC Start=139481><P Class=KRCC>
+the back button will undo that transaction and
+<SYNC Start=141740><P Class=KRCC>
+&nbsp;
+<SYNC Start=141741><P Class=KRCC>
+reverse it. So in theory, you can really take
+<SYNC Start=144210><P Class=KRCC>
+&nbsp;
+<SYNC Start=144211><P Class=KRCC>
+any act with multiple activities and replace it
+<SYNC Start=146880><P Class=KRCC>
+&nbsp;
+<SYNC Start=146881><P Class=KRCC>
+with a single activity that's host to multiple fragments.</BODY>
+</SAMI>

@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=780><P Class=KRCC>
+In the main activity, we tell the forecast fragment to use a
+<SYNC Start=3490><P Class=KRCC>
+&nbsp;
+<SYNC Start=3491><P Class=KRCC>
+special today layout if it's one pane mode. In the fragment, we
+<SYNC Start=7030><P Class=KRCC>
+&nbsp;
+<SYNC Start=7031><P Class=KRCC>
+pass on this value to the forecast adapter, if it's not null.
+<SYNC Start=10320><P Class=KRCC>
+&nbsp;
+<SYNC Start=10321><P Class=KRCC>
+The reason it could be null is because the activity on Create method
+<SYNC Start=13430><P Class=KRCC>
+&nbsp;
+<SYNC Start=13431><P Class=KRCC>
+will happen before the fragment on Create View method. And this is
+<SYNC Start=16900><P Class=KRCC>
+&nbsp;
+<SYNC Start=16901><P Class=KRCC>
+where the forecast adapter is initialized. So we set the Boolean here,
+<SYNC Start=20580><P Class=KRCC>
+&nbsp;
+<SYNC Start=20581><P Class=KRCC>
+as well. The reason we have this code here is because it's
+<SYNC Start=23200><P Class=KRCC>
+&nbsp;
+<SYNC Start=23201><P Class=KRCC>
+a public method. So, in the future, it could be called before or
+<SYNC Start=26180><P Class=KRCC>
+&nbsp;
+<SYNC Start=26181><P Class=KRCC>
+after this method.</BODY>
+</SAMI>

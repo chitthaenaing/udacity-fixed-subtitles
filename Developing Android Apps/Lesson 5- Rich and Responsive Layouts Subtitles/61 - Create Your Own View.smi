@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=420><P Class=KRCC>
+Now let's take this opportunity to go ahead and create our
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+own custom view. And we don't need one in particular for
+<SYNC Start=5960><P Class=KRCC>
+&nbsp;
+<SYNC Start=5961><P Class=KRCC>
+sunshine, so you can go ahead and choose anything. Personally, I'm
+<SYNC Start=9320><P Class=KRCC>
+&nbsp;
+<SYNC Start=9321><P Class=KRCC>
+a fan of compass control, so that's what I've been building. You'll
+<SYNC Start=12240><P Class=KRCC>
+&nbsp;
+<SYNC Start=12241><P Class=KRCC>
+need to include three constructors to support your view being created
+<SYNC Start=15820><P Class=KRCC>
+&nbsp;
+<SYNC Start=15821><P Class=KRCC>
+in code through a resource or through inflation, then simply override the
+<SYNC Start=19660><P Class=KRCC>
+&nbsp;
+<SYNC Start=19661><P Class=KRCC>
+onMeasure method and set your dimensions. Click here when you're done,
+<SYNC Start=23550><P Class=KRCC>
+&nbsp;
+<SYNC Start=23551><P Class=KRCC>
+and, you're ready to get started drawing the contents of your gear.</BODY>
+</SAMI>

@@ -1,0 +1,206 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+We're providing you with an asset drop, view the link below,
+<SYNC Start=2540><P Class=KRCC>
+&nbsp;
+<SYNC Start=2541><P Class=KRCC>
+so that you can download the images and include them in
+<SYNC Start=5130><P Class=KRCC>
+&nbsp;
+<SYNC Start=5131><P Class=KRCC>
+the app. When we open up the assets ZIP file, we
+<SYNC Start=8280><P Class=KRCC>
+&nbsp;
+<SYNC Start=8281><P Class=KRCC>
+see that the same icon is provided at different sizes for
+<SYNC Start=11190><P Class=KRCC>
+&nbsp;
+<SYNC Start=11191><P Class=KRCC>
+different resolutions. In the drawable MDPI folder, we see the assets
+<SYNC Start=15800><P Class=KRCC>
+&nbsp;
+<SYNC Start=15801><P Class=KRCC>
+that will be used on an MDPI device. In the drawable
+<SYNC Start=19710><P Class=KRCC>
+&nbsp;
+<SYNC Start=19711><P Class=KRCC>
+HDPI folder, we see the assets that will be used on
+<SYNC Start=22040><P Class=KRCC>
+&nbsp;
+<SYNC Start=22041><P Class=KRCC>
+an HDPI device. And the same goes for the other folders.
+<SYNC Start=25260><P Class=KRCC>
+&nbsp;
+<SYNC Start=26380><P Class=KRCC>
+Under the res directory copy over all the asset
+<SYNC Start=29000><P Class=KRCC>
+&nbsp;
+<SYNC Start=29001><P Class=KRCC>
+folders provided in the download. Clicking on an image shows
+<SYNC Start=32580><P Class=KRCC>
+&nbsp;
+<SYNC Start=32581><P Class=KRCC>
+a preview of it and the size and pixels
+<SYNC Start=34770><P Class=KRCC>
+&nbsp;
+<SYNC Start=34771><P Class=KRCC>
+is also shown. At this time you can also remove
+<SYNC Start=37580><P Class=KRCC>
+&nbsp;
+<SYNC Start=37581><P Class=KRCC>
+the old placeholder ic launcher icons. Our new launcher
+<SYNC Start=41500><P Class=KRCC>
+&nbsp;
+<SYNC Start=41501><P Class=KRCC>
+icons are located in mipmap folders. These are distinct folders
+<SYNC Start=45220><P Class=KRCC>
+&nbsp;
+<SYNC Start=45221><P Class=KRCC>
+from the drawable folders. If you build an APK
+<SYNC Start=48130><P Class=KRCC>
+&nbsp;
+<SYNC Start=48131><P Class=KRCC>
+for a target screen resolution like HDPI, the Android asset
+<SYNC Start=51690><P Class=KRCC>
+&nbsp;
+<SYNC Start=51691><P Class=KRCC>
+packaging tool, AAPT, can strip out the drawables for other resolutions
+<SYNC Start=55730><P Class=KRCC>
+&nbsp;
+<SYNC Start=55731><P Class=KRCC>
+that you don't need. But if it's in the mipmap folders,
+<SYNC Start=58330><P Class=KRCC>
+&nbsp;
+<SYNC Start=58331><P Class=KRCC>
+then these assets will stay in the APK regardless of the
+<SYNC Start=61261><P Class=KRCC>
+&nbsp;
+<SYNC Start=61262><P Class=KRCC>
+target resolution. But when would you need an image at a
+<SYNC Start=64190><P Class=KRCC>
+&nbsp;
+<SYNC Start=64191><P Class=KRCC>
+resolution different than the resolution of the device? Well, one example
+<SYNC Start=67700><P Class=KRCC>
+&nbsp;
+<SYNC Start=67701><P Class=KRCC>
+is the Android launcher app, which controls the home screen as
+<SYNC Start=71080><P Class=KRCC>
+&nbsp;
+<SYNC Start=71081><P Class=KRCC>
+well as the All App store. The launcher app won't use
+<SYNC Start=73830><P Class=KRCC>
+&nbsp;
+<SYNC Start=73831><P Class=KRCC>
+the icon at the current density of the device, but rather
+<SYNC Start=76741><P Class=KRCC>
+&nbsp;
+<SYNC Start=76742><P Class=KRCC>
+pulls a icon for the next highest resolution up. For an XXHDPI device like the
+<SYNC Start=82560><P Class=KRCC>
+&nbsp;
+<SYNC Start=82561><P Class=KRCC>
+Nexus 5, normally the assets will be pulled
+<SYNC Start=84950><P Class=KRCC>
+&nbsp;
+<SYNC Start=84951><P Class=KRCC>
+from the drawable XXHDPI folder. However, in this
+<SYNC Start=88850><P Class=KRCC>
+&nbsp;
+<SYNC Start=88851><P Class=KRCC>
+case the launcher icon will pull the XXXHDPI
+<SYNC Start=92620><P Class=KRCC>
+&nbsp;
+<SYNC Start=92621><P Class=KRCC>
+version of the launcher icon. That will make
+<SYNC Start=95320><P Class=KRCC>
+&nbsp;
+<SYNC Start=95321><P Class=KRCC>
+the larger app icons appear sharper on the
+<SYNC Start=97860><P Class=KRCC>
+&nbsp;
+<SYNC Start=97861><P Class=KRCC>
+all apps screen. In the code replace @drawable/ic_launcher
+<SYNC Start=102715><P Class=KRCC>
+&nbsp;
+<SYNC Start=102716><P Class=KRCC>
+with @mipmap/ic_launcher because of the new location of the icons.
+<SYNC Start=107070><P Class=KRCC>
+&nbsp;
+<SYNC Start=107071><P Class=KRCC>
+For the rest of the icons modify the forecast list
+<SYNC Start=109980><P Class=KRCC>
+&nbsp;
+<SYNC Start=109981><P Class=KRCC>
+and the details screen to display the right weather icon
+<SYNC Start=113160><P Class=KRCC>
+&nbsp;
+<SYNC Start=113161><P Class=KRCC>
+instead of the placeholder one. See the hints below in
+<SYNC Start=116110><P Class=KRCC>
+&nbsp;
+<SYNC Start=116111><P Class=KRCC>
+the instructor notes. Using the helper functions we've provided in
+<SYNC Start=119470><P Class=KRCC>
+&nbsp;
+<SYNC Start=119471><P Class=KRCC>
+the gist below, you can map the weather condition code
+<SYNC Start=122260><P Class=KRCC>
+&nbsp;
+<SYNC Start=122261><P Class=KRCC>
+to the icon that you'll need. This is what the
+<SYNC Start=124860><P Class=KRCC>
+&nbsp;
+<SYNC Start=124861><P Class=KRCC>
+app should look like when you're done with this step.
+<SYNC Start=127590><P Class=KRCC>
+&nbsp;
+<SYNC Start=127591><P Class=KRCC>
+Note that there are two types of each weather
+<SYNC Start=129400><P Class=KRCC>
+&nbsp;
+<SYNC Start=129401><P Class=KRCC>
+icon, a gray icon and a colored art image.
+<SYNC Start=132350><P Class=KRCC>
+&nbsp;
+<SYNC Start=132351><P Class=KRCC>
+In the main forecast list we'll be using the
+<SYNC Start=135040><P Class=KRCC>
+&nbsp;
+<SYNC Start=135041><P Class=KRCC>
+gray icon. However, for the today layout, we'll use the
+<SYNC Start=138630><P Class=KRCC>
+&nbsp;
+<SYNC Start=138631><P Class=KRCC>
+colored icon. When you go inside the detail activity,
+<SYNC Start=141650><P Class=KRCC>
+&nbsp;
+<SYNC Start=141651><P Class=KRCC>
+you'll also use the colored icon. At this time,
+<SYNC Start=144930><P Class=KRCC>
+&nbsp;
+<SYNC Start=144931><P Class=KRCC>
+you can also remove any images you hard coded
+<SYNC Start=147160><P Class=KRCC>
+&nbsp;
+<SYNC Start=147161><P Class=KRCC>
+into the layout XML, because they'll be populated dynamically now.</BODY>
+</SAMI>

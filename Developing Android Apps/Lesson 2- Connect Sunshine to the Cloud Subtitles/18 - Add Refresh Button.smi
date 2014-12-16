@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+As we mentioned before, you're going to still see fake
+<SYNC Start=2650><P Class=KRCC>
+&nbsp;
+<SYNC Start=2651><P Class=KRCC>
+data in the app. We'll need to add code to
+<SYNC Start=5120><P Class=KRCC>
+&nbsp;
+<SYNC Start=5121><P Class=KRCC>
+actually kick off a background task from the main
+<SYNC Start=7630><P Class=KRCC>
+&nbsp;
+<SYNC Start=7631><P Class=KRCC>
+thread. For debugging purposes, it will be nice if we
+<SYNC Start=10970><P Class=KRCC>
+&nbsp;
+<SYNC Start=10971><P Class=KRCC>
+can execute the task any time we wanted by
+<SYNC Start=13630><P Class=KRCC>
+&nbsp;
+<SYNC Start=13631><P Class=KRCC>
+interacting with the UI somehow. So, we're going to add
+<SYNC Start=16980><P Class=KRCC>
+&nbsp;
+<SYNC Start=16981><P Class=KRCC>
+a Refresh menu option for debugging. A warning, though,
+<SYNC Start=20650><P Class=KRCC>
+&nbsp;
+<SYNC Start=20651><P Class=KRCC>
+this menu option should not shift in the final app.</BODY>
+</SAMI>

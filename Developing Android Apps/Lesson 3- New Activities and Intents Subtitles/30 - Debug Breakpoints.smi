@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+I'll show you how we can add breakpoints in our code. Go ahead and
+<SYNC Start=3920><P Class=KRCC>
+&nbsp;
+<SYNC Start=3921><P Class=KRCC>
+click on the screen bug icon, to attach the debugger.
+<SYNC Start=6960><P Class=KRCC>
+&nbsp;
+<SYNC Start=11650><P Class=KRCC>
+We'll go to the Settings menu. In the SettingsActivity I'm going to add two
+<SYNC Start=15708><P Class=KRCC>
+&nbsp;
+<SYNC Start=15709><P Class=KRCC>
+breakpoints, in the onPreferenceChange method. I'm going to add a breakpoint at
+<SYNC Start=20492><P Class=KRCC>
+&nbsp;
+<SYNC Start=20493><P Class=KRCC>
+line 59 in the case of a ListPreference when it's about to set the summary. I'm
+<SYNC Start=24790><P Class=KRCC>
+&nbsp;
+<SYNC Start=24791><P Class=KRCC>
+also going to add a breakpoint at line 63, when it's not a ListPreference and it
+<SYNC Start=29170><P Class=KRCC>
+&nbsp;
+<SYNC Start=29171><P Class=KRCC>
+sets the summary. Let's go into the app to try it out. Tap on the Location and
+<SYNC Start=34120><P Class=KRCC>
+&nbsp;
+<SYNC Start=34121><P Class=KRCC>
+change the postal code. If you hit OK, then it triggers the breakpoint to
+<SYNC Start=38530><P Class=KRCC>
+&nbsp;
+<SYNC Start=38531><P Class=KRCC>
+stop at right here. These are the values of the variables at this time.
+<SYNC Start=42140><P Class=KRCC>
+&nbsp;
+<SYNC Start=42141><P Class=KRCC>
+And we see the new postal code here. You can step over or into the method for
+<SYNC Start=47110><P Class=KRCC>
+&nbsp;
+<SYNC Start=47111><P Class=KRCC>
+more details. Or you can hit Play to continue. Or Stop to stop the debugger.
+<SYNC Start=51960><P Class=KRCC>
+&nbsp;
+<SYNC Start=53160><P Class=KRCC>
+Let's hit Play to continue. And then we see that the [UNKNOWN] has been
+<SYNC Start=57410><P Class=KRCC>
+&nbsp;
+<SYNC Start=57411><P Class=KRCC>
+updated to the, the preference summary, is the new postal code. Let's try it for
+<SYNC Start=61800><P Class=KRCC>
+&nbsp;
+<SYNC Start=61801><P Class=KRCC>
+Temperature Units. They tap here, and then select Imperial.
+<SYNC Start=66830><P Class=KRCC>
+&nbsp;
+<SYNC Start=66831><P Class=KRCC>
+It triggers this breakpoint in the ListPreference case. We hit Play to continue,
+<SYNC Start=71190><P Class=KRCC>
+&nbsp;
+<SYNC Start=71191><P Class=KRCC>
+and then we see that, Imperial is now the preference summary.</BODY>
+</SAMI>

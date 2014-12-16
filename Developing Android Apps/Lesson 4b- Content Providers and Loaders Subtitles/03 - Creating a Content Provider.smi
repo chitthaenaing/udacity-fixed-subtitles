@@ -1,0 +1,102 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+These are the required content provider functions. You
+<SYNC Start=3500><P Class=KRCC>
+&nbsp;
+<SYNC Start=3501><P Class=KRCC>
+can implement them any way you like, but
+<SYNC Start=5270><P Class=KRCC>
+&nbsp;
+<SYNC Start=5271><P Class=KRCC>
+you'll find that it's really straight forward to
+<SYNC Start=8130><P Class=KRCC>
+&nbsp;
+<SYNC Start=8131><P Class=KRCC>
+implement them on top of a SQLite database. The
+<SYNC Start=12530><P Class=KRCC>
+&nbsp;
+<SYNC Start=12531><P Class=KRCC>
+parameters packed into our content provider functions match
+<SYNC Start=16219><P Class=KRCC>
+&nbsp;
+<SYNC Start=16220><P Class=KRCC>
+the parameters used for Android's SQLite's interface almost
+<SYNC Start=19710><P Class=KRCC>
+&nbsp;
+<SYNC Start=19711><P Class=KRCC>
+exactly. The biggest difference is that we replaced
+<SYNC Start=22570><P Class=KRCC>
+&nbsp;
+<SYNC Start=22571><P Class=KRCC>
+the table string, with a uri. In the simplest
+<SYNC Start=25810><P Class=KRCC>
+&nbsp;
+<SYNC Start=25811><P Class=KRCC>
+content provider implementation, the query is passed
+<SYNC Start=29020><P Class=KRCC>
+&nbsp;
+<SYNC Start=29021><P Class=KRCC>
+straight through to the database. Note that
+<SYNC Start=31840><P Class=KRCC>
+&nbsp;
+<SYNC Start=31841><P Class=KRCC>
+there are parameters that cannot be easily
+<SYNC Start=33720><P Class=KRCC>
+&nbsp;
+<SYNC Start=33721><P Class=KRCC>
+controlled through content providers, such as grouping functionality.
+<SYNC Start=37300><P Class=KRCC>
+&nbsp;
+<SYNC Start=39530><P Class=KRCC>
+But the interface allows for very flexible querying.
+<SYNC Start=42790><P Class=KRCC>
+&nbsp;
+<SYNC Start=42791><P Class=KRCC>
+Most importantly, the projection or columns allows for querying
+<SYNC Start=46120><P Class=KRCC>
+&nbsp;
+<SYNC Start=46121><P Class=KRCC>
+to be much more efficient. Because the column
+<SYNC Start=48945><P Class=KRCC>
+&nbsp;
+<SYNC Start=48946><P Class=KRCC>
+indices and our cursor object match the projection that
+<SYNC Start=52290><P Class=KRCC>
+&nbsp;
+<SYNC Start=52291><P Class=KRCC>
+we submit to the database, we can just
+<SYNC Start=55150><P Class=KRCC>
+&nbsp;
+<SYNC Start=55151><P Class=KRCC>
+get the values by their numerical index instead of
+<SYNC Start=58340><P Class=KRCC>
+&nbsp;
+<SYNC Start=58341><P Class=KRCC>
+having to use getColumnIndex to look up each
+<SYNC Start=60950><P Class=KRCC>
+&nbsp;
+<SYNC Start=60951><P Class=KRCC>
+column index. All right, it's time to code some
+<SYNC Start=64420><P Class=KRCC>
+&nbsp;
+<SYNC Start=64421><P Class=KRCC>
+more Sunshine. Let's code a content provider.</BODY>
+</SAMI>

@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+We'll take advantage of what the framework offers in order to build our
+<SYNC Start=2990><P Class=KRCC>
+&nbsp;
+<SYNC Start=2991><P Class=KRCC>
+SettingsActivity. Since we're supporting Gingerbread devices,
+<SYNC Start=6890><P Class=KRCC>
+&nbsp;
+<SYNC Start=6891><P Class=KRCC>
+we'll use a preference activity class. If you're targeting Honeycomber later,
+<SYNC Start=10628><P Class=KRCC>
+&nbsp;
+<SYNC Start=10629><P Class=KRCC>
+you'll want to use the PreferenceFragment class.
+<SYNC Start=13220><P Class=KRCC>
+&nbsp;
+<SYNC Start=13221><P Class=KRCC>
+Create a new SettingsActivity class from the gist provided below.
+<SYNC Start=16480><P Class=KRCC>
+&nbsp;
+<SYNC Start=17550><P Class=KRCC>
+Update the AndroidManifest to declare this new activity. You can see the way
+<SYNC Start=23000><P Class=KRCC>
+&nbsp;
+<SYNC Start=23001><P Class=KRCC>
+detail activity is declared as an example. If you see that APIs are deprecated,
+<SYNC Start=27390><P Class=KRCC>
+&nbsp;
+<SYNC Start=27391><P Class=KRCC>
+that's okay. That's a side effect of using PreferenceActivity, in order
+<SYNC Start=31600><P Class=KRCC>
+&nbsp;
+<SYNC Start=31601><P Class=KRCC>
+to target Gingerbread devices. When you create your app for your final project,
+<SYNC Start=36980><P Class=KRCC>
+&nbsp;
+<SYNC Start=36981><P Class=KRCC>
+you can use the wizard in Android Studio to create a new SettingsActivity.
+<SYNC Start=41460><P Class=KRCC>
+&nbsp;
+<SYNC Start=41461><P Class=KRCC>
+The code the wizard provides will make your app backward compatible,
+<SYNC Start=44830><P Class=KRCC>
+&nbsp;
+<SYNC Start=44831><P Class=KRCC>
+by using a combination of preference activity and PreferenceFragment.
+<SYNC Start=49040><P Class=KRCC>
+&nbsp;
+<SYNC Start=49041><P Class=KRCC>
+Our gist is meant to be a simplified version of that for learning purposes. So
+<SYNC Start=53280><P Class=KRCC>
+&nbsp;
+<SYNC Start=53281><P Class=KRCC>
+later, you'd be able to understand better what the wizard is doing.
+<SYNC Start=56970><P Class=KRCC>
+&nbsp;
+<SYNC Start=56971><P Class=KRCC>
+Check these items off when you're done.</BODY>
+</SAMI>

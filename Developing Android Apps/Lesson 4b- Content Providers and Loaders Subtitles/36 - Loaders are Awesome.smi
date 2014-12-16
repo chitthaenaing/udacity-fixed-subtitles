@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=240><P Class=KRCC>
+Let's talk about Loaders. Loaders are awesome. They were
+<SYNC Start=4470><P Class=KRCC>
+&nbsp;
+<SYNC Start=4471><P Class=KRCC>
+introduced in Honeycomb, but are available as part of the
+<SYNC Start=7080><P Class=KRCC>
+&nbsp;
+<SYNC Start=7081><P Class=KRCC>
+support library. So you can take advantage of them
+<SYNC Start=9400><P Class=KRCC>
+&nbsp;
+<SYNC Start=9401><P Class=KRCC>
+when supporting earlier platform releases. Loaders are essentially the best
+<SYNC Start=13170><P Class=KRCC>
+&nbsp;
+<SYNC Start=13171><P Class=KRCC>
+practice implementation for asynchronous data loading within an activity
+<SYNC Start=16640><P Class=KRCC>
+&nbsp;
+<SYNC Start=16641><P Class=KRCC>
+or fragment. So when you create a Loader, it creates
+<SYNC Start=20040><P Class=KRCC>
+&nbsp;
+<SYNC Start=20041><P Class=KRCC>
+an async task to load data on the background thread.
+<SYNC Start=23100><P Class=KRCC>
+&nbsp;
+<SYNC Start=23101><P Class=KRCC>
+It then syncs with the UI thread when the initial
+<SYNC Start=25480><P Class=KRCC>
+&nbsp;
+<SYNC Start=25481><P Class=KRCC>
+loading is complete, and can be set up to monitor
+<SYNC Start=27760><P Class=KRCC>
+&nbsp;
+<SYNC Start=27761><P Class=KRCC>
+the underlying data, and deliver any updates to the UI
+<SYNC Start=30610><P Class=KRCC>
+&nbsp;
+<SYNC Start=30611><P Class=KRCC>
+thread as well. Best still, all that work you did
+<SYNC Start=33640><P Class=KRCC>
+&nbsp;
+<SYNC Start=33641><P Class=KRCC>
+adding a content provider to your database pays off right
+<SYNC Start=36500><P Class=KRCC>
+&nbsp;
+<SYNC Start=36501><P Class=KRCC>
+now, with the cursor loader. The cursor loader is an
+<SYNC Start=39050><P Class=KRCC>
+&nbsp;
+<SYNC Start=39051><P Class=KRCC>
+implementation of the async task loader, specifically designed to query
+<SYNC Start=42940><P Class=KRCC>
+&nbsp;
+<SYNC Start=42941><P Class=KRCC>
+content providers, and return a cursor, which you can then
+<SYNC Start=46320><P Class=KRCC>
+&nbsp;
+<SYNC Start=46321><P Class=KRCC>
+bind directly to a UI. It will automatically update that cursor,
+<SYNC Start=50410><P Class=KRCC>
+&nbsp;
+<SYNC Start=50411><P Class=KRCC>
+whenever the underlying content provider changes, based on changes
+<SYNC Start=53700><P Class=KRCC>
+&nbsp;
+<SYNC Start=53701><P Class=KRCC>
+to the underlying database. And it will reconnect to the
+<SYNC Start=56240><P Class=KRCC>
+&nbsp;
+<SYNC Start=56241><P Class=KRCC>
+last returned cursor after being recreated, along with the
+<SYNC Start=59260><P Class=KRCC>
+&nbsp;
+<SYNC Start=59261><P Class=KRCC>
+host activity, after a configuration change. That means you won't
+<SYNC Start=62320><P Class=KRCC>
+&nbsp;
+<SYNC Start=62321><P Class=KRCC>
+have to requery data, just because the device was
+<SYNC Start=64610><P Class=KRCC>
+&nbsp;
+<SYNC Start=64611><P Class=KRCC>
+rotated. So the cursor loader handles all of your cursor
+<SYNC Start=67600><P Class=KRCC>
+&nbsp;
+<SYNC Start=67601><P Class=KRCC>
+management and background thread creation, UI thread synchronization, and data
+<SYNC Start=71890><P Class=KRCC>
+&nbsp;
+<SYNC Start=71891><P Class=KRCC>
+source monitoring. If you chose not to use content providers,
+<SYNC Start=75380><P Class=KRCC>
+&nbsp;
+<SYNC Start=75381><P Class=KRCC>
+you chose poorly. But still, you can take advantage
+<SYNC Start=79340><P Class=KRCC>
+&nbsp;
+<SYNC Start=79341><P Class=KRCC>
+of loaders, you just need to create your own
+<SYNC Start=81200><P Class=KRCC>
+&nbsp;
+<SYNC Start=81201><P Class=KRCC>
+loader by extending a think task loader directly. You
+<SYNC Start=84200><P Class=KRCC>
+&nbsp;
+<SYNC Start=84201><P Class=KRCC>
+can find out more in the instructor notes below.</BODY>
+</SAMI>

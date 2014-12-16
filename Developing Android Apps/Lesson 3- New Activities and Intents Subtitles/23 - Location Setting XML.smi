@@ -1,0 +1,186 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+We have our settings screen but no settings.
+<SYNC Start=3310><P Class=KRCC>
+&nbsp;
+<SYNC Start=3311><P Class=KRCC>
+In the next several sections you're going to be adding our two settings.
+<SYNC Start=6550><P Class=KRCC>
+&nbsp;
+<SYNC Start=6551><P Class=KRCC>
+I'll walk you through how we add our first setting for
+<SYNC Start=8510><P Class=KRCC>
+&nbsp;
+<SYNC Start=8511><P Class=KRCC>
+location, then you'll do the temperature setting on your own, so listen closely.
+<SYNC Start=13780><P Class=KRCC>
+&nbsp;
+<SYNC Start=13781><P Class=KRCC>
+First we design a preference XML file.
+<SYNC Start=15818><P Class=KRCC>
+&nbsp;
+<SYNC Start=15819><P Class=KRCC>
+The root element should be a preference screen.
+<SYNC Start=18320><P Class=KRCC>
+&nbsp;
+<SYNC Start=19320><P Class=KRCC>
+In this example we have a check box preference and
+<SYNC Start=21750><P Class=KRCC>
+&nbsp;
+<SYNC Start=21751><P Class=KRCC>
+a list preference inside of it.
+<SYNC Start=24130><P Class=KRCC>
+&nbsp;
+<SYNC Start=24131><P Class=KRCC>
+In order to add the preferences XML file to our app,
+<SYNC Start=27260><P Class=KRCC>
+&nbsp;
+<SYNC Start=27261><P Class=KRCC>
+we first need to create an XML folder under the resources res directory.
+<SYNC Start=31570><P Class=KRCC>
+&nbsp;
+<SYNC Start=31571><P Class=KRCC>
+Right-click on the res folder, go to new Android resource directory and
+<SYNC Start=36680><P Class=KRCC>
+&nbsp;
+<SYNC Start=36681><P Class=KRCC>
+then type in XML as the name of the directory.
+<SYNC Start=39210><P Class=KRCC>
+&nbsp;
+<SYNC Start=40220><P Class=KRCC>
+For resource type you can use XML and then hit OK.
+<SYNC Start=42905><P Class=KRCC>
+&nbsp;
+<SYNC Start=44250><P Class=KRCC>
+Inside this folder, we right-click to create a new XML resource file.
+<SYNC Start=49490><P Class=KRCC>
+&nbsp;
+<SYNC Start=49491><P Class=KRCC>
+We call it pref_general,
+<SYNC Start=50650><P Class=KRCC>
+&nbsp;
+<SYNC Start=50651><P Class=KRCC>
+and the root element is a preference screen as we saw on the developer's site.
+<SYNC Start=54990><P Class=KRCC>
+&nbsp;
+<SYNC Start=54991><P Class=KRCC>
+And then our preferences file is created.
+<SYNC Start=57020><P Class=KRCC>
+&nbsp;
+<SYNC Start=57021><P Class=KRCC>
+Then add the location preference.
+<SYNC Start=58980><P Class=KRCC>
+&nbsp;
+<SYNC Start=58981><P Class=KRCC>
+Since the wireframes showed an editable text field to input user location as
+<SYNC Start=63420><P Class=KRCC>
+&nbsp;
+<SYNC Start=63421><P Class=KRCC>
+a string, we make this an EditTextPreference.
+<SYNC Start=66318><P Class=KRCC>
+&nbsp;
+<SYNC Start=66319><P Class=KRCC>
+If you want to learn more about all the possible XML attributes,
+<SYNC Start=70620><P Class=KRCC>
+&nbsp;
+<SYNC Start=70621><P Class=KRCC>
+you can google for EditTextPreference.
+<SYNC Start=73370><P Class=KRCC>
+&nbsp;
+<SYNC Start=73371><P Class=KRCC>
+First we specify a title for
+<SYNC Start=74890><P Class=KRCC>
+&nbsp;
+<SYNC Start=74891><P Class=KRCC>
+the preference which will be the label that's displayed to the user.
+<SYNC Start=78230><P Class=KRCC>
+&nbsp;
+<SYNC Start=78231><P Class=KRCC>
+Then we specify a key.
+<SYNC Start=80170><P Class=KRCC>
+&nbsp;
+<SYNC Start=80171><P Class=KRCC>
+And this key is actually the key value in SharedPreferences.
+<SYNC Start=85690><P Class=KRCC>
+&nbsp;
+<SYNC Start=85691><P Class=KRCC>
+Going back to the code, we also add these attributes to describe the Edit Text
+<SYNC Start=89610><P Class=KRCC>
+&nbsp;
+<SYNC Start=89611><P Class=KRCC>
+field in the pop up dialog that was shown in the wire frames.
+<SYNC Start=92780><P Class=KRCC>
+&nbsp;
+<SYNC Start=94120><P Class=KRCC>
+Going back to the code, we can also configure properties of the Edit Text field.
+<SYNC Start=98440><P Class=KRCC>
+&nbsp;
+<SYNC Start=98441><P Class=KRCC>
+We specify the input type to be text, and we cap it to a single line of text.
+<SYNC Start=102890><P Class=KRCC>
+&nbsp;
+<SYNC Start=102891><P Class=KRCC>
+It's bad practice to hard code these strings here,
+<SYNC Start=105790><P Class=KRCC>
+&nbsp;
+<SYNC Start=105791><P Class=KRCC>
+so we declare them as constants in the strings.XML file.
+<SYNC Start=110290><P Class=KRCC>
+&nbsp;
+<SYNC Start=110291><P Class=KRCC>
+These are the strings we declared.
+<SYNC Start=111970><P Class=KRCC>
+&nbsp;
+<SYNC Start=111971><P Class=KRCC>
+This is the name of the label of the preference.
+<SYNC Start=114520><P Class=KRCC>
+&nbsp;
+<SYNC Start=114521><P Class=KRCC>
+It's user-visible, so we add a char limit for translation purposes.
+<SYNC Start=118390><P Class=KRCC>
+&nbsp;
+<SYNC Start=118391><P Class=KRCC>
+You also specify location which is the name of the key in Shared Preferences.
+<SYNC Start=122840><P Class=KRCC>
+&nbsp;
+<SYNC Start=122841><P Class=KRCC>
+We don't want to translate it because we always want to find the key based
+<SYNC Start=125730><P Class=KRCC>
+&nbsp;
+<SYNC Start=125731><P Class=KRCC>
+on this name.
+<SYNC Start=127060><P Class=KRCC>
+&nbsp;
+<SYNC Start=127061><P Class=KRCC>
+We also specify a constant for the default location.
+<SYNC Start=130169><P Class=KRCC>
+&nbsp;
+<SYNC Start=130170><P Class=KRCC>
+We also don't translate this because we need to send it to the server API
+<SYNC Start=133690><P Class=KRCC>
+&nbsp;
+<SYNC Start=133691><P Class=KRCC>
+like this.
+<SYNC Start=134750><P Class=KRCC>
+&nbsp;
+<SYNC Start=134751><P Class=KRCC>
+When you're done with these steps check them off and continue</BODY>
+</SAMI>

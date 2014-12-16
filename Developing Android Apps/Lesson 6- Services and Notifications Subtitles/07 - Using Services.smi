@@ -1,0 +1,102 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+All right, you're done. Let's talk about how I
+<SYNC Start=2900><P Class=KRCC>
+&nbsp;
+<SYNC Start=2901><P Class=KRCC>
+solved this one. First, let's take all our code, and
+<SYNC Start=6280><P Class=KRCC>
+&nbsp;
+<SYNC Start=6281><P Class=KRCC>
+copy it from the fetch weather task. The intent
+<SYNC Start=9560><P Class=KRCC>
+&nbsp;
+<SYNC Start=9561><P Class=KRCC>
+service actually creates a helper thread for us to run
+<SYNC Start=12010><P Class=KRCC>
+&nbsp;
+<SYNC Start=12011><P Class=KRCC>
+on. Similar to what async task does. So we
+<SYNC Start=15300><P Class=KRCC>
+&nbsp;
+<SYNC Start=15301><P Class=KRCC>
+can just copy this stuff from doing background to on
+<SYNC Start=18080><P Class=KRCC>
+&nbsp;
+<SYNC Start=18081><P Class=KRCC>
+handle intent. Let's add a few helpful constants, such as
+<SYNC Start=22240><P Class=KRCC>
+&nbsp;
+<SYNC Start=22241><P Class=KRCC>
+log tag and an Intent Extra, so we can pass
+<SYNC Start=25550><P Class=KRCC>
+&nbsp;
+<SYNC Start=25551><P Class=KRCC>
+in the location query. Now, we're just going to
+<SYNC Start=28430><P Class=KRCC>
+&nbsp;
+<SYNC Start=28431><P Class=KRCC>
+go through and clean up some of the errors.
+<SYNC Start=30590><P Class=KRCC>
+&nbsp;
+<SYNC Start=30591><P Class=KRCC>
+After all, Intent Service doesn't return a value. And
+<SYNC Start=34110><P Class=KRCC>
+&nbsp;
+<SYNC Start=34111><P Class=KRCC>
+since it's a service, it has its own context.
+<SYNC Start=36790><P Class=KRCC>
+&nbsp;
+<SYNC Start=36791><P Class=KRCC>
+And that's it. We've turned out fetch weather task
+<SYNC Start=40933><P Class=KRCC>
+&nbsp;
+<SYNC Start=40934><P Class=KRCC>
+into an intents service, pretty straightforward. Now we just
+<SYNC Start=44750><P Class=KRCC>
+&nbsp;
+<SYNC Start=44751><P Class=KRCC>
+need to call it. So, now in the update
+<SYNC Start=47200><P Class=KRCC>
+&nbsp;
+<SYNC Start=47201><P Class=KRCC>
+weather function from within forecast fragment, we can call
+<SYNC Start=50830><P Class=KRCC>
+&nbsp;
+<SYNC Start=50831><P Class=KRCC>
+the service using an explicit intent,
+<SYNC Start=53430><P Class=KRCC>
+&nbsp;
+<SYNC Start=53431><P Class=KRCC>
+putting the parameter into an intent extra.
+<SYNC Start=56620><P Class=KRCC>
+&nbsp;
+<SYNC Start=56621><P Class=KRCC>
+All right, let's take a look at how that runs. And when we
+<SYNC Start=59640><P Class=KRCC>
+&nbsp;
+<SYNC Start=59641><P Class=KRCC>
+hit the refresh button, it'll use our new service. Pretty nice. And we
+<SYNC Start=63440><P Class=KRCC>
+&nbsp;
+<SYNC Start=63441><P Class=KRCC>
+really can't tell any difference, which is how we'd expect things to be.</BODY>
+</SAMI>

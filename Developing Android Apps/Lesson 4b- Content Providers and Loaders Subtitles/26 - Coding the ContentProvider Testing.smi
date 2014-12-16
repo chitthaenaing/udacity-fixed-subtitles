@@ -1,0 +1,118 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=710><P Class=KRCC>
+So once again we're going to replace the one
+<SYNC Start=2670><P Class=KRCC>
+&nbsp;
+<SYNC Start=2671><P Class=KRCC>
+remaining part of our test, that still has a
+<SYNC Start=6300><P Class=KRCC>
+&nbsp;
+<SYNC Start=6301><P Class=KRCC>
+standard database. Let's actually get rid of our database.
+<SYNC Start=9460><P Class=KRCC>
+&nbsp;
+<SYNC Start=9461><P Class=KRCC>
+That leaves us with this lonely insert statement. Once
+<SYNC Start=12950><P Class=KRCC>
+&nbsp;
+<SYNC Start=12951><P Class=KRCC>
+again, like with everything else, we're going to replace that
+<SYNC Start=16090><P Class=KRCC>
+&nbsp;
+<SYNC Start=16091><P Class=KRCC>
+with a content resolver call. And of course we're
+<SYNC Start=19530><P Class=KRCC>
+&nbsp;
+<SYNC Start=19531><P Class=KRCC>
+actually not going to be inserting the table. We're going
+<SYNC Start=22250><P Class=KRCC>
+&nbsp;
+<SYNC Start=22251><P Class=KRCC>
+inserting the content URI. Getting rid of the nulls.
+<SYNC Start=25510><P Class=KRCC>
+&nbsp;
+<SYNC Start=26660><P Class=KRCC>
+Of course this doesn't return a location row ID.
+<SYNC Start=28870><P Class=KRCC>
+&nbsp;
+<SYNC Start=30730><P Class=KRCC>
+That's alright. We can pull it from the URI. Using
+<SYNC Start=34860><P Class=KRCC>
+&nbsp;
+<SYNC Start=34861><P Class=KRCC>
+the helper function from content URI's, we can leave
+<SYNC Start=38120><P Class=KRCC>
+&nbsp;
+<SYNC Start=38121><P Class=KRCC>
+that insert in there, although it's not necessary. And the
+<SYNC Start=41160><P Class=KRCC>
+&nbsp;
+<SYNC Start=41161><P Class=KRCC>
+rest of everything should pretty much be as it
+<SYNC Start=42630><P Class=KRCC>
+&nbsp;
+<SYNC Start=42631><P Class=KRCC>
+always is. We're no longer using a database at all
+<SYNC Start=45510><P Class=KRCC>
+&nbsp;
+<SYNC Start=45511><P Class=KRCC>
+within test provider, but entirely using the content provider.
+<SYNC Start=49140><P Class=KRCC>
+&nbsp;
+<SYNC Start=49141><P Class=KRCC>
+Let's run our tests and see if they still work.
+<SYNC Start=51248><P Class=KRCC>
+&nbsp;
+<SYNC Start=51249><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=56331><P Class=KRCC>
+&nbsp;
+<SYNC Start=56332><P Class=KRCC>
+And they all pass. Congratulations, we now
+<SYNC Start=59410><P Class=KRCC>
+&nbsp;
+<SYNC Start=59411><P Class=KRCC>
+have a fully functioning content provider that can
+<SYNC Start=61620><P Class=KRCC>
+&nbsp;
+<SYNC Start=61621><P Class=KRCC>
+both insert and query. But, of course,
+<SYNC Start=64560><P Class=KRCC>
+&nbsp;
+<SYNC Start=64561><P Class=KRCC>
+there are other things you might want to do
+<SYNC Start=65970><P Class=KRCC>
+&nbsp;
+<SYNC Start=65971><P Class=KRCC>
+with the content provider. Now, we're not
+<SYNC Start=67810><P Class=KRCC>
+&nbsp;
+<SYNC Start=67811><P Class=KRCC>
+actually going to use any of these things
+<SYNC Start=69350><P Class=KRCC>
+&nbsp;
+<SYNC Start=69351><P Class=KRCC>
+in Sunshine. But it's really important to know.
+<SYNC Start=72340><P Class=KRCC>
+&nbsp;
+<SYNC Start=72341><P Class=KRCC>
+So, I suggest you actually implement these functions.</BODY>
+</SAMI>

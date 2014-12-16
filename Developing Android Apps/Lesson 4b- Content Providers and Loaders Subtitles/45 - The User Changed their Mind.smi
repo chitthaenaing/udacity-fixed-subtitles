@@ -1,0 +1,190 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+All right, I get the hint. You actually want
+<SYNC Start=2710><P Class=KRCC>
+&nbsp;
+<SYNC Start=2711><P Class=KRCC>
+this class to be finished sometime before the next
+<SYNC Start=5140><P Class=KRCC>
+&nbsp;
+<SYNC Start=5141><P Class=KRCC>
+Android release happens. We're almost done. So we look
+<SYNC Start=9458><P Class=KRCC>
+&nbsp;
+<SYNC Start=9459><P Class=KRCC>
+in ForecastFragment in onStart. We've actually been cheating a
+<SYNC Start=13780><P Class=KRCC>
+&nbsp;
+<SYNC Start=13781><P Class=KRCC>
+bit. Every single time we get to onStart, we
+<SYNC Start=16190><P Class=KRCC>
+&nbsp;
+<SYNC Start=16191><P Class=KRCC>
+actually update the weather. Let's get rid of that.
+<SYNC Start=20150><P Class=KRCC>
+&nbsp;
+<SYNC Start=20151><P Class=KRCC>
+It'll force us to actually have to use the
+<SYNC Start=21890><P Class=KRCC>
+&nbsp;
+<SYNC Start=21891><P Class=KRCC>
+refresh function to get new weather, but it'll help illustrate
+<SYNC Start=25650><P Class=KRCC>
+&nbsp;
+<SYNC Start=25651><P Class=KRCC>
+the cool stuff we're about to do with preferences.
+<SYNC Start=27320><P Class=KRCC>
+&nbsp;
+<SYNC Start=27321><P Class=KRCC>
+We're going to stop cheating here. In onPreferenceChange, if we're
+<SYNC Start=30930><P Class=KRCC>
+&nbsp;
+<SYNC Start=30931><P Class=KRCC>
+not actually binding preferences, we're going to execute a new
+<SYNC Start=34065><P Class=KRCC>
+&nbsp;
+<SYNC Start=34066><P Class=KRCC>
+FetchWeatherTask if there's a change in location. Otherwise, we'll just
+<SYNC Start=37710><P Class=KRCC>
+&nbsp;
+<SYNC Start=37711><P Class=KRCC>
+notify our CONTENT_URI to allow our cursor to update.
+<SYNC Start=41450><P Class=KRCC>
+&nbsp;
+<SYNC Start=41451><P Class=KRCC>
+We still have to do one more thing. In ForecastFragment
+<SYNC Start=45060><P Class=KRCC>
+&nbsp;
+<SYNC Start=45061><P Class=KRCC>
+we've been using an instance variable, mLocation, to save the
+<SYNC Start=48320><P Class=KRCC>
+&nbsp;
+<SYNC Start=48321><P Class=KRCC>
+preferred location we get when we're actually an onCreate loader.
+<SYNC Start=52330><P Class=KRCC>
+&nbsp;
+<SYNC Start=52331><P Class=KRCC>
+We've been doing that because we've been planning to
+<SYNC Start=54110><P Class=KRCC>
+&nbsp;
+<SYNC Start=54111><P Class=KRCC>
+use this for a while. Let's override another function. In
+<SYNC Start=58040><P Class=KRCC>
+&nbsp;
+<SYNC Start=58041><P Class=KRCC>
+onResume we need to check to see whether or not
+<SYNC Start=60140><P Class=KRCC>
+&nbsp;
+<SYNC Start=60141><P Class=KRCC>
+our location has changed. So if our location is not
+<SYNC Start=64400><P Class=KRCC>
+&nbsp;
+<SYNC Start=64401><P Class=KRCC>
+equal to null and Utility.getPreferred location does not equal
+<SYNC Start=68470><P Class=KRCC>
+&nbsp;
+<SYNC Start=68471><P Class=KRCC>
+location, well, then we can call update weather. Let's see
+<SYNC Start=71870><P Class=KRCC>
+&nbsp;
+<SYNC Start=71871><P Class=KRCC>
+what happens. You see it immediately changed back. You didn't
+<SYNC Start=75010><P Class=KRCC>
+&nbsp;
+<SYNC Start=75011><P Class=KRCC>
+see that loading because it didn't have to load anything.
+<SYNC Start=76982><P Class=KRCC>
+&nbsp;
+<SYNC Start=76983><P Class=KRCC>
+However, if we change settings to something else,
+<SYNC Start=81700><P Class=KRCC>
+&nbsp;
+<SYNC Start=81701><P Class=KRCC>
+it's refreshing the background. Well, it turns out
+<SYNC Start=84210><P Class=KRCC>
+&nbsp;
+<SYNC Start=84211><P Class=KRCC>
+updating weather doesn't actually help us here. Why?
+<SYNC Start=88250><P Class=KRCC>
+&nbsp;
+<SYNC Start=88251><P Class=KRCC>
+Because our URI hasn't changed. Remember, we're doing
+<SYNC Start=90900><P Class=KRCC>
+&nbsp;
+<SYNC Start=90901><P Class=KRCC>
+everything based upon URI. What we really need
+<SYNC Start=93720><P Class=KRCC>
+&nbsp;
+<SYNC Start=93721><P Class=KRCC>
+to do is reset our loader. So, how
+<SYNC Start=95800><P Class=KRCC>
+&nbsp;
+<SYNC Start=95801><P Class=KRCC>
+do we do that? Well, it's pretty straightforward.
+<SYNC Start=99420><P Class=KRCC>
+&nbsp;
+<SYNC Start=99421><P Class=KRCC>
+Just like we did in onActivityCreated, we have to
+<SYNC Start=102020><P Class=KRCC>
+&nbsp;
+<SYNC Start=102021><P Class=KRCC>
+use LoaderManager. So instead of calling updateWeather, what
+<SYNC Start=105360><P Class=KRCC>
+&nbsp;
+<SYNC Start=105361><P Class=KRCC>
+we're actually going to do is call something else.
+<SYNC Start=108270><P Class=KRCC>
+&nbsp;
+<SYNC Start=108271><P Class=KRCC>
+In this case, not an initLoader, but restartLoader.
+<SYNC Start=112070><P Class=KRCC>
+&nbsp;
+<SYNC Start=112071><P Class=KRCC>
+It takes the same parameters as an initLoader. Now
+<SYNC Start=114480><P Class=KRCC>
+&nbsp;
+<SYNC Start=114481><P Class=KRCC>
+let's try this again. That already looks better.
+<SYNC Start=118040><P Class=KRCC>
+&nbsp;
+<SYNC Start=118041><P Class=KRCC>
+All right, let's change back to our own weather
+<SYNC Start=119860><P Class=KRCC>
+&nbsp;
+<SYNC Start=119861><P Class=KRCC>
+again. And there we are. As you can see,
+<SYNC Start=123810><P Class=KRCC>
+&nbsp;
+<SYNC Start=125180><P Class=KRCC>
+the weather is changing as we go from location
+<SYNC Start=127270><P Class=KRCC>
+&nbsp;
+<SYNC Start=127271><P Class=KRCC>
+to location, but we still have this
+<SYNC Start=129400><P Class=KRCC>
+&nbsp;
+<SYNC Start=129401><P Class=KRCC>
+problem. Obviously when we change settings here,
+<SYNC Start=132030><P Class=KRCC>
+&nbsp;
+<SYNC Start=132031><P Class=KRCC>
+it doesn't affect anything, so we need to fix that. That's where you come in.</BODY>
+</SAMI>

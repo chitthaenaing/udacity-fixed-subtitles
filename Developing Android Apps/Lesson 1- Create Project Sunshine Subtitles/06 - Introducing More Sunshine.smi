@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=148><P Class=KRCC>
+Thanks Raydo. But let's start thinking about Sunshine, meaning our app. I'm not
+<SYNC Start=5400><P Class=KRCC>
+&nbsp;
+<SYNC Start=5401><P Class=KRCC>
+convinced I'm ever going to tire of the obvious puns our app name allows.
+<SYNC Start=9430><P Class=KRCC>
+&nbsp;
+<SYNC Start=9431><P Class=KRCC>
+Remember, as we progress through this course and build this app together, you
+<SYNC Start=13050><P Class=KRCC>
+&nbsp;
+<SYNC Start=13051><P Class=KRCC>
+should be thinking about the app you want to create. There are too many weather
+<SYNC Start=16600><P Class=KRCC>
+&nbsp;
+<SYNC Start=16601><P Class=KRCC>
+apps already after all. By the end of the course, you could be ready to tackle
+<SYNC Start=20310><P Class=KRCC>
+&nbsp;
+<SYNC Start=20311><P Class=KRCC>
+the final project. Using all your new Android know how to build your own app.</BODY>
+</SAMI>

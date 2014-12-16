@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=375><P Class=KRCC>
+You accomplished a lot in this first lesson. Starting with nothing more
+<SYNC Start=3670><P Class=KRCC>
+&nbsp;
+<SYNC Start=3671><P Class=KRCC>
+than Android Studio and hope, you've created your first project. Built and
+<SYNC Start=7870><P Class=KRCC>
+&nbsp;
+<SYNC Start=7871><P Class=KRCC>
+deployed it to virtual and actual devices, and
+<SYNC Start=10390><P Class=KRCC>
+&nbsp;
+<SYNC Start=10391><P Class=KRCC>
+even created a simple list-based UI that's populated using an adapter.
+<SYNC Start=14910><P Class=KRCC>
+&nbsp;
+<SYNC Start=14911><P Class=KRCC>
+You also learned a little about what makes mobile and Android, in particular,
+<SYNC Start=18480><P Class=KRCC>
+&nbsp;
+<SYNC Start=18481><P Class=KRCC>
+a different environment to develop for the desktop, web, and server. But we've
+<SYNC Start=22690><P Class=KRCC>
+&nbsp;
+<SYNC Start=22691><P Class=KRCC>
+only just gotten started. The app we've got so far is using static mock data.
+<SYNC Start=27090><P Class=KRCC>
+&nbsp;
+<SYNC Start=27091><P Class=KRCC>
+So join us in lesson two to learn how to hook it up to real weather data.
+<SYNC Start=31050><P Class=KRCC>
+&nbsp;
+<SYNC Start=31051><P Class=KRCC>
+But before that, take a moment to cleanse your palate with
+<SYNC Start=34070><P Class=KRCC>
+&nbsp;
+<SYNC Start=34071><P Class=KRCC>
+a brief interlude exploring the history and evolution of the Android ecosystem.</BODY>
+</SAMI>

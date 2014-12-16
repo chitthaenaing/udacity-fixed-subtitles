@@ -1,0 +1,194 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=670><P Class=KRCC>
+The cell radio in your device operates roughly like this.
+<SYNC Start=3730><P Class=KRCC>
+&nbsp;
+<SYNC Start=3731><P Class=KRCC>
+From an initial idle state, it takes a couple of seconds
+<SYNC Start=6320><P Class=KRCC>
+&nbsp;
+<SYNC Start=6321><P Class=KRCC>
+to turn on until it can start transmitting. That kind of
+<SYNC Start=9120><P Class=KRCC>
+&nbsp;
+<SYNC Start=9121><P Class=KRCC>
+latency makes for a sucky web browsing experience. So rather than
+<SYNC Start=12430><P Class=KRCC>
+&nbsp;
+<SYNC Start=12431><P Class=KRCC>
+going back to idle, state machine stays on at full power
+<SYNC Start=15850><P Class=KRCC>
+&nbsp;
+<SYNC Start=15851><P Class=KRCC>
+for a certain amount of time. Typically, around five to ten
+<SYNC Start=18730><P Class=KRCC>
+&nbsp;
+<SYNC Start=18731><P Class=KRCC>
+seconds before dropping to an intermediate low power mode that uses
+<SYNC Start=22940><P Class=KRCC>
+&nbsp;
+<SYNC Start=22941><P Class=KRCC>
+less battery than full power, and has lower latency to return
+<SYNC Start=25860><P Class=KRCC>
+&nbsp;
+<SYNC Start=25861><P Class=KRCC>
+to full power than the standby mode. If a new
+<SYNC Start=28661><P Class=KRCC>
+&nbsp;
+<SYNC Start=28662><P Class=KRCC>
+transfer is initiated, the radio will be promoted back to
+<SYNC Start=31370><P Class=KRCC>
+&nbsp;
+<SYNC Start=31371><P Class=KRCC>
+full power mode. And if nothing happens for another period
+<SYNC Start=34560><P Class=KRCC>
+&nbsp;
+<SYNC Start=34561><P Class=KRCC>
+of time, typically around 30 seconds to a minute, it'll
+<SYNC Start=38020><P Class=KRCC>
+&nbsp;
+<SYNC Start=38021><P Class=KRCC>
+drop back to standby. The exact latency in tail times
+<SYNC Start=41690><P Class=KRCC>
+&nbsp;
+<SYNC Start=41691><P Class=KRCC>
+varies between carriers, and even in carriers between states and
+<SYNC Start=45000><P Class=KRCC>
+&nbsp;
+<SYNC Start=45001><P Class=KRCC>
+countries, as they try to balance low latency with longer
+<SYNC Start=47910><P Class=KRCC>
+&nbsp;
+<SYNC Start=47911><P Class=KRCC>
+battery life based on factors like cell congestion and typical
+<SYNC Start=51380><P Class=KRCC>
+&nbsp;
+<SYNC Start=51381><P Class=KRCC>
+prevailing network conditions. So the exact timings vary. How
+<SYNC Start=54830><P Class=KRCC>
+&nbsp;
+<SYNC Start=54831><P Class=KRCC>
+do we optimize our transfer frequency? Ultimately, it doesn't matter
+<SYNC Start=58630><P Class=KRCC>
+&nbsp;
+<SYNC Start=58631><P Class=KRCC>
+what the specific timings are. You just need to
+<SYNC Start=61120><P Class=KRCC>
+&nbsp;
+<SYNC Start=61121><P Class=KRCC>
+understand that the network is going to attempt to balance
+<SYNC Start=63712><P Class=KRCC>
+&nbsp;
+<SYNC Start=63713><P Class=KRCC>
+low latency with high battery life. For us, when
+<SYNC Start=67740><P Class=KRCC>
+&nbsp;
+<SYNC Start=67741><P Class=KRCC>
+it comes to planning out data transfers, we really like
+<SYNC Start=70650><P Class=KRCC>
+&nbsp;
+<SYNC Start=70651><P Class=KRCC>
+to be somewhere around here,. Now, if we return
+<SYNC Start=73960><P Class=KRCC>
+&nbsp;
+<SYNC Start=73961><P Class=KRCC>
+briefly to the cell radio state machine, we know that
+<SYNC Start=76550><P Class=KRCC>
+&nbsp;
+<SYNC Start=76551><P Class=KRCC>
+every time we perform a data transfer, the radio will
+<SYNC Start=79370><P Class=KRCC>
+&nbsp;
+<SYNC Start=79371><P Class=KRCC>
+stay active for at least another five seconds of full tail
+<SYNC Start=82550><P Class=KRCC>
+&nbsp;
+<SYNC Start=82551><P Class=KRCC>
+time, and anywhere from 30 seconds to a minute at low
+<SYNC Start=86260><P Class=KRCC>
+&nbsp;
+<SYNC Start=86261><P Class=KRCC>
+power before it finally returns to standby. That means every time
+<SYNC Start=90010><P Class=KRCC>
+&nbsp;
+<SYNC Start=90011><P Class=KRCC>
+you initiate a transfer, you're powering the cell radio up for
+<SYNC Start=92830><P Class=KRCC>
+&nbsp;
+<SYNC Start=92831><P Class=KRCC>
+at least 20 seconds. So let's take a look at how
+<SYNC Start=95060><P Class=KRCC>
+&nbsp;
+<SYNC Start=95061><P Class=KRCC>
+that affects an app, using the little cookie approach. An app
+<SYNC Start=98660><P Class=KRCC>
+&nbsp;
+<SYNC Start=98661><P Class=KRCC>
+like this can drain the battery without even having to transfer
+<SYNC Start=101550><P Class=KRCC>
+&nbsp;
+<SYNC Start=101551><P Class=KRCC>
+much data. Each of these small peaks is
+<SYNC Start=104720><P Class=KRCC>
+&nbsp;
+<SYNC Start=104721><P Class=KRCC>
+an app pinging its analytics back to the server,.
+<SYNC Start=107270><P Class=KRCC>
+&nbsp;
+<SYNC Start=107271><P Class=KRCC>
+In this case, every 15 seconds. These logi-peaks represent
+<SYNC Start=110940><P Class=KRCC>
+&nbsp;
+<SYNC Start=110941><P Class=KRCC>
+intermittent data transfers based on user interaction. For example,
+<SYNC Start=114540><P Class=KRCC>
+&nbsp;
+<SYNC Start=114541><P Class=KRCC>
+they may be viewing a restaurant listing or looking
+<SYNC Start=116590><P Class=KRCC>
+&nbsp;
+<SYNC Start=116591><P Class=KRCC>
+at tomorrow's weather forecast. Beneath it, we've graphed how
+<SYNC Start=119900><P Class=KRCC>
+&nbsp;
+<SYNC Start=119901><P Class=KRCC>
+this affects the radio state. The blue shows active
+<SYNC Start=123230><P Class=KRCC>
+&nbsp;
+<SYNC Start=123231><P Class=KRCC>
+data transfers. The red, the radio in full power.
+<SYNC Start=127800><P Class=KRCC>
+&nbsp;
+<SYNC Start=127801><P Class=KRCC>
+And yellow showing low power mode. The gaps in between, if
+<SYNC Start=132090><P Class=KRCC>
+&nbsp;
+<SYNC Start=132091><P Class=KRCC>
+there were any, indicate when the radio was idle. So while
+<SYNC Start=136340><P Class=KRCC>
+&nbsp;
+<SYNC Start=136341><P Class=KRCC>
+this app is running, what is the percentage of time that
+<SYNC Start=139370><P Class=KRCC>
+&nbsp;
+<SYNC Start=139371><P Class=KRCC>
+the cell radio is able to go back to its idle state?</BODY>
+</SAMI>

@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1000><P Class=KRCC>
+Let's see if we can figure out what happens when an app is terminated in
+<SYNC Start=3880><P Class=KRCC>
+&nbsp;
+<SYNC Start=3881><P Class=KRCC>
+the background. Start the app again then hit the Home key. Now launch some other
+<SYNC Start=8690><P Class=KRCC>
+&nbsp;
+<SYNC Start=8691><P Class=KRCC>
+apps before returning to ours. Try and pick apps with large memory footprints.
+<SYNC Start=13240><P Class=KRCC>
+&nbsp;
+<SYNC Start=13241><P Class=KRCC>
+Can you figure out, which of the following lifecycle event handlers is the last
+<SYNC Start=17310><P Class=KRCC>
+&nbsp;
+<SYNC Start=17311><P Class=KRCC>
+one guaranteed to be called, before your app maybe terminated by the runtime?</BODY>
+</SAMI>

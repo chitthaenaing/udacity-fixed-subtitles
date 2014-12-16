@@ -1,0 +1,134 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+Once the adapter is initialized, let's bind it to the list view. But
+<SYNC Start=3670><P Class=KRCC>
+&nbsp;
+<SYNC Start=3671><P Class=KRCC>
+you may notice that we don't have a reference to the list view in our fragment.
+<SYNC Start=6980><P Class=KRCC>
+&nbsp;
+<SYNC Start=6981><P Class=KRCC>
+It was only defined in the layout XML. The system takes and
+<SYNC Start=10360><P Class=KRCC>
+&nbsp;
+<SYNC Start=10361><P Class=KRCC>
+inflates layout XML files. And
+<SYNC Start=12370><P Class=KRCC>
+&nbsp;
+<SYNC Start=12371><P Class=KRCC>
+turns them into a full view hierarchy with a root layout of the main activity at
+<SYNC Start=17000><P Class=KRCC>
+&nbsp;
+<SYNC Start=17001><P Class=KRCC>
+the very top of the view tree. We can also assign IDs to each view in the tree,
+<SYNC Start=21750><P Class=KRCC>
+&nbsp;
+<SYNC Start=21751><P Class=KRCC>
+but it's not required if you don't need a reference to an individual view.
+<SYNC Start=26320><P Class=KRCC>
+&nbsp;
+<SYNC Start=26321><P Class=KRCC>
+For example, this image view doesn't have an ID associated with it and
+<SYNC Start=29790><P Class=KRCC>
+&nbsp;
+<SYNC Start=29791><P Class=KRCC>
+that's okay. Within the Java code of the associated activity or
+<SYNC Start=33640><P Class=KRCC>
+&nbsp;
+<SYNC Start=33641><P Class=KRCC>
+fragment. If we need a reference to the button, we can simply call findViewById,
+<SYNC Start=38660><P Class=KRCC>
+&nbsp;
+<SYNC Start=38661><P Class=KRCC>
+which will traverse down the hierarchy until it finds a view with the ID button.
+<SYNC Start=43370><P Class=KRCC>
+&nbsp;
+<SYNC Start=43371><P Class=KRCC>
+And then it will return that. Similarly, we can traverse down the view
+<SYNC Start=48050><P Class=KRCC>
+&nbsp;
+<SYNC Start=48051><P Class=KRCC>
+hierarchy to find the linear layout with the ID container, and then return that.
+<SYNC Start=53620><P Class=KRCC>
+&nbsp;
+<SYNC Start=53621><P Class=KRCC>
+We could do the same to find a reference to this TextView by traversing down
+<SYNC Start=57030><P Class=KRCC>
+&nbsp;
+<SYNC Start=57031><P Class=KRCC>
+the view hierarchy. But you'll notice that we already have a reference to
+<SYNC Start=60830><P Class=KRCC>
+&nbsp;
+<SYNC Start=60831><P Class=KRCC>
+the container which is a direct parent of this TextView. Hence, we can just call
+<SYNC Start=66055><P Class=KRCC>
+&nbsp;
+<SYNC Start=66056><P Class=KRCC>
+container.findViewById to search this subtree to find the TextView with this ID,
+<SYNC Start=72420><P Class=KRCC>
+&nbsp;
+<SYNC Start=72421><P Class=KRCC>
+and then return it. With this method, we have a smaller sub-tree to search for
+<SYNC Start=77480><P Class=KRCC>
+&nbsp;
+<SYNC Start=77481><P Class=KRCC>
+a given view, as opposed to searching the entire view hierarchy.
+<SYNC Start=82060><P Class=KRCC>
+&nbsp;
+<SYNC Start=82061><P Class=KRCC>
+In the Android Java doc for the View class, which is linked below if you want to
+<SYNC Start=85890><P Class=KRCC>
+&nbsp;
+<SYNC Start=85891><P Class=KRCC>
+follow along, it contains an example where the button with Define in Layout XML.
+<SYNC Start=90020><P Class=KRCC>
+&nbsp;
+<SYNC Start=90021><P Class=KRCC>
+It was assigned an ID My Button. Then in the Activity, we can use the find
+<SYNC Start=96350><P Class=KRCC>
+&nbsp;
+<SYNC Start=96351><P Class=KRCC>
+view by ID method, with that ID, so that we can get a reference to the button.
+<SYNC Start=100990><P Class=KRCC>
+&nbsp;
+<SYNC Start=100991><P Class=KRCC>
+Then we can change it dynamically, such as by adding a click listener to it.
+<SYNC Start=105510><P Class=KRCC>
+&nbsp;
+<SYNC Start=106770><P Class=KRCC>
+Now in the placeholder fragment class, bind the adapter to the list view.
+<SYNC Start=110560><P Class=KRCC>
+&nbsp;
+<SYNC Start=110561><P Class=KRCC>
+Luckily, we did assign an ID to the list view earlier. So, we can find it
+<SYNC Start=114230><P Class=KRCC>
+&nbsp;
+<SYNC Start=114231><P Class=KRCC>
+easily now. Think about the smallest sub-tree in the view hierarchy that you
+<SYNC Start=118430><P Class=KRCC>
+&nbsp;
+<SYNC Start=118431><P Class=KRCC>
+can call find view by ID on. Then set the adapter on it. If you want an example,
+<SYNC Start=123640><P Class=KRCC>
+&nbsp;
+<SYNC Start=123641><P Class=KRCC>
+you can see one in the link below. Check the boxes when you're done.</BODY>
+</SAMI>

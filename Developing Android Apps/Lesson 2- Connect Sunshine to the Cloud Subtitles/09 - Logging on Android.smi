@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=540><P Class=KRCC>
+When you're logging a message in your app, you need
+<SYNC Start=2540><P Class=KRCC>
+&nbsp;
+<SYNC Start=2541><P Class=KRCC>
+to determine what log level it should be displayed at.
+<SYNC Start=6100><P Class=KRCC>
+&nbsp;
+<SYNC Start=6101><P Class=KRCC>
+Verbose logs should never be compiled into your app, except
+<SYNC Start=8710><P Class=KRCC>
+&nbsp;
+<SYNC Start=8711><P Class=KRCC>
+during development. Debug logs are compiled in, but they're stripped
+<SYNC Start=12600><P Class=KRCC>
+&nbsp;
+<SYNC Start=12601><P Class=KRCC>
+out at run time. Error, warn, and info logs are
+<SYNC Start=16210><P Class=KRCC>
+&nbsp;
+<SYNC Start=16211><P Class=KRCC>
+all kept. And this is what the logging API looks
+<SYNC Start=19650><P Class=KRCC>
+&nbsp;
+<SYNC Start=19651><P Class=KRCC>
+like. The first parameter is the log tag, which can
+<SYNC Start=23100><P Class=KRCC>
+&nbsp;
+<SYNC Start=23101><P Class=KRCC>
+be any string that you want to identify the log message.
+<SYNC Start=26320><P Class=KRCC>
+&nbsp;
+<SYNC Start=26321><P Class=KRCC>
+It's good practice to define the log tag as a
+<SYNC Start=28790><P Class=KRCC>
+&nbsp;
+<SYNC Start=28791><P Class=KRCC>
+constant in your class. Usually it's the name of your class
+<SYNC Start=32009><P Class=KRCC>
+&nbsp;
+<SYNC Start=32010><P Class=KRCC>
+or the app. The second parameter is the actual log
+<SYNC Start=35060><P Class=KRCC>
+&nbsp;
+<SYNC Start=35061><P Class=KRCC>
+message. If we go back to monitor, we can see that
+<SYNC Start=38380><P Class=KRCC>
+&nbsp;
+<SYNC Start=38381><P Class=KRCC>
+this is the log tag column and this is where
+<SYNC Start=40840><P Class=KRCC>
+&nbsp;
+<SYNC Start=40841><P Class=KRCC>
+the log message is. If you click on this drop down
+<SYNC Start=44330><P Class=KRCC>
+&nbsp;
+<SYNC Start=44331><P Class=KRCC>
+here you can filter the logs by log level. For example
+<SYNC Start=47710><P Class=KRCC>
+&nbsp;
+<SYNC Start=47711><P Class=KRCC>
+you can click on Error to see all the error messages.
+<SYNC Start=50600><P Class=KRCC>
+&nbsp;
+<SYNC Start=52050><P Class=KRCC>
+If you click on warn, you'll see all the warning
+<SYNC Start=54060><P Class=KRCC>
+&nbsp;
+<SYNC Start=54061><P Class=KRCC>
+messages as well as anything more severe than that. The
+<SYNC Start=57500><P Class=KRCC>
+&nbsp;
+<SYNC Start=57501><P Class=KRCC>
+same goes for the other levels. And verbose means that
+<SYNC Start=60550><P Class=KRCC>
+&nbsp;
+<SYNC Start=60551><P Class=KRCC>
+you can see all the logs at all log levels.
+<SYNC Start=63130><P Class=KRCC>
+&nbsp;
+<SYNC Start=65250><P Class=KRCC>
+As a PROTIP, you should avoid log spam for your sake and
+<SYNC Start=68650><P Class=KRCC>
+&nbsp;
+<SYNC Start=68651><P Class=KRCC>
+the sake of other developers. The log buffer could fill up and important
+<SYNC Start=73400><P Class=KRCC>
+&nbsp;
+<SYNC Start=73401><P Class=KRCC>
+error messages that you really need to see will either roll of the
+<SYNC Start=76500><P Class=KRCC>
+&nbsp;
+<SYNC Start=76501><P Class=KRCC>
+logs or it will get lost in the sea of unimportant log messages.</BODY>
+</SAMI>

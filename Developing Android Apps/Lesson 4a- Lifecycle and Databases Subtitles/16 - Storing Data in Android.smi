@@ -1,0 +1,182 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=240><P Class=KRCC>
+Before we dive into the session material, let's talk a bit about storing or
+<SYNC Start=4900><P Class=KRCC>
+&nbsp;
+<SYNC Start=4901><P Class=KRCC>
+persisting data in Android. First of all, why do we bother to persist things
+<SYNC Start=10340><P Class=KRCC>
+&nbsp;
+<SYNC Start=10341><P Class=KRCC>
+at all? This is the era of the connected cloud. Why don't we always fetch from
+<SYNC Start=15290><P Class=KRCC>
+&nbsp;
+<SYNC Start=15291><P Class=KRCC>
+there? It's really nice to not start the app and see, Loading, or, even worse,
+<SYNC Start=20220><P Class=KRCC>
+&nbsp;
+<SYNC Start=20221><P Class=KRCC>
+like this, a blank screen. The faster people can use an app, the more it will be
+<SYNC Start=24850><P Class=KRCC>
+&nbsp;
+<SYNC Start=24851><P Class=KRCC>
+used. Obviously, if one has to select Refresh, to get it to display anything,
+<SYNC Start=30020><P Class=KRCC>
+&nbsp;
+<SYNC Start=30021><P Class=KRCC>
+that would be particularly bad. Another reason to persist our data,
+<SYNC Start=34230><P Class=KRCC>
+&nbsp;
+<SYNC Start=34231><P Class=KRCC>
+is that using any radio is detrimental to the battery life of the device,
+<SYNC Start=38440><P Class=KRCC>
+&nbsp;
+<SYNC Start=38441><P Class=KRCC>
+especially the cellular radio. Many users aren't on meter data plans or
+<SYNC Start=43622><P Class=KRCC>
+&nbsp;
+<SYNC Start=43623><P Class=KRCC>
+may be roaming when they want to use your app. All those unnecessary data
+<SYNC Start=48090><P Class=KRCC>
+&nbsp;
+<SYNC Start=48091><P Class=KRCC>
+fetches can add up. There are still lots of places that don't have a network
+<SYNC Start=52460><P Class=KRCC>
+&nbsp;
+<SYNC Start=52461><P Class=KRCC>
+connection available. One of the prime advantages of having a mobile app is
+<SYNC Start=56910><P Class=KRCC>
+&nbsp;
+<SYNC Start=56911><P Class=KRCC>
+being resistant to bad or non-existent network conditions. After all,
+<SYNC Start=62310><P Class=KRCC>
+&nbsp;
+<SYNC Start=62311><P Class=KRCC>
+you never know where the user will want to use your app. As you might expect,
+<SYNC Start=68720><P Class=KRCC>
+&nbsp;
+<SYNC Start=68721><P Class=KRCC>
+Android stores your persistent data in the file system.
+<SYNC Start=71590><P Class=KRCC>
+&nbsp;
+<SYNC Start=72600><P Class=KRCC>
+These files can be stored in internal storage that is private to your app.
+<SYNC Start=77360><P Class=KRCC>
+&nbsp;
+<SYNC Start=77361><P Class=KRCC>
+They can also be stored in shared or external storage. On older
+<SYNC Start=81610><P Class=KRCC>
+&nbsp;
+<SYNC Start=81611><P Class=KRCC>
+Android devices this shared storage was actually on an external memory card.
+<SYNC Start=86560><P Class=KRCC>
+&nbsp;
+<SYNC Start=86561><P Class=KRCC>
+Today, most Android devices only emulate this card so that there is
+<SYNC Start=90620><P Class=KRCC>
+&nbsp;
+<SYNC Start=90621><P Class=KRCC>
+the shared external storage apps need available on the device. Some Android
+<SYNC Start=95520><P Class=KRCC>
+&nbsp;
+<SYNC Start=95521><P Class=KRCC>
+devices have emulated shared storage and secondary external storage.
+<SYNC Start=99948><P Class=KRCC>
+&nbsp;
+<SYNC Start=99949><P Class=KRCC>
+Android 4.4 Kit Kat added an API to allow developers to access this secondary
+<SYNC Start=105763><P Class=KRCC>
+&nbsp;
+<SYNC Start=105764><P Class=KRCC>
+external storage. We're going to focus on internal storage in this class.
+<SYNC Start=111280><P Class=KRCC>
+&nbsp;
+<SYNC Start=111281><P Class=KRCC>
+Check the instructor notes to learn more about Android storage locations.
+<SYNC Start=115140><P Class=KRCC>
+&nbsp;
+<SYNC Start=116200><P Class=KRCC>
+As I mentioned before, Android persists data into the file system.
+<SYNC Start=121010><P Class=KRCC>
+&nbsp;
+<SYNC Start=121011><P Class=KRCC>
+It does provide two functional layers on top of the file system in the form of
+<SYNC Start=125060><P Class=KRCC>
+&nbsp;
+<SYNC Start=125061><P Class=KRCC>
+shared preferences and SQLite. The Shared Preferences class provides a general
+<SYNC Start=130350><P Class=KRCC>
+&nbsp;
+<SYNC Start=130351><P Class=KRCC>
+framework that allows you to save and retrieve persistent key value pairs of
+<SYNC Start=134440><P Class=KRCC>
+&nbsp;
+<SYNC Start=134441><P Class=KRCC>
+primitive data types, such as booleans, floats, ints, longs and
+<SYNC Start=139080><P Class=KRCC>
+&nbsp;
+<SYNC Start=139081><P Class=KRCC>
+strings. Shared Preferences is used by the Android preference activity to store
+<SYNC Start=143570><P Class=KRCC>
+&nbsp;
+<SYNC Start=143571><P Class=KRCC>
+our settings data such as the location. Why store things in a SQLite database?
+<SYNC Start=149740><P Class=KRCC>
+&nbsp;
+<SYNC Start=149741><P Class=KRCC>
+After all, Android supports both RAW files and Shared Preferences. For
+<SYNC Start=155730><P Class=KRCC>
+&nbsp;
+<SYNC Start=155731><P Class=KRCC>
+the same reason that it's inefficient to find things if you throw your
+<SYNC Start=159410><P Class=KRCC>
+&nbsp;
+<SYNC Start=159411><P Class=KRCC>
+clothes in a pile on the floor. Storing things in an SQLite database helps
+<SYNC Start=164590><P Class=KRCC>
+&nbsp;
+<SYNC Start=164591><P Class=KRCC>
+you organize and find data easily, thanks to the power of indexing in tables.
+<SYNC Start=169730><P Class=KRCC>
+&nbsp;
+<SYNC Start=169731><P Class=KRCC>
+An SQLite database looks something like this fragment from our weather database.
+<SYNC Start=174410><P Class=KRCC>
+&nbsp;
+<SYNC Start=174411><P Class=KRCC>
+Note that not all fields are represented. We can perform queries using
+<SYNC Start=179090><P Class=KRCC>
+&nbsp;
+<SYNC Start=179091><P Class=KRCC>
+SQL against this database, such as the SELECT statement here, which returns
+<SYNC Start=184080><P Class=KRCC>
+&nbsp;
+<SYNC Start=184081><P Class=KRCC>
+the weather on the specified date, similar to what we'll want to do for
+<SYNC Start=187650><P Class=KRCC>
+&nbsp;
+<SYNC Start=187651><P Class=KRCC>
+the Detail view. We can use a slightly more complex query to return a range of
+<SYNC Start=192670><P Class=KRCC>
+&nbsp;
+<SYNC Start=192671><P Class=KRCC>
+dates, which is similar to what we do on the main forecast ListView.</BODY>
+</SAMI>

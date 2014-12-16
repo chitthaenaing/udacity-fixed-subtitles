@@ -1,0 +1,226 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=520><P Class=KRCC>
+Andy Rubin, head of Google's Android team in 2013,
+<SYNC Start=4200><P Class=KRCC>
+&nbsp;
+<SYNC Start=4201><P Class=KRCC>
+famously defined Android's openness with this Tweet, offering the
+<SYNC Start=7540><P Class=KRCC>
+&nbsp;
+<SYNC Start=7541><P Class=KRCC>
+instructions for downloading and building the Android source code.
+<SYNC Start=10500><P Class=KRCC>
+&nbsp;
+<SYNC Start=11840><P Class=KRCC>
+As app developers, it's handy to be able to peep
+<SYNC Start=14020><P Class=KRCC>
+&nbsp;
+<SYNC Start=14021><P Class=KRCC>
+behind the curtains and see how the framework actually
+<SYNC Start=16530><P Class=KRCC>
+&nbsp;
+<SYNC Start=16531><P Class=KRCC>
+works. And it's an excellent way to find answers to
+<SYNC Start=19070><P Class=KRCC>
+&nbsp;
+<SYNC Start=19071><P Class=KRCC>
+tricky, Stack Overflow questions. But the Android Open Source
+<SYNC Start=22230><P Class=KRCC>
+&nbsp;
+<SYNC Start=22231><P Class=KRCC>
+Project, or AOSP as its commonly known, is much more
+<SYNC Start=25580><P Class=KRCC>
+&nbsp;
+<SYNC Start=25581><P Class=KRCC>
+than that. The source code is available under the
+<SYNC Start=28170><P Class=KRCC>
+&nbsp;
+<SYNC Start=28171><P Class=KRCC>
+Apache 2 license, so anyone can take it and do
+<SYNC Start=31000><P Class=KRCC>
+&nbsp;
+<SYNC Start=31001><P Class=KRCC>
+anything they want with it, including modifying it and redistributing
+<SYNC Start=34290><P Class=KRCC>
+&nbsp;
+<SYNC Start=34291><P Class=KRCC>
+it. And they have. Android has always had a passionate
+<SYNC Start=37830><P Class=KRCC>
+&nbsp;
+<SYNC Start=37831><P Class=KRCC>
+community of modders, from Steve Kondik and the Cyanogen community
+<SYNC Start=40945><P Class=KRCC>
+&nbsp;
+<SYNC Start=40946><P Class=KRCC>
+to XDA and many others who have been distributing modified
+<SYNC Start=44240><P Class=KRCC>
+&nbsp;
+<SYNC Start=44241><P Class=KRCC>
+images of Android for phone owners brave enough to try
+<SYNC Start=47100><P Class=KRCC>
+&nbsp;
+<SYNC Start=47101><P Class=KRCC>
+them. Even big companies like Amazon have taken the Android
+<SYNC Start=50580><P Class=KRCC>
+&nbsp;
+<SYNC Start=50581><P Class=KRCC>
+source code and modified it for use in their own
+<SYNC Start=52500><P Class=KRCC>
+&nbsp;
+<SYNC Start=52501><P Class=KRCC>
+line of products. That openness extends to the apps themselves, the
+<SYNC Start=56420><P Class=KRCC>
+&nbsp;
+<SYNC Start=56421><P Class=KRCC>
+AOSP includes key mobile apps like the dialer, app launcher,
+<SYNC Start=59790><P Class=KRCC>
+&nbsp;
+<SYNC Start=59791><P Class=KRCC>
+calendar, and email. And Google offers it own versions of each
+<SYNC Start=63170><P Class=KRCC>
+&nbsp;
+<SYNC Start=63171><P Class=KRCC>
+as well. In the early days those native apps were
+<SYNC Start=66000><P Class=KRCC>
+&nbsp;
+<SYNC Start=66001><P Class=KRCC>
+tightly bound to the framework and could only get updated along
+<SYNC Start=68870><P Class=KRCC>
+&nbsp;
+<SYNC Start=68871><P Class=KRCC>
+with the platform. Which admittedly in the early days seemed like
+<SYNC Start=72170><P Class=KRCC>
+&nbsp;
+<SYNC Start=72171><P Class=KRCC>
+every few weeks. But as the time between platform releases grew,
+<SYNC Start=76230><P Class=KRCC>
+&nbsp;
+<SYNC Start=76231><P Class=KRCC>
+so did the efforts to unbundle those apps, allowing
+<SYNC Start=78860><P Class=KRCC>
+&nbsp;
+<SYNC Start=78861><P Class=KRCC>
+them to be updated through Google Play. That was great
+<SYNC Start=81840><P Class=KRCC>
+&nbsp;
+<SYNC Start=81841><P Class=KRCC>
+news for users, but it had an even better
+<SYNC Start=83670><P Class=KRCC>
+&nbsp;
+<SYNC Start=83671><P Class=KRCC>
+side effect for us developers. Because apps like Gmail and
+<SYNC Start=87140><P Class=KRCC>
+&nbsp;
+<SYNC Start=87141><P Class=KRCC>
+Maps depend on a number of proprietary Google APIs,
+<SYNC Start=90170><P Class=KRCC>
+&nbsp;
+<SYNC Start=90171><P Class=KRCC>
+Google released Google Play Services. Also code named after food
+<SYNC Start=94140><P Class=KRCC>
+&nbsp;
+<SYNC Start=94141><P Class=KRCC>
+to support the Google apps, while also giving us
+<SYNC Start=96920><P Class=KRCC>
+&nbsp;
+<SYNC Start=96921><P Class=KRCC>
+developers Google specific APIs, like Maps, Wallet, Drive, and YouTube.
+<SYNC Start=101850><P Class=KRCC>
+&nbsp;
+<SYNC Start=101851><P Class=KRCC>
+So now we get the latest and greatest Google specific APIs
+<SYNC Start=104480><P Class=KRCC>
+&nbsp;
+<SYNC Start=104481><P Class=KRCC>
+every six weeks or so. And rather than being tied to
+<SYNC Start=107110><P Class=KRCC>
+&nbsp;
+<SYNC Start=107111><P Class=KRCC>
+a specific platform, they're available on every device, back to Gingerbread.
+<SYNC Start=111540><P Class=KRCC>
+&nbsp;
+<SYNC Start=111541><P Class=KRCC>
+Oh, and of course every native app is also entirely replaceable.
+<SYNC Start=115580><P Class=KRCC>
+&nbsp;
+<SYNC Start=115581><P Class=KRCC>
+So you can publish apps to replace any of the apps
+<SYNC Start=117830><P Class=KRCC>
+&nbsp;
+<SYNC Start=117831><P Class=KRCC>
+shipped with the device. And we can build our own SMS
+<SYNC Start=120490><P Class=KRCC>
+&nbsp;
+<SYNC Start=120491><P Class=KRCC>
+apps, homescreens or maps apps, publish it on Play and give
+<SYNC Start=123910><P Class=KRCC>
+&nbsp;
+<SYNC Start=123911><P Class=KRCC>
+users the choice to make it their default. When Android was first
+<SYNC Start=127070><P Class=KRCC>
+&nbsp;
+<SYNC Start=127071><P Class=KRCC>
+announced, Andy Rubin described the AOSP as, all the software
+<SYNC Start=130550><P Class=KRCC>
+&nbsp;
+<SYNC Start=130551><P Class=KRCC>
+to run a mobile phone but without the proprietary obstacles
+<SYNC Start=133340><P Class=KRCC>
+&nbsp;
+<SYNC Start=133341><P Class=KRCC>
+that have hindered mobile innovation. Today, Android runs on more
+<SYNC Start=136860><P Class=KRCC>
+&nbsp;
+<SYNC Start=136861><P Class=KRCC>
+than just mobiles, but the core of its purpose remains
+<SYNC Start=139580><P Class=KRCC>
+&nbsp;
+<SYNC Start=139581><P Class=KRCC>
+the same. A platform and ecosystem that allows models, carriers,
+<SYNC Start=143383><P Class=KRCC>
+&nbsp;
+<SYNC Start=143384><P Class=KRCC>
+OEMs and app developers to innovate and compete. So, armed
+<SYNC Start=146470><P Class=KRCC>
+&nbsp;
+<SYNC Start=146471><P Class=KRCC>
+with an open, evolving platform enriched by a growing set
+<SYNC Start=149560><P Class=KRCC>
+&nbsp;
+<SYNC Start=149561><P Class=KRCC>
+of Google API's and the ability to create great apps
+<SYNC Start=152380><P Class=KRCC>
+&nbsp;
+<SYNC Start=152381><P Class=KRCC>
+that let users customize every aspect of
+<SYNC Start=154470><P Class=KRCC>
+&nbsp;
+<SYNC Start=154471><P Class=KRCC>
+their user experience, you can use other people's
+<SYNC Start=157270><P Class=KRCC>
+&nbsp;
+<SYNC Start=157271><P Class=KRCC>
+work to help define the computing platform of
+<SYNC Start=159640><P Class=KRCC>
+&nbsp;
+<SYNC Start=159641><P Class=KRCC>
+the future. And that's my definition of open.</BODY>
+</SAMI>

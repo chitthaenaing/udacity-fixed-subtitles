@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=180><P Class=KRCC>
+So you've got a pretty sweet looking control, but what about
+<SYNC Start=2700><P Class=KRCC>
+&nbsp;
+<SYNC Start=2701><P Class=KRCC>
+users who can't see the shiny hotness? Accessibility is a key consideration
+<SYNC Start=7160><P Class=KRCC>
+&nbsp;
+<SYNC Start=7161><P Class=KRCC>
+when building apps and particularly when you're creating new views. You
+<SYNC Start=10560><P Class=KRCC>
+&nbsp;
+<SYNC Start=10561><P Class=KRCC>
+can start by adding a content description, as you would for every
+<SYNC Start=13850><P Class=KRCC>
+&nbsp;
+<SYNC Start=13851><P Class=KRCC>
+other view in your layout, to ensure that they are all
+<SYNC Start=16360><P Class=KRCC>
+&nbsp;
+<SYNC Start=16361><P Class=KRCC>
+accessible. But what about views like our wind speed, and direction gauge,
+<SYNC Start=19820><P Class=KRCC>
+&nbsp;
+<SYNC Start=19821><P Class=KRCC>
+where the content isn't static? Knowing you're looking at a wind
+<SYNC Start=23250><P Class=KRCC>
+&nbsp;
+<SYNC Start=23251><P Class=KRCC>
+gauge isn't very useful if you don't know what the speed and
+<SYNC Start=25630><P Class=KRCC>
+&nbsp;
+<SYNC Start=25631><P Class=KRCC>
+direction it's displaying are. Well, there are couple
+<SYNC Start=28640><P Class=KRCC>
+&nbsp;
+<SYNC Start=28641><P Class=KRCC>
+of options here. For generic views, which don't control
+<SYNC Start=32020><P Class=KRCC>
+&nbsp;
+<SYNC Start=32021><P Class=KRCC>
+their own values, this simplest alternative is to
+<SYNC Start=34890><P Class=KRCC>
+&nbsp;
+<SYNC Start=34891><P Class=KRCC>
+set the content description within your app at runtime.
+<SYNC Start=38485><P Class=KRCC>
+&nbsp;
+<SYNC Start=38486><P Class=KRCC>
+An even more robust solution is to send
+<SYNC Start=40280><P Class=KRCC>
+&nbsp;
+<SYNC Start=40281><P Class=KRCC>
+an accessibility event from within your view. Whenever the
+<SYNC Start=43480><P Class=KRCC>
+&nbsp;
+<SYNC Start=43481><P Class=KRCC>
+visual content has been modified. Then override the dispatch
+<SYNC Start=46990><P Class=KRCC>
+&nbsp;
+<SYNC Start=46991><P Class=KRCC>
+populate accessibility event, and then the current control's visual
+<SYNC Start=50830><P Class=KRCC>
+&nbsp;
+<SYNC Start=50831><P Class=KRCC>
+value, the accessibility event. Go ahead and add accessibility handlers
+<SYNC Start=54534><P Class=KRCC>
+&nbsp;
+<SYNC Start=54535><P Class=KRCC>
+to your view and then click here when you're done.</BODY>
+</SAMI>

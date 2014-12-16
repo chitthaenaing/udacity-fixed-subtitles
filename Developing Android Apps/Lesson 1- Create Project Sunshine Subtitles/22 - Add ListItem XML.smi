@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+And here's the solution. You create a new layout resource file. Call it list
+<SYNC Start=5120><P Class=KRCC>
+&nbsp;
+<SYNC Start=5121><P Class=KRCC>
+item forecast. And the root element is a TextView. Then you just hit OK.
+<SYNC Start=11030><P Class=KRCC>
+&nbsp;
+<SYNC Start=11031><P Class=KRCC>
+Now that we have the item created, we can switch to the Text pane.
+<SYNC Start=16830><P Class=KRCC>
+&nbsp;
+<SYNC Start=16831><P Class=KRCC>
+Here's the solution code. We have a single TextView where the width is
+<SYNC Start=20492><P Class=KRCC>
+&nbsp;
+<SYNC Start=20493><P Class=KRCC>
+match parent and the height is wrap content. We also give it a minimum height.
+<SYNC Start=24760><P Class=KRCC>
+&nbsp;
+<SYNC Start=24761><P Class=KRCC>
+So the item is tappable. We use the framework preferred item height for this.
+<SYNC Start=29370><P Class=KRCC>
+&nbsp;
+<SYNC Start=29371><P Class=KRCC>
+Since there'll be more vertical space now with the minimum height, we specify
+<SYNC Start=32759><P Class=KRCC>
+&nbsp;
+<SYNC Start=32760><P Class=KRCC>
+gravity so that the text inside the text view will be centered vertically.
+<SYNC Start=37220><P Class=KRCC>
+&nbsp;
+<SYNC Start=37221><P Class=KRCC>
+Lastly, we specify ID, which we gave you earlier. Great. Now we have a list item</BODY>
+</SAMI>

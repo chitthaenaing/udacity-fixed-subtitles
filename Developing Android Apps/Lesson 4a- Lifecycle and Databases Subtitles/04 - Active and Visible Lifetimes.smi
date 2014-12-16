@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=880><P Class=KRCC>
+The active life cycle is when your activity is in the foreground and
+<SYNC Start=3650><P Class=KRCC>
+&nbsp;
+<SYNC Start=3651><P Class=KRCC>
+has focus. Here it is actively receiving input from user events and
+<SYNC Start=10600><P Class=KRCC>
+&nbsp;
+<SYNC Start=10601><P Class=KRCC>
+no other activities are obscuring it. On [UNKNOWN] and
+<SYNC Start=16140><P Class=KRCC>
+&nbsp;
+<SYNC Start=16141><P Class=KRCC>
+the active lifetime ends as soon as your activity is partially obscured,
+<SYNC Start=20570><P Class=KRCC>
+&nbsp;
+<SYNC Start=20571><P Class=KRCC>
+like in this example. [SOUND] You can see here the permissions dialogue
+<SYNC Start=27120><P Class=KRCC>
+&nbsp;
+<SYNC Start=27121><P Class=KRCC>
+is displayed in front of Google Play for
+<SYNC Start=31828><P Class=KRCC>
+&nbsp;
+<SYNC Start=31829><P Class=KRCC>
+an app in store. Or the same thing happens when you have another activity trying
+<SYNC Start=36826><P Class=KRCC>
+&nbsp;
+<SYNC Start=36827><P Class=KRCC>
+to fulfill an implicit intent and the user needs to make a selection. So
+<SYNC Start=41290><P Class=KRCC>
+&nbsp;
+<SYNC Start=41291><P Class=KRCC>
+to make efficient use of limited resources,
+<SYNC Start=43790><P Class=KRCC>
+&nbsp;
+<SYNC Start=43791><P Class=KRCC>
+you'll want to use these signals to adjust your app's resource burden.
+<SYNC Start=46590><P Class=KRCC>
+&nbsp;
+<SYNC Start=47660><P Class=KRCC>
+So, most updates through a UI, can be paused when this lifetime ends,
+<SYNC Start=52140><P Class=KRCC>
+&nbsp;
+<SYNC Start=52141><P Class=KRCC>
+which is announced by onPause. But as you see, the app is still visible, so
+<SYNC Start=57400><P Class=KRCC>
+&nbsp;
+<SYNC Start=57401><P Class=KRCC>
+you shouldn't pause any processes that are drawing your UI. The visible
+<SYNC Start=61650><P Class=KRCC>
+&nbsp;
+<SYNC Start=61651><P Class=KRCC>
+lifetime on the other hand continues whenever the app is at all visible and
+<SYNC Start=65459><P Class=KRCC>
+&nbsp;
+<SYNC Start=65460><P Class=KRCC>
+ends as soon as it's completely obscured by another app. Like this.
+<SYNC Start=71112><P Class=KRCC>
+&nbsp;
+<SYNC Start=71113><P Class=KRCC>
+[SOUND] At this point, our app is moved to the background.
+<SYNC Start=76844><P Class=KRCC>
+&nbsp;
+<SYNC Start=76845><P Class=KRCC>
+So when you see on stop, you know the user can't see your app at all. So, while
+<SYNC Start=82000><P Class=KRCC>
+&nbsp;
+<SYNC Start=82001><P Class=KRCC>
+OnCreate and OnDestroy will be called at most once, each time your app is run,
+<SYNC Start=86410><P Class=KRCC>
+&nbsp;
+<SYNC Start=86411><P Class=KRCC>
+these handlers are likely to be called many times, while the app is running.
+<SYNC Start=89740><P Class=KRCC>
+&nbsp;
+<SYNC Start=89741><P Class=KRCC>
+Now, this is where things get a little different. On almost al platforms,
+<SYNC Start=94310><P Class=KRCC>
+&nbsp;
+<SYNC Start=94311><P Class=KRCC>
+app life cycles are deterministic. Generally, you'll start a program and
+<SYNC Start=98260><P Class=KRCC>
+&nbsp;
+<SYNC Start=98261><P Class=KRCC>
+it'll keep running, until it either completes or the user cancels it. You look
+<SYNC Start=102140><P Class=KRCC>
+&nbsp;
+<SYNC Start=102141><P Class=KRCC>
+at traditional desktop development that means your app keeps running until your
+<SYNC Start=105660><P Class=KRCC>
+&nbsp;
+<SYNC Start=105661><P Class=KRCC>
+user chooses quit or exit from the file menu. At that point you can say stay and
+<SYNC Start=110280><P Class=KRCC>
+&nbsp;
+<SYNC Start=110281><P Class=KRCC>
+free resources. But as we know on Android life cycles work a little differently.
+<SYNC Start=115350><P Class=KRCC>
+&nbsp;
+<SYNC Start=115351><P Class=KRCC>
+So, let's take a closer look at exactly how that works now.</BODY>
+</SAMI>

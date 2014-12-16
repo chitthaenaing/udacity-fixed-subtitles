@@ -1,0 +1,174 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=570><P Class=KRCC>
+I asked my first Android question on Stack Overflow, on August 25, 2008.
+<SYNC Start=4040><P Class=KRCC>
+&nbsp;
+<SYNC Start=4041><P Class=KRCC>
+Was about a problem I was having on the 0.9 Android Beta SDK.
+<SYNC Start=9080><P Class=KRCC>
+&nbsp;
+<SYNC Start=10100><P Class=KRCC>
+Android has evolved quickly since then, and
+<SYNC Start=12250><P Class=KRCC>
+&nbsp;
+<SYNC Start=12251><P Class=KRCC>
+no where is there more power than here, in the Android Dessert Sculpture garden,
+<SYNC Start=16560><P Class=KRCC>
+&nbsp;
+<SYNC Start=16561><P Class=KRCC>
+at the very heart of Android, building 44 at Google HQ.
+<SYNC Start=20150><P Class=KRCC>
+&nbsp;
+<SYNC Start=21180><P Class=KRCC>
+More than just a convenient place to take a photo with a life-size sculpture of
+<SYNC Start=24580><P Class=KRCC>
+&nbsp;
+<SYNC Start=24581><P Class=KRCC>
+your favorite dessert, it also tells the history of Android. In terms of food,
+<SYNC Start=30400><P Class=KRCC>
+&nbsp;
+<SYNC Start=30401><P Class=KRCC>
+every Android launch has two things in common. Work from work, Bacon Sundays,
+<SYNC Start=34850><P Class=KRCC>
+&nbsp;
+<SYNC Start=34851><P Class=KRCC>
+and the crunch time leading up to each launch. And a dessert themed code named
+<SYNC Start=39070><P Class=KRCC>
+&nbsp;
+<SYNC Start=39071><P Class=KRCC>
+memorialized forever here, in the Android Dessert Sculpture garden.
+<SYNC Start=45106><P Class=KRCC>
+&nbsp;
+<SYNC Start=45107><P Class=KRCC>
+[NOISE] Each release brings with it new hardware, APIs, and features for
+<SYNC Start=49447><P Class=KRCC>
+&nbsp;
+<SYNC Start=49448><P Class=KRCC>
+developers to play with. The third major Android release, 1.5 or Cupcake,
+<SYNC Start=53954><P Class=KRCC>
+&nbsp;
+<SYNC Start=53955><P Class=KRCC>
+as it was code named, brought video recording and widgets to the Android SDK,
+<SYNC Start=58162><P Class=KRCC>
+&nbsp;
+<SYNC Start=58163><P Class=KRCC>
+and the first baked good to our front lawn. Android 1.6 and 2.0 brought with
+<SYNC Start=63580><P Class=KRCC>
+&nbsp;
+<SYNC Start=63581><P Class=KRCC>
+them giant donuts and eclairs as well as support for different screen sizes, and
+<SYNC Start=68770><P Class=KRCC>
+&nbsp;
+<SYNC Start=68771><P Class=KRCC>
+tracking multiple simultaneous touch points. The biggest challenge for
+<SYNC Start=73670><P Class=KRCC>
+&nbsp;
+<SYNC Start=73671><P Class=KRCC>
+Android 2.2 was coming up with a baked dessert starting with the letter F.
+<SYNC Start=77940><P Class=KRCC>
+&nbsp;
+<SYNC Start=77941><P Class=KRCC>
+A challenge we ultimately ignored,
+<SYNC Start=79400><P Class=KRCC>
+&nbsp;
+<SYNC Start=79401><P Class=KRCC>
+instead introducing this giant bowl of froyo to the neighborhood.
+<SYNC Start=82900><P Class=KRCC>
+&nbsp;
+<SYNC Start=82901><P Class=KRCC>
+Along with that, in cloud's device messaging to the platform.
+<SYNC Start=85125><P Class=KRCC>
+&nbsp;
+<SYNC Start=85126><P Class=KRCC>
+[NOISE] That brings us to Android 2.3, and this giant life-size gingerbread man,
+<SYNC Start=91320><P Class=KRCC>
+&nbsp;
+<SYNC Start=91321><P Class=KRCC>
+along with system support for barometers, gyroscopes and NFC.
+<SYNC Start=96067><P Class=KRCC>
+&nbsp;
+<SYNC Start=96068><P Class=KRCC>
+Android 3.0 was the Honeycomb release. The first one targeted, specifically for
+<SYNC Start=100300><P Class=KRCC>
+&nbsp;
+<SYNC Start=100301><P Class=KRCC>
+tablets and paving the way for Android 4.0. Android 4,
+<SYNC Start=106020><P Class=KRCC>
+&nbsp;
+<SYNC Start=106021><P Class=KRCC>
+Ice Cream Sandwich brought phones and tablets back together. It also introduced
+<SYNC Start=110460><P Class=KRCC>
+&nbsp;
+<SYNC Start=110461><P Class=KRCC>
+Android Beam, and everyone's favorite font, roboto. Android 4.1 Jelly Bean
+<SYNC Start=116320><P Class=KRCC>
+&nbsp;
+<SYNC Start=116321><P Class=KRCC>
+was the first platform release to feature rich expandable notifications.
+<SYNC Start=120240><P Class=KRCC>
+&nbsp;
+<SYNC Start=120241><P Class=KRCC>
+It's also the first sculpture to spontaneously combust thanks to a version one
+<SYNC Start=123900><P Class=KRCC>
+&nbsp;
+<SYNC Start=123901><P Class=KRCC>
+design, that we've since patented as a solar powered pressure cooker. But
+<SYNC Start=128120><P Class=KRCC>
+&nbsp;
+<SYNC Start=128121><P Class=KRCC>
+that's another story. [NOISE] Which brings us to the newest member of our team,
+<SYNC Start=133473><P Class=KRCC>
+&nbsp;
+<SYNC Start=133474><P Class=KRCC>
+Android 4.4, Kit-Kat. With sensor batching, host card emulation and an API for
+<SYNC Start=138774><P Class=KRCC>
+&nbsp;
+<SYNC Start=138775><P Class=KRCC>
+text messaging. So how do the dessert names get decided? Well ultimately,
+<SYNC Start=143750><P Class=KRCC>
+&nbsp;
+<SYNC Start=143751><P Class=KRCC>
+the only real rule is sequential lettering. Then it's down to intense lobbying,
+<SYNC Start=147800><P Class=KRCC>
+&nbsp;
+<SYNC Start=147801><P Class=KRCC>
+threats, bribery and [UNKNOWN] on the ease of spelling, cultural resonance and
+<SYNC Start=151940><P Class=KRCC>
+&nbsp;
+<SYNC Start=151941><P Class=KRCC>
+statuability of each proposal. Eventually something just sort of sticks.
+<SYNC Start=156630><P Class=KRCC>
+&nbsp;
+<SYNC Start=156631><P Class=KRCC>
+Even then, we can surprise ourselves. Take a look at the GIT history for
+<SYNC Start=159810><P Class=KRCC>
+&nbsp;
+<SYNC Start=159811><P Class=KRCC>
+the K release, and you'll see that even KitKat wasn't always KitKat. As for
+<SYNC Start=164820><P Class=KRCC>
+&nbsp;
+<SYNC Start=164821><P Class=KRCC>
+what comes next, we'll have to wait and
+<SYNC Start=166670><P Class=KRCC>
+&nbsp;
+<SYNC Start=166671><P Class=KRCC>
+see what the next statue is, before we know for sure.</BODY>
+</SAMI>

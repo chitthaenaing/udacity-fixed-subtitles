@@ -1,0 +1,30 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=180><P Class=KRCC>
+All right. Now for a little bit of an open ended exercise.
+<SYNC Start=4850><P Class=KRCC>
+&nbsp;
+<SYNC Start=4851><P Class=KRCC>
+How could we simplify our test code? Write up a solution. A hint here is
+<SYNC Start=10420><P Class=KRCC>
+&nbsp;
+<SYNC Start=10421><P Class=KRCC>
+that we can take advantage of the read property of the content value structure.</BODY>
+</SAMI>

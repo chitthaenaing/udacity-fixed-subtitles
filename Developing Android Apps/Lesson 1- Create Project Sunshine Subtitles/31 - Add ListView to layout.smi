@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=280><P Class=KRCC>
+You should have changed the TextView into a ListView element.
+<SYNC Start=3960><P Class=KRCC>
+&nbsp;
+<SYNC Start=3961><P Class=KRCC>
+Then you can remove this text attribute because you don't need it anymore.
+<SYNC Start=6860><P Class=KRCC>
+&nbsp;
+<SYNC Start=7920><P Class=KRCC>
+Now from the UX mocks, you'll remember that the list takes up the whole screen,
+<SYNC Start=11900><P Class=KRCC>
+&nbsp;
+<SYNC Start=11901><P Class=KRCC>
+so we want to set the width and height to be match_parent. That will make
+<SYNC Start=16160><P Class=KRCC>
+&nbsp;
+<SYNC Start=16161><P Class=KRCC>
+the ListView match the dimensions of its parent, which is this RelativeLayout.
+<SYNC Start=20460><P Class=KRCC>
+&nbsp;
+<SYNC Start=20461><P Class=KRCC>
+And to find out the parent of this RelativeLayout, it's actually in this
+<SYNC Start=23895><P Class=KRCC>
+&nbsp;
+<SYNC Start=23896><P Class=KRCC>
+activity_main XML file because the fragment is contained within the activity.
+<SYNC Start=29530><P Class=KRCC>
+&nbsp;
+<SYNC Start=29531><P Class=KRCC>
+Within this file, we see that this view is also match_parent for height and
+<SYNC Start=33860><P Class=KRCC>
+&nbsp;
+<SYNC Start=33861><P Class=KRCC>
+width. So now we can confirm that the ListView actually will take up
+<SYNC Start=37380><P Class=KRCC>
+&nbsp;
+<SYNC Start=37381><P Class=KRCC>
+the full screen. Going back to the fragment_main file, we can add the id,
+<SYNC Start=42116><P Class=KRCC>
+&nbsp;
+<SYNC Start=42117><P Class=KRCC>
+listview_forecast, onto the ListView. And then, since this layout only contains
+<SYNC Start=47190><P Class=KRCC>
+&nbsp;
+<SYNC Start=47191><P Class=KRCC>
+one child, we can simplify the layout by changing this into a FrameLayout.</BODY>
+</SAMI>

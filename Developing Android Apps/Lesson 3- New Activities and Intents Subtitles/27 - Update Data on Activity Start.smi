@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=280><P Class=KRCC>
+On app launch, I know that you're probably tired of seeing the dummy data and
+<SYNC Start=3650><P Class=KRCC>
+&nbsp;
+<SYNC Start=3651><P Class=KRCC>
+needing to hit the refresh button for real data every single time.
+<SYNC Start=6721><P Class=KRCC>
+&nbsp;
+<SYNC Start=6722><P Class=KRCC>
+I'm going to show you how to display the data using the current settings each
+<SYNC Start=10630><P Class=KRCC>
+&nbsp;
+<SYNC Start=10631><P Class=KRCC>
+time the activity is loaded. In forecast fragment,
+<SYNC Start=14250><P Class=KRCC>
+&nbsp;
+<SYNC Start=14251><P Class=KRCC>
+we just refactored the code so that when the refresh button is selected,
+<SYNC Start=17530><P Class=KRCC>
+&nbsp;
+<SYNC Start=17531><P Class=KRCC>
+we call this helper method, updateWeather. Now that it's in a helper method,
+<SYNC Start=21250><P Class=KRCC>
+&nbsp;
+<SYNC Start=21251><P Class=KRCC>
+we can also call it from the onStart method. We over write onStart so
+<SYNC Start=25160><P Class=KRCC>
+&nbsp;
+<SYNC Start=25161><P Class=KRCC>
+that the refresh happens whenever the fragment starts.
+<SYNC Start=27970><P Class=KRCC>
+&nbsp;
+<SYNC Start=27971><P Class=KRCC>
+This will cause the weather data to appear. We'll learn all about on start, and
+<SYNC Start=31950><P Class=KRCC>
+&nbsp;
+<SYNC Start=31951><P Class=KRCC>
+the rest of the android life cycle in the next lesson. At this point,
+<SYNC Start=35360><P Class=KRCC>
+&nbsp;
+<SYNC Start=35361><P Class=KRCC>
+we can also remove all the fake data that we had in the onCreateView method.
+<SYNC Start=39190><P Class=KRCC>
+&nbsp;
+<SYNC Start=39191><P Class=KRCC>
+Then we pass in an empty array list to the ArrayAdapter. Now we can test this.
+<SYNC Start=44250><P Class=KRCC>
+&nbsp;
+<SYNC Start=44251><P Class=KRCC>
+We need to make sure that this is the first app launch and
+<SYNC Start=46510><P Class=KRCC>
+&nbsp;
+<SYNC Start=46511><P Class=KRCC>
+that it wasn't already running,. So if it's already running, kill it.
+<SYNC Start=49820><P Class=KRCC>
+&nbsp;
+<SYNC Start=49821><P Class=KRCC>
+And then tap to open the app,
+<SYNC Start=51240><P Class=KRCC>
+&nbsp;
+<SYNC Start=51241><P Class=KRCC>
+and then you should see the actual weather data immediately. Under settings we
+<SYNC Start=54820><P Class=KRCC>
+&nbsp;
+<SYNC Start=54821><P Class=KRCC>
+can change the location to be the pairs postal code. We hit OK, and
+<SYNC Start=59310><P Class=KRCC>
+&nbsp;
+<SYNC Start=59311><P Class=KRCC>
+then return to the main list, and then we see that the weather data has updated.</BODY>
+</SAMI>

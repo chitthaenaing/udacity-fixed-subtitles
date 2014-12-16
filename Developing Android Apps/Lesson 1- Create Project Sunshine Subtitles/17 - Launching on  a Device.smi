@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=590><P Class=KRCC>
+Now in Android studio you can hit the play button to run the app on your device.
+<SYNC Start=4730><P Class=KRCC>
+&nbsp;
+<SYNC Start=4731><P Class=KRCC>
+In the device Chooser dialog. you should see your connected device.
+<SYNC Start=8230><P Class=KRCC>
+&nbsp;
+<SYNC Start=8231><P Class=KRCC>
+To prevent the dialog from popping up in future times, check this box and
+<SYNC Start=12280><P Class=KRCC>
+&nbsp;
+<SYNC Start=12281><P Class=KRCC>
+then hit OK to continue. Within a few moments you should see it on your phone.
+<SYNC Start=17350><P Class=KRCC>
+&nbsp;
+<SYNC Start=17351><P Class=KRCC>
+On the other hand, as Raido was mentioning, you can use command line tools.
+<SYNC Start=21330><P Class=KRCC>
+&nbsp;
+<SYNC Start=21331><P Class=KRCC>
+From the root folder of the project, use grade lw to build your app on Mac or
+<SYNC Start=25420><P Class=KRCC>
+&nbsp;
+<SYNC Start=25421><P Class=KRCC>
+Linux. Check the link in the notes below if you're using Windows.
+<SYNC Start=29460><P Class=KRCC>
+&nbsp;
+<SYNC Start=29461><P Class=KRCC>
+This first command grants execution permission to the gradlw rappers script. And
+<SYNC Start=33410><P Class=KRCC>
+&nbsp;
+<SYNC Start=33411><P Class=KRCC>
+you only need to do it the first time you're trying to build from the command
+<SYNC Start=36240><P Class=KRCC>
+&nbsp;
+<SYNC Start=36241><P Class=KRCC>
+line. Then you can call grade lw assemble debug. Once the build is successful,
+<SYNC Start=42310><P Class=KRCC>
+&nbsp;
+<SYNC Start=42311><P Class=KRCC>
+it creates an APK file at the app/build/apk directory. You can use
+<SYNC Start=47225><P Class=KRCC>
+&nbsp;
+<SYNC Start=47226><P Class=KRCC>
+adb to install the app. The -r command means that you can replace an existing
+<SYNC Start=52210><P Class=KRCC>
+&nbsp;
+<SYNC Start=52211><P Class=KRCC>
+version of the app if you've already done it before. For more tips on adb,
+<SYNC Start=56270><P Class=KRCC>
+&nbsp;
+<SYNC Start=56271><P Class=KRCC>
+you can see the instructor notes below. Then you can use this adb command with
+<SYNC Start=60860><P Class=KRCC>
+&nbsp;
+<SYNC Start=60861><P Class=KRCC>
+the activity manager tool in order to start the main activity. And there you see
+<SYNC Start=66270><P Class=KRCC>
+&nbsp;
+<SYNC Start=66271><P Class=KRCC>
+it on the device. And now we see it running in our phones. Woo hoo! Fist bump!
+<SYNC Start=71450><P Class=KRCC>
+&nbsp;
+<SYNC Start=73880><P Class=KRCC>
+We're on a roll. Let's go find Dan so that we can build up the sunshine UI. Woo!</BODY>
+</SAMI>

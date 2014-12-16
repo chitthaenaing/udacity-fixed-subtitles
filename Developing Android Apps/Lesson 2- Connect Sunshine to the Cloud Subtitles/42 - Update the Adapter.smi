@@ -1,0 +1,114 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+From the logs, we know that we have the right forecast
+<SYNC Start=2400><P Class=KRCC>
+&nbsp;
+<SYNC Start=2401><P Class=KRCC>
+data and it's in the right format that we want as
+<SYNC Start=4770><P Class=KRCC>
+&nbsp;
+<SYNC Start=4771><P Class=KRCC>
+an array of strings. So it's finally time to update the
+<SYNC Start=7860><P Class=KRCC>
+&nbsp;
+<SYNC Start=7861><P Class=KRCC>
+UI. Think back on how AsyncTasks are able to pass data
+<SYNC Start=11950><P Class=KRCC>
+&nbsp;
+<SYNC Start=11951><P Class=KRCC>
+back onto the main thread. You can hit Ctrl+O to see
+<SYNC Start=15090><P Class=KRCC>
+&nbsp;
+<SYNC Start=15091><P Class=KRCC>
+the list of available methods we can override in AsyncTask. If
+<SYNC Start=18880><P Class=KRCC>
+&nbsp;
+<SYNC Start=18881><P Class=KRCC>
+you click on any of them, it will be prepopulated in
+<SYNC Start=21190><P Class=KRCC>
+&nbsp;
+<SYNC Start=21191><P Class=KRCC>
+the code for you. Then, you can update ArrayAdapter with the new
+<SYNC Start=25220><P Class=KRCC>
+&nbsp;
+<SYNC Start=25221><P Class=KRCC>
+data that was retrieved by the AsyncTask. As a hint, you
+<SYNC Start=28730><P Class=KRCC>
+&nbsp;
+<SYNC Start=28731><P Class=KRCC>
+can make the ForecastAdapter be a global variable. That way, you
+<SYNC Start=31890><P Class=KRCC>
+&nbsp;
+<SYNC Start=31891><P Class=KRCC>
+can access it from within the FetchWeatherTask. Make sure that this
+<SYNC Start=35300><P Class=KRCC>
+&nbsp;
+<SYNC Start=35301><P Class=KRCC>
+is not a static class, otherwise, you won't be able to
+<SYNC Start=37810><P Class=KRCC>
+&nbsp;
+<SYNC Start=37811><P Class=KRCC>
+access the member variable from the forecast fragment. Then, go ahead
+<SYNC Start=41810><P Class=KRCC>
+&nbsp;
+<SYNC Start=41811><P Class=KRCC>
+and compile and build the app. When you run it, and
+<SYNC Start=44250><P Class=KRCC>
+&nbsp;
+<SYNC Start=44251><P Class=KRCC>
+you hit the refresh button, you should see a week's worth
+<SYNC Start=46970><P Class=KRCC>
+&nbsp;
+<SYNC Start=46971><P Class=KRCC>
+of weather data for your location. Once it's working, you can
+<SYNC Start=50320><P Class=KRCC>
+&nbsp;
+<SYNC Start=50321><P Class=KRCC>
+remove the verbose log statements so you don't
+<SYNC Start=52310><P Class=KRCC>
+&nbsp;
+<SYNC Start=52311><P Class=KRCC>
+clutter the logs. As you're working on this
+<SYNC Start=54900><P Class=KRCC>
+&nbsp;
+<SYNC Start=54901><P Class=KRCC>
+code, if you see an unsupported operation exception,
+<SYNC Start=58550><P Class=KRCC>
+&nbsp;
+<SYNC Start=58551><P Class=KRCC>
+make sure that when you're creating the fake
+<SYNC Start=60360><P Class=KRCC>
+&nbsp;
+<SYNC Start=60361><P Class=KRCC>
+data, that when you initialize ArrayAdapter, you passed
+<SYNC Start=63580><P Class=KRCC>
+&nbsp;
+<SYNC Start=63581><P Class=KRCC>
+in a list of strings, and not an
+<SYNC Start=65590><P Class=KRCC>
+&nbsp;
+<SYNC Start=65591><P Class=KRCC>
+array. That way you can call the clear
+<SYNC Start=67470><P Class=KRCC>
+&nbsp;
+<SYNC Start=67471><P Class=KRCC>
+method or the add method on this list collection.</BODY>
+</SAMI>

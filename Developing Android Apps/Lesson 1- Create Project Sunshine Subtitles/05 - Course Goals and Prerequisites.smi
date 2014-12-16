@@ -1,0 +1,106 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=26452><P Class=KRCC>
+We're expecting you to already be familiar with object-oriented programming, and
+<SYNC Start=30939><P Class=KRCC>
+&nbsp;
+<SYNC Start=30940><P Class=KRCC>
+to have experience with Java or a similar language.
+<SYNC Start=33649><P Class=KRCC>
+&nbsp;
+<SYNC Start=33650><P Class=KRCC>
+Personally, I got started with Android after years of Delphi and C# development.
+<SYNC Start=37570><P Class=KRCC>
+&nbsp;
+<SYNC Start=38640><P Class=KRCC>
+As engineers, we're trained to map our experiences in one language or
+<SYNC Start=42560><P Class=KRCC>
+&nbsp;
+<SYNC Start=42561><P Class=KRCC>
+SDK into new ones. Looking for patterns and shortcuts we can get up to
+<SYNC Start=46470><P Class=KRCC>
+&nbsp;
+<SYNC Start=46471><P Class=KRCC>
+speed as quickly as possible. But mobile, and Android in particular,
+<SYNC Start=50750><P Class=KRCC>
+&nbsp;
+<SYNC Start=50751><P Class=KRCC>
+have some fundamental differences that mean some of our experience and
+<SYNC Start=54220><P Class=KRCC>
+&nbsp;
+<SYNC Start=54221><P Class=KRCC>
+intuition will actually make us worse mobile engineers. We like to think of
+<SYNC Start=58910><P Class=KRCC>
+&nbsp;
+<SYNC Start=58911><P Class=KRCC>
+Smartphones as computers that fit into our pockets. In a way that's true, but
+<SYNC Start=64459><P Class=KRCC>
+&nbsp;
+<SYNC Start=64460><P Class=KRCC>
+the computers from the 90s, like this Powerhouse I was using nearly 20
+<SYNC Start=68270><P Class=KRCC>
+&nbsp;
+<SYNC Start=68271><P Class=KRCC>
+years ago. With limited internet connectivity, low speed CPUs, and limited RAM,
+<SYNC Start=73660><P Class=KRCC>
+&nbsp;
+<SYNC Start=73661><P Class=KRCC>
+on top of which, they're all running on batteries. As we go through the course,
+<SYNC Start=77910><P Class=KRCC>
+&nbsp;
+<SYNC Start=77911><P Class=KRCC>
+I'll be returning to each of these key mobile challenges. Looking for
+<SYNC Start=81320><P Class=KRCC>
+&nbsp;
+<SYNC Start=81321><P Class=KRCC>
+places where you're experienced on desktop or
+<SYNC Start=83160><P Class=KRCC>
+&nbsp;
+<SYNC Start=83161><P Class=KRCC>
+server, or even other mobile platforms might lead you in the wrong direction.
+<SYNC Start=86420><P Class=KRCC>
+&nbsp;
+<SYNC Start=86421><P Class=KRCC>
+I will also be back to tell you some stories from the early days of Android.
+<SYNC Start=90790><P Class=KRCC>
+&nbsp;
+<SYNC Start=90791><P Class=KRCC>
+Stories that describe how the Android platform has evolved. And nowhere is
+<SYNC Start=95190><P Class=KRCC>
+&nbsp;
+<SYNC Start=95191><P Class=KRCC>
+that more readily apparent than here, at the Android Lawn sculpture garden.
+<SYNC Start=99830><P Class=KRCC>
+&nbsp;
+<SYNC Start=99831><P Class=KRCC>
+Join me here, at the very heart of Android, at the end of this lesson,
+<SYNC Start=102620><P Class=KRCC>
+&nbsp;
+<SYNC Start=102621><P Class=KRCC>
+to find out how this sculpture garden of tasty treats, also tell us the story of
+<SYNC Start=107030><P Class=KRCC>
+&nbsp;
+<SYNC Start=107031><P Class=KRCC>
+Android's history. For now, let's get back to building that weather app.
+<SYNC Start=110840><P Class=KRCC>
+&nbsp;
+<SYNC Start=110841><P Class=KRCC>
+So, we'll cross to Dan, to take a look at some mocks.</BODY>
+</SAMI>

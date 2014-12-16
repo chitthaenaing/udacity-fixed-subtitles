@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=250><P Class=KRCC>
+Cool. Now that we know that we can use
+<SYNC Start=1890><P Class=KRCC>
+&nbsp;
+<SYNC Start=1891><P Class=KRCC>
+logging to debug our app, we're going to return to
+<SYNC Start=4600><P Class=KRCC>
+&nbsp;
+<SYNC Start=4601><P Class=KRCC>
+this networking code snippet here and drop it into
+<SYNC Start=7210><P Class=KRCC>
+&nbsp;
+<SYNC Start=7211><P Class=KRCC>
+the sunshine app to query for actual weather data. Open
+<SYNC Start=11380><P Class=KRCC>
+&nbsp;
+<SYNC Start=11381><P Class=KRCC>
+up your project in main activity.java. In this class,
+<SYNC Start=14550><P Class=KRCC>
+&nbsp;
+<SYNC Start=14551><P Class=KRCC>
+scroll down to the placeholder fragment class within the placeholder
+<SYNC Start=18420><P Class=KRCC>
+&nbsp;
+<SYNC Start=18421><P Class=KRCC>
+fragment class in the on create view method, scroll down
+<SYNC Start=22010><P Class=KRCC>
+&nbsp;
+<SYNC Start=22011><P Class=KRCC>
+and go ahead and add the networking code snippet here.
+<SYNC Start=25490><P Class=KRCC>
+&nbsp;
+<SYNC Start=25491><P Class=KRCC>
+To get her blank, is pasted below again if you need it. You may need to enable
+<SYNC Start=30410><P Class=KRCC>
+&nbsp;
+<SYNC Start=30411><P Class=KRCC>
+these options in auto import or add the imports
+<SYNC Start=33700><P Class=KRCC>
+&nbsp;
+<SYNC Start=33701><P Class=KRCC>
+manually. See the instructions below. When you run the
+<SYNC Start=37990><P Class=KRCC>
+&nbsp;
+<SYNC Start=37991><P Class=KRCC>
+app, you'll see that is crashes. Use log
+<SYNC Start=40930><P Class=KRCC>
+&nbsp;
+<SYNC Start=40931><P Class=KRCC>
+cat to figure out which error is the guilty
+<SYNC Start=43430><P Class=KRCC>
+&nbsp;
+<SYNC Start=43431><P Class=KRCC>
+culprit that caused the crash. We're assuming that for
+<SYNC Start=47290><P Class=KRCC>
+&nbsp;
+<SYNC Start=47291><P Class=KRCC>
+this quiz question. You're using a device that's running
+<SYNC Start=50080><P Class=KRCC>
+&nbsp;
+<SYNC Start=50081><P Class=KRCC>
+honeycomb or later. Use the emulator if needed.</BODY>
+</SAMI>

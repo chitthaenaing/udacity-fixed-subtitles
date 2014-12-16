@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+In the sample code provided you'll notice
+<SYNC Start=2100><P Class=KRCC>
+&nbsp;
+<SYNC Start=2101><P Class=KRCC>
+that we create a Http Url connection. To
+<SYNC Start=6000><P Class=KRCC>
+&nbsp;
+<SYNC Start=6001><P Class=KRCC>
+use Http to send and receive data over
+<SYNC Start=8430><P Class=KRCC>
+&nbsp;
+<SYNC Start=8431><P Class=KRCC>
+the network, we have two clients on Android.
+<SYNC Start=10960><P Class=KRCC>
+&nbsp;
+<SYNC Start=10961><P Class=KRCC>
+The Http Url connection class, as well as
+<SYNC Start=13740><P Class=KRCC>
+&nbsp;
+<SYNC Start=13741><P Class=KRCC>
+the patchy Http Client class. Both options support
+<SYNC Start=17700><P Class=KRCC>
+&nbsp;
+<SYNC Start=17701><P Class=KRCC>
+Https, streaming uploads and downloads, configurable time outs,
+<SYNC Start=22010><P Class=KRCC>
+&nbsp;
+<SYNC Start=22011><P Class=KRCC>
+IPB 6 and connection pooling. We recommend the
+<SYNC Start=25460><P Class=KRCC>
+&nbsp;
+<SYNC Start=25461><P Class=KRCC>
+Http Url Connection class because it's general purpose and light
+<SYNC Start=28850><P Class=KRCC>
+&nbsp;
+<SYNC Start=28851><P Class=KRCC>
+weight, and it's been optimized to suit the needs of
+<SYNC Start=31730><P Class=KRCC>
+&nbsp;
+<SYNC Start=31731><P Class=KRCC>
+most Android apps. To learn more about connecting to the
+<SYNC Start=34460><P Class=KRCC>
+&nbsp;
+<SYNC Start=34461><P Class=KRCC>
+network, see the training guide and blog post link below.</BODY>
+</SAMI>

@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+Thanks, Dan. As mentioned earlier, we'll be using Android Studio throughout this
+<SYNC Start=4160><P Class=KRCC>
+&nbsp;
+<SYNC Start=4161><P Class=KRCC>
+course. It's an IntelliJ -based IDE that is optimized specifically for
+<SYNC Start=8201><P Class=KRCC>
+&nbsp;
+<SYNC Start=8202><P Class=KRCC>
+Android development. It's still in beta development, so
+<SYNC Start=11770><P Class=KRCC>
+&nbsp;
+<SYNC Start=11771><P Class=KRCC>
+your version may look slightly different, but that's okay.
+<SYNC Start=14530><P Class=KRCC>
+&nbsp;
+<SYNC Start=14531><P Class=KRCC>
+The core functionality should still be the same. If you haven't installed it
+<SYNC Start=18000><P Class=KRCC>
+&nbsp;
+<SYNC Start=18001><P Class=KRCC>
+yet, take a moment to do that now using the detailed instructions provided in
+<SYNC Start=21870><P Class=KRCC>
+&nbsp;
+<SYNC Start=21871><P Class=KRCC>
+the link below. You'll also need to install the support library and that's also
+<SYNC Start=26110><P Class=KRCC>
+&nbsp;
+<SYNC Start=26111><P Class=KRCC>
+included in the instructions. Note that the SDK is included automatically, so
+<SYNC Start=31110><P Class=KRCC>
+&nbsp;
+<SYNC Start=31111><P Class=KRCC>
+you don't need to install that separately. If you're having difficulties, no
+<SYNC Start=35000><P Class=KRCC>
+&nbsp;
+<SYNC Start=35001><P Class=KRCC>
+worries at all. We totally understand because it can be tricky to get everything
+<SYNC Start=38960><P Class=KRCC>
+&nbsp;
+<SYNC Start=38961><P Class=KRCC>
+set up properly. You can search online for people who have a similar issue or
+<SYNC Start=43600><P Class=KRCC>
+&nbsp;
+<SYNC Start=43601><P Class=KRCC>
+there's a troubleshooting link included below. If you still need help, you can
+<SYNC Start=47470><P Class=KRCC>
+&nbsp;
+<SYNC Start=47471><P Class=KRCC>
+ask a question in our discussion forum as well. Once you install it, open it and
+<SYNC Start=51990><P Class=KRCC>
+&nbsp;
+<SYNC Start=51991><P Class=KRCC>
+you can check for updates before proceeding. Check this box when you're done.</BODY>
+</SAMI>

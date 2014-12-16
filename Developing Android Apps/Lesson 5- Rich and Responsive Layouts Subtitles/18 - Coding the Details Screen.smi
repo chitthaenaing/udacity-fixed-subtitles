@@ -1,0 +1,258 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=320><P Class=KRCC>
+So how did you break up the UI into smaller components?
+<SYNC Start=3420><P Class=KRCC>
+&nbsp;
+<SYNC Start=3421><P Class=KRCC>
+Well, you might have thought that this could be two columns, but
+<SYNC Start=6730><P Class=KRCC>
+&nbsp;
+<SYNC Start=6731><P Class=KRCC>
+then it would be hard to position the elements here. You
+<SYNC Start=9080><P Class=KRCC>
+&nbsp;
+<SYNC Start=9081><P Class=KRCC>
+could center them vertically within the height of the screen, but it
+<SYNC Start=12140><P Class=KRCC>
+&nbsp;
+<SYNC Start=12141><P Class=KRCC>
+wouldn't necessarily line up with the temperature views on the left-hand
+<SYNC Start=14820><P Class=KRCC>
+&nbsp;
+<SYNC Start=14821><P Class=KRCC>
+side. Instead, this looks more like a horizontal linear layout. Then, the
+<SYNC Start=18980><P Class=KRCC>
+&nbsp;
+<SYNC Start=18981><P Class=KRCC>
+rest of the elements could be laid out by using a vertical
+<SYNC Start=21660><P Class=KRCC>
+&nbsp;
+<SYNC Start=21661><P Class=KRCC>
+linear layout. The vertical linear layout would have six children. The third
+<SYNC Start=25410><P Class=KRCC>
+&nbsp;
+<SYNC Start=25411><P Class=KRCC>
+element would be a horizontal linear layout, composed of two children.
+<SYNC Start=29460><P Class=KRCC>
+&nbsp;
+<SYNC Start=29461><P Class=KRCC>
+The first would be another vertical linear layout with these two texts
+<SYNC Start=32685><P Class=KRCC>
+&nbsp;
+<SYNC Start=32686><P Class=KRCC>
+views, and the second element would be another vertical linear layout
+<SYNC Start=35680><P Class=KRCC>
+&nbsp;
+<SYNC Start=35681><P Class=KRCC>
+composed of these two 2 elements. To make the contents of the
+<SYNC Start=38540><P Class=KRCC>
+&nbsp;
+<SYNC Start=38541><P Class=KRCC>
+screen vertically scrollable, we put it inside a scroll view. Using
+<SYNC Start=42520><P Class=KRCC>
+&nbsp;
+<SYNC Start=42521><P Class=KRCC>
+a list view here would be overkill, because we don't need to
+<SYNC Start=45090><P Class=KRCC>
+&nbsp;
+<SYNC Start=45091><P Class=KRCC>
+scale to an infinite number of item and we don't need recycling.
+<SYNC Start=48310><P Class=KRCC>
+&nbsp;
+<SYNC Start=48311><P Class=KRCC>
+There's a fixed number of fields on the screen, so a scroll
+<SYNC Start=50730><P Class=KRCC>
+&nbsp;
+<SYNC Start=50731><P Class=KRCC>
+view is the perfect choice. I can show you our implementation for
+<SYNC Start=53800><P Class=KRCC>
+&nbsp;
+<SYNC Start=53801><P Class=KRCC>
+the fragment detail XML layout. We hard coded some data in the
+<SYNC Start=57165><P Class=KRCC>
+&nbsp;
+<SYNC Start=57166><P Class=KRCC>
+layout, so that it would show up as a preview in the
+<SYNC Start=59270><P Class=KRCC>
+&nbsp;
+<SYNC Start=59271><P Class=KRCC>
+Design Pane. At the root of the View hierarchy, we have a Scroll
+<SYNC Start=62160><P Class=KRCC>
+&nbsp;
+<SYNC Start=62161><P Class=KRCC>
+View. Scroll Views can only have max one child. So we set
+<SYNC Start=65680><P Class=KRCC>
+&nbsp;
+<SYNC Start=65681><P Class=KRCC>
+that to be the vertical linear layout. Inside of this layout, we have
+<SYNC Start=69050><P Class=KRCC>
+&nbsp;
+<SYNC Start=69051><P Class=KRCC>
+a text view for the day of the week, the calendar date,
+<SYNC Start=71960><P Class=KRCC>
+&nbsp;
+<SYNC Start=71961><P Class=KRCC>
+and then a horizontal linear layout. This is followed by the humidity text
+<SYNC Start=76000><P Class=KRCC>
+&nbsp;
+<SYNC Start=76001><P Class=KRCC>
+view, wind text view and pressure text view. In the XML
+<SYNC Start=79320><P Class=KRCC>
+&nbsp;
+<SYNC Start=79321><P Class=KRCC>
+code, we see the scroll view with the trial linear layout. We
+<SYNC Start=82200><P Class=KRCC>
+&nbsp;
+<SYNC Start=82201><P Class=KRCC>
+give it some padding of 16dp, so that the content does
+<SYNC Start=84830><P Class=KRCC>
+&nbsp;
+<SYNC Start=84831><P Class=KRCC>
+not flush up against the edge of the screen. Then we see
+<SYNC Start=87660><P Class=KRCC>
+&nbsp;
+<SYNC Start=87661><P Class=KRCC>
+the text views followed by the horizontal linear layout. We specify
+<SYNC Start=91510><P Class=KRCC>
+&nbsp;
+<SYNC Start=91511><P Class=KRCC>
+layout margin top of 16dp to give it some more space from
+<SYNC Start=95050><P Class=KRCC>
+&nbsp;
+<SYNC Start=95051><P Class=KRCC>
+the bottom of this text view. Within this horizontal linear layout, we
+<SYNC Start=98090><P Class=KRCC>
+&nbsp;
+<SYNC Start=98091><P Class=KRCC>
+have one vertical linear layout which has a width of zero and
+<SYNC Start=101290><P Class=KRCC>
+&nbsp;
+<SYNC Start=101291><P Class=KRCC>
+a weight of one. And another linear layout with the
+<SYNC Start=103980><P Class=KRCC>
+&nbsp;
+<SYNC Start=103981><P Class=KRCC>
+width at zero and a weight of one. That means that
+<SYNC Start=106170><P Class=KRCC>
+&nbsp;
+<SYNC Start=106171><P Class=KRCC>
+both of these children have equal width. For this linear layout,
+<SYNC Start=109690><P Class=KRCC>
+&nbsp;
+<SYNC Start=109691><P Class=KRCC>
+we specified gravity to be center horizontal. That means that the
+<SYNC Start=112980><P Class=KRCC>
+&nbsp;
+<SYNC Start=112981><P Class=KRCC>
+contents inside of it will be centered horizontally, which includes
+<SYNC Start=116670><P Class=KRCC>
+&nbsp;
+<SYNC Start=116671><P Class=KRCC>
+the icon, as well as the forecast text view. Lastly, we
+<SYNC Start=119850><P Class=KRCC>
+&nbsp;
+<SYNC Start=119851><P Class=KRCC>
+have the remaining text views for the other weather details. When
+<SYNC Start=123180><P Class=KRCC>
+&nbsp;
+<SYNC Start=123181><P Class=KRCC>
+the layout looks good, we update the detail fragment. At this
+<SYNC Start=126330><P Class=KRCC>
+&nbsp;
+<SYNC Start=126331><P Class=KRCC>
+point, we also move it into its own file. In the
+<SYNC Start=129184><P Class=KRCC>
+&nbsp;
+<SYNC Start=129185><P Class=KRCC>
+onload finish method, we used to have a lot of Find You
+<SYNC Start=131950><P Class=KRCC>
+&nbsp;
+<SYNC Start=131951><P Class=KRCC>
+by ID calls. However, we can cash those views earlier so that
+<SYNC Start=135770><P Class=KRCC>
+&nbsp;
+<SYNC Start=135771><P Class=KRCC>
+we only have to fetch them once. In the onCreateView method, once
+<SYNC Start=139230><P Class=KRCC>
+&nbsp;
+<SYNC Start=139231><P Class=KRCC>
+the view is inflated, we can go and find a reference
+<SYNC Start=141560><P Class=KRCC>
+&nbsp;
+<SYNC Start=141561><P Class=KRCC>
+to all the views we'll need later. We store these views as
+<SYNC Start=144420><P Class=KRCC>
+&nbsp;
+<SYNC Start=144421><P Class=KRCC>
+member variables in a class. Which is why they start with the
+<SYNC Start=147640><P Class=KRCC>
+&nbsp;
+<SYNC Start=147641><P Class=KRCC>
+letter M. In the onCreateLoaded method, we make sure that the projection
+<SYNC Start=151450><P Class=KRCC>
+&nbsp;
+<SYNC Start=151451><P Class=KRCC>
+that we're requesting from the content provider contains all the information
+<SYNC Start=154930><P Class=KRCC>
+&nbsp;
+<SYNC Start=154931><P Class=KRCC>
+that we need. Especially the new fields that we just added views
+<SYNC Start=158200><P Class=KRCC>
+&nbsp;
+<SYNC Start=158201><P Class=KRCC>
+for. Then in the onload Finish method, we get the cursor
+<SYNC Start=160960><P Class=KRCC>
+&nbsp;
+<SYNC Start=160961><P Class=KRCC>
+back with the data we need. We read the weather condition ID
+<SYNC Start=163920><P Class=KRCC>
+&nbsp;
+<SYNC Start=163921><P Class=KRCC>
+from the cursor. And we're going to need this later to determine
+<SYNC Start=166610><P Class=KRCC>
+&nbsp;
+<SYNC Start=166611><P Class=KRCC>
+the right icon. But for now, we can just use a placeholder
+<SYNC Start=169500><P Class=KRCC>
+&nbsp;
+<SYNC Start=169501><P Class=KRCC>
+icon. We continue reading from the cursor and updating the views such
+<SYNC Start=172990><P Class=KRCC>
+&nbsp;
+<SYNC Start=172991><P Class=KRCC>
+as for the date and description and temperatures. For the new views
+<SYNC Start=176670><P Class=KRCC>
+&nbsp;
+<SYNC Start=176671><P Class=KRCC>
+for humidity, wind, and pressure, we read the
+<SYNC Start=179360><P Class=KRCC>
+&nbsp;
+<SYNC Start=179361><P Class=KRCC>
+information from the cursor, and then we format it
+<SYNC Start=181860><P Class=KRCC>
+&nbsp;
+<SYNC Start=181861><P Class=KRCC>
+properly for the UI. This involved copying over
+<SYNC Start=184680><P Class=KRCC>
+&nbsp;
+<SYNC Start=184681><P Class=KRCC>
+the strings and the utility method from the gist.</BODY>
+</SAMI>

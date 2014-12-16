@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=330><P Class=KRCC>
+So now you've taken a UI with mock data
+<SYNC Start=2100><P Class=KRCC>
+&nbsp;
+<SYNC Start=2101><P Class=KRCC>
+and learned how to update with the real data. You
+<SYNC Start=4390><P Class=KRCC>
+&nbsp;
+<SYNC Start=4391><P Class=KRCC>
+learned how to use permissions, move time consuming processes
+<SYNC Start=6955><P Class=KRCC>
+&nbsp;
+<SYNC Start=6956><P Class=KRCC>
+of the UI thread, and were introduced to the basics
+<SYNC Start=9540><P Class=KRCC>
+&nbsp;
+<SYNC Start=9541><P Class=KRCC>
+of network I/O. Join us again in lesson three,
+<SYNC Start=12410><P Class=KRCC>
+&nbsp;
+<SYNC Start=12411><P Class=KRCC>
+where we'll create more activities and learn how to navigate
+<SYNC Start=14990><P Class=KRCC>
+&nbsp;
+<SYNC Start=14991><P Class=KRCC>
+between them. But first, come with me as I take
+<SYNC Start=17700><P Class=KRCC>
+&nbsp;
+<SYNC Start=17701><P Class=KRCC>
+you on another voyage in to the history of Android</BODY>
+</SAMI>

@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=810><P Class=KRCC>
+Going back to what Rato said, frame layout, linear layout, and relative layout
+<SYNC Start=5680><P Class=KRCC>
+&nbsp;
+<SYNC Start=5681><P Class=KRCC>
+are three of the most common layouts you will use in building out your UI.
+<SYNC Start=9790><P Class=KRCC>
+&nbsp;
+<SYNC Start=9791><P Class=KRCC>
+These all descend from the view group class, designed to contain and
+<SYNC Start=13860><P Class=KRCC>
+&nbsp;
+<SYNC Start=13861><P Class=KRCC>
+give order to child views. They each have their strengths and
+<SYNC Start=17870><P Class=KRCC>
+&nbsp;
+<SYNC Start=17871><P Class=KRCC>
+you should always try to use this simplest layout that will get the job done.
+<SYNC Start=21080><P Class=KRCC>
+&nbsp;
+<SYNC Start=22160><P Class=KRCC>
+Frame Layout is great for simple layouts when you only have one child to view,
+<SYNC Start=26240><P Class=KRCC>
+&nbsp;
+<SYNC Start=26241><P Class=KRCC>
+like a list view that fills the entire content area. Linear layout is
+<SYNC Start=30560><P Class=KRCC>
+&nbsp;
+<SYNC Start=30561><P Class=KRCC>
+perfect for stacking the views vertically or horizontally, one after another,
+<SYNC Start=35640><P Class=KRCC>
+&nbsp;
+<SYNC Start=35641><P Class=KRCC>
+it is also the only way to break up the display proportionately. Relative layout
+<SYNC Start=40610><P Class=KRCC>
+&nbsp;
+<SYNC Start=40611><P Class=KRCC>
+is powerful but a bit more complicated compared to the others. Throw a bunch of
+<SYNC Start=45200><P Class=KRCC>
+&nbsp;
+<SYNC Start=45201><P Class=KRCC>
+views inside a relative layout, and then you can configure each views
+<SYNC Start=48490><P Class=KRCC>
+&nbsp;
+<SYNC Start=48491><P Class=KRCC>
+position relative to parent, the relative layout, or to sibling views, tons of
+<SYNC Start=53070><P Class=KRCC>
+&nbsp;
+<SYNC Start=53071><P Class=KRCC>
+possibilities. We'll explore these layouts in greater detail when we build more
+<SYNC Start=57320><P Class=KRCC>
+&nbsp;
+<SYNC Start=57321><P Class=KRCC>
+complex screens. For now, let's get back to building our forecast list.</BODY>
+</SAMI>

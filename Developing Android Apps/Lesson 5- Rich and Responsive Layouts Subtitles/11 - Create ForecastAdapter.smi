@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+Open up the Sunshine app. And we'll create a
+<SYNC Start=2310><P Class=KRCC>
+&nbsp;
+<SYNC Start=2311><P Class=KRCC>
+new file for our ForecastAdapter, which extends cursor adapter. We
+<SYNC Start=6400><P Class=KRCC>
+&nbsp;
+<SYNC Start=6401><P Class=KRCC>
+provided you with a gist of code to get started
+<SYNC Start=8690><P Class=KRCC>
+&nbsp;
+<SYNC Start=8691><P Class=KRCC>
+below. The code overrides the newView method, where it inflates
+<SYNC Start=12450><P Class=KRCC>
+&nbsp;
+<SYNC Start=12451><P Class=KRCC>
+the list item forecast layout XML. It also provides
+<SYNC Start=15690><P Class=KRCC>
+&nbsp;
+<SYNC Start=15691><P Class=KRCC>
+an implementation for bindView, where it reads from the cursor,
+<SYNC Start=18380><P Class=KRCC>
+&nbsp;
+<SYNC Start=18381><P Class=KRCC>
+and updates the layout. For example, from the cursor, we
+<SYNC Start=21770><P Class=KRCC>
+&nbsp;
+<SYNC Start=21771><P Class=KRCC>
+read the weather forecast description. Then we go and find
+<SYNC Start=25470><P Class=KRCC>
+&nbsp;
+<SYNC Start=25471><P Class=KRCC>
+the text view for that within the view hierarchy of the
+<SYNC Start=28430><P Class=KRCC>
+&nbsp;
+<SYNC Start=28431><P Class=KRCC>
+list item layout. We look for the text view with the id
+<SYNC Start=30975><P Class=KRCC>
+&nbsp;
+<SYNC Start=30976><P Class=KRCC>
+list_item_forecast_textview. Then we update the
+<SYNC Start=33690><P Class=KRCC>
+&nbsp;
+<SYNC Start=33691><P Class=KRCC>
+textview with the right description. We
+<SYNC Start=35990><P Class=KRCC>
+&nbsp;
+<SYNC Start=35991><P Class=KRCC>
+also left some to dos in the code. So, go ahead and
+<SYNC Start=38630><P Class=KRCC>
+&nbsp;
+<SYNC Start=38631><P Class=KRCC>
+copy over the file and then finish the to dos. In
+<SYNC Start=41420><P Class=KRCC>
+&nbsp;
+<SYNC Start=41421><P Class=KRCC>
+the current implementation of the app, all dates are displayed the same.
+<SYNC Start=44928><P Class=KRCC>
+&nbsp;
+<SYNC Start=44929><P Class=KRCC>
+In the wireframes though, you'll notice that we have a more friendly
+<SYNC Start=47340><P Class=KRCC>
+&nbsp;
+<SYNC Start=47341><P Class=KRCC>
+date format. In the gist we also included some helper methods and
+<SYNC Start=50670><P Class=KRCC>
+&nbsp;
+<SYNC Start=50671><P Class=KRCC>
+strings for date formatting. That's because in our current
+<SYNC Start=54090><P Class=KRCC>
+&nbsp;
+<SYNC Start=54091><P Class=KRCC>
+implementation, all the dates are displayed in the same way.
+<SYNC Start=56830><P Class=KRCC>
+&nbsp;
+<SYNC Start=56831><P Class=KRCC>
+In the wireframes though, we have a more friendly date
+<SYNC Start=60036><P Class=KRCC>
+&nbsp;
+<SYNC Start=60037><P Class=KRCC>
+format. Such as today, tomorrow, Wednesday, Thursday, etc. Here's that
+<SYNC Start=65620><P Class=KRCC>
+&nbsp;
+<SYNC Start=65621><P Class=KRCC>
+logic for what the helper method does to get the
+<SYNC Start=67680><P Class=KRCC>
+&nbsp;
+<SYNC Start=67681><P Class=KRCC>
+friendly date string. If it's this week it says today,
+<SYNC Start=71300><P Class=KRCC>
+&nbsp;
+<SYNC Start=71301><P Class=KRCC>
+or tomorrow, or the day of the week. If it's
+<SYNC Start=73770><P Class=KRCC>
+&nbsp;
+<SYNC Start=73771><P Class=KRCC>
+more than a week out then we use the format
+<SYNC Start=75900><P Class=KRCC>
+&nbsp;
+<SYNC Start=75901><P Class=KRCC>
+Monday, June 8th and so on. Once you finish the
+<SYNC Start=79220><P Class=KRCC>
+&nbsp;
+<SYNC Start=79221><P Class=KRCC>
+to dos and you added the helper methods and strings,
+<SYNC Start=82280><P Class=KRCC>
+&nbsp;
+<SYNC Start=82281><P Class=KRCC>
+then go ahead and replace the simple cursor adapter with
+<SYNC Start=85110><P Class=KRCC>
+&nbsp;
+<SYNC Start=85111><P Class=KRCC>
+a forecast adapter. After you compile and run the app it'll
+<SYNC Start=88660><P Class=KRCC>
+&nbsp;
+<SYNC Start=88661><P Class=KRCC>
+look the same as before with only one list item
+<SYNC Start=91250><P Class=KRCC>
+&nbsp;
+<SYNC Start=91251><P Class=KRCC>
+view type shown, except now it's using a ForecastAdapter and
+<SYNC Start=94870><P Class=KRCC>
+&nbsp;
+<SYNC Start=94871><P Class=KRCC>
+now it has better date descriptions. I know that I
+<SYNC Start=97220><P Class=KRCC>
+&nbsp;
+<SYNC Start=97221><P Class=KRCC>
+promised you that cursor adapters could handle multiple item view types,
+<SYNC Start=100860><P Class=KRCC>
+&nbsp;
+<SYNC Start=100861><P Class=KRCC>
+so we'll do that in the next step.</BODY>
+</SAMI>

@@ -1,0 +1,378 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+Great. So to move one step closer to building awesome apps like the ones you
+<SYNC Start=3730><P Class=KRCC>
+&nbsp;
+<SYNC Start=3731><P Class=KRCC>
+submitted to the discussion forum, we're going to learn about how to build up
+<SYNC Start=6880><P Class=KRCC>
+&nbsp;
+<SYNC Start=6881><P Class=KRCC>
+the Sunshine UI. We'll do a quick recap first to help remind you of the concepts
+<SYNC Start=11290><P Class=KRCC>
+&nbsp;
+<SYNC Start=11291><P Class=KRCC>
+that you learned in lesson one. In order to build a UI in Android, we use views.
+<SYNC Start=16940><P Class=KRCC>
+&nbsp;
+<SYNC Start=16941><P Class=KRCC>
+Views are rectangles on the screen, and we may or may not see the borders of
+<SYNC Start=20400><P Class=KRCC>
+&nbsp;
+<SYNC Start=20401><P Class=KRCC>
+that rectangle. Essentially, a view handles drawing and event handling. And
+<SYNC Start=24890><P Class=KRCC>
+&nbsp;
+<SYNC Start=24891><P Class=KRCC>
+all the basic widgets in Android extend from this base class. The Android design
+<SYNC Start=29790><P Class=KRCC>
+&nbsp;
+<SYNC Start=29791><P Class=KRCC>
+guide has visual examples of these basic building blocks of apps. For example,
+<SYNC Start=35450><P Class=KRCC>
+&nbsp;
+<SYNC Start=35451><P Class=KRCC>
+we have the basic text field, as well as editable text fields.
+<SYNC Start=38800><P Class=KRCC>
+&nbsp;
+<SYNC Start=38801><P Class=KRCC>
+We can do auto complete on them, and it comes with text selection as well.
+<SYNC Start=42970><P Class=KRCC>
+&nbsp;
+<SYNC Start=42971><P Class=KRCC>
+Where it pops up a contextual action bar, for you to copy and paste.
+<SYNC Start=46640><P Class=KRCC>
+&nbsp;
+<SYNC Start=46641><P Class=KRCC>
+There are also buttons, and also a suggestion to use borderless buttons.
+<SYNC Start=51840><P Class=KRCC>
+&nbsp;
+<SYNC Start=51841><P Class=KRCC>
+It also has spinners, where you can select from a drop down menu.
+<SYNC Start=55210><P Class=KRCC>
+&nbsp;
+<SYNC Start=55211><P Class=KRCC>
+There's also checkboxes, radio buttons, on/off switches, and
+<SYNC Start=58330><P Class=KRCC>
+&nbsp;
+<SYNC Start=58331><P Class=KRCC>
+they also have some progress bars. There's a ton more basic widgets here, and
+<SYNC Start=62720><P Class=KRCC>
+&nbsp;
+<SYNC Start=62721><P Class=KRCC>
+also in the Java docs. Check those out. And even ones that aren't listed here,
+<SYNC Start=67390><P Class=KRCC>
+&nbsp;
+<SYNC Start=67391><P Class=KRCC>
+so. You'll come across them as you need them.
+<SYNC Start=70600><P Class=KRCC>
+&nbsp;
+<SYNC Start=70601><P Class=KRCC>
+Now, if you want to display multiple views together, you'll need a view group.
+<SYNC Start=74390><P Class=KRCC>
+&nbsp;
+<SYNC Start=74391><P Class=KRCC>
+A view group is a container for children views. Here are a couple of
+<SYNC Start=77640><P Class=KRCC>
+&nbsp;
+<SYNC Start=77641><P Class=KRCC>
+common view groups, which Dan introduced earlier. First, we have a frame layout.
+<SYNC Start=82030><P Class=KRCC>
+&nbsp;
+<SYNC Start=82031><P Class=KRCC>
+A child that gets added will be default positioned in the top left corner of
+<SYNC Start=85230><P Class=KRCC>
+&nbsp;
+<SYNC Start=85231><P Class=KRCC>
+the view group. If you add a second view here, it will overlap the first one. So
+<SYNC Start=89530><P Class=KRCC>
+&nbsp;
+<SYNC Start=89531><P Class=KRCC>
+typically we only have one child per frame layout. Next we have a linear layout,
+<SYNC Start=93840><P Class=KRCC>
+&nbsp;
+<SYNC Start=93841><P Class=KRCC>
+it's composed of children either in a horizontal row or in a vertical column.
+<SYNC Start=97900><P Class=KRCC>
+&nbsp;
+<SYNC Start=97901><P Class=KRCC>
+We can also specify layout weight. Lay out weight allows us to
+<SYNC Start=101590><P Class=KRCC>
+&nbsp;
+<SYNC Start=101591><P Class=KRCC>
+distribute the width or height of a parent across the children. For example,
+<SYNC Start=105410><P Class=KRCC>
+&nbsp;
+<SYNC Start=105411><P Class=KRCC>
+this has weight one, and this has weight one then the width of the parent can be
+<SYNC Start=108940><P Class=KRCC>
+&nbsp;
+<SYNC Start=108941><P Class=KRCC>
+split across them evenly. Then we have a relative layout where we can specify
+<SYNC Start=113930><P Class=KRCC>
+&nbsp;
+<SYNC Start=113931><P Class=KRCC>
+that a view should be aligned to the parent's left, top, right or bottom edge.
+<SYNC Start=118950><P Class=KRCC>
+&nbsp;
+<SYNC Start=118951><P Class=KRCC>
+We can also specify that one view should be relative to another view.
+<SYNC Start=122520><P Class=KRCC>
+&nbsp;
+<SYNC Start=122521><P Class=KRCC>
+It isn't full if the space is nicely compared to a linear layout, but
+<SYNC Start=125490><P Class=KRCC>
+&nbsp;
+<SYNC Start=125491><P Class=KRCC>
+there are pros and cons to each. There's a grid layout where the views fill
+<SYNC Start=130530><P Class=KRCC>
+&nbsp;
+<SYNC Start=130531><P Class=KRCC>
+up cells in a grid. You can also have views that span multiple cells.
+<SYNC Start=135590><P Class=KRCC>
+&nbsp;
+<SYNC Start=135591><P Class=KRCC>
+I also want to point out that a view group is a view.
+<SYNC Start=138090><P Class=KRCC>
+&nbsp;
+<SYNC Start=138091><P Class=KRCC>
+So in our code when we refer to a list item layout as being a single view.
+<SYNC Start=141650><P Class=KRCC>
+&nbsp;
+<SYNC Start=141651><P Class=KRCC>
+That just means the root view of the whole view hierarchy for that layout.
+<SYNC Start=146050><P Class=KRCC>
+&nbsp;
+<SYNC Start=146051><P Class=KRCC>
+Chances are that root view is a ViewGroup, so it contains children views as well
+<SYNC Start=150110><P Class=KRCC>
+&nbsp;
+<SYNC Start=150111><P Class=KRCC>
+as ViewGroups. So basically you can nest ViewGroups within ViewGroups.
+<SYNC Start=154169><P Class=KRCC>
+&nbsp;
+<SYNC Start=155210><P Class=KRCC>
+The reason why we care so much about parent child view relationships,
+<SYNC Start=158510><P Class=KRCC>
+&nbsp;
+<SYNC Start=158511><P Class=KRCC>
+is because the way a child view gets laid out depends on its parent.
+<SYNC Start=162470><P Class=KRCC>
+&nbsp;
+<SYNC Start=162471><P Class=KRCC>
+The simplest example of this is specifying a view's width and
+<SYNC Start=165500><P Class=KRCC>
+&nbsp;
+<SYNC Start=165501><P Class=KRCC>
+height. By now you've seen that every view requires a height and
+<SYNC Start=168770><P Class=KRCC>
+&nbsp;
+<SYNC Start=168771><P Class=KRCC>
+width. The two possible values are either wrap content or match parent.
+<SYNC Start=173529><P Class=KRCC>
+&nbsp;
+<SYNC Start=174540><P Class=KRCC>
+This diagram shows all the possible combinations for width and height for
+<SYNC Start=177860><P Class=KRCC>
+&nbsp;
+<SYNC Start=177861><P Class=KRCC>
+this text view. This is the balance of the view when we set wrap_content for
+<SYNC Start=181620><P Class=KRCC>
+&nbsp;
+<SYNC Start=181621><P Class=KRCC>
+height and width. This is what happens when we do match_parent for
+<SYNC Start=185230><P Class=KRCC>
+&nbsp;
+<SYNC Start=185231><P Class=KRCC>
+the width and match_parent for the height. And this is what happens when
+<SYNC Start=189090><P Class=KRCC>
+&nbsp;
+<SYNC Start=189091><P Class=KRCC>
+both are set as match_parent. It shows the full dimensions of the parent.
+<SYNC Start=192731><P Class=KRCC>
+&nbsp;
+<SYNC Start=192732><P Class=KRCC>
+When you run this on the device. All of these would visually look the same,
+<SYNC Start=196750><P Class=KRCC>
+&nbsp;
+<SYNC Start=196751><P Class=KRCC>
+because you wouldn't see these boundaries. So why does it matter which one
+<SYNC Start=199860><P Class=KRCC>
+&nbsp;
+<SYNC Start=199861><P Class=KRCC>
+we pick? Well, it matters as soon as you have other children that need to
+<SYNC Start=203160><P Class=KRCC>
+&nbsp;
+<SYNC Start=203161><P Class=KRCC>
+be beside this view. And another reason is you want to specify gravity.
+<SYNC Start=207270><P Class=KRCC>
+&nbsp;
+<SYNC Start=207271><P Class=KRCC>
+Let me spend a quick moment explaining gravity. Say for example, you
+<SYNC Start=211250><P Class=KRCC>
+&nbsp;
+<SYNC Start=211251><P Class=KRCC>
+have this text view within a frame layout. By default, the text is left aligned.
+<SYNC Start=215640><P Class=KRCC>
+&nbsp;
+<SYNC Start=215641><P Class=KRCC>
+And in this case, no gravity is set. If we specify gravity equals center,
+<SYNC Start=219540><P Class=KRCC>
+&nbsp;
+<SYNC Start=219541><P Class=KRCC>
+then it will center the content within the text view. Vertically it can't move,
+<SYNC Start=223250><P Class=KRCC>
+&nbsp;
+<SYNC Start=223251><P Class=KRCC>
+'because it's already centered, but horizontally it does shift over to be in
+<SYNC Start=226960><P Class=KRCC>
+&nbsp;
+<SYNC Start=226961><P Class=KRCC>
+the middle. Instead of this. If we specify layout gravity equals center,
+<SYNC Start=230570><P Class=KRCC>
+&nbsp;
+<SYNC Start=230571><P Class=KRCC>
+that means to center horizontally and vertically within the parent.
+<SYNC Start=233540><P Class=KRCC>
+&nbsp;
+<SYNC Start=233541><P Class=KRCC>
+So we grab the whole child text view and we move it into the center.
+<SYNC Start=237160><P Class=KRCC>
+&nbsp;
+<SYNC Start=237161><P Class=KRCC>
+Now it can't be centered horizontally, because it already takes up the max width
+<SYNC Start=240440><P Class=KRCC>
+&nbsp;
+<SYNC Start=240441><P Class=KRCC>
+of the parent. If we really want to move the content to the middle,
+<SYNC Start=243530><P Class=KRCC>
+&nbsp;
+<SYNC Start=243531><P Class=KRCC>
+then we should specify wrap content on this text view, so that it can be
+<SYNC Start=247600><P Class=KRCC>
+&nbsp;
+<SYNC Start=247601><P Class=KRCC>
+moved to the center with this attribute. You can also specify padding and
+<SYNC Start=251350><P Class=KRCC>
+&nbsp;
+<SYNC Start=251351><P Class=KRCC>
+margin on views. For example, if you added padding on this text view,
+<SYNC Start=255710><P Class=KRCC>
+&nbsp;
+<SYNC Start=255711><P Class=KRCC>
+then it would shift the content inside by x amount on all sides.
+<SYNC Start=259750><P Class=KRCC>
+&nbsp;
+<SYNC Start=259751><P Class=KRCC>
+If you specify layout margin to be x, then remember that the parent is
+<SYNC Start=263390><P Class=KRCC>
+&nbsp;
+<SYNC Start=263391><P Class=KRCC>
+the one who will be interpreting this layout ground. In this case,
+<SYNC Start=267320><P Class=KRCC>
+&nbsp;
+<SYNC Start=267321><P Class=KRCC>
+it adds a margin of x all around the text view. The text view is only this size.
+<SYNC Start=271240><P Class=KRCC>
+&nbsp;
+<SYNC Start=272260><P Class=KRCC>
+When you render both of these, they would visually look the same.
+<SYNC Start=275280><P Class=KRCC>
+&nbsp;
+<SYNC Start=275281><P Class=KRCC>
+Here's one case where it could matter. If this was a button and
+<SYNC Start=277690><P Class=KRCC>
+&nbsp;
+<SYNC Start=277691><P Class=KRCC>
+you pressed it, there could be a gray background here showing. In some cases you
+<SYNC Start=281740><P Class=KRCC>
+&nbsp;
+<SYNC Start=281741><P Class=KRCC>
+may want padding or margin or both. All views have a visibility property. For
+<SYNC Start=287010><P Class=KRCC>
+&nbsp;
+<SYNC Start=287011><P Class=KRCC>
+this image view, it can be visible, invisible, or gone.
+<SYNC Start=290020><P Class=KRCC>
+&nbsp;
+<SYNC Start=290021><P Class=KRCC>
+If it's invisible then it's not shown, but there's still a place holder for
+<SYNC Start=293390><P Class=KRCC>
+&nbsp;
+<SYNC Start=293391><P Class=KRCC>
+it, we still have to go and measure the size of it. If it's gone,
+<SYNC Start=296830><P Class=KRCC>
+&nbsp;
+<SYNC Start=296831><P Class=KRCC>
+then it's not even in the layout. It's as if it didn't exist in the XML.
+<SYNC Start=299920><P Class=KRCC>
+&nbsp;
+<SYNC Start=299921><P Class=KRCC>
+You can also toggle the visibility of a view dynamically during runtime.
+<SYNC Start=304490><P Class=KRCC>
+&nbsp;
+<SYNC Start=304491><P Class=KRCC>
+In the java doc, you can find all the possible XML attributes for that class.
+<SYNC Start=308680><P Class=KRCC>
+&nbsp;
+<SYNC Start=308681><P Class=KRCC>
+It also shows inherited XML attributes, for example, from the view class.
+<SYNC Start=312740><P Class=KRCC>
+&nbsp;
+<SYNC Start=312741><P Class=KRCC>
+For this image view, and then it shows the corresponding Java methods for
+<SYNC Start=316430><P Class=KRCC>
+&nbsp;
+<SYNC Start=316431><P Class=KRCC>
+those attributes. Now as a briefer for [UNKNOWN] basics to help us get started,
+<SYNC Start=320310><P Class=KRCC>
+&nbsp;
+<SYNC Start=320311><P Class=KRCC>
+but definitely check out the developer site for
+<SYNC Start=322250><P Class=KRCC>
+&nbsp;
+<SYNC Start=322251><P Class=KRCC>
+more details later. Much like the real world, if you were working with a team to
+<SYNC Start=326670><P Class=KRCC>
+&nbsp;
+<SYNC Start=326671><P Class=KRCC>
+build an Android app, you would start by implementing the wire frames first.
+<SYNC Start=330660><P Class=KRCC>
+&nbsp;
+<SYNC Start=330661><P Class=KRCC>
+This has a correct flow for how the user will interact with the app. But
+<SYNC Start=333920><P Class=KRCC>
+&nbsp;
+<SYNC Start=333921><P Class=KRCC>
+it doesn't have the final visual look and feel yet. We'll build this up step by
+<SYNC Start=337780><P Class=KRCC>
+&nbsp;
+<SYNC Start=337781><P Class=KRCC>
+step, starting with the main activity then we'll move on to the detail activity
+<SYNC Start=342030><P Class=KRCC>
+&nbsp;
+<SYNC Start=342031><P Class=KRCC>
+and then later build up the tablet UI. Then we'll receive a set of visual marks
+<SYNC Start=346630><P Class=KRCC>
+&nbsp;
+<SYNC Start=346631><P Class=KRCC>
+red lines and assets, all of this will help us build a pixel perfect layout</BODY>
+</SAMI>

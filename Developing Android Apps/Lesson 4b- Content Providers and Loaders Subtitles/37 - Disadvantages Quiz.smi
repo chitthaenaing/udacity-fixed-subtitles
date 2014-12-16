@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=400><P Class=KRCC>
+Early versions of Android didn't have the loader
+<SYNC Start=2740><P Class=KRCC>
+&nbsp;
+<SYNC Start=2741><P Class=KRCC>
+pattern. It was added to avoid directly querying the
+<SYNC Start=6310><P Class=KRCC>
+&nbsp;
+<SYNC Start=6311><P Class=KRCC>
+database from the UI code. What are the disadvantages
+<SYNC Start=10830><P Class=KRCC>
+&nbsp;
+<SYNC Start=10831><P Class=KRCC>
+in directly querying the database from the UI code?
+<SYNC Start=14080><P Class=KRCC>
+&nbsp;
+<SYNC Start=16129><P Class=KRCC>
+The query could take a long time. It could
+<SYNC Start=18630><P Class=KRCC>
+&nbsp;
+<SYNC Start=18631><P Class=KRCC>
+be terminated before it completes. Or there are no disadvantages.</BODY>
+</SAMI>

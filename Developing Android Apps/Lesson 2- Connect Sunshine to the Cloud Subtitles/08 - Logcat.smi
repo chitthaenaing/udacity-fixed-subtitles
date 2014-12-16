@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=420><P Class=KRCC>
+You'll also notice in the sample code that we
+<SYNC Start=2540><P Class=KRCC>
+&nbsp;
+<SYNC Start=2541><P Class=KRCC>
+have lines that call log.e, which log error messages. With
+<SYNC Start=7150><P Class=KRCC>
+&nbsp;
+<SYNC Start=7151><P Class=KRCC>
+the adb command line tool and with the device plugged
+<SYNC Start=9920><P Class=KRCC>
+&nbsp;
+<SYNC Start=9921><P Class=KRCC>
+in, you can type adb logcat to see the debug
+<SYNC Start=13580><P Class=KRCC>
+&nbsp;
+<SYNC Start=13581><P Class=KRCC>
+and error messages that are being printed to the logcat.
+<SYNC Start=16770><P Class=KRCC>
+&nbsp;
+<SYNC Start=16771><P Class=KRCC>
+For more details on the logcat options, see the link
+<SYNC Start=19610><P Class=KRCC>
+&nbsp;
+<SYNC Start=19611><P Class=KRCC>
+below. Another way to view the logs, is to use
+<SYNC Start=22670><P Class=KRCC>
+&nbsp;
+<SYNC Start=22671><P Class=KRCC>
+Android Studio. If you click on the Screen Android button,
+<SYNC Start=25610><P Class=KRCC>
+&nbsp;
+<SYNC Start=25611><P Class=KRCC>
+it launches the Android Device Monitor. Which includes the
+<SYNC Start=28486><P Class=KRCC>
+&nbsp;
+<SYNC Start=28487><P Class=KRCC>
+DDMS tool that Rado mentioned earlier. Then click on a
+<SYNC Start=31950><P Class=KRCC>
+&nbsp;
+<SYNC Start=31951><P Class=KRCC>
+device and you can see that our app here, is
+<SYNC Start=34400><P Class=KRCC>
+&nbsp;
+<SYNC Start=34401><P Class=KRCC>
+a running process. If you click on the LogCat tab,
+<SYNC Start=37580><P Class=KRCC>
+&nbsp;
+<SYNC Start=37581><P Class=KRCC>
+then you all these log messages here, which is what
+<SYNC Start=40000><P Class=KRCC>
+&nbsp;
+<SYNC Start=40001><P Class=KRCC>
+we saw with adb logcat. Now try viewing the logs
+<SYNC Start=44010><P Class=KRCC>
+&nbsp;
+<SYNC Start=44011><P Class=KRCC>
+yourself with either of those methods. If you do both,
+<SYNC Start=46910><P Class=KRCC>
+&nbsp;
+<SYNC Start=46911><P Class=KRCC>
+then you get brownie points. Check this box to proceed.</BODY>
+</SAMI>

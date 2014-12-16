@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=70><P Class=KRCC>
+Take a moment now to become familiar with the API by going
+<SYNC Start=3160><P Class=KRCC>
+&nbsp;
+<SYNC Start=3161><P Class=KRCC>
+back to the main page, and looking at the different queries and
+<SYNC Start=6350><P Class=KRCC>
+&nbsp;
+<SYNC Start=6351><P Class=KRCC>
+the different parameters supported. Just modify the query params in the URL
+<SYNC Start=10630><P Class=KRCC>
+&nbsp;
+<SYNC Start=10631><P Class=KRCC>
+address bar. Check the box floating in the clouds when you're done.</BODY>
+</SAMI>

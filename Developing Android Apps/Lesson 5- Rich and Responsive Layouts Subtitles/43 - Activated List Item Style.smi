@@ -1,0 +1,182 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=270><P Class=KRCC>
+In the tablet wireframes, when a list item is selected
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+it shows this blue activated state background. This can be done
+<SYNC Start=6530><P Class=KRCC>
+&nbsp;
+<SYNC Start=6531><P Class=KRCC>
+by setting the background of the list item to be
+<SYNC Start=8430><P Class=KRCC>
+&nbsp;
+<SYNC Start=8431><P Class=KRCC>
+a state drawable. We can look at the documentation for the
+<SYNC Start=10990><P Class=KRCC>
+&nbsp;
+<SYNC Start=10991><P Class=KRCC>
+StateListDrawable, which is linked below.
+<SYNC Start=12970><P Class=KRCC>
+&nbsp;
+<SYNC Start=12971><P Class=KRCC>
+Essentially a StateListDrawable allows you
+<SYNC Start=14700><P Class=KRCC>
+&nbsp;
+<SYNC Start=14701><P Class=KRCC>
+to specify different drawables based on the state of the view.
+<SYNC Start=18960><P Class=KRCC>
+&nbsp;
+<SYNC Start=18961><P Class=KRCC>
+We provide you the code for the StateListDrawable. Drop it in
+<SYNC Start=22180><P Class=KRCC>
+&nbsp;
+<SYNC Start=22181><P Class=KRCC>
+by creating a drawable folder under the res directory. When set
+<SYNC Start=25520><P Class=KRCC>
+&nbsp;
+<SYNC Start=25521><P Class=KRCC>
+on the background of a list item, the touch selector will
+<SYNC Start=27920><P Class=KRCC>
+&nbsp;
+<SYNC Start=27921><P Class=KRCC>
+appear transparent by default. As seen here we just see the background
+<SYNC Start=31350><P Class=KRCC>
+&nbsp;
+<SYNC Start=31351><P Class=KRCC>
+of the activity come through. When the view is pressed then
+<SYNC Start=34080><P Class=KRCC>
+&nbsp;
+<SYNC Start=34081><P Class=KRCC>
+we see a grey background. Then when the state is activated we
+<SYNC Start=37590><P Class=KRCC>
+&nbsp;
+<SYNC Start=37591><P Class=KRCC>
+see a blue background. This indicates that it's the selected item
+<SYNC Start=40620><P Class=KRCC>
+&nbsp;
+<SYNC Start=40621><P Class=KRCC>
+into pay mode. In the list item layout, we set the background
+<SYNC Start=44200><P Class=KRCC>
+&nbsp;
+<SYNC Start=44201><P Class=KRCC>
+to be this drawable touch selector. We also did the same
+<SYNC Start=47190><P Class=KRCC>
+&nbsp;
+<SYNC Start=47191><P Class=KRCC>
+for the today layout. In the touch selector file, we also see
+<SYNC Start=50600><P Class=KRCC>
+&nbsp;
+<SYNC Start=50601><P Class=KRCC>
+that we have some colors defined here. That Android color notation
+<SYNC Start=54010><P Class=KRCC>
+&nbsp;
+<SYNC Start=54011><P Class=KRCC>
+is for a framework defined color. Our colors are in the colors.xml
+<SYNC Start=57336><P Class=KRCC>
+&nbsp;
+<SYNC Start=57337><P Class=KRCC>
+file. This is located under the values folder. This us useful
+<SYNC Start=60770><P Class=KRCC>
+&nbsp;
+<SYNC Start=60771><P Class=KRCC>
+if you need to reference colors multiple times in your app. As
+<SYNC Start=63610><P Class=KRCC>
+&nbsp;
+<SYNC Start=63611><P Class=KRCC>
+a hint, to make a list item show its activated state,
+<SYNC Start=66650><P Class=KRCC>
+&nbsp;
+<SYNC Start=66651><P Class=KRCC>
+you can look at the documentation for the XML attribute choice mode
+<SYNC Start=70160><P Class=KRCC>
+&nbsp;
+<SYNC Start=70161><P Class=KRCC>
+for the list view. Once you find the right attribute, you'll realize
+<SYNC Start=73140><P Class=KRCC>
+&nbsp;
+<SYNC Start=73141><P Class=KRCC>
+that you want different behavior for one pane versus two pane mode.
+<SYNC Start=76480><P Class=KRCC>
+&nbsp;
+<SYNC Start=76481><P Class=KRCC>
+While you could change the behavior programmatically in the Java
+<SYNC Start=78820><P Class=KRCC>
+&nbsp;
+<SYNC Start=78821><P Class=KRCC>
+code, we'd like you to do it purely via the resource
+<SYNC Start=81610><P Class=KRCC>
+&nbsp;
+<SYNC Start=81611><P Class=KRCC>
+XML files using a style. Read this doc to learn
+<SYNC Start=84550><P Class=KRCC>
+&nbsp;
+<SYNC Start=84551><P Class=KRCC>
+about how styles can be defined in XML and use what
+<SYNC Start=87220><P Class=KRCC>
+&nbsp;
+<SYNC Start=87221><P Class=KRCC>
+you learned earlier about defining alternative resources for different sized
+<SYNC Start=90880><P Class=KRCC>
+&nbsp;
+<SYNC Start=90881><P Class=KRCC>
+devices. In general, styles are a way that you can group
+<SYNC Start=93950><P Class=KRCC>
+&nbsp;
+<SYNC Start=93951><P Class=KRCC>
+together attributes for a view. For example, these text attributes
+<SYNC Start=97320><P Class=KRCC>
+&nbsp;
+<SYNC Start=97321><P Class=KRCC>
+are replaced by this style CodeFont. The CodeFont styles is defined
+<SYNC Start=101607><P Class=KRCC>
+&nbsp;
+<SYNC Start=101608><P Class=KRCC>
+in the styles.xml file, located in the values folder.
+<SYNC Start=104710><P Class=KRCC>
+&nbsp;
+<SYNC Start=104711><P Class=KRCC>
+You can also have styles inherent other styles by specifying
+<SYNC Start=108610><P Class=KRCC>
+&nbsp;
+<SYNC Start=108611><P Class=KRCC>
+the parent. There are a couple other examples that you
+<SYNC Start=111290><P Class=KRCC>
+&nbsp;
+<SYNC Start=111291><P Class=KRCC>
+can check out on this page. This is what the
+<SYNC Start=113350><P Class=KRCC>
+&nbsp;
+<SYNC Start=113351><P Class=KRCC>
+app should look like when you're done. The two
+<SYNC Start=115280><P Class=KRCC>
+&nbsp;
+<SYNC Start=115281><P Class=KRCC>
+pane mode shows the pressed and activated state. On the
+<SYNC Start=117950><P Class=KRCC>
+&nbsp;
+<SYNC Start=117951><P Class=KRCC>
+web pane mode, we see just the press state, because
+<SYNC Start=120890><P Class=KRCC>
+&nbsp;
+<SYNC Start=120891><P Class=KRCC>
+tapping on an item brings you to the details screen.</BODY>
+</SAMI>

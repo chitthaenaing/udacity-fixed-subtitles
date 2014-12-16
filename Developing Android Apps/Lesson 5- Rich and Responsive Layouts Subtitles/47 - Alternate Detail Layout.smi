@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=220><P Class=KRCC>
+We're not quite done yet, with implementing the tablet UI wire
+<SYNC Start=2820><P Class=KRCC>
+&nbsp;
+<SYNC Start=2821><P Class=KRCC>
+frames. The detail fragment should look like this, but instead it
+<SYNC Start=6020><P Class=KRCC>
+&nbsp;
+<SYNC Start=6021><P Class=KRCC>
+looks more like this. For the tablet UI, we try to
+<SYNC Start=9110><P Class=KRCC>
+&nbsp;
+<SYNC Start=9111><P Class=KRCC>
+optimize it more, for wider screens like tablet landscape mode. Another
+<SYNC Start=12880><P Class=KRCC>
+&nbsp;
+<SYNC Start=12881><P Class=KRCC>
+good place for this layout, is in the phone landscape view,
+<SYNC Start=15340><P Class=KRCC>
+&nbsp;
+<SYNC Start=15341><P Class=KRCC>
+where there's more horizontal space, than vertical space. For this quiz,
+<SYNC Start=19120><P Class=KRCC>
+&nbsp;
+<SYNC Start=19121><P Class=KRCC>
+figure out which layout folders, we would need to define the
+<SYNC Start=21820><P Class=KRCC>
+&nbsp;
+<SYNC Start=21821><P Class=KRCC>
+fragment detail layout in. In order to achieve this layout on phone
+<SYNC Start=25350><P Class=KRCC>
+&nbsp;
+<SYNC Start=25351><P Class=KRCC>
+portrait, and this layout for phone landscape and tablet.</BODY>
+</SAMI>

@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+There's a number of reasons you'd be potentially better
+<SYNC Start=2270><P Class=KRCC>
+&nbsp;
+<SYNC Start=2271><P Class=KRCC>
+off breaking your app into different activities. Having a
+<SYNC Start=5180><P Class=KRCC>
+&nbsp;
+<SYNC Start=5181><P Class=KRCC>
+single monolithic activity increases the complexity of your code,
+<SYNC Start=9760><P Class=KRCC>
+&nbsp;
+<SYNC Start=9761><P Class=KRCC>
+making the creation and management of intent filters much
+<SYNC Start=12370><P Class=KRCC>
+&nbsp;
+<SYNC Start=12371><P Class=KRCC>
+harder and making it more difficult to maintain, test,
+<SYNC Start=15470><P Class=KRCC>
+&nbsp;
+<SYNC Start=15471><P Class=KRCC>
+and read your activity code. It also increases the
+<SYNC Start=18740><P Class=KRCC>
+&nbsp;
+<SYNC Start=18741><P Class=KRCC>
+risk of tightly coupling independent components and makes it
+<SYNC Start=22660><P Class=KRCC>
+&nbsp;
+<SYNC Start=22661><P Class=KRCC>
+much more likely to introduce security risks if the
+<SYNC Start=25190><P Class=KRCC>
+&nbsp;
+<SYNC Start=25191><P Class=KRCC>
+single activity includes both sensitive information and information that's safe
+<SYNC Start=29150><P Class=KRCC>
+&nbsp;
+<SYNC Start=29151><P Class=KRCC>
+to share. A good rule of thumb is to create a
+<SYNC Start=31650><P Class=KRCC>
+&nbsp;
+<SYNC Start=31651><P Class=KRCC>
+new activity whenever the context changes. For example, displaying a
+<SYNC Start=35260><P Class=KRCC>
+&nbsp;
+<SYNC Start=35261><P Class=KRCC>
+different kind of data, while switching from viewing to entering data.</BODY>
+</SAMI>

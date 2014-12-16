@@ -1,0 +1,146 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=470><P Class=KRCC>
+Once you install Android Studio, you can open it and
+<SYNC Start=3160><P Class=KRCC>
+&nbsp;
+<SYNC Start=3161><P Class=KRCC>
+check for updates before proceeding. Then we can configure Android Studio.
+<SYNC Start=8240><P Class=KRCC>
+&nbsp;
+<SYNC Start=8241><P Class=KRCC>
+Open up the Android SDK Manager to see what tools, platform versions, and
+<SYNC Start=12470><P Class=KRCC>
+&nbsp;
+<SYNC Start=12471><P Class=KRCC>
+components we have installed. At the time of this recording,
+<SYNC Start=15330><P Class=KRCC>
+&nbsp;
+<SYNC Start=15331><P Class=KRCC>
+the Android L platform is available but it's still in developer preview mode.
+<SYNC Start=19900><P Class=KRCC>
+&nbsp;
+<SYNC Start=19901><P Class=KRCC>
+That means it's subject to change until the official release. You can't upload
+<SYNC Start=23770><P Class=KRCC>
+&nbsp;
+<SYNC Start=23771><P Class=KRCC>
+your app to Google Play if it's targeting this L platform version.
+<SYNC Start=27928><P Class=KRCC>
+&nbsp;
+<SYNC Start=27929><P Class=KRCC>
+Hence, we want to use the latest stable platform version which is KITKAT or
+<SYNC Start=31670><P Class=KRCC>
+&nbsp;
+<SYNC Start=31671><P Class=KRCC>
+API level 19. API level 20 is for Android ware or watches and not for
+<SYNC Start=36830><P Class=KRCC>
+&nbsp;
+<SYNC Start=36831><P Class=KRCC>
+phones or tablets. Deselect all the other packages. And just choose the ones for
+<SYNC Start=40836><P Class=KRCC>
+&nbsp;
+<SYNC Start=40837><P Class=KRCC>
+API level 19. We want the SDK as well as the system images for the emulator.
+<SYNC Start=45470><P Class=KRCC>
+&nbsp;
+<SYNC Start=45471><P Class=KRCC>
+We also want the Android Support Library for backwards compatibility. For
+<SYNC Start=48690><P Class=KRCC>
+&nbsp;
+<SYNC Start=48691><P Class=KRCC>
+the most up-to-date version of all the packages you need to install,
+<SYNC Start=51640><P Class=KRCC>
+&nbsp;
+<SYNC Start=51641><P Class=KRCC>
+check the link below. Otherwise, continue with installing the packages.
+<SYNC Start=55160><P Class=KRCC>
+&nbsp;
+<SYNC Start=55161><P Class=KRCC>
+Accept the license and then install. Then we can click and
+<SYNC Start=58370><P Class=KRCC>
+&nbsp;
+<SYNC Start=58371><P Class=KRCC>
+create a new project. In the Project Wizard, we set the app name to be Sunshine.
+<SYNC Start=62860><P Class=KRCC>
+&nbsp;
+<SYNC Start=62861><P Class=KRCC>
+Then we provide a corresponding package name. For distribution purposes,
+<SYNC Start=66200><P Class=KRCC>
+&nbsp;
+<SYNC Start=66201><P Class=KRCC>
+the package name should be globally unique across packages installed on Android.
+<SYNC Start=70190><P Class=KRCC>
+&nbsp;
+<SYNC Start=70191><P Class=KRCC>
+To avoid conflicts, you can use the reverse of the internet domain that you own.
+<SYNC Start=74190><P Class=KRCC>
+&nbsp;
+<SYNC Start=74191><P Class=KRCC>
+This follows the Java package naming conventions. Note that we're also using
+<SYNC Start=78240><P Class=KRCC>
+&nbsp;
+<SYNC Start=78241><P Class=KRCC>
+the com dot example namespace for our Sunshine app since it's a sample, but
+<SYNC Start=82150><P Class=KRCC>
+&nbsp;
+<SYNC Start=82151><P Class=KRCC>
+you cannot publish an app on Google play that uses this namespace.
+<SYNC Start=86010><P Class=KRCC>
+&nbsp;
+<SYNC Start=86011><P Class=KRCC>
+Usually leaving the default package name that's suggested is fine. However,
+<SYNC Start=90020><P Class=KRCC>
+&nbsp;
+<SYNC Start=90021><P Class=KRCC>
+this class was originally filmed with an older version of Android Studio which
+<SYNC Start=93410><P Class=KRCC>
+&nbsp;
+<SYNC Start=93411><P Class=KRCC>
+added the app module at the end of the package name. So go ahead and
+<SYNC Start=97280><P Class=KRCC>
+&nbsp;
+<SYNC Start=97281><P Class=KRCC>
+make this change now if you want your code to match the rest of the code in
+<SYNC Start=100160><P Class=KRCC>
+&nbsp;
+<SYNC Start=100161><P Class=KRCC>
+the course. Then we do the project location and
+<SYNC Start=102580><P Class=KRCC>
+&nbsp;
+<SYNC Start=102581><P Class=KRCC>
+we hit next. Now, we need to choose our minimum SDK version.
+<SYNC Start=107030><P Class=KRCC>
+&nbsp;
+<SYNC Start=107031><P Class=KRCC>
+In previous versions of Android Studio, you would also have to
+<SYNC Start=109880><P Class=KRCC>
+&nbsp;
+<SYNC Start=109881><P Class=KRCC>
+select the target SDK. But now the Project Wizard automatically sends the target
+<SYNC Start=114510><P Class=KRCC>
+&nbsp;
+<SYNC Start=114511><P Class=KRCC>
+SDK to be the latest version. Even though target SDK is already selected for
+<SYNC Start=118870><P Class=KRCC>
+&nbsp;
+<SYNC Start=118871><P Class=KRCC>
+you, it's important to know the distinction between min and target SDK</BODY>
+</SAMI>

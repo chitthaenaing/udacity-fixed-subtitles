@@ -1,0 +1,206 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=550><P Class=KRCC>
+Here's our coding solution for the share action
+<SYNC Start=2492><P Class=KRCC>
+&nbsp;
+<SYNC Start=2493><P Class=KRCC>
+provider. Lets start by adding a string. The
+<SYNC Start=7140><P Class=KRCC>
+&nbsp;
+<SYNC Start=7141><P Class=KRCC>
+string will be used for the label for our action. Now we're going to add a new
+<SYNC Start=12590><P Class=KRCC>
+&nbsp;
+<SYNC Start=12591><P Class=KRCC>
+menu resource. This resource will be for the
+<SYNC Start=15250><P Class=KRCC>
+&nbsp;
+<SYNC Start=15251><P Class=KRCC>
+detail fragment. We'll start by adding the name
+<SYNC Start=18360><P Class=KRCC>
+&nbsp;
+<SYNC Start=18361><P Class=KRCC>
+space used by the Android support library for
+<SYNC Start=20780><P Class=KRCC>
+&nbsp;
+<SYNC Start=20781><P Class=KRCC>
+it's widget XML. Finally, we add the actual item.
+<SYNC Start=24390><P Class=KRCC>
+&nbsp;
+<SYNC Start=25640><P Class=KRCC>
+This menu item contains the string that we
+<SYNC Start=28340><P Class=KRCC>
+&nbsp;
+<SYNC Start=28341><P Class=KRCC>
+just added from the strings file. It's always
+<SYNC Start=31200><P Class=KRCC>
+&nbsp;
+<SYNC Start=31201><P Class=KRCC>
+shown as an action. So it appears on
+<SYNC Start=33130><P Class=KRCC>
+&nbsp;
+<SYNC Start=33131><P Class=KRCC>
+the action bar. And it's actionProviderClass, is the ShareActionProvider
+<SYNC Start=37499><P Class=KRCC>
+&nbsp;
+<SYNC Start=37500><P Class=KRCC>
+from the Android support library. The Android support
+<SYNC Start=40710><P Class=KRCC>
+&nbsp;
+<SYNC Start=40711><P Class=KRCC>
+library allows the ShareActionProvider to be used on earlier
+<SYNC Start=44000><P Class=KRCC>
+&nbsp;
+<SYNC Start=44001><P Class=KRCC>
+versions of Android then 4.0. When it was
+<SYNC Start=46530><P Class=KRCC>
+&nbsp;
+<SYNC Start=46531><P Class=KRCC>
+officially added to the framework. Next, let's go to
+<SYNC Start=50550><P Class=KRCC>
+&nbsp;
+<SYNC Start=50551><P Class=KRCC>
+the DetailAactivity. We're going to be looking at the
+<SYNC Start=53704><P Class=KRCC>
+&nbsp;
+<SYNC Start=53705><P Class=KRCC>
+DetailFragment within the DetailActivity. So the first thing
+<SYNC Start=57750><P Class=KRCC>
+&nbsp;
+<SYNC Start=57751><P Class=KRCC>
+we can do in our fragment is to add a few useful things. Let's add a log
+<SYNC Start=61860><P Class=KRCC>
+&nbsp;
+<SYNC Start=61861><P Class=KRCC>
+tag, a string for the share hashtag, hashtag
+<SYNC Start=65590><P Class=KRCC>
+&nbsp;
+<SYNC Start=65591><P Class=KRCC>
+sunshineApp, and we're going to take the forecast
+<SYNC Start=68840><P Class=KRCC>
+&nbsp;
+<SYNC Start=68841><P Class=KRCC>
+string and make it a member variable. Next
+<SYNC Start=72430><P Class=KRCC>
+&nbsp;
+<SYNC Start=72431><P Class=KRCC>
+in onCreate view, let's actually populate our member variable.
+<SYNC Start=77070><P Class=KRCC>
+&nbsp;
+<SYNC Start=77071><P Class=KRCC>
+And then finally, use it to set the text.
+<SYNC Start=80330><P Class=KRCC>
+&nbsp;
+<SYNC Start=80331><P Class=KRCC>
+Lets create a share intent. This intent uses ACTION_SEND.
+<SYNC Start=84610><P Class=KRCC>
+&nbsp;
+<SYNC Start=84611><P Class=KRCC>
+This flag activity cleared when task reset is somewhat
+<SYNC Start=88120><P Class=KRCC>
+&nbsp;
+<SYNC Start=88121><P Class=KRCC>
+important. It prevents the activity we're sharing to from
+<SYNC Start=91470><P Class=KRCC>
+&nbsp;
+<SYNC Start=91471><P Class=KRCC>
+being place onto the activity stack. What will happen,
+<SYNC Start=94970><P Class=KRCC>
+&nbsp;
+<SYNC Start=94971><P Class=KRCC>
+if we don't have this flag, is when you
+<SYNC Start=96740><P Class=KRCC>
+&nbsp;
+<SYNC Start=96741><P Class=KRCC>
+click on the icon to return to the application
+<SYNC Start=99230><P Class=KRCC>
+&nbsp;
+<SYNC Start=99231><P Class=KRCC>
+later, you may actually end up in another application.
+<SYNC Start=102550><P Class=KRCC>
+&nbsp;
+<SYNC Start=102551><P Class=KRCC>
+The one that's actually handling the share intent. When
+<SYNC Start=105060><P Class=KRCC>
+&nbsp;
+<SYNC Start=105061><P Class=KRCC>
+FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET is used, it'll actually return you to your
+<SYNC Start=110500><P Class=KRCC>
+&nbsp;
+<SYNC Start=110501><P Class=KRCC>
+application instead. We've set the type, test/plain, to let
+<SYNC Start=114410><P Class=KRCC>
+&nbsp;
+<SYNC Start=114411><P Class=KRCC>
+Android know we're going to be sharing plain text. And
+<SYNC Start=117380><P Class=KRCC>
+&nbsp;
+<SYNC Start=117381><P Class=KRCC>
+then we share our forecast string plus our hashtag.
+<SYNC Start=120460><P Class=KRCC>
+&nbsp;
+<SYNC Start=120461><P Class=KRCC>
+Only one more thing left to do. We have
+<SYNC Start=122820><P Class=KRCC>
+&nbsp;
+<SYNC Start=122821><P Class=KRCC>
+to add the menu to the fragment. To do
+<SYNC Start=125450><P Class=KRCC>
+&nbsp;
+<SYNC Start=125451><P Class=KRCC>
+this, we have to set a flag that this fragment
+<SYNC Start=127690><P Class=KRCC>
+&nbsp;
+<SYNC Start=127691><P Class=KRCC>
+has an options menu at all. Otherwise, it
+<SYNC Start=129940><P Class=KRCC>
+&nbsp;
+<SYNC Start=129941><P Class=KRCC>
+won't actually call the onCreate options menu member
+<SYNC Start=132260><P Class=KRCC>
+&nbsp;
+<SYNC Start=132261><P Class=KRCC>
+function. Finally, here's our on creat options member
+<SYNC Start=136350><P Class=KRCC>
+&nbsp;
+<SYNC Start=136351><P Class=KRCC>
+function. As you can see, we're inflating the
+<SYNC Start=138555><P Class=KRCC>
+&nbsp;
+<SYNC Start=138556><P Class=KRCC>
+detailfragment menu that we created earlier. Finding the
+<SYNC Start=141846><P Class=KRCC>
+&nbsp;
+<SYNC Start=141847><P Class=KRCC>
+share item, getting the ShareActionProvider, and attaching our
+<SYNC Start=145644><P Class=KRCC>
+&nbsp;
+<SYNC Start=145645><P Class=KRCC>
+intent to this ShareActionProvider. You'll want to update
+<SYNC Start=149360><P Class=KRCC>
+&nbsp;
+<SYNC Start=149361><P Class=KRCC>
+this whenever the data you want to share changes.
+<SYNC Start=152700><P Class=KRCC>
+&nbsp;
+<SYNC Start=152701><P Class=KRCC>
+And that's it. You've now added a ShareActionProvider into Sunshine.</BODY>
+</SAMI>

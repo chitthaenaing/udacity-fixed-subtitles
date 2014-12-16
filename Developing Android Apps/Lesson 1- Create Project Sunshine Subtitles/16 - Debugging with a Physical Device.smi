@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=210><P Class=KRCC>
+Thanks Veto. And now it's time to install the Sunshine app on our phones.
+<SYNC Start=4640><P Class=KRCC>
+&nbsp;
+<SYNC Start=4641><P Class=KRCC>
+So to get started, let's grab a USB cable. We'll plug in our device and
+<SYNC Start=10230><P Class=KRCC>
+&nbsp;
+<SYNC Start=10231><P Class=KRCC>
+then we'll need to enable USB debugging. This can be found in Developer options
+<SYNC Start=14680><P Class=KRCC>
+&nbsp;
+<SYNC Start=14681><P Class=KRCC>
+in the Settings app. But note that on Android devices 4.2 and above,
+<SYNC Start=20090><P Class=KRCC>
+&nbsp;
+<SYNC Start=20091><P Class=KRCC>
+the option is actually hidden by default. To find the secret menu,
+<SYNC Start=27270><P Class=KRCC>
+&nbsp;
+<SYNC Start=27271><P Class=KRCC>
+go to the Settings app. Scroll down to About phone.
+<SYNC Start=31650><P Class=KRCC>
+&nbsp;
+<SYNC Start=32850><P Class=KRCC>
+Then go down to Build number and
+<SYNC Start=37066><P Class=KRCC>
+&nbsp;
+<SYNC Start=37067><P Class=KRCC>
+tap on that seven times [SOUND]. Then,
+<SYNC Start=41627><P Class=KRCC>
+&nbsp;
+<SYNC Start=41628><P Class=KRCC>
+when you go back to Settings, you'll see the Developer options menu appear.
+<SYNC Start=45350><P Class=KRCC>
+&nbsp;
+<SYNC Start=46520><P Class=KRCC>
+Also, set up your computer to detect your device. Check the instructor notes for
+<SYNC Start=50260><P Class=KRCC>
+&nbsp;
+<SYNC Start=50261><P Class=KRCC>
+more details. We're going to continue using a device because it's faster and
+<SYNC Start=54680><P Class=KRCC>
+&nbsp;
+<SYNC Start=54681><P Class=KRCC>
+smoother for development. But if you don't have one,
+<SYNC Start=57270><P Class=KRCC>
+&nbsp;
+<SYNC Start=57271><P Class=KRCC>
+that's okay. You can continue using the emulator that we created previously.</BODY>
+</SAMI>

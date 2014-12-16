@@ -1,0 +1,106 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+The solution is that we need to call
+<SYNC Start=1895><P Class=KRCC>
+&nbsp;
+<SYNC Start=1896><P Class=KRCC>
+Fragment.setHasOptionsMenu(true). That way, we'll
+<SYNC Start=5760><P Class=KRCC>
+&nbsp;
+<SYNC Start=5761><P Class=KRCC>
+get appropriate options menu callback
+<SYNC Start=7910><P Class=KRCC>
+&nbsp;
+<SYNC Start=7911><P Class=KRCC>
+methods in the fragment, so that we can
+<SYNC Start=9850><P Class=KRCC>
+&nbsp;
+<SYNC Start=9851><P Class=KRCC>
+inflate the menu and for when a menu item
+<SYNC Start=12120><P Class=KRCC>
+&nbsp;
+<SYNC Start=12121><P Class=KRCC>
+is selected. And this is where the fragment
+<SYNC Start=15190><P Class=KRCC>
+&nbsp;
+<SYNC Start=15191><P Class=KRCC>
+inflates the menu. Remember from before that in the
+<SYNC Start=17760><P Class=KRCC>
+&nbsp;
+<SYNC Start=17761><P Class=KRCC>
+ForecastFragment class, we have a public empty constructor, and
+<SYNC Start=21310><P Class=KRCC>
+&nbsp;
+<SYNC Start=21311><P Class=KRCC>
+we also override onCreateView? We also define fetchWeatherTask here.
+<SYNC Start=25650><P Class=KRCC>
+&nbsp;
+<SYNC Start=25651><P Class=KRCC>
+Now, we're going to overide an additional fragment life
+<SYNC Start=28020><P Class=KRCC>
+&nbsp;
+<SYNC Start=28021><P Class=KRCC>
+cycle method called onCreate. This is where the fragment
+<SYNC Start=31340><P Class=KRCC>
+&nbsp;
+<SYNC Start=31341><P Class=KRCC>
+is created, and this happens before the onCreate view
+<SYNC Start=34691><P Class=KRCC>
+&nbsp;
+<SYNC Start=34692><P Class=KRCC>
+method, which is where the UI gets initialized. So, in
+<SYNC Start=37790><P Class=KRCC>
+&nbsp;
+<SYNC Start=37791><P Class=KRCC>
+onCreate, we're going to call setHasOptionsMenu to be true to
+<SYNC Start=41570><P Class=KRCC>
+&nbsp;
+<SYNC Start=41571><P Class=KRCC>
+indicate that we want call backs for these methods.
+<SYNC Start=44430><P Class=KRCC>
+&nbsp;
+<SYNC Start=44431><P Class=KRCC>
+When onCreateOptionsMenu is called, we're going to inflate the menu
+<SYNC Start=47560><P Class=KRCC>
+&nbsp;
+<SYNC Start=47561><P Class=KRCC>
+layout that we defined earlier called forecast fragment. We'll also
+<SYNC Start=51510><P Class=KRCC>
+&nbsp;
+<SYNC Start=51511><P Class=KRCC>
+get notified when a menu item is selected. When a menu item with
+<SYNC Start=55090><P Class=KRCC>
+&nbsp;
+<SYNC Start=55091><P Class=KRCC>
+ID action refresh is called, we're going to
+<SYNC Start=57350><P Class=KRCC>
+&nbsp;
+<SYNC Start=57351><P Class=KRCC>
+return true for now. We're going to go
+<SYNC Start=60030><P Class=KRCC>
+&nbsp;
+<SYNC Start=60031><P Class=KRCC>
+over the activity and fragment life cycle methods in more detail in later
+<SYNC Start=64140><P Class=KRCC>
+&nbsp;
+<SYNC Start=64141><P Class=KRCC>
+lessons, but if you want, you can read the documentation linked below for now.</BODY>
+</SAMI>

@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+The final advantage of fragments, doesn't involve user interfaces at
+<SYNC Start=3650><P Class=KRCC>
+&nbsp;
+<SYNC Start=3651><P Class=KRCC>
+all. As you know, as visual components, activities are destroyed and
+<SYNC Start=7505><P Class=KRCC>
+&nbsp;
+<SYNC Start=7506><P Class=KRCC>
+re-created, whenever the device configuration changes. Most notably, when the
+<SYNC Start=10970><P Class=KRCC>
+&nbsp;
+<SYNC Start=10971><P Class=KRCC>
+screen orientation switches. That makes sense, because there's a good chance
+<SYNC Start=14200><P Class=KRCC>
+&nbsp;
+<SYNC Start=14201><P Class=KRCC>
+we'll want to create a different layout, to better suit the
+<SYNC Start=16200><P Class=KRCC>
+&nbsp;
+<SYNC Start=16201><P Class=KRCC>
+new configuration. But if we can use fragments to break up
+<SYNC Start=19000><P Class=KRCC>
+&nbsp;
+<SYNC Start=19001><P Class=KRCC>
+visual activity modules, and find out logical ones as well,
+<SYNC Start=22340><P Class=KRCC>
+&nbsp;
+<SYNC Start=22341><P Class=KRCC>
+it turns out we can do exactly that. And because these
+<SYNC Start=25270><P Class=KRCC>
+&nbsp;
+<SYNC Start=25271><P Class=KRCC>
+fragments are non-visual, there's no need to recreate them
+<SYNC Start=27770><P Class=KRCC>
+&nbsp;
+<SYNC Start=27771><P Class=KRCC>
+every time the UI needs updating. Within the onCreate
+<SYNC Start=30640><P Class=KRCC>
+&nbsp;
+<SYNC Start=30641><P Class=KRCC>
+handler of your non-UI fragment, call setRetainInstance, passing in
+<SYNC Start=35640><P Class=KRCC>
+&nbsp;
+<SYNC Start=35641><P Class=KRCC>
+true, and return null in your onCreate view handler.
+<SYNC Start=40220><P Class=KRCC>
+&nbsp;
+<SYNC Start=40221><P Class=KRCC>
+Then, once the parent activity is created, you can
+<SYNC Start=42550><P Class=KRCC>
+&nbsp;
+<SYNC Start=42551><P Class=KRCC>
+kick off any connections, threads, or tasks that are
+<SYNC Start=45180><P Class=KRCC>
+&nbsp;
+<SYNC Start=45181><P Class=KRCC>
+bound to the lifetime of the activity, which don't
+<SYNC Start=47520><P Class=KRCC>
+&nbsp;
+<SYNC Start=47521><P Class=KRCC>
+need to be interrupted every time the device rotates.</BODY>
+</SAMI>

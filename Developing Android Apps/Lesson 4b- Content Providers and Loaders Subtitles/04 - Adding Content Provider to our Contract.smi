@@ -1,0 +1,198 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=210><P Class=KRCC>
+Before we start creating our content provider,
+<SYNC Start=2840><P Class=KRCC>
+&nbsp;
+<SYNC Start=2841><P Class=KRCC>
+it's time to go back to our weather
+<SYNC Start=4440><P Class=KRCC>
+&nbsp;
+<SYNC Start=4441><P Class=KRCC>
+contract. We're going to use the weather contract,
+<SYNC Start=7470><P Class=KRCC>
+&nbsp;
+<SYNC Start=7471><P Class=KRCC>
+for both database definitions and content provider definitions.
+<SYNC Start=11980><P Class=KRCC>
+&nbsp;
+<SYNC Start=11981><P Class=KRCC>
+These are the URIs that our contract will expose for a data and view. Some of
+<SYNC Start=17310><P Class=KRCC>
+&nbsp;
+<SYNC Start=17311><P Class=KRCC>
+them return a list or directory of items.
+<SYNC Start=20279><P Class=KRCC>
+&nbsp;
+<SYNC Start=22050><P Class=KRCC>
+And some of them return as single item.
+<SYNC Start=23740><P Class=KRCC>
+&nbsp;
+<SYNC Start=25380><P Class=KRCC>
+The first part of the URI is the content authority which is how the system
+<SYNC Start=29620><P Class=KRCC>
+&nbsp;
+<SYNC Start=29621><P Class=KRCC>
+disambiguate URIs from different application, similar to the
+<SYNC Start=33590><P Class=KRCC>
+&nbsp;
+<SYNC Start=33591><P Class=KRCC>
+relationship between a domain name and its website.
+<SYNC Start=36060><P Class=KRCC>
+&nbsp;
+<SYNC Start=37100><P Class=KRCC>
+A convenient string to use for the content
+<SYNC Start=39120><P Class=KRCC>
+&nbsp;
+<SYNC Start=39121><P Class=KRCC>
+authority is the package name of the app.
+<SYNC Start=41250><P Class=KRCC>
+&nbsp;
+<SYNC Start=42820><P Class=KRCC>
+Let's return to our weather contract. We'll add
+<SYNC Start=46190><P Class=KRCC>
+&nbsp;
+<SYNC Start=46191><P Class=KRCC>
+the CONTENT_AUTHORITY and the BASE_CONTENT_URI for our content
+<SYNC Start=50390><P Class=KRCC>
+&nbsp;
+<SYNC Start=50391><P Class=KRCC>
+provider to the beginning of our weather
+<SYNC Start=52010><P Class=KRCC>
+&nbsp;
+<SYNC Start=52011><P Class=KRCC>
+contract. Next, we'll add strings to the base
+<SYNC Start=55060><P Class=KRCC>
+&nbsp;
+<SYNC Start=55061><P Class=KRCC>
+path of our URIs. Each URI essentially points
+<SYNC Start=58470><P Class=KRCC>
+&nbsp;
+<SYNC Start=58471><P Class=KRCC>
+to a different table. For each of our
+<SYNC Start=60660><P Class=KRCC>
+&nbsp;
+<SYNC Start=60661><P Class=KRCC>
+tables, location entry, and weather entry, we
+<SYNC Start=66310><P Class=KRCC>
+&nbsp;
+<SYNC Start=66311><P Class=KRCC>
+create a content URI that represents the base location for each table. Now,
+<SYNC Start=71340><P Class=KRCC>
+&nbsp;
+<SYNC Start=71341><P Class=KRCC>
+we'll add some magical value to the location and weather entry contracts.
+<SYNC Start=76140><P Class=KRCC>
+&nbsp;
+<SYNC Start=76141><P Class=KRCC>
+These contain special MIME type prefixes that indicate that
+<SYNC Start=80020><P Class=KRCC>
+&nbsp;
+<SYNC Start=80021><P Class=KRCC>
+the URI either returns a directory, list of items,
+<SYNC Start=83740><P Class=KRCC>
+&nbsp;
+<SYNC Start=83741><P Class=KRCC>
+or a single item. Now, we're going to add some
+<SYNC Start=86070><P Class=KRCC>
+&nbsp;
+<SYNC Start=86071><P Class=KRCC>
+URI builders and decoder functions in weather entry. It's
+<SYNC Start=89360><P Class=KRCC>
+&nbsp;
+<SYNC Start=89361><P Class=KRCC>
+convenient to have this as it makes fewer places
+<SYNC Start=92270><P Class=KRCC>
+&nbsp;
+<SYNC Start=92271><P Class=KRCC>
+in your code aware of the actual URI encoding,
+<SYNC Start=96270><P Class=KRCC>
+&nbsp;
+<SYNC Start=96271><P Class=KRCC>
+keeping this knowledge in the contract. If you're just
+<SYNC Start=99252><P Class=KRCC>
+&nbsp;
+<SYNC Start=99253><P Class=KRCC>
+going to have a URI with a standard integer
+<SYNC Start=101500><P Class=KRCC>
+&nbsp;
+<SYNC Start=101501><P Class=KRCC>
+primary key, which is a typical way of distinguishing between
+<SYNC Start=104660><P Class=KRCC>
+&nbsp;
+<SYNC Start=104661><P Class=KRCC>
+a query for item or the query for a list
+<SYNC Start=107040><P Class=KRCC>
+&nbsp;
+<SYNC Start=107041><P Class=KRCC>
+of items, one can use the content URIs with appended
+<SYNC Start=110240><P Class=KRCC>
+&nbsp;
+<SYNC Start=110241><P Class=KRCC>
+id function. Strings, such as a location setting, can be
+<SYNC Start=113150><P Class=KRCC>
+&nbsp;
+<SYNC Start=113151><P Class=KRCC>
+appended with the append path function. We can also these
+<SYNC Start=116900><P Class=KRCC>
+&nbsp;
+<SYNC Start=116901><P Class=KRCC>
+functions to add potentially useful query parameters. In this case,
+<SYNC Start=121040><P Class=KRCC>
+&nbsp;
+<SYNC Start=121041><P Class=KRCC>
+we use a query parameter for the start date. Query
+<SYNC Start=123730><P Class=KRCC>
+&nbsp;
+<SYNC Start=123731><P Class=KRCC>
+parameters are useful for when we have a fixed database
+<SYNC Start=126770><P Class=KRCC>
+&nbsp;
+<SYNC Start=126771><P Class=KRCC>
+query that we want to have some limited parameterization
+<SYNC Start=129389><P Class=KRCC>
+&nbsp;
+<SYNC Start=129390><P Class=KRCC>
+for. In this case, it will be a parameter for
+<SYNC Start=131970><P Class=KRCC>
+&nbsp;
+<SYNC Start=131971><P Class=KRCC>
+our join between the two tables. Finally, we have
+<SYNC Start=135150><P Class=KRCC>
+&nbsp;
+<SYNC Start=135151><P Class=KRCC>
+this function that builds a two part URI that contains
+<SYNC Start=138270><P Class=KRCC>
+&nbsp;
+<SYNC Start=138271><P Class=KRCC>
+both location and date segments. Below this, we have
+<SYNC Start=142060><P Class=KRCC>
+&nbsp;
+<SYNC Start=142061><P Class=KRCC>
+helper functions that help decode the URI structure. This hides
+<SYNC Start=146080><P Class=KRCC>
+&nbsp;
+<SYNC Start=146081><P Class=KRCC>
+the URI structure form our code as well and
+<SYNC Start=148630><P Class=KRCC>
+&nbsp;
+<SYNC Start=148631><P Class=KRCC>
+places all the knowledge in one place within the contract.</BODY>
+</SAMI>

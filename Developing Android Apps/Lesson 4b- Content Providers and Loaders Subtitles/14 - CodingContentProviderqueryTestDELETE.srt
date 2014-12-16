@@ -1,0 +1,59 @@
+1
+00:00:00,620 --> 00:00:02,918
+Let's update the test insert redv test to use
+
+2
+00:00:02,918 --> 00:00:05,216
+to use the weather provider to get the weather
+
+3
+00:00:05,216 --> 00:00:08,650
+query. We'll start by changing the name to test,
+
+4
+00:00:08,650 --> 00:00:12,100
+insert read provider. So, all we need to do
+
+5
+00:00:12,100 --> 00:00:15,060
+is take this dv query, and replace it with
+
+6
+00:00:15,060 --> 00:00:18,590
+the equivalent content provider one, which gets the content
+
+7
+00:00:18,590 --> 00:00:22,740
+resolver, and then queries the content URI. Now, the
+
+8
+00:00:22,740 --> 00:00:25,670
+content provider one doesn't take a few of these parameters.
+
+9
+00:00:25,670 --> 00:00:28,660
+For example, it doesn't take TABLE_NAME, because that's implied
+
+10
+00:00:28,660 --> 00:00:31,640
+by the URI, nor does it support group by.
+
+11
+00:00:31,640 --> 00:00:34,046
+The rest of it should work pretty well. Now,
+
+12
+00:00:34,046 --> 00:00:36,211
+let's run the test and verify that it passes.
+
+13
+00:00:36,211 --> 00:00:39,598
+[BLANK_AUDIO]
+
+14
+00:00:39,598 --> 00:00:43,930
+And the test still passes. [LAUGH] Again, it's very easy to substitute
+
+15
+00:00:43,930 --> 00:00:47,750
+out something that calls directly to the database with a content provider.

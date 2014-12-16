@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=900><P Class=KRCC>
+As you are moving around between apps, you probably notice that from a user
+<SYNC Start=4400><P Class=KRCC>
+&nbsp;
+<SYNC Start=4401><P Class=KRCC>
+perspective, Android doesn't announce changes in app state. It doesn't announce,
+<SYNC Start=8670><P Class=KRCC>
+&nbsp;
+<SYNC Start=8671><P Class=KRCC>
+that it's low in memory or ask users to close apps, to free up resources. In
+<SYNC Start=12890><P Class=KRCC>
+&nbsp;
+<SYNC Start=12891><P Class=KRCC>
+fact, it does everything it can, to make the resource limitation to the device,
+<SYNC Start=17010><P Class=KRCC>
+&nbsp;
+<SYNC Start=17011><P Class=KRCC>
+invisible to the user. That means keeping the foreground app running smoothly,
+<SYNC Start=21800><P Class=KRCC>
+&nbsp;
+<SYNC Start=21801><P Class=KRCC>
+and switching between apps seamless, and that means killing apps in
+<SYNC Start=25100><P Class=KRCC>
+&nbsp;
+<SYNC Start=25101><P Class=KRCC>
+the background. And it does that if it
+<SYNC Start=30420><P Class=KRCC>
+&nbsp;
+<SYNC Start=30421><P Class=KRCC>
+needs their resources to make sure that the foreground apps can continue to run.
+<SYNC Start=34690><P Class=KRCC>
+&nbsp;
+<SYNC Start=34691><P Class=KRCC>
+So we know that as soon as your app isn't visible, its lifetime is as
+<SYNC Start=38080><P Class=KRCC>
+&nbsp;
+<SYNC Start=38081><P Class=KRCC>
+perilous as that of a Stark at the Red Wedding. Likely to die without notice,
+<SYNC Start=41810><P Class=KRCC>
+&nbsp;
+<SYNC Start=41811><P Class=KRCC>
+but ready to return from the dead. That tells us some very important things
+<SYNC Start=46670><P Class=KRCC>
+&nbsp;
+<SYNC Start=46671><P Class=KRCC>
+about how our app should behave to be good citizens and provide a great user
+<SYNC Start=50140><P Class=KRCC>
+&nbsp;
+<SYNC Start=50141><P Class=KRCC>
+experience. From a system perspective, on pause and on stop are signals that our
+<SYNC Start=54600><P Class=KRCC>
+&nbsp;
+<SYNC Start=54601><P Class=KRCC>
+app may be killed eminently. So we need to clean up any resources that
+<SYNC Start=57990><P Class=KRCC>
+&nbsp;
+<SYNC Start=57991><P Class=KRCC>
+need an orderly tear down such as closing any open connections or sockets.</BODY>
+</SAMI>

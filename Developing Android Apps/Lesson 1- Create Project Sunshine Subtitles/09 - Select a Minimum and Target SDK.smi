@@ -1,0 +1,142 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+Android 1.0 launched in 2008. And in just the six year since then,
+<SYNC Start=4858><P Class=KRCC>
+&nbsp;
+<SYNC Start=4859><P Class=KRCC>
+there has been 11 new major platform releases. On the Android developer side,
+<SYNC Start=9880><P Class=KRCC>
+&nbsp;
+<SYNC Start=9881><P Class=KRCC>
+we show the relative number of active Android devices running a given platform
+<SYNC Start=13460><P Class=KRCC>
+&nbsp;
+<SYNC Start=13461><P Class=KRCC>
+version in this pie chart, because pie charts are awesome. For our purposes
+<SYNC Start=18314><P Class=KRCC>
+&nbsp;
+<SYNC Start=18315><P Class=KRCC>
+though, you're really better off looking at this as a histogram. If you squint,
+<SYNC Start=22700><P Class=KRCC>
+&nbsp;
+<SYNC Start=22701><P Class=KRCC>
+you can almost see a vaguely bell-shaped curve, with the oldest releases here at
+<SYNC Start=27715><P Class=KRCC>
+&nbsp;
+<SYNC Start=27716><P Class=KRCC>
+the left, their popularity dropping off as devices are upgraded or
+<SYNC Start=31858><P Class=KRCC>
+&nbsp;
+<SYNC Start=31859><P Class=KRCC>
+replaced. The largest proportion of devices are here in the middle,
+<SYNC Start=36100><P Class=KRCC>
+&nbsp;
+<SYNC Start=36101><P Class=KRCC>
+representing devices about two years old. And the newest platforms,
+<SYNC Start=40020><P Class=KRCC>
+&nbsp;
+<SYNC Start=40021><P Class=KRCC>
+gaining popularity as new phones are released or upgrades go out,
+<SYNC Start=43470><P Class=KRCC>
+&nbsp;
+<SYNC Start=43471><P Class=KRCC>
+are here on the right. So with that in mind, the Min SDK acts as your low-pass
+<SYNC Start=47523><P Class=KRCC>
+&nbsp;
+<SYNC Start=47524><P Class=KRCC>
+filter. Google Play won't show your app on devices running a platform version
+<SYNC Start=51980><P Class=KRCC>
+&nbsp;
+<SYNC Start=51981><P Class=KRCC>
+lower than its minimum SDK version. So why not just set the Min SDK to one and
+<SYNC Start=56660><P Class=KRCC>
+&nbsp;
+<SYNC Start=56661><P Class=KRCC>
+support everyone? Generally, you'll want to target as many users as you can, but
+<SYNC Start=61400><P Class=KRCC>
+&nbsp;
+<SYNC Start=61401><P Class=KRCC>
+there's a cost associated with supporting some of these older versions.
+<SYNC Start=65040><P Class=KRCC>
+&nbsp;
+<SYNC Start=65041><P Class=KRCC>
+Things like creating different execution paths around deprecated or
+<SYNC Start=67830><P Class=KRCC>
+&nbsp;
+<SYNC Start=67831><P Class=KRCC>
+update APIs or presenting a different UX to devices with different features. So
+<SYNC Start=72730><P Class=KRCC>
+&nbsp;
+<SYNC Start=72731><P Class=KRCC>
+you need to balance the opportunity of expanding your audience with the cost of
+<SYNC Start=76360><P Class=KRCC>
+&nbsp;
+<SYNC Start=76361><P Class=KRCC>
+supporting those new users. Also, remember that each release introduced with it
+<SYNC Start=81480><P Class=KRCC>
+&nbsp;
+<SYNC Start=81481><P Class=KRCC>
+new APIs and hardware support. So it may not make sense to
+<SYNC Start=84900><P Class=KRCC>
+&nbsp;
+<SYNC Start=84901><P Class=KRCC>
+make your app available to devices that don't support your minimum feature set.
+<SYNC Start=88190><P Class=KRCC>
+&nbsp;
+<SYNC Start=89220><P Class=KRCC>
+By comparison, the Target SDK is not a high-pass filter.
+<SYNC Start=93430><P Class=KRCC>
+&nbsp;
+<SYNC Start=93431><P Class=KRCC>
+It's used only to declare which platform version you've tested on.
+<SYNC Start=96460><P Class=KRCC>
+&nbsp;
+<SYNC Start=97628><P Class=KRCC>
+An app targeted to a certain API will continue to be forward compatible on
+<SYNC Start=101060><P Class=KRCC>
+&nbsp;
+<SYNC Start=101061><P Class=KRCC>
+future releases. The platform uses the Target SDK values in case a future
+<SYNC Start=105650><P Class=KRCC>
+&nbsp;
+<SYNC Start=105651><P Class=KRCC>
+platform makes a significant change to expected behavior. This ensures your app
+<SYNC Start=110040><P Class=KRCC>
+&nbsp;
+<SYNC Start=110041><P Class=KRCC>
+doesn't break when a user's phone gets upgraded. If you're developing a new app,
+<SYNC Start=114620><P Class=KRCC>
+&nbsp;
+<SYNC Start=114621><P Class=KRCC>
+there's really no reason to target anything but the latest Android version. And
+<SYNC Start=118630><P Class=KRCC>
+&nbsp;
+<SYNC Start=118631><P Class=KRCC>
+once your app has been released, make it a point to update your Target SDK and
+<SYNC Start=122340><P Class=KRCC>
+&nbsp;
+<SYNC Start=122341><P Class=KRCC>
+test as soon as possible when new platform releases roll out so you can take
+<SYNC Start=126610><P Class=KRCC>
+&nbsp;
+<SYNC Start=126611><P Class=KRCC>
+advantage of every new platform optimization and improvement it has to offer.</BODY>
+</SAMI>

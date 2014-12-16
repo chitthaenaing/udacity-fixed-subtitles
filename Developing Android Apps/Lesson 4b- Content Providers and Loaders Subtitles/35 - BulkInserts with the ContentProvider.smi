@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=930><P Class=KRCC>
+All right. You're all done. Let's go
+<SYNC Start=4075><P Class=KRCC>
+&nbsp;
+<SYNC Start=4076><P Class=KRCC>
+over the solution to bulkInserts with the ContentProvider.
+<SYNC Start=6450><P Class=KRCC>
+&nbsp;
+<SYNC Start=8460><P Class=KRCC>
+While we cannot insert a vector directly, we can easily convert a vector into
+<SYNC Start=12710><P Class=KRCC>
+&nbsp;
+<SYNC Start=12711><P Class=KRCC>
+an array. Once we've done this, the
+<SYNC Start=15097><P Class=KRCC>
+&nbsp;
+<SYNC Start=15098><P Class=KRCC>
+the bulkInsert method will insert very efficiently. Now,
+<SYNC Start=18450><P Class=KRCC>
+&nbsp;
+<SYNC Start=18451><P Class=KRCC>
+our backend will update efficiently. But we
+<SYNC Start=21100><P Class=KRCC>
+&nbsp;
+<SYNC Start=21101><P Class=KRCC>
+really need a way to update the front
+<SYNC Start=22620><P Class=KRCC>
+&nbsp;
+<SYNC Start=22621><P Class=KRCC>
+end without introducing framerate jitter. Fortunately, Android
+<SYNC Start=26770><P Class=KRCC>
+&nbsp;
+<SYNC Start=26771><P Class=KRCC>
+offers a pattern for that known as Loaders.</BODY>
+</SAMI>

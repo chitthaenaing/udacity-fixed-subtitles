@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=230><P Class=KRCC>
+All right. We're just going to add a few more details to the app.
+<SYNC Start=3910><P Class=KRCC>
+&nbsp;
+<SYNC Start=3911><P Class=KRCC>
+We're going to implement a weather notification
+<SYNC Start=5860><P Class=KRCC>
+&nbsp;
+<SYNC Start=5861><P Class=KRCC>
+preference. We'll do this by adding a
+<SYNC Start=7760><P Class=KRCC>
+&nbsp;
+<SYNC Start=7761><P Class=KRCC>
+new preference to the app settings to turn off notifications. And then, use
+<SYNC Start=12240><P Class=KRCC>
+&nbsp;
+<SYNC Start=12241><P Class=KRCC>
+that preference to turn off the notification.
+<SYNC Start=14640><P Class=KRCC>
+&nbsp;
+<SYNC Start=14641><P Class=KRCC>
+Hint, you're going to want to use a CheckBoxPreference</BODY>
+</SAMI>

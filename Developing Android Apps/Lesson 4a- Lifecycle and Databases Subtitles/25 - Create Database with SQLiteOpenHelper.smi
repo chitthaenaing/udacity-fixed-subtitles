@@ -1,0 +1,238 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=220><P Class=KRCC>
+Now that's a contract. But we still don't have a database.
+<SYNC Start=5400><P Class=KRCC>
+&nbsp;
+<SYNC Start=5401><P Class=KRCC>
+Our database class will extend an Android class. SQLITEOpenHELPER.
+<SYNC Start=10960><P Class=KRCC>
+&nbsp;
+<SYNC Start=13910><P Class=KRCC>
+SQLITEOpenHELPER contains cool stuff to help us handle database versioning.
+<SYNC Start=18900><P Class=KRCC>
+&nbsp;
+<SYNC Start=18901><P Class=KRCC>
+As we make changes to our database in the future, it will help us modify our
+<SYNC Start=23280><P Class=KRCC>
+&nbsp;
+<SYNC Start=23281><P Class=KRCC>
+tables. For many apps, being able to upgrade to a new version without data loss
+<SYNC Start=28510><P Class=KRCC>
+&nbsp;
+<SYNC Start=28511><P Class=KRCC>
+is critical. Let's create a WeatherDBHelper class within the data package and
+<SYNC Start=34585><P Class=KRCC>
+&nbsp;
+<SYNC Start=34586><P Class=KRCC>
+have that extend SQLite Open Helper. [SOUND] We can add
+<SYNC Start=39732><P Class=KRCC>
+&nbsp;
+<SYNC Start=39733><P Class=KRCC>
+the required methods by hitting Ctrl+I.
+<SYNC Start=46711><P Class=KRCC>
+&nbsp;
+<SYNC Start=46712><P Class=KRCC>
+And we can override the constructor by hitting Ctrl+O. So now we can hard code
+<SYNC Start=51370><P Class=KRCC>
+&nbsp;
+<SYNC Start=51371><P Class=KRCC>
+these variables to constructor. Hard coding name to database name,
+<SYNC Start=56800><P Class=KRCC>
+&nbsp;
+<SYNC Start=56801><P Class=KRCC>
+our factory to null, and our version to database version.
+<SYNC Start=63600><P Class=KRCC>
+&nbsp;
+<SYNC Start=63601><P Class=KRCC>
+Now, you'll note I have made the database name public, and
+<SYNC Start=66410><P Class=KRCC>
+&nbsp;
+<SYNC Start=66411><P Class=KRCC>
+that's because we're going to use it in our tests in the future.
+<SYNC Start=69260><P Class=KRCC>
+&nbsp;
+<SYNC Start=69261><P Class=KRCC>
+Now you see we've got it on create and an onUpgrade method.
+<SYNC Start=72260><P Class=KRCC>
+&nbsp;
+<SYNC Start=72261><P Class=KRCC>
+In the OnCreate method, we're going to start by creating a string to build
+<SYNC Start=75700><P Class=KRCC>
+&nbsp;
+<SYNC Start=75701><P Class=KRCC>
+the weather entry table using data defined within the weather entry contract.
+<SYNC Start=80060><P Class=KRCC>
+&nbsp;
+<SYNC Start=80061><P Class=KRCC>
+Now I'm just going to add this comment, so you know where to go back and
+<SYNC Start=83100><P Class=KRCC>
+&nbsp;
+<SYNC Start=83101><P Class=KRCC>
+add the location entry stuff later. Since weather entry depends on
+<SYNC Start=86730><P Class=KRCC>
+&nbsp;
+<SYNC Start=86731><P Class=KRCC>
+location entry, I would normally write location entry first, but
+<SYNC Start=90100><P Class=KRCC>
+&nbsp;
+<SYNC Start=90101><P Class=KRCC>
+weather entry is pretty complicated. So I'd rather explain what we've done and
+<SYNC Start=94180><P Class=KRCC>
+&nbsp;
+<SYNC Start=94181><P Class=KRCC>
+leave location entry up to you. We're going to use raw SQL for
+<SYNC Start=98890><P Class=KRCC>
+&nbsp;
+<SYNC Start=98891><P Class=KRCC>
+our create table query, beginning with the table name from our contract.
+<SYNC Start=103510><P Class=KRCC>
+&nbsp;
+<SYNC Start=103511><P Class=KRCC>
+At this point, it's helpful to import WeatherContract.locationentry and
+<SYNC Start=107612><P Class=KRCC>
+&nbsp;
+<SYNC Start=107613><P Class=KRCC>
+weather entry. It makes our query so much easier to read. We'll start with
+<SYNC Start=111590><P Class=KRCC>
+&nbsp;
+<SYNC Start=111591><P Class=KRCC>
+our ID field, which we'll set as our primary key in an auto increment field.
+<SYNC Start=117130><P Class=KRCC>
+&nbsp;
+<SYNC Start=117131><P Class=KRCC>
+Note that integer is actually a signed value up to eight bytes long in SQLite.
+<SYNC Start=123060><P Class=KRCC>
+&nbsp;
+<SYNC Start=123061><P Class=KRCC>
+Using the auto increment feature doesn't do precisely what one might think.
+<SYNC Start=127370><P Class=KRCC>
+&nbsp;
+<SYNC Start=127371><P Class=KRCC>
+Setting up the ID is an integer primary key actually makes
+<SYNC Start=130800><P Class=KRCC>
+&nbsp;
+<SYNC Start=130801><P Class=KRCC>
+the value unique whenever you do an insert, but it may not always increment.
+<SYNC Start=135360><P Class=KRCC>
+&nbsp;
+<SYNC Start=135361><P Class=KRCC>
+It may reuse existing ID values of the records have been deleted.
+<SYNC Start=139400><P Class=KRCC>
+&nbsp;
+<SYNC Start=139401><P Class=KRCC>
+What autoincrement is really useful for, is if you're synchronizing data two
+<SYNC Start=143230><P Class=KRCC>
+&nbsp;
+<SYNC Start=143231><P Class=KRCC>
+ways with the server. But, we'll take advantage of it here because it makes data
+<SYNC Start=147160><P Class=KRCC>
+&nbsp;
+<SYNC Start=147161><P Class=KRCC>
+from our queries sort a bit more naturally because we insert them in the right
+<SYNC Start=150870><P Class=KRCC>
+&nbsp;
+<SYNC Start=150871><P Class=KRCC>
+order coming from the server. In general, we're using constraints on fields.
+<SYNC Start=155000><P Class=KRCC>
+&nbsp;
+<SYNC Start=155001><P Class=KRCC>
+In this case, not null. We do this because it allows the database to do much of
+<SYNC Start=159500><P Class=KRCC>
+&nbsp;
+<SYNC Start=159501><P Class=KRCC>
+our parameter validation for us. The tricky part about doing it this way,
+<SYNC Start=163510><P Class=KRCC>
+&nbsp;
+<SYNC Start=163511><P Class=KRCC>
+is that we don't get useful errors when these constraints fail, so
+<SYNC Start=166800><P Class=KRCC>
+&nbsp;
+<SYNC Start=166801><P Class=KRCC>
+it can be challenging to debug. We're using a human readable string for
+<SYNC Start=171240><P Class=KRCC>
+&nbsp;
+<SYNC Start=171241><P Class=KRCC>
+the date. There's no strong reason for or
+<SYNC Start=174330><P Class=KRCC>
+&nbsp;
+<SYNC Start=174331><P Class=KRCC>
+against this choice. We wanted to normalize the date to simplify our queries,
+<SYNC Start=178750><P Class=KRCC>
+&nbsp;
+<SYNC Start=178751><P Class=KRCC>
+and human readability simplifies debugging. The date comes from open weather in
+<SYNC Start=183400><P Class=KRCC>
+&nbsp;
+<SYNC Start=183401><P Class=KRCC>
+Unix time stamp format with some time information that we need to get rid of.
+<SYNC Start=187190><P Class=KRCC>
+&nbsp;
+<SYNC Start=188200><P Class=KRCC>
+I'm not going to cover every field. Real means floating point in SQL.
+<SYNC Start=193290><P Class=KRCC>
+&nbsp;
+<SYNC Start=193291><P Class=KRCC>
+It would have been fine to have used integer with fixed point math as well and
+<SYNC Start=197480><P Class=KRCC>
+&nbsp;
+<SYNC Start=197481><P Class=KRCC>
+some would argue that this would be faster, but
+<SYNC Start=199470><P Class=KRCC>
+&nbsp;
+<SYNC Start=199471><P Class=KRCC>
+real is more straight forward since we're storing floating point values. Now for
+<SYNC Start=204180><P Class=KRCC>
+&nbsp;
+<SYNC Start=204181><P Class=KRCC>
+the fun stuff, we're going to set up a loc key.
+<SYNC Start=206635><P Class=KRCC>
+&nbsp;
+<SYNC Start=206636><P Class=KRCC>
+It's a foreign key to the location entry table that you will be building.
+<SYNC Start=211410><P Class=KRCC>
+&nbsp;
+<SYNC Start=211411><P Class=KRCC>
+This causes SQLite to enforce the relationship between the tables.
+<SYNC Start=215930><P Class=KRCC>
+&nbsp;
+<SYNC Start=215931><P Class=KRCC>
+We cannot insert a weather entry when there is no corresponding location entry.
+<SYNC Start=221000><P Class=KRCC>
+&nbsp;
+<SYNC Start=221001><P Class=KRCC>
+And we cannot delete a location entry if there are still weather entries that
+<SYNC Start=224820><P Class=KRCC>
+&nbsp;
+<SYNC Start=224821><P Class=KRCC>
+depend on it. Cool stuff, right? One last constraint.
+<SYNC Start=229840><P Class=KRCC>
+&nbsp;
+<SYNC Start=229841><P Class=KRCC>
+Our date text plus location must be unique. On conflict, replace the data.
+<SYNC Start=236140><P Class=KRCC>
+&nbsp;
+<SYNC Start=236141><P Class=KRCC>
+This allows us to insert new data from the open weather EPI easily.
+<SYNC Start=240050><P Class=KRCC>
+&nbsp;
+<SYNC Start=240051><P Class=KRCC>
+Preserving existing keys and updating the value as the forecast changes.</BODY>
+</SAMI>

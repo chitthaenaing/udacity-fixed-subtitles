@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=100><P Class=KRCC>
+The solution to this question is ListPreference. When the setting
+<SYNC Start=4010><P Class=KRCC>
+&nbsp;
+<SYNC Start=4011><P Class=KRCC>
+is tapped, it presents a list of choices as a
+<SYNC Start=6070><P Class=KRCC>
+&nbsp;
+<SYNC Start=6071><P Class=KRCC>
+dialogue. When a user selects an option, it's saved into
+<SYNC Start=9470><P Class=KRCC>
+&nbsp;
+<SYNC Start=9471><P Class=KRCC>
+Shared Preferences. Here are the steps to do this. Within
+<SYNC Start=12645><P Class=KRCC>
+&nbsp;
+<SYNC Start=12646><P Class=KRCC>
+the pref_general.xml file we add a list preference. We give
+<SYNC Start=16190><P Class=KRCC>
+&nbsp;
+<SYNC Start=16191><P Class=KRCC>
+it a title, and this maps to the string temperature
+<SYNC Start=18970><P Class=KRCC>
+&nbsp;
+<SYNC Start=18971><P Class=KRCC>
+units. We also need to give it a key for
+<SYNC Start=21770><P Class=KRCC>
+&nbsp;
+<SYNC Start=21771><P Class=KRCC>
+the shared preferences. And so we specify that to be units.
+<SYNC Start=25600><P Class=KRCC>
+&nbsp;
+<SYNC Start=25601><P Class=KRCC>
+If there is no value in shared preferences, then it
+<SYNC Start=28310><P Class=KRCC>
+&nbsp;
+<SYNC Start=28311><P Class=KRCC>
+falls back to a default value of metric. The preference
+<SYNC Start=31950><P Class=KRCC>
+&nbsp;
+<SYNC Start=31951><P Class=KRCC>
+also wants to know the list of all possible values
+<SYNC Start=34870><P Class=KRCC>
+&nbsp;
+<SYNC Start=34871><P Class=KRCC>
+here. The two possible values are metric or imperial. So we
+<SYNC Start=38370><P Class=KRCC>
+&nbsp;
+<SYNC Start=38371><P Class=KRCC>
+pass those in as an array, into entry values. Now
+<SYNC Start=41580><P Class=KRCC>
+&nbsp;
+<SYNC Start=41581><P Class=KRCC>
+these are just constants for use within the logic of our
+<SYNC Start=44430><P Class=KRCC>
+&nbsp;
+<SYNC Start=44431><P Class=KRCC>
+app, these are not the user visible strings. So we
+<SYNC Start=47600><P Class=KRCC>
+&nbsp;
+<SYNC Start=47601><P Class=KRCC>
+need to create entries which is an array of user visible
+<SYNC Start=50880><P Class=KRCC>
+&nbsp;
+<SYNC Start=50881><P Class=KRCC>
+strings that maps to each one of these possible values. To
+<SYNC Start=54230><P Class=KRCC>
+&nbsp;
+<SYNC Start=54231><P Class=KRCC>
+have the temperature unit preference show up in the settings activity,
+<SYNC Start=57460><P Class=KRCC>
+&nbsp;
+<SYNC Start=57461><P Class=KRCC>
+we modify the on create method. We add this line of
+<SYNC Start=59970><P Class=KRCC>
+&nbsp;
+<SYNC Start=59971><P Class=KRCC>
+code for the temperature units setting. When the user makes a
+<SYNC Start=62640><P Class=KRCC>
+&nbsp;
+<SYNC Start=62641><P Class=KRCC>
+selection in the dialog, we set the preference summary to be
+<SYNC Start=65489><P Class=KRCC>
+&nbsp;
+<SYNC Start=65490><P Class=KRCC>
+the new value of either metric or imperial. Here, when we
+<SYNC Start=69570><P Class=KRCC>
+&nbsp;
+<SYNC Start=69571><P Class=KRCC>
+receive a high and low temperature, we read from shared preferences
+<SYNC Start=73110><P Class=KRCC>
+&nbsp;
+<SYNC Start=73111><P Class=KRCC>
+to know whether the temperature should be converted to imperial units or
+<SYNC Start=76200><P Class=KRCC>
+&nbsp;
+<SYNC Start=76201><P Class=KRCC>
+left as metric. Then we return the formatted string for display in
+<SYNC Start=80220><P Class=KRCC>
+&nbsp;
+<SYNC Start=80221><P Class=KRCC>
+the UI. That completes the code for saving the temperature unit setting.</BODY>
+</SAMI>

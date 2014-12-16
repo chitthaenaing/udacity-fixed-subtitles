@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=560><P Class=KRCC>
+So, Rato, what have we learned in this lesson?
+<SYNC Start=4070><P Class=KRCC>
+&nbsp;
+<SYNC Start=4071><P Class=KRCC>
+>> Well, I learned that I do not want to write
+<SYNC Start=6300><P Class=KRCC>
+&nbsp;
+<SYNC Start=6301><P Class=KRCC>
+databases and content providers. What did you learn in this lesson?
+<SYNC Start=10060><P Class=KRCC>
+&nbsp;
+<SYNC Start=10061><P Class=KRCC>
+>> Well, J unit tests are awesome, and building
+<SYNC Start=14440><P Class=KRCC>
+&nbsp;
+<SYNC Start=14441><P Class=KRCC>
+the back end framework of our apps is the
+<SYNC Start=16230><P Class=KRCC>
+&nbsp;
+<SYNC Start=16231><P Class=KRCC>
+most glorious of work. It's an absolutely vital part
+<SYNC Start=19270><P Class=KRCC>
+&nbsp;
+<SYNC Start=19271><P Class=KRCC>
+of creating a robust app with a great user experience.
+<SYNC Start=22480><P Class=KRCC>
+&nbsp;
+<SYNC Start=22481><P Class=KRCC>
+>> And I also learned that Dan cannot do an English accent.
+<SYNC Start=25715><P Class=KRCC>
+&nbsp;
+<SYNC Start=25716><P Class=KRCC>
+>> [SOUND]. Fortunately, you can get ready to welcome back Katherine
+<SYNC Start=29309><P Class=KRCC>
+&nbsp;
+<SYNC Start=29310><P Class=KRCC>
+for lesson 5, where we'll shatter our activity into fragments, use
+<SYNC Start=32912><P Class=KRCC>
+&nbsp;
+<SYNC Start=32913><P Class=KRCC>
+our content providers to populate more complex UIs, and build layouts
+<SYNC Start=36517><P Class=KRCC>
+&nbsp;
+<SYNC Start=36518><P Class=KRCC>
+that work as well on tablets as they do on phones.
+<SYNC Start=39900><P Class=KRCC>
+&nbsp;
+<SYNC Start=39901><P Class=KRCC>
+>> Which seems like a convenient segway
+<SYNC Start=42100><P Class=KRCC>
+&nbsp;
+<SYNC Start=42101><P Class=KRCC>
+into the history and evolution of Android hardware,</BODY>
+</SAMI>

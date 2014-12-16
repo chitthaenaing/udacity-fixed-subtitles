@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1120><P Class=KRCC>
+I'm Katherine Kwan, and I'm a developer advocate at Google. I started off by
+<SYNC Start=5340><P Class=KRCC>
+&nbsp;
+<SYNC Start=5341><P Class=KRCC>
+working as an engineer on the Android apps team. I worked there for
+<SYNC Start=9000><P Class=KRCC>
+&nbsp;
+<SYNC Start=9001><P Class=KRCC>
+three years on products like Google Play and Google Keep, the note taking app.
+<SYNC Start=13740><P Class=KRCC>
+&nbsp;
+<SYNC Start=15570><P Class=KRCC>
+I'm continually blown away by what you can build on this platform, and
+<SYNC Start=19244><P Class=KRCC>
+&nbsp;
+<SYNC Start=19245><P Class=KRCC>
+I'm particularly inspired by those apps that can truly improve people's lives.
+<SYNC Start=24590><P Class=KRCC>
+&nbsp;
+<SYNC Start=24591><P Class=KRCC>
+When I meet people, they often tell me about their great app ideas. But
+<SYNC Start=28470><P Class=KRCC>
+&nbsp;
+<SYNC Start=28471><P Class=KRCC>
+then they feel like they don't have the technical skills to actually build it.
+<SYNC Start=31420><P Class=KRCC>
+&nbsp;
+<SYNC Start=31421><P Class=KRCC>
+And that's why I shifted over to developer relations so
+<SYNC Start=35150><P Class=KRCC>
+&nbsp;
+<SYNC Start=35151><P Class=KRCC>
+I can help people like you really build something great. Throughout this course,
+<SYNC Start=40508><P Class=KRCC>
+&nbsp;
+<SYNC Start=40509><P Class=KRCC>
+I'll be helping you implement your very first app.
+<SYNC Start=42868><P Class=KRCC>
+&nbsp;
+<SYNC Start=42869><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=48544><P Class=KRCC>
+&nbsp;
+<SYNC Start=48545><P Class=KRCC>
+>> My name is Dan Gauthan. I've been a developer advocate at Google for
+<SYNC Start=52170><P Class=KRCC>
+&nbsp;
+<SYNC Start=52171><P Class=KRCC>
+four years and I've worn a lot of hats here. My goal is to keep us on track to
+<SYNC Start=56580><P Class=KRCC>
+&nbsp;
+<SYNC Start=56581><P Class=KRCC>
+make Sunshine, something that had some resemblance to a production quality app.
+<SYNC Start=60730><P Class=KRCC>
+&nbsp;
+<SYNC Start=60731><P Class=KRCC>
+I'll introduce Android design patterns and principles. Many of which are often
+<SYNC Start=64310><P Class=KRCC>
+&nbsp;
+<SYNC Start=64311><P Class=KRCC>
+missed by new Android developers. You'll learn to lean on the framework,
+<SYNC Start=68181><P Class=KRCC>
+&nbsp;
+<SYNC Start=68182><P Class=KRCC>
+focusing on what makes your app unique instead of reinventing the wheel.
+<SYNC Start=71565><P Class=KRCC>
+&nbsp;
+<SYNC Start=71566><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=77092><P Class=KRCC>
+&nbsp;
+<SYNC Start=77093><P Class=KRCC>
+>> I'm Rado Mya, and I've been a developer advocate at Google for five years.
+<SYNC Start=82820><P Class=KRCC>
+&nbsp;
+<SYNC Start=82821><P Class=KRCC>
+I started working on Androids so long ago that back then there were no devices.
+<SYNC Start=87700><P Class=KRCC>
+&nbsp;
+<SYNC Start=87701><P Class=KRCC>
+All we had to work with were an emulator, a beater SDK, and
+<SYNC Start=90940><P Class=KRCC>
+&nbsp;
+<SYNC Start=90941><P Class=KRCC>
+an almost fanatical devotion to the platform. I'll be joining you from here,
+<SYNC Start=95790><P Class=KRCC>
+&nbsp;
+<SYNC Start=95791><P Class=KRCC>
+my underground Android developer bunker, and my goal isn't to get you
+<SYNC Start=99500><P Class=KRCC>
+&nbsp;
+<SYNC Start=99501><P Class=KRCC>
+up an running as quickly as possible. It's to teach you the context behind
+<SYNC Start=102993><P Class=KRCC>
+&nbsp;
+<SYNC Start=102994><P Class=KRCC>
+the choices we'll make. And the best practices you need, to really understand
+<SYNC Start=107025><P Class=KRCC>
+&nbsp;
+<SYNC Start=107026><P Class=KRCC>
+how to create great experiences specifically tailored to mobile devices. By
+<SYNC Start=112000><P Class=KRCC>
+&nbsp;
+<SYNC Start=112001><P Class=KRCC>
+the time you finished this course you'll know more than just how to create yet
+<SYNC Start=114630><P Class=KRCC>
+&nbsp;
+<SYNC Start=114631><P Class=KRCC>
+another app. You'll know how to build great apps that focus on the user.</BODY>
+</SAMI>

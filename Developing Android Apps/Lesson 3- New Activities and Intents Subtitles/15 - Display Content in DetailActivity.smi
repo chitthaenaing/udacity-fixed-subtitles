@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+In the fragment detailed layout, a text view
+<SYNC Start=3660><P Class=KRCC>
+&nbsp;
+<SYNC Start=3661><P Class=KRCC>
+is already defined. We have to assign it an
+<SYNC Start=6160><P Class=KRCC>
+&nbsp;
+<SYNC Start=6161><P Class=KRCC>
+ID so that within the detail fragment of detail
+<SYNC Start=9200><P Class=KRCC>
+&nbsp;
+<SYNC Start=9201><P Class=KRCC>
+activity we can use find view by ID to
+<SYNC Start=12120><P Class=KRCC>
+&nbsp;
+<SYNC Start=12121><P Class=KRCC>
+find the text view. To determine the forecast
+<SYNC Start=15180><P Class=KRCC>
+&nbsp;
+<SYNC Start=15181><P Class=KRCC>
+info that the text view should display. We can
+<SYNC Start=18150><P Class=KRCC>
+&nbsp;
+<SYNC Start=18151><P Class=KRCC>
+access the intent that the detail activity was launched
+<SYNC Start=20770><P Class=KRCC>
+&nbsp;
+<SYNC Start=20771><P Class=KRCC>
+by. We're going to use this inside of onCreateView.
+<SYNC Start=25255><P Class=KRCC>
+&nbsp;
+<SYNC Start=25256><P Class=KRCC>
+[SOUND] Since we added an intent extra with the forecast
+<SYNC Start=30565><P Class=KRCC>
+&nbsp;
+<SYNC Start=30566><P Class=KRCC>
+data there. We can read that intent extra back to display in the text
+<SYNC Start=35461><P Class=KRCC>
+&nbsp;
+<SYNC Start=35462><P Class=KRCC>
+view, as you can see we pulled the forecast string from the
+<SYNC Start=39289><P Class=KRCC>
+&nbsp;
+<SYNC Start=39290><P Class=KRCC>
+intent find our rootView and then set the text to that forecast string</BODY>
+</SAMI>

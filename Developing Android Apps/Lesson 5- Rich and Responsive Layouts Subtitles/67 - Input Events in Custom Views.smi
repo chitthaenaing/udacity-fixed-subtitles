@@ -1,0 +1,102 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=650><P Class=KRCC>
+The final step in your custom view creation
+<SYNC Start=2960><P Class=KRCC>
+&nbsp;
+<SYNC Start=2961><P Class=KRCC>
+is adding interactivity. You can listen for user
+<SYNC Start=5860><P Class=KRCC>
+&nbsp;
+<SYNC Start=5861><P Class=KRCC>
+input events including key presses, trackball movement, and
+<SYNC Start=8790><P Class=KRCC>
+&nbsp;
+<SYNC Start=8791><P Class=KRCC>
+most importantly, screen touch events, all by overriding the
+<SYNC Start=12570><P Class=KRCC>
+&nbsp;
+<SYNC Start=12571><P Class=KRCC>
+corresponding event handlers. Android supports tracking of up
+<SYNC Start=15950><P Class=KRCC>
+&nbsp;
+<SYNC Start=15951><P Class=KRCC>
+to 11 individual contact points in what we
+<SYNC Start=18570><P Class=KRCC>
+&nbsp;
+<SYNC Start=18571><P Class=KRCC>
+like to call, jazz hands mode which enables
+<SYNC Start=21710><P Class=KRCC>
+&nbsp;
+<SYNC Start=21711><P Class=KRCC>
+you to complete complex and multi-finger interaction models. Now,
+<SYNC Start=25550><P Class=KRCC>
+&nbsp;
+<SYNC Start=25551><P Class=KRCC>
+there's really no interaction required for a wind gauge, but
+<SYNC Start=28400><P Class=KRCC>
+&nbsp;
+<SYNC Start=28401><P Class=KRCC>
+you can find out more about handling input events by checking
+<SYNC Start=31130><P Class=KRCC>
+&nbsp;
+<SYNC Start=31131><P Class=KRCC>
+the motion event docs or the developer guide describing how to
+<SYNC Start=34170><P Class=KRCC>
+&nbsp;
+<SYNC Start=34171><P Class=KRCC>
+create your own, fully interactive custom views, both from the [UNKNOWN]
+<SYNC Start=37890><P Class=KRCC>
+&nbsp;
+<SYNC Start=37891><P Class=KRCC>
+below. Now, be careful not to let this new found power
+<SYNC Start=41110><P Class=KRCC>
+&nbsp;
+<SYNC Start=41111><P Class=KRCC>
+go to your head. By definition, your users will have never
+<SYNC Start=44220><P Class=KRCC>
+&nbsp;
+<SYNC Start=44221><P Class=KRCC>
+encountered your brand spanking new control. So learning how to use
+<SYNC Start=47900><P Class=KRCC>
+&nbsp;
+<SYNC Start=47901><P Class=KRCC>
+it is going to add friction to the use of your app.
+<SYNC Start=50550><P Class=KRCC>
+&nbsp;
+<SYNC Start=50551><P Class=KRCC>
+At the very least, it should behave consistently with the rest of the system
+<SYNC Start=53650><P Class=KRCC>
+&nbsp;
+<SYNC Start=53651><P Class=KRCC>
+and you should avoid creating your own
+<SYNC Start=55310><P Class=KRCC>
+&nbsp;
+<SYNC Start=55311><P Class=KRCC>
+versions of system controls. If it looks kind of
+<SYNC Start=58680><P Class=KRCC>
+&nbsp;
+<SYNC Start=58681><P Class=KRCC>
+like a button and works kind of like a button, you should probably just go ahead
+<SYNC Start=63140><P Class=KRCC>
+&nbsp;
+<SYNC Start=63141><P Class=KRCC>
+and use a button, but I think this non sequitur has gone on long enough.</BODY>
+</SAMI>

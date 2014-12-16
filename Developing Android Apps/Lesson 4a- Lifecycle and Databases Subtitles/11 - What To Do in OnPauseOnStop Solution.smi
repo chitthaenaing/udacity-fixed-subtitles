@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=590><P Class=KRCC>
+Some good examples of answers include,
+<SYNC Start=2340><P Class=KRCC>
+&nbsp;
+<SYNC Start=2341><P Class=KRCC>
+sensor listeners, location updates, dynamic broadcast receivers. Or
+<SYNC Start=6990><P Class=KRCC>
+&nbsp;
+<SYNC Start=6991><P Class=KRCC>
+games physics engines. Any task that your application needs to keep happening,
+<SYNC Start=11940><P Class=KRCC>
+&nbsp;
+<SYNC Start=11941><P Class=KRCC>
+even when your activity is paused. Shouldn't really happen within an activity at
+<SYNC Start=15580><P Class=KRCC>
+&nbsp;
+<SYNC Start=15581><P Class=KRCC>
+all. We'll have a look at some solutions to that problem in lesson six.
+<SYNC Start=20680><P Class=KRCC>
+&nbsp;
+<SYNC Start=20681><P Class=KRCC>
+Keep in mind that when you're activity is paused,
+<SYNC Start=22700><P Class=KRCC>
+&nbsp;
+<SYNC Start=22701><P Class=KRCC>
+it's still visible. It's just obscured by something else, usually a dialog box.
+<SYNC Start=28140><P Class=KRCC>
+&nbsp;
+<SYNC Start=28141><P Class=KRCC>
+But it's not stopped. So, don't stop drawing your UI when you receive on pause</BODY>
+</SAMI>

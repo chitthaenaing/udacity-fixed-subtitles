@@ -1,0 +1,102 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=640><P Class=KRCC>
+If an app updates in the background, but no one
+<SYNC Start=2710><P Class=KRCC>
+&nbsp;
+<SYNC Start=2711><P Class=KRCC>
+opens it to find out, did it really happen? Notification
+<SYNC Start=6060><P Class=KRCC>
+&nbsp;
+<SYNC Start=6061><P Class=KRCC>
+started off as a convenient way to notify users of
+<SYNC Start=9040><P Class=KRCC>
+&nbsp;
+<SYNC Start=9041><P Class=KRCC>
+background updates. But they've grown to become a powerful standardized shortcut
+<SYNC Start=12780><P Class=KRCC>
+&nbsp;
+<SYNC Start=12781><P Class=KRCC>
+to interact directly with apps in a light weight way.
+<SYNC Start=15340><P Class=KRCC>
+&nbsp;
+<SYNC Start=15341><P Class=KRCC>
+Starting in Jelly Bean it was possible to expand notifications, making
+<SYNC Start=19080><P Class=KRCC>
+&nbsp;
+<SYNC Start=19081><P Class=KRCC>
+them larger and containing more information. That also introduced the
+<SYNC Start=22230><P Class=KRCC>
+&nbsp;
+<SYNC Start=22231><P Class=KRCC>
+concept of the rich notification, which is able to include actions
+<SYNC Start=25730><P Class=KRCC>
+&nbsp;
+<SYNC Start=25731><P Class=KRCC>
+like these, to be performed on the data
+<SYNC Start=27740><P Class=KRCC>
+&nbsp;
+<SYNC Start=27741><P Class=KRCC>
+included within the notification. This speeds up interaction and
+<SYNC Start=31390><P Class=KRCC>
+&nbsp;
+<SYNC Start=31391><P Class=KRCC>
+helps users streamline their notification triage experience. As a
+<SYNC Start=35060><P Class=KRCC>
+&nbsp;
+<SYNC Start=35061><P Class=KRCC>
+standardized UI designed specifically for conveying timely information in
+<SYNC Start=38890><P Class=KRCC>
+&nbsp;
+<SYNC Start=38891><P Class=KRCC>
+limited screen space. Notifications were the obvious mechanism
+<SYNC Start=42252><P Class=KRCC>
+&nbsp;
+<SYNC Start=42253><P Class=KRCC>
+to use, when Android expanded in to wearables with
+<SYNC Start=44800><P Class=KRCC>
+&nbsp;
+<SYNC Start=44801><P Class=KRCC>
+Android Wear. Suddenly those rich notifications that you designed
+<SYNC Start=48040><P Class=KRCC>
+&nbsp;
+<SYNC Start=48041><P Class=KRCC>
+for phones and tablets make your app wearable compatible,
+<SYNC Start=51240><P Class=KRCC>
+&nbsp;
+<SYNC Start=51241><P Class=KRCC>
+for free. Don't overdo it though, there's a fine line between
+<SYNC Start=54630><P Class=KRCC>
+&nbsp;
+<SYNC Start=54631><P Class=KRCC>
+useful and spammy. And it's only a couple of clicks for a
+<SYNC Start=57650><P Class=KRCC>
+&nbsp;
+<SYNC Start=57651><P Class=KRCC>
+user to disable your app's notifications
+<SYNC Start=59630><P Class=KRCC>
+&nbsp;
+<SYNC Start=59631><P Class=KRCC>
+permanently. So check out the instruction
+<SYNC Start=61450><P Class=KRCC>
+&nbsp;
+<SYNC Start=61451><P Class=KRCC>
+that's below for links to the design guide in creating good notifications.</BODY>
+</SAMI>

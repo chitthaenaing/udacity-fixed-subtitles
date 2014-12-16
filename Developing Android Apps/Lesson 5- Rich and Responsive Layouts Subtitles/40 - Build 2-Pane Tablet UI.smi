@@ -1,0 +1,374 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=60><P Class=KRCC>
+By taking the knowledge that we learned about overriding
+<SYNC Start=2670><P Class=KRCC>
+&nbsp;
+<SYNC Start=2671><P Class=KRCC>
+the resources in the other folders we'll walk through the
+<SYNC Start=5140><P Class=KRCC>
+&nbsp;
+<SYNC Start=5141><P Class=KRCC>
+code together on how to build up the two-pane tablet
+<SYNC Start=7911><P Class=KRCC>
+&nbsp;
+<SYNC Start=7912><P Class=KRCC>
+UI. First remove the values w820dp folder because we don't
+<SYNC Start=11800><P Class=KRCC>
+&nbsp;
+<SYNC Start=11801><P Class=KRCC>
+need to provide specific logic for where the current
+<SYNC Start=13790><P Class=KRCC>
+&nbsp;
+<SYNC Start=13791><P Class=KRCC>
+orientation is greater than 820 dp. Then go ahead and
+<SYNC Start=16930><P Class=KRCC>
+&nbsp;
+<SYNC Start=16931><P Class=KRCC>
+make the layout XML changes. Then create a new layout
+<SYNC Start=20265><P Class=KRCC>
+&nbsp;
+<SYNC Start=20266><P Class=KRCC>
+swe600dp folder, and then add a new file called activity_main.
+<SYNC Start=25620><P Class=KRCC>
+&nbsp;
+<SYNC Start=25621><P Class=KRCC>
+We use the same file and name as in
+<SYNC Start=28070><P Class=KRCC>
+&nbsp;
+<SYNC Start=28071><P Class=KRCC>
+the base layout folder activity_main, so that this one
+<SYNC Start=31520><P Class=KRCC>
+&nbsp;
+<SYNC Start=31521><P Class=KRCC>
+overrides the behavior, specifically on tablets. To see the
+<SYNC Start=35140><P Class=KRCC>
+&nbsp;
+<SYNC Start=35141><P Class=KRCC>
+code for this file, you can check out the gist
+<SYNC Start=37849><P Class=KRCC>
+&nbsp;
+<SYNC Start=37850><P Class=KRCC>
+below. Essentially it's a horizontal linear layout that can
+<SYNC Start=41320><P Class=KRCC>
+&nbsp;
+<SYNC Start=41321><P Class=KRCC>
+hold forecast fragment on the left, and the detail fragment
+<SYNC Start=44880><P Class=KRCC>
+&nbsp;
+<SYNC Start=44881><P Class=KRCC>
+on the right. Now's a good time to talk
+<SYNC Start=47120><P Class=KRCC>
+&nbsp;
+<SYNC Start=47121><P Class=KRCC>
+about static versus dynamic fragments. In our implementation, the forecast
+<SYNC Start=50970><P Class=KRCC>
+&nbsp;
+<SYNC Start=50971><P Class=KRCC>
+fragment is a static fragment because we're defining it the XML
+<SYNC Start=53940><P Class=KRCC>
+&nbsp;
+<SYNC Start=53941><P Class=KRCC>
+layout. No matter what orientation or device size, we know that
+<SYNC Start=56980><P Class=KRCC>
+&nbsp;
+<SYNC Start=56981><P Class=KRCC>
+we're going to need a forecast fragment in the main activity. On
+<SYNC Start=59550><P Class=KRCC>
+&nbsp;
+<SYNC Start=59551><P Class=KRCC>
+the other hand, we only need to declare a container for
+<SYNC Start=61776><P Class=KRCC>
+&nbsp;
+<SYNC Start=61777><P Class=KRCC>
+the detail fragment, but not the actual fragment. It's initialized with
+<SYNC Start=66080><P Class=KRCC>
+&nbsp;
+<SYNC Start=66081><P Class=KRCC>
+different arguments each time, as a dynamic fragment, so it's better
+<SYNC Start=69440><P Class=KRCC>
+&nbsp;
+<SYNC Start=69441><P Class=KRCC>
+to dynamically create and add that fragment in a fragment transaction
+<SYNC Start=72820><P Class=KRCC>
+&nbsp;
+<SYNC Start=72821><P Class=KRCC>
+in the main activity Java code. That way the fragment manager
+<SYNC Start=76030><P Class=KRCC>
+&nbsp;
+<SYNC Start=76031><P Class=KRCC>
+can keep track of those initialization arguments and pass those
+<SYNC Start=79800><P Class=KRCC>
+&nbsp;
+<SYNC Start=79801><P Class=KRCC>
+back to us after device rotation. Then we need to update
+<SYNC Start=83750><P Class=KRCC>
+&nbsp;
+<SYNC Start=83751><P Class=KRCC>
+the one pane UI layouts so that they are consistent with
+<SYNC Start=86820><P Class=KRCC>
+&nbsp;
+<SYNC Start=86821><P Class=KRCC>
+the two pane case. So in the activity_main file for the
+<SYNC Start=89840><P Class=KRCC>
+&nbsp;
+<SYNC Start=89841><P Class=KRCC>
+base layout folder, this used to be a frame layout. We're
+<SYNC Start=92820><P Class=KRCC>
+&nbsp;
+<SYNC Start=92821><P Class=KRCC>
+going to declare it as a forecast fragment, that way it will
+<SYNC Start=95640><P Class=KRCC>
+&nbsp;
+<SYNC Start=95641><P Class=KRCC>
+match the two pin UI where this is also declared as
+<SYNC Start=98160><P Class=KRCC>
+&nbsp;
+<SYNC Start=98161><P Class=KRCC>
+a fragment in the XML. That way the main activity never
+<SYNC Start=101120><P Class=KRCC>
+&nbsp;
+<SYNC Start=101121><P Class=KRCC>
+has to worry about dynamically adding the forecast fragment.
+<SYNC Start=104740><P Class=KRCC>
+&nbsp;
+<SYNC Start=104741><P Class=KRCC>
+And the main activity onCreate view method, since the
+<SYNC Start=107540><P Class=KRCC>
+&nbsp;
+<SYNC Start=107541><P Class=KRCC>
+fragment is already inside this layout we can just
+<SYNC Start=109930><P Class=KRCC>
+&nbsp;
+<SYNC Start=109931><P Class=KRCC>
+remove this so we don't dynamically add it again. Similar,
+<SYNC Start=113370><P Class=KRCC>
+&nbsp;
+<SYNC Start=113371><P Class=KRCC>
+we've modified the activity_detail layout in the base layout
+<SYNC Start=116660><P Class=KRCC>
+&nbsp;
+<SYNC Start=116661><P Class=KRCC>
+folder. We change the frame that ID, to be
+<SYNC Start=119510><P Class=KRCC>
+&nbsp;
+<SYNC Start=119511><P Class=KRCC>
+weather detail container; so that it matches the container
+<SYNC Start=122340><P Class=KRCC>
+&nbsp;
+<SYNC Start=122341><P Class=KRCC>
+view ID in the two pane UI case,. The pattern
+<SYNC Start=126130><P Class=KRCC>
+&nbsp;
+<SYNC Start=126131><P Class=KRCC>
+here is that the detail fragment will always be
+<SYNC Start=128220><P Class=KRCC>
+&nbsp;
+<SYNC Start=128221><P Class=KRCC>
+added to a container called weather_detail_container, both in the two
+<SYNC Start=131770><P Class=KRCC>
+&nbsp;
+<SYNC Start=131771><P Class=KRCC>
+pane and one pane case. Since we changed the name
+<SYNC Start=134710><P Class=KRCC>
+&nbsp;
+<SYNC Start=134711><P Class=KRCC>
+of the container we should also update the DetailActivity. This
+<SYNC Start=138120><P Class=KRCC>
+&nbsp;
+<SYNC Start=138121><P Class=KRCC>
+is only used in one pane mode. Here's where we
+<SYNC Start=140500><P Class=KRCC>
+&nbsp;
+<SYNC Start=140501><P Class=KRCC>
+change the container name. In the one pane mode, the
+<SYNC Start=144055><P Class=KRCC>
+&nbsp;
+<SYNC Start=144056><P Class=KRCC>
+DetailActivity will add the DetailFragment, dynamically to this container. After
+<SYNC Start=148580><P Class=KRCC>
+&nbsp;
+<SYNC Start=148581><P Class=KRCC>
+we modify the layout we should update the main activities,
+<SYNC Start=151650><P Class=KRCC>
+&nbsp;
+<SYNC Start=151651><P Class=KRCC>
+that we dynamically add the DetailFragment. In the MainActivity
+<SYNC Start=155527><P Class=KRCC>
+&nbsp;
+<SYNC Start=155528><P Class=KRCC>
+onCreate method, we check for the presence of the weather_detail_container
+<SYNC Start=159250><P Class=KRCC>
+&nbsp;
+<SYNC Start=159251><P Class=KRCC>
+in the layout to know whether this is a two
+<SYNC Start=161350><P Class=KRCC>
+&nbsp;
+<SYNC Start=161351><P Class=KRCC>
+pane UI or not. We keep track of this information
+<SYNC Start=164360><P Class=KRCC>
+&nbsp;
+<SYNC Start=164361><P Class=KRCC>
+in a bullion called mTwoPane. Remember that we start with
+<SYNC Start=167490><P Class=KRCC>
+&nbsp;
+<SYNC Start=167491><P Class=KRCC>
+the letter M because it's a member variable. In this
+<SYNC Start=170020><P Class=KRCC>
+&nbsp;
+<SYNC Start=170021><P Class=KRCC>
+case, the bullion should be true. So we go ahead
+<SYNC Start=172480><P Class=KRCC>
+&nbsp;
+<SYNC Start=172481><P Class=KRCC>
+and create a DetailFragment and add it to the weather_detail_container.
+<SYNC Start=176570><P Class=KRCC>
+&nbsp;
+<SYNC Start=176571><P Class=KRCC>
+We commit the change by using a fragment transaction, which
+<SYNC Start=179690><P Class=KRCC>
+&nbsp;
+<SYNC Start=179691><P Class=KRCC>
+Rato introduced earlier. Otherwise, if the detail container is not
+<SYNC Start=183120><P Class=KRCC>
+&nbsp;
+<SYNC Start=183121><P Class=KRCC>
+present in the layout, then the boolean should be false,
+<SYNC Start=186320><P Class=KRCC>
+&nbsp;
+<SYNC Start=186321><P Class=KRCC>
+meaning that this is a one pane UI for phones.
+<SYNC Start=189210><P Class=KRCC>
+&nbsp;
+<SYNC Start=189211><P Class=KRCC>
+In this case, the detail activity will handle showing the
+<SYNC Start=191830><P Class=KRCC>
+&nbsp;
+<SYNC Start=191831><P Class=KRCC>
+detail fragment. Notice for the two pane case that we
+<SYNC Start=195080><P Class=KRCC>
+&nbsp;
+<SYNC Start=195081><P Class=KRCC>
+check, if the savedInstanceState bundle is null. If the savedInstanceState
+<SYNC Start=199060><P Class=KRCC>
+&nbsp;
+<SYNC Start=199061><P Class=KRCC>
+bundle is not null, then we don't create a new one.
+<SYNC Start=201830><P Class=KRCC>
+&nbsp;
+<SYNC Start=201831><P Class=KRCC>
+And here's the reason why. Say, you want to rotate
+<SYNC Start=204170><P Class=KRCC>
+&nbsp;
+<SYNC Start=204171><P Class=KRCC>
+the device. Before the activity and fragments get torn down,
+<SYNC Start=207760><P Class=KRCC>
+&nbsp;
+<SYNC Start=207761><P Class=KRCC>
+we store information in saved state bundles. Then after the
+<SYNC Start=211070><P Class=KRCC>
+&nbsp;
+<SYNC Start=211071><P Class=KRCC>
+orientation change, the system restores the activity and the fragments
+<SYNC Start=215220><P Class=KRCC>
+&nbsp;
+<SYNC Start=215221><P Class=KRCC>
+by passing back the same bundle so that it can
+<SYNC Start=217480><P Class=KRCC>
+&nbsp;
+<SYNC Start=217481><P Class=KRCC>
+be re-created with the same state. That means if the
+<SYNC Start=220560><P Class=KRCC>
+&nbsp;
+<SYNC Start=220561><P Class=KRCC>
+bundle exists then we should let the system handle restoring
+<SYNC Start=223670><P Class=KRCC>
+&nbsp;
+<SYNC Start=223671><P Class=KRCC>
+the detail fragment and we can skip this code. Once the
+<SYNC Start=226840><P Class=KRCC>
+&nbsp;
+<SYNC Start=226841><P Class=KRCC>
+detail fragment is added dynamically make it show some placeholder
+<SYNC Start=230260><P Class=KRCC>
+&nbsp;
+<SYNC Start=230261><P Class=KRCC>
+data just for testing purposes. Later we'll plumb through the right
+<SYNC Start=233910><P Class=KRCC>
+&nbsp;
+<SYNC Start=233911><P Class=KRCC>
+logic so that it can display the right information for
+<SYNC Start=236580><P Class=KRCC>
+&nbsp;
+<SYNC Start=236581><P Class=KRCC>
+the selected date on the left. Modify the DetailFragment so that
+<SYNC Start=240060><P Class=KRCC>
+&nbsp;
+<SYNC Start=240061><P Class=KRCC>
+it doesn't expect the incoming intent to have the DATE_KEY.
+<SYNC Start=243800><P Class=KRCC>
+&nbsp;
+<SYNC Start=243801><P Class=KRCC>
+In this case it doesn't start the loader, which is fine,
+<SYNC Start=246320><P Class=KRCC>
+&nbsp;
+<SYNC Start=246321><P Class=KRCC>
+and it just falls back to some placeholder data that we
+<SYNC Start=248730><P Class=KRCC>
+&nbsp;
+<SYNC Start=248731><P Class=KRCC>
+have in our XML. The same goes for the onResume method.
+<SYNC Start=252310><P Class=KRCC>
+&nbsp;
+<SYNC Start=252311><P Class=KRCC>
+We don't restart the loader if the intent is blank.
+<SYNC Start=255670><P Class=KRCC>
+&nbsp;
+<SYNC Start=255671><P Class=KRCC>
+The reason the Intent could be blank, is because the detail
+<SYNC Start=258550><P Class=KRCC>
+&nbsp;
+<SYNC Start=258551><P Class=KRCC>
+fragment can now exist within the main activity. So the main
+<SYNC Start=262360><P Class=KRCC>
+&nbsp;
+<SYNC Start=262361><P Class=KRCC>
+activity doesn't have the same Intent key, that the DetailActivity was
+<SYNC Start=265650><P Class=KRCC>
+&nbsp;
+<SYNC Start=265651><P Class=KRCC>
+launched with. Once you make the changes for the wireframes,
+<SYNC Start=269060><P Class=KRCC>
+&nbsp;
+<SYNC Start=269061><P Class=KRCC>
+this is what the app should look like. The reason it
+<SYNC Start=271050><P Class=KRCC>
+&nbsp;
+<SYNC Start=271051><P Class=KRCC>
+doesn't show an icon here is because we removed the icon
+<SYNC Start=274680><P Class=KRCC>
+&nbsp;
+<SYNC Start=274681><P Class=KRCC>
+from being hardcoded in the layout. But once this data's populated
+<SYNC Start=277810><P Class=KRCC>
+&nbsp;
+<SYNC Start=277811><P Class=KRCC>
+dynamically in a later section, it should show up again.</BODY>
+</SAMI>

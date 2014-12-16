@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+If you run it on your phone, your Apple crashed
+<SYNC Start=2830><P Class=KRCC>
+&nbsp;
+<SYNC Start=2831><P Class=KRCC>
+because of a network got main thread exception. We found
+<SYNC Start=6270><P Class=KRCC>
+&nbsp;
+<SYNC Start=6271><P Class=KRCC>
+this answer by connecting our device to our computer and
+<SYNC Start=8990><P Class=KRCC>
+&nbsp;
+<SYNC Start=8991><P Class=KRCC>
+then checking Android device monitor for the error. You can
+<SYNC Start=12790><P Class=KRCC>
+&nbsp;
+<SYNC Start=12791><P Class=KRCC>
+see here that this is our package name and this
+<SYNC Start=15220><P Class=KRCC>
+&nbsp;
+<SYNC Start=15221><P Class=KRCC>
+is our process ID. If you search the logs for
+<SYNC Start=18010><P Class=KRCC>
+&nbsp;
+<SYNC Start=18011><P Class=KRCC>
+that process ID then our error appears. It's triggered ultimately
+<SYNC Start=22390><P Class=KRCC>
+&nbsp;
+<SYNC Start=22391><P Class=KRCC>
+by a network on main thread exception. If you're curious
+<SYNC Start=25700><P Class=KRCC>
+&nbsp;
+<SYNC Start=25701><P Class=KRCC>
+as to what line of our code actually caused
+<SYNC Start=28560><P Class=KRCC>
+&nbsp;
+<SYNC Start=28561><P Class=KRCC>
+this, you can scroll down the stack trace to
+<SYNC Start=30730><P Class=KRCC>
+&nbsp;
+<SYNC Start=30731><P Class=KRCC>
+read more. This is our framework code that you
+<SYNC Start=33940><P Class=KRCC>
+&nbsp;
+<SYNC Start=33941><P Class=KRCC>
+can skip and here's where it actually hits our
+<SYNC Start=36570><P Class=KRCC>
+&nbsp;
+<SYNC Start=36571><P Class=KRCC>
+app. It's within the placeholder fragment class, in the onCreateView method. And
+<SYNC Start=41440><P Class=KRCC>
+&nbsp;
+<SYNC Start=41441><P Class=KRCC>
+it happens in main activity.java file, in line 116. So
+<SYNC Start=46680><P Class=KRCC>
+&nbsp;
+<SYNC Start=46681><P Class=KRCC>
+if we go back to the code, on that line you can see that urlConnection.connect
+<SYNC Start=51650><P Class=KRCC>
+&nbsp;
+<SYNC Start=51651><P Class=KRCC>
+actually caused the error, and that we can't do that on the main thread.</BODY>
+</SAMI>

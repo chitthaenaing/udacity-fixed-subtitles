@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=260><P Class=KRCC>
+You could register a listener for the action power connected
+<SYNC Start=3220><P Class=KRCC>
+&nbsp;
+<SYNC Start=3221><P Class=KRCC>
+event and you should do that within your manifest. That
+<SYNC Start=6630><P Class=KRCC>
+&nbsp;
+<SYNC Start=6631><P Class=KRCC>
+way, it can be called to start your app once
+<SYNC Start=8420><P Class=KRCC>
+&nbsp;
+<SYNC Start=8421><P Class=KRCC>
+the device is getting charged, even if it's been terminated since
+<SYNC Start=11190><P Class=KRCC>
+&nbsp;
+<SYNC Start=11191><P Class=KRCC>
+the last time you were using it. You can use
+<SYNC Start=13200><P Class=KRCC>
+&nbsp;
+<SYNC Start=13201><P Class=KRCC>
+a similar approach to delay trying to send data until the
+<SYNC Start=15830><P Class=KRCC>
+&nbsp;
+<SYNC Start=15831><P Class=KRCC>
+device has internet connectivity. Would it change behavior of the
+<SYNC Start=19270><P Class=KRCC>
+&nbsp;
+<SYNC Start=19271><P Class=KRCC>
+user experience when you're connected to a car or desk dock?</BODY>
+</SAMI>

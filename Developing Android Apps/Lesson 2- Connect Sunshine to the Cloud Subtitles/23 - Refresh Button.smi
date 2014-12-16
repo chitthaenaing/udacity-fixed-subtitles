@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=220><P Class=KRCC>
+Since the fetch weather task is in the fragment, the
+<SYNC Start=2890><P Class=KRCC>
+&nbsp;
+<SYNC Start=2891><P Class=KRCC>
+menu option to trigger that task should be inside the fragment
+<SYNC Start=5930><P Class=KRCC>
+&nbsp;
+<SYNC Start=5931><P Class=KRCC>
+too. That means we should create a new menu layout
+<SYNC Start=8320><P Class=KRCC>
+&nbsp;
+<SYNC Start=8321><P Class=KRCC>
+for the fragment and we'll call it forecastfragment.xml. The file will
+<SYNC Start=12390><P Class=KRCC>
+&nbsp;
+<SYNC Start=12391><P Class=KRCC>
+live within the menu folder under the Resources directory. Inside
+<SYNC Start=15770><P Class=KRCC>
+&nbsp;
+<SYNC Start=15771><P Class=KRCC>
+that file, we'll declare the new menu option for refresh and
+<SYNC Start=19200><P Class=KRCC>
+&nbsp;
+<SYNC Start=19201><P Class=KRCC>
+give it this menu item ID. We'll also need to define
+<SYNC Start=22140><P Class=KRCC>
+&nbsp;
+<SYNC Start=22141><P Class=KRCC>
+a string label for this word, Refresh. We're taking this one
+<SYNC Start=25290><P Class=KRCC>
+&nbsp;
+<SYNC Start=25291><P Class=KRCC>
+step at a time, so just make the menu xml
+<SYNC Start=27440><P Class=KRCC>
+&nbsp;
+<SYNC Start=27441><P Class=KRCC>
+file change in this exercise. If you compile and run
+<SYNC Start=30250><P Class=KRCC>
+&nbsp;
+<SYNC Start=30251><P Class=KRCC>
+the app, there'll be no visible change. It won't show
+<SYNC Start=33060><P Class=KRCC>
+&nbsp;
+<SYNC Start=33061><P Class=KRCC>
+up on the device yet because we haven't inflated the menu
+<SYNC Start=35500><P Class=KRCC>
+&nbsp;
+<SYNC Start=35501><P Class=KRCC>
+item. Inflating it will be in the coding test after
+<SYNC Start=38270><P Class=KRCC>
+&nbsp;
+<SYNC Start=38271><P Class=KRCC>
+this. See how the menu main.xml is implemented as an
+<SYNC Start=41550><P Class=KRCC>
+&nbsp;
+<SYNC Start=41551><P Class=KRCC>
+example. For an additional hint, see the menu training guide
+<SYNC Start=44860><P Class=KRCC>
+&nbsp;
+<SYNC Start=44861><P Class=KRCC>
+below. When you're done, you can click on this box here.</BODY>
+</SAMI>

@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=360><P Class=KRCC>
+Once the Detail Activity is launched, it shows Hello World. Instead,
+<SYNC Start=4650><P Class=KRCC>
+&nbsp;
+<SYNC Start=4651><P Class=KRCC>
+we want to read the forecast data from the Intent, and display
+<SYNC Start=8670><P Class=KRCC>
+&nbsp;
+<SYNC Start=8671><P Class=KRCC>
+it. Make the appropriate changes in the app, so it matches
+<SYNC Start=12171><P Class=KRCC>
+&nbsp;
+<SYNC Start=12172><P Class=KRCC>
+the mocks. Then, verify the behavior by compiling and running the app.</BODY>
+</SAMI>

@@ -1,0 +1,422 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=240><P Class=KRCC>
+Let's take a look at what it will
+<SYNC Start=1350><P Class=KRCC>
+&nbsp;
+<SYNC Start=1351><P Class=KRCC>
+take to implement a very basic SyncAdapter. We're going
+<SYNC Start=5630><P Class=KRCC>
+&nbsp;
+<SYNC Start=5631><P Class=KRCC>
+to write two services. Each service serves the primary
+<SYNC Start=9430><P Class=KRCC>
+&nbsp;
+<SYNC Start=9431><P Class=KRCC>
+purpose of delivering an object that represents an Android
+<SYNC Start=12530><P Class=KRCC>
+&nbsp;
+<SYNC Start=12531><P Class=KRCC>
+Binder interface to one of the system frameworks.
+<SYNC Start=15780><P Class=KRCC>
+&nbsp;
+<SYNC Start=15781><P Class=KRCC>
+A Binder is actually the low-level glue that implements
+<SYNC Start=19400><P Class=KRCC>
+&nbsp;
+<SYNC Start=19401><P Class=KRCC>
+cross process communication in Android. You've been using Binders
+<SYNC Start=23400><P Class=KRCC>
+&nbsp;
+<SYNC Start=23401><P Class=KRCC>
+every time you talk to an Android system service.
+<SYNC Start=26750><P Class=KRCC>
+&nbsp;
+<SYNC Start=26751><P Class=KRCC>
+Intents and content providers are just high-level abstractions on
+<SYNC Start=30520><P Class=KRCC>
+&nbsp;
+<SYNC Start=30521><P Class=KRCC>
+top of the Binder interface. There's a whole language known
+<SYNC Start=33600><P Class=KRCC>
+&nbsp;
+<SYNC Start=33601><P Class=KRCC>
+as AIDL to help define these interfaces. We're not
+<SYNC Start=37290><P Class=KRCC>
+&nbsp;
+<SYNC Start=37291><P Class=KRCC>
+going to cover all this here, but there's a lot
+<SYNC Start=39710><P Class=KRCC>
+&nbsp;
+<SYNC Start=39711><P Class=KRCC>
+more you can do with services and Binders. One
+<SYNC Start=42620><P Class=KRCC>
+&nbsp;
+<SYNC Start=42621><P Class=KRCC>
+more thing before we start, we're going to define an
+<SYNC Start=45370><P Class=KRCC>
+&nbsp;
+<SYNC Start=45371><P Class=KRCC>
+Authenticator Service and an Authenticator. But it will only
+<SYNC Start=48960><P Class=KRCC>
+&nbsp;
+<SYNC Start=48961><P Class=KRCC>
+be used by the Android accounts framework to allow us
+<SYNC Start=51780><P Class=KRCC>
+&nbsp;
+<SYNC Start=51781><P Class=KRCC>
+to create an account. SyncAdaptor's need an account.
+<SYNC Start=55320><P Class=KRCC>
+&nbsp;
+<SYNC Start=55321><P Class=KRCC>
+And the account framework requires that there be
+<SYNC Start=57300><P Class=KRCC>
+&nbsp;
+<SYNC Start=57301><P Class=KRCC>
+an authenticator delivered by an authenticator Service. You'll
+<SYNC Start=60780><P Class=KRCC>
+&nbsp;
+<SYNC Start=60781><P Class=KRCC>
+see that our authenticator is just a series
+<SYNC Start=62890><P Class=KRCC>
+&nbsp;
+<SYNC Start=62891><P Class=KRCC>
+of stubs, with exceptions that get thrown for
+<SYNC Start=65250><P Class=KRCC>
+&nbsp;
+<SYNC Start=65251><P Class=KRCC>
+each call just to prove that it isn't
+<SYNC Start=67290><P Class=KRCC>
+&nbsp;
+<SYNC Start=67291><P Class=KRCC>
+really used. One final note. This section approximately
+<SYNC Start=72210><P Class=KRCC>
+&nbsp;
+<SYNC Start=72211><P Class=KRCC>
+follows the online training at developer.android.com around sync adapters.
+<SYNC Start=78060><P Class=KRCC>
+&nbsp;
+<SYNC Start=78061><P Class=KRCC>
+Feel free to look there if you have
+<SYNC Start=79860><P Class=KRCC>
+&nbsp;
+<SYNC Start=79861><P Class=KRCC>
+any more questions. We're going to create a new
+<SYNC Start=82680><P Class=KRCC>
+&nbsp;
+<SYNC Start=82681><P Class=KRCC>
+package, sync, to house all of this goodness.
+<SYNC Start=87550><P Class=KRCC>
+&nbsp;
+<SYNC Start=87551><P Class=KRCC>
+And a new class file for our authenticator. This
+<SYNC Start=91210><P Class=KRCC>
+&nbsp;
+<SYNC Start=91211><P Class=KRCC>
+code that we're about to paste in really
+<SYNC Start=93200><P Class=KRCC>
+&nbsp;
+<SYNC Start=93201><P Class=KRCC>
+just comes from the developer.android.com website, and as I
+<SYNC Start=96920><P Class=KRCC>
+&nbsp;
+<SYNC Start=96921><P Class=KRCC>
+mentioned earlier it's just a stub. You can tell
+<SYNC Start=100660><P Class=KRCC>
+&nbsp;
+<SYNC Start=100661><P Class=KRCC>
+because we throw exceptions for calling any of the
+<SYNC Start=103100><P Class=KRCC>
+&nbsp;
+<SYNC Start=103101><P Class=KRCC>
+functions except for the constructor. And one
+<SYNC Start=106970><P Class=KRCC>
+&nbsp;
+<SYNC Start=106971><P Class=KRCC>
+more file. Create SunshineAuthenticatorService. This is more code
+<SYNC Start=111830><P Class=KRCC>
+&nbsp;
+<SYNC Start=111831><P Class=KRCC>
+that is written for us. It allows
+<SYNC Start=114170><P Class=KRCC>
+&nbsp;
+<SYNC Start=114171><P Class=KRCC>
+the account manager to access the empty authenticator
+<SYNC Start=117260><P Class=KRCC>
+&nbsp;
+<SYNC Start=117261><P Class=KRCC>
+that we just pasted in. Now we add the account type in our strings.xml. The
+<SYNC Start=123430><P Class=KRCC>
+&nbsp;
+<SYNC Start=123431><P Class=KRCC>
+account type string suggests that it is specific
+<SYNC Start=125920><P Class=KRCC>
+&nbsp;
+<SYNC Start=125921><P Class=KRCC>
+to our app. If we had many applications
+<SYNC Start=128820><P Class=KRCC>
+&nbsp;
+<SYNC Start=128821><P Class=KRCC>
+using the same account, we might want
+<SYNC Start=131400><P Class=KRCC>
+&nbsp;
+<SYNC Start=131401><P Class=KRCC>
+to create just an example.com account. We'll also
+<SYNC Start=134610><P Class=KRCC>
+&nbsp;
+<SYNC Start=134611><P Class=KRCC>
+begin to clean things up and add
+<SYNC Start=136140><P Class=KRCC>
+&nbsp;
+<SYNC Start=136141><P Class=KRCC>
+a content authority string. Note that this matches
+<SYNC Start=139370><P Class=KRCC>
+&nbsp;
+<SYNC Start=139371><P Class=KRCC>
+our content provider string. We'll fix the XML file later so they both use
+<SYNC Start=144390><P Class=KRCC>
+&nbsp;
+<SYNC Start=144391><P Class=KRCC>
+this same string. We create a new XML resource file, filename
+<SYNC Start=149081><P Class=KRCC>
+&nbsp;
+<SYNC Start=149082><P Class=KRCC>
+authenticator.xml, with root element account-authenticator.
+<SYNC Start=154950><P Class=KRCC>
+&nbsp;
+<SYNC Start=154951><P Class=KRCC>
+And you probably noticed that SunshineAuthenticatorService is
+<SYNC Start=158620><P Class=KRCC>
+&nbsp;
+<SYNC Start=158621><P Class=KRCC>
+actually a service that needs to be registered
+<SYNC Start=160680><P Class=KRCC>
+&nbsp;
+<SYNC Start=160681><P Class=KRCC>
+with a package manager in AndroidManifest.xml. Here's
+<SYNC Start=164810><P Class=KRCC>
+&nbsp;
+<SYNC Start=164811><P Class=KRCC>
+some more pasty goodness that does just that.
+<SYNC Start=167940><P Class=KRCC>
+&nbsp;
+<SYNC Start=167941><P Class=KRCC>
+Now be very, very careful. These strings
+<SYNC Start=170770><P Class=KRCC>
+&nbsp;
+<SYNC Start=170771><P Class=KRCC>
+all have to match precisely. The error messages
+<SYNC Start=173790><P Class=KRCC>
+&nbsp;
+<SYNC Start=173791><P Class=KRCC>
+that the system gives for having incorrect accounts
+<SYNC Start=176610><P Class=KRCC>
+&nbsp;
+<SYNC Start=176611><P Class=KRCC>
+are not necessarily intuitive. And with that you
+<SYNC Start=179960><P Class=KRCC>
+&nbsp;
+<SYNC Start=179961><P Class=KRCC>
+should be able to create valid accounts. Once again,
+<SYNC Start=183120><P Class=KRCC>
+&nbsp;
+<SYNC Start=183121><P Class=KRCC>
+this is all just so that the SyncAdapter can be
+<SYNC Start=185530><P Class=KRCC>
+&nbsp;
+<SYNC Start=185531><P Class=KRCC>
+tied to an account. You don't actually use this
+<SYNC Start=188350><P Class=KRCC>
+&nbsp;
+<SYNC Start=188351><P Class=KRCC>
+at all. All right, let's tweak our provider tag in
+<SYNC Start=192052><P Class=KRCC>
+&nbsp;
+<SYNC Start=192053><P Class=KRCC>
+the manifest. We're going to add the syncable attribute.
+<SYNC Start=195410><P Class=KRCC>
+&nbsp;
+<SYNC Start=195411><P Class=KRCC>
+This just lets Android know that we're planning to synchronize
+<SYNC Start=197720><P Class=KRCC>
+&nbsp;
+<SYNC Start=197721><P Class=KRCC>
+the content provider with the server. Also, we'll set
+<SYNC Start=200799><P Class=KRCC>
+&nbsp;
+<SYNC Start=200800><P Class=KRCC>
+android:exported equals false. We had it at the default setting.
+<SYNC Start=205220><P Class=KRCC>
+&nbsp;
+<SYNC Start=205221><P Class=KRCC>
+Which means that other apps could see our content. Finally,
+<SYNC Start=208750><P Class=KRCC>
+&nbsp;
+<SYNC Start=208751><P Class=KRCC>
+let's change the authority to use our new string. Now
+<SYNC Start=211530><P Class=KRCC>
+&nbsp;
+<SYNC Start=211531><P Class=KRCC>
+for some additional permissions. We need to be able to
+<SYNC Start=214930><P Class=KRCC>
+&nbsp;
+<SYNC Start=214931><P Class=KRCC>
+read and write sync settings. That makes sense. We also
+<SYNC Start=218790><P Class=KRCC>
+&nbsp;
+<SYNC Start=218791><P Class=KRCC>
+have to authenticate accounts, even though we're not really using
+<SYNC Start=221810><P Class=KRCC>
+&nbsp;
+<SYNC Start=221811><P Class=KRCC>
+them for anything. None of these permissions are ones users
+<SYNC Start=225420><P Class=KRCC>
+&nbsp;
+<SYNC Start=225421><P Class=KRCC>
+should be concerned about. But as developers, we always want
+<SYNC Start=228530><P Class=KRCC>
+&nbsp;
+<SYNC Start=228531><P Class=KRCC>
+to be careful when we have to add new permissions.
+<SYNC Start=231780><P Class=KRCC>
+&nbsp;
+<SYNC Start=231781><P Class=KRCC>
+Let's create the SunshineSyncAdapter file itself inside
+<SYNC Start=234780><P Class=KRCC>
+&nbsp;
+<SYNC Start=234781><P Class=KRCC>
+of sync, which extends the abstract threaded sync
+<SYNC Start=237610><P Class=KRCC>
+&nbsp;
+<SYNC Start=237611><P Class=KRCC>
+adapter class. Hit Ctrl+I and then Ctrl+O
+<SYNC Start=240683><P Class=KRCC>
+&nbsp;
+<SYNC Start=240684><P Class=KRCC>
+to implement the necessary abstract methods in constructor.
+<SYNC Start=244900><P Class=KRCC>
+&nbsp;
+<SYNC Start=244901><P Class=KRCC>
+We'll use the first constructor. We'll fill
+<SYNC Start=247170><P Class=KRCC>
+&nbsp;
+<SYNC Start=247171><P Class=KRCC>
+this out later. As you may recall, the
+<SYNC Start=249330><P Class=KRCC>
+&nbsp;
+<SYNC Start=249331><P Class=KRCC>
+sync adaptor pattern requires yet another service. So
+<SYNC Start=252650><P Class=KRCC>
+&nbsp;
+<SYNC Start=252651><P Class=KRCC>
+we're going to create another Java class called SunshineSyncService.
+<SYNC Start=255645><P Class=KRCC>
+&nbsp;
+<SYNC Start=256730><P Class=KRCC>
+This class is used to deliver the sync adapter Binder to the sync manager.
+<SYNC Start=260670><P Class=KRCC>
+&nbsp;
+<SYNC Start=261860><P Class=KRCC>
+The Binder is implemented for us by
+<SYNC Start=264690><P Class=KRCC>
+&nbsp;
+<SYNC Start=264691><P Class=KRCC>
+the abstract threaded sync adapter class. And returned
+<SYNC Start=268520><P Class=KRCC>
+&nbsp;
+<SYNC Start=268521><P Class=KRCC>
+in the getSyncAdapterBinder method. And now, we
+<SYNC Start=271560><P Class=KRCC>
+&nbsp;
+<SYNC Start=271561><P Class=KRCC>
+need one more XML file. Create syncadapter.xml with
+<SYNC Start=275750><P Class=KRCC>
+&nbsp;
+<SYNC Start=275751><P Class=KRCC>
+root element sync-adapter. Once again, this XML
+<SYNC Start=279120><P Class=KRCC>
+&nbsp;
+<SYNC Start=279121><P Class=KRCC>
+file defines the settings associated with our sync-adapter.
+<SYNC Start=282590><P Class=KRCC>
+&nbsp;
+<SYNC Start=282591><P Class=KRCC>
+Including it's content authority. The account type that it
+<SYNC Start=285290><P Class=KRCC>
+&nbsp;
+<SYNC Start=285291><P Class=KRCC>
+syncs. Whether or not it's user visible. Whether it
+<SYNC Start=288890><P Class=KRCC>
+&nbsp;
+<SYNC Start=288891><P Class=KRCC>
+supports uploading, which changes the way the content provider
+<SYNC Start=292180><P Class=KRCC>
+&nbsp;
+<SYNC Start=292181><P Class=KRCC>
+interacts with the sync adapter. Allowing parallel syncs and is
+<SYNC Start=296280><P Class=KRCC>
+&nbsp;
+<SYNC Start=296281><P Class=KRCC>
+always syncable. These settings make sense for this particular
+<SYNC Start=299400><P Class=KRCC>
+&nbsp;
+<SYNC Start=299401><P Class=KRCC>
+application, and I bet you know what comes next. You're
+<SYNC Start=302350><P Class=KRCC>
+&nbsp;
+<SYNC Start=302351><P Class=KRCC>
+right. You have to register the sync adapter service
+<SYNC Start=305100><P Class=KRCC>
+&nbsp;
+<SYNC Start=305101><P Class=KRCC>
+with the package manager. And therefore we have to create
+<SYNC Start=308140><P Class=KRCC>
+&nbsp;
+<SYNC Start=308141><P Class=KRCC>
+more manifest entries, containing some important metadata. Most
+<SYNC Start=312540><P Class=KRCC>
+&nbsp;
+<SYNC Start=312541><P Class=KRCC>
+importantly, links to the file we just created. All
+<SYNC Start=315602><P Class=KRCC>
+&nbsp;
+<SYNC Start=315603><P Class=KRCC>
+right, now we're getting close. Let's start working
+<SYNC Start=319040><P Class=KRCC>
+&nbsp;
+<SYNC Start=319041><P Class=KRCC>
+on the sync adapter, itself. We'll start with a
+<SYNC Start=321690><P Class=KRCC>
+&nbsp;
+<SYNC Start=321691><P Class=KRCC>
+helper function to get the dummy sync account
+<SYNC Start=324820><P Class=KRCC>
+&nbsp;
+<SYNC Start=324821><P Class=KRCC>
+and make sure that it has been created. Then,
+<SYNC Start=327760><P Class=KRCC>
+&nbsp;
+<SYNC Start=327761><P Class=KRCC>
+we'll add another helper function to our sync adaptor,
+<SYNC Start=330560><P Class=KRCC>
+&nbsp;
+<SYNC Start=330561><P Class=KRCC>
+to make it easier to test our sync adaptor.</BODY>
+</SAMI>

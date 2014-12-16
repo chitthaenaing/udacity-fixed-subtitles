@@ -1,0 +1,62 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1060><P Class=KRCC>
+All right, you're done. Let me show you my solution.
+<SYNC Start=4390><P Class=KRCC>
+&nbsp;
+<SYNC Start=6430><P Class=KRCC>
+We start by creating an empty uri matcher. I don't want the root node to match
+<SYNC Start=11320><P Class=KRCC>
+&nbsp;
+<SYNC Start=11321><P Class=KRCC>
+anything. This is typical behavior. To make the
+<SYNC Start=15720><P Class=KRCC>
+&nbsp;
+<SYNC Start=15721><P Class=KRCC>
+code easier to read, I'm making a shortcut
+<SYNC Start=18490><P Class=KRCC>
+&nbsp;
+<SYNC Start=18491><P Class=KRCC>
+to the weather contract content authority. Technically, date
+<SYNC Start=23000><P Class=KRCC>
+&nbsp;
+<SYNC Start=23001><P Class=KRCC>
+will always be numeric, but I'm matching the
+<SYNC Start=25700><P Class=KRCC>
+&nbsp;
+<SYNC Start=25701><P Class=KRCC>
+paths with star, because they are stored in
+<SYNC Start=27770><P Class=KRCC>
+&nbsp;
+<SYNC Start=27771><P Class=KRCC>
+our database as strings, just to be consistent.
+<SYNC Start=31200><P Class=KRCC>
+&nbsp;
+<SYNC Start=32380><P Class=KRCC>
+Finally, we have the location URIs. Since the ID in the database is
+<SYNC Start=36930><P Class=KRCC>
+&nbsp;
+<SYNC Start=36931><P Class=KRCC>
+always a long integer, it makes perfect sense to use the pound sign pattern.
+<SYNC Start=41670><P Class=KRCC>
+&nbsp;
+<SYNC Start=44060><P Class=KRCC>
+Now we can add our class variable. [BLANK_AUDIO}</BODY>
+</SAMI>

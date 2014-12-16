@@ -1,0 +1,106 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=390><P Class=KRCC>
+Before we start coding our content provider, let's
+<SYNC Start=4260><P Class=KRCC>
+&nbsp;
+<SYNC Start=4261><P Class=KRCC>
+make sure the manifest is set up correctly.
+<SYNC Start=7000><P Class=KRCC>
+&nbsp;
+<SYNC Start=7001><P Class=KRCC>
+You need to update the androidmanifest.xml file within
+<SYNC Start=9760><P Class=KRCC>
+&nbsp;
+<SYNC Start=9761><P Class=KRCC>
+the application tag to add the content provider. So
+<SYNC Start=12550><P Class=KRCC>
+&nbsp;
+<SYNC Start=12551><P Class=KRCC>
+that android's content resolver can see it. The
+<SYNC Start=16140><P Class=KRCC>
+&nbsp;
+<SYNC Start=16141><P Class=KRCC>
+authority really should match your package name. While
+<SYNC Start=19030><P Class=KRCC>
+&nbsp;
+<SYNC Start=19031><P Class=KRCC>
+the name indicates which file your content provider
+<SYNC Start=21860><P Class=KRCC>
+&nbsp;
+<SYNC Start=21861><P Class=KRCC>
+class is in. Next, let's code up on create.
+<SYNC Start=25730><P Class=KRCC>
+&nbsp;
+<SYNC Start=25731><P Class=KRCC>
+We'll begin by creating an instance variable for our
+<SYNC Start=28380><P Class=KRCC>
+&nbsp;
+<SYNC Start=28381><P Class=KRCC>
+database helper. In on create, we initiate our instance variable.
+<SYNC Start=33650><P Class=KRCC>
+&nbsp;
+<SYNC Start=33651><P Class=KRCC>
+We return true, which is how we tell Android that
+<SYNC Start=36490><P Class=KRCC>
+&nbsp;
+<SYNC Start=36491><P Class=KRCC>
+the content provider has been created successfully. It turns out
+<SYNC Start=40150><P Class=KRCC>
+&nbsp;
+<SYNC Start=40151><P Class=KRCC>
+that we can repurpose the same test we did
+<SYNC Start=42060><P Class=KRCC>
+&nbsp;
+<SYNC Start=42061><P Class=KRCC>
+for the database to test our new content provider. This
+<SYNC Start=45200><P Class=KRCC>
+&nbsp;
+<SYNC Start=45201><P Class=KRCC>
+will allow you to both test your content provider code
+<SYNC Start=47920><P Class=KRCC>
+&nbsp;
+<SYNC Start=47921><P Class=KRCC>
+and see how the content provider calls replace the SQLI
+<SYNC Start=51060><P Class=KRCC>
+&nbsp;
+<SYNC Start=51061><P Class=KRCC>
+database calls. Let's start by using Android
+<SYNC Start=54240><P Class=KRCC>
+&nbsp;
+<SYNC Start=54241><P Class=KRCC>
+Studio to copy TestDB to test provider.
+<SYNC Start=57730><P Class=KRCC>
+&nbsp;
+<SYNC Start=61690><P Class=KRCC>
+Let's rename test create DB, to test delete DB.
+<SYNC Start=66050><P Class=KRCC>
+&nbsp;
+<SYNC Start=68330><P Class=KRCC>
+So we can start with a clean slate. We'll just leave the M context dot delete
+<SYNC Start=72740><P Class=KRCC>
+&nbsp;
+<SYNC Start=72741><P Class=KRCC>
+database line in there. We'll leave the other
+<SYNC Start=75850><P Class=KRCC>
+&nbsp;
+<SYNC Start=75851><P Class=KRCC>
+test the same, we'll get to it soon.</BODY>
+</SAMI>

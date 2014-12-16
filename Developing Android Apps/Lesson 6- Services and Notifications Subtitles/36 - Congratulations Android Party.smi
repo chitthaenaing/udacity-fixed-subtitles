@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=5><P Class=KRCC>
+[SOUND].
+<SYNC Start=1016><P Class=KRCC>
+&nbsp;
+<SYNC Start=1017><P Class=KRCC>
+>> [LAUGH]
+<SYNC Start=1842><P Class=KRCC>
+&nbsp;
+<SYNC Start=1843><P Class=KRCC>
+>> Content providers.
+<SYNC Start=3310><P Class=KRCC>
+&nbsp;
+<SYNC Start=3311><P Class=KRCC>
+>> Congratulations, everyone, you've finished building the Sunshine App.
+<SYNC Start=6640><P Class=KRCC>
+&nbsp;
+<SYNC Start=6641><P Class=KRCC>
+>> But there's always room for more sunshine.
+<SYNC Start=8150><P Class=KRCC>
+&nbsp;
+<SYNC Start=8151><P Class=KRCC>
+>> There is, Dan, but now it's time
+<SYNC Start=10070><P Class=KRCC>
+&nbsp;
+<SYNC Start=10071><P Class=KRCC>
+for the students to go build their final project.
+<SYNC Start=12100><P Class=KRCC>
+&nbsp;
+<SYNC Start=12101><P Class=KRCC>
+>> And you can get a lot of the resources you
+<SYNC Start=13718><P Class=KRCC>
+&nbsp;
+<SYNC Start=13719><P Class=KRCC>
+need to build really great mobile apps at the Android developer site.
+<SYNC Start=16622><P Class=KRCC>
+&nbsp;
+<SYNC Start=16623><P Class=KRCC>
+>> And stay tuned for more from us and Udacity.
+<SYNC Start=19306><P Class=KRCC>
+&nbsp;
+<SYNC Start=19307><P Class=KRCC>
+>> For now, I think it's
+<SYNC Start=25184><P Class=KRCC>
+&nbsp;
+<SYNC Start=25185><P Class=KRCC>
+time to celebrate with some cake.
+<SYNC Start=34165><P Class=KRCC>
+&nbsp;
+<SYNC Start=34166><P Class=KRCC>
+>> Woohoo.
+<SYNC Start=35983><P Class=KRCC>
+&nbsp;
+<SYNC Start=35984><P Class=KRCC>
+>> Lemon tarts.
+<SYNC Start=39655><P Class=KRCC>
+&nbsp;
+<SYNC Start=39656><P Class=KRCC>
+[MUSIC]</BODY>
+</SAMI>

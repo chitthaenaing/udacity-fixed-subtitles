@@ -1,0 +1,210 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+Well, we're now using the sync adapter, and things are
+<SYNC Start=3469><P Class=KRCC>
+&nbsp;
+<SYNC Start=3470><P Class=KRCC>
+working pretty much as before. We want the app to do
+<SYNC Start=6040><P Class=KRCC>
+&nbsp;
+<SYNC Start=6041><P Class=KRCC>
+this synchronization cleverly, and we'd like to get rid of
+<SYNC Start=8710><P Class=KRCC>
+&nbsp;
+<SYNC Start=8711><P Class=KRCC>
+that old Refresh menu item. Let's start by cleaning up all
+<SYNC Start=11780><P Class=KRCC>
+&nbsp;
+<SYNC Start=11781><P Class=KRCC>
+the other routines we have to sync. So we certainly
+<SYNC Start=14640><P Class=KRCC>
+&nbsp;
+<SYNC Start=14641><P Class=KRCC>
+don't need any of this other stuff like FetchWeatherTask, or all
+<SYNC Start=19340><P Class=KRCC>
+&nbsp;
+<SYNC Start=19341><P Class=KRCC>
+this stuff we did in Sunshine service, and we'll want to clean
+<SYNC Start=22100><P Class=KRCC>
+&nbsp;
+<SYNC Start=22101><P Class=KRCC>
+up the manifest accordingly. We certainly don't need either one of
+<SYNC Start=25170><P Class=KRCC>
+&nbsp;
+<SYNC Start=25171><P Class=KRCC>
+these anymore. And in Preferences, we can just change
+<SYNC Start=28430><P Class=KRCC>
+&nbsp;
+<SYNC Start=28431><P Class=KRCC>
+that to sync immediately. So now we're really using this
+<SYNC Start=30880><P Class=KRCC>
+&nbsp;
+<SYNC Start=30881><P Class=KRCC>
+sync adapter everywhere. We have a problem though. We're not
+<SYNC Start=34380><P Class=KRCC>
+&nbsp;
+<SYNC Start=34381><P Class=KRCC>
+being very smart. The user still has all sorts of
+<SYNC Start=36800><P Class=KRCC>
+&nbsp;
+<SYNC Start=36801><P Class=KRCC>
+places where they see an empty list. We want to
+<SYNC Start=39070><P Class=KRCC>
+&nbsp;
+<SYNC Start=39071><P Class=KRCC>
+sync more intelligently. In Android 2.2 Froyo, Android added the
+<SYNC Start=43422><P Class=KRCC>
+&nbsp;
+<SYNC Start=43423><P Class=KRCC>
+ability to have sync adapter's sync periodically. We can add
+<SYNC Start=47890><P Class=KRCC>
+&nbsp;
+<SYNC Start=47891><P Class=KRCC>
+a helper method to do this in our sync adapter.
+<SYNC Start=50580><P Class=KRCC>
+&nbsp;
+<SYNC Start=50581><P Class=KRCC>
+The problem is, this method isn't as smart as
+<SYNC Start=53270><P Class=KRCC>
+&nbsp;
+<SYNC Start=53271><P Class=KRCC>
+we'd like it to be, it still won't do all
+<SYNC Start=55030><P Class=KRCC>
+&nbsp;
+<SYNC Start=55031><P Class=KRCC>
+that cool batching with exact repeating alarms that we'd
+<SYNC Start=57800><P Class=KRCC>
+&nbsp;
+<SYNC Start=57801><P Class=KRCC>
+like it to. Fortunately, we've added something that does just
+<SYNC Start=61390><P Class=KRCC>
+&nbsp;
+<SYNC Start=61391><P Class=KRCC>
+that, but it's not available until API level 19.
+<SYNC Start=64010><P Class=KRCC>
+&nbsp;
+<SYNC Start=64011><P Class=KRCC>
+Taking advantage of flexible time to do inexact repeating arms,
+<SYNC Start=69230><P Class=KRCC>
+&nbsp;
+<SYNC Start=69231><P Class=KRCC>
+let's set some nice defaults for our Sunshine sync adapter.
+<SYNC Start=72780><P Class=KRCC>
+&nbsp;
+<SYNC Start=72781><P Class=KRCC>
+First we'll add these constants. To make things a little
+<SYNC Start=75665><P Class=KRCC>
+&nbsp;
+<SYNC Start=75666><P Class=KRCC>
+clearer in our code let's add another function
+<SYNC Start=78120><P Class=KRCC>
+&nbsp;
+<SYNC Start=78121><P Class=KRCC>
+that we'll call when a new account is created,
+<SYNC Start=80540><P Class=KRCC>
+&nbsp;
+<SYNC Start=80541><P Class=KRCC>
+and here we'll set some important flags. Such as
+<SYNC Start=83148><P Class=KRCC>
+&nbsp;
+<SYNC Start=83149><P Class=KRCC>
+configurePeriodicSync, the one we
+<SYNC Start=85309><P Class=KRCC>
+&nbsp;
+<SYNC Start=85310><P Class=KRCC>
+just created. SetSyncAutomatically, without which
+<SYNC Start=89780><P Class=KRCC>
+&nbsp;
+<SYNC Start=89781><P Class=KRCC>
+our periodic sync will not be enabled. Since we're
+<SYNC Start=92890><P Class=KRCC>
+&nbsp;
+<SYNC Start=92891><P Class=KRCC>
+just starting off let's do an immediate sync, then
+<SYNC Start=95830><P Class=KRCC>
+&nbsp;
+<SYNC Start=95831><P Class=KRCC>
+we can call it from a strategic place and
+<SYNC Start=97790><P Class=KRCC>
+&nbsp;
+<SYNC Start=97791><P Class=KRCC>
+get sync account. Finally, we can make the interface
+<SYNC Start=100904><P Class=KRCC>
+&nbsp;
+<SYNC Start=100905><P Class=KRCC>
+to the world a little bit cleaner by
+<SYNC Start=102319><P Class=KRCC>
+&nbsp;
+<SYNC Start=102320><P Class=KRCC>
+adding an initializeSyncAdapter function. That's simply makes sure
+<SYNC Start=106880><P Class=KRCC>
+&nbsp;
+<SYNC Start=106881><P Class=KRCC>
+that an account has been created. And now
+<SYNC Start=109170><P Class=KRCC>
+&nbsp;
+<SYNC Start=109171><P Class=KRCC>
+inside of the main activity in the onCreate, we
+<SYNC Start=111620><P Class=KRCC>
+&nbsp;
+<SYNC Start=111621><P Class=KRCC>
+can just make a call to that new
+<SYNC Start=113140><P Class=KRCC>
+&nbsp;
+<SYNC Start=113141><P Class=KRCC>
+function. And it'll make sure that the parameters for
+<SYNC Start=115570><P Class=KRCC>
+&nbsp;
+<SYNC Start=115571><P Class=KRCC>
+our sync adapter are set up correctly. Lets
+<SYNC Start=117990><P Class=KRCC>
+&nbsp;
+<SYNC Start=117991><P Class=KRCC>
+see if this has any impact on our emulator.
+<SYNC Start=119630><P Class=KRCC>
+&nbsp;
+<SYNC Start=122090><P Class=KRCC>
+The new version of Sunshine right from the start shows all of current
+<SYNC Start=125040><P Class=KRCC>
+&nbsp;
+<SYNC Start=125041><P Class=KRCC>
+weather. For a sync with a sync
+<SYNC Start=127840><P Class=KRCC>
+&nbsp;
+<SYNC Start=127841><P Class=KRCC>
+adapter to happen successfully at periodic intervals
+<SYNC Start=130530><P Class=KRCC>
+&nbsp;
+<SYNC Start=130531><P Class=KRCC>
+in the background you must: have a
+<SYNC Start=132038><P Class=KRCC>
+&nbsp;
+<SYNC Start=132039><P Class=KRCC>
+ContentProvider marked as syncable, enable automatic sync
+<SYNC Start=135620><P Class=KRCC>
+&nbsp;
+<SYNC Start=135621><P Class=KRCC>
+for the SyncAdapter, do an initial immediate
+<SYNC Start=138470><P Class=KRCC>
+&nbsp;
+<SYNC Start=138471><P Class=KRCC>
+sync, or set an interval in milliseconds.</BODY>
+</SAMI>

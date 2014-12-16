@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=100><P Class=KRCC>
+To evaluate how accessible any app is, you
+<SYNC Start=2890><P Class=KRCC>
+&nbsp;
+<SYNC Start=2891><P Class=KRCC>
+can step through the Accessibility Testing Checklist. Some of
+<SYNC Start=6160><P Class=KRCC>
+&nbsp;
+<SYNC Start=6161><P Class=KRCC>
+those steps will involve changing the accessibility settings in
+<SYNC Start=8940><P Class=KRCC>
+&nbsp;
+<SYNC Start=8941><P Class=KRCC>
+the setting's app. A user will be able to
+<SYNC Start=11100><P Class=KRCC>
+&nbsp;
+<SYNC Start=11101><P Class=KRCC>
+choose from these options. We have Talkback, Captions,
+<SYNC Start=14800><P Class=KRCC>
+&nbsp;
+<SYNC Start=14801><P Class=KRCC>
+Magnification, increased font size, and more. I want to point
+<SYNC Start=18050><P Class=KRCC>
+&nbsp;
+<SYNC Start=18051><P Class=KRCC>
+out one item in particular, Talkback service. Blind and
+<SYNC Start=22140><P Class=KRCC>
+&nbsp;
+<SYNC Start=22141><P Class=KRCC>
+low vision users can turn on the Talkback service.
+<SYNC Start=25090><P Class=KRCC>
+&nbsp;
+<SYNC Start=25091><P Class=KRCC>
+It allows them to navigate around the device with spoken feedback
+<SYNC Start=28340><P Class=KRCC>
+&nbsp;
+<SYNC Start=28341><P Class=KRCC>
+as they interact with each UI element on the screen. There
+<SYNC Start=31260><P Class=KRCC>
+&nbsp;
+<SYNC Start=31261><P Class=KRCC>
+are slightly different gestures, for example, to select or to focus
+<SYNC Start=34310><P Class=KRCC>
+&nbsp;
+<SYNC Start=34311><P Class=KRCC>
+on an item. If it's the first time you turn it
+<SYNC Start=36620><P Class=KRCC>
+&nbsp;
+<SYNC Start=36621><P Class=KRCC>
+on, there will be a tutorial that you can step through.
+<SYNC Start=39490><P Class=KRCC>
+&nbsp;
+<SYNC Start=39491><P Class=KRCC>
+When the user navigates to these elements, Talkback service will read
+<SYNC Start=42780><P Class=KRCC>
+&nbsp;
+<SYNC Start=42781><P Class=KRCC>
+aloud the context description provided. Every UI component that doesn't have
+<SYNC Start=46180><P Class=KRCC>
+&nbsp;
+<SYNC Start=46181><P Class=KRCC>
+any visible text has a content
+<SYNC Start=47960><P Class=KRCC>
+&nbsp;
+<SYNC Start=47961><P Class=KRCC>
+description. Using Talkback or another accessibility
+<SYNC Start=50710><P Class=KRCC>
+&nbsp;
+<SYNC Start=50711><P Class=KRCC>
+tool from the checklist will let the sunshine out. Find and fix at least one
+<SYNC Start=54270><P Class=KRCC>
+&nbsp;
+<SYNC Start=54271><P Class=KRCC>
+accessibility issue in the app. Then please share
+<SYNC Start=56660><P Class=KRCC>
+&nbsp;
+<SYNC Start=56661><P Class=KRCC>
+what you did in the class discussion forum.</BODY>
+</SAMI>

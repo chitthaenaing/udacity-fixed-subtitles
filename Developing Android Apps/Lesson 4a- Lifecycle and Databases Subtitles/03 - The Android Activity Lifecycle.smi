@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=500><P Class=KRCC>
+A platform which terminates apps on its own is a pretty radical departure for
+<SYNC Start=4510><P Class=KRCC>
+&nbsp;
+<SYNC Start=4511><P Class=KRCC>
+anyone like me who cut their teeth on desktop Winforms development.
+<SYNC Start=7920><P Class=KRCC>
+&nbsp;
+<SYNC Start=7921><P Class=KRCC>
+If you come from a similar background you probably have
+<SYNC Start=10910><P Class=KRCC>
+&nbsp;
+<SYNC Start=10911><P Class=KRCC>
+a pretty good idea of what to expect in terms of lifecycle event handles.
+<SYNC Start=14912><P Class=KRCC>
+&nbsp;
+<SYNC Start=20300><P Class=KRCC>
+You start with the onCreate call back where you build and wire up your UI.
+<SYNC Start=24380><P Class=KRCC>
+&nbsp;
+<SYNC Start=24381><P Class=KRCC>
+Once that's done, your activity has been created. It likely won't be a surprise
+<SYNC Start=28910><P Class=KRCC>
+&nbsp;
+<SYNC Start=28911><P Class=KRCC>
+to you that there are also event handlers for when the activity becomes visible.
+<SYNC Start=32650><P Class=KRCC>
+&nbsp;
+<SYNC Start=32651><P Class=KRCC>
+Which is onStart and another for when it gets focus and becomes the active
+<SYNC Start=36970><P Class=KRCC>
+&nbsp;
+<SYNC Start=36971><P Class=KRCC>
+foreground app, which is onResume. That same sequence, then happens in reverse.
+<SYNC Start=42255><P Class=KRCC>
+&nbsp;
+<SYNC Start=42256><P Class=KRCC>
+[SOUND] onPause indicates that the activity has lost focus, followed by
+<SYNC Start=48542><P Class=KRCC>
+&nbsp;
+<SYNC Start=48543><P Class=KRCC>
+onStop when the app is no longer visible. Finally, there's an onDestroy method,
+<SYNC Start=54283><P Class=KRCC>
+&nbsp;
+<SYNC Start=54284><P Class=KRCC>
+indicating the end of the app lifecycle. When your app is first launched, you'll
+<SYNC Start=58540><P Class=KRCC>
+&nbsp;
+<SYNC Start=58541><P Class=KRCC>
+quickly move through these states. Create, Start, Resume, one after the other
+<SYNC Start=63265><P Class=KRCC>
+&nbsp;
+<SYNC Start=63266><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=66803><P Class=KRCC>
+&nbsp;
+<SYNC Start=66804><P Class=KRCC>
+But within the full application lifetime, from when onCreate is first called and
+<SYNC Start=70985><P Class=KRCC>
+&nbsp;
+<SYNC Start=70986><P Class=KRCC>
+till the app is finally terminated. It will move through the active lifetime and
+<SYNC Start=76480><P Class=KRCC>
+&nbsp;
+<SYNC Start=76481><P Class=KRCC>
+the physical lifetime, many times. Let's look at those in a little more detail.</BODY>
+</SAMI>

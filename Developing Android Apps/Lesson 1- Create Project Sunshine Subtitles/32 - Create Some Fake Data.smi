@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=540><P Class=KRCC>
+With our ListView ready to go, we'll want to create some fake data to
+<SYNC Start=3850><P Class=KRCC>
+&nbsp;
+<SYNC Start=3851><P Class=KRCC>
+populate it. Open up MainActivity.java and then scroll down to the bottom where
+<SYNC Start=8778><P Class=KRCC>
+&nbsp;
+<SYNC Start=8779><P Class=KRCC>
+the PlaceholderFragment class is. Within the onCreateView method,
+<SYNC Start=13630><P Class=KRCC>
+&nbsp;
+<SYNC Start=13631><P Class=KRCC>
+create an array list of strings to represent the weather forecast list items
+<SYNC Start=17630><P Class=KRCC>
+&nbsp;
+<SYNC Start=17631><P Class=KRCC>
+shown in the wire frames. For example, the Today List item will be
+<SYNC Start=21570><P Class=KRCC>
+&nbsp;
+<SYNC Start=21571><P Class=KRCC>
+represented as a string shown here. When you're done, check the box and submit.</BODY>
+</SAMI>

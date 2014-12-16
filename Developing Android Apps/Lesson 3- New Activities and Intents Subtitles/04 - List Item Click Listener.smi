@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=460><P Class=KRCC>
+From the mocks, we can see when a list item is clicked we should
+<SYNC Start=4330><P Class=KRCC>
+&nbsp;
+<SYNC Start=4331><P Class=KRCC>
+perform an action to open up the details page for the forecast. How do
+<SYNC Start=8720><P Class=KRCC>
+&nbsp;
+<SYNC Start=8721><P Class=KRCC>
+we implement the click listener behavior? Take
+<SYNC Start=11870><P Class=KRCC>
+&nbsp;
+<SYNC Start=11871><P Class=KRCC>
+a look at the ListView documentation. What
+<SYNC Start=14740><P Class=KRCC>
+&nbsp;
+<SYNC Start=14741><P Class=KRCC>
+method is used to wire up behavior on a list item when it is clicked?</BODY>
+</SAMI>

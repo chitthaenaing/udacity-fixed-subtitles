@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=260><P Class=KRCC>
+Typically when we talk about data transfer efficiency, we're talking
+<SYNC Start=3510><P Class=KRCC>
+&nbsp;
+<SYNC Start=3511><P Class=KRCC>
+about limiting the amount of data being transferred. That reduces
+<SYNC Start=6590><P Class=KRCC>
+&nbsp;
+<SYNC Start=6591><P Class=KRCC>
+the bandwidth and the cost and is generally a pretty
+<SYNC Start=8990><P Class=KRCC>
+&nbsp;
+<SYNC Start=8991><P Class=KRCC>
+good idea. But on mobile there's an extra factor. As you
+<SYNC Start=13020><P Class=KRCC>
+&nbsp;
+<SYNC Start=13021><P Class=KRCC>
+can see, it turns out that the cell radio is
+<SYNC Start=15500><P Class=KRCC>
+&nbsp;
+<SYNC Start=15501><P Class=KRCC>
+one of the biggest battery drainers on the device. So making
+<SYNC Start=18430><P Class=KRCC>
+&nbsp;
+<SYNC Start=18431><P Class=KRCC>
+your data transfers more efficient. Will also result in improved
+<SYNC Start=21840><P Class=KRCC>
+&nbsp;
+<SYNC Start=21841><P Class=KRCC>
+battery life. Now, the basic level being more efficient means spending
+<SYNC Start=25430><P Class=KRCC>
+&nbsp;
+<SYNC Start=25431><P Class=KRCC>
+less time transferring less data, reducing your payloads, and updating
+<SYNC Start=29320><P Class=KRCC>
+&nbsp;
+<SYNC Start=29321><P Class=KRCC>
+less often can take you some of the way there,
+<SYNC Start=31560><P Class=KRCC>
+&nbsp;
+<SYNC Start=31561><P Class=KRCC>
+but then what? Can timing make a difference? It turns
+<SYNC Start=34650><P Class=KRCC>
+&nbsp;
+<SYNC Start=34651><P Class=KRCC>
+out that it can, and it's a situation I like
+<SYNC Start=36890><P Class=KRCC>
+&nbsp;
+<SYNC Start=36891><P Class=KRCC>
+to think of as the cookie Droid conundrum. Do we
+<SYNC Start=39700><P Class=KRCC>
+&nbsp;
+<SYNC Start=39701><P Class=KRCC>
+perform fewer downloads with larger payloads? Or do we perform
+<SYNC Start=44190><P Class=KRCC>
+&nbsp;
+<SYNC Start=44191><P Class=KRCC>
+lots of small transfers just in time for when we
+<SYNC Start=46830><P Class=KRCC>
+&nbsp;
+<SYNC Start=46831><P Class=KRCC>
+need them? One big cookie or lots of little cookies?
+<SYNC Start=50000><P Class=KRCC>
+&nbsp;
+<SYNC Start=51200><P Class=KRCC>
+So, what do you think? Should we have
+<SYNC Start=52750><P Class=KRCC>
+&nbsp;
+<SYNC Start=52751><P Class=KRCC>
+a smaller number of large downloads illustrated by
+<SYNC Start=55620><P Class=KRCC>
+&nbsp;
+<SYNC Start=55621><P Class=KRCC>
+this big cookie? Or a large number of
+<SYNC Start=57870><P Class=KRCC>
+&nbsp;
+<SYNC Start=57871><P Class=KRCC>
+small downloads, as illustrated by lots of little cookies.</BODY>
+</SAMI>

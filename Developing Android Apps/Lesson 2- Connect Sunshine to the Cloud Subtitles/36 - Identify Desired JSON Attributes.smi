@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=500><P Class=KRCC>
+The URL that we built looks good and the JSON
+<SYNC Start=3360><P Class=KRCC>
+&nbsp;
+<SYNC Start=3361><P Class=KRCC>
+string from the server also looks good. However, it still is
+<SYNC Start=7010><P Class=KRCC>
+&nbsp;
+<SYNC Start=7011><P Class=KRCC>
+one long string. Let's look at it more carefully to see
+<SYNC Start=9840><P Class=KRCC>
+&nbsp;
+<SYNC Start=9841><P Class=KRCC>
+what data we should extract from it. In order to make
+<SYNC Start=12770><P Class=KRCC>
+&nbsp;
+<SYNC Start=12771><P Class=KRCC>
+sense of the string that comes back from the server, we
+<SYNC Start=15500><P Class=KRCC>
+&nbsp;
+<SYNC Start=15501><P Class=KRCC>
+can put it through a JSON formatter or a JSON prettifier.
+<SYNC Start=20090><P Class=KRCC>
+&nbsp;
+<SYNC Start=20091><P Class=KRCC>
+If you Google for those terms, you'll be able to find
+<SYNC Start=22420><P Class=KRCC>
+&nbsp;
+<SYNC Start=22421><P Class=KRCC>
+a helpful tool such as this one. Here, we pasted the
+<SYNC Start=25530><P Class=KRCC>
+&nbsp;
+<SYNC Start=25531><P Class=KRCC>
+result of the web query. Then, it formatted the output for
+<SYNC Start=28550><P Class=KRCC>
+&nbsp;
+<SYNC Start=28551><P Class=KRCC>
+us showing us the hierarchy of these elements. Now based on
+<SYNC Start=32549><P Class=KRCC>
+&nbsp;
+<SYNC Start=32550><P Class=KRCC>
+the wireframes that you saw for the Sunshine app, can you
+<SYNC Start=35200><P Class=KRCC>
+&nbsp;
+<SYNC Start=35201><P Class=KRCC>
+tell us which of these leaf nodes we care about extracting?
+<SYNC Start=38780><P Class=KRCC>
+&nbsp;
+<SYNC Start=38781><P Class=KRCC>
+Even though we will have to traverse through parent nodes, for
+<SYNC Start=41660><P Class=KRCC>
+&nbsp;
+<SYNC Start=41661><P Class=KRCC>
+the purposes of the quiz on the next screen, we're just
+<SYNC Start=43960><P Class=KRCC>
+&nbsp;
+<SYNC Start=43961><P Class=KRCC>
+looking at the leaf nodes. Make your selections below on which
+<SYNC Start=47870><P Class=KRCC>
+&nbsp;
+<SYNC Start=47871><P Class=KRCC>
+attributes we'll need in order to display the list of forecasts</BODY>
+</SAMI>

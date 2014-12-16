@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=820><P Class=KRCC>
+Implement the rest of the insert content provider method. Handle
+<SYNC Start=4420><P Class=KRCC>
+&nbsp;
+<SYNC Start=4421><P Class=KRCC>
+the location URI. And notify any registered Contentobserver of the
+<SYNC Start=8920><P Class=KRCC>
+&nbsp;
+<SYNC Start=8921><P Class=KRCC>
+change. It might help you to know that you can
+<SYNC Start=11640><P Class=KRCC>
+&nbsp;
+<SYNC Start=11641><P Class=KRCC>
+use getContext() getContentResolver() .notifyChange(uri, null)
+<SYNC Start=15830><P Class=KRCC>
+&nbsp;
+<SYNC Start=15831><P Class=KRCC>
+to notify any registered observers.</BODY>
+</SAMI>

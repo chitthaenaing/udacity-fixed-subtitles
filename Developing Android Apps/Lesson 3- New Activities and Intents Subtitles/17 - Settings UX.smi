@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=360><P Class=KRCC>
+Let's go through the wire frames for the settings UI.
+<SYNC Start=3420><P Class=KRCC>
+&nbsp;
+<SYNC Start=3421><P Class=KRCC>
+Within the detail activity in the overflow menu, there's a settings menu item.
+<SYNC Start=7010><P Class=KRCC>
+&nbsp;
+<SYNC Start=7011><P Class=KRCC>
+When you tap on the setting's menu item, it opens up the settings activity.
+<SYNC Start=10970><P Class=KRCC>
+&nbsp;
+<SYNC Start=11980><P Class=KRCC>
+If you tap of location, it pops up a dialog, where you can enter in your
+<SYNC Start=15800><P Class=KRCC>
+&nbsp;
+<SYNC Start=15801><P Class=KRCC>
+postal code. Feel free to use your preferred method for inputting location,
+<SYNC Start=20320><P Class=KRCC>
+&nbsp;
+<SYNC Start=20321><P Class=KRCC>
+such as city name. Just verify that the data coming back from the server is for
+<SYNC Start=24970><P Class=KRCC>
+&nbsp;
+<SYNC Start=24971><P Class=KRCC>
+the location you expect. Note that there's no validation on this string input.
+<SYNC Start=29420><P Class=KRCC>
+&nbsp;
+<SYNC Start=29421><P Class=KRCC>
+If you're trying to make this app a production app, you would want some kind of
+<SYNC Start=33528><P Class=KRCC>
+&nbsp;
+<SYNC Start=33529><P Class=KRCC>
+air handling here. If you tap on pick your units, it opens up a dialogue
+<SYNC Start=39070><P Class=KRCC>
+&nbsp;
+<SYNC Start=39071><P Class=KRCC>
+where you can choose to display temperature within the app as wither metric or
+<SYNC Start=42820><P Class=KRCC>
+&nbsp;
+<SYNC Start=42821><P Class=KRCC>
+imperial units. This is basically just Celsius or Fahrenheit, and
+<SYNC Start=46640><P Class=KRCC>
+&nbsp;
+<SYNC Start=46641><P Class=KRCC>
+that is what this settings activity does. Remember that you don't want to make
+<SYNC Start=50280><P Class=KRCC>
+&nbsp;
+<SYNC Start=50281><P Class=KRCC>
+everything a setting. If you're discussing a feature with a teammate and you
+<SYNC Start=53570><P Class=KRCC>
+&nbsp;
+<SYNC Start=53571><P Class=KRCC>
+can't decide on something, don't compromise by just making it a user setting.
+<SYNC Start=58010><P Class=KRCC>
+&nbsp;
+<SYNC Start=58011><P Class=KRCC>
+There are instances where making a difficult product decision now will be better
+<SYNC Start=62180><P Class=KRCC>
+&nbsp;
+<SYNC Start=62181><P Class=KRCC>
+for the user, because then they won't have the burden of having to decide what
+<SYNC Start=66050><P Class=KRCC>
+&nbsp;
+<SYNC Start=66051><P Class=KRCC>
+the value of the setting should be. And remember, there's always an opportunity
+<SYNC Start=70020><P Class=KRCC>
+&nbsp;
+<SYNC Start=70021><P Class=KRCC>
+in an app update to add the setting later. If you add it to begin with, it's
+<SYNC Start=74490><P Class=KRCC>
+&nbsp;
+<SYNC Start=74491><P Class=KRCC>
+infinitely harder to take away the setting because some users might get angry
+<SYNC Start=78090><P Class=KRCC>
+&nbsp;
+<SYNC Start=78091><P Class=KRCC>
+with you. If you're having trouble deciding if something should be a setting or
+<SYNC Start=82210><P Class=KRCC>
+&nbsp;
+<SYNC Start=82211><P Class=KRCC>
+not, you can check out the setting section in the Android design guide,
+<SYNC Start=85765><P Class=KRCC>
+&nbsp;
+<SYNC Start=85766><P Class=KRCC>
+which is linked below. It contains a workflow diagram that could help you.
+<SYNC Start=90170><P Class=KRCC>
+&nbsp;
+<SYNC Start=90171><P Class=KRCC>
+Very few roads often lead to making something a setting.</BODY>
+</SAMI>

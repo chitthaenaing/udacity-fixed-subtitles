@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+Now that our app is showing real data, we should take
+<SYNC Start=2730><P Class=KRCC>
+&nbsp;
+<SYNC Start=2731><P Class=KRCC>
+a screenshot of our app, so we can remember what it was
+<SYNC Start=5240><P Class=KRCC>
+&nbsp;
+<SYNC Start=5241><P Class=KRCC>
+like when we made it this far. I personally like doing this
+<SYNC Start=8490><P Class=KRCC>
+&nbsp;
+<SYNC Start=8491><P Class=KRCC>
+throughout the process of building an app, because then I can look
+<SYNC Start=11430><P Class=KRCC>
+&nbsp;
+<SYNC Start=11431><P Class=KRCC>
+back, and see how it evolved. I'm going to show you one
+<SYNC Start=15190><P Class=KRCC>
+&nbsp;
+<SYNC Start=15191><P Class=KRCC>
+way that you can take a screenshot of your device. Open up
+<SYNC Start=18170><P Class=KRCC>
+&nbsp;
+<SYNC Start=18171><P Class=KRCC>
+Android Device Monitor and then click on the device here. Then, click
+<SYNC Start=22080><P Class=KRCC>
+&nbsp;
+<SYNC Start=22081><P Class=KRCC>
+on this camera icon, to do a screen capture. When it pops
+<SYNC Start=25720><P Class=KRCC>
+&nbsp;
+<SYNC Start=25721><P Class=KRCC>
+up, you can hit Save, and then you're done.
+<SYNC Start=27330><P Class=KRCC>
+&nbsp;
+<SYNC Start=28530><P Class=KRCC>
+On certain physical devices, there are actually hardware keys that
+<SYNC Start=32140><P Class=KRCC>
+&nbsp;
+<SYNC Start=32141><P Class=KRCC>
+allow you to grab a screenshot. For example, on the
+<SYNC Start=35440><P Class=KRCC>
+&nbsp;
+<SYNC Start=35441><P Class=KRCC>
+Nexus 5, you can long press on the volume down
+<SYNC Start=37910><P Class=KRCC>
+&nbsp;
+<SYNC Start=37911><P Class=KRCC>
+and the power key, at the same time. That takes
+<SYNC Start=41620><P Class=KRCC>
+&nbsp;
+<SYNC Start=41621><P Class=KRCC>
+a screenshot. It gets saved to the Photos app and
+<SYNC Start=44530><P Class=KRCC>
+&nbsp;
+<SYNC Start=44531><P Class=KRCC>
+then you can share it out to anyone you want.
+<SYNC Start=46940><P Class=KRCC>
+&nbsp;
+<SYNC Start=46941><P Class=KRCC>
+You can show them what an awesome app you're building.</BODY>
+</SAMI>

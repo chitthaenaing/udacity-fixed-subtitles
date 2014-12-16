@@ -1,0 +1,106 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=110><P Class=KRCC>
+Open up the Developer API Guide for Settings, if you want to follow along.
+<SYNC Start=4250><P Class=KRCC>
+&nbsp;
+<SYNC Start=4251><P Class=KRCC>
+If you've pondered it carefully and you've decided you really want this to
+<SYNC Start=7000><P Class=KRCC>
+&nbsp;
+<SYNC Start=7001><P Class=KRCC>
+be a setting, this is what you do next. Android provides a way to display
+<SYNC Start=11290><P Class=KRCC>
+&nbsp;
+<SYNC Start=11291><P Class=KRCC>
+a hierarchy of preferences, including headers, such as the ones shown here.
+<SYNC Start=16450><P Class=KRCC>
+&nbsp;
+<SYNC Start=16451><P Class=KRCC>
+The value of the preference is called the preference summary, and that's seen
+<SYNC Start=20210><P Class=KRCC>
+&nbsp;
+<SYNC Start=20211><P Class=KRCC>
+here. It looks almost like the subtitle text. The preference also provides UI.
+<SYNC Start=25740><P Class=KRCC>
+&nbsp;
+<SYNC Start=25741><P Class=KRCC>
+To allow users to modify that setting. You just need to supply the strings, but
+<SYNC Start=30330><P Class=KRCC>
+&nbsp;
+<SYNC Start=30331><P Class=KRCC>
+you don't have to implement the UI like the spinner here.
+<SYNC Start=33470><P Class=KRCC>
+&nbsp;
+<SYNC Start=33471><P Class=KRCC>
+Common preference types are the check box preference, list preference,
+<SYNC Start=36770><P Class=KRCC>
+&nbsp;
+<SYNC Start=36771><P Class=KRCC>
+edit text preference. We can see some examples in the settings app under
+<SYNC Start=40460><P Class=KRCC>
+&nbsp;
+<SYNC Start=40461><P Class=KRCC>
+developer options. Here's a bunch of preferences. This is an example of
+<SYNC Start=44670><P Class=KRCC>
+&nbsp;
+<SYNC Start=44671><P Class=KRCC>
+a check box preference. This is an example of a list preference where you
+<SYNC Start=49380><P Class=KRCC>
+&nbsp;
+<SYNC Start=49381><P Class=KRCC>
+have different radio button options here. Once the user changes the setting,
+<SYNC Start=54570><P Class=KRCC>
+&nbsp;
+<SYNC Start=54571><P Class=KRCC>
+it gets saved in the default share preferences file. This stores a bunch of key
+<SYNC Start=58890><P Class=KRCC>
+&nbsp;
+<SYNC Start=58891><P Class=KRCC>
+value pairs of primitive data. An example integer preference could be how many
+<SYNC Start=64390><P Class=KRCC>
+&nbsp;
+<SYNC Start=64391><P Class=KRCC>
+days of e-mail history should be saved locally on the device. You could have
+<SYNC Start=68550><P Class=KRCC>
+&nbsp;
+<SYNC Start=68551><P Class=KRCC>
+a string stored integer preferences for what the currently selected account and
+<SYNC Start=73000><P Class=KRCC>
+&nbsp;
+<SYNC Start=73001><P Class=KRCC>
+device is. Then at any time you can fetch the value of this shared preferences,
+<SYNC Start=77620><P Class=KRCC>
+&nbsp;
+<SYNC Start=77621><P Class=KRCC>
+as long as you pass in the name of the key that you want.
+<SYNC Start=79540><P Class=KRCC>
+&nbsp;
+<SYNC Start=79541><P Class=KRCC>
+You can also use shared preferences outside the context of settings as well.
+<SYNC Start=84060><P Class=KRCC>
+&nbsp;
+<SYNC Start=84061><P Class=KRCC>
+This information is located in the developer API guide, for
+<SYNC Start=87080><P Class=KRCC>
+&nbsp;
+<SYNC Start=87081><P Class=KRCC>
+storage options, which is also linked below.</BODY>
+</SAMI>

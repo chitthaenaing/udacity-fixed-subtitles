@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+Pulling down all the data will reduce latency and maximize the
+<SYNC Start=3250><P Class=KRCC>
+&nbsp;
+<SYNC Start=3251><P Class=KRCC>
+battery efficiency. But it's unlikely the user is going to read every
+<SYNC Start=6520><P Class=KRCC>
+&nbsp;
+<SYNC Start=6521><P Class=KRCC>
+article. So you'd just be wasting a lot of bandwidth. Downloading
+<SYNC Start=10030><P Class=KRCC>
+&nbsp;
+<SYNC Start=10031><P Class=KRCC>
+all the articles without pictures actually doesn't improve our efficiency if
+<SYNC Start=13270><P Class=KRCC>
+&nbsp;
+<SYNC Start=13271><P Class=KRCC>
+you're just downloading the front page, because you'll still need to
+<SYNC Start=16560><P Class=KRCC>
+&nbsp;
+<SYNC Start=16561><P Class=KRCC>
+activate the radio to download those pictures whenever an article is
+<SYNC Start=19470><P Class=KRCC>
+&nbsp;
+<SYNC Start=19471><P Class=KRCC>
+selected. The right answer is to get the headlines and the
+<SYNC Start=22460><P Class=KRCC>
+&nbsp;
+<SYNC Start=22461><P Class=KRCC>
+articles linked to from that front page, 'cause they're the most likely
+<SYNC Start=25360><P Class=KRCC>
+&nbsp;
+<SYNC Start=25361><P Class=KRCC>
+to be read as the user starts
+<SYNC Start=27010><P Class=KRCC>
+&nbsp;
+<SYNC Start=27011><P Class=KRCC>
+browsing through the app. You can then incrementally
+<SYNC Start=29280><P Class=KRCC>
+&nbsp;
+<SYNC Start=29281><P Class=KRCC>
+download more articles each time the user moves
+<SYNC Start=31640><P Class=KRCC>
+&nbsp;
+<SYNC Start=31641><P Class=KRCC>
+into an area you haven't pre-fetched for yet.</BODY>
+</SAMI>

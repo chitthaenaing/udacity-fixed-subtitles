@@ -1,0 +1,267 @@
+1
+00:00:00,440 --> 00:00:05,600
+Inside a forecast fragment, we're going to replace the mForecastAdaptor
+
+2
+00:00:05,600 --> 00:00:07,580
+with a simple cursor adaptor that will work with the
+
+3
+00:00:07,580 --> 00:00:10,350
+new database code we just added. This is another one
+
+4
+00:00:10,350 --> 00:00:12,860
+we want to make sure we're using the V4 version.
+
+5
+00:00:12,860 --> 00:00:15,500
+There we are. Make sure to select that in your
+
+6
+00:00:15,500 --> 00:00:17,382
+list. You can see we have a bunch of code
+
+7
+00:00:17,382 --> 00:00:21,126
+that doesn't compile. If it's a Ray adapter, let's switch
+
+8
+00:00:21,126 --> 00:00:26,080
+our Forecast adapter, out with new simple cursor adapter. Now,
+
+9
+00:00:26,080 --> 00:00:29,050
+simple cursor adapter is pretty cool. It allows us
+
+10
+00:00:29,050 --> 00:00:31,130
+to map columns within our database, which are in
+
+11
+00:00:31,130 --> 00:00:33,980
+our weather contract, directly to widgets, that are in
+
+12
+00:00:33,980 --> 00:00:37,080
+our list items. So, all looks pretty good, except that
+
+13
+00:00:37,080 --> 00:00:41,580
+it won't quite compile. Because, this stuff we're doing
+
+14
+00:00:41,580 --> 00:00:44,010
+to start the detail activity isn't going to work.
+
+15
+00:00:44,010 --> 00:00:48,030
+So for now, let's just put this away. We'll
+
+16
+00:00:48,030 --> 00:00:51,790
+get back to that later. We have something that compiles.
+
+17
+00:00:51,790 --> 00:00:55,090
+But we need to do something first. If we
+
+18
+00:00:55,090 --> 00:00:58,130
+ran it now, we would still get nothing. The reason
+
+19
+00:00:58,130 --> 00:00:59,830
+why we would still get nothing is we aren't
+
+20
+00:00:59,830 --> 00:01:03,320
+doing anything in onload finish. In onloader reset we might
+
+21
+00:01:03,320 --> 00:01:07,660
+as well complete this by doing swapCursor with null.
+
+22
+00:01:07,660 --> 00:01:10,200
+Our code should actually do something now. Let's try running
+
+23
+00:01:10,200 --> 00:01:14,840
+it. And it looks terrible. What's in the database doesn't
+
+24
+00:01:14,840 --> 00:01:16,630
+look anything like what's supposed to be on the screen.
+
+25
+00:01:17,660 --> 00:01:20,880
+We need some formatting and settings help. More functions for
+
+26
+00:01:20,880 --> 00:01:24,400
+our utility class. Get preferred location did look a bit
+
+27
+00:01:24,400 --> 00:01:27,140
+lonely there, right? To help us out, we'll add another
+
+28
+00:01:27,140 --> 00:01:29,590
+function to utility that tells us if metric is the current
+
+29
+00:01:29,590 --> 00:01:32,930
+setting. We'll add a simple function to format the temperature,
+
+30
+00:01:32,930 --> 00:01:35,590
+and we'll add a function to format the date. Now,
+
+31
+00:01:35,590 --> 00:01:38,130
+interestingly enough, what kind of date is this? Well, we've
+
+32
+00:01:38,130 --> 00:01:42,820
+got two options, java.util, or java.sql. In this case, we actually
+
+33
+00:01:42,820 --> 00:01:46,370
+want java.util, but we're missing yet another helper function.
+
+34
+00:01:46,370 --> 00:01:48,760
+We'll add a function into weatherContract that converts the db
+
+35
+00:01:48,760 --> 00:01:51,630
+date text into an actual date object, opposite to the
+
+36
+00:01:51,630 --> 00:01:54,820
+other Contract function. So there we have it. How we
+
+37
+00:01:54,820 --> 00:01:57,390
+store the data in the database is entirely encapsulated
+
+38
+00:01:57,390 --> 00:02:01,250
+in the Contract. So, now we've got all that cool
+
+39
+00:02:01,250 --> 00:02:04,960
+stuff, how do we actually use it? Let's go back
+
+40
+00:02:04,960 --> 00:02:07,917
+to our forecast fragment. It turns out there's a special
+
+41
+00:02:07,917 --> 00:02:10,132
+callback for SimpleCursorAdaptor, called ViewBinder.
+
+42
+00:02:10,132 --> 00:02:15,387
+[BLANK_AUDIO]
+
+43
+00:02:15,387 --> 00:02:18,700
+Set View Binder, with a single function, Set View Value.
+
+44
+00:02:20,250 --> 00:02:23,010
+So inside of Set View value, we're actually going to make
+
+45
+00:02:23,010 --> 00:02:25,910
+really good use of those utility functions we just saw.
+
+46
+00:02:25,910 --> 00:02:28,840
+First of all, we'll save off as metric. If we're
+
+47
+00:02:28,840 --> 00:02:31,780
+using the Temperature Columns, then we just conform out the
+
+48
+00:02:31,780 --> 00:02:35,270
+temperature. Now that we've got setViewValue, let's put some cool
+
+49
+00:02:35,270 --> 00:02:38,240
+stuff inside of it. You see, that we use isMetric
+
+50
+00:02:38,240 --> 00:02:40,430
+when we're populating the temperature in our views and we pass
+
+51
+00:02:40,430 --> 00:02:44,500
+that into our new Utility.formatTemperature function. So you can see, that
+
+52
+00:02:44,500 --> 00:02:47,340
+having these column indices here allowed us to make this function more
+
+53
+00:02:47,340 --> 00:02:50,530
+efficient, and it will also help when we move into lesson five.
+
+54
+00:02:50,530 --> 00:02:52,780
+One of the things you notice, is that the layout height was
+
+55
+00:02:52,780 --> 00:02:56,950
+really, really small. That's because it was just wrapping content. We
+
+56
+00:02:56,950 --> 00:03:00,020
+can fix this, by telling it to center our content. And, by
+
+57
+00:03:00,020 --> 00:03:03,420
+setting the minimum height to the least preferred item height. This will
+
+58
+00:03:03,420 --> 00:03:05,670
+make things look a little better as well, a lot more like
+
+59
+00:03:05,670 --> 00:03:07,980
+our original layout. So let's take a quick look to
+
+60
+00:03:07,980 --> 00:03:09,342
+see what all of this work has done for us.
+
+61
+00:03:09,342 --> 00:03:11,637
+[BLANK_AUDIO]
+
+62
+00:03:11,637 --> 00:03:14,980
+That's a little bit more like it. Now as you can see, we're seeing our
+
+63
+00:03:14,980 --> 00:03:18,460
+forecast in the original way we anticipated. We
+
+64
+00:03:18,460 --> 00:03:19,650
+can go to our settings and we can
+
+65
+00:03:19,650 --> 00:03:22,080
+switch things on demand, but now we're in
+
+66
+00:03:22,080 --> 00:03:24,470
+that same problem I had before. We can't
+
+67
+00:03:24,470 --> 00:03:29,220
+do anything to get to the detail activity. Well, I'm going to have you fix that.

@@ -1,0 +1,138 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=590><P Class=KRCC>
+I like to think of intents as envelopes
+<SYNC Start=2710><P Class=KRCC>
+&nbsp;
+<SYNC Start=4920><P Class=KRCC>
+each one includes who, or in this case, which component you want it
+<SYNC Start=8109><P Class=KRCC>
+&nbsp;
+<SYNC Start=8110><P Class=KRCC>
+delivered to. And there's room for a small amount of data to be delivered,
+<SYNC Start=11290><P Class=KRCC>
+&nbsp;
+<SYNC Start=13360><P Class=KRCC>
+packaged as extras.
+<SYNC Start=14409><P Class=KRCC>
+&nbsp;
+<SYNC Start=16870><P Class=KRCC>
+Primitive tuples that will be available to the application
+<SYNC Start=19000><P Class=KRCC>
+&nbsp;
+<SYNC Start=19001><P Class=KRCC>
+component that ultimately receives and opens this intent. So an
+<SYNC Start=23550><P Class=KRCC>
+&nbsp;
+<SYNC Start=23551><P Class=KRCC>
+explicit intent, explicitly specifies the name of the recipient, as
+<SYNC Start=26910><P Class=KRCC>
+&nbsp;
+<SYNC Start=26911><P Class=KRCC>
+you can see on this envelope. Implicit intents are a
+<SYNC Start=29900><P Class=KRCC>
+&nbsp;
+<SYNC Start=29901><P Class=KRCC>
+lot more interesting. Here, we don't specify the name of
+<SYNC Start=33800><P Class=KRCC>
+&nbsp;
+<SYNC Start=33801><P Class=KRCC>
+the class. We don't even know what it is. So,
+<SYNC Start=36550><P Class=KRCC>
+&nbsp;
+<SYNC Start=36551><P Class=KRCC>
+how do we indicate which activity to launch? Well, you
+<SYNC Start=39500><P Class=KRCC>
+&nbsp;
+<SYNC Start=39501><P Class=KRCC>
+know those stories you sometimes hear about letters with fake
+<SYNC Start=42230><P Class=KRCC>
+&nbsp;
+<SYNC Start=42231><P Class=KRCC>
+addresses like these that somehow still find their way to the intended
+<SYNC Start=47890><P Class=KRCC>
+&nbsp;
+<SYNC Start=47891><P Class=KRCC>
+recipient? Well the intent resolution system on Android, works the same way.
+<SYNC Start=52410><P Class=KRCC>
+&nbsp;
+<SYNC Start=54660><P Class=KRCC>
+Finding an activity, capable of performing an action
+<SYNC Start=56940><P Class=KRCC>
+&nbsp;
+<SYNC Start=56941><P Class=KRCC>
+you specify on the associated data. So, rather than
+<SYNC Start=60920><P Class=KRCC>
+&nbsp;
+<SYNC Start=60921><P Class=KRCC>
+specifying the name of a class, you indicate
+<SYNC Start=63420><P Class=KRCC>
+&nbsp;
+<SYNC Start=63421><P Class=KRCC>
+an action you'd like an activity to perform, and
+<SYNC Start=65930><P Class=KRCC>
+&nbsp;
+<SYNC Start=65931><P Class=KRCC>
+on what data that action should be performed.
+<SYNC Start=69000><P Class=KRCC>
+&nbsp;
+<SYNC Start=69001><P Class=KRCC>
+Like this, where we want to address an activity
+<SYNC Start=73210><P Class=KRCC>
+&nbsp;
+<SYNC Start=73211><P Class=KRCC>
+that's capable of viewing a website. And because intents
+<SYNC Start=76450><P Class=KRCC>
+&nbsp;
+<SYNC Start=76451><P Class=KRCC>
+can cross through application boundaries, the activity that started,
+<SYNC Start=80200><P Class=KRCC>
+&nbsp;
+<SYNC Start=80201><P Class=KRCC>
+may not be part of your app. So,
+<SYNC Start=82900><P Class=KRCC>
+&nbsp;
+<SYNC Start=82901><P Class=KRCC>
+you can include functionality like this, browsing websites or
+<SYNC Start=87270><P Class=KRCC>
+&nbsp;
+<SYNC Start=89480><P Class=KRCC>
+making phone calls or choosing a contact from your address book. All
+<SYNC Start=95750><P Class=KRCC>
+&nbsp;
+<SYNC Start=95751><P Class=KRCC>
+from within your app, without you having to implement any of it yourself.
+<SYNC Start=99150><P Class=KRCC>
+&nbsp;
+<SYNC Start=101160><P Class=KRCC>
+You don't even need to know about the app
+<SYNC Start=102520><P Class=KRCC>
+&nbsp;
+<SYNC Start=102521><P Class=KRCC>
+that will ultimately service your request. You can find
+<SYNC Start=105530><P Class=KRCC>
+&nbsp;
+<SYNC Start=105531><P Class=KRCC>
+details of some of the intents supported by native
+<SYNC Start=107850><P Class=KRCC>
+&nbsp;
+<SYNC Start=107851><P Class=KRCC>
+apps in Common Intents page of the Android developer site.</BODY>
+</SAMI>

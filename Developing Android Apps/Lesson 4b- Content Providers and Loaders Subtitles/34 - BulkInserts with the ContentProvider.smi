@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=140><P Class=KRCC>
+All right. Now we're back to interacting with our ContentProvider, so it's time
+<SYNC Start=4161><P Class=KRCC>
+&nbsp;
+<SYNC Start=4162><P Class=KRCC>
+to have another exercise. Use the
+<SYNC Start=5881><P Class=KRCC>
+&nbsp;
+<SYNC Start=5882><P Class=KRCC>
+ContentProvider to insert the vector of content
+<SYNC Start=8956><P Class=KRCC>
+&nbsp;
+<SYNC Start=8957><P Class=KRCC>
+value objects into the database. [LAUGH]
+<SYNC Start=11330><P Class=KRCC>
+&nbsp;
+<SYNC Start=11331><P Class=KRCC>
+Don't worry, we're really almost done with
+<SYNC Start=12863><P Class=KRCC>
+&nbsp;
+<SYNC Start=12864><P Class=KRCC>
+inserting data. Next is the fun part that makes this all worth it.</BODY>
+</SAMI>

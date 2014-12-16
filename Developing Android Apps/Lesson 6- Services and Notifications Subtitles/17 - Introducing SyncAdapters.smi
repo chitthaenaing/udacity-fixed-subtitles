@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+There's a lot to learn with making background
+<SYNC Start=2410><P Class=KRCC>
+&nbsp;
+<SYNC Start=2411><P Class=KRCC>
+transactions efficient. But the good news is that Android
+<SYNC Start=5610><P Class=KRCC>
+&nbsp;
+<SYNC Start=5611><P Class=KRCC>
+gives you the Sync Manager framework that implements
+<SYNC Start=8070><P Class=KRCC>
+&nbsp;
+<SYNC Start=8071><P Class=KRCC>
+many of these best practices. You utilize that framework
+<SYNC Start=11190><P Class=KRCC>
+&nbsp;
+<SYNC Start=11191><P Class=KRCC>
+by implementing a sync adapter. The framework, originally
+<SYNC Start=14480><P Class=KRCC>
+&nbsp;
+<SYNC Start=14481><P Class=KRCC>
+introduced in Android 2.0 Eclair or Android API level
+<SYNC Start=18235><P Class=KRCC>
+&nbsp;
+<SYNC Start=18236><P Class=KRCC>
+5, allows Android applications to leverage the same
+<SYNC Start=21880><P Class=KRCC>
+&nbsp;
+<SYNC Start=21881><P Class=KRCC>
+basic framework that Google apps use for efficient synchronization.
+<SYNC Start=25610><P Class=KRCC>
+&nbsp;
+<SYNC Start=25611><P Class=KRCC>
+Ultimately, it's a centralized place to put all
+<SYNC Start=27990><P Class=KRCC>
+&nbsp;
+<SYNC Start=27991><P Class=KRCC>
+of the device data transfers in one place.
+<SYNC Start=31060><P Class=KRCC>
+&nbsp;
+<SYNC Start=31061><P Class=KRCC>
+So that they all be scheduled intelligently by
+<SYNC Start=33310><P Class=KRCC>
+&nbsp;
+<SYNC Start=33311><P Class=KRCC>
+the OS. In other words, that's one big cookie.
+<SYNC Start=38460><P Class=KRCC>
+&nbsp;
+<SYNC Start=38461><P Class=KRCC>
+Android Sync Manager handles synchronization requests using sync
+<SYNC Start=42250><P Class=KRCC>
+&nbsp;
+<SYNC Start=42251><P Class=KRCC>
+adapters. The Sync Manager batches and time shifts
+<SYNC Start=45100><P Class=KRCC>
+&nbsp;
+<SYNC Start=45101><P Class=KRCC>
+these requests when possible to allow your data
+<SYNC Start=47480><P Class=KRCC>
+&nbsp;
+<SYNC Start=47481><P Class=KRCC>
+transfers to be scheduled with transfers from other apps,
+<SYNC Start=50770><P Class=KRCC>
+&nbsp;
+<SYNC Start=50771><P Class=KRCC>
+all working towards the goal of reducing the
+<SYNC Start=52930><P Class=KRCC>
+&nbsp;
+<SYNC Start=52931><P Class=KRCC>
+number of times the system has to switch on
+<SYNC Start=55040><P Class=KRCC>
+&nbsp;
+<SYNC Start=55041><P Class=KRCC>
+the radio. If your device has less memory,
+<SYNC Start=58100><P Class=KRCC>
+&nbsp;
+<SYNC Start=58101><P Class=KRCC>
+it will schedule fewer simultaneous synchs. The Synch Manager
+<SYNC Start=61890><P Class=KRCC>
+&nbsp;
+<SYNC Start=61891><P Class=KRCC>
+also takes care of things like checking for
+<SYNC Start=63950><P Class=KRCC>
+&nbsp;
+<SYNC Start=63951><P Class=KRCC>
+network connectivity before initiating transfers and retrying downloads when
+<SYNC Start=67980><P Class=KRCC>
+&nbsp;
+<SYNC Start=67981><P Class=KRCC>
+connectivity is dropped. The synchronization framework works with content
+<SYNC Start=72520><P Class=KRCC>
+&nbsp;
+<SYNC Start=72521><P Class=KRCC>
+providers for two way synchronization and leverages the Android
+<SYNC Start=76020><P Class=KRCC>
+&nbsp;
+<SYNC Start=76021><P Class=KRCC>
+account manager to provide synchronization services that are
+<SYNC Start=78500><P Class=KRCC>
+&nbsp;
+<SYNC Start=78501><P Class=KRCC>
+tied to accounts. Our application will do neither
+<SYNC Start=81290><P Class=KRCC>
+&nbsp;
+<SYNC Start=81291><P Class=KRCC>
+of these things, but we'll still have to
+<SYNC Start=83110><P Class=KRCC>
+&nbsp;
+<SYNC Start=83111><P Class=KRCC>
+deal with some of the complexity of these features.
+<SYNC Start=85710><P Class=KRCC>
+&nbsp;
+<SYNC Start=85711><P Class=KRCC>
+This can make SyncAdapter seem daunting at first.
+<SYNC Start=89170><P Class=KRCC>
+&nbsp;
+<SYNC Start=89171><P Class=KRCC>
+What does the SyncManager do to help you fetch
+<SYNC Start=92680><P Class=KRCC>
+&nbsp;
+<SYNC Start=92681><P Class=KRCC>
+data from the network? Does it schedule your
+<SYNC Start=96480><P Class=KRCC>
+&nbsp;
+<SYNC Start=96481><P Class=KRCC>
+network jobs with other apps, implement a synchronization protocol,
+<SYNC Start=102410><P Class=KRCC>
+&nbsp;
+<SYNC Start=102411><P Class=KRCC>
+store account information, or has logic to retry
+<SYNC Start=106550><P Class=KRCC>
+&nbsp;
+<SYNC Start=106551><P Class=KRCC>
+your request? Select all of these that match.</BODY>
+</SAMI>

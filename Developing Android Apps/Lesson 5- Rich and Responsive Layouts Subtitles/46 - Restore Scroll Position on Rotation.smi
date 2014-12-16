@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+In the forecast fragment, we create a position variable. Whenever an item
+<SYNC Start=3790><P Class=KRCC>
+&nbsp;
+<SYNC Start=3791><P Class=KRCC>
+is clicked, we update the position. Then, in the on save instance
+<SYNC Start=7234><P Class=KRCC>
+&nbsp;
+<SYNC Start=7235><P Class=KRCC>
+state method, we store the position in the bundle. If the app
+<SYNC Start=10230><P Class=KRCC>
+&nbsp;
+<SYNC Start=10231><P Class=KRCC>
+gets killed, then we can restore the position from the save state bundle.
+<SYNC Start=13620><P Class=KRCC>
+&nbsp;
+<SYNC Start=13621><P Class=KRCC>
+This is on the onCreate view method. The reason we store in
+<SYNC Start=16598><P Class=KRCC>
+&nbsp;
+<SYNC Start=16599><P Class=KRCC>
+a global variable is because the list view probably hasn't been populated
+<SYNC Start=19573><P Class=KRCC>
+&nbsp;
+<SYNC Start=19574><P Class=KRCC>
+yet. We wait for the onload finish callback to happen when the
+<SYNC Start=22570><P Class=KRCC>
+&nbsp;
+<SYNC Start=22571><P Class=KRCC>
+cursor is swapped. Then, we can tell the list view to set selection
+<SYNC Start=25510><P Class=KRCC>
+&nbsp;
+<SYNC Start=25511><P Class=KRCC>
+on that position, and that position will be scrolled into view.</BODY>
+</SAMI>

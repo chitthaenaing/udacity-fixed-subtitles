@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1030><P Class=KRCC>
+Inexact repeating alarms. Infinitely better than exact repeating alarms, but
+<SYNC Start=4939><P Class=KRCC>
+&nbsp;
+<SYNC Start=4940><P Class=KRCC>
+still far from ideal. The problem with any kind of repeating
+<SYNC Start=8690><P Class=KRCC>
+&nbsp;
+<SYNC Start=8691><P Class=KRCC>
+alarm is that it's still polling your server to check
+<SYNC Start=11350><P Class=KRCC>
+&nbsp;
+<SYNC Start=11351><P Class=KRCC>
+for updates. So the more frequently you poll, the fresher the
+<SYNC Start=14530><P Class=KRCC>
+&nbsp;
+<SYNC Start=14531><P Class=KRCC>
+data you can display, but the higher the cost in
+<SYNC Start=17130><P Class=KRCC>
+&nbsp;
+<SYNC Start=17131><P Class=KRCC>
+battery life. You can pull as frequently to conserve battery but
+<SYNC Start=20740><P Class=KRCC>
+&nbsp;
+<SYNC Start=20741><P Class=KRCC>
+that just means your content will be stale for longer.
+<SYNC Start=23730><P Class=KRCC>
+&nbsp;
+<SYNC Start=23731><P Class=KRCC>
+You could just let the user decide the update frequency themselves,
+<SYNC Start=26530><P Class=KRCC>
+&nbsp;
+<SYNC Start=26531><P Class=KRCC>
+but then you lose the magic. If only there was
+<SYNC Start=29140><P Class=KRCC>
+&nbsp;
+<SYNC Start=29141><P Class=KRCC>
+a better way. Is such a thing possible? Yes it
+<SYNC Start=32820><P Class=KRCC>
+&nbsp;
+<SYNC Start=32821><P Class=KRCC>
+is. Google cloud messaging lets your server notify your app
+<SYNC Start=36440><P Class=KRCC>
+&nbsp;
+<SYNC Start=36441><P Class=KRCC>
+directly when there's data ready to be downloaded. Or it
+<SYNC Start=39340><P Class=KRCC>
+&nbsp;
+<SYNC Start=39341><P Class=KRCC>
+can even include the new data in the message payload
+<SYNC Start=41550><P Class=KRCC>
+&nbsp;
+<SYNC Start=41551><P Class=KRCC>
+itself. Using Google Cloud Messaging, you can send messages from
+<SYNC Start=45300><P Class=KRCC>
+&nbsp;
+<SYNC Start=45301><P Class=KRCC>
+your server to any installed instance of your app via
+<SYNC Start=48260><P Class=KRCC>
+&nbsp;
+<SYNC Start=48261><P Class=KRCC>
+the Google Cloud. As a result, you can stop polling,
+<SYNC Start=51650><P Class=KRCC>
+&nbsp;
+<SYNC Start=51651><P Class=KRCC>
+which will immediately improve battery life and also improve the
+<SYNC Start=54630><P Class=KRCC>
+&nbsp;
+<SYNC Start=54631><P Class=KRCC>
+freshness of your app. And instead, rely on your server
+<SYNC Start=58036><P Class=KRCC>
+&nbsp;
+<SYNC Start=58037><P Class=KRCC>
+notifying clients when there's data to sync. These messages can
+<SYNC Start=61670><P Class=KRCC>
+&nbsp;
+<SYNC Start=61671><P Class=KRCC>
+be simple tickles, that trigger a sync adapter by notifying your
+<SYNC Start=64785><P Class=KRCC>
+&nbsp;
+<SYNC Start=64786><P Class=KRCC>
+app that there is new data or need to download.
+<SYNC Start=67350><P Class=KRCC>
+&nbsp;
+<SYNC Start=67351><P Class=KRCC>
+Or you can include the new data within the message payload.
+<SYNC Start=70560><P Class=KRCC>
+&nbsp;
+<SYNC Start=70561><P Class=KRCC>
+In the sunshine example, we're using someone else's server. But
+<SYNC Start=74140><P Class=KRCC>
+&nbsp;
+<SYNC Start=74141><P Class=KRCC>
+even then, it may make sense to create your own middle
+<SYNC Start=77010><P Class=KRCC>
+&nbsp;
+<SYNC Start=77011><P Class=KRCC>
+tier that pulls the source and notifies your installed app instances
+<SYNC Start=80780><P Class=KRCC>
+&nbsp;
+<SYNC Start=80781><P Class=KRCC>
+when it notices a change. Now we're not going to set up a
+<SYNC Start=83650><P Class=KRCC>
+&nbsp;
+<SYNC Start=83651><P Class=KRCC>
+server in this lesson, but you can see the full details for
+<SYNC Start=86260><P Class=KRCC>
+&nbsp;
+<SYNC Start=86261><P Class=KRCC>
+using Google cloud messaging from the developer guide linked to instructor nets.</BODY>
+</SAMI>

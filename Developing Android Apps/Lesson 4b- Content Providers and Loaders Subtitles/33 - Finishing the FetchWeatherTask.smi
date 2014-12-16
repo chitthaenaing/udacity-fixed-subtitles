@@ -1,0 +1,82 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+As you've noticed, we aren't actually testing
+<SYNC Start=1920><P Class=KRCC>
+&nbsp;
+<SYNC Start=1921><P Class=KRCC>
+that new function yet. Fortunately, we have a
+<SYNC Start=4170><P Class=KRCC>
+&nbsp;
+<SYNC Start=4171><P Class=KRCC>
+pretty good spot in doing background to
+<SYNC Start=5890><P Class=KRCC>
+&nbsp;
+<SYNC Start=5891><P Class=KRCC>
+do that. After all, right here we've already
+<SYNC Start=8430><P Class=KRCC>
+&nbsp;
+<SYNC Start=8431><P Class=KRCC>
+parsed everything we need to call that function. So, we can just call long
+<SYNC Start=13227><P Class=KRCC>
+&nbsp;
+<SYNC Start=13228><P Class=KRCC>
+locationId equals addLocation cityName locationQuery
+<SYNC Start=18843><P Class=KRCC>
+&nbsp;
+<SYNC Start=18844><P Class=KRCC>
+citylatitude, and citylongitude. It would be useful for our contract to have
+<SYNC Start=25411><P Class=KRCC>
+&nbsp;
+<SYNC Start=25412><P Class=KRCC>
+another method, one that converts a date object
+<SYNC Start=28715><P Class=KRCC>
+&nbsp;
+<SYNC Start=28716><P Class=KRCC>
+to the format our database uses. Note that Android
+<SYNC Start=32800><P Class=KRCC>
+&nbsp;
+<SYNC Start=32801><P Class=KRCC>
+Studio may have trouble importing this data object,
+<SYNC Start=34840><P Class=KRCC>
+&nbsp;
+<SYNC Start=34841><P Class=KRCC>
+since Java has two day classes, one in databases,
+<SYNC Start=37930><P Class=KRCC>
+&nbsp;
+<SYNC Start=37931><P Class=KRCC>
+and one in java.util. We want java.util.date. Back
+<SYNC Start=42680><P Class=KRCC>
+&nbsp;
+<SYNC Start=42681><P Class=KRCC>
+in the FetchWeatherTask, we're going to collect the data
+<SYNC Start=45180><P Class=KRCC>
+&nbsp;
+<SYNC Start=45181><P Class=KRCC>
+from JSON into the weather array. All right, so
+<SYNC Start=49090><P Class=KRCC>
+&nbsp;
+<SYNC Start=49091><P Class=KRCC>
+we now have a whole bunch of data that
+<SYNC Start=50530><P Class=KRCC>
+&nbsp;
+<SYNC Start=50531><P Class=KRCC>
+needs to be inserted. Guess what we're going to do next?</BODY>
+</SAMI>

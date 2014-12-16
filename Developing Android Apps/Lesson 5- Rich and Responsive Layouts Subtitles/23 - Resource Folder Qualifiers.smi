@@ -1,0 +1,218 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+So, we know we need to create layouts
+<SYNC Start=1870><P Class=KRCC>
+&nbsp;
+<SYNC Start=1871><P Class=KRCC>
+and assets optimized for different screen pixel densities
+<SYNC Start=4770><P Class=KRCC>
+&nbsp;
+<SYNC Start=4771><P Class=KRCC>
+and sizes. So, now's a great time to
+<SYNC Start=7320><P Class=KRCC>
+&nbsp;
+<SYNC Start=7321><P Class=KRCC>
+introduce you to the Android resource framework. All externalized
+<SYNC Start=12130><P Class=KRCC>
+&nbsp;
+<SYNC Start=12131><P Class=KRCC>
+Android resources, everything from strings to layouts to
+<SYNC Start=15660><P Class=KRCC>
+&nbsp;
+<SYNC Start=15661><P Class=KRCC>
+drawables and animations are all stored within your project's
+<SYNC Start=19200><P Class=KRCC>
+&nbsp;
+<SYNC Start=19201><P Class=KRCC>
+res folder. You've already been putting your strings
+<SYNC Start=22490><P Class=KRCC>
+&nbsp;
+<SYNC Start=22491><P Class=KRCC>
+in the strings.xml file stored in the values folder.
+<SYNC Start=25500><P Class=KRCC>
+&nbsp;
+<SYNC Start=25501><P Class=KRCC>
+And you've been putting your layouts into the layout
+<SYNC Start=27550><P Class=KRCC>
+&nbsp;
+<SYNC Start=27551><P Class=KRCC>
+folder. And you know to reference your resources using
+<SYNC Start=31320><P Class=KRCC>
+&nbsp;
+<SYNC Start=31321><P Class=KRCC>
+at notation within both your xml or within the
+<SYNC Start=34450><P Class=KRCC>
+&nbsp;
+<SYNC Start=34451><P Class=KRCC>
+code. And then at runtime, Android will insert the
+<SYNC Start=36617><P Class=KRCC>
+&nbsp;
+<SYNC Start=36618><P Class=KRCC>
+appropriate resource for you. So far, so good. And
+<SYNC Start=40520><P Class=KRCC>
+&nbsp;
+<SYNC Start=40521><P Class=KRCC>
+here's where things get a little more interesting. Android
+<SYNC Start=43475><P Class=KRCC>
+&nbsp;
+<SYNC Start=43476><P Class=KRCC>
+allows you to create alternative versions of every resource
+<SYNC Start=46740><P Class=KRCC>
+&nbsp;
+<SYNC Start=46741><P Class=KRCC>
+by placing them into folders with different qualifiers. We separate
+<SYNC Start=51040><P Class=KRCC>
+&nbsp;
+<SYNC Start=51041><P Class=KRCC>
+each of those using a hyphen. And we can
+<SYNC Start=54130><P Class=KRCC>
+&nbsp;
+<SYNC Start=54131><P Class=KRCC>
+add those qualifiers based on anything from language and
+<SYNC Start=57320><P Class=KRCC>
+&nbsp;
+<SYNC Start=57321><P Class=KRCC>
+or dialect to whether the device is docked, the
+<SYNC Start=60640><P Class=KRCC>
+&nbsp;
+<SYNC Start=60641><P Class=KRCC>
+type of touch screen, the pixel density of the
+<SYNC Start=62930><P Class=KRCC>
+&nbsp;
+<SYNC Start=62931><P Class=KRCC>
+display, the orientation of the screen, and most importantly
+<SYNC Start=66820><P Class=KRCC>
+&nbsp;
+<SYNC Start=66821><P Class=KRCC>
+for a responsive design in particular, the smallest available
+<SYNC Start=69830><P Class=KRCC>
+&nbsp;
+<SYNC Start=69831><P Class=KRCC>
+screen width which you can support with that layout.
+<SYNC Start=72055><P Class=KRCC>
+&nbsp;
+<SYNC Start=72056><P Class=KRCC>
+At runtime, Android will check the count device configuration,
+<SYNC Start=76270><P Class=KRCC>
+&nbsp;
+<SYNC Start=76271><P Class=KRCC>
+it's language, it's screen size, pixel density, everything,
+<SYNC Start=80030><P Class=KRCC>
+&nbsp;
+<SYNC Start=80031><P Class=KRCC>
+and then load the right layout strings and drawables
+<SYNC Start=82790><P Class=KRCC>
+&nbsp;
+<SYNC Start=82791><P Class=KRCC>
+accordingly. You can even chain these qualifiers together. For
+<SYNC Start=86410><P Class=KRCC>
+&nbsp;
+<SYNC Start=86411><P Class=KRCC>
+example, to create a different layout for German language
+<SYNC Start=89460><P Class=KRCC>
+&nbsp;
+<SYNC Start=89461><P Class=KRCC>
+users to account for all of those really long
+<SYNC Start=91660><P Class=KRCC>
+&nbsp;
+<SYNC Start=91661><P Class=KRCC>
+German words, or more typically for a combination of
+<SYNC Start=94960><P Class=KRCC>
+&nbsp;
+<SYNC Start=94961><P Class=KRCC>
+screen size and device configuration. Now, keep in mind
+<SYNC Start=98660><P Class=KRCC>
+&nbsp;
+<SYNC Start=98661><P Class=KRCC>
+that many of these values can change at runtime.
+<SYNC Start=101610><P Class=KRCC>
+&nbsp;
+<SYNC Start=101611><P Class=KRCC>
+The most common change being that of orientation. And
+<SYNC Start=104630><P Class=KRCC>
+&nbsp;
+<SYNC Start=104631><P Class=KRCC>
+it's for this reason that Android activities are destroyed
+<SYNC Start=107190><P Class=KRCC>
+&nbsp;
+<SYNC Start=107191><P Class=KRCC>
+and recreated whenever the device configuration changes. And that's
+<SYNC Start=111360><P Class=KRCC>
+&nbsp;
+<SYNC Start=111361><P Class=KRCC>
+because the layout and all of the resources within it
+<SYNC Start=113940><P Class=KRCC>
+&nbsp;
+<SYNC Start=113941><P Class=KRCC>
+could be completely different based on something as simple
+<SYNC Start=116880><P Class=KRCC>
+&nbsp;
+<SYNC Start=116881><P Class=KRCC>
+as screen orientation change. Now it's good practice, as
+<SYNC Start=120640><P Class=KRCC>
+&nbsp;
+<SYNC Start=120641><P Class=KRCC>
+well, to localize your apps and provide translated strings
+<SYNC Start=123660><P Class=KRCC>
+&nbsp;
+<SYNC Start=123661><P Class=KRCC>
+for all of your users using this mechanism. And that's
+<SYNC Start=126720><P Class=KRCC>
+&nbsp;
+<SYNC Start=126721><P Class=KRCC>
+a task made a lot easier. Thanks to Google
+<SYNC Start=128530><P Class=KRCC>
+&nbsp;
+<SYNC Start=128531><P Class=KRCC>
+Play Publisher site that can offer you this service. It's
+<SYNC Start=132270><P Class=KRCC>
+&nbsp;
+<SYNC Start=132271><P Class=KRCC>
+also a really good idea to provide different drawables
+<SYNC Start=135230><P Class=KRCC>
+&nbsp;
+<SYNC Start=135231><P Class=KRCC>
+at the appropriate pixel density, so you can get a
+<SYNC Start=137800><P Class=KRCC>
+&nbsp;
+<SYNC Start=137801><P Class=KRCC>
+nice crisp image on every device. And when it
+<SYNC Start=141440><P Class=KRCC>
+&nbsp;
+<SYNC Start=141441><P Class=KRCC>
+comes to providing alternative layouts, Android has gone through a
+<SYNC Start=144480><P Class=KRCC>
+&nbsp;
+<SYNC Start=144481><P Class=KRCC>
+few alternative models. Starting in the early days, with this
+<SYNC Start=148130><P Class=KRCC>
+&nbsp;
+<SYNC Start=148131><P Class=KRCC>
+screen buckets idea of small, normal large, and extra large.
+<SYNC Start=152110><P Class=KRCC>
+&nbsp;
+<SYNC Start=152111><P Class=KRCC>
+But, since Android 3.2, the new smallest width qualifier has
+<SYNC Start=156130><P Class=KRCC>
+&nbsp;
+<SYNC Start=156131><P Class=KRCC>
+given us much more fine grain control over our layouts.</BODY>
+</SAMI>

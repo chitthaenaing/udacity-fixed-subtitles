@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=100><P Class=KRCC>
+Perfect, thanks Dan. Since he's turned you into a UI expert now, where should we
+<SYNC Start=4814><P Class=KRCC>
+&nbsp;
+<SYNC Start=4815><P Class=KRCC>
+define this list item layout? If you're thinking the layout folder,
+<SYNC Start=9010><P Class=KRCC>
+&nbsp;
+<SYNC Start=9011><P Class=KRCC>
+under the resources directory, then you are correct. Here you can create a new
+<SYNC Start=13510><P Class=KRCC>
+&nbsp;
+<SYNC Start=13511><P Class=KRCC>
+layout resource file called list item forecast. Inside that file,
+<SYNC Start=18375><P Class=KRCC>
+&nbsp;
+<SYNC Start=18376><P Class=KRCC>
+define a text view as the root view, then assign it an ID list item forecast
+<SYNC Start=23570><P Class=KRCC>
+&nbsp;
+<SYNC Start=23571><P Class=KRCC>
+text view. Give it a minimum height, so that the list item isn't too short for
+<SYNC Start=27870><P Class=KRCC>
+&nbsp;
+<SYNC Start=27871><P Class=KRCC>
+tapping on and vertically center the text within that item. Go ahead and
+<SYNC Start=32150><P Class=KRCC>
+&nbsp;
+<SYNC Start=32151><P Class=KRCC>
+try it yourself now. And check the box when you're done.</BODY>
+</SAMI>

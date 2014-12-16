@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=580><P Class=KRCC>
+The editor is quite powerful. Without using any code, one can create relatively
+<SYNC Start=5240><P Class=KRCC>
+&nbsp;
+<SYNC Start=5241><P Class=KRCC>
+sophisticated layouts. Make sure to use the built-in styled text widgets for
+<SYNC Start=10150><P Class=KRCC>
+&nbsp;
+<SYNC Start=10151><P Class=KRCC>
+large and medium text. All of the text is just placeholder text, so
+<SYNC Start=14420><P Class=KRCC>
+&nbsp;
+<SYNC Start=14421><P Class=KRCC>
+you easily enter it using the visual editor. If you're proud of your creation,
+<SYNC Start=18700><P Class=KRCC>
+&nbsp;
+<SYNC Start=18701><P Class=KRCC>
+take a screenshot and post it along with the XML into the forums.
+<SYNC Start=21750><P Class=KRCC>
+&nbsp;
+<SYNC Start=22800><P Class=KRCC>
+Now that you have some background on the basic tools in Android studio, and
+<SYNC Start=26700><P Class=KRCC>
+&nbsp;
+<SYNC Start=26701><P Class=KRCC>
+a few of the basic android user interface views,
+<SYNC Start=29650><P Class=KRCC>
+&nbsp;
+<SYNC Start=29651><P Class=KRCC>
+Katherine will show you how to start making some sunshine.</BODY>
+</SAMI>

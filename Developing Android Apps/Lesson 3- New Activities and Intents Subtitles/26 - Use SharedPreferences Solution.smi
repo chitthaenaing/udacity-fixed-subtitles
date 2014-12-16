@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=650><P Class=KRCC>
+Within the forecast fragment class, when the refresh menu item is selected,
+<SYNC Start=4600><P Class=KRCC>
+&nbsp;
+<SYNC Start=4601><P Class=KRCC>
+we read from SharedPreferences. Since they are key-value pairs, we get their
+<SYNC Start=9312><P Class=KRCC>
+&nbsp;
+<SYNC Start=9313><P Class=KRCC>
+value stored for the location key. If there's no value stored then we fall back
+<SYNC Start=14000><P Class=KRCC>
+&nbsp;
+<SYNC Start=14001><P Class=KRCC>
+to the default location. Then we pass the location into the fetch weather task.</BODY>
+</SAMI>

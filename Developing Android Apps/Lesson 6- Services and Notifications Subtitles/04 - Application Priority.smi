@@ -1,0 +1,134 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=540><P Class=KRCC>
+So now that we understand how services work,
+<SYNC Start=2455><P Class=KRCC>
+&nbsp;
+<SYNC Start=2456><P Class=KRCC>
+let's review how Android determines your app's priority. App
+<SYNC Start=6630><P Class=KRCC>
+&nbsp;
+<SYNC Start=6631><P Class=KRCC>
+priority is divided into three general buckets. Critical,
+<SYNC Start=11320><P Class=KRCC>
+&nbsp;
+<SYNC Start=11321><P Class=KRCC>
+high, and low. Within each bucket the apps are
+<SYNC Start=14370><P Class=KRCC>
+&nbsp;
+<SYNC Start=14371><P Class=KRCC>
+prioritized in a queue. With the app that's
+<SYNC Start=16690><P Class=KRCC>
+&nbsp;
+<SYNC Start=16691><P Class=KRCC>
+been at the lowest priority for the longest, the
+<SYNC Start=19300><P Class=KRCC>
+&nbsp;
+<SYNC Start=19301><P Class=KRCC>
+first to be executed. Critical apps are those that
+<SYNC Start=22450><P Class=KRCC>
+&nbsp;
+<SYNC Start=22451><P Class=KRCC>
+are active. They're in the foreground, interacting with users.
+<SYNC Start=25780><P Class=KRCC>
+&nbsp;
+<SYNC Start=25781><P Class=KRCC>
+That includes activities in the foreground and apps
+<SYNC Start=28200><P Class=KRCC>
+&nbsp;
+<SYNC Start=28201><P Class=KRCC>
+running foreground services. High priority apps, include any visible
+<SYNC Start=32570><P Class=KRCC>
+&nbsp;
+<SYNC Start=32571><P Class=KRCC>
+activities and any application with a running service.
+<SYNC Start=35620><P Class=KRCC>
+&nbsp;
+<SYNC Start=35621><P Class=KRCC>
+While less impactful than killing a foreground app, destroying
+<SYNC Start=38760><P Class=KRCC>
+&nbsp;
+<SYNC Start=38761><P Class=KRCC>
+visible activities or cancelling services running tasks like
+<SYNC Start=41720><P Class=KRCC>
+&nbsp;
+<SYNC Start=41721><P Class=KRCC>
+background updates it's still going to be noticeable to users.
+<SYNC Start=45410><P Class=KRCC>
+&nbsp;
+<SYNC Start=45411><P Class=KRCC>
+So, the system will only kill them in
+<SYNC Start=46960><P Class=KRCC>
+&nbsp;
+<SYNC Start=46961><P Class=KRCC>
+an extreme resource crunch. Apps in the background though,
+<SYNC Start=50520><P Class=KRCC>
+&nbsp;
+<SYNC Start=50521><P Class=KRCC>
+they're the red shirted ensigns of the app priority
+<SYNC Start=52750><P Class=KRCC>
+&nbsp;
+<SYNC Start=52751><P Class=KRCC>
+landing party. Any background app will be killed as
+<SYNC Start=55550><P Class=KRCC>
+&nbsp;
+<SYNC Start=55551><P Class=KRCC>
+needed, in a last seen, first killed order, in
+<SYNC Start=59370><P Class=KRCC>
+&nbsp;
+<SYNC Start=59371><P Class=KRCC>
+order to help support the higher priority apps. I like
+<SYNC Start=62610><P Class=KRCC>
+&nbsp;
+<SYNC Start=62611><P Class=KRCC>
+to think of this as the three laws of
+<SYNC Start=64769><P Class=KRCC>
+&nbsp;
+<SYNC Start=64770><P Class=KRCC>
+Android resource management. Law one, Android will keep all apps
+<SYNC Start=69250><P Class=KRCC>
+&nbsp;
+<SYNC Start=69251><P Class=KRCC>
+that interact with the user running smoothly. Android will
+<SYNC Start=72480><P Class=KRCC>
+&nbsp;
+<SYNC Start=72481><P Class=KRCC>
+keep all apps with visible activities or running services running.
+<SYNC Start=76190><P Class=KRCC>
+&nbsp;
+<SYNC Start=76191><P Class=KRCC>
+Unless doing so violates the first law. And third, Android will keep all
+<SYNC Start=81260><P Class=KRCC>
+&nbsp;
+<SYNC Start=81261><P Class=KRCC>
+apps in the background running, unless this
+<SYNC Start=83340><P Class=KRCC>
+&nbsp;
+<SYNC Start=83341><P Class=KRCC>
+violates the first or second laws. So
+<SYNC Start=85990><P Class=KRCC>
+&nbsp;
+<SYNC Start=85991><P Class=KRCC>
+with all of that in mind, consider these four apps. What do you
+<SYNC Start=89930><P Class=KRCC>
+&nbsp;
+<SYNC Start=89931><P Class=KRCC>
+think is the priority order of each of these apps, according to the system.</BODY>
+</SAMI>

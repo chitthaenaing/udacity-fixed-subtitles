@@ -1,0 +1,106 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=280><P Class=KRCC>
+In the documentation for Async Task, we can
+<SYNC Start=2680><P Class=KRCC>
+&nbsp;
+<SYNC Start=2681><P Class=KRCC>
+scroll down to the section that talks about
+<SYNC Start=4440><P Class=KRCC>
+&nbsp;
+<SYNC Start=4441><P Class=KRCC>
+protected methods. Here we see that different methods
+<SYNC Start=8380><P Class=KRCC>
+&nbsp;
+<SYNC Start=8381><P Class=KRCC>
+are called on the UI thread versus on the
+<SYNC Start=10540><P Class=KRCC>
+&nbsp;
+<SYNC Start=10541><P Class=KRCC>
+background thread. It also contains information on what
+<SYNC Start=13870><P Class=KRCC>
+&nbsp;
+<SYNC Start=13871><P Class=KRCC>
+order these methods are called in. Relative to the
+<SYNC Start=16450><P Class=KRCC>
+&nbsp;
+<SYNC Start=16451><P Class=KRCC>
+doInBackground method. For example, onPreExecute gets called on
+<SYNC Start=21020><P Class=KRCC>
+&nbsp;
+<SYNC Start=21021><P Class=KRCC>
+the UI thread before doInBackground. So with that information
+<SYNC Start=25660><P Class=KRCC>
+&nbsp;
+<SYNC Start=25661><P Class=KRCC>
+now, we can populate the answers to our quiz. As
+<SYNC Start=28470><P Class=KRCC>
+&nbsp;
+<SYNC Start=28471><P Class=KRCC>
+we mentioned before, onPreExecute happens on the main thread. And
+<SYNC Start=31720><P Class=KRCC>
+&nbsp;
+<SYNC Start=31721><P Class=KRCC>
+here you can do any setup work. Then doInBackground happens
+<SYNC Start=35130><P Class=KRCC>
+&nbsp;
+<SYNC Start=35131><P Class=KRCC>
+on the background thread. While this is running, you can actually
+<SYNC Start=38390><P Class=KRCC>
+&nbsp;
+<SYNC Start=38391><P Class=KRCC>
+call publishProgress as many times as you want, so that
+<SYNC Start=41090><P Class=KRCC>
+&nbsp;
+<SYNC Start=41091><P Class=KRCC>
+you can pass information to the UI. So that it
+<SYNC Start=44450><P Class=KRCC>
+&nbsp;
+<SYNC Start=44451><P Class=KRCC>
+can update an then tell the user that a certain
+<SYNC Start=47380><P Class=KRCC>
+&nbsp;
+<SYNC Start=47381><P Class=KRCC>
+percentage of the work is done. Each time this is called,.
+<SYNC Start=50640><P Class=KRCC>
+&nbsp;
+<SYNC Start=50641><P Class=KRCC>
+It triggers onProgressUpdate with some information. Then,
+<SYNC Start=54690><P Class=KRCC>
+&nbsp;
+<SYNC Start=54691><P Class=KRCC>
+you can show a loading indicator in
+<SYNC Start=57060><P Class=KRCC>
+&nbsp;
+<SYNC Start=57061><P Class=KRCC>
+your UI that says something's 10% done, 50% done, 100% done. And all this
+<SYNC Start=60700><P Class=KRCC>
+&nbsp;
+<SYNC Start=61860><P Class=KRCC>
+happens on the main thread. And then, once all of this is complete in
+<SYNC Start=66000><P Class=KRCC>
+&nbsp;
+<SYNC Start=66001><P Class=KRCC>
+the background thread, then it calls onPostExecute
+<SYNC Start=68450><P Class=KRCC>
+&nbsp;
+<SYNC Start=68451><P Class=KRCC>
+with the results on the main thread.</BODY>
+</SAMI>

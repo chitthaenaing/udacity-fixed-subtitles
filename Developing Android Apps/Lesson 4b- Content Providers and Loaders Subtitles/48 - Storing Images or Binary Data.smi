@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+Let's talk about this. Honestly, it really depends on
+<SYNC Start=4230><P Class=KRCC>
+&nbsp;
+<SYNC Start=4231><P Class=KRCC>
+the size of your data. For small amounts of
+<SYNC Start=7210><P Class=KRCC>
+&nbsp;
+<SYNC Start=7211><P Class=KRCC>
+binary data, very, very small amounts of binary data,
+<SYNC Start=11310><P Class=KRCC>
+&nbsp;
+<SYNC Start=11311><P Class=KRCC>
+you could actually put the raw data in the
+<SYNC Start=13070><P Class=KRCC>
+&nbsp;
+<SYNC Start=13071><P Class=KRCC>
+database. There are blob types and those are supported
+<SYNC Start=15770><P Class=KRCC>
+&nbsp;
+<SYNC Start=15771><P Class=KRCC>
+and work pretty well. However, as you start putting
+<SYNC Start=18900><P Class=KRCC>
+&nbsp;
+<SYNC Start=18901><P Class=KRCC>
+larger data into the database, it gets pretty inefficient.
+<SYNC Start=22230><P Class=KRCC>
+&nbsp;
+<SYNC Start=22231><P Class=KRCC>
+And you end up writing a lot more code.
+<SYNC Start=23860><P Class=KRCC>
+&nbsp;
+<SYNC Start=25320><P Class=KRCC>
+Well, as far as storing the files in a public folder
+<SYNC Start=27430><P Class=KRCC>
+&nbsp;
+<SYNC Start=27431><P Class=KRCC>
+on the device is concerned, well, that might work if you
+<SYNC Start=30420><P Class=KRCC>
+&nbsp;
+<SYNC Start=30421><P Class=KRCC>
+actually wanted to share those files. But, typically, you don't want to
+<SYNC Start=33640><P Class=KRCC>
+&nbsp;
+<SYNC Start=33641><P Class=KRCC>
+share those files with other applications. So, storing them in a
+<SYNC Start=36360><P Class=KRCC>
+&nbsp;
+<SYNC Start=36361><P Class=KRCC>
+public folder on the device isn't a very good idea. But
+<SYNC Start=40580><P Class=KRCC>
+&nbsp;
+<SYNC Start=40581><P Class=KRCC>
+the third option is pretty good. Storing the files in a
+<SYNC Start=43580><P Class=KRCC>
+&nbsp;
+<SYNC Start=43581><P Class=KRCC>
+private folder and then referencing the location in the database. Now,
+<SYNC Start=47950><P Class=KRCC>
+&nbsp;
+<SYNC Start=47951><P Class=KRCC>
+admittedly, you might not even need to put them into the database
+<SYNC Start=50720><P Class=KRCC>
+&nbsp;
+<SYNC Start=50721><P Class=KRCC>
+at all. But it's often nice to do this if
+<SYNC Start=53510><P Class=KRCC>
+&nbsp;
+<SYNC Start=53511><P Class=KRCC>
+you need to do any kind of queries on them. You
+<SYNC Start=55520><P Class=KRCC>
+&nbsp;
+<SYNC Start=55521><P Class=KRCC>
+can store metadata in the database and store files in
+<SYNC Start=58140><P Class=KRCC>
+&nbsp;
+<SYNC Start=58141><P Class=KRCC>
+a private folder. This is what Android does in the gallery.</BODY>
+</SAMI>

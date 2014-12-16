@@ -1,0 +1,174 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+All right. Let's get serious now. We need to move to using a real task to fetch
+<SYNC Start=5250><P Class=KRCC>
+&nbsp;
+<SYNC Start=5251><P Class=KRCC>
+the weather. After all, weather is serious business. Let's
+<SYNC Start=9830><P Class=KRCC>
+&nbsp;
+<SYNC Start=9831><P Class=KRCC>
+create a separate FetchWeatherTask to populate our content provider
+<SYNC Start=13130><P Class=KRCC>
+&nbsp;
+<SYNC Start=13131><P Class=KRCC>
+database. And we'll start by moving our existing
+<SYNC Start=16420><P Class=KRCC>
+&nbsp;
+<SYNC Start=16421><P Class=KRCC>
+task over to this new one. Wow. It's good
+<SYNC Start=18860><P Class=KRCC>
+&nbsp;
+<SYNC Start=18861><P Class=KRCC>
+to get that big task out of ForecastFragment. And
+<SYNC Start=21470><P Class=KRCC>
+&nbsp;
+<SYNC Start=21471><P Class=KRCC>
+we're going to change the parameters to string void, void.
+<SYNC Start=24790><P Class=KRCC>
+&nbsp;
+<SYNC Start=25970><P Class=KRCC>
+Oh, we've got a lot of compile errors to fix. That's okay. For
+<SYNC Start=30110><P Class=KRCC>
+&nbsp;
+<SYNC Start=30111><P Class=KRCC>
+now, we're going to delete everything except for the do in background part of
+<SYNC Start=33770><P Class=KRCC>
+&nbsp;
+<SYNC Start=33771><P Class=KRCC>
+the async task. Let's give it a constructor and pass in a context.
+<SYNC Start=38390><P Class=KRCC>
+&nbsp;
+<SYNC Start=40335><P Class=KRCC>
+[NOISE] In doing background, let's save off the location
+<SYNC Start=46399><P Class=KRCC>
+&nbsp;
+<SYNC Start=46400><P Class=KRCC>
+query as a string to make the code easier to understand.
+<SYNC Start=52348><P Class=KRCC>
+&nbsp;
+<SYNC Start=52349><P Class=KRCC>
+And for fun, let's fetch the maximum 14 days of
+<SYNC Start=55669><P Class=KRCC>
+&nbsp;
+<SYNC Start=55670><P Class=KRCC>
+forecast data. Since we temporarily deleted get weather data from JSON,
+<SYNC Start=59555><P Class=KRCC>
+&nbsp;
+<SYNC Start=59556><P Class=KRCC>
+we can remove from the try catch at the bottom. We're
+<SYNC Start=63060><P Class=KRCC>
+&nbsp;
+<SYNC Start=63061><P Class=KRCC>
+going to look for lots of additional data from the openweather API.
+<SYNC Start=66000><P Class=KRCC>
+&nbsp;
+<SYNC Start=68060><P Class=KRCC>
+To make this easy, here are the strings we'll
+<SYNC Start=70590><P Class=KRCC>
+&nbsp;
+<SYNC Start=70591><P Class=KRCC>
+use. We'll also get the city name, the latitude, and
+<SYNC Start=73840><P Class=KRCC>
+&nbsp;
+<SYNC Start=73841><P Class=KRCC>
+longitude returned by openweather. Now, we do have to wrap
+<SYNC Start=77090><P Class=KRCC>
+&nbsp;
+<SYNC Start=77091><P Class=KRCC>
+this in a try, in order to make sure that
+<SYNC Start=79580><P Class=KRCC>
+&nbsp;
+<SYNC Start=79581><P Class=KRCC>
+we handle the exception. Alright. Now we've handled the
+<SYNC Start=82900><P Class=KRCC>
+&nbsp;
+<SYNC Start=82901><P Class=KRCC>
+exceptions so everything compiles. And hey look, we've got the
+<SYNC Start=85850><P Class=KRCC>
+&nbsp;
+<SYNC Start=85851><P Class=KRCC>
+city name and coordinates. Hm, we've now gotten the location
+<SYNC Start=90860><P Class=KRCC>
+&nbsp;
+<SYNC Start=90861><P Class=KRCC>
+that we can use to insert things into the database.
+<SYNC Start=93690><P Class=KRCC>
+&nbsp;
+<SYNC Start=93691><P Class=KRCC>
+And we haven't done this in a while, so it's time for a programming exercise
+<SYNC Start=97810><P Class=KRCC>
+&nbsp;
+<SYNC Start=97811><P Class=KRCC>
+but before we can do that let's actually
+<SYNC Start=100140><P Class=KRCC>
+&nbsp;
+<SYNC Start=100141><P Class=KRCC>
+make sure that your app can really compile.
+<SYNC Start=101940><P Class=KRCC>
+&nbsp;
+<SYNC Start=104460><P Class=KRCC>
+Let's go back to Forecast Fragment, and take a
+<SYNC Start=107750><P Class=KRCC>
+&nbsp;
+<SYNC Start=107751><P Class=KRCC>
+look at how Fetch Weather Task is working. One
+<SYNC Start=111370><P Class=KRCC>
+&nbsp;
+<SYNC Start=111371><P Class=KRCC>
+is that Fetch Weather Task is going to require that
+<SYNC Start=113230><P Class=KRCC>
+&nbsp;
+<SYNC Start=113231><P Class=KRCC>
+we get an activity or some other context, and pass
+<SYNC Start=116310><P Class=KRCC>
+&nbsp;
+<SYNC Start=116311><P Class=KRCC>
+that in there. Another thing we can do is,
+<SYNC Start=118900><P Class=KRCC>
+&nbsp;
+<SYNC Start=118901><P Class=KRCC>
+remove these pesky shared preferences. And there we have
+<SYNC Start=122970><P Class=KRCC>
+&nbsp;
+<SYNC Start=122971><P Class=KRCC>
+it, a utility function that gets us our preferred
+<SYNC Start=125170><P Class=KRCC>
+&nbsp;
+<SYNC Start=125171><P Class=KRCC>
+location. Alright, so now, we're ready to run the applications
+<SYNC Start=129949><P Class=KRCC>
+&nbsp;
+<SYNC Start=129950><P Class=KRCC>
+we can actually do the next exercise. Once again, we're going
+<SYNC Start=134400><P Class=KRCC>
+&nbsp;
+<SYNC Start=134401><P Class=KRCC>
+to be calling in to our very new fetch weather task,
+<SYNC Start=137590><P Class=KRCC>
+&nbsp;
+<SYNC Start=137591><P Class=KRCC>
+but it's not going to do anything but try and read some
+<SYNC Start=139900><P Class=KRCC>
+&nbsp;
+<SYNC Start=139901><P Class=KRCC>
+Jason. So we want to make it do something beyond that. [SOUND]</BODY>
+</SAMI>

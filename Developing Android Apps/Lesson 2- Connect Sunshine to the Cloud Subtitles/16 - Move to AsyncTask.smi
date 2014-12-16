@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=220><P Class=KRCC>
+Let's apply what we just learned by opening up
+<SYNC Start=2050><P Class=KRCC>
+&nbsp;
+<SYNC Start=2051><P Class=KRCC>
+the MainActivity.java file within our project. We're going to take
+<SYNC Start=6390><P Class=KRCC>
+&nbsp;
+<SYNC Start=6391><P Class=KRCC>
+this networking code snippet and move it over to
+<SYNC Start=8830><P Class=KRCC>
+&nbsp;
+<SYNC Start=8831><P Class=KRCC>
+it's own AsyncTask, so it runs in a background
+<SYNC Start=11200><P Class=KRCC>
+&nbsp;
+<SYNC Start=11201><P Class=KRCC>
+thread. The task is going to be defined within
+<SYNC Start=14160><P Class=KRCC>
+&nbsp;
+<SYNC Start=14161><P Class=KRCC>
+this fragment class. But speaking of which, it's actually
+<SYNC Start=18070><P Class=KRCC>
+&nbsp;
+<SYNC Start=18071><P Class=KRCC>
+still called PlaceholderFragment. Let's do a little bit of
+<SYNC Start=21300><P Class=KRCC>
+&nbsp;
+<SYNC Start=21301><P Class=KRCC>
+refactoring now by giving it a real name. Let's call
+<SYNC Start=25365><P Class=KRCC>
+&nbsp;
+<SYNC Start=25366><P Class=KRCC>
+it ForecastFragment. And then you can update it
+<SYNC Start=28463><P Class=KRCC>
+&nbsp;
+<SYNC Start=28464><P Class=KRCC>
+in other appropriate places as well. We can also
+<SYNC Start=31560><P Class=KRCC>
+&nbsp;
+<SYNC Start=31561><P Class=KRCC>
+move ForecastFragment into its own file that way
+<SYNC Start=34560><P Class=KRCC>
+&nbsp;
+<SYNC Start=34561><P Class=KRCC>
+the MainActivity won't get so long and cumbersome. Within
+<SYNC Start=38412><P Class=KRCC>
+&nbsp;
+<SYNC Start=38413><P Class=KRCC>
+ForecastFragment we should define a new inner class
+<SYNC Start=41284><P Class=KRCC>
+&nbsp;
+<SYNC Start=41285><P Class=KRCC>
+called FetchWeatherTask which extends from AsyncTask. And then you
+<SYNC Start=45290><P Class=KRCC>
+&nbsp;
+<SYNC Start=45291><P Class=KRCC>
+can move the networking code snippet here. After you
+<SYNC Start=48770><P Class=KRCC>
+&nbsp;
+<SYNC Start=48771><P Class=KRCC>
+make the changes and run your app, it should
+<SYNC Start=50840><P Class=KRCC>
+&nbsp;
+<SYNC Start=50841><P Class=KRCC>
+look something like this. There really should be no difference except it
+<SYNC Start=53770><P Class=KRCC>
+&nbsp;
+<SYNC Start=53771><P Class=KRCC>
+doesn't crash now. In the next step we will add code to execute
+<SYNC Start=57290><P Class=KRCC>
+&nbsp;
+<SYNC Start=57291><P Class=KRCC>
+the task. And later in the lesson, we'll do JSON parsing and updating
+<SYNC Start=61300><P Class=KRCC>
+&nbsp;
+<SYNC Start=61301><P Class=KRCC>
+the UI. In the meantime though, make these initial changes to your code.</BODY>
+</SAMI>

@@ -1,0 +1,19 @@
+1
+00:00:00,820 --> 00:00:04,420
+Implement the rest of the insert content provider method. Handle
+
+2
+00:00:04,420 --> 00:00:08,920
+the location URI. And notify any registered Contentobserver of the
+
+3
+00:00:08,920 --> 00:00:11,640
+change. It might help you to know that you can
+
+4
+00:00:11,640 --> 00:00:15,830
+use getContext() getContentResolver() .notifyChange(uri, null)
+
+5
+00:00:15,830 --> 00:00:17,550
+to notify any registered observers.

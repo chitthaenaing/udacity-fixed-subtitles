@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=280><P Class=KRCC>
+Here's the code for the Refresh button in
+<SYNC Start=2550><P Class=KRCC>
+&nbsp;
+<SYNC Start=2551><P Class=KRCC>
+the forecastfragment menu XML file. We want it to
+<SYNC Start=6060><P Class=KRCC>
+&nbsp;
+<SYNC Start=6061><P Class=KRCC>
+appear in the overflow menu, so we set showAsAction
+<SYNC Start=9160><P Class=KRCC>
+&nbsp;
+<SYNC Start=9161><P Class=KRCC>
+as never. We also declare the string. You can
+<SYNC Start=12280><P Class=KRCC>
+&nbsp;
+<SYNC Start=12281><P Class=KRCC>
+find the string here in the strings.xml file, which
+<SYNC Start=15560><P Class=KRCC>
+&nbsp;
+<SYNC Start=15561><P Class=KRCC>
+is located in the values folder, which is in
+<SYNC Start=17810><P Class=KRCC>
+&nbsp;
+<SYNC Start=17811><P Class=KRCC>
+the res folder. You can get your strings.xml file
+<SYNC Start=21230><P Class=KRCC>
+&nbsp;
+<SYNC Start=21231><P Class=KRCC>
+translated into different languages. This adds additional values folders,
+<SYNC Start=25340><P Class=KRCC>
+&nbsp;
+<SYNC Start=25341><P Class=KRCC>
+under Res. For example, you would have
+<SYNC Start=28364><P Class=KRCC>
+&nbsp;
+<SYNC Start=28365><P Class=KRCC>
+values-es, for Spanish, values-fr for French. And
+<SYNC Start=33230><P Class=KRCC>
+&nbsp;
+<SYNC Start=33231><P Class=KRCC>
+within each of those values folders, you
+<SYNC Start=35450><P Class=KRCC>
+&nbsp;
+<SYNC Start=35451><P Class=KRCC>
+would have a strings.xml file, which would
+<SYNC Start=37660><P Class=KRCC>
+&nbsp;
+<SYNC Start=37661><P Class=KRCC>
+contain the localized strings for that language.
+<SYNC Start=39940><P Class=KRCC>
+&nbsp;
+<SYNC Start=40970><P Class=KRCC>
+Since translation does cost money, as a
+<SYNC Start=43170><P Class=KRCC>
+&nbsp;
+<SYNC Start=43171><P Class=KRCC>
+pro tip, you can mark strings that
+<SYNC Start=45200><P Class=KRCC>
+&nbsp;
+<SYNC Start=45201><P Class=KRCC>
+you don't need translated using translatable=false. For example,
+<SYNC Start=50210><P Class=KRCC>
+&nbsp;
+<SYNC Start=50211><P Class=KRCC>
+if it's a proper name or if it's for debugging like this one,
+<SYNC Start=53560><P Class=KRCC>
+&nbsp;
+<SYNC Start=53561><P Class=KRCC>
+then you can indicate to the translator that they can skip over this strings</BODY>
+</SAMI>

@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=260><P Class=KRCC>
+Now its your turn to build the temperature unit setting. This
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+will bring together a lot of the concepts that you've learned and
+<SYNC Start=5590><P Class=KRCC>
+&nbsp;
+<SYNC Start=5591><P Class=KRCC>
+will take some time to implement, but we think you're ready for
+<SYNC Start=8520><P Class=KRCC>
+&nbsp;
+<SYNC Start=8521><P Class=KRCC>
+it. Modify the app, so that the right temperature units are displayed
+<SYNC Start=11650><P Class=KRCC>
+&nbsp;
+<SYNC Start=11651><P Class=KRCC>
+to the user. Use the assumption that we're syncing metric data from
+<SYNC Start=15410><P Class=KRCC>
+&nbsp;
+<SYNC Start=15411><P Class=KRCC>
+the server. Eventually, we'll have a database on the device and we
+<SYNC Start=18500><P Class=KRCC>
+&nbsp;
+<SYNC Start=18501><P Class=KRCC>
+don't want a mix of Fahrenheit and Celsius data in there. Hence,
+<SYNC Start=21840><P Class=KRCC>
+&nbsp;
+<SYNC Start=21841><P Class=KRCC>
+we'll stay consistent by getting metric data from the server. And then,
+<SYNC Start=25300><P Class=KRCC>
+&nbsp;
+<SYNC Start=25301><P Class=KRCC>
+we'll convert on the fly to the preferred units when
+<SYNC Start=28100><P Class=KRCC>
+&nbsp;
+<SYNC Start=28101><P Class=KRCC>
+we update the UI. After you make these changes, I'll show
+<SYNC Start=31330><P Class=KRCC>
+&nbsp;
+<SYNC Start=31331><P Class=KRCC>
+you what it looks like on the device. If you
+<SYNC Start=33750><P Class=KRCC>
+&nbsp;
+<SYNC Start=33751><P Class=KRCC>
+go to settings, you'll see the temperature units preference. If you
+<SYNC Start=37640><P Class=KRCC>
+&nbsp;
+<SYNC Start=37641><P Class=KRCC>
+tap on that, you see a dialog with two options.
+<SYNC Start=40930><P Class=KRCC>
+&nbsp;
+<SYNC Start=40931><P Class=KRCC>
+If you switch to imperial and then you go back to
+<SYNC Start=43130><P Class=KRCC>
+&nbsp;
+<SYNC Start=43131><P Class=KRCC>
+the forecast list, then you see that all the temperatures now
+<SYNC Start=46230><P Class=KRCC>
+&nbsp;
+<SYNC Start=46231><P Class=KRCC>
+are in Fahrenheit. Once it works, answer this question. Which subclass
+<SYNC Start=50660><P Class=KRCC>
+&nbsp;
+<SYNC Start=50661><P Class=KRCC>
+of preference did you use?</BODY>
+</SAMI>

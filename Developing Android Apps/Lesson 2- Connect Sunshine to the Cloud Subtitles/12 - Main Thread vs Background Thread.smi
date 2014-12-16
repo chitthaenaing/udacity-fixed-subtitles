@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+When we said that the framework didn't want us
+<SYNC Start=1980><P Class=KRCC>
+&nbsp;
+<SYNC Start=1981><P Class=KRCC>
+to run network operations on the main thread, what
+<SYNC Start=5080><P Class=KRCC>
+&nbsp;
+<SYNC Start=5081><P Class=KRCC>
+is the main thread? Well, Android apps run by
+<SYNC Start=8630><P Class=KRCC>
+&nbsp;
+<SYNC Start=8631><P Class=KRCC>
+default on the main thread, also called the UI thread.
+<SYNC Start=12570><P Class=KRCC>
+&nbsp;
+<SYNC Start=12571><P Class=KRCC>
+It handles all the user input as well as
+<SYNC Start=14900><P Class=KRCC>
+&nbsp;
+<SYNC Start=14901><P Class=KRCC>
+the output, such as screen drawing. Thus we want
+<SYNC Start=18060><P Class=KRCC>
+&nbsp;
+<SYNC Start=18061><P Class=KRCC>
+to avoid any time-consuming operations here, otherwise the URI
+<SYNC Start=21760><P Class=KRCC>
+&nbsp;
+<SYNC Start=21761><P Class=KRCC>
+is going to stutter. Instead, kick off a background worker
+<SYNC Start=25470><P Class=KRCC>
+&nbsp;
+<SYNC Start=25471><P Class=KRCC>
+thread if you have to do some long-running
+<SYNC Start=27430><P Class=KRCC>
+&nbsp;
+<SYNC Start=27431><P Class=KRCC>
+work. This includes doing network calls, decoding bitmaps, or
+<SYNC Start=32170><P Class=KRCC>
+&nbsp;
+<SYNC Start=32171><P Class=KRCC>
+reading, and writing from the database. Okay. So, somehow,
+<SYNC Start=35870><P Class=KRCC>
+&nbsp;
+<SYNC Start=35871><P Class=KRCC>
+we have to move the networking code off the
+<SYNC Start=37890><P Class=KRCC>
+&nbsp;
+<SYNC Start=37891><P Class=KRCC>
+main thread. But how are we going to do
+<SYNC Start=39800><P Class=KRCC>
+&nbsp;
+<SYNC Start=39801><P Class=KRCC>
+that? Well there are several options, but let's look
+<SYNC Start=43180><P Class=KRCC>
+&nbsp;
+<SYNC Start=43181><P Class=KRCC>
+for the name of the Android class that simplifies
+<SYNC Start=46610><P Class=KRCC>
+&nbsp;
+<SYNC Start=46611><P Class=KRCC>
+background thread creation and UI thread synchronization, so that
+<SYNC Start=50520><P Class=KRCC>
+&nbsp;
+<SYNC Start=50521><P Class=KRCC>
+the results from the background work will come back onto the
+<SYNC Start=53370><P Class=KRCC>
+&nbsp;
+<SYNC Start=53371><P Class=KRCC>
+main thread, and then we can use it to update our
+<SYNC Start=55710><P Class=KRCC>
+&nbsp;
+<SYNC Start=55711><P Class=KRCC>
+UI. Search online and figure out the answer to this question
+<SYNC Start=59740><P Class=KRCC>
+&nbsp;
+<SYNC Start=59741><P Class=KRCC>
+and then enter the class name in the box. Here's some
+<SYNC Start=62740><P Class=KRCC>
+&nbsp;
+<SYNC Start=62741><P Class=KRCC>
+advice for you. If you ever get stuck on how to
+<SYNC Start=64950><P Class=KRCC>
+&nbsp;
+<SYNC Start=64951><P Class=KRCC>
+do something in Android and you can't find it on the
+<SYNC Start=67480><P Class=KRCC>
+&nbsp;
+<SYNC Start=67481><P Class=KRCC>
+developer's site you can try to check stackoverflow.com. It's a question
+<SYNC Start=72220><P Class=KRCC>
+&nbsp;
+<SYNC Start=72221><P Class=KRCC>
+and answer site that many Android developers use as a valuable resource.
+<SYNC Start=76740><P Class=KRCC>
+&nbsp;
+<SYNC Start=76741><P Class=KRCC>
+So chances are likely that someone has
+<SYNC Start=78700><P Class=KRCC>
+&nbsp;
+<SYNC Start=78701><P Class=KRCC>
+already asked a similar question that you have.</BODY>
+</SAMI>

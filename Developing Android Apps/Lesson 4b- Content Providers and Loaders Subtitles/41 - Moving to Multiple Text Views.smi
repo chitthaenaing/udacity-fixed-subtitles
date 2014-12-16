@@ -1,0 +1,202 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=480><P Class=KRCC>
+Alright, you're done. Lets take a look at the solution.
+<SYNC Start=3540><P Class=KRCC>
+&nbsp;
+<SYNC Start=3541><P Class=KRCC>
+Now we're going to need some text views. First of all lets
+<SYNC Start=6380><P Class=KRCC>
+&nbsp;
+<SYNC Start=6381><P Class=KRCC>
+look at our linear layout. It's vertical. We're going to want it
+<SYNC Start=9430><P Class=KRCC>
+&nbsp;
+<SYNC Start=9431><P Class=KRCC>
+to be horizontal. The next thing we're going to want are a
+<SYNC Start=11930><P Class=KRCC>
+&nbsp;
+<SYNC Start=11931><P Class=KRCC>
+bunch of text views. Lets just drag them in. Now
+<SYNC Start=15580><P Class=KRCC>
+&nbsp;
+<SYNC Start=15581><P Class=KRCC>
+remember we had all those ID's that were given to us
+<SYNC Start=18330><P Class=KRCC>
+&nbsp;
+<SYNC Start=18331><P Class=KRCC>
+in the last quiz. The first one is the list item
+<SYNC Start=22980><P Class=KRCC>
+&nbsp;
+<SYNC Start=22981><P Class=KRCC>
+date text view. And we'll give it some text that makes
+<SYNC Start=25730><P Class=KRCC>
+&nbsp;
+<SYNC Start=25731><P Class=KRCC>
+sense when we help to layout the layout. We'll remove
+<SYNC Start=28350><P Class=KRCC>
+&nbsp;
+<SYNC Start=28351><P Class=KRCC>
+this before we actually submit it to our project. And
+<SYNC Start=31890><P Class=KRCC>
+&nbsp;
+<SYNC Start=31891><P Class=KRCC>
+for fun let's switch to landscape. It'll make things a
+<SYNC Start=35960><P Class=KRCC>
+&nbsp;
+<SYNC Start=35961><P Class=KRCC>
+little more legible. Also let's just zoom in a little bit.
+<SYNC Start=39910><P Class=KRCC>
+&nbsp;
+<SYNC Start=41950><P Class=KRCC>
+All right. So that's our list item date text view. Now
+<SYNC Start=46490><P Class=KRCC>
+&nbsp;
+<SYNC Start=47700><P Class=KRCC>
+right next to that, we want another text view. Since we want the design to be
+<SYNC Start=52490><P Class=KRCC>
+&nbsp;
+<SYNC Start=52491><P Class=KRCC>
+the same, this one doesn't need to have an ID. If you remember our
+<SYNC Start=57550><P Class=KRCC>
+&nbsp;
+<SYNC Start=57551><P Class=KRCC>
+design had the date. Followed by a dash, followed
+<SYNC Start=62880><P Class=KRCC>
+&nbsp;
+<SYNC Start=62881><P Class=KRCC>
+by the forecast, followed by a dash, followed by the high,
+<SYNC Start=67530><P Class=KRCC>
+&nbsp;
+<SYNC Start=67531><P Class=KRCC>
+followed by a slash, followed by low. So this is just going to be a view that
+<SYNC Start=71860><P Class=KRCC>
+&nbsp;
+<SYNC Start=71861><P Class=KRCC>
+contains a dash. And we can even hardcode this in. For now, then we're going to
+<SYNC Start=79900><P Class=KRCC>
+&nbsp;
+<SYNC Start=79901><P Class=KRCC>
+create another text view next to that. Our
+<SYNC Start=82400><P Class=KRCC>
+&nbsp;
+<SYNC Start=82401><P Class=KRCC>
+placeholder text will be a forecast, like clear.
+<SYNC Start=85560><P Class=KRCC>
+&nbsp;
+<SYNC Start=85561><P Class=KRCC>
+The ID for this will be list item
+<SYNC Start=87888><P Class=KRCC>
+&nbsp;
+<SYNC Start=87889><P Class=KRCC>
+forecast text view. Now we need another text view.
+<SYNC Start=93820><P Class=KRCC>
+&nbsp;
+<SYNC Start=93821><P Class=KRCC>
+Once again this one's not going to have an ID, because we don't need it. And
+<SYNC Start=97740><P Class=KRCC>
+&nbsp;
+<SYNC Start=97741><P Class=KRCC>
+we'll add another dash. Now we're actually getting
+<SYNC Start=101040><P Class=KRCC>
+&nbsp;
+<SYNC Start=101041><P Class=KRCC>
+to the high and low forecasts. Let's say
+<SYNC Start=105060><P Class=KRCC>
+&nbsp;
+<SYNC Start=105061><P Class=KRCC>
+a high of 23. One more plain text view, this one with a slash and, once
+<SYNC Start=109520><P Class=KRCC>
+&nbsp;
+<SYNC Start=109521><P Class=KRCC>
+again, with no ID. And for our high
+<SYNC Start=112660><P Class=KRCC>
+&nbsp;
+<SYNC Start=112661><P Class=KRCC>
+forecast, it better be list_item_high_text_view. Finally, we'll add one
+<SYNC Start=118960><P Class=KRCC>
+&nbsp;
+<SYNC Start=118961><P Class=KRCC>
+more plain text view. This one will be for
+<SYNC Start=121060><P Class=KRCC>
+&nbsp;
+<SYNC Start=121061><P Class=KRCC>
+our low, and of course, that means it's going to
+<SYNC Start=124360><P Class=KRCC>
+&nbsp;
+<SYNC Start=124361><P Class=KRCC>
+be list_item_low_text_view. And there we have it. Our multiple text
+<SYNC Start=130639><P Class=KRCC>
+&nbsp;
+<SYNC Start=130640><P Class=KRCC>
+view layout. Now we might want to make this prettier.
+<SYNC Start=133180><P Class=KRCC>
+&nbsp;
+<SYNC Start=133181><P Class=KRCC>
+But this is a good start and it just plays
+<SYNC Start=135600><P Class=KRCC>
+&nbsp;
+<SYNC Start=135601><P Class=KRCC>
+the four fields that we asked for. They are all
+<SYNC Start=137730><P Class=KRCC>
+&nbsp;
+<SYNC Start=137731><P Class=KRCC>
+part of a linear layout. Before we actually would submit
+<SYNC Start=140920><P Class=KRCC>
+&nbsp;
+<SYNC Start=140921><P Class=KRCC>
+this, lets remove the placeholder tabs for everything except for,
+<SYNC Start=144470><P Class=KRCC>
+&nbsp;
+<SYNC Start=144471><P Class=KRCC>
+the static fields. We'll also have to remove these empty IDs, its
+<SYNC Start=147900><P Class=KRCC>
+&nbsp;
+<SYNC Start=147901><P Class=KRCC>
+actually important to understand whats going on in these text views. And there
+<SYNC Start=151440><P Class=KRCC>
+&nbsp;
+<SYNC Start=151441><P Class=KRCC>
+we have it, that's what your should look like, At least if you
+<SYNC Start=155430><P Class=KRCC>
+&nbsp;
+<SYNC Start=155431><P Class=KRCC>
+want to make it look almost identical to the layout we started out
+<SYNC Start=158150><P Class=KRCC>
+&nbsp;
+<SYNC Start=158151><P Class=KRCC>
+with. Of course you can go wild with these designs, and there's
+<SYNC Start=160680><P Class=KRCC>
+&nbsp;
+<SYNC Start=160681><P Class=KRCC>
+a lot you can do with the layout editor and with different kinds
+<SYNC Start=162810><P Class=KRCC>
+&nbsp;
+<SYNC Start=162811><P Class=KRCC>
+of layouts. We'll be learning more about that in the next lesson. Alright,
+<SYNC Start=166740><P Class=KRCC>
+&nbsp;
+<SYNC Start=166741><P Class=KRCC>
+we finally get to start hooking this up to our UX. Let's go
+<SYNC Start=169540><P Class=KRCC>
+&nbsp;
+<SYNC Start=169541><P Class=KRCC>
+back to forecast fragment.</BODY>
+</SAMI>

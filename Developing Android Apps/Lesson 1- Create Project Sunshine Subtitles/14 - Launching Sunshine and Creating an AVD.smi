@@ -1,0 +1,122 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=580><P Class=KRCC>
+Now for the moment you've been waiting for. Let's run the app by clicking on
+<SYNC Start=3510><P Class=KRCC>
+&nbsp;
+<SYNC Start=3511><P Class=KRCC>
+this button. It will prompt us to choose a device. Without a physical device we
+<SYNC Start=8490><P Class=KRCC>
+&nbsp;
+<SYNC Start=8491><P Class=KRCC>
+can use the emulator which is included in the Android SDK.
+<SYNC Start=12210><P Class=KRCC>
+&nbsp;
+<SYNC Start=12211><P Class=KRCC>
+Currently it says that there are no Android virtual devices available. So,
+<SYNC Start=16050><P Class=KRCC>
+&nbsp;
+<SYNC Start=16051><P Class=KRCC>
+let's open up the AVD manager to create one. Then click New. By creating an AVD,
+<SYNC Start=22060><P Class=KRCC>
+&nbsp;
+<SYNC Start=22061><P Class=KRCC>
+we can configure an emulated device with the android platform version that we
+<SYNC Start=25980><P Class=KRCC>
+&nbsp;
+<SYNC Start=25981><P Class=KRCC>
+want to test on, as well as hardware options. For our case,
+<SYNC Start=29150><P Class=KRCC>
+&nbsp;
+<SYNC Start=29151><P Class=KRCC>
+we're going to emulate a Nexus 5 virtual device, the defaults are fine for now.
+<SYNC Start=33850><P Class=KRCC>
+&nbsp;
+<SYNC Start=33851><P Class=KRCC>
+So, we're going to hit OK. Then we see that our AVD was created successfully.
+<SYNC Start=38240><P Class=KRCC>
+&nbsp;
+<SYNC Start=38241><P Class=KRCC>
+We can close the AVD Manager. And when we go back to the Device Chooser dialog,
+<SYNC Start=42150><P Class=KRCC>
+&nbsp;
+<SYNC Start=42151><P Class=KRCC>
+we'll see that Nexus5 is an option. Then we can hit OK to launch the app.
+<SYNC Start=46050><P Class=KRCC>
+&nbsp;
+<SYNC Start=46051><P Class=KRCC>
+When it loads up, we see our Sunshine app with the words Hello world.
+<SYNC Start=49980><P Class=KRCC>
+&nbsp;
+<SYNC Start=49981><P Class=KRCC>
+Keep in mind that the emulator is not just a simulator.
+<SYNC Start=52780><P Class=KRCC>
+&nbsp;
+<SYNC Start=52781><P Class=KRCC>
+It's actually running the Android Virtual Machine. So you can test and
+<SYNC Start=56510><P Class=KRCC>
+&nbsp;
+<SYNC Start=56511><P Class=KRCC>
+debug your app on different hardware and software configurations.
+<SYNC Start=59300><P Class=KRCC>
+&nbsp;
+<SYNC Start=59301><P Class=KRCC>
+You can interact with the app on the emulator using the screen or
+<SYNC Start=63520><P Class=KRCC>
+&nbsp;
+<SYNC Start=63521><P Class=KRCC>
+with the navigation controls here. You can also invoke other apps,
+<SYNC Start=68060><P Class=KRCC>
+&nbsp;
+<SYNC Start=68061><P Class=KRCC>
+do network calls, play audio or video and much more. It also includes debug
+<SYNC Start=72850><P Class=KRCC>
+&nbsp;
+<SYNC Start=72851><P Class=KRCC>
+capabilities, including log output, and the ability to simulate app entraps or
+<SYNC Start=77410><P Class=KRCC>
+&nbsp;
+<SYNC Start=77411><P Class=KRCC>
+network latency. You can also hit Home and browse around the device to see other
+<SYNC Start=81560><P Class=KRCC>
+&nbsp;
+<SYNC Start=81561><P Class=KRCC>
+apps. For example, you can check out API demos. Feel free to
+<SYNC Start=86350><P Class=KRCC>
+&nbsp;
+<SYNC Start=86351><P Class=KRCC>
+play around with the emulator some more. If you open up Android Device Monitor,
+<SYNC Start=90570><P Class=KRCC>
+&nbsp;
+<SYNC Start=90571><P Class=KRCC>
+you can go into the Emulator Control Tab. There you'll see different options for
+<SYNC Start=94650><P Class=KRCC>
+&nbsp;
+<SYNC Start=94651><P Class=KRCC>
+simulating behavior on your AVD, such as for telephony and for
+<SYNC Start=98626><P Class=KRCC>
+&nbsp;
+<SYNC Start=98627><P Class=KRCC>
+location. Now that the Hello world app runs on the emulator,
+<SYNC Start=103910><P Class=KRCC>
+&nbsp;
+<SYNC Start=103911><P Class=KRCC>
+let's see what goes on behind the scenes to make the app run.</BODY>
+</SAMI>

@@ -1,0 +1,30 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=340><P Class=KRCC>
+The distribution and latest version of Android changes frequently. But
+<SYNC Start=3670><P Class=KRCC>
+&nbsp;
+<SYNC Start=3671><P Class=KRCC>
+based on this graph, which version of Android should be the target SDK to
+<SYNC Start=8410><P Class=KRCC>
+&nbsp;
+<SYNC Start=8411><P Class=KRCC>
+provide the best experience on the largest number of devices.</BODY>
+</SAMI>

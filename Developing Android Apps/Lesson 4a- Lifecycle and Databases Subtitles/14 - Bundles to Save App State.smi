@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+You may be thinking, lifecycles are really important.
+<SYNC Start=4830><P Class=KRCC>
+&nbsp;
+<SYNC Start=4831><P Class=KRCC>
+However this section, is on persisting and recovering data. Trust me,
+<SYNC Start=9566><P Class=KRCC>
+&nbsp;
+<SYNC Start=9567><P Class=KRCC>
+I just want to get us coding again. However, these things are closely linked and
+<SYNC Start=15210><P Class=KRCC>
+&nbsp;
+<SYNC Start=15211><P Class=KRCC>
+they're easy to get wrong if you don't understand both. As Reito mentioned,
+<SYNC Start=19810><P Class=KRCC>
+&nbsp;
+<SYNC Start=19811><P Class=KRCC>
+Android saves the state of the application in bundles. You might have had
+<SYNC Start=24300><P Class=KRCC>
+&nbsp;
+<SYNC Start=24301><P Class=KRCC>
+the idea that you would just save all sorts of information in these bundles and
+<SYNC Start=27760><P Class=KRCC>
+&nbsp;
+<SYNC Start=27761><P Class=KRCC>
+not have to worry about any other form of persistence. But, the thing is,
+<SYNC Start=32259><P Class=KRCC>
+&nbsp;
+<SYNC Start=32260><P Class=KRCC>
+these bundles go away as soon as the user hits the Back key in
+<SYNC Start=35540><P Class=KRCC>
+&nbsp;
+<SYNC Start=35541><P Class=KRCC>
+your main activity. It's really important that they do this.
+<SYNC Start=39040><P Class=KRCC>
+&nbsp;
+<SYNC Start=40420><P Class=KRCC>
+When the user chooses to close your activity with the Back key, the expectation
+<SYNC Start=44880><P Class=KRCC>
+&nbsp;
+<SYNC Start=44881><P Class=KRCC>
+is that next time your activity is displayed, it will be in the default state.
+<SYNC Start=49390><P Class=KRCC>
+&nbsp;
+<SYNC Start=49391><P Class=KRCC>
+If the user backgrounds your app using the Home key or the App Switcher,
+<SYNC Start=53370><P Class=KRCC>
+&nbsp;
+<SYNC Start=53371><P Class=KRCC>
+the next time your activity is created, it should resume from the current state.</BODY>
+</SAMI>

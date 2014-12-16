@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+The solution is to override the onPostExecute method
+<SYNC Start=3190><P Class=KRCC>
+&nbsp;
+<SYNC Start=3191><P Class=KRCC>
+of the AsyncTask. And this runs on the main
+<SYNC Start=5510><P Class=KRCC>
+&nbsp;
+<SYNC Start=5511><P Class=KRCC>
+thread. We received the string array of forecast results,
+<SYNC Start=9410><P Class=KRCC>
+&nbsp;
+<SYNC Start=9411><P Class=KRCC>
+which came as a return value from the do
+<SYNC Start=11590><P Class=KRCC>
+&nbsp;
+<SYNC Start=11591><P Class=KRCC>
+in background method above. First, we clear the ForecastAdapter
+<SYNC Start=15930><P Class=KRCC>
+&nbsp;
+<SYNC Start=15931><P Class=KRCC>
+of all the previous forecast entries. Then we go
+<SYNC Start=19300><P Class=KRCC>
+&nbsp;
+<SYNC Start=19301><P Class=KRCC>
+ahead and add each new forecast entry one by
+<SYNC Start=21810><P Class=KRCC>
+&nbsp;
+<SYNC Start=21811><P Class=KRCC>
+one to the ForecastAdapter. This is what ultimately triggers
+<SYNC Start=25500><P Class=KRCC>
+&nbsp;
+<SYNC Start=25501><P Class=KRCC>
+the listView to update. Note that if you're targeting Honeycomb
+<SYNC Start=29050><P Class=KRCC>
+&nbsp;
+<SYNC Start=29051><P Class=KRCC>
+devices and above, you can use an addAll method here,
+<SYNC Start=32210><P Class=KRCC>
+&nbsp;
+<SYNC Start=32211><P Class=KRCC>
+so you don't have to add them one by one.
+<SYNC Start=34430><P Class=KRCC>
+&nbsp;
+<SYNC Start=34431><P Class=KRCC>
+You can just add it once and update the listView once.
+<SYNC Start=38320><P Class=KRCC>
+&nbsp;
+<SYNC Start=38321><P Class=KRCC>
+Once you hit Refresh, you'll see the weather forecast for
+<SYNC Start=41060><P Class=KRCC>
+&nbsp;
+<SYNC Start=41061><P Class=KRCC>
+the next seven days for your location. Even though we hit
+<SYNC Start=44700><P Class=KRCC>
+&nbsp;
+<SYNC Start=44701><P Class=KRCC>
+Refresh, we don't have any verbose logging statements being printed
+<SYNC Start=47820><P Class=KRCC>
+&nbsp;
+<SYNC Start=47821><P Class=KRCC>
+out here. We don't need them anymore, because we have a
+<SYNC Start=50520><P Class=KRCC>
+&nbsp;
+<SYNC Start=50521><P Class=KRCC>
+way to check that our code is correct by looking at the UI now.</BODY>
+</SAMI>

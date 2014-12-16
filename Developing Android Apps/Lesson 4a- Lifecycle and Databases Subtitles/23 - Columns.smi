@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+We need to create a contract for our other table that contains location entries.
+<SYNC Start=5560><P Class=KRCC>
+&nbsp;
+<SYNC Start=5561><P Class=KRCC>
+Location entries must contain a city name. This innerclass will be
+<SYNC Start=9790><P Class=KRCC>
+&nbsp;
+<SYNC Start=9791><P Class=KRCC>
+created in much the same way as weatherentry. It will implement base columns.
+<SYNC Start=15450><P Class=KRCC>
+&nbsp;
+<SYNC Start=15451><P Class=KRCC>
+Contain the table name and contain the names of each column. Note: the idea of
+<SYNC Start=20720><P Class=KRCC>
+&nbsp;
+<SYNC Start=20721><P Class=KRCC>
+each row in the location entry class, will be stored in WeatherEntry.</BODY>
+</SAMI>

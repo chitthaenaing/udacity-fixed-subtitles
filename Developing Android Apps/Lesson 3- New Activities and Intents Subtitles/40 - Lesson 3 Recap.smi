@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=410><P Class=KRCC>
+In this lesson we added new activities to our
+<SYNC Start=2440><P Class=KRCC>
+&nbsp;
+<SYNC Start=2441><P Class=KRCC>
+apps and explored ways to structure and navigate between them.
+<SYNC Start=5950><P Class=KRCC>
+&nbsp;
+<SYNC Start=5951><P Class=KRCC>
+And that meant learning all about intents and how
+<SYNC Start=8370><P Class=KRCC>
+&nbsp;
+<SYNC Start=8371><P Class=KRCC>
+they're used in Android. Next up in Lesson 4, we're
+<SYNC Start=12150><P Class=KRCC>
+&nbsp;
+<SYNC Start=12151><P Class=KRCC>
+going to learn about the activity life cycle and make
+<SYNC Start=14740><P Class=KRCC>
+&nbsp;
+<SYNC Start=14741><P Class=KRCC>
+our apps that much more useful by saving data. We'll
+<SYNC Start=18150><P Class=KRCC>
+&nbsp;
+<SYNC Start=18151><P Class=KRCC>
+begin to databases and learn about content providers, but
+<SYNC Start=20620><P Class=KRCC>
+&nbsp;
+<SYNC Start=20621><P Class=KRCC>
+first let's take another journey into the history of Android.</BODY>
+</SAMI>

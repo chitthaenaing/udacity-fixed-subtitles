@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=560><P Class=KRCC>
+All of you detail-oriented people probably noticed that
+<SYNC Start=3530><P Class=KRCC>
+&nbsp;
+<SYNC Start=3531><P Class=KRCC>
+we never actually used the coordinates we get
+<SYNC Start=5640><P Class=KRCC>
+&nbsp;
+<SYNC Start=5641><P Class=KRCC>
+from the server for location, relying instead on
+<SYNC Start=8440><P Class=KRCC>
+&nbsp;
+<SYNC Start=8441><P Class=KRCC>
+both the maps API, and the weather API to
+<SYNC Start=10760><P Class=KRCC>
+&nbsp;
+<SYNC Start=10761><P Class=KRCC>
+do the same thing with location queries. Unfortunately,
+<SYNC Start=14440><P Class=KRCC>
+&nbsp;
+<SYNC Start=14441><P Class=KRCC>
+they don't always agree. Implement maps using the coordinates
+<SYNC Start=18680><P Class=KRCC>
+&nbsp;
+<SYNC Start=18681><P Class=KRCC>
+stored in the location table. You'll want to start
+<SYNC Start=21700><P Class=KRCC>
+&nbsp;
+<SYNC Start=21701><P Class=KRCC>
+by moving the menu code from MainActivity to WeatherFragment.</BODY>
+</SAMI>

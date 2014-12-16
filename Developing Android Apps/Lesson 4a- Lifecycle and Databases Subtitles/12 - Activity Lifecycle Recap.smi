@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=470><P Class=KRCC>
+For the purposes of the Sunshine app, this information is purely theoretical.
+<SYNC Start=5240><P Class=KRCC>
+&nbsp;
+<SYNC Start=5241><P Class=KRCC>
+In fact, you'll really only need to consider this later,
+<SYNC Start=7700><P Class=KRCC>
+&nbsp;
+<SYNC Start=7701><P Class=KRCC>
+when you're adding things like Sensor or LocationListeners. Until then,
+<SYNC Start=11940><P Class=KRCC>
+&nbsp;
+<SYNC Start=11941><P Class=KRCC>
+the default components will handle much of this behavior for
+<SYNC Start=14530><P Class=KRCC>
+&nbsp;
+<SYNC Start=14531><P Class=KRCC>
+you. In any case, now that you understand the lifecycle and
+<SYNC Start=18710><P Class=KRCC>
+&nbsp;
+<SYNC Start=18711><P Class=KRCC>
+the way the system handles exiting your app, when it needs its resources.
+<SYNC Start=22110><P Class=KRCC>
+&nbsp;
+<SYNC Start=22111><P Class=KRCC>
+You should hopefully understand why Exit or Quit buttons in Android apps serve
+<SYNC Start=26380><P Class=KRCC>
+&nbsp;
+<SYNC Start=26381><P Class=KRCC>
+no practical purpose. At most, you can call finish on an activity and
+<SYNC Start=31020><P Class=KRCC>
+&nbsp;
+<SYNC Start=31021><P Class=KRCC>
+it will get torn down instantly. That's actually exactly what happens when
+<SYNC Start=35070><P Class=KRCC>
+&nbsp;
+<SYNC Start=35071><P Class=KRCC>
+you use a simple hits back from within their activity.
+<SYNC Start=37290><P Class=KRCC>
+&nbsp;
+<SYNC Start=37291><P Class=KRCC>
+If you're still not convinced, check out the video in the instructor notes.
+<SYNC Start=42035><P Class=KRCC>
+&nbsp;
+<SYNC Start=42036><P Class=KRCC>
+Where I explain my reasoning with a little more, color.</BODY>
+</SAMI>

@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=300><P Class=KRCC>
+All right, you're done. I hope you don't mind that I gave you
+<SYNC Start=3520><P Class=KRCC>
+&nbsp;
+<SYNC Start=3521><P Class=KRCC>
+the larger table this time. But it depends on the first one, so it would've been
+<SYNC Start=7010><P Class=KRCC>
+&nbsp;
+<SYNC Start=7011><P Class=KRCC>
+hard to give you in any other order. I gave you the content value structure, so
+<SYNC Start=11510><P Class=KRCC>
+&nbsp;
+<SYNC Start=11511><P Class=KRCC>
+it's pretty easy to just insert the data. Then, we query the data back out.
+<SYNC Start=15820><P Class=KRCC>
+&nbsp;
+<SYNC Start=16820><P Class=KRCC>
+[SOUND] If move to first fails, the cursor is empty, and
+<SYNC Start=19811><P Class=KRCC>
+&nbsp;
+<SYNC Start=19812><P Class=KRCC>
+the query failed. [LAUGH] Lots of cut and paste here. It is nice to fetch the dv
+<SYNC Start=24258><P Class=KRCC>
+&nbsp;
+<SYNC Start=24259><P Class=KRCC>
+values using the helper for the data type, although its not strictly necessary,
+<SYNC Start=28606><P Class=KRCC>
+&nbsp;
+<SYNC Start=28607><P Class=KRCC>
+since we know our test data is actually going to match our constrains. And
+<SYNC Start=32759><P Class=KRCC>
+&nbsp;
+<SYNC Start=32760><P Class=KRCC>
+there is one more failure case we need to add here, if our query doesn't return
+<SYNC Start=36430><P Class=KRCC>
+&nbsp;
+<SYNC Start=36431><P Class=KRCC>
+any rows. And that's it. All that just to get a database and
+<SYNC Start=41920><P Class=KRCC>
+&nbsp;
+<SYNC Start=41921><P Class=KRCC>
+a way to test it. Now let's run the test again. Well, at
+<SYNC Start=45790><P Class=KRCC>
+&nbsp;
+<SYNC Start=45791><P Class=KRCC>
+least we know all the basic stuff works, and just remember, without these tests,
+<SYNC Start=51140><P Class=KRCC>
+&nbsp;
+<SYNC Start=51141><P Class=KRCC>
+you wouldn't have been able to run this code for a very, very long time.</BODY>
+</SAMI>

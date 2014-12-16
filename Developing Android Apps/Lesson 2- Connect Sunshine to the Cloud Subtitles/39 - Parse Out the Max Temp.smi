@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=340><P Class=KRCC>
+For the solution we look for the list array.
+<SYNC Start=3360><P Class=KRCC>
+&nbsp;
+<SYNC Start=3361><P Class=KRCC>
+Each element in the list represents one days forecast. Given
+<SYNC Start=7070><P Class=KRCC>
+&nbsp;
+<SYNC Start=7071><P Class=KRCC>
+the day index we find the temperature node and then
+<SYNC Start=9860><P Class=KRCC>
+&nbsp;
+<SYNC Start=9861><P Class=KRCC>
+the max temperature. And this is what the code would
+<SYNC Start=12700><P Class=KRCC>
+&nbsp;
+<SYNC Start=12701><P Class=KRCC>
+look like. We change the JSON string into a JSON
+<SYNC Start=15340><P Class=KRCC>
+&nbsp;
+<SYNC Start=15341><P Class=KRCC>
+object. Then we look for the list array. Within that
+<SYNC Start=18590><P Class=KRCC>
+&nbsp;
+<SYNC Start=18591><P Class=KRCC>
+we find the day we care about. Then we look
+<SYNC Start=20730><P Class=KRCC>
+&nbsp;
+<SYNC Start=20731><P Class=KRCC>
+for the temp node. And then find the max temperature.</BODY>
+</SAMI>

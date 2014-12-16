@@ -1,0 +1,118 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=380><P Class=KRCC>
+Let me the explain the reasoning that I use when I
+<SYNC Start=2190><P Class=KRCC>
+&nbsp;
+<SYNC Start=2191><P Class=KRCC>
+look at a new layout. It looks like there's two equally spaced
+<SYNC Start=5150><P Class=KRCC>
+&nbsp;
+<SYNC Start=5151><P Class=KRCC>
+columns here. That signals to me we need linear layout weights,
+<SYNC Start=9120><P Class=KRCC>
+&nbsp;
+<SYNC Start=9121><P Class=KRCC>
+where each of these have equal weights. So let's create a horizontal
+<SYNC Start=12460><P Class=KRCC>
+&nbsp;
+<SYNC Start=12461><P Class=KRCC>
+linear layout. Within this first chart, we have three vertically stacked
+<SYNC Start=16712><P Class=KRCC>
+&nbsp;
+<SYNC Start=16713><P Class=KRCC>
+text views, so we have a vertical linear layout, and the same
+<SYNC Start=19830><P Class=KRCC>
+&nbsp;
+<SYNC Start=19831><P Class=KRCC>
+goes for this second chart with has two elements vertically stacked
+<SYNC Start=23030><P Class=KRCC>
+&nbsp;
+<SYNC Start=23031><P Class=KRCC>
+on top of each other, which means we use a vertical linear
+<SYNC Start=25570><P Class=KRCC>
+&nbsp;
+<SYNC Start=25571><P Class=KRCC>
+layout as well. And here's the code, we created a
+<SYNC Start=28220><P Class=KRCC>
+&nbsp;
+<SYNC Start=28221><P Class=KRCC>
+new list item forecasts today XML file under the layout folder.
+<SYNC Start=32490><P Class=KRCC>
+&nbsp;
+<SYNC Start=32491><P Class=KRCC>
+The code looks very similar to list item forecast. I
+<SYNC Start=35340><P Class=KRCC>
+&nbsp;
+<SYNC Start=35341><P Class=KRCC>
+has a horizontal linear layout, as a root element. The first
+<SYNC Start=38540><P Class=KRCC>
+&nbsp;
+<SYNC Start=38541><P Class=KRCC>
+channel is a vertical linear layout with the width zero
+<SYNC Start=41370><P Class=KRCC>
+&nbsp;
+<SYNC Start=41371><P Class=KRCC>
+and a weight of one. The second child is another vertical
+<SYNC Start=44970><P Class=KRCC>
+&nbsp;
+<SYNC Start=44971><P Class=KRCC>
+linear layout with a width of zero and a weight
+<SYNC Start=47300><P Class=KRCC>
+&nbsp;
+<SYNC Start=47301><P Class=KRCC>
+of one, that way the horizontal space will be distributed evenly
+<SYNC Start=50600><P Class=KRCC>
+&nbsp;
+<SYNC Start=50601><P Class=KRCC>
+among each child. If you go back to the first
+<SYNC Start=53200><P Class=KRCC>
+&nbsp;
+<SYNC Start=53201><P Class=KRCC>
+linear layout, notice that we have three text views within
+<SYNC Start=55700><P Class=KRCC>
+&nbsp;
+<SYNC Start=55701><P Class=KRCC>
+it. For date, high temperature, and low temperature. We specify
+<SYNC Start=59630><P Class=KRCC>
+&nbsp;
+<SYNC Start=59631><P Class=KRCC>
+gravity to be center horizontal. So anything within the linear
+<SYNC Start=62550><P Class=KRCC>
+&nbsp;
+<SYNC Start=62551><P Class=KRCC>
+layout will be centered horizontally. Otherwise, by default, they would
+<SYNC Start=66220><P Class=KRCC>
+&nbsp;
+<SYNC Start=66221><P Class=KRCC>
+be left aligned to the linear layout. The same applies
+<SYNC Start=69590><P Class=KRCC>
+&nbsp;
+<SYNC Start=69591><P Class=KRCC>
+for the second linear layout. We specify gravity to be
+<SYNC Start=72270><P Class=KRCC>
+&nbsp;
+<SYNC Start=72271><P Class=KRCC>
+center horizontal so that the icon and the weather forecast
+<SYNC Start=75720><P Class=KRCC>
+&nbsp;
+<SYNC Start=75721><P Class=KRCC>
+text view within it are also centered horizontally.</BODY>
+</SAMI>

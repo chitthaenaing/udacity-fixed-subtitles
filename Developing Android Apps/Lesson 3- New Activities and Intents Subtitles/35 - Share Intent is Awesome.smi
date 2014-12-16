@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=830><P Class=KRCC>
+One of the most used implicit intents
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+in Android is the share intent. It's [LAUGH]
+<SYNC Start=5490><P Class=KRCC>
+&nbsp;
+<SYNC Start=5491><P Class=KRCC>
+awesome. It's a great way to waste time
+<SYNC Start=7560><P Class=KRCC>
+&nbsp;
+<SYNC Start=7561><P Class=KRCC>
+for both you and your friends. [SOUND] [LAUGH].
+<SYNC Start=11356><P Class=KRCC>
+&nbsp;
+<SYNC Start=11357><P Class=KRCC>
+>> Dan!
+<SYNC Start=12720><P Class=KRCC>
+&nbsp;
+<SYNC Start=12721><P Class=KRCC>
+>> You can leverage your favorite apps to share photos, texts,
+<SYNC Start=15780><P Class=KRCC>
+&nbsp;
+<SYNC Start=15781><P Class=KRCC>
+videos and general links. And the best part is you don't have
+<SYNC Start=18910><P Class=KRCC>
+&nbsp;
+<SYNC Start=18911><P Class=KRCC>
+to even know what the user's favorite apps are. Just tell
+<SYNC Start=21990><P Class=KRCC>
+&nbsp;
+<SYNC Start=21991><P Class=KRCC>
+Android what data you want to share and it shows your users
+<SYNC Start=25840><P Class=KRCC>
+&nbsp;
+<SYNC Start=25841><P Class=KRCC>
+a list of apps that will share it. Apps that
+<SYNC Start=28050><P Class=KRCC>
+&nbsp;
+<SYNC Start=28051><P Class=KRCC>
+may not have existed when you app was written. To
+<SYNC Start=30680><P Class=KRCC>
+&nbsp;
+<SYNC Start=30681><P Class=KRCC>
+make it even easier to share Android 4.0 added the
+<SYNC Start=33660><P Class=KRCC>
+&nbsp;
+<SYNC Start=33661><P Class=KRCC>
+share action provider and we have it for previous releases of
+<SYNC Start=37070><P Class=KRCC>
+&nbsp;
+<SYNC Start=37071><P Class=KRCC>
+Android as part of a support library. It operates using
+<SYNC Start=40270><P Class=KRCC>
+&nbsp;
+<SYNC Start=40271><P Class=KRCC>
+the action send intent. If we use Raytoe's glorious envelope metaphor,
+<SYNC Start=44890><P Class=KRCC>
+&nbsp;
+<SYNC Start=44891><P Class=KRCC>
+it would be addressed to anyone who could perform action
+<SYNC Start=47510><P Class=KRCC>
+&nbsp;
+<SYNC Start=47511><P Class=KRCC>
+send. The data descend would be included with it as extras
+<SYNC Start=51490><P Class=KRCC>
+&nbsp;
+<SYNC Start=51491><P Class=KRCC>
+either as text, or URI to the binary data. And
+<SYNC Start=55060><P Class=KRCC>
+&nbsp;
+<SYNC Start=55061><P Class=KRCC>
+the MIME type would indicate what the URI points to.
+<SYNC Start=57600><P Class=KRCC>
+&nbsp;
+<SYNC Start=61220><P Class=KRCC>
+Here's what the share action provider will bring to
+<SYNC Start=63470><P Class=KRCC>
+&nbsp;
+<SYNC Start=63471><P Class=KRCC>
+our app: the glorious wire frame. There will be
+<SYNC Start=66850><P Class=KRCC>
+&nbsp;
+<SYNC Start=66851><P Class=KRCC>
+an additional icon in the action bar which will
+<SYNC Start=69270><P Class=KRCC>
+&nbsp;
+<SYNC Start=69271><P Class=KRCC>
+drop down a menu when clicked to reveal potential
+<SYNC Start=71980><P Class=KRCC>
+&nbsp;
+<SYNC Start=71981><P Class=KRCC>
+share actions. Another icon will be added to the
+<SYNC Start=75150><P Class=KRCC>
+&nbsp;
+<SYNC Start=75151><P Class=KRCC>
+right of this one that contains the last application
+<SYNC Start=77640><P Class=KRCC>
+&nbsp;
+<SYNC Start=77641><P Class=KRCC>
+shared to. Add a ShareActionProvider to the fragment within
+<SYNC Start=82450><P Class=KRCC>
+&nbsp;
+<SYNC Start=82451><P Class=KRCC>
+DetailActivity. It will share weather in the following format.
+<SYNC Start=87000><P Class=KRCC>
+&nbsp;
+<SYNC Start=87001><P Class=KRCC>
+Yes, it's just the string we passed into the view plus #SunshineApp.</BODY>
+</SAMI>

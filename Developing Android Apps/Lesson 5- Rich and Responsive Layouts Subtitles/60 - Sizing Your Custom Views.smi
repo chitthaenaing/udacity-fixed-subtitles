@@ -1,0 +1,262 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=140><P Class=KRCC>
+Knowing the standard widget library is nice, but as someone who
+<SYNC Start=3635><P Class=KRCC>
+&nbsp;
+<SYNC Start=3636><P Class=KRCC>
+was once accused as not so much recreating the wheel, as hand
+<SYNC Start=8430><P Class=KRCC>
+&nbsp;
+<SYNC Start=8431><P Class=KRCC>
+machining my own nuts and bolts, I know there are times
+<SYNC Start=11280><P Class=KRCC>
+&nbsp;
+<SYNC Start=11281><P Class=KRCC>
+when nothing in the tool chest will quite do the job. That's
+<SYNC Start=13990><P Class=KRCC>
+&nbsp;
+<SYNC Start=13991><P Class=KRCC>
+when it's time to dive in and build you own custom
+<SYNC Start=16470><P Class=KRCC>
+&nbsp;
+<SYNC Start=16471><P Class=KRCC>
+view from scratch. Now we're not going to be including any custom
+<SYNC Start=19900><P Class=KRCC>
+&nbsp;
+<SYNC Start=19901><P Class=KRCC>
+views within Sunshine, but we can still take a look at how
+<SYNC Start=22170><P Class=KRCC>
+&nbsp;
+<SYNC Start=22171><P Class=KRCC>
+you would build one. We'll start by creating a new class for
+<SYNC Start=25240><P Class=KRCC>
+&nbsp;
+<SYNC Start=25241><P Class=KRCC>
+our view. Let's call it My View. If
+<SYNC Start=27250><P Class=KRCC>
+&nbsp;
+<SYNC Start=27251><P Class=KRCC>
+you're building something from scratch, rather than modify an
+<SYNC Start=29650><P Class=KRCC>
+&nbsp;
+<SYNC Start=29651><P Class=KRCC>
+existing view, it should descend from either view
+<SYNC Start=32159><P Class=KRCC>
+&nbsp;
+<SYNC Start=32160><P Class=KRCC>
+itself or from surface view. View offers a light
+<SYNC Start=36760><P Class=KRCC>
+&nbsp;
+<SYNC Start=36761><P Class=KRCC>
+weight, canvas-based approach, while surface view is designed
+<SYNC Start=40820><P Class=KRCC>
+&nbsp;
+<SYNC Start=40821><P Class=KRCC>
+specifically to support UI elements that require rapid redraws
+<SYNC Start=44085><P Class=KRCC>
+&nbsp;
+<SYNC Start=44086><P Class=KRCC>
+and/or 3D graphics, using something like Open GL.
+<SYNC Start=47140><P Class=KRCC>
+&nbsp;
+<SYNC Start=47141><P Class=KRCC>
+It's perfect for views that display video or games.
+<SYNC Start=50660><P Class=KRCC>
+&nbsp;
+<SYNC Start=50661><P Class=KRCC>
+Now the existing widget library is entirely view
+<SYNC Start=53550><P Class=KRCC>
+&nbsp;
+<SYNC Start=53551><P Class=KRCC>
+based. So let's take that approach. The base view
+<SYNC Start=56610><P Class=KRCC>
+&nbsp;
+<SYNC Start=56611><P Class=KRCC>
+class draws an empty borderless 100 by 100 pixel
+<SYNC Start=61300><P Class=KRCC>
+&nbsp;
+<SYNC Start=61301><P Class=KRCC>
+box. To change that, we override the onMeasure handler,
+<SYNC Start=64830><P Class=KRCC>
+&nbsp;
+<SYNC Start=64831><P Class=KRCC>
+which allows us to indicate the view size.
+<SYNC Start=67160><P Class=KRCC>
+&nbsp;
+<SYNC Start=67161><P Class=KRCC>
+We'll also override onDraw, in order to draw our
+<SYNC Start=70040><P Class=KRCC>
+&nbsp;
+<SYNC Start=70041><P Class=KRCC>
+own custom view content. Now if it turns out
+<SYNC Start=73180><P Class=KRCC>
+&nbsp;
+<SYNC Start=73181><P Class=KRCC>
+that your view should always be an empty 100
+<SYNC Start=75810><P Class=KRCC>
+&nbsp;
+<SYNC Start=75811><P Class=KRCC>
+pixel box then you're in luck. Otherwise we need to do
+<SYNC Start=78690><P Class=KRCC>
+&nbsp;
+<SYNC Start=78691><P Class=KRCC>
+some work. So let's start by setting our view's size. onMeasure is
+<SYNC Start=82790><P Class=KRCC>
+&nbsp;
+<SYNC Start=82791><P Class=KRCC>
+called when your view's parent is laying out it's children. As
+<SYNC Start=86190><P Class=KRCC>
+&nbsp;
+<SYNC Start=86191><P Class=KRCC>
+you know, when you add a view to a layout you can
+<SYNC Start=87970><P Class=KRCC>
+&nbsp;
+<SYNC Start=87971><P Class=KRCC>
+specify a specific height or width, but in most cases you'll
+<SYNC Start=91310><P Class=KRCC>
+&nbsp;
+<SYNC Start=91311><P Class=KRCC>
+want to either match parent or wrap the content. When a view's on
+<SYNC Start=94860><P Class=KRCC>
+&nbsp;
+<SYNC Start=94861><P Class=KRCC>
+measure is called by its parent layout, it asks, how much space
+<SYNC Start=98270><P Class=KRCC>
+&nbsp;
+<SYNC Start=98271><P Class=KRCC>
+will you use? And passes in how much space is available, and
+<SYNC Start=101360><P Class=KRCC>
+&nbsp;
+<SYNC Start=101361><P Class=KRCC>
+whether the view will be given exactly that much
+<SYNC Start=103110><P Class=KRCC>
+&nbsp;
+<SYNC Start=103111><P Class=KRCC>
+space, or at most that much space using these parameters.
+<SYNC Start=106630><P Class=KRCC>
+&nbsp;
+<SYNC Start=106631><P Class=KRCC>
+You can decode those parameters like this. And that'll allow
+<SYNC Start=109650><P Class=KRCC>
+&nbsp;
+<SYNC Start=109651><P Class=KRCC>
+you to obtain the size and the mode for your
+<SYNC Start=113970><P Class=KRCC>
+&nbsp;
+<SYNC Start=113971><P Class=KRCC>
+height and width specifications. In this example we're demonstrating just
+<SYNC Start=118780><P Class=KRCC>
+&nbsp;
+<SYNC Start=118781><P Class=KRCC>
+for the height parameter, but it works the same for
+<SYNC Start=120820><P Class=KRCC>
+&nbsp;
+<SYNC Start=120821><P Class=KRCC>
+width. We can then use the decoded mode parameter to
+<SYNC Start=124000><P Class=KRCC>
+&nbsp;
+<SYNC Start=124001><P Class=KRCC>
+find out what size we should set our view to.
+<SYNC Start=126940><P Class=KRCC>
+&nbsp;
+<SYNC Start=126941><P Class=KRCC>
+If the returned mode is exactly, the view will be placed
+<SYNC Start=129970><P Class=KRCC>
+&nbsp;
+<SYNC Start=129971><P Class=KRCC>
+into an area of exactly that size. You'll be passed that
+<SYNC Start=132740><P Class=KRCC>
+&nbsp;
+<SYNC Start=132741><P Class=KRCC>
+value if the layout has specified a specific size or if
+<SYNC Start=135460><P Class=KRCC>
+&nbsp;
+<SYNC Start=135461><P Class=KRCC>
+the view has been asked to fill the parent. In either case,
+<SYNC Start=139030><P Class=KRCC>
+&nbsp;
+<SYNC Start=139031><P Class=KRCC>
+it's best practice to simply return the value passed in, unless
+<SYNC Start=142370><P Class=KRCC>
+&nbsp;
+<SYNC Start=142371><P Class=KRCC>
+that value is below your views minimum size, in which case
+<SYNC Start=145160><P Class=KRCC>
+&nbsp;
+<SYNC Start=145161><P Class=KRCC>
+you can return the minimum value and rely on the parent
+<SYNC Start=147740><P Class=KRCC>
+&nbsp;
+<SYNC Start=147741><P Class=KRCC>
+layout to crop or scroll as necessary. Another alternative is AT_MOST. This
+<SYNC Start=152910><P Class=KRCC>
+&nbsp;
+<SYNC Start=152911><P Class=KRCC>
+indicates that your view can define its own size, up to the
+<SYNC Start=155750><P Class=KRCC>
+&nbsp;
+<SYNC Start=155751><P Class=KRCC>
+size given. This is typically the case for views set to wrap
+<SYNC Start=159300><P Class=KRCC>
+&nbsp;
+<SYNC Start=159301><P Class=KRCC>
+content, where the view should be as wide as it needs to
+<SYNC Start=161790><P Class=KRCC>
+&nbsp;
+<SYNC Start=161791><P Class=KRCC>
+be to display its content, but no wider than that. And of
+<SYNC Start=165100><P Class=KRCC>
+&nbsp;
+<SYNC Start=165101><P Class=KRCC>
+course all of that's provided that it still fits within the parent
+<SYNC Start=167900><P Class=KRCC>
+&nbsp;
+<SYNC Start=167901><P Class=KRCC>
+container as indicated by the size
+<SYNC Start=170280><P Class=KRCC>
+&nbsp;
+<SYNC Start=170281><P Class=KRCC>
+parameter. Now we've just finished calculating
+<SYNC Start=172260><P Class=KRCC>
+&nbsp;
+<SYNC Start=172261><P Class=KRCC>
+all of that for the height parameter and you'd need to do
+<SYNC Start=174580><P Class=KRCC>
+&nbsp;
+<SYNC Start=174581><P Class=KRCC>
+exactly the same thing again for width. Once you've done that and
+<SYNC Start=178060><P Class=KRCC>
+&nbsp;
+<SYNC Start=178061><P Class=KRCC>
+determined the size of your control, you have to call
+<SYNC Start=181150><P Class=KRCC>
+&nbsp;
+<SYNC Start=181151><P Class=KRCC>
+the setMeasuredDimension method. Here you pass in your width and
+<SYNC Start=185050><P Class=KRCC>
+&nbsp;
+<SYNC Start=185051><P Class=KRCC>
+height values. If you don't call these setMeasureDimension method, your
+<SYNC Start=189229><P Class=KRCC>
+&nbsp;
+<SYNC Start=189230><P Class=KRCC>
+app will as soon as your view is laid out.</BODY>
+</SAMI>

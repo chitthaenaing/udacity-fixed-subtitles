@@ -1,0 +1,186 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+We'll start by adding our call back functions
+<SYNC Start=2170><P Class=KRCC>
+&nbsp;
+<SYNC Start=2171><P Class=KRCC>
+to our forecast fragment. Now know we have two
+<SYNC Start=5040><P Class=KRCC>
+&nbsp;
+<SYNC Start=5041><P Class=KRCC>
+different options here for loader call backs. We want to
+<SYNC Start=7230><P Class=KRCC>
+&nbsp;
+<SYNC Start=7231><P Class=KRCC>
+make sure that we're choosing the android.support.v4 callback so
+<SYNC Start=11260><P Class=KRCC>
+&nbsp;
+<SYNC Start=11261><P Class=KRCC>
+we're compatible with Gingerbread. These take a generic
+<SYNC Start=13780><P Class=KRCC>
+&nbsp;
+<SYNC Start=13781><P Class=KRCC>
+type. We're going to want to use cursor. And yes that
+<SYNC Start=17402><P Class=KRCC>
+&nbsp;
+<SYNC Start=17403><P Class=KRCC>
+is Andriod.database.cursor. Now, let's move down to where we
+<SYNC Start=22370><P Class=KRCC>
+&nbsp;
+<SYNC Start=22371><P Class=KRCC>
+want to actually insert this code. Here at the bottom
+<SYNC Start=25380><P Class=KRCC>
+&nbsp;
+<SYNC Start=25381><P Class=KRCC>
+and, of course, we use control I to actually insert.
+<SYNC Start=28390><P Class=KRCC>
+&nbsp;
+<SYNC Start=28391><P Class=KRCC>
+And there we have it beautifully, our loader pattern with cursor.
+<SYNC Start=32250><P Class=KRCC>
+&nbsp;
+<SYNC Start=32251><P Class=KRCC>
+Now let's do some work that will help us out. First
+<SYNC Start=35256><P Class=KRCC>
+&nbsp;
+<SYNC Start=35257><P Class=KRCC>
+we're [INAUDIBLE] of columns to the top of our forecast fragment.
+<SYNC Start=38270><P Class=KRCC>
+&nbsp;
+<SYNC Start=38271><P Class=KRCC>
+These are the columns that are going to be used in our
+<SYNC Start=40590><P Class=KRCC>
+&nbsp;
+<SYNC Start=40591><P Class=KRCC>
+query. Note, that since both weather entry and location entry have
+<SYNC Start=44490><P Class=KRCC>
+&nbsp;
+<SYNC Start=44491><P Class=KRCC>
+the underscore ID field, we must fully qualify, which ID we
+<SYNC Start=47720><P Class=KRCC>
+&nbsp;
+<SYNC Start=47721><P Class=KRCC>
+want in our projection for this query to work. And in
+<SYNC Start=50460><P Class=KRCC>
+&nbsp;
+<SYNC Start=50461><P Class=KRCC>
+fact, this query requires a projection to work at
+<SYNC Start=53110><P Class=KRCC>
+&nbsp;
+<SYNC Start=53111><P Class=KRCC>
+all, otherwise [UNKNOWN] ambiguous. Next, here are indexes that
+<SYNC Start=58190><P Class=KRCC>
+&nbsp;
+<SYNC Start=58191><P Class=KRCC>
+are tied to these columns. This'll make some of
+<SYNC Start=60710><P Class=KRCC>
+&nbsp;
+<SYNC Start=60711><P Class=KRCC>
+our work easier, later on. Note, that these actually must
+<SYNC Start=64200><P Class=KRCC>
+&nbsp;
+<SYNC Start=64201><P Class=KRCC>
+match. Then we create some public indexes to use,
+<SYNC Start=67420><P Class=KRCC>
+&nbsp;
+<SYNC Start=67421><P Class=KRCC>
+in our adapter. This allows us to make our
+<SYNC Start=69730><P Class=KRCC>
+&nbsp;
+<SYNC Start=69731><P Class=KRCC>
+code tiny and efficient, in the adapter. But it
+<SYNC Start=72190><P Class=KRCC>
+&nbsp;
+<SYNC Start=72191><P Class=KRCC>
+means, we must maintain the relationship between these column indexes.
+<SYNC Start=75950><P Class=KRCC>
+&nbsp;
+<SYNC Start=75951><P Class=KRCC>
+And the projection. Each loader has an ID. It
+<SYNC Start=79530><P Class=KRCC>
+&nbsp;
+<SYNC Start=79531><P Class=KRCC>
+allows a fragment to have multiple loaders active at
+<SYNC Start=81750><P Class=KRCC>
+&nbsp;
+<SYNC Start=81751><P Class=KRCC>
+once. We're [INAUDIBLE] place this along with an instance
+<SYNC Start=85080><P Class=KRCC>
+&nbsp;
+<SYNC Start=85081><P Class=KRCC>
+variable to save off our location here at the
+<SYNC Start=86820><P Class=KRCC>
+&nbsp;
+<SYNC Start=86821><P Class=KRCC>
+top of our class. Next we're going to override
+<SYNC Start=89535><P Class=KRCC>
+&nbsp;
+<SYNC Start=89536><P Class=KRCC>
+onActivityCreated. Loaders are initialized
+<SYNC Start=93310><P Class=KRCC>
+&nbsp;
+<SYNC Start=93311><P Class=KRCC>
+in onActivityCreated because their life
+<SYNC Start=94980><P Class=KRCC>
+&nbsp;
+<SYNC Start=94981><P Class=KRCC>
+cycle is actually bound to the activity. Not the
+<SYNC Start=97800><P Class=KRCC>
+&nbsp;
+<SYNC Start=97801><P Class=KRCC>
+fragment. Note the use of the loader ID. FORECAST_LOADER.
+<SYNC Start=102350><P Class=KRCC>
+&nbsp;
+<SYNC Start=102351><P Class=KRCC>
+Then we return to the onCreateLoader function.
+<SYNC Start=105420><P Class=KRCC>
+&nbsp;
+<SYNC Start=105421><P Class=KRCC>
+We add a new CursorLoader. This CursorLoader has
+<SYNC Start=109570><P Class=KRCC>
+&nbsp;
+<SYNC Start=109571><P Class=KRCC>
+our query, including start date, columns, and sort
+<SYNC Start=113350><P Class=KRCC>
+&nbsp;
+<SYNC Start=113351><P Class=KRCC>
+order. Our start date is actually in our
+<SYNC Start=116420><P Class=KRCC>
+&nbsp;
+<SYNC Start=116421><P Class=KRCC>
+URI. Our columns are the ones we defined earlier, and our sort order is going
+<SYNC Start=121490><P Class=KRCC>
+&nbsp;
+<SYNC Start=121491><P Class=KRCC>
+to be based upon COLUMN_DATETEXT ascending. Let's do
+<SYNC Start=125250><P Class=KRCC>
+&nbsp;
+<SYNC Start=125251><P Class=KRCC>
+one last check. We want to make sure we're
+<SYNC Start=127430><P Class=KRCC>
+&nbsp;
+<SYNC Start=127431><P Class=KRCC>
+using the support library version of all of
+<SYNC Start=129150><P Class=KRCC>
+&nbsp;
+<SYNC Start=129151><P Class=KRCC>
+these classes, otherwise we won't get Android 2.3 compatibility.</BODY>
+</SAMI>

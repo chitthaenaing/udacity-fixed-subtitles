@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=180><P Class=KRCC>
+To fetch the data from open weather map within an
+<SYNC Start=2390><P Class=KRCC>
+&nbsp;
+<SYNC Start=2391><P Class=KRCC>
+app, first we need to make an HTTP request to the
+<SYNC Start=5750><P Class=KRCC>
+&nbsp;
+<SYNC Start=5751><P Class=KRCC>
+API at the URL that we decided on earlier. Then we
+<SYNC Start=9150><P Class=KRCC>
+&nbsp;
+<SYNC Start=9151><P Class=KRCC>
+need to read the response from the input stream to get
+<SYNC Start=11520><P Class=KRCC>
+&nbsp;
+<SYNC Start=11521><P Class=KRCC>
+a JSON string. It hasn't been parsed yet, but we'll worry
+<SYNC Start=14480><P Class=KRCC>
+&nbsp;
+<SYNC Start=14481><P Class=KRCC>
+about that later. Then we clean up by disconnecting the connection
+<SYNC Start=18080><P Class=KRCC>
+&nbsp;
+<SYNC Start=18081><P Class=KRCC>
+and closing any input streams. We also log any errors that
+<SYNC Start=21300><P Class=KRCC>
+&nbsp;
+<SYNC Start=21301><P Class=KRCC>
+we catch. Since it's a lot of networking boiler plate code,
+<SYNC Start=25300><P Class=KRCC>
+&nbsp;
+<SYNC Start=25301><P Class=KRCC>
+we've provided you with a code snippet
+<SYNC Start=27500><P Class=KRCC>
+&nbsp;
+<SYNC Start=27501><P Class=KRCC>
+that handles these steps. See the link for
+<SYNC Start=29890><P Class=KRCC>
+&nbsp;
+<SYNC Start=29891><P Class=KRCC>
+the GitHub gist below. After you've taken a
+<SYNC Start=31990><P Class=KRCC>
+&nbsp;
+<SYNC Start=31991><P Class=KRCC>
+look at it, check this box to continue.</BODY>
+</SAMI>

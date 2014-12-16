@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=650><P Class=KRCC>
+In lesson one, we built a new project with a basic UI backed with mock
+<SYNC Start=4180><P Class=KRCC>
+&nbsp;
+<SYNC Start=4181><P Class=KRCC>
+data. In this lesson, we'll hook sunshine up
+<SYNC Start=6730><P Class=KRCC>
+&nbsp;
+<SYNC Start=6731><P Class=KRCC>
+with the Cloud, replacing the mock data with
+<SYNC Start=9140><P Class=KRCC>
+&nbsp;
+<SYNC Start=9141><P Class=KRCC>
+real weather data using the OpenWeatherMap API.
+<SYNC Start=11397><P Class=KRCC>
+&nbsp;
+<SYNC Start=12420><P Class=KRCC>
+To do that, we'll learn about the Android
+<SYNC Start=14320><P Class=KRCC>
+&nbsp;
+<SYNC Start=14321><P Class=KRCC>
+permission system, Network I/O, and how to move
+<SYNC Start=16860><P Class=KRCC>
+&nbsp;
+<SYNC Start=16861><P Class=KRCC>
+time consuming tasks off the main UI thread.</BODY>
+</SAMI>

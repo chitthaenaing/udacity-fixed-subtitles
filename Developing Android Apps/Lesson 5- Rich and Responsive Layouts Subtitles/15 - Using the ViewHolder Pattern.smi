@@ -1,0 +1,130 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+In the adaptor bindView method, we have to traverse the view
+<SYNC Start=3030><P Class=KRCC>
+&nbsp;
+<SYNC Start=3031><P Class=KRCC>
+hierarchy to find all these different views to set data onto
+<SYNC Start=5990><P Class=KRCC>
+&nbsp;
+<SYNC Start=5991><P Class=KRCC>
+them. If it's a recycled view, meaning that it was used
+<SYNC Start=9090><P Class=KRCC>
+&nbsp;
+<SYNC Start=9091><P Class=KRCC>
+in the list previously to display other data, we still have
+<SYNC Start=12030><P Class=KRCC>
+&nbsp;
+<SYNC Start=12031><P Class=KRCC>
+to traverse and find all the views. To remove unnecessary find
+<SYNC Start=15252><P Class=KRCC>
+&nbsp;
+<SYNC Start=15253><P Class=KRCC>
+View By ID calls, we can use the View Holder pattern.
+<SYNC Start=18520><P Class=KRCC>
+&nbsp;
+<SYNC Start=18521><P Class=KRCC>
+For a list item layout that contains different views, we can
+<SYNC Start=21280><P Class=KRCC>
+&nbsp;
+<SYNC Start=21281><P Class=KRCC>
+create a View Holder object. It contains member variables that reference each
+<SYNC Start=25350><P Class=KRCC>
+&nbsp;
+<SYNC Start=25351><P Class=KRCC>
+view in the layout. The View Holder object is stored in
+<SYNC Start=28040><P Class=KRCC>
+&nbsp;
+<SYNC Start=28041><P Class=KRCC>
+the tag field of the view. The next time that the view
+<SYNC Start=31030><P Class=KRCC>
+&nbsp;
+<SYNC Start=31031><P Class=KRCC>
+is recycled and used again. We can just immediately set the data
+<SYNC Start=34960><P Class=KRCC>
+&nbsp;
+<SYNC Start=34961><P Class=KRCC>
+onto these fields. You don't have to go find all the views
+<SYNC Start=38180><P Class=KRCC>
+&nbsp;
+<SYNC Start=38181><P Class=KRCC>
+again. This is our View Holder class. You can name it anything
+<SYNC Start=41130><P Class=KRCC>
+&nbsp;
+<SYNC Start=41131><P Class=KRCC>
+you want, it's just a Java class. Given the list item layout,
+<SYNC Start=45046><P Class=KRCC>
+&nbsp;
+<SYNC Start=45047><P Class=KRCC>
+we do all the find view by ID calls. That way, we
+<SYNC Start=47220><P Class=KRCC>
+&nbsp;
+<SYNC Start=47221><P Class=KRCC>
+can hold references to all the child views. In the newView method,
+<SYNC Start=50705><P Class=KRCC>
+&nbsp;
+<SYNC Start=50706><P Class=KRCC>
+after we've inflated the view, we create a new View Holder object
+<SYNC Start=54080><P Class=KRCC>
+&nbsp;
+<SYNC Start=54081><P Class=KRCC>
+from that view. Then we set the View Holder as the tag of
+<SYNC Start=57340><P Class=KRCC>
+&nbsp;
+<SYNC Start=57341><P Class=KRCC>
+the view. The tag can be used to store any object. But
+<SYNC Start=60100><P Class=KRCC>
+&nbsp;
+<SYNC Start=60101><P Class=KRCC>
+don't abuse it, because when you read it back, you have to know
+<SYNC Start=62530><P Class=KRCC>
+&nbsp;
+<SYNC Start=62531><P Class=KRCC>
+what you stored in there. A View Holder is a good use
+<SYNC Start=64858><P Class=KRCC>
+&nbsp;
+<SYNC Start=64859><P Class=KRCC>
+case for it. Then in the bindView method. We read from the tag,
+<SYNC Start=68470><P Class=KRCC>
+&nbsp;
+<SYNC Start=68471><P Class=KRCC>
+to get back the View Holder object. And we immediately have references, to
+<SYNC Start=72670><P Class=KRCC>
+&nbsp;
+<SYNC Start=72671><P Class=KRCC>
+all the individual views we need to update, such as the Icon View,
+<SYNC Start=76260><P Class=KRCC>
+&nbsp;
+<SYNC Start=76261><P Class=KRCC>
+the Date View, the Description View etc. Go ahead and define a View
+<SYNC Start=79670><P Class=KRCC>
+&nbsp;
+<SYNC Start=79671><P Class=KRCC>
+Holder class and update your adapter to use it. When you compile and
+<SYNC Start=83030><P Class=KRCC>
+&nbsp;
+<SYNC Start=83031><P Class=KRCC>
+run, you may not see that noticeable of a difference. But now your
+<SYNC Start=85780><P Class=KRCC>
+&nbsp;
+<SYNC Start=85781><P Class=KRCC>
+list will perform better when it scales to hundreds or thousands of items.</BODY>
+</SAMI>

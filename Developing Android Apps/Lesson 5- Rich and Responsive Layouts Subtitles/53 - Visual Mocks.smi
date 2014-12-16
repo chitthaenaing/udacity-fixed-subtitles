@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=80><P Class=KRCC>
+Hurray, you're done implementing wire frames for the app! Now
+<SYNC Start=3440><P Class=KRCC>
+&nbsp;
+<SYNC Start=3441><P Class=KRCC>
+comes the visual polish part, where we tweak the styles
+<SYNC Start=6150><P Class=KRCC>
+&nbsp;
+<SYNC Start=6151><P Class=KRCC>
+and the views to make the app look awesome. Here
+<SYNC Start=8950><P Class=KRCC>
+&nbsp;
+<SYNC Start=8951><P Class=KRCC>
+are the visual mocks, for what the app should look
+<SYNC Start=10620><P Class=KRCC>
+&nbsp;
+<SYNC Start=10621><P Class=KRCC>
+like, when we're done. If you work with a designer,
+<SYNC Start=13310><P Class=KRCC>
+&nbsp;
+<SYNC Start=13311><P Class=KRCC>
+they should also give you red lines. Red lines specify
+<SYNC Start=16050><P Class=KRCC>
+&nbsp;
+<SYNC Start=16051><P Class=KRCC>
+everything from sizes, font styles, colors, spacing, et cetera. This
+<SYNC Start=21990><P Class=KRCC>
+&nbsp;
+<SYNC Start=21991><P Class=KRCC>
+should help you achieve pixel perfect layouts that match the
+<SYNC Start=25160><P Class=KRCC>
+&nbsp;
+<SYNC Start=25161><P Class=KRCC>
+visual mocks. How did we come up with these values?
+<SYNC Start=28500><P Class=KRCC>
+&nbsp;
+<SYNC Start=28501><P Class=KRCC>
+Well we used the Android design guide, which has information on
+<SYNC Start=31370><P Class=KRCC>
+&nbsp;
+<SYNC Start=31371><P Class=KRCC>
+metrics and grids, and we adapted them to fit our
+<SYNC Start=34060><P Class=KRCC>
+&nbsp;
+<SYNC Start=34061><P Class=KRCC>
+app's needs. You can click on the link for more info.</BODY>
+</SAMI>

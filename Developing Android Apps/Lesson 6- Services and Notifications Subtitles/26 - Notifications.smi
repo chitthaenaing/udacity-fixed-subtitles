@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+All right, you're done. There were a lot of new things that time. But, afterall,
+<SYNC Start=5160><P Class=KRCC>
+&nbsp;
+<SYNC Start=5161><P Class=KRCC>
+you're becoming a seasoned Android programmer by now.
+<SYNC Start=8530><P Class=KRCC>
+&nbsp;
+<SYNC Start=8531><P Class=KRCC>
+As I mentioned before, we're going to use NotificationCompat.Builder
+<SYNC Start=12910><P Class=KRCC>
+&nbsp;
+<SYNC Start=12911><P Class=KRCC>
+to build our notification. It's easy to build
+<SYNC Start=15310><P Class=KRCC>
+&nbsp;
+<SYNC Start=15311><P Class=KRCC>
+a nice looking notification that has our icon
+<SYNC Start=18000><P Class=KRCC>
+&nbsp;
+<SYNC Start=18001><P Class=KRCC>
+representing the weather forecast, the title for our
+<SYNC Start=21220><P Class=KRCC>
+&nbsp;
+<SYNC Start=21221><P Class=KRCC>
+App. And our content text, the forecast with
+<SYNC Start=25390><P Class=KRCC>
+&nbsp;
+<SYNC Start=25391><P Class=KRCC>
+highs and lows. We're going to use another class
+<SYNC Start=28600><P Class=KRCC>
+&nbsp;
+<SYNC Start=28601><P Class=KRCC>
+from the support library, to create a task stack builder
+<SYNC Start=32130><P Class=KRCC>
+&nbsp;
+<SYNC Start=32131><P Class=KRCC>
+for our pending intent. This is a simple case
+<SYNC Start=34960><P Class=KRCC>
+&nbsp;
+<SYNC Start=34961><P Class=KRCC>
+of task stack builder, because all we have is a
+<SYNC Start=37880><P Class=KRCC>
+&nbsp;
+<SYNC Start=37881><P Class=KRCC>
+single item on our stack. We just add the
+<SYNC Start=40980><P Class=KRCC>
+&nbsp;
+<SYNC Start=40981><P Class=KRCC>
+next intent and use it to build out pending intent
+<SYNC Start=43700><P Class=KRCC>
+&nbsp;
+<SYNC Start=43701><P Class=KRCC>
+that we pass into the notification manager. Finally we call
+<SYNC Start=47470><P Class=KRCC>
+&nbsp;
+<SYNC Start=47471><P Class=KRCC>
+the notification manager with the built intent from our builder,
+<SYNC Start=51150><P Class=KRCC>
+&nbsp;
+<SYNC Start=51151><P Class=KRCC>
+with a notify function. One of the great things about notification manager is
+<SYNC Start=55480><P Class=KRCC>
+&nbsp;
+<SYNC Start=55481><P Class=KRCC>
+it can be used from any thread even though it is displaying UI.</BODY>
+</SAMI>

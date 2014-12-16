@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=150><P Class=KRCC>
+From the documentation, we want singleChoice, mode so
+<SYNC Start=3240><P Class=KRCC>
+&nbsp;
+<SYNC Start=3241><P Class=KRCC>
+that the list item only shows one selected item at a time.
+<SYNC Start=6080><P Class=KRCC>
+&nbsp;
+<SYNC Start=6081><P Class=KRCC>
+You can declare this attribute on the list view in the fragment_main file.
+<SYNC Start=9540><P Class=KRCC>
+&nbsp;
+<SYNC Start=9541><P Class=KRCC>
+However, we don't want to specify ChoiceMode in one ping mode. So, to
+<SYNC Start=12920><P Class=KRCC>
+&nbsp;
+<SYNC Start=12921><P Class=KRCC>
+have these different code paths, we could copy the file in the Layout folder and
+<SYNC Start=16860><P Class=KRCC>
+&nbsp;
+<SYNC Start=16861><P Class=KRCC>
+put it in the Layout and put it in the Layout-sw600dp folder.
+<SYNC Start=19870><P Class=KRCC>
+&nbsp;
+<SYNC Start=19871><P Class=KRCC>
+A better solution is to declare a style. So, we have one layout file but
+<SYNC Start=23460><P Class=KRCC>
+&nbsp;
+<SYNC Start=23461><P Class=KRCC>
+different styles. In the Base styles file in the values folder,
+<SYNC Start=27281><P Class=KRCC>
+&nbsp;
+<SYNC Start=27282><P Class=KRCC>
+we declare ForecastListStyle. We leave it empty because we don't need to
+<SYNC Start=30580><P Class=KRCC>
+&nbsp;
+<SYNC Start=30581><P Class=KRCC>
+specify ChoiceMode. We create a new styles file in the values-sw600dp folder.
+<SYNC Start=35640><P Class=KRCC>
+&nbsp;
+<SYNC Start=35641><P Class=KRCC>
+In the two pane case, the ForecastListStyle does include the ChoiceMode.
+<SYNC Start=40390><P Class=KRCC>
+&nbsp;
+<SYNC Start=40391><P Class=KRCC>
+The two files have a different number of styles. If it's not declared in
+<SYNC Start=43840><P Class=KRCC>
+&nbsp;
+<SYNC Start=43841><P Class=KRCC>
+a higher folder, then it will just fall back to the Base style.</BODY>
+</SAMI>

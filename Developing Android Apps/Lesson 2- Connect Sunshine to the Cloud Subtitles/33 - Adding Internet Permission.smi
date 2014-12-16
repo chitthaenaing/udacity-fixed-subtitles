@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=190><P Class=KRCC>
+The answer is android.permission.INTERNET. I'll show you now,
+<SYNC Start=3880><P Class=KRCC>
+&nbsp;
+<SYNC Start=3881><P Class=KRCC>
+where it's located in the code. Under the
+<SYNC Start=6380><P Class=KRCC>
+&nbsp;
+<SYNC Start=6381><P Class=KRCC>
+main folder open up the Android manifest.xml file.
+<SYNC Start=9180><P Class=KRCC>
+&nbsp;
+<SYNC Start=10420><P Class=KRCC>
+Within the Android manifest file, we declare uses
+<SYNC Start=13660><P Class=KRCC>
+&nbsp;
+<SYNC Start=13661><P Class=KRCC>
+permission, with the name of the permission. We
+<SYNC Start=16800><P Class=KRCC>
+&nbsp;
+<SYNC Start=16801><P Class=KRCC>
+verified that the data returned is correct by
+<SYNC Start=18880><P Class=KRCC>
+&nbsp;
+<SYNC Start=18881><P Class=KRCC>
+adding a verbose log statement for printing out
+<SYNC Start=21810><P Class=KRCC>
+&nbsp;
+<SYNC Start=21811><P Class=KRCC>
+the forecastJsonStr. This is in the fetch weather task.
+<SYNC Start=26300><P Class=KRCC>
+&nbsp;
+<SYNC Start=26301><P Class=KRCC>
+We can verify that it's going to show up in the logs. For this example, I'm
+<SYNC Start=29830><P Class=KRCC>
+&nbsp;
+<SYNC Start=29831><P Class=KRCC>
+going to use the command line. These are the real time logs, and then if I
+<SYNC Start=33890><P Class=KRCC>
+&nbsp;
+<SYNC Start=33891><P Class=KRCC>
+hit refresh, then I see the weather data here. The verbose log, and this is our
+<SYNC Start=39120><P Class=KRCC>
+&nbsp;
+<SYNC Start=39121><P Class=KRCC>
+log tag fetch weather task. Here's the forecastJsonStr,
+<SYNC Start=43040><P Class=KRCC>
+&nbsp;
+<SYNC Start=43041><P Class=KRCC>
+and this is all the output from the server.</BODY>
+</SAMI>

@@ -1,0 +1,190 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+As you can see, the receiver itself is pretty
+<SYNC Start=2340><P Class=KRCC>
+&nbsp;
+<SYNC Start=2341><P Class=KRCC>
+simple. Extend the broadcast receiver class and override the
+<SYNC Start=6564><P Class=KRCC>
+&nbsp;
+<SYNC Start=6565><P Class=KRCC>
+onreceive handle as you can see here. Receivers are
+<SYNC Start=9680><P Class=KRCC>
+&nbsp;
+<SYNC Start=9681><P Class=KRCC>
+lightweight components meant to listen for broadcasts, reacts, and complete
+<SYNC Start=13520><P Class=KRCC>
+&nbsp;
+<SYNC Start=13521><P Class=KRCC>
+within five seconds that usually means simply starting a
+<SYNC Start=16690><P Class=KRCC>
+&nbsp;
+<SYNC Start=16691><P Class=KRCC>
+service or sending a notification. To have your receiver
+<SYNC Start=19350><P Class=KRCC>
+&nbsp;
+<SYNC Start=19351><P Class=KRCC>
+start listening for broadcasts, you need to register it
+<SYNC Start=22470><P Class=KRCC>
+&nbsp;
+<SYNC Start=22471><P Class=KRCC>
+either through an entry in your manifest like this or
+<SYNC Start=25260><P Class=KRCC>
+&nbsp;
+<SYNC Start=25261><P Class=KRCC>
+dynamically within another application component usually an activity,
+<SYNC Start=29240><P Class=KRCC>
+&nbsp;
+<SYNC Start=29241><P Class=KRCC>
+like this. Then you define the intent filter that
+<SYNC Start=33080><P Class=KRCC>
+&nbsp;
+<SYNC Start=33081><P Class=KRCC>
+specifies the broadcast event you want to receive.
+<SYNC Start=36370><P Class=KRCC>
+&nbsp;
+<SYNC Start=36371><P Class=KRCC>
+You can do that either here in the manifest
+<SYNC Start=38570><P Class=KRCC>
+&nbsp;
+<SYNC Start=38571><P Class=KRCC>
+or if you're registering your receiver with an
+<SYNC Start=40430><P Class=KRCC>
+&nbsp;
+<SYNC Start=40431><P Class=KRCC>
+application component such as an activity, you can create
+<SYNC Start=43690><P Class=KRCC>
+&nbsp;
+<SYNC Start=43691><P Class=KRCC>
+your new intent filter like this. The biggest difference
+<SYNC Start=46630><P Class=KRCC>
+&nbsp;
+<SYNC Start=46631><P Class=KRCC>
+between manifest and dynamic receivers is when they're triggered.
+<SYNC Start=50460><P Class=KRCC>
+&nbsp;
+<SYNC Start=50461><P Class=KRCC>
+A programmatically-registered receiver will only receive broadcasts while
+<SYNC Start=53880><P Class=KRCC>
+&nbsp;
+<SYNC Start=53881><P Class=KRCC>
+the app is running. While a manifest declared
+<SYNC Start=57890><P Class=KRCC>
+&nbsp;
+<SYNC Start=57891><P Class=KRCC>
+receiver will start your app specifically to receive
+<SYNC Start=62060><P Class=KRCC>
+&nbsp;
+<SYNC Start=62061><P Class=KRCC>
+your broadcasts. For example, I usually code with
+<SYNC Start=65069><P Class=KRCC>
+&nbsp;
+<SYNC Start=65070><P Class=KRCC>
+my noise cancelling headphones on, so a music
+<SYNC Start=67610><P Class=KRCC>
+&nbsp;
+<SYNC Start=67611><P Class=KRCC>
+app like this might want to register a runtime
+<SYNC Start=70160><P Class=KRCC>
+&nbsp;
+<SYNC Start=70161><P Class=KRCC>
+receiver to listen to the system intent broadcast
+<SYNC Start=72710><P Class=KRCC>
+&nbsp;
+<SYNC Start=72711><P Class=KRCC>
+that announces when headphones are unplugged. That will allow
+<SYNC Start=75590><P Class=KRCC>
+&nbsp;
+<SYNC Start=75591><P Class=KRCC>
+it to automatically pause playback, when your audio routing switches
+<SYNC Start=78790><P Class=KRCC>
+&nbsp;
+<SYNC Start=78791><P Class=KRCC>
+from headphone to speakers. In this case, we can use
+<SYNC Start=81950><P Class=KRCC>
+&nbsp;
+<SYNC Start=81951><P Class=KRCC>
+a runtime receiver, because the app is guaranteed to be
+<SYNC Start=84750><P Class=KRCC>
+&nbsp;
+<SYNC Start=84751><P Class=KRCC>
+running if music is playing. On the other hand, if I'm
+<SYNC Start=88250><P Class=KRCC>
+&nbsp;
+<SYNC Start=88251><P Class=KRCC>
+using Google Cloud Messaging to listen for new data from
+<SYNC Start=90790><P Class=KRCC>
+&nbsp;
+<SYNC Start=90791><P Class=KRCC>
+my server, I want to register a manifest receiver that always listens
+<SYNC Start=94730><P Class=KRCC>
+&nbsp;
+<SYNC Start=94731><P Class=KRCC>
+for incoming tickles from my server and will wake up
+<SYNC Start=97420><P Class=KRCC>
+&nbsp;
+<SYNC Start=97421><P Class=KRCC>
+my app if it's being terminated to trigger the update code,
+<SYNC Start=100870><P Class=KRCC>
+&nbsp;
+<SYNC Start=100871><P Class=KRCC>
+usually a sync adapter, which is something we will discuss
+<SYNC Start=103130><P Class=KRCC>
+&nbsp;
+<SYNC Start=103131><P Class=KRCC>
+later in lesson six. There's a bunch of system broadcasts
+<SYNC Start=106700><P Class=KRCC>
+&nbsp;
+<SYNC Start=106701><P Class=KRCC>
+you can monitor to help your app react to changes
+<SYNC Start=108920><P Class=KRCC>
+&nbsp;
+<SYNC Start=108921><P Class=KRCC>
+in the system. You can see the system broadcast actions within
+<SYNC Start=111880><P Class=KRCC>
+&nbsp;
+<SYNC Start=111881><P Class=KRCC>
+the intent documentation at developer.android.com. One great use for broadcast
+<SYNC Start=116515><P Class=KRCC>
+&nbsp;
+<SYNC Start=116516><P Class=KRCC>
+receivers is to monitor for changes to internet connectivity or
+<SYNC Start=120030><P Class=KRCC>
+&nbsp;
+<SYNC Start=120031><P Class=KRCC>
+charging status. Imagine your app has to upload a movie
+<SYNC Start=123230><P Class=KRCC>
+&nbsp;
+<SYNC Start=123231><P Class=KRCC>
+or calculate the next 10,000 moves in a game of chess,
+<SYNC Start=126170><P Class=KRCC>
+&nbsp;
+<SYNC Start=126171><P Class=KRCC>
+how might you use a receiver to wait until the device is plugged in
+<SYNC Start=129620><P Class=KRCC>
+&nbsp;
+<SYNC Start=129621><P Class=KRCC>
+before starting that process? Should it be
+<SYNC Start=131810><P Class=KRCC>
+&nbsp;
+<SYNC Start=131811><P Class=KRCC>
+a manifest receiver or a broadcast receiver?</BODY>
+</SAMI>

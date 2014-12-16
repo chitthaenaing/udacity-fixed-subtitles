@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=320><P Class=KRCC>
+As I said before, early versions of Android
+<SYNC Start=2930><P Class=KRCC>
+&nbsp;
+<SYNC Start=2931><P Class=KRCC>
+didn't have the loader model. The original deprecated model
+<SYNC Start=7130><P Class=KRCC>
+&nbsp;
+<SYNC Start=7131><P Class=KRCC>
+caused frame rate drops whenever many applications had to
+<SYNC Start=9908><P Class=KRCC>
+&nbsp;
+<SYNC Start=9909><P Class=KRCC>
+re-query their databases. Even simple ones. Databases get far
+<SYNC Start=14750><P Class=KRCC>
+&nbsp;
+<SYNC Start=14751><P Class=KRCC>
+more complex than what we have here in
+<SYNC Start=16329><P Class=KRCC>
+&nbsp;
+<SYNC Start=16330><P Class=KRCC>
+Sunshine. So the first answer is a definite yes.
+<SYNC Start=19630><P Class=KRCC>
+&nbsp;
+<SYNC Start=20660><P Class=KRCC>
+We noted how things like AsyncTask are bound to
+<SYNC Start=22980><P Class=KRCC>
+&nbsp;
+<SYNC Start=22981><P Class=KRCC>
+the UI, so something as little as an orientation
+<SYNC Start=25450><P Class=KRCC>
+&nbsp;
+<SYNC Start=25451><P Class=KRCC>
+change could kill the query. So that's another definite
+<SYNC Start=28780><P Class=KRCC>
+&nbsp;
+<SYNC Start=28781><P Class=KRCC>
+yes. So the third option is just a non-starter.</BODY>
+</SAMI>

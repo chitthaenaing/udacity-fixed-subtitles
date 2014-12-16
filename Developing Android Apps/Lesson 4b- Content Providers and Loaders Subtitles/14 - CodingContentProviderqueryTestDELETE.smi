@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=620><P Class=KRCC>
+Let's update the test insert redv test to use
+<SYNC Start=2918><P Class=KRCC>
+&nbsp;
+<SYNC Start=2919><P Class=KRCC>
+to use the weather provider to get the weather
+<SYNC Start=5216><P Class=KRCC>
+&nbsp;
+<SYNC Start=5217><P Class=KRCC>
+query. We'll start by changing the name to test,
+<SYNC Start=8650><P Class=KRCC>
+&nbsp;
+<SYNC Start=8651><P Class=KRCC>
+insert read provider. So, all we need to do
+<SYNC Start=12100><P Class=KRCC>
+&nbsp;
+<SYNC Start=12101><P Class=KRCC>
+is take this dv query, and replace it with
+<SYNC Start=15060><P Class=KRCC>
+&nbsp;
+<SYNC Start=15061><P Class=KRCC>
+the equivalent content provider one, which gets the content
+<SYNC Start=18590><P Class=KRCC>
+&nbsp;
+<SYNC Start=18591><P Class=KRCC>
+resolver, and then queries the content URI. Now, the
+<SYNC Start=22740><P Class=KRCC>
+&nbsp;
+<SYNC Start=22741><P Class=KRCC>
+content provider one doesn't take a few of these parameters.
+<SYNC Start=25670><P Class=KRCC>
+&nbsp;
+<SYNC Start=25671><P Class=KRCC>
+For example, it doesn't take TABLE_NAME, because that's implied
+<SYNC Start=28660><P Class=KRCC>
+&nbsp;
+<SYNC Start=28661><P Class=KRCC>
+by the URI, nor does it support group by.
+<SYNC Start=31640><P Class=KRCC>
+&nbsp;
+<SYNC Start=31641><P Class=KRCC>
+The rest of it should work pretty well. Now,
+<SYNC Start=34046><P Class=KRCC>
+&nbsp;
+<SYNC Start=34047><P Class=KRCC>
+let's run the test and verify that it passes.
+<SYNC Start=36211><P Class=KRCC>
+&nbsp;
+<SYNC Start=36212><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=39598><P Class=KRCC>
+&nbsp;
+<SYNC Start=39599><P Class=KRCC>
+And the test still passes. [LAUGH] Again, it's very easy to substitute
+<SYNC Start=43930><P Class=KRCC>
+&nbsp;
+<SYNC Start=43931><P Class=KRCC>
+out something that calls directly to the database with a content provider.</BODY>
+</SAMI>

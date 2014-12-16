@@ -1,0 +1,234 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=190><P Class=KRCC>
+Do you remember this diagram from lesson one? The adapter
+<SYNC Start=2830><P Class=KRCC>
+&nbsp;
+<SYNC Start=2831><P Class=KRCC>
+has a reference to the raw data. And has instructions on
+<SYNC Start=5520><P Class=KRCC>
+&nbsp;
+<SYNC Start=5521><P Class=KRCC>
+how to build each list item layout. These layouts eventually make
+<SYNC Start=9020><P Class=KRCC>
+&nbsp;
+<SYNC Start=9021><P Class=KRCC>
+it into the list view here. But what happens if any
+<SYNC Start=11840><P Class=KRCC>
+&nbsp;
+<SYNC Start=11841><P Class=KRCC>
+of this data changes. Let's say for example, there's a fourth
+<SYNC Start=15490><P Class=KRCC>
+&nbsp;
+<SYNC Start=15491><P Class=KRCC>
+contact named Don. The adapter knows how to create a list
+<SYNC Start=19120><P Class=KRCC>
+&nbsp;
+<SYNC Start=19121><P Class=KRCC>
+item layout for Don. But now the list view is outdated
+<SYNC Start=22090><P Class=KRCC>
+&nbsp;
+<SYNC Start=22091><P Class=KRCC>
+because it only has three items. Somehow, we need the adapter.
+<SYNC Start=26170><P Class=KRCC>
+&nbsp;
+<SYNC Start=26171><P Class=KRCC>
+To notify the list view that things have
+<SYNC Start=28190><P Class=KRCC>
+&nbsp;
+<SYNC Start=28191><P Class=KRCC>
+changed. And lucky for us, there's a method
+<SYNC Start=31728><P Class=KRCC>
+&nbsp;
+<SYNC Start=31729><P Class=KRCC>
+called: adapter.notifyDatasetChanged( ). This notifies any attached observers,
+<SYNC Start=37590><P Class=KRCC>
+&nbsp;
+<SYNC Start=37591><P Class=KRCC>
+like this one, that the underlying adapter data has
+<SYNC Start=40460><P Class=KRCC>
+&nbsp;
+<SYNC Start=40461><P Class=KRCC>
+changed. Then the list view needs to populate
+<SYNC Start=43340><P Class=KRCC>
+&nbsp;
+<SYNC Start=43341><P Class=KRCC>
+its children again. So it asks the adapter
+<SYNC Start=46100><P Class=KRCC>
+&nbsp;
+<SYNC Start=46101><P Class=KRCC>
+how many items there are? And the adapter
+<SYNC Start=47990><P Class=KRCC>
+&nbsp;
+<SYNC Start=47991><P Class=KRCC>
+responds with four. Then the ListView goes and fetches
+<SYNC Start=51210><P Class=KRCC>
+&nbsp;
+<SYNC Start=51211><P Class=KRCC>
+each one individually until it fills up the screen.
+<SYNC Start=53940><P Class=KRCC>
+&nbsp;
+<SYNC Start=54940><P Class=KRCC>
+And it's through that method that the ListView is able
+<SYNC Start=57300><P Class=KRCC>
+&nbsp;
+<SYNC Start=57301><P Class=KRCC>
+to get all its list items. But now you
+<SYNC Start=60250><P Class=KRCC>
+&nbsp;
+<SYNC Start=60251><P Class=KRCC>
+must be thinking. How did we actually update the ListView
+<SYNC Start=63270><P Class=KRCC>
+&nbsp;
+<SYNC Start=63271><P Class=KRCC>
+successfully, without adding this line of code in our
+<SYNC Start=66230><P Class=KRCC>
+&nbsp;
+<SYNC Start=66231><P Class=KRCC>
+app? Well, with a ray adapter, whenever you add or
+<SYNC Start=69290><P Class=KRCC>
+&nbsp;
+<SYNC Start=69291><P Class=KRCC>
+remove elements from it, it internally calls notifyDataSetChanged. That means
+<SYNC Start=74190><P Class=KRCC>
+&nbsp;
+<SYNC Start=74191><P Class=KRCC>
+we don't have to do anything. But how can be
+<SYNC Start=76260><P Class=KRCC>
+&nbsp;
+<SYNC Start=76261><P Class=KRCC>
+confirm this? Well, we can check the actual implementation
+<SYNC Start=80050><P Class=KRCC>
+&nbsp;
+<SYNC Start=80051><P Class=KRCC>
+of the ArrayAdapter class in the framework. And here's
+<SYNC Start=83470><P Class=KRCC>
+&nbsp;
+<SYNC Start=83471><P Class=KRCC>
+the code for the ArrayAdapter class within the Android
+<SYNC Start=86190><P Class=KRCC>
+&nbsp;
+<SYNC Start=86191><P Class=KRCC>
+framework. You can follow along with the link below.
+<SYNC Start=89930><P Class=KRCC>
+&nbsp;
+<SYNC Start=89931><P Class=KRCC>
+First, we're going to search for the Add method. Remember,
+<SYNC Start=92910><P Class=KRCC>
+&nbsp;
+<SYNC Start=92911><P Class=KRCC>
+we added forecast strings. To the adapter using this
+<SYNC Start=95730><P Class=KRCC>
+&nbsp;
+<SYNC Start=95731><P Class=KRCC>
+method. And sure enough we see that, the notify
+<SYNC Start=98790><P Class=KRCC>
+&nbsp;
+<SYNC Start=98791><P Class=KRCC>
+data set changed method is called internally. But you
+<SYNC Start=102140><P Class=KRCC>
+&nbsp;
+<SYNC Start=102141><P Class=KRCC>
+might be thinking what about this Boolean here. Well
+<SYNC Start=104740><P Class=KRCC>
+&nbsp;
+<SYNC Start=104741><P Class=KRCC>
+let's look it up. If you scroll to the top
+<SYNC Start=107180><P Class=KRCC>
+&nbsp;
+<SYNC Start=107181><P Class=KRCC>
+you'll see that, notify on change is declared as
+<SYNC Start=110270><P Class=KRCC>
+&nbsp;
+<SYNC Start=110271><P Class=KRCC>
+true initially. As you go through your other references you'll
+<SYNC Start=113640><P Class=KRCC>
+&nbsp;
+<SYNC Start=113641><P Class=KRCC>
+see that it's only changed here. In this set
+<SYNC Start=116800><P Class=KRCC>
+&nbsp;
+<SYNC Start=116801><P Class=KRCC>
+notify on change method. Since we don't call this public
+<SYNC Start=121410><P Class=KRCC>
+&nbsp;
+<SYNC Start=121411><P Class=KRCC>
+method, with the value false, then we know that we're
+<SYNC Start=124600><P Class=KRCC>
+&nbsp;
+<SYNC Start=124601><P Class=KRCC>
+going to be safely notified each time the adapter updates.
+<SYNC Start=127440><P Class=KRCC>
+&nbsp;
+<SYNC Start=128850><P Class=KRCC>
+Now let's go back to the add method. I want to
+<SYNC Start=131220><P Class=KRCC>
+&nbsp;
+<SYNC Start=131221><P Class=KRCC>
+show you one more thing. You'll notice in the add
+<SYNC Start=134280><P Class=KRCC>
+&nbsp;
+<SYNC Start=134281><P Class=KRCC>
+all method, it only notifies its observers once. Whereas in
+<SYNC Start=137660><P Class=KRCC>
+&nbsp;
+<SYNC Start=137661><P Class=KRCC>
+the add method every time you call this it will update
+<SYNC Start=140930><P Class=KRCC>
+&nbsp;
+<SYNC Start=140931><P Class=KRCC>
+it's observers. That means that our code actually is refreshing
+<SYNC Start=144700><P Class=KRCC>
+&nbsp;
+<SYNC Start=144701><P Class=KRCC>
+the list every time. So, if you're targeting honeycomb of above
+<SYNC Start=148350><P Class=KRCC>
+&nbsp;
+<SYNC Start=148351><P Class=KRCC>
+you can use this method to be a little more
+<SYNC Start=150180><P Class=KRCC>
+&nbsp;
+<SYNC Start=150181><P Class=KRCC>
+efficient. In general don't be afraid to try and do this
+<SYNC Start=153890><P Class=KRCC>
+&nbsp;
+<SYNC Start=153891><P Class=KRCC>
+on your own. As a general pro tip, if you're ever unsure about something,
+<SYNC Start=158710><P Class=KRCC>
+&nbsp;
+<SYNC Start=158711><P Class=KRCC>
+feel free to go and check the
+<SYNC Start=159930><P Class=KRCC>
+&nbsp;
+<SYNC Start=159931><P Class=KRCC>
+Android source code. Don't treat the framework code
+<SYNC Start=162760><P Class=KRCC>
+&nbsp;
+<SYNC Start=162761><P Class=KRCC>
+like a black box. Take advantage of the fact that Android is open source. The
+<SYNC Start=167320><P Class=KRCC>
+&nbsp;
+<SYNC Start=167321><P Class=KRCC>
+more you learn about the platform the
+<SYNC Start=168910><P Class=KRCC>
+&nbsp;
+<SYNC Start=168911><P Class=KRCC>
+better of an Android developer you can become.</BODY>
+</SAMI>

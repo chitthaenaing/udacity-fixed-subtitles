@@ -1,0 +1,34 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=240><P Class=KRCC>
+That's right. While setting Froyo as a minimum SDK, would allow us to support
+<SYNC Start=5370><P Class=KRCC>
+&nbsp;
+<SYNC Start=5371><P Class=KRCC>
+100% of devices, it's the wrong choice for our target SDK. To ensure the best
+<SYNC Start=9490><P Class=KRCC>
+&nbsp;
+<SYNC Start=9491><P Class=KRCC>
+experience for users on all phones including the newest KitKat releases,
+<SYNC Start=13630><P Class=KRCC>
+&nbsp;
+<SYNC Start=13631><P Class=KRCC>
+we need to set our target SDK to the latest build, which is KitKat.</BODY>
+</SAMI>

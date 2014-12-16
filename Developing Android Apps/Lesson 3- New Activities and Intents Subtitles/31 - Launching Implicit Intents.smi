@@ -1,0 +1,78 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=560><P Class=KRCC>
+Hey Dan, we finished the settings. Do you want to check it out?
+<SYNC Start=4140><P Class=KRCC>
+&nbsp;
+<SYNC Start=4141><P Class=KRCC>
+>> Oh, great.
+<SYNC Start=5120><P Class=KRCC>
+&nbsp;
+<SYNC Start=5121><P Class=KRCC>
+>> Wait. What's with all this stuff right here?
+<SYNC Start=7180><P Class=KRCC>
+&nbsp;
+<SYNC Start=7181><P Class=KRCC>
+>> I'm glad you asked. All this stuff will help me demonstrate the
+<SYNC Start=10790><P Class=KRCC>
+&nbsp;
+<SYNC Start=10791><P Class=KRCC>
+power of implicit intents. Leveraging other
+<SYNC Start=13150><P Class=KRCC>
+&nbsp;
+<SYNC Start=13151><P Class=KRCC>
+apps to get functionality for your app
+<SYNC Start=15080><P Class=KRCC>
+&nbsp;
+<SYNC Start=15081><P Class=KRCC>
+for fee. For example, why would you write a bar code scanning app,
+<SYNC Start=20330><P Class=KRCC>
+&nbsp;
+<SYNC Start=20331><P Class=KRCC>
+when you can just launch an intent to do it for you. [SOUND].
+<SYNC Start=23282><P Class=KRCC>
+&nbsp;
+<SYNC Start=23283><P Class=KRCC>
+>> Or a camera app, where you can just launch
+<SYNC Start=25748><P Class=KRCC>
+&nbsp;
+<SYNC Start=25749><P Class=KRCC>
+an intent to fire a photo. [SOUND] And of course, it would make no sense to
+<SYNC Start=29839><P Class=KRCC>
+&nbsp;
+<SYNC Start=29840><P Class=KRCC>
+write a phone app just to dial a phone number, you would just call the intent.
+<SYNC Start=34181><P Class=KRCC>
+&nbsp;
+<SYNC Start=34182><P Class=KRCC>
+>> Wait, I need that.
+<SYNC Start=36124><P Class=KRCC>
+&nbsp;
+<SYNC Start=36125><P Class=KRCC>
+>> In other words, don't reinvent the wheel. Lazy programmers make fewer
+<SYNC Start=40280><P Class=KRCC>
+&nbsp;
+<SYNC Start=40281><P Class=KRCC>
+mistakes. Now, let's go implement an
+<SYNC Start=42620><P Class=KRCC>
+&nbsp;
+<SYNC Start=42621><P Class=KRCC>
+implicit intent. Raydo? Dan's being implicit again.</BODY>
+</SAMI>

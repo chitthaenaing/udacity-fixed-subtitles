@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=410><P Class=KRCC>
+Let's talk about permissions, when each app APK is installed,
+<SYNC Start=4200><P Class=KRCC>
+&nbsp;
+<SYNC Start=4201><P Class=KRCC>
+it's given it's own unique Linux user ID. And each
+<SYNC Start=7290><P Class=KRCC>
+&nbsp;
+<SYNC Start=7291><P Class=KRCC>
+app runs within its instance in the Android Virtual machine.
+<SYNC Start=10175><P Class=KRCC>
+&nbsp;
+<SYNC Start=10176><P Class=KRCC>
+[SOUND] As a result each app is completely sand boxed.
+<SYNC Start=16946><P Class=KRCC>
+&nbsp;
+<SYNC Start=16947><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=19831><P Class=KRCC>
+&nbsp;
+<SYNC Start=19832><P Class=KRCC>
+Its files processes and other resources are inaccessible
+<SYNC Start=23051><P Class=KRCC>
+&nbsp;
+<SYNC Start=23052><P Class=KRCC>
+to other apps. This sandboxing approach is used to
+<SYNC Start=26110><P Class=KRCC>
+&nbsp;
+<SYNC Start=26111><P Class=KRCC>
+ensure that by default no app can access sensitive
+<SYNC Start=29210><P Class=KRCC>
+&nbsp;
+<SYNC Start=29211><P Class=KRCC>
+data or perform actions that could adversely impact other
+<SYNC Start=32250><P Class=KRCC>
+&nbsp;
+<SYNC Start=32251><P Class=KRCC>
+apps, the OS, or users. Things like accessing the
+<SYNC Start=36210><P Class=KRCC>
+&nbsp;
+<SYNC Start=36211><P Class=KRCC>
+internet, getting the user's location, or reading or modifying
+<SYNC Start=39320><P Class=KRCC>
+&nbsp;
+<SYNC Start=39321><P Class=KRCC>
+the contacts database. Rather than asking the user each
+<SYNC Start=42660><P Class=KRCC>
+&nbsp;
+<SYNC Start=42661><P Class=KRCC>
+time an app tries to access something sensitive you
+<SYNC Start=45660><P Class=KRCC>
+&nbsp;
+<SYNC Start=45661><P Class=KRCC>
+declared permissions that your app requires in it's manifest.
+<SYNC Start=48720><P Class=KRCC>
+&nbsp;
+<SYNC Start=48721><P Class=KRCC>
+You can get a list of all of the permission
+<SYNC Start=52130><P Class=KRCC>
+&nbsp;
+<SYNC Start=52131><P Class=KRCC>
+your app may require here at the Android developer site.
+<SYNC Start=56090><P Class=KRCC>
+&nbsp;
+<SYNC Start=56091><P Class=KRCC>
+So, why not just ask for all the permissions and
+<SYNC Start=58390><P Class=KRCC>
+&nbsp;
+<SYNC Start=58391><P Class=KRCC>
+never worry about it again? Well, when users install
+<SYNC Start=61320><P Class=KRCC>
+&nbsp;
+<SYNC Start=61321><P Class=KRCC>
+your app their greeted with this dialogue which lists all
+<SYNC Start=64200><P Class=KRCC>
+&nbsp;
+<SYNC Start=64201><P Class=KRCC>
+of the permissions that you've requested along with the more
+<SYNC Start=66645><P Class=KRCC>
+&nbsp;
+<SYNC Start=66646><P Class=KRCC>
+user-friendly descriptions. Nothing says this app was built by hackers
+<SYNC Start=70770><P Class=KRCC>
+&nbsp;
+<SYNC Start=70771><P Class=KRCC>
+who want to steal my data, rob my house, clear out my
+<SYNC Start=73380><P Class=KRCC>
+&nbsp;
+<SYNC Start=73381><P Class=KRCC>
+bank account, and take and share nude pictures of me like
+<SYNC Start=76560><P Class=KRCC>
+&nbsp;
+<SYNC Start=76561><P Class=KRCC>
+a weather app that wants access to every permission on the
+<SYNC Start=79250><P Class=KRCC>
+&nbsp;
+<SYNC Start=79251><P Class=KRCC>
+device. Best practice is to request the absolute minimum of permissions.
+<SYNC Start=84100><P Class=KRCC>
+&nbsp;
+<SYNC Start=84101><P Class=KRCC>
+Every time you need to request a new permission, take it
+<SYNC Start=86340><P Class=KRCC>
+&nbsp;
+<SYNC Start=86341><P Class=KRCC>
+as a flag to stop and consider if there are other
+<SYNC Start=89390><P Class=KRCC>
+&nbsp;
+<SYNC Start=89391><P Class=KRCC>
+alternatives that might achieve the same goal. For example, using an
+<SYNC Start=92970><P Class=KRCC>
+&nbsp;
+<SYNC Start=92971><P Class=KRCC>
+intent to launch the camera app, rather than accessing the camera, directly.
+<SYNC Start=97140><P Class=KRCC>
+&nbsp;
+<SYNC Start=97141><P Class=KRCC>
+Later, we'll look at ways to share your data with
+<SYNC Start=99550><P Class=KRCC>
+&nbsp;
+<SYNC Start=99551><P Class=KRCC>
+other apps, using intents and content providers to create bridges
+<SYNC Start=103370><P Class=KRCC>
+&nbsp;
+<SYNC Start=103371><P Class=KRCC>
+between these apps sandboxs. You can declare and use those
+<SYNC Start=106630><P Class=KRCC>
+&nbsp;
+<SYNC Start=106631><P Class=KRCC>
+permissions in these instances to
+<SYNC Start=108040><P Class=KRCC>
+&nbsp;
+<SYNC Start=108041><P Class=KRCC>
+similarly restrict access to sensitive information.</BODY>
+</SAMI>

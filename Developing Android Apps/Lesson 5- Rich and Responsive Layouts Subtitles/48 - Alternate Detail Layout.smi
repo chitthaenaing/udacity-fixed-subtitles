@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=130><P Class=KRCC>
+We definitely need to define fragment detail in the
+<SYNC Start=2540><P Class=KRCC>
+&nbsp;
+<SYNC Start=2541><P Class=KRCC>
+base layout folder, then we override it in the
+<SYNC Start=4930><P Class=KRCC>
+&nbsp;
+<SYNC Start=4931><P Class=KRCC>
+layout land folder, so that we can achieve this
+<SYNC Start=7300><P Class=KRCC>
+&nbsp;
+<SYNC Start=7301><P Class=KRCC>
+layout on phone landscape orientation. Tablet landscape view would
+<SYNC Start=11000><P Class=KRCC>
+&nbsp;
+<SYNC Start=11001><P Class=KRCC>
+work fine because of this folder, but then tablet
+<SYNC Start=13200><P Class=KRCC>
+&nbsp;
+<SYNC Start=13201><P Class=KRCC>
+portrait would fall back to this layout so we
+<SYNC Start=15450><P Class=KRCC>
+&nbsp;
+<SYNC Start=15451><P Class=KRCC>
+should just define it in the layout sw600dp folder
+<SYNC Start=18830><P Class=KRCC>
+&nbsp;
+<SYNC Start=18831><P Class=KRCC>
+so that all tablets regardless of orientation use this layout</BODY>
+</SAMI>

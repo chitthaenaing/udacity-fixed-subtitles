@@ -1,0 +1,142 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=400><P Class=KRCC>
+Given some sample data how do we populate a ListView?
+<SYNC Start=3730><P Class=KRCC>
+&nbsp;
+<SYNC Start=3731><P Class=KRCC>
+Let's look at an example of some contact data and how it can be displayed in
+<SYNC Start=7370><P Class=KRCC>
+&nbsp;
+<SYNC Start=7371><P Class=KRCC>
+the list. We start with our raw data of contacts which is three contacts,
+<SYNC Start=12140><P Class=KRCC>
+&nbsp;
+<SYNC Start=12141><P Class=KRCC>
+as well as our profile images. Then we pass this data into the adapter so
+<SYNC Start=16720><P Class=KRCC>
+&nbsp;
+<SYNC Start=16721><P Class=KRCC>
+it has a reference to it. The adapter also knows how to build a list item layout
+<SYNC Start=21730><P Class=KRCC>
+&nbsp;
+<SYNC Start=21731><P Class=KRCC>
+for each of these data items. So, it could go ahead and create the layouts for
+<SYNC Start=26500><P Class=KRCC>
+&nbsp;
+<SYNC Start=26501><P Class=KRCC>
+them. But we don't need to create the views yet until the ListView requests that
+<SYNC Start=31160><P Class=KRCC>
+&nbsp;
+<SYNC Start=31161><P Class=KRCC>
+it needs them. For example, if you had hundreds of contacts here,
+<SYNC Start=35290><P Class=KRCC>
+&nbsp;
+<SYNC Start=35291><P Class=KRCC>
+you wouldn't want hundreds of layouts sitting around that aren't being used.
+<SYNC Start=40740><P Class=KRCC>
+&nbsp;
+<SYNC Start=40741><P Class=KRCC>
+Then when you bind the adapter to the ListView,
+<SYNC Start=42850><P Class=KRCC>
+&nbsp;
+<SYNC Start=42851><P Class=KRCC>
+the ListView will ask how many items are actually in the data set.
+<SYNC Start=46710><P Class=KRCC>
+&nbsp;
+<SYNC Start=46711><P Class=KRCC>
+And the adapter will check in the data set there's three items, so
+<SYNC Start=50520><P Class=KRCC>
+&nbsp;
+<SYNC Start=50521><P Class=KRCC>
+we will return that to the ListView. Now the ListView knows that it will have to
+<SYNC Start=53960><P Class=KRCC>
+&nbsp;
+<SYNC Start=53961><P Class=KRCC>
+populate itself with three list items. Now the ListView starts at position
+<SYNC Start=59395><P Class=KRCC>
+&nbsp;
+<SYNC Start=59396><P Class=KRCC>
+zero and asks for the list item layout located at that position. It goes back to
+<SYNC Start=64170><P Class=KRCC>
+&nbsp;
+<SYNC Start=64171><P Class=KRCC>
+the adapter and the adapter checks that at position zero, we have the contact,
+<SYNC Start=69520><P Class=KRCC>
+&nbsp;
+<SYNC Start=69521><P Class=KRCC>
+Anna. The adapter knows how to create a list item layout from the contact, Anna.
+<SYNC Start=75140><P Class=KRCC>
+&nbsp;
+<SYNC Start=75141><P Class=KRCC>
+So, it goes ahead and does that. And then we return it to the ListView. And now
+<SYNC Start=80360><P Class=KRCC>
+&nbsp;
+<SYNC Start=80361><P Class=KRCC>
+we see that the Anna list item is located at the zeroth position in the list.
+<SYNC Start=84027><P Class=KRCC>
+&nbsp;
+<SYNC Start=84028><P Class=KRCC>
+Next the ListView wants to get the item at position one, so
+<SYNC Start=89270><P Class=KRCC>
+&nbsp;
+<SYNC Start=89271><P Class=KRCC>
+ask for the layout from the adapter. The adapter checks that at position one,
+<SYNC Start=94340><P Class=KRCC>
+&nbsp;
+<SYNC Start=94341><P Class=KRCC>
+we have the contact Bob. The adapter knows how to create a list item layout for
+<SYNC Start=99110><P Class=KRCC>
+&nbsp;
+<SYNC Start=99111><P Class=KRCC>
+Bob so it goes ahead and does that and then it returns it to the ListView. And
+<SYNC Start=103990><P Class=KRCC>
+&nbsp;
+<SYNC Start=103991><P Class=KRCC>
+now we see that the list item for Bob has been successfully added
+<SYNC Start=107660><P Class=KRCC>
+&nbsp;
+<SYNC Start=107661><P Class=KRCC>
+to the ListView at position one. Now, the ListView fetches its
+<SYNC Start=111010><P Class=KRCC>
+&nbsp;
+<SYNC Start=111011><P Class=KRCC>
+last item because it knows that there was three list items to expect.
+<SYNC Start=115740><P Class=KRCC>
+&nbsp;
+<SYNC Start=115741><P Class=KRCC>
+It fetches the last list item layout at position two by asking the adapter.
+<SYNC Start=121280><P Class=KRCC>
+&nbsp;
+<SYNC Start=121281><P Class=KRCC>
+The adapter checks that at position two, we have Charlie, as well as that image.
+<SYNC Start=126890><P Class=KRCC>
+&nbsp;
+<SYNC Start=126891><P Class=KRCC>
+And we know how to make a list item layout for Charlie, so we can go ahead and
+<SYNC Start=130810><P Class=KRCC>
+&nbsp;
+<SYNC Start=130811><P Class=KRCC>
+do that, and return it to the ListView. And now we have the list item for
+<SYNC Start=135010><P Class=KRCC>
+&nbsp;
+<SYNC Start=135011><P Class=KRCC>
+Charlie and position two in the list. And we have our complete list</BODY>
+</SAMI>

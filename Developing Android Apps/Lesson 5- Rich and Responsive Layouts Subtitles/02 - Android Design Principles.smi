@@ -1,0 +1,194 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=760><P Class=KRCC>
+Enchant me. Simplify my life. Make me amazing. They're
+<SYNC Start=5044><P Class=KRCC>
+&nbsp;
+<SYNC Start=5045><P Class=KRCC>
+incredibly one-sided wedding vows, and the three key principles
+<SYNC Start=9530><P Class=KRCC>
+&nbsp;
+<SYNC Start=9531><P Class=KRCC>
+underlying the Android team's creative vision for the platform
+<SYNC Start=12380><P Class=KRCC>
+&nbsp;
+<SYNC Start=12381><P Class=KRCC>
+and the apps that run on it. As engineers,
+<SYNC Start=14840><P Class=KRCC>
+&nbsp;
+<SYNC Start=14841><P Class=KRCC>
+it can sometimes be difficult to see past our
+<SYNC Start=16860><P Class=KRCC>
+&nbsp;
+<SYNC Start=16861><P Class=KRCC>
+own delight at harnessing the power of an sdk
+<SYNC Start=19710><P Class=KRCC>
+&nbsp;
+<SYNC Start=19711><P Class=KRCC>
+to bend a machine to our will, but ultimately,
+<SYNC Start=22960><P Class=KRCC>
+&nbsp;
+<SYNC Start=22961><P Class=KRCC>
+our goal must be to create that same empowering experience
+<SYNC Start=26430><P Class=KRCC>
+&nbsp;
+<SYNC Start=26431><P Class=KRCC>
+for our users. And we do that by creating apps
+<SYNC Start=29660><P Class=KRCC>
+&nbsp;
+<SYNC Start=29661><P Class=KRCC>
+that are as esthetically pleasing as they are functional and
+<SYNC Start=32320><P Class=KRCC>
+&nbsp;
+<SYNC Start=32321><P Class=KRCC>
+easy to use. Users judge the quality of your app
+<SYNC Start=35240><P Class=KRCC>
+&nbsp;
+<SYNC Start=35241><P Class=KRCC>
+within the first 30 seconds. It may not be fair,
+<SYNC Start=38390><P Class=KRCC>
+&nbsp;
+<SYNC Start=38391><P Class=KRCC>
+but a disproportionate amount of that judgement will be based
+<SYNC Start=41480><P Class=KRCC>
+&nbsp;
+<SYNC Start=41481><P Class=KRCC>
+not on the functionality, but on the visual aesthetics. Does
+<SYNC Start=44533><P Class=KRCC>
+&nbsp;
+<SYNC Start=44534><P Class=KRCC>
+it look polished? Does it look professional? How easy is
+<SYNC Start=48330><P Class=KRCC>
+&nbsp;
+<SYNC Start=48331><P Class=KRCC>
+it to use? More than just looking pretty, the entire user
+<SYNC Start=51800><P Class=KRCC>
+&nbsp;
+<SYNC Start=51801><P Class=KRCC>
+experience is critically important. With 30 seconds to
+<SYNC Start=55490><P Class=KRCC>
+&nbsp;
+<SYNC Start=55491><P Class=KRCC>
+win users over, it's critical that that onboarding process
+<SYNC Start=58505><P Class=KRCC>
+&nbsp;
+<SYNC Start=58506><P Class=KRCC>
+the time and effort required to go from downloading
+<SYNC Start=61520><P Class=KRCC>
+&nbsp;
+<SYNC Start=61521><P Class=KRCC>
+your app to performing it's main function should be
+<SYNC Start=64420><P Class=KRCC>
+&nbsp;
+<SYNC Start=64421><P Class=KRCC>
+as short and frictionless as possible. Not only
+<SYNC Start=67800><P Class=KRCC>
+&nbsp;
+<SYNC Start=67801><P Class=KRCC>
+that, but a well designed app should evoke a
+<SYNC Start=70390><P Class=KRCC>
+&nbsp;
+<SYNC Start=70391><P Class=KRCC>
+visceral reaction that speaks to the subconscious. It should
+<SYNC Start=74530><P Class=KRCC>
+&nbsp;
+<SYNC Start=74531><P Class=KRCC>
+be fun to use. It should surprise in delightful
+<SYNC Start=77020><P Class=KRCC>
+&nbsp;
+<SYNC Start=77021><P Class=KRCC>
+ways through subtle animations and smooth transitions that contribute
+<SYNC Start=80590><P Class=KRCC>
+&nbsp;
+<SYNC Start=80591><P Class=KRCC>
+to a feeling of power and effortlessness. It should
+<SYNC Start=83890><P Class=KRCC>
+&nbsp;
+<SYNC Start=83891><P Class=KRCC>
+let users touch and interact with objects directly rather
+<SYNC Start=87000><P Class=KRCC>
+&nbsp;
+<SYNC Start=87001><P Class=KRCC>
+than having to use buttons and menus. And it should
+<SYNC Start=89490><P Class=KRCC>
+&nbsp;
+<SYNC Start=89491><P Class=KRCC>
+use rich imagery and pictures in place of lots
+<SYNC Start=91660><P Class=KRCC>
+&nbsp;
+<SYNC Start=91661><P Class=KRCC>
+of words and long sentences. It allows users to
+<SYNC Start=94370><P Class=KRCC>
+&nbsp;
+<SYNC Start=94371><P Class=KRCC>
+customize your app, to make it theirs while providing
+<SYNC Start=97440><P Class=KRCC>
+&nbsp;
+<SYNC Start=97441><P Class=KRCC>
+beautiful and sensible defaults. Create something that works like magic,
+<SYNC Start=101805><P Class=KRCC>
+&nbsp;
+<SYNC Start=101806><P Class=KRCC>
+learning your preference in the context provided by
+<SYNC Start=104430><P Class=KRCC>
+&nbsp;
+<SYNC Start=104431><P Class=KRCC>
+the device so it never asks users for information
+<SYNC Start=107260><P Class=KRCC>
+&nbsp;
+<SYNC Start=107261><P Class=KRCC>
+that they've already provided. Provide simple shortcuts to complete
+<SYNC Start=111300><P Class=KRCC>
+&nbsp;
+<SYNC Start=111301><P Class=KRCC>
+complex tasks, and remember data settings and customizations making
+<SYNC Start=115460><P Class=KRCC>
+&nbsp;
+<SYNC Start=115461><P Class=KRCC>
+them available across every device. While it's good practice
+<SYNC Start=118750><P Class=KRCC>
+&nbsp;
+<SYNC Start=118751><P Class=KRCC>
+to create a familiar and welcoming experience by creating
+<SYNC Start=121320><P Class=KRCC>
+&nbsp;
+<SYNC Start=121321><P Class=KRCC>
+a look and feel that's consistent with the platforms
+<SYNC Start=123630><P Class=KRCC>
+&nbsp;
+<SYNC Start=123631><P Class=KRCC>
+styles and themes, it's just as important to remember
+<SYNC Start=126810><P Class=KRCC>
+&nbsp;
+<SYNC Start=126811><P Class=KRCC>
+that this, and all the other principles I've discussed
+<SYNC Start=129710><P Class=KRCC>
+&nbsp;
+<SYNC Start=129711><P Class=KRCC>
+here, are really just a starting point for your
+<SYNC Start=132270><P Class=KRCC>
+&nbsp;
+<SYNC Start=132271><P Class=KRCC>
+own creative vision. Deviation from the guidelines is encouraged,
+<SYNC Start=136190><P Class=KRCC>
+&nbsp;
+<SYNC Start=136191><P Class=KRCC>
+but when you do do so, deviate with purpose.</BODY>
+</SAMI>

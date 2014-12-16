@@ -1,0 +1,134 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=140><P Class=KRCC>
+Remember back in lesson two when Katherine used a
+<SYNC Start=3840><P Class=KRCC>
+&nbsp;
+<SYNC Start=3841><P Class=KRCC>
+AsyncTask hooked up to a refresh button to update
+<SYNC Start=7030><P Class=KRCC>
+&nbsp;
+<SYNC Start=7031><P Class=KRCC>
+our data? Rato talked about how that was a
+<SYNC Start=9310><P Class=KRCC>
+&nbsp;
+<SYNC Start=9311><P Class=KRCC>
+bad idea, because the AsyncTask is not tied to
+<SYNC Start=13290><P Class=KRCC>
+&nbsp;
+<SYNC Start=13291><P Class=KRCC>
+the activity life cycle. The virtual machine will hold
+<SYNC Start=16610><P Class=KRCC>
+&nbsp;
+<SYNC Start=16611><P Class=KRCC>
+on to the activity object as long as the
+<SYNC Start=18960><P Class=KRCC>
+&nbsp;
+<SYNC Start=18961><P Class=KRCC>
+AsyncTask is running, even after Android has called onDestroy
+<SYNC Start=23190><P Class=KRCC>
+&nbsp;
+<SYNC Start=23191><P Class=KRCC>
+for the activity and expect it to be discarded.
+<SYNC Start=26130><P Class=KRCC>
+&nbsp;
+<SYNC Start=26131><P Class=KRCC>
+If you rotate your phone, the behavior is to
+<SYNC Start=28380><P Class=KRCC>
+&nbsp;
+<SYNC Start=28381><P Class=KRCC>
+destroy your activity and instantiate a new one. The
+<SYNC Start=31810><P Class=KRCC>
+&nbsp;
+<SYNC Start=31811><P Class=KRCC>
+naive AsyncTask implementation now has two threads trying to
+<SYNC Start=35400><P Class=KRCC>
+&nbsp;
+<SYNC Start=35401><P Class=KRCC>
+perform the same update, and so forth. The point is,
+<SYNC Start=39290><P Class=KRCC>
+&nbsp;
+<SYNC Start=39291><P Class=KRCC>
+it's not the best pattern for a potentially very
+<SYNC Start=41910><P Class=KRCC>
+&nbsp;
+<SYNC Start=41911><P Class=KRCC>
+long background operation, such as fetching from web services. If
+<SYNC Start=45680><P Class=KRCC>
+&nbsp;
+<SYNC Start=45681><P Class=KRCC>
+you leave the app, the asynctask will continue to
+<SYNC Start=48410><P Class=KRCC>
+&nbsp;
+<SYNC Start=48411><P Class=KRCC>
+run for as long as your process is kept alive,
+<SYNC Start=51340><P Class=KRCC>
+&nbsp;
+<SYNC Start=51341><P Class=KRCC>
+but will run at a low priority, and your process
+<SYNC Start=53750><P Class=KRCC>
+&nbsp;
+<SYNC Start=53751><P Class=KRCC>
+will be the first thing to be killed if the device
+<SYNC Start=55900><P Class=KRCC>
+&nbsp;
+<SYNC Start=55901><P Class=KRCC>
+needs more resources. And there's a bigger problem. Your app
+<SYNC Start=59760><P Class=KRCC>
+&nbsp;
+<SYNC Start=59761><P Class=KRCC>
+has to be visible and running in the foreground to instantiate
+<SYNC Start=62660><P Class=KRCC>
+&nbsp;
+<SYNC Start=62661><P Class=KRCC>
+the task in the first place. Because we started a
+<SYNC Start=65590><P Class=KRCC>
+&nbsp;
+<SYNC Start=65591><P Class=KRCC>
+task, to update the weather when we started the app, this
+<SYNC Start=69000><P Class=KRCC>
+&nbsp;
+<SYNC Start=69001><P Class=KRCC>
+can have undesirable behavior if the weather changes rapidly. So
+<SYNC Start=73070><P Class=KRCC>
+&nbsp;
+<SYNC Start=73071><P Class=KRCC>
+now we're going to learn the right way to perform updates.
+<SYNC Start=76110><P Class=KRCC>
+&nbsp;
+<SYNC Start=76111><P Class=KRCC>
+We'll want to automate the process while the app is in
+<SYNC Start=78700><P Class=KRCC>
+&nbsp;
+<SYNC Start=78701><P Class=KRCC>
+the foreground. But even more importantly, we want the app to get
+<SYNC Start=82690><P Class=KRCC>
+&nbsp;
+<SYNC Start=82691><P Class=KRCC>
+regular updates in the background with minimal battery drain. That will
+<SYNC Start=86690><P Class=KRCC>
+&nbsp;
+<SYNC Start=86691><P Class=KRCC>
+be especially important later in this
+<SYNC Start=88660><P Class=KRCC>
+&nbsp;
+<SYNC Start=88661><P Class=KRCC>
+lesson when we introduce weather notifications.</BODY>
+</SAMI>

@@ -1,0 +1,66 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+Our database will contain weather forecast entries. Out data model will use
+<SYNC Start=4800><P Class=KRCC>
+&nbsp;
+<SYNC Start=4801><P Class=KRCC>
+two tables. One table will be used to contain information about the location,
+<SYNC Start=9520><P Class=KRCC>
+&nbsp;
+<SYNC Start=9521><P Class=KRCC>
+while the other will contain the forecast data keyed the locations.
+<SYNC Start=13480><P Class=KRCC>
+&nbsp;
+<SYNC Start=13481><P Class=KRCC>
+These will ultimately be tied back to our view through the contract, and
+<SYNC Start=17730><P Class=KRCC>
+&nbsp;
+<SYNC Start=17731><P Class=KRCC>
+the content provider. We can use an inner join, pull the complete data for
+<SYNC Start=21890><P Class=KRCC>
+&nbsp;
+<SYNC Start=21891><P Class=KRCC>
+each forecast today. Including all information about the location. This,
+<SYNC Start=27630><P Class=KRCC>
+&nbsp;
+<SYNC Start=27631><P Class=KRCC>
+is a big contract. Note that we store the location id, which will be a foreign
+<SYNC Start=33230><P Class=KRCC>
+&nbsp;
+<SYNC Start=33231><P Class=KRCC>
+key from the location table in COLUMN_LOC_KEY. Note that the units aren't stored
+<SYNC Start=39140><P Class=KRCC>
+&nbsp;
+<SYNC Start=39141><P Class=KRCC>
+in the database. We expect all weather entries to be stored in metric units, and
+<SYNC Start=43440><P Class=KRCC>
+&nbsp;
+<SYNC Start=43441><P Class=KRCC>
+converted when needed by the UI, into imperial units. Since the column names
+<SYNC Start=48330><P Class=KRCC>
+&nbsp;
+<SYNC Start=48331><P Class=KRCC>
+don't actually contain data types, it's useful to annotate that in
+<SYNC Start=52260><P Class=KRCC>
+&nbsp;
+<SYNC Start=52261><P Class=KRCC>
+the variable names and/or the comments to make our contract more explicit.</BODY>
+</SAMI>

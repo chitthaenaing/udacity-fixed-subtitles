@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=290><P Class=KRCC>
+Alright, you're done. Let's start by adding all of
+<SYNC Start=3010><P Class=KRCC>
+&nbsp;
+<SYNC Start=3011><P Class=KRCC>
+the strings we're going to need for our new preference.
+<SYNC Start=6130><P Class=KRCC>
+&nbsp;
+<SYNC Start=6131><P Class=KRCC>
+Key, label, and something like true, false, and default.
+<SYNC Start=10278><P Class=KRCC>
+&nbsp;
+<SYNC Start=10279><P Class=KRCC>
+Then we'll additional preference into pref general xnl, a check
+<SYNC Start=14010><P Class=KRCC>
+&nbsp;
+<SYNC Start=14011><P Class=KRCC>
+box preference that uses those strings we just defined.
+<SYNC Start=17560><P Class=KRCC>
+&nbsp;
+<SYNC Start=17561><P Class=KRCC>
+Let's go over to our sync adaptor. In the notify
+<SYNC Start=20730><P Class=KRCC>
+&nbsp;
+<SYNC Start=20731><P Class=KRCC>
+function, we add the code to fetch the preference
+<SYNC Start=22820><P Class=KRCC>
+&nbsp;
+<SYNC Start=22821><P Class=KRCC>
+and make use of it. And there we have it.
+<SYNC Start=25480><P Class=KRCC>
+&nbsp;
+<SYNC Start=25481><P Class=KRCC>
+Now we won't display notifications if the user doesn't want us
+<SYNC Start=28560><P Class=KRCC>
+&nbsp;
+<SYNC Start=28561><P Class=KRCC>
+to, which is a great thing for an app to do.</BODY>
+</SAMI>

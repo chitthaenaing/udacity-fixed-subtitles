@@ -1,0 +1,310 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+Back in lesson four, we learned that the
+<SYNC Start=2050><P Class=KRCC>
+&nbsp;
+<SYNC Start=2051><P Class=KRCC>
+Android Runtime will kill apps with no visible activities,
+<SYNC Start=4990><P Class=KRCC>
+&nbsp;
+<SYNC Start=4991><P Class=KRCC>
+in order to free resources needed by the foreground
+<SYNC Start=7300><P Class=KRCC>
+&nbsp;
+<SYNC Start=7301><P Class=KRCC>
+app. But what if your app has tasks that
+<SYNC Start=10110><P Class=KRCC>
+&nbsp;
+<SYNC Start=10111><P Class=KRCC>
+need to continue when the activity isn't visible, things
+<SYNC Start=12820><P Class=KRCC>
+&nbsp;
+<SYNC Start=12821><P Class=KRCC>
+like downloading files, uploading photos, or playing music? Well,
+<SYNC Start=17150><P Class=KRCC>
+&nbsp;
+<SYNC Start=17151><P Class=KRCC>
+there's an application component for that. Services. We've already
+<SYNC Start=21357><P Class=KRCC>
+&nbsp;
+<SYNC Start=21358><P Class=KRCC>
+introduced Activities, Content Providers,
+<SYNC Start=23224><P Class=KRCC>
+&nbsp;
+<SYNC Start=23225><P Class=KRCC>
+Broadcast Receivers and Intents. Services,
+<SYNC Start=25230><P Class=KRCC>
+&nbsp;
+<SYNC Start=25231><P Class=KRCC>
+are the final piece to the Android app component
+<SYNC Start=29500><P Class=KRCC>
+&nbsp;
+<SYNC Start=29501><P Class=KRCC>
+puzzle. You start services much like you do activities, by
+<SYNC Start=33369><P Class=KRCC>
+&nbsp;
+<SYNC Start=33370><P Class=KRCC>
+passing in an intent to a Start Service call.
+<SYNC Start=36880><P Class=KRCC>
+&nbsp;
+<SYNC Start=36881><P Class=KRCC>
+And you can stop services the same way, by calling
+<SYNC Start=39212><P Class=KRCC>
+&nbsp;
+<SYNC Start=39213><P Class=KRCC>
+Stop Service and passing in the name of the
+<SYNC Start=40930><P Class=KRCC>
+&nbsp;
+<SYNC Start=40931><P Class=KRCC>
+service you want to stop. Unlike activities, services have no
+<SYNC Start=44770><P Class=KRCC>
+&nbsp;
+<SYNC Start=44771><P Class=KRCC>
+user interface and they run at a higher priority than
+<SYNC Start=47777><P Class=KRCC>
+&nbsp;
+<SYNC Start=47778><P Class=KRCC>
+background activities. This means that an app with a running
+<SYNC Start=50490><P Class=KRCC>
+&nbsp;
+<SYNC Start=50491><P Class=KRCC>
+service is less likely to be killed by the run
+<SYNC Start=52690><P Class=KRCC>
+&nbsp;
+<SYNC Start=52691><P Class=KRCC>
+time, in order to free resources for the foreground activities.
+<SYNC Start=55620><P Class=KRCC>
+&nbsp;
+<SYNC Start=55621><P Class=KRCC>
+In fact, by default, the system will attempt to restart
+<SYNC Start=58350><P Class=KRCC>
+&nbsp;
+<SYNC Start=58351><P Class=KRCC>
+services that are terminated before they are stopped from within
+<SYNC Start=61180><P Class=KRCC>
+&nbsp;
+<SYNC Start=61181><P Class=KRCC>
+the app. This is reflected in this simplified life cycle.
+<SYNC Start=65129><P Class=KRCC>
+&nbsp;
+<SYNC Start=65130><P Class=KRCC>
+Compared to Activities, Services are designed to execute longer running
+<SYNC Start=69050><P Class=KRCC>
+&nbsp;
+<SYNC Start=69051><P Class=KRCC>
+tasks that shouldn't be interrupted. Typically, you'll only need to
+<SYNC Start=72340><P Class=KRCC>
+&nbsp;
+<SYNC Start=72341><P Class=KRCC>
+override the onStartCommad handler, which is where you begin the background
+<SYNC Start=75900><P Class=KRCC>
+&nbsp;
+<SYNC Start=75901><P Class=KRCC>
+task you wish to execute. But notice that there are
+<SYNC Start=78860><P Class=KRCC>
+&nbsp;
+<SYNC Start=78861><P Class=KRCC>
+no handlers for monitoring changes in state, to reflect the
+<SYNC Start=81880><P Class=KRCC>
+&nbsp;
+<SYNC Start=81881><P Class=KRCC>
+app moving to the background. This is because the running
+<SYNC Start=84600><P Class=KRCC>
+&nbsp;
+<SYNC Start=84601><P Class=KRCC>
+service itself sends a signal to the framework that the
+<SYNC Start=87250><P Class=KRCC>
+&nbsp;
+<SYNC Start=87251><P Class=KRCC>
+containing app should be considered higher priority than other apps
+<SYNC Start=90930><P Class=KRCC>
+&nbsp;
+<SYNC Start=90931><P Class=KRCC>
+in the background that don't have running services. In some
+<SYNC Start=94180><P Class=KRCC>
+&nbsp;
+<SYNC Start=94181><P Class=KRCC>
+cases your service may performing a task, that while not
+<SYNC Start=97150><P Class=KRCC>
+&nbsp;
+<SYNC Start=97151><P Class=KRCC>
+having UI, can't be interrupted without interfering with the user experience.
+<SYNC Start=101450><P Class=KRCC>
+&nbsp;
+<SYNC Start=101451><P Class=KRCC>
+For example, playing music or helping with in car
+<SYNC Start=103980><P Class=KRCC>
+&nbsp;
+<SYNC Start=103981><P Class=KRCC>
+navigation. In these cases, you can indicate that your
+<SYNC Start=107720><P Class=KRCC>
+&nbsp;
+<SYNC Start=107721><P Class=KRCC>
+server should be considered to be running in the
+<SYNC Start=109410><P Class=KRCC>
+&nbsp;
+<SYNC Start=109411><P Class=KRCC>
+foreground by calling startForeground. You'll notice that this call takes
+<SYNC Start=114530><P Class=KRCC>
+&nbsp;
+<SYNC Start=114531><P Class=KRCC>
+in a notification. This will be displayed, and can't
+<SYNC Start=117330><P Class=KRCC>
+&nbsp;
+<SYNC Start=117331><P Class=KRCC>
+be dismissed until the service has stopped, or you
+<SYNC Start=119850><P Class=KRCC>
+&nbsp;
+<SYNC Start=119851><P Class=KRCC>
+call stopForeground. You'll learn more about notifications a little
+<SYNC Start=123680><P Class=KRCC>
+&nbsp;
+<SYNC Start=123681><P Class=KRCC>
+later, with Dan. But for now, note that a foreground
+<SYNC Start=126600><P Class=KRCC>
+&nbsp;
+<SYNC Start=126601><P Class=KRCC>
+service runs at the same priority as a foreground
+<SYNC Start=130440><P Class=KRCC>
+&nbsp;
+<SYNC Start=130441><P Class=KRCC>
+activity. Making it nearly impossible for the run time
+<SYNC Start=133330><P Class=KRCC>
+&nbsp;
+<SYNC Start=133331><P Class=KRCC>
+to kill in order to free resources. Now, you
+<SYNC Start=135800><P Class=KRCC>
+&nbsp;
+<SYNC Start=135801><P Class=KRCC>
+may be thinking to yourself, I could save a lot
+<SYNC Start=138460><P Class=KRCC>
+&nbsp;
+<SYNC Start=138461><P Class=KRCC>
+of trouble dealing with life cycles, just by creating
+<SYNC Start=141020><P Class=KRCC>
+&nbsp;
+<SYNC Start=141021><P Class=KRCC>
+long running, or even foreground services. Well, I grew up
+<SYNC Start=144830><P Class=KRCC>
+&nbsp;
+<SYNC Start=144831><P Class=KRCC>
+along the coast in Australia, so I learned young
+<SYNC Start=147260><P Class=KRCC>
+&nbsp;
+<SYNC Start=147261><P Class=KRCC>
+that swimming against the current is exhausting and ultimately futile.
+<SYNC Start=152160><P Class=KRCC>
+&nbsp;
+<SYNC Start=152161><P Class=KRCC>
+In this case, that means making it more difficult
+<SYNC Start=154310><P Class=KRCC>
+&nbsp;
+<SYNC Start=154311><P Class=KRCC>
+for the system to manage resources, ultimately leading to a
+<SYNC Start=157060><P Class=KRCC>
+&nbsp;
+<SYNC Start=157061><P Class=KRCC>
+worse user experience. Swim with the current. Use foreground
+<SYNC Start=160780><P Class=KRCC>
+&nbsp;
+<SYNC Start=160781><P Class=KRCC>
+services only when and for as long as absolutely necessary,
+<SYNC Start=165500><P Class=KRCC>
+&nbsp;
+<SYNC Start=165501><P Class=KRCC>
+and stop all services as quickly as possible. It's
+<SYNC Start=169020><P Class=KRCC>
+&nbsp;
+<SYNC Start=169021><P Class=KRCC>
+also important to note that like activities and receivers, services
+<SYNC Start=172520><P Class=KRCC>
+&nbsp;
+<SYNC Start=172521><P Class=KRCC>
+run on the main thread. So you'll need to
+<SYNC Start=174490><P Class=KRCC>
+&nbsp;
+<SYNC Start=174491><P Class=KRCC>
+use a background thread or a think task to execute
+<SYNC Start=177620><P Class=KRCC>
+&nbsp;
+<SYNC Start=177621><P Class=KRCC>
+the long running tasks you wish to do
+<SYNC Start=179190><P Class=KRCC>
+&nbsp;
+<SYNC Start=179191><P Class=KRCC>
+within your service. To make life easier, you can
+<SYNC Start=182410><P Class=KRCC>
+&nbsp;
+<SYNC Start=182411><P Class=KRCC>
+use the intent service class. Which implements the most
+<SYNC Start=185300><P Class=KRCC>
+&nbsp;
+<SYNC Start=185301><P Class=KRCC>
+common best practice pattern, for using intents, which are
+<SYNC Start=187920><P Class=KRCC>
+&nbsp;
+<SYNC Start=187921><P Class=KRCC>
+executed within a service. It creates a queue of
+<SYNC Start=190640><P Class=KRCC>
+&nbsp;
+<SYNC Start=190641><P Class=KRCC>
+incoming intents, passed in when start service is called.
+<SYNC Start=194630><P Class=KRCC>
+&nbsp;
+<SYNC Start=194631><P Class=KRCC>
+These are then, processed sequentially on a background thread,
+<SYNC Start=197970><P Class=KRCC>
+&nbsp;
+<SYNC Start=197971><P Class=KRCC>
+within the onHandleIntent handler, within your intent service implementation.
+<SYNC Start=202970><P Class=KRCC>
+&nbsp;
+<SYNC Start=202971><P Class=KRCC>
+When the queue is empty the service self terminates
+<SYNC Start=205840><P Class=KRCC>
+&nbsp;
+<SYNC Start=205841><P Class=KRCC>
+until a new intent is received and the process begins
+<SYNC Start=208650><P Class=KRCC>
+&nbsp;
+<SYNC Start=208651><P Class=KRCC>
+again. Services are a powerful tool and it's important
+<SYNC Start=211640><P Class=KRCC>
+&nbsp;
+<SYNC Start=211641><P Class=KRCC>
+to understand how you can use them but in practice
+<SYNC Start=214980><P Class=KRCC>
+&nbsp;
+<SYNC Start=214981><P Class=KRCC>
+there's often a framework alternative to rolling your own
+<SYNC Start=217290><P Class=KRCC>
+&nbsp;
+<SYNC Start=217291><P Class=KRCC>
+service implementation. Whether that be an intent service for executing
+<SYNC Start=220770><P Class=KRCC>
+&nbsp;
+<SYNC Start=220771><P Class=KRCC>
+background tasks or the sync adapter which you'll learn about
+<SYNC Start=223810><P Class=KRCC>
+&nbsp;
+<SYNC Start=223811><P Class=KRCC>
+later in this lesson. Perfect for performing background data synchronization</BODY>
+</SAMI>

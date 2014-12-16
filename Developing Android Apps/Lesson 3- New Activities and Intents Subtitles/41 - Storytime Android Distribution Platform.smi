@@ -1,0 +1,214 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1><P Class=KRCC>
+50. That's how many apps were available in
+<SYNC Start=3320><P Class=KRCC>
+&nbsp;
+<SYNC Start=3321><P Class=KRCC>
+Android Market as Google Play was named when
+<SYNC Start=5680><P Class=KRCC>
+&nbsp;
+<SYNC Start=5681><P Class=KRCC>
+it first launched alongside the first Android device
+<SYNC Start=8750><P Class=KRCC>
+&nbsp;
+<SYNC Start=8751><P Class=KRCC>
+in 2008. A few days later, Android Market
+<SYNC Start=11800><P Class=KRCC>
+&nbsp;
+<SYNC Start=11801><P Class=KRCC>
+opened for all app developers to register and
+<SYNC Start=14200><P Class=KRCC>
+&nbsp;
+<SYNC Start=14201><P Class=KRCC>
+start publishing their apps without any review or
+<SYNC Start=17150><P Class=KRCC>
+&nbsp;
+<SYNC Start=17151><P Class=KRCC>
+validation requirements from Google, OEMs, or carriers. For
+<SYNC Start=21910><P Class=KRCC>
+&nbsp;
+<SYNC Start=21911><P Class=KRCC>
+us as developers, the ability to distribute apps and
+<SYNC Start=25065><P Class=KRCC>
+&nbsp;
+<SYNC Start=25066><P Class=KRCC>
+the possibility of monetizing them through up front payments
+<SYNC Start=28300><P Class=KRCC>
+&nbsp;
+<SYNC Start=28301><P Class=KRCC>
+in app billing and advertising directly to the owners of
+<SYNC Start=31320><P Class=KRCC>
+&nbsp;
+<SYNC Start=31321><P Class=KRCC>
+over a billion android devices is one of the
+<SYNC Start=33920><P Class=KRCC>
+&nbsp;
+<SYNC Start=33921><P Class=KRCC>
+most exciting opportunities made possible by the android ecosystem. Growing
+<SYNC Start=38860><P Class=KRCC>
+&nbsp;
+<SYNC Start=38861><P Class=KRCC>
+up the dark days before smartphones and the internet,
+<SYNC Start=41830><P Class=KRCC>
+&nbsp;
+<SYNC Start=41831><P Class=KRCC>
+if I wanted a new game or app I had
+<SYNC Start=43770><P Class=KRCC>
+&nbsp;
+<SYNC Start=43771><P Class=KRCC>
+to go to a physical store and pay for a
+<SYNC Start=45860><P Class=KRCC>
+&nbsp;
+<SYNC Start=45861><P Class=KRCC>
+cardboard box filled with floppy disks or CDROMs. As developers
+<SYNC Start=50650><P Class=KRCC>
+&nbsp;
+<SYNC Start=50651><P Class=KRCC>
+a big part of our business plan back then
+<SYNC Start=52680><P Class=KRCC>
+&nbsp;
+<SYNC Start=52681><P Class=KRCC>
+was how to get those boxes of our software onto
+<SYNC Start=55830><P Class=KRCC>
+&nbsp;
+<SYNC Start=55831><P Class=KRCC>
+those shelves. Or in the world of mobile, how
+<SYNC Start=58900><P Class=KRCC>
+&nbsp;
+<SYNC Start=58901><P Class=KRCC>
+to secure a carrier or OEM deal to get our
+<SYNC Start=61350><P Class=KRCC>
+&nbsp;
+<SYNC Start=61351><P Class=KRCC>
+apps preloaded onto the devices. Today I can install
+<SYNC Start=65500><P Class=KRCC>
+&nbsp;
+<SYNC Start=65501><P Class=KRCC>
+over a million apps of games created by tens if
+<SYNC Start=67992><P Class=KRCC>
+&nbsp;
+<SYNC Start=67993><P Class=KRCC>
+not hundreds and thousands of developers via Google Play, all
+<SYNC Start=72400><P Class=KRCC>
+&nbsp;
+<SYNC Start=72401><P Class=KRCC>
+with a click of a button. That's translated into tens
+<SYNC Start=76010><P Class=KRCC>
+&nbsp;
+<SYNC Start=76011><P Class=KRCC>
+of billions of app installs. An incredible opportunity to
+<SYNC Start=79070><P Class=KRCC>
+&nbsp;
+<SYNC Start=79071><P Class=KRCC>
+distribute apps to Android users in hundreds of countries.
+<SYNC Start=83000><P Class=KRCC>
+&nbsp;
+<SYNC Start=83001><P Class=KRCC>
+Now, in the early days of Android, being fast
+<SYNC Start=85650><P Class=KRCC>
+&nbsp;
+<SYNC Start=85651><P Class=KRCC>
+and launching first was a pretty solid strategy for success,
+<SYNC Start=88840><P Class=KRCC>
+&nbsp;
+<SYNC Start=88841><P Class=KRCC>
+but as those first 50 apps quickly grew to
+<SYNC Start=91910><P Class=KRCC>
+&nbsp;
+<SYNC Start=91911><P Class=KRCC>
+hundreds, thousands, and now over a million apps, it takes
+<SYNC Start=95300><P Class=KRCC>
+&nbsp;
+<SYNC Start=95301><P Class=KRCC>
+a lot more than speed to stand out in
+<SYNC Start=97710><P Class=KRCC>
+&nbsp;
+<SYNC Start=97711><P Class=KRCC>
+the crowd. These days the tables stakes are a base
+<SYNC Start=101320><P Class=KRCC>
+&nbsp;
+<SYNC Start=101321><P Class=KRCC>
+line of quality and willingness to create great experiences
+<SYNC Start=104830><P Class=KRCC>
+&nbsp;
+<SYNC Start=104831><P Class=KRCC>
+for all your users. Of course app quality can
+<SYNC Start=108500><P Class=KRCC>
+&nbsp;
+<SYNC Start=108501><P Class=KRCC>
+be somewhat subjective, but over the years we've identified
+<SYNC Start=112360><P Class=KRCC>
+&nbsp;
+<SYNC Start=112361><P Class=KRCC>
+the core criteria that users identify with apps of
+<SYNC Start=115200><P Class=KRCC>
+&nbsp;
+<SYNC Start=115201><P Class=KRCC>
+high quality. And to make your life easier, they're
+<SYNC Start=118130><P Class=KRCC>
+&nbsp;
+<SYNC Start=118131><P Class=KRCC>
+all available on the Android developer site for you
+<SYNC Start=120940><P Class=KRCC>
+&nbsp;
+<SYNC Start=120941><P Class=KRCC>
+to review. This is the same checklist that the
+<SYNC Start=123440><P Class=KRCC>
+&nbsp;
+<SYNC Start=123441><P Class=KRCC>
+merchandising team for Google Play used to ensure only apps
+<SYNC Start=126590><P Class=KRCC>
+&nbsp;
+<SYNC Start=126591><P Class=KRCC>
+of quality are featured in their promotions and
+<SYNC Start=129130><P Class=KRCC>
+&nbsp;
+<SYNC Start=129131><P Class=KRCC>
+editor's choice categories. And they include everything, from following
+<SYNC Start=132800><P Class=KRCC>
+&nbsp;
+<SYNC Start=132801><P Class=KRCC>
+the app design guidelines to supporting different screen orientations,
+<SYNC Start=136130><P Class=KRCC>
+&nbsp;
+<SYNC Start=136131><P Class=KRCC>
+tablets, and other devices. And of course ensuring that
+<SYNC Start=139410><P Class=KRCC>
+&nbsp;
+<SYNC Start=139411><P Class=KRCC>
+your app is stable and performant. So, with over
+<SYNC Start=142860><P Class=KRCC>
+&nbsp;
+<SYNC Start=142861><P Class=KRCC>
+a million apps already available in Google Play it's
+<SYNC Start=145780><P Class=KRCC>
+&nbsp;
+<SYNC Start=145781><P Class=KRCC>
+no longer just a numbers game. We don't need
+<SYNC Start=148680><P Class=KRCC>
+&nbsp;
+<SYNC Start=148681><P Class=KRCC>
+just more apps or games, or even more developers.
+<SYNC Start=152570><P Class=KRCC>
+&nbsp;
+<SYNC Start=152571><P Class=KRCC>
+What we want is high quality apps from great developers, like you.</BODY>
+</SAMI>

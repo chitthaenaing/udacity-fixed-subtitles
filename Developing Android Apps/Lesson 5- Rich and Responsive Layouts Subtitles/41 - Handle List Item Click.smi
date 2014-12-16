@@ -1,0 +1,222 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=70><P Class=KRCC>
+Once the two panes are showing up on a tablet, let's
+<SYNC Start=2270><P Class=KRCC>
+&nbsp;
+<SYNC Start=2271><P Class=KRCC>
+modify our code to handle the list item click. On the phone,
+<SYNC Start=5390><P Class=KRCC>
+&nbsp;
+<SYNC Start=5391><P Class=KRCC>
+if an item is clicked in the forecast fragment, then we
+<SYNC Start=8050><P Class=KRCC>
+&nbsp;
+<SYNC Start=8051><P Class=KRCC>
+must launch the detail activity. On the tablet UI, once an item
+<SYNC Start=11430><P Class=KRCC>
+&nbsp;
+<SYNC Start=11431><P Class=KRCC>
+in the forecast fragment is clicked, we notify the main activity,
+<SYNC Start=14720><P Class=KRCC>
+&nbsp;
+<SYNC Start=14721><P Class=KRCC>
+which goes and replaces the detail fragment. The reason the two fragments
+<SYNC Start=18360><P Class=KRCC>
+&nbsp;
+<SYNC Start=18361><P Class=KRCC>
+don't talk to each other is because we want to maintain abstraction from
+<SYNC Start=21730><P Class=KRCC>
+&nbsp;
+<SYNC Start=21731><P Class=KRCC>
+each other. If the forecast list fragment started assuming that the detail
+<SYNC Start=25100><P Class=KRCC>
+&nbsp;
+<SYNC Start=25101><P Class=KRCC>
+fragment was always right next to it, then the assumption would break.
+<SYNC Start=28360><P Class=KRCC>
+&nbsp;
+<SYNC Start=28361><P Class=KRCC>
+For example, on the phone where the detail fragment is not inside
+<SYNC Start=31360><P Class=KRCC>
+&nbsp;
+<SYNC Start=31361><P Class=KRCC>
+the main activity. Therefore our fragment must go through its activity and
+<SYNC Start=35170><P Class=KRCC>
+&nbsp;
+<SYNC Start=35171><P Class=KRCC>
+the activity must know how to dispatch the event to the other
+<SYNC Start=37990><P Class=KRCC>
+&nbsp;
+<SYNC Start=37991><P Class=KRCC>
+fragments. Keep in mind that our fragment doesn't always have to be
+<SYNC Start=41000><P Class=KRCC>
+&nbsp;
+<SYNC Start=41001><P Class=KRCC>
+used in the same activity, in order for the forecast fragment to
+<SYNC Start=43860><P Class=KRCC>
+&nbsp;
+<SYNC Start=43861><P Class=KRCC>
+talk to the main activity we should create a callback interface. It's
+<SYNC Start=47280><P Class=KRCC>
+&nbsp;
+<SYNC Start=47281><P Class=KRCC>
+a better assumption to say that the fragment will always be within
+<SYNC Start=50390><P Class=KRCC>
+&nbsp;
+<SYNC Start=50391><P Class=KRCC>
+an activity that implements this callback than to say that
+<SYNC Start=53730><P Class=KRCC>
+&nbsp;
+<SYNC Start=53731><P Class=KRCC>
+the forecast fragment will always be inside the main activity. The
+<SYNC Start=56980><P Class=KRCC>
+&nbsp;
+<SYNC Start=56981><P Class=KRCC>
+detail fragment is a good example of how a fragment can
+<SYNC Start=59660><P Class=KRCC>
+&nbsp;
+<SYNC Start=59661><P Class=KRCC>
+be used in two different activities. The main activity and the
+<SYNC Start=62170><P Class=KRCC>
+&nbsp;
+<SYNC Start=62171><P Class=KRCC>
+detail activity. So don't rely on get activity returning a
+<SYNC Start=65120><P Class=KRCC>
+&nbsp;
+<SYNC Start=65121><P Class=KRCC>
+specific activity class. Using the gist that we provided, use a
+<SYNC Start=68830><P Class=KRCC>
+&nbsp;
+<SYNC Start=68831><P Class=KRCC>
+callback class to notify the activity that a list item has
+<SYNC Start=71750><P Class=KRCC>
+&nbsp;
+<SYNC Start=71751><P Class=KRCC>
+been selected. See the hint below on the item click listener.
+<SYNC Start=75310><P Class=KRCC>
+&nbsp;
+<SYNC Start=75311><P Class=KRCC>
+Then the activity can either launch the detail activity or
+<SYNC Start=78622><P Class=KRCC>
+&nbsp;
+<SYNC Start=78623><P Class=KRCC>
+replace the detail fragment, based on whether it's a phone or
+<SYNC Start=81230><P Class=KRCC>
+&nbsp;
+<SYNC Start=81231><P Class=KRCC>
+tablet. When you work on this task, you'll run into
+<SYNC Start=83460><P Class=KRCC>
+&nbsp;
+<SYNC Start=83461><P Class=KRCC>
+an issue of how to pass the selected date to the
+<SYNC Start=85860><P Class=KRCC>
+&nbsp;
+<SYNC Start=85861><P Class=KRCC>
+detail fragment. Now your instinct might say to create a
+<SYNC Start=89120><P Class=KRCC>
+&nbsp;
+<SYNC Start=89121><P Class=KRCC>
+custom constructor where you can pass in the date. However, we
+<SYNC Start=92910><P Class=KRCC>
+&nbsp;
+<SYNC Start=92911><P Class=KRCC>
+don't normally create custom fragment constructors. If you ever rotate the
+<SYNC Start=97130><P Class=KRCC>
+&nbsp;
+<SYNC Start=97131><P Class=KRCC>
+device, for example, the system can't call your custom fragment constructor
+<SYNC Start=100790><P Class=KRCC>
+&nbsp;
+<SYNC Start=100791><P Class=KRCC>
+with the right parameters, however it can use the
+<SYNC Start=102980><P Class=KRCC>
+&nbsp;
+<SYNC Start=102981><P Class=KRCC>
+empty fragment constructor and initialize it with the same bundle
+<SYNC Start=106270><P Class=KRCC>
+&nbsp;
+<SYNC Start=106271><P Class=KRCC>
+of arguments you used earlier. So to pass information to
+<SYNC Start=108930><P Class=KRCC>
+&nbsp;
+<SYNC Start=108931><P Class=KRCC>
+initialize a fragment, create a bundle of key value pairs,
+<SYNC Start=112950><P Class=KRCC>
+&nbsp;
+<SYNC Start=112951><P Class=KRCC>
+and then set that as the arguments on the
+<SYNC Start=114480><P Class=KRCC>
+&nbsp;
+<SYNC Start=114481><P Class=KRCC>
+fragment. Don't confuse this arguments
+<SYNC Start=117330><P Class=KRCC>
+&nbsp;
+<SYNC Start=117331><P Class=KRCC>
+bundle with the savedInstanceState bundle.
+<SYNC Start=119870><P Class=KRCC>
+&nbsp;
+<SYNC Start=119871><P Class=KRCC>
+Once a fragment has been initialized, you can't change the
+<SYNC Start=122350><P Class=KRCC>
+&nbsp;
+<SYNC Start=122351><P Class=KRCC>
+arguments. You can only read from them, as seen here.
+<SYNC Start=126460><P Class=KRCC>
+&nbsp;
+<SYNC Start=126461><P Class=KRCC>
+On the other hand the saved state bundle is for storing information
+<SYNC Start=129500><P Class=KRCC>
+&nbsp;
+<SYNC Start=129501><P Class=KRCC>
+once a fragment has been running. And you can populate it in
+<SYNC Start=131900><P Class=KRCC>
+&nbsp;
+<SYNC Start=131901><P Class=KRCC>
+the on savedInstanceState method. The bundle
+<SYNC Start=133980><P Class=KRCC>
+&nbsp;
+<SYNC Start=133981><P Class=KRCC>
+can preserve state across orientation changes
+<SYNC Start=136510><P Class=KRCC>
+&nbsp;
+<SYNC Start=136511><P Class=KRCC>
+or if the fragment or activity gets killed by the system. That's why
+<SYNC Start=139270><P Class=KRCC>
+&nbsp;
+<SYNC Start=139271><P Class=KRCC>
+you receive it back again in the onCreate or onCreateView methods. This
+<SYNC Start=142950><P Class=KRCC>
+&nbsp;
+<SYNC Start=142951><P Class=KRCC>
+is what the app should look like when you're done. When you
+<SYNC Start=145030><P Class=KRCC>
+&nbsp;
+<SYNC Start=145031><P Class=KRCC>
+tap on a different date, it updates the detail pane. You can
+<SYNC Start=148170><P Class=KRCC>
+&nbsp;
+<SYNC Start=148171><P Class=KRCC>
+remove any hard coded data because
+<SYNC Start=149970><P Class=KRCC>
+&nbsp;
+<SYNC Start=149971><P Class=KRCC>
+the layout should be populated dynamically now.</BODY>
+</SAMI>

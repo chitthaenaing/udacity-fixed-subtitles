@@ -1,0 +1,286 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+Inside a forecast fragment, we're going to replace the mForecastAdaptor
+<SYNC Start=5600><P Class=KRCC>
+&nbsp;
+<SYNC Start=5601><P Class=KRCC>
+with a simple cursor adaptor that will work with the
+<SYNC Start=7580><P Class=KRCC>
+&nbsp;
+<SYNC Start=7581><P Class=KRCC>
+new database code we just added. This is another one
+<SYNC Start=10350><P Class=KRCC>
+&nbsp;
+<SYNC Start=10351><P Class=KRCC>
+we want to make sure we're using the V4 version.
+<SYNC Start=12860><P Class=KRCC>
+&nbsp;
+<SYNC Start=12861><P Class=KRCC>
+There we are. Make sure to select that in your
+<SYNC Start=15500><P Class=KRCC>
+&nbsp;
+<SYNC Start=15501><P Class=KRCC>
+list. You can see we have a bunch of code
+<SYNC Start=17382><P Class=KRCC>
+&nbsp;
+<SYNC Start=17383><P Class=KRCC>
+that doesn't compile. If it's a Ray adapter, let's switch
+<SYNC Start=21126><P Class=KRCC>
+&nbsp;
+<SYNC Start=21127><P Class=KRCC>
+our Forecast adapter, out with new simple cursor adapter. Now,
+<SYNC Start=26080><P Class=KRCC>
+&nbsp;
+<SYNC Start=26081><P Class=KRCC>
+simple cursor adapter is pretty cool. It allows us
+<SYNC Start=29050><P Class=KRCC>
+&nbsp;
+<SYNC Start=29051><P Class=KRCC>
+to map columns within our database, which are in
+<SYNC Start=31130><P Class=KRCC>
+&nbsp;
+<SYNC Start=31131><P Class=KRCC>
+our weather contract, directly to widgets, that are in
+<SYNC Start=33980><P Class=KRCC>
+&nbsp;
+<SYNC Start=33981><P Class=KRCC>
+our list items. So, all looks pretty good, except that
+<SYNC Start=37080><P Class=KRCC>
+&nbsp;
+<SYNC Start=37081><P Class=KRCC>
+it won't quite compile. Because, this stuff we're doing
+<SYNC Start=41580><P Class=KRCC>
+&nbsp;
+<SYNC Start=41581><P Class=KRCC>
+to start the detail activity isn't going to work.
+<SYNC Start=44010><P Class=KRCC>
+&nbsp;
+<SYNC Start=44011><P Class=KRCC>
+So for now, let's just put this away. We'll
+<SYNC Start=48030><P Class=KRCC>
+&nbsp;
+<SYNC Start=48031><P Class=KRCC>
+get back to that later. We have something that compiles.
+<SYNC Start=51790><P Class=KRCC>
+&nbsp;
+<SYNC Start=51791><P Class=KRCC>
+But we need to do something first. If we
+<SYNC Start=55090><P Class=KRCC>
+&nbsp;
+<SYNC Start=55091><P Class=KRCC>
+ran it now, we would still get nothing. The reason
+<SYNC Start=58130><P Class=KRCC>
+&nbsp;
+<SYNC Start=58131><P Class=KRCC>
+why we would still get nothing is we aren't
+<SYNC Start=59830><P Class=KRCC>
+&nbsp;
+<SYNC Start=59831><P Class=KRCC>
+doing anything in onload finish. In onloader reset we might
+<SYNC Start=63320><P Class=KRCC>
+&nbsp;
+<SYNC Start=63321><P Class=KRCC>
+as well complete this by doing swapCursor with null.
+<SYNC Start=67660><P Class=KRCC>
+&nbsp;
+<SYNC Start=67661><P Class=KRCC>
+Our code should actually do something now. Let's try running
+<SYNC Start=70200><P Class=KRCC>
+&nbsp;
+<SYNC Start=70201><P Class=KRCC>
+it. And it looks terrible. What's in the database doesn't
+<SYNC Start=74840><P Class=KRCC>
+&nbsp;
+<SYNC Start=74841><P Class=KRCC>
+look anything like what's supposed to be on the screen.
+<SYNC Start=76630><P Class=KRCC>
+&nbsp;
+<SYNC Start=77660><P Class=KRCC>
+We need some formatting and settings help. More functions for
+<SYNC Start=80880><P Class=KRCC>
+&nbsp;
+<SYNC Start=80881><P Class=KRCC>
+our utility class. Get preferred location did look a bit
+<SYNC Start=84400><P Class=KRCC>
+&nbsp;
+<SYNC Start=84401><P Class=KRCC>
+lonely there, right? To help us out, we'll add another
+<SYNC Start=87140><P Class=KRCC>
+&nbsp;
+<SYNC Start=87141><P Class=KRCC>
+function to utility that tells us if metric is the current
+<SYNC Start=89590><P Class=KRCC>
+&nbsp;
+<SYNC Start=89591><P Class=KRCC>
+setting. We'll add a simple function to format the temperature,
+<SYNC Start=92930><P Class=KRCC>
+&nbsp;
+<SYNC Start=92931><P Class=KRCC>
+and we'll add a function to format the date. Now,
+<SYNC Start=95590><P Class=KRCC>
+&nbsp;
+<SYNC Start=95591><P Class=KRCC>
+interestingly enough, what kind of date is this? Well, we've
+<SYNC Start=98130><P Class=KRCC>
+&nbsp;
+<SYNC Start=98131><P Class=KRCC>
+got two options, java.util, or java.sql. In this case, we actually
+<SYNC Start=102820><P Class=KRCC>
+&nbsp;
+<SYNC Start=102821><P Class=KRCC>
+want java.util, but we're missing yet another helper function.
+<SYNC Start=106370><P Class=KRCC>
+&nbsp;
+<SYNC Start=106371><P Class=KRCC>
+We'll add a function into weatherContract that converts the db
+<SYNC Start=108760><P Class=KRCC>
+&nbsp;
+<SYNC Start=108761><P Class=KRCC>
+date text into an actual date object, opposite to the
+<SYNC Start=111630><P Class=KRCC>
+&nbsp;
+<SYNC Start=111631><P Class=KRCC>
+other Contract function. So there we have it. How we
+<SYNC Start=114820><P Class=KRCC>
+&nbsp;
+<SYNC Start=114821><P Class=KRCC>
+store the data in the database is entirely encapsulated
+<SYNC Start=117390><P Class=KRCC>
+&nbsp;
+<SYNC Start=117391><P Class=KRCC>
+in the Contract. So, now we've got all that cool
+<SYNC Start=121250><P Class=KRCC>
+&nbsp;
+<SYNC Start=121251><P Class=KRCC>
+stuff, how do we actually use it? Let's go back
+<SYNC Start=124960><P Class=KRCC>
+&nbsp;
+<SYNC Start=124961><P Class=KRCC>
+to our forecast fragment. It turns out there's a special
+<SYNC Start=127917><P Class=KRCC>
+&nbsp;
+<SYNC Start=127918><P Class=KRCC>
+callback for SimpleCursorAdaptor, called ViewBinder.
+<SYNC Start=130132><P Class=KRCC>
+&nbsp;
+<SYNC Start=130133><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=135387><P Class=KRCC>
+&nbsp;
+<SYNC Start=135388><P Class=KRCC>
+Set View Binder, with a single function, Set View Value.
+<SYNC Start=138700><P Class=KRCC>
+&nbsp;
+<SYNC Start=140250><P Class=KRCC>
+So inside of Set View value, we're actually going to make
+<SYNC Start=143010><P Class=KRCC>
+&nbsp;
+<SYNC Start=143011><P Class=KRCC>
+really good use of those utility functions we just saw.
+<SYNC Start=145910><P Class=KRCC>
+&nbsp;
+<SYNC Start=145911><P Class=KRCC>
+First of all, we'll save off as metric. If we're
+<SYNC Start=148840><P Class=KRCC>
+&nbsp;
+<SYNC Start=148841><P Class=KRCC>
+using the Temperature Columns, then we just conform out the
+<SYNC Start=151780><P Class=KRCC>
+&nbsp;
+<SYNC Start=151781><P Class=KRCC>
+temperature. Now that we've got setViewValue, let's put some cool
+<SYNC Start=155270><P Class=KRCC>
+&nbsp;
+<SYNC Start=155271><P Class=KRCC>
+stuff inside of it. You see, that we use isMetric
+<SYNC Start=158240><P Class=KRCC>
+&nbsp;
+<SYNC Start=158241><P Class=KRCC>
+when we're populating the temperature in our views and we pass
+<SYNC Start=160430><P Class=KRCC>
+&nbsp;
+<SYNC Start=160431><P Class=KRCC>
+that into our new Utility.formatTemperature function. So you can see, that
+<SYNC Start=164500><P Class=KRCC>
+&nbsp;
+<SYNC Start=164501><P Class=KRCC>
+having these column indices here allowed us to make this function more
+<SYNC Start=167340><P Class=KRCC>
+&nbsp;
+<SYNC Start=167341><P Class=KRCC>
+efficient, and it will also help when we move into lesson five.
+<SYNC Start=170530><P Class=KRCC>
+&nbsp;
+<SYNC Start=170531><P Class=KRCC>
+One of the things you notice, is that the layout height was
+<SYNC Start=172780><P Class=KRCC>
+&nbsp;
+<SYNC Start=172781><P Class=KRCC>
+really, really small. That's because it was just wrapping content. We
+<SYNC Start=176950><P Class=KRCC>
+&nbsp;
+<SYNC Start=176951><P Class=KRCC>
+can fix this, by telling it to center our content. And, by
+<SYNC Start=180020><P Class=KRCC>
+&nbsp;
+<SYNC Start=180021><P Class=KRCC>
+setting the minimum height to the least preferred item height. This will
+<SYNC Start=183420><P Class=KRCC>
+&nbsp;
+<SYNC Start=183421><P Class=KRCC>
+make things look a little better as well, a lot more like
+<SYNC Start=185670><P Class=KRCC>
+&nbsp;
+<SYNC Start=185671><P Class=KRCC>
+our original layout. So let's take a quick look to
+<SYNC Start=187980><P Class=KRCC>
+&nbsp;
+<SYNC Start=187981><P Class=KRCC>
+see what all of this work has done for us.
+<SYNC Start=189342><P Class=KRCC>
+&nbsp;
+<SYNC Start=189343><P Class=KRCC>
+[BLANK_AUDIO]
+<SYNC Start=191637><P Class=KRCC>
+&nbsp;
+<SYNC Start=191638><P Class=KRCC>
+That's a little bit more like it. Now as you can see, we're seeing our
+<SYNC Start=194980><P Class=KRCC>
+&nbsp;
+<SYNC Start=194981><P Class=KRCC>
+forecast in the original way we anticipated. We
+<SYNC Start=198460><P Class=KRCC>
+&nbsp;
+<SYNC Start=198461><P Class=KRCC>
+can go to our settings and we can
+<SYNC Start=199650><P Class=KRCC>
+&nbsp;
+<SYNC Start=199651><P Class=KRCC>
+switch things on demand, but now we're in
+<SYNC Start=202080><P Class=KRCC>
+&nbsp;
+<SYNC Start=202081><P Class=KRCC>
+that same problem I had before. We can't
+<SYNC Start=204470><P Class=KRCC>
+&nbsp;
+<SYNC Start=204471><P Class=KRCC>
+do anything to get to the detail activity. Well, I'm going to have you fix that.</BODY>
+</SAMI>

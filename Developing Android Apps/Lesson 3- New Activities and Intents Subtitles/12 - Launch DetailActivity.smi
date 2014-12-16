@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1660><P Class=KRCC>
+Thanks, Rado. Now that you understand what
+<SYNC Start=4190><P Class=KRCC>
+&nbsp;
+<SYNC Start=4191><P Class=KRCC>
+intents are in glorious metaphor, let's use them
+<SYNC Start=6960><P Class=KRCC>
+&nbsp;
+<SYNC Start=6961><P Class=KRCC>
+to do something useful. We'll replace the toast,
+<SYNC Start=10370><P Class=KRCC>
+&nbsp;
+<SYNC Start=10371><P Class=KRCC>
+with an intent to launch the detail activity.
+<SYNC Start=12660><P Class=KRCC>
+&nbsp;
+<SYNC Start=14940><P Class=KRCC>
+You'll need to pass in weather forecast data for the detail activity to
+<SYNC Start=18830><P Class=KRCC>
+&nbsp;
+<SYNC Start=18831><P Class=KRCC>
+display. For more information, see the intent
+<SYNC Start=22230><P Class=KRCC>
+&nbsp;
+<SYNC Start=22231><P Class=KRCC>
+extra constants defined in the intent class.</BODY>
+</SAMI>

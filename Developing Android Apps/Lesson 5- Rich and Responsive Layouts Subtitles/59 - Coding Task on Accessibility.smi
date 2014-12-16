@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=80><P Class=KRCC>
+Thanks for your answer. If you tried talkback on the
+<SYNC Start=2990><P Class=KRCC>
+&nbsp;
+<SYNC Start=2991><P Class=KRCC>
+Sunshine app, you'll notice that one easy fix to make our
+<SYNC Start=5890><P Class=KRCC>
+&nbsp;
+<SYNC Start=5891><P Class=KRCC>
+app more accessible is to add content descriptions to our image
+<SYNC Start=9210><P Class=KRCC>
+&nbsp;
+<SYNC Start=9211><P Class=KRCC>
+views. 'Cause there's no spoken text when a user talks on
+<SYNC Start=12240><P Class=KRCC>
+&nbsp;
+<SYNC Start=12241><P Class=KRCC>
+it. In the forecaster adopter after we read the weather
+<SYNC Start=15100><P Class=KRCC>
+&nbsp;
+<SYNC Start=15101><P Class=KRCC>
+forecast from the cursor, we also set it as a content
+<SYNC Start=18130><P Class=KRCC>
+&nbsp;
+<SYNC Start=18131><P Class=KRCC>
+description on the icon. Similarly, in the detail fragment, once we
+<SYNC Start=22240><P Class=KRCC>
+&nbsp;
+<SYNC Start=22241><P Class=KRCC>
+get the weather forecast, we set that as the content description
+<SYNC Start=25520><P Class=KRCC>
+&nbsp;
+<SYNC Start=25521><P Class=KRCC>
+on the icon. Now clicking on the image speaks the weather description out loud.</BODY>
+</SAMI>

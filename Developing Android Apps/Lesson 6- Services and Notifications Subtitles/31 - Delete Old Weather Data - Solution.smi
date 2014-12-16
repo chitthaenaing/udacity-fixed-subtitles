@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+All right, you're done. Let's look at the solution. If you
+<SYNC Start=3350><P Class=KRCC>
+&nbsp;
+<SYNC Start=3351><P Class=KRCC>
+guessed that we were going add this code to Sunshine sync adapter,
+<SYNC Start=6570><P Class=KRCC>
+&nbsp;
+<SYNC Start=6571><P Class=KRCC>
+you would've been right. We're actually going to place the code right
+<SYNC Start=9570><P Class=KRCC>
+&nbsp;
+<SYNC Start=9571><P Class=KRCC>
+here, because this is where we know we've done a successful insert.
+<SYNC Start=12720><P Class=KRCC>
+&nbsp;
+<SYNC Start=12721><P Class=KRCC>
+So what do we do? So we start off with the
+<SYNC Start=14840><P Class=KRCC>
+&nbsp;
+<SYNC Start=14841><P Class=KRCC>
+calendar object, for the current day. Then we add negative 1 to
+<SYNC Start=18370><P Class=KRCC>
+&nbsp;
+<SYNC Start=18371><P Class=KRCC>
+the date which means it points to yesterday. Finally, we convert
+<SYNC Start=21770><P Class=KRCC>
+&nbsp;
+<SYNC Start=21771><P Class=KRCC>
+that into a database-friendly string. And then we do a query to
+<SYNC Start=25480><P Class=KRCC>
+&nbsp;
+<SYNC Start=25481><P Class=KRCC>
+delete everything less than or equal to that day.
+<SYNC Start=28270><P Class=KRCC>
+&nbsp;
+<SYNC Start=28271><P Class=KRCC>
+Done. It's always good to clean up after yourself.</BODY>
+</SAMI>

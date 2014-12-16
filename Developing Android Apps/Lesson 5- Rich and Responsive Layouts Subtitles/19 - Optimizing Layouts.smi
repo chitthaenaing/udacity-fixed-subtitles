@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=390><P Class=KRCC>
+Now that you know how to create an
+<SYNC Start=1770><P Class=KRCC>
+&nbsp;
+<SYNC Start=1771><P Class=KRCC>
+arbitrarily complex nested layout, it's important to understand
+<SYNC Start=5410><P Class=KRCC>
+&nbsp;
+<SYNC Start=5411><P Class=KRCC>
+that they don't come for free. Once again,
+<SYNC Start=8109><P Class=KRCC>
+&nbsp;
+<SYNC Start=8110><P Class=KRCC>
+the resource constraints of the platform spoil the party.
+<SYNC Start=10965><P Class=KRCC>
+&nbsp;
+<SYNC Start=10966><P Class=KRCC>
+[SOUND] Inflating complex layouts can be expensive, potentially
+<SYNC Start=15351><P Class=KRCC>
+&nbsp;
+<SYNC Start=15352><P Class=KRCC>
+impacting the performance and responsiveness of your app.
+<SYNC Start=19427><P Class=KRCC>
+&nbsp;
+<SYNC Start=19428><P Class=KRCC>
+So there are two good rules of thumb
+<SYNC Start=21765><P Class=KRCC>
+&nbsp;
+<SYNC Start=21766><P Class=KRCC>
+to help. First, keep your layout shallow and wide,
+<SYNC Start=25620><P Class=KRCC>
+&nbsp;
+<SYNC Start=25621><P Class=KRCC>
+rather than deep and narrow. That means you're better
+<SYNC Start=28930><P Class=KRCC>
+&nbsp;
+<SYNC Start=28931><P Class=KRCC>
+off with more siblings and fewer children. Because it's
+<SYNC Start=32490><P Class=KRCC>
+&nbsp;
+<SYNC Start=32491><P Class=KRCC>
+never as simple as that, you also want to
+<SYNC Start=34970><P Class=KRCC>
+&nbsp;
+<SYNC Start=34971><P Class=KRCC>
+avoid having excessive views. In the most general terms, that
+<SYNC Start=38930><P Class=KRCC>
+&nbsp;
+<SYNC Start=38931><P Class=KRCC>
+means your activities' full hierarchy should never have more
+<SYNC Start=42430><P Class=KRCC>
+&nbsp;
+<SYNC Start=42431><P Class=KRCC>
+than ten nested views or over 80 views in
+<SYNC Start=45450><P Class=KRCC>
+&nbsp;
+<SYNC Start=45451><P Class=KRCC>
+total. That probably sounds like a lot, but let's
+<SYNC Start=48590><P Class=KRCC>
+&nbsp;
+<SYNC Start=48591><P Class=KRCC>
+open up the Hierarchy Viewer tool in Android studio and
+<SYNC Start=51350><P Class=KRCC>
+&nbsp;
+<SYNC Start=51351><P Class=KRCC>
+see just how quickly that can add up</BODY>
+</SAMI>

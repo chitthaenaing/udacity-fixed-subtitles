@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=700><P Class=KRCC>
+As app developers, it's our job to maintain the illusion that once started,
+<SYNC Start=4990><P Class=KRCC>
+&nbsp;
+<SYNC Start=4991><P Class=KRCC>
+every app is waiting patiently in the background looking for
+<SYNC Start=7680><P Class=KRCC>
+&nbsp;
+<SYNC Start=7681><P Class=KRCC>
+its chance to be the star when called on. So whenever the user switches back to
+<SYNC Start=11670><P Class=KRCC>
+&nbsp;
+<SYNC Start=11671><P Class=KRCC>
+your app, whether or not the system is kilted in the interim,
+<SYNC Start=14700><P Class=KRCC>
+&nbsp;
+<SYNC Start=14701><P Class=KRCC>
+they should be presented with the same UI they had when they left. To help,
+<SYNC Start=18780><P Class=KRCC>
+&nbsp;
+<SYNC Start=18781><P Class=KRCC>
+Android has a pair of handles specifically for persisting state in these
+<SYNC Start=22540><P Class=KRCC>
+&nbsp;
+<SYNC Start=22541><P Class=KRCC>
+circumstances. On save instance data is called immediately before on pause. So
+<SYNC Start=27030><P Class=KRCC>
+&nbsp;
+<SYNC Start=27031><P Class=KRCC>
+as soon as your app is no longer active, an on
+<SYNC Start=33450><P Class=KRCC>
+&nbsp;
+<SYNC Start=33451><P Class=KRCC>
+restore instance data is called immediately after on create, but
+<SYNC Start=37630><P Class=KRCC>
+&nbsp;
+<SYNC Start=37631><P Class=KRCC>
+only if the app is being restarted after having been terminated by the system.
+<SYNC Start=41220><P Class=KRCC>
+&nbsp;
+<SYNC Start=42290><P Class=KRCC>
+That means you can read the bundle of state information saved the last time your
+<SYNC Start=45880><P Class=KRCC>
+&nbsp;
+<SYNC Start=45881><P Class=KRCC>
+app was moved to the foreground here. The next time,
+<SYNC Start=49870><P Class=KRCC>
+&nbsp;
+<SYNC Start=49871><P Class=KRCC>
+you'll use the switches to your app even if it was killed by the system in
+<SYNC Start=52940><P Class=KRCC>
+&nbsp;
+<SYNC Start=52941><P Class=KRCC>
+the mean time. Using that bundle you can return your ui to the same state it
+<SYNC Start=57520><P Class=KRCC>
+&nbsp;
+<SYNC Start=57521><P Class=KRCC>
+was the last time the user saw it creating a seamless transition that hides
+<SYNC Start=61040><P Class=KRCC>
+&nbsp;
+<SYNC Start=61041><P Class=KRCC>
+the resource management happening under the covers. That's enough of the why,
+<SYNC Start=65880><P Class=KRCC>
+&nbsp;
+<SYNC Start=65881><P Class=KRCC>
+let's go back to Dan and see how to put this theory into practice.</BODY>
+</SAMI>

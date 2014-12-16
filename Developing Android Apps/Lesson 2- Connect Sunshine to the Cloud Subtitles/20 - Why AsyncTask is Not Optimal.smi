@@ -1,0 +1,54 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+Well, the transfer isn't happening on the UI thread, but
+<SYNC Start=3040><P Class=KRCC>
+&nbsp;
+<SYNC Start=3041><P Class=KRCC>
+that's not a bad thing. In fact, it's good that it's
+<SYNC Start=5750><P Class=KRCC>
+&nbsp;
+<SYNC Start=5751><P Class=KRCC>
+not happening on the UI thread. So that's not a problem
+<SYNC Start=7900><P Class=KRCC>
+&nbsp;
+<SYNC Start=7901><P Class=KRCC>
+either. Data transfers are an integral part of most modern smartphone
+<SYNC Start=11910><P Class=KRCC>
+&nbsp;
+<SYNC Start=11911><P Class=KRCC>
+apps, so that's not a problem. The real problem is that
+<SYNC Start=15200><P Class=KRCC>
+&nbsp;
+<SYNC Start=15201><P Class=KRCC>
+the transfer is happening on a thread whose lifetime is tied
+<SYNC Start=18080><P Class=KRCC>
+&nbsp;
+<SYNC Start=18081><P Class=KRCC>
+explicitly to a UI component, in this case an activity. So
+<SYNC Start=21800><P Class=KRCC>
+&nbsp;
+<SYNC Start=21801><P Class=KRCC>
+if the activity is terminated by something like a screen rotation,
+<SYNC Start=25330><P Class=KRCC>
+&nbsp;
+<SYNC Start=25331><P Class=KRCC>
+the transfer will also be terminated.</BODY>
+</SAMI>

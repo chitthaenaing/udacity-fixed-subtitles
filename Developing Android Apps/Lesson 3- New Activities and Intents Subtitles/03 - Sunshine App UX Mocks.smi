@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=490><P Class=KRCC>
+Sunshine looks something like this, but it doesn't show
+<SYNC Start=3320><P Class=KRCC>
+&nbsp;
+<SYNC Start=3321><P Class=KRCC>
+most of the fun information we have about the
+<SYNC Start=5320><P Class=KRCC>
+&nbsp;
+<SYNC Start=5321><P Class=KRCC>
+weather. We want to show a detailed view when
+<SYNC Start=7710><P Class=KRCC>
+&nbsp;
+<SYNC Start=7711><P Class=KRCC>
+the user clicks on a day within the list.
+<SYNC Start=9790><P Class=KRCC>
+&nbsp;
+<SYNC Start=13170><P Class=KRCC>
+Okay, that was a bit anticlimactic. It doesn't really do anything
+<SYNC Start=17210><P Class=KRCC>
+&nbsp;
+<SYNC Start=17211><P Class=KRCC>
+useful yet. But it will contain all sorts of great weathery details,
+<SYNC Start=22610><P Class=KRCC>
+&nbsp;
+<SYNC Start=22611><P Class=KRCC>
+things that weather nerds love such as barometric pressure and that
+<SYNC Start=26440><P Class=KRCC>
+&nbsp;
+<SYNC Start=26441><P Class=KRCC>
+navigators love such as wind speed and direction eventually, but baby steps.</BODY>
+</SAMI>

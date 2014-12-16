@@ -1,0 +1,150 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=160><P Class=KRCC>
+Now, it's time to finish creating our new view
+<SYNC Start=2340><P Class=KRCC>
+&nbsp;
+<SYNC Start=2341><P Class=KRCC>
+by drawing its contents. And, we do that within our
+<SYNC Start=5460><P Class=KRCC>
+&nbsp;
+<SYNC Start=5461><P Class=KRCC>
+Custom View's onDraw method. Now, the Android Canvas is pretty
+<SYNC Start=8900><P Class=KRCC>
+&nbsp;
+<SYNC Start=8901><P Class=KRCC>
+standard as far as canvas API's go. It uses the
+<SYNC Start=11790><P Class=KRCC>
+&nbsp;
+<SYNC Start=11791><P Class=KRCC>
+Painter's algorithm, meaning that each new thing you paint
+<SYNC Start=14320><P Class=KRCC>
+&nbsp;
+<SYNC Start=14321><P Class=KRCC>
+will cover anything beneath it. The Canvas and Paint classes
+<SYNC Start=18460><P Class=KRCC>
+&nbsp;
+<SYNC Start=18461><P Class=KRCC>
+offer a variety of brushes and helpers to draw and
+<SYNC Start=20770><P Class=KRCC>
+&nbsp;
+<SYNC Start=20771><P Class=KRCC>
+fill lines, boxes, circles, and text with colors, patterns, gradients,
+<SYNC Start=25080><P Class=KRCC>
+&nbsp;
+<SYNC Start=25081><P Class=KRCC>
+and images, as well as offering the ability to move, rotate,
+<SYNC Start=28050><P Class=KRCC>
+&nbsp;
+<SYNC Start=28051><P Class=KRCC>
+and scale the canvas while you draw. I could spend a lot
+<SYNC Start=31110><P Class=KRCC>
+&nbsp;
+<SYNC Start=31111><P Class=KRCC>
+of time here detailing exactly how to use each of these tools,
+<SYNC Start=34240><P Class=KRCC>
+&nbsp;
+<SYNC Start=34241><P Class=KRCC>
+but there's nothing unique to Android and it's covered really well on
+<SYNC Start=36940><P Class=KRCC>
+&nbsp;
+<SYNC Start=36941><P Class=KRCC>
+the documentation link below. It is possible though to create pretty advanced
+<SYNC Start=41380><P Class=KRCC>
+&nbsp;
+<SYNC Start=41381><P Class=KRCC>
+UIs this way. For example, for example, if we start by drawing
+<SYNC Start=44550><P Class=KRCC>
+&nbsp;
+<SYNC Start=44551><P Class=KRCC>
+a circle and then add a second circle and then you just
+<SYNC Start=47330><P Class=KRCC>
+&nbsp;
+<SYNC Start=47331><P Class=KRCC>
+need to finish drawing the rest of the compass. Here's an example
+<SYNC Start=50120><P Class=KRCC>
+&nbsp;
+<SYNC Start=50121><P Class=KRCC>
+I prepared earlier. The specifics of what you draw are
+<SYNC Start=52780><P Class=KRCC>
+&nbsp;
+<SYNC Start=52781><P Class=KRCC>
+different for every view, but one thing that is consistent
+<SYNC Start=55700><P Class=KRCC>
+&nbsp;
+<SYNC Start=55701><P Class=KRCC>
+is the resource constraint device you're drawing on. And that
+<SYNC Start=58650><P Class=KRCC>
+&nbsp;
+<SYNC Start=58651><P Class=KRCC>
+the onDraw method be called every time the screen is
+<SYNC Start=61150><P Class=KRCC>
+&nbsp;
+<SYNC Start=61151><P Class=KRCC>
+refreshed, potentially many times a second; that means any object
+<SYNC Start=64739><P Class=KRCC>
+&nbsp;
+<SYNC Start=64740><P Class=KRCC>
+created here within your onDraw method, including things like paint
+<SYNC Start=68130><P Class=KRCC>
+&nbsp;
+<SYNC Start=68131><P Class=KRCC>
+objects, will be created and destroyed at an alarming frequency.
+<SYNC Start=72100><P Class=KRCC>
+&nbsp;
+<SYNC Start=72101><P Class=KRCC>
+Object creation and destruction can be expensive on Android; potentially
+<SYNC Start=75680><P Class=KRCC>
+&nbsp;
+<SYNC Start=75681><P Class=KRCC>
+effecting the smoothness of your UI, when garbage collection is initiated.
+<SYNC Start=79110><P Class=KRCC>
+&nbsp;
+<SYNC Start=79111><P Class=KRCC>
+The solution? Move the scope of any object used within the
+<SYNC Start=82030><P Class=KRCC>
+&nbsp;
+<SYNC Start=82031><P Class=KRCC>
+onDraw loop, into the class scope. Go ahead and override the
+<SYNC Start=85930><P Class=KRCC>
+&nbsp;
+<SYNC Start=85931><P Class=KRCC>
+onDraw method within your new view and draw the new control.
+<SYNC Start=89790><P Class=KRCC>
+&nbsp;
+<SYNC Start=89791><P Class=KRCC>
+In fact, why not take this opportunity to create a custom
+<SYNC Start=92380><P Class=KRCC>
+&nbsp;
+<SYNC Start=92381><P Class=KRCC>
+control that can display the wind speed and direction fused within
+<SYNC Start=95400><P Class=KRCC>
+&nbsp;
+<SYNC Start=95401><P Class=KRCC>
+sunshine. Once you're done, you can add it to your layer
+<SYNC Start=98070><P Class=KRCC>
+&nbsp;
+<SYNC Start=98071><P Class=KRCC>
+using it it's full package name and class name in the XML
+<SYNC Start=100830><P Class=KRCC>
+&nbsp;
+<SYNC Start=100831><P Class=KRCC>
+like this. Run it and then post a screenshot of your new view into the forum.</BODY>
+</SAMI>

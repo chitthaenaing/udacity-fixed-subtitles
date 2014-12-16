@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=170><P Class=KRCC>
+The main advantage of the AsyncTask is that you get
+<SYNC Start=2740><P Class=KRCC>
+&nbsp;
+<SYNC Start=2741><P Class=KRCC>
+to focus on your app logic, what you need to do
+<SYNC Start=5630><P Class=KRCC>
+&nbsp;
+<SYNC Start=5631><P Class=KRCC>
+on the background thread, and what you need to do when
+<SYNC Start=8100><P Class=KRCC>
+&nbsp;
+<SYNC Start=8101><P Class=KRCC>
+it comes back to the main thread. You don't have to
+<SYNC Start=10490><P Class=KRCC>
+&nbsp;
+<SYNC Start=10491><P Class=KRCC>
+worry about the details of threads and handlers. Of the methods
+<SYNC Start=14026><P Class=KRCC>
+&nbsp;
+<SYNC Start=14027><P Class=KRCC>
+that I showed you, only doInBackground is required to be implemented.
+<SYNC Start=18050><P Class=KRCC>
+&nbsp;
+<SYNC Start=18051><P Class=KRCC>
+onPostExecute is optional as well as some other methods. For each
+<SYNC Start=22670><P Class=KRCC>
+&nbsp;
+<SYNC Start=22671><P Class=KRCC>
+method, tell us whether it's on the main or background thread.
+<SYNC Start=26150><P Class=KRCC>
+&nbsp;
+<SYNC Start=26151><P Class=KRCC>
+You have a 50% chance of getting each one correct or a 100%
+<SYNC Start=30260><P Class=KRCC>
+&nbsp;
+<SYNC Start=30261><P Class=KRCC>
+if you actually go check the java doc, so go do that now.</BODY>
+</SAMI>

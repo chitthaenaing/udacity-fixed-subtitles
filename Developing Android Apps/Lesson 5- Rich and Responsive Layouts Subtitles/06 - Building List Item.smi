@@ -1,0 +1,178 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+To build out our UI, let's start with the wire
+<SYNC Start=2800><P Class=KRCC>
+&nbsp;
+<SYNC Start=2801><P Class=KRCC>
+frame for the main activity. It displays a list of
+<SYNC Start=5800><P Class=KRCC>
+&nbsp;
+<SYNC Start=5801><P Class=KRCC>
+forecasts, where each item contains an icon, a date, weather
+<SYNC Start=10265><P Class=KRCC>
+&nbsp;
+<SYNC Start=10266><P Class=KRCC>
+description; as well as high and low temperatures for that
+<SYNC Start=13640><P Class=KRCC>
+&nbsp;
+<SYNC Start=13641><P Class=KRCC>
+day. Since today's weather is probably most relevant to the
+<SYNC Start=17320><P Class=KRCC>
+&nbsp;
+<SYNC Start=17321><P Class=KRCC>
+user, we give more prominence to it as a list
+<SYNC Start=20220><P Class=KRCC>
+&nbsp;
+<SYNC Start=20221><P Class=KRCC>
+item compared to the other days. We'll start off by
+<SYNC Start=22830><P Class=KRCC>
+&nbsp;
+<SYNC Start=22831><P Class=KRCC>
+building the list item layout for future days because it's simpler.
+<SYNC Start=25730><P Class=KRCC>
+&nbsp;
+<SYNC Start=25731><P Class=KRCC>
+And then afterwards, we'll come back to do the today layout.
+<SYNC Start=29030><P Class=KRCC>
+&nbsp;
+<SYNC Start=29031><P Class=KRCC>
+In the current implementation, the list item forecast layout XML is
+<SYNC Start=33250><P Class=KRCC>
+&nbsp;
+<SYNC Start=33251><P Class=KRCC>
+a horizontal linear layout of four text views. We'll need to
+<SYNC Start=36450><P Class=KRCC>
+&nbsp;
+<SYNC Start=36451><P Class=KRCC>
+modify the layout so that it looks like this wire frame.
+<SYNC Start=39460><P Class=KRCC>
+&nbsp;
+<SYNC Start=39461><P Class=KRCC>
+We should divide and conquer until we can use the view
+<SYNC Start=41510><P Class=KRCC>
+&nbsp;
+<SYNC Start=41511><P Class=KRCC>
+group layouts that we're familiar with. Can you imagine how you'd
+<SYNC Start=44560><P Class=KRCC>
+&nbsp;
+<SYNC Start=44561><P Class=KRCC>
+break down this UI into components that you know how to
+<SYNC Start=46980><P Class=KRCC>
+&nbsp;
+<SYNC Start=46981><P Class=KRCC>
+build? As a hint, what if I draw these separators here?
+<SYNC Start=51840><P Class=KRCC>
+&nbsp;
+<SYNC Start=51841><P Class=KRCC>
+Within those elements, can you find a way to
+<SYNC Start=54160><P Class=KRCC>
+&nbsp;
+<SYNC Start=54161><P Class=KRCC>
+break it down even further with view groups you're familiar
+<SYNC Start=56960><P Class=KRCC>
+&nbsp;
+<SYNC Start=56961><P Class=KRCC>
+with? You'll need nested view groups, which means view groups
+<SYNC Start=60280><P Class=KRCC>
+&nbsp;
+<SYNC Start=60281><P Class=KRCC>
+with children view groups. As a tip, this data will
+<SYNC Start=62940><P Class=KRCC>
+&nbsp;
+<SYNC Start=62941><P Class=KRCC>
+be populated dynamically at run time. But you can
+<SYNC Start=65740><P Class=KRCC>
+&nbsp;
+<SYNC Start=65741><P Class=KRCC>
+test it by hard coding some text values such as
+<SYNC Start=68960><P Class=KRCC>
+&nbsp;
+<SYNC Start=68961><P Class=KRCC>
+Tomorrow for the date or Clear for the weather condition.
+<SYNC Start=72420><P Class=KRCC>
+&nbsp;
+<SYNC Start=72421><P Class=KRCC>
+For images, we can specify a placeholder drawable called ic_launcher.
+<SYNC Start=76620><P Class=KRCC>
+&nbsp;
+<SYNC Start=76621><P Class=KRCC>
+It's named this way, because it's the launcher icon, which is also
+<SYNC Start=80850><P Class=KRCC>
+&nbsp;
+<SYNC Start=80851><P Class=KRCC>
+known as the app icon. And this is already included in our
+<SYNC Start=83820><P Class=KRCC>
+&nbsp;
+<SYNC Start=83821><P Class=KRCC>
+app. We'll be getting the rest of our weather icons for our
+<SYNC Start=86500><P Class=KRCC>
+&nbsp;
+<SYNC Start=86501><P Class=KRCC>
+app later in this lesson. If you want to see what this layout
+<SYNC Start=89610><P Class=KRCC>
+&nbsp;
+<SYNC Start=89611><P Class=KRCC>
+looks like, you can click on the design pane to see a
+<SYNC Start=91980><P Class=KRCC>
+&nbsp;
+<SYNC Start=91981><P Class=KRCC>
+preview of it. On the right, we see a component tree listing
+<SYNC Start=94970><P Class=KRCC>
+&nbsp;
+<SYNC Start=94971><P Class=KRCC>
+out the different views. We can also see for a given view
+<SYNC Start=97830><P Class=KRCC>
+&nbsp;
+<SYNC Start=97831><P Class=KRCC>
+what the properties are, and their values. We can change the orientation
+<SYNC Start=101690><P Class=KRCC>
+&nbsp;
+<SYNC Start=101691><P Class=KRCC>
+of the device that your previewing, you can also
+<SYNC Start=103890><P Class=KRCC>
+&nbsp;
+<SYNC Start=103891><P Class=KRCC>
+select different devices such as Nexus 7, or Nexus
+<SYNC Start=107900><P Class=KRCC>
+&nbsp;
+<SYNC Start=107901><P Class=KRCC>
+10. You can also preview multiple devices at the
+<SYNC Start=110630><P Class=KRCC>
+&nbsp;
+<SYNC Start=110631><P Class=KRCC>
+same time. As you build out your layout for
+<SYNC Start=112690><P Class=KRCC>
+&nbsp;
+<SYNC Start=112691><P Class=KRCC>
+this task, don't worry about the font color, or
+<SYNC Start=114950><P Class=KRCC>
+&nbsp;
+<SYNC Start=114951><P Class=KRCC>
+font size, or any other visual details until later.
+<SYNC Start=118500><P Class=KRCC>
+&nbsp;
+<SYNC Start=118501><P Class=KRCC>
+After you compile and run, the app should look
+<SYNC Start=120590><P Class=KRCC>
+&nbsp;
+<SYNC Start=120591><P Class=KRCC>
+something like this. Check this box when you're done.</BODY>
+</SAMI>

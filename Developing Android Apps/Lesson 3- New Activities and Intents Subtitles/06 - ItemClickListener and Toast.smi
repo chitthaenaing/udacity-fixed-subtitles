@@ -1,0 +1,74 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=310><P Class=KRCC>
+When the list item is clicked, use Android's Toast mechanism to display
+<SYNC Start=4220><P Class=KRCC>
+&nbsp;
+<SYNC Start=4221><P Class=KRCC>
+the weather forecast string. A Toast is a pop-up that displays a message for
+<SYNC Start=8777><P Class=KRCC>
+&nbsp;
+<SYNC Start=8778><P Class=KRCC>
+a few seconds before fading out. It's particularly useful for debugging, where
+<SYNC Start=13230><P Class=KRCC>
+&nbsp;
+<SYNC Start=13231><P Class=KRCC>
+it can be used as a way to indicate status visually without altering the app UI.
+<SYNC Start=17430><P Class=KRCC>
+&nbsp;
+<SYNC Start=17431><P Class=KRCC>
+We're going to put our list view, set item click listener into forecast fragment
+<SYNC Start=23600><P Class=KRCC>
+&nbsp;
+<SYNC Start=23601><P Class=KRCC>
+inside of the on create view method. We'll just start typing
+<SYNC Start=28425><P Class=KRCC>
+&nbsp;
+<SYNC Start=28426><P Class=KRCC>
+listView.setOnItemClickListener and
+<SYNC Start=35120><P Class=KRCC>
+&nbsp;
+<SYNC Start=35121><P Class=KRCC>
+let the auto complete fill in the rest. Inside of this function,
+<SYNC Start=38750><P Class=KRCC>
+&nbsp;
+<SYNC Start=38751><P Class=KRCC>
+we're going to add click listener, which we can instantiate in place. So
+<SYNC Start=44900><P Class=KRCC>
+&nbsp;
+<SYNC Start=44901><P Class=KRCC>
+here's where we can call the code in Android to display the Toast. So, now that
+<SYNC Start=49100><P Class=KRCC>
+&nbsp;
+<SYNC Start=49101><P Class=KRCC>
+you know where to place the Toast code, take a look at the Toast documentation.
+<SYNC Start=53980><P Class=KRCC>
+&nbsp;
+<SYNC Start=53981><P Class=KRCC>
+Add a Toast when the list item is clicked that contains the weather information.
+<SYNC Start=57770><P Class=KRCC>
+&nbsp;
+<SYNC Start=58840><P Class=KRCC>
+Hint. You can get the forecast by getting an item from the forecast adapter,
+<SYNC Start=63350><P Class=KRCC>
+&nbsp;
+<SYNC Start=63351><P Class=KRCC>
+at the position given by the on item click listener.</BODY>
+</SAMI>

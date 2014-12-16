@@ -1,0 +1,62 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=450><P Class=KRCC>
+Adding support for the location insert, looks almost
+<SYNC Start=3340><P Class=KRCC>
+&nbsp;
+<SYNC Start=3341><P Class=KRCC>
+identical to adding support for weather. We just have
+<SYNC Start=6520><P Class=KRCC>
+&nbsp;
+<SYNC Start=6521><P Class=KRCC>
+to select the right table name, and return
+<SYNC Start=9030><P Class=KRCC>
+&nbsp;
+<SYNC Start=9031><P Class=KRCC>
+the right location URI. But there's one more thing
+<SYNC Start=12460><P Class=KRCC>
+&nbsp;
+<SYNC Start=12461><P Class=KRCC>
+to do. All we have to do is
+<SYNC Start=14140><P Class=KRCC>
+&nbsp;
+<SYNC Start=14141><P Class=KRCC>
+call getContext().getContentResolver().notifyChange on the
+<SYNC Start=17570><P Class=KRCC>
+&nbsp;
+<SYNC Start=17571><P Class=KRCC>
+URI that was actually passed
+<SYNC Start=19120><P Class=KRCC>
+&nbsp;
+<SYNC Start=19121><P Class=KRCC>
+into our function. To notify any observers that need
+<SYNC Start=22370><P Class=KRCC>
+&nbsp;
+<SYNC Start=22371><P Class=KRCC>
+to know that UI has changed. And that's it.
+<SYNC Start=25350><P Class=KRCC>
+&nbsp;
+<SYNC Start=25351><P Class=KRCC>
+We've now finished insert. However, of course,
+<SYNC Start=28510><P Class=KRCC>
+&nbsp;
+<SYNC Start=28511><P Class=KRCC>
+we're never done without also adding a test.</BODY>
+</SAMI>

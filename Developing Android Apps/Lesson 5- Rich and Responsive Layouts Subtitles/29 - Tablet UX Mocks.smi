@@ -1,0 +1,146 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=120><P Class=KRCC>
+When we were learning that response in design, we saw that
+<SYNC Start=2600><P Class=KRCC>
+&nbsp;
+<SYNC Start=2601><P Class=KRCC>
+a common pattern was to use the master detail flow, which
+<SYNC Start=5360><P Class=KRCC>
+&nbsp;
+<SYNC Start=5361><P Class=KRCC>
+is what were going to use for sunshine. Here are the
+<SYNC Start=8410><P Class=KRCC>
+&nbsp;
+<SYNC Start=8411><P Class=KRCC>
+tablet mocks. We have a list of forecasts on the left, and
+<SYNC Start=11580><P Class=KRCC>
+&nbsp;
+<SYNC Start=11581><P Class=KRCC>
+then for the selected item, we see the detail pane on
+<SYNC Start=14220><P Class=KRCC>
+&nbsp;
+<SYNC Start=14221><P Class=KRCC>
+the right. This applies for a seven inch and ten inch tablets.
+<SYNC Start=18080><P Class=KRCC>
+&nbsp;
+<SYNC Start=18081><P Class=KRCC>
+Both portrait and landscape orientations. In portrait mode, the columns are
+<SYNC Start=22380><P Class=KRCC>
+&nbsp;
+<SYNC Start=22381><P Class=KRCC>
+just a little bit narrower, but it's still a two pane UI.
+<SYNC Start=25670><P Class=KRCC>
+&nbsp;
+<SYNC Start=25671><P Class=KRCC>
+In terms of implementation, all of this will be under the
+<SYNC Start=28220><P Class=KRCC>
+&nbsp;
+<SYNC Start=28221><P Class=KRCC>
+main activity. Then on the left, we have the forecast fragment.
+<SYNC Start=31020><P Class=KRCC>
+&nbsp;
+<SYNC Start=31021><P Class=KRCC>
+And then on the right, we have the detail fragment. On
+<SYNC Start=34070><P Class=KRCC>
+&nbsp;
+<SYNC Start=34071><P Class=KRCC>
+the phone, we would still have the main activity with the list
+<SYNC Start=36846><P Class=KRCC>
+&nbsp;
+<SYNC Start=36847><P Class=KRCC>
+of forecast. And then selecting an item would still launch the
+<SYNC Start=39580><P Class=KRCC>
+&nbsp;
+<SYNC Start=39581><P Class=KRCC>
+detail activity. Here's another way to visualize it. On the tablet, we
+<SYNC Start=44480><P Class=KRCC>
+&nbsp;
+<SYNC Start=44481><P Class=KRCC>
+have two fragments side by side under one activity. And then
+<SYNC Start=47630><P Class=KRCC>
+&nbsp;
+<SYNC Start=47631><P Class=KRCC>
+on the phone, we have the first activity containing the first fragment.
+<SYNC Start=51030><P Class=KRCC>
+&nbsp;
+<SYNC Start=51031><P Class=KRCC>
+Selecting an item will launch the second activity containing the second
+<SYNC Start=54080><P Class=KRCC>
+&nbsp;
+<SYNC Start=54081><P Class=KRCC>
+fragment. We're going to break this up into multiple coding tasks until
+<SYNC Start=57640><P Class=KRCC>
+&nbsp;
+<SYNC Start=57641><P Class=KRCC>
+we build up the final layout. First we'll build up the
+<SYNC Start=60140><P Class=KRCC>
+&nbsp;
+<SYNC Start=60141><P Class=KRCC>
+two pane UI for tablets. Then we'll hook up the communication
+<SYNC Start=63460><P Class=KRCC>
+&nbsp;
+<SYNC Start=63461><P Class=KRCC>
+between the two fragments, so that's selecting an item replaces the
+<SYNC Start=67070><P Class=KRCC>
+&nbsp;
+<SYNC Start=67071><P Class=KRCC>
+detail pane on the right. Then we'll learn how to show
+<SYNC Start=69530><P Class=KRCC>
+&nbsp;
+<SYNC Start=69531><P Class=KRCC>
+an activated state on the currently selected item, so we know
+<SYNC Start=72590><P Class=KRCC>
+&nbsp;
+<SYNC Start=72591><P Class=KRCC>
+what the details pane corresponds to. We'll also need to make
+<SYNC Start=76100><P Class=KRCC>
+&nbsp;
+<SYNC Start=76101><P Class=KRCC>
+sure that the scroll position is maintained across
+<SYNC Start=78630><P Class=KRCC>
+&nbsp;
+<SYNC Start=78631><P Class=KRCC>
+orientation changes. After that, we'll update the detail layout
+<SYNC Start=82430><P Class=KRCC>
+&nbsp;
+<SYNC Start=82431><P Class=KRCC>
+so it's optimized for these wider screens. And
+<SYNC Start=84730><P Class=KRCC>
+&nbsp;
+<SYNC Start=84731><P Class=KRCC>
+then we'll modify the adapter so that today's layout
+<SYNC Start=87370><P Class=KRCC>
+&nbsp;
+<SYNC Start=87371><P Class=KRCC>
+looks like the other days. There's no special
+<SYNC Start=89340><P Class=KRCC>
+&nbsp;
+<SYNC Start=89341><P Class=KRCC>
+today layout on the tablet. So hopefully it's clear
+<SYNC Start=91980><P Class=KRCC>
+&nbsp;
+<SYNC Start=91981><P Class=KRCC>
+how we're going to approach implementing this tablet behavior and
+<SYNC Start=94930><P Class=KRCC>
+&nbsp;
+<SYNC Start=94931><P Class=KRCC>
+we're going to step through it slowly, one by one</BODY>
+</SAMI>

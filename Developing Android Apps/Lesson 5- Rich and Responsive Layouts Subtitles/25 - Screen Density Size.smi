@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=600><P Class=KRCC>
+The Nexus One has a 3.7 inch screen, and the Nexus 5, a 4.9 inch display, so
+<SYNC Start=5640><P Class=KRCC>
+&nbsp;
+<SYNC Start=5641><P Class=KRCC>
+they both fall comfortably within the normal range
+<SYNC Start=7560><P Class=KRCC>
+&nbsp;
+<SYNC Start=7561><P Class=KRCC>
+for screen size. The Nexus One has a screen
+<SYNC Start=10190><P Class=KRCC>
+&nbsp;
+<SYNC Start=10191><P Class=KRCC>
+density of 252 dpi, which is hdpi, whereas
+<SYNC Start=15110><P Class=KRCC>
+&nbsp;
+<SYNC Start=15111><P Class=KRCC>
+the Nexus 5, which was released three years after
+<SYNC Start=17370><P Class=KRCC>
+&nbsp;
+<SYNC Start=17371><P Class=KRCC>
+the Nexus One, has a much higher screen
+<SYNC Start=19880><P Class=KRCC>
+&nbsp;
+<SYNC Start=19881><P Class=KRCC>
+density, 445 dots per inch. That makes it xxhdpi.</BODY>
+</SAMI>

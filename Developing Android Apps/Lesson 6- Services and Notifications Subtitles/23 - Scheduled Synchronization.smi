@@ -1,0 +1,38 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=530><P Class=KRCC>
+You indeed must have a content provider marked as syncable, as well as
+<SYNC Start=4210><P Class=KRCC>
+&nbsp;
+<SYNC Start=4211><P Class=KRCC>
+enable automatic sync for the sync adapter.
+<SYNC Start=6610><P Class=KRCC>
+&nbsp;
+<SYNC Start=6611><P Class=KRCC>
+You don't need to schedule an immediate
+<SYNC Start=8250><P Class=KRCC>
+&nbsp;
+<SYNC Start=8251><P Class=KRCC>
+sync, although it's nice for users, as we did. And, this is a minor
+<SYNC Start=12290><P Class=KRCC>
+&nbsp;
+<SYNC Start=12291><P Class=KRCC>
+note, you don't set the interval in milliseconds, but instead set it in seconds.</BODY>
+</SAMI>

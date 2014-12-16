@@ -1,0 +1,94 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=520><P Class=KRCC>
+So, how would we use a service to
+<SYNC Start=3070><P Class=KRCC>
+&nbsp;
+<SYNC Start=3071><P Class=KRCC>
+implement our application? Fortunately, we've already done most
+<SYNC Start=7190><P Class=KRCC>
+&nbsp;
+<SYNC Start=7191><P Class=KRCC>
+of the work. We have a content provider
+<SYNC Start=9880><P Class=KRCC>
+&nbsp;
+<SYNC Start=9881><P Class=KRCC>
+with a content notifier that will notify our
+<SYNC Start=12160><P Class=KRCC>
+&nbsp;
+<SYNC Start=12161><P Class=KRCC>
+content observers. Our FetchWeatherTask already runs completely independently
+<SYNC Start=17370><P Class=KRCC>
+&nbsp;
+<SYNC Start=17371><P Class=KRCC>
+of our UI. Good on us. Now, we
+<SYNC Start=20460><P Class=KRCC>
+&nbsp;
+<SYNC Start=20461><P Class=KRCC>
+can make use of that Intent Service that
+<SYNC Start=22790><P Class=KRCC>
+&nbsp;
+<SYNC Start=22791><P Class=KRCC>
+Rato mentioned earlier. With just a few small
+<SYNC Start=25780><P Class=KRCC>
+&nbsp;
+<SYNC Start=25781><P Class=KRCC>
+changes, we can get our code working,
+<SYNC Start=28230><P Class=KRCC>
+&nbsp;
+<SYNC Start=28231><P Class=KRCC>
+with an Intent Service, instead of with our
+<SYNC Start=30630><P Class=KRCC>
+&nbsp;
+<SYNC Start=30631><P Class=KRCC>
+Fetch Weather task. To start, let's create a
+<SYNC Start=34280><P Class=KRCC>
+&nbsp;
+<SYNC Start=34281><P Class=KRCC>
+new package for our service. [SOUND] Then we'll
+<SYNC Start=37660><P Class=KRCC>
+&nbsp;
+<SYNC Start=37661><P Class=KRCC>
+add a new Java class in that package that extends inside Service. We hit Ctrl+I
+<SYNC Start=44476><P Class=KRCC>
+&nbsp;
+<SYNC Start=44477><P Class=KRCC>
+to once again, add the required abstract method.
+<SYNC Start=47270><P Class=KRCC>
+&nbsp;
+<SYNC Start=48830><P Class=KRCC>
+And Ctrl+O in order to add the constructor.
+<SYNC Start=51780><P Class=KRCC>
+&nbsp;
+<SYNC Start=51781><P Class=KRCC>
+Since the service is an Android component, you guessed it, it needs to be in the
+<SYNC Start=57420><P Class=KRCC>
+&nbsp;
+<SYNC Start=57421><P Class=KRCC>
+manifest. Okay, let's do this. Let's finish implementing the SunshineService
+<SYNC Start=64200><P Class=KRCC>
+&nbsp;
+<SYNC Start=64201><P Class=KRCC>
+and call it from ForecastFragment. You can start a service using an intent with
+<SYNC Start=69490><P Class=KRCC>
+&nbsp;
+<SYNC Start=69491><P Class=KRCC>
+the StartService method. It will help to remember how to use explicit intents.</BODY>
+</SAMI>

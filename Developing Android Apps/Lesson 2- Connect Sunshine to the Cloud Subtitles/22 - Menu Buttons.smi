@@ -1,0 +1,154 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=440><P Class=KRCC>
+Thanks Raido, with that in mind let's add
+<SYNC Start=2790><P Class=KRCC>
+&nbsp;
+<SYNC Start=2791><P Class=KRCC>
+a Refresh Menu button to our app. For temporary
+<SYNC Start=5450><P Class=KRCC>
+&nbsp;
+<SYNC Start=5451><P Class=KRCC>
+purposes only though, otherwise Raido would be mad at
+<SYNC Start=7920><P Class=KRCC>
+&nbsp;
+<SYNC Start=7921><P Class=KRCC>
+us. On Android, menu options are defined in XML
+<SYNC Start=11882><P Class=KRCC>
+&nbsp;
+<SYNC Start=11883><P Class=KRCC>
+and they can be declared for fragments or
+<SYNC Start=14440><P Class=KRCC>
+&nbsp;
+<SYNC Start=14441><P Class=KRCC>
+activities. When the fragment or activity is created, it
+<SYNC Start=18390><P Class=KRCC>
+&nbsp;
+<SYNC Start=18391><P Class=KRCC>
+inflates this XML into the actual menu items in
+<SYNC Start=21790><P Class=KRCC>
+&nbsp;
+<SYNC Start=21791><P Class=KRCC>
+the app. You'll see that there are Action buttons
+<SYNC Start=25440><P Class=KRCC>
+&nbsp;
+<SYNC Start=25441><P Class=KRCC>
+which are menu items that appear in the Action bar,
+<SYNC Start=28230><P Class=KRCC>
+&nbsp;
+<SYNC Start=28231><P Class=KRCC>
+such as this Search Menu item. This space is reserved
+<SYNC Start=31670><P Class=KRCC>
+&nbsp;
+<SYNC Start=31671><P Class=KRCC>
+for the most prominent actions in your app. Then anything
+<SYNC Start=34550><P Class=KRCC>
+&nbsp;
+<SYNC Start=34551><P Class=KRCC>
+else that's less important falls into the overflow menu by
+<SYNC Start=37990><P Class=KRCC>
+&nbsp;
+<SYNC Start=37991><P Class=KRCC>
+tapping on this button with the three dots. These menu
+<SYNC Start=40790><P Class=KRCC>
+&nbsp;
+<SYNC Start=40791><P Class=KRCC>
+items are ordered from most frequently used to least frequently
+<SYNC Start=44560><P Class=KRCC>
+&nbsp;
+<SYNC Start=44561><P Class=KRCC>
+used. And on larger devices that have more screen real
+<SYNC Start=47550><P Class=KRCC>
+&nbsp;
+<SYNC Start=47551><P Class=KRCC>
+estate, you can specify that some of these menu items can
+<SYNC Start=50710><P Class=KRCC>
+&nbsp;
+<SYNC Start=50711><P Class=KRCC>
+actually go into the Action bar if there's room. If
+<SYNC Start=54120><P Class=KRCC>
+&nbsp;
+<SYNC Start=54121><P Class=KRCC>
+you go back to our project in the Resources folder
+<SYNC Start=57160><P Class=KRCC>
+&nbsp;
+<SYNC Start=57161><P Class=KRCC>
+which is called res, there is a Menu folder and
+<SYNC Start=59660><P Class=KRCC>
+&nbsp;
+<SYNC Start=59661><P Class=KRCC>
+inside that there's a main.xml file. If you open that up
+<SYNC Start=63990><P Class=KRCC>
+&nbsp;
+<SYNC Start=63991><P Class=KRCC>
+you see the menu layout XML, and that there's a
+<SYNC Start=66360><P Class=KRCC>
+&nbsp;
+<SYNC Start=66361><P Class=KRCC>
+single menu option defined for Settings. It will never show up
+<SYNC Start=70130><P Class=KRCC>
+&nbsp;
+<SYNC Start=70131><P Class=KRCC>
+as an action in the Action bar, meaning that it
+<SYNC Start=72350><P Class=KRCC>
+&nbsp;
+<SYNC Start=72351><P Class=KRCC>
+will be in the Overflow menu. You can verify this by
+<SYNC Start=75780><P Class=KRCC>
+&nbsp;
+<SYNC Start=75781><P Class=KRCC>
+checking the app on your phone. To define the ordering
+<SYNC Start=78880><P Class=KRCC>
+&nbsp;
+<SYNC Start=78881><P Class=KRCC>
+of menu items, you can just add multiple items to this
+<SYNC Start=82200><P Class=KRCC>
+&nbsp;
+<SYNC Start=82201><P Class=KRCC>
+XML file, and then they will show up in that order
+<SYNC Start=84580><P Class=KRCC>
+&nbsp;
+<SYNC Start=84581><P Class=KRCC>
+in the app. If you don't like the order though, and
+<SYNC Start=87680><P Class=KRCC>
+&nbsp;
+<SYNC Start=87681><P Class=KRCC>
+you want to explicitly set it, then you can specify
+<SYNC Start=90460><P Class=KRCC>
+&nbsp;
+<SYNC Start=90461><P Class=KRCC>
+this order in Category, value. Right now it's set as 100,
+<SYNC Start=94030><P Class=KRCC>
+&nbsp;
+<SYNC Start=94031><P Class=KRCC>
+so that the Settings menu will be at the bottom of
+<SYNC Start=97460><P Class=KRCC>
+&nbsp;
+<SYNC Start=97461><P Class=KRCC>
+all the other menu options that we define in our app.
+<SYNC Start=100040><P Class=KRCC>
+&nbsp;
+<SYNC Start=101080><P Class=KRCC>
+The only Menu option that should show up below the Settings
+<SYNC Start=104250><P Class=KRCC>
+&nbsp;
+<SYNC Start=104251><P Class=KRCC>
+menu is the Help menu. Check out the link for more details.</BODY>
+</SAMI>

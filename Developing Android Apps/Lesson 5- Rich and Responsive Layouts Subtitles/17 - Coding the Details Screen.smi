@@ -1,0 +1,118 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=90><P Class=KRCC>
+You've implemented the main activity wireframe. So, now, we can move
+<SYNC Start=2840><P Class=KRCC>
+&nbsp;
+<SYNC Start=2841><P Class=KRCC>
+on to the detail activity wireframe. This is what it looks
+<SYNC Start=5800><P Class=KRCC>
+&nbsp;
+<SYNC Start=5801><P Class=KRCC>
+like. We have the date, the high and low temperatures, and
+<SYNC Start=8440><P Class=KRCC>
+&nbsp;
+<SYNC Start=8441><P Class=KRCC>
+then additional weather information. We also have the weather icon and
+<SYNC Start=11690><P Class=KRCC>
+&nbsp;
+<SYNC Start=11691><P Class=KRCC>
+the weather forecast. And these line up horizontally. Build up the
+<SYNC Start=14870><P Class=KRCC>
+&nbsp;
+<SYNC Start=14871><P Class=KRCC>
+layout XML for this wireframe. Then modify the detail fragments that
+<SYNC Start=19020><P Class=KRCC>
+&nbsp;
+<SYNC Start=19021><P Class=KRCC>
+you can populate all this information, including these new views. While
+<SYNC Start=22640><P Class=KRCC>
+&nbsp;
+<SYNC Start=22641><P Class=KRCC>
+you're doing that, you might as well move the detail fragment
+<SYNC Start=25220><P Class=KRCC>
+&nbsp;
+<SYNC Start=25221><P Class=KRCC>
+into its own file, so it's separate from the detail activity. At
+<SYNC Start=28550><P Class=KRCC>
+&nbsp;
+<SYNC Start=28551><P Class=KRCC>
+this point the detail fragment class is getting pretty long so you can
+<SYNC Start=31380><P Class=KRCC>
+&nbsp;
+<SYNC Start=31381><P Class=KRCC>
+move that into it its own file. Before you get started, I want
+<SYNC Start=34450><P Class=KRCC>
+&nbsp;
+<SYNC Start=34451><P Class=KRCC>
+to point out that this layout has information taking up a lot of
+<SYNC Start=37530><P Class=KRCC>
+&nbsp;
+<SYNC Start=37531><P Class=KRCC>
+vertical space. If you rotate your device into landscape mode, or you have
+<SYNC Start=41270><P Class=KRCC>
+&nbsp;
+<SYNC Start=41271><P Class=KRCC>
+a smaller height device, some of the content could get cut off. So
+<SYNC Start=44350><P Class=KRCC>
+&nbsp;
+<SYNC Start=44351><P Class=KRCC>
+think about how you can make this layout be vertically scrollable. To show
+<SYNC Start=47720><P Class=KRCC>
+&nbsp;
+<SYNC Start=47721><P Class=KRCC>
+you what I mean, I added a couple more lines of text at
+<SYNC Start=50280><P Class=KRCC>
+&nbsp;
+<SYNC Start=50281><P Class=KRCC>
+the bottom of the layout. Then I made the content vertically scrollable
+<SYNC Start=53240><P Class=KRCC>
+&nbsp;
+<SYNC Start=53241><P Class=KRCC>
+so you can see all the information. So go ahead and make that
+<SYNC Start=55930><P Class=KRCC>
+&nbsp;
+<SYNC Start=55931><P Class=KRCC>
+change to your layout as well. When you're done with all these
+<SYNC Start=58340><P Class=KRCC>
+&nbsp;
+<SYNC Start=58341><P Class=KRCC>
+steps, this is what the app should look like. We don't care about
+<SYNC Start=60910><P Class=KRCC>
+&nbsp;
+<SYNC Start=60911><P Class=KRCC>
+the visual details now. We just want to make sure the functionality is
+<SYNC Start=64000><P Class=KRCC>
+&nbsp;
+<SYNC Start=64001><P Class=KRCC>
+hooked up, so all the right information is displayed on screen. You can
+<SYNC Start=67210><P Class=KRCC>
+&nbsp;
+<SYNC Start=67211><P Class=KRCC>
+use the code snippets provided below
+<SYNC Start=68930><P Class=KRCC>
+&nbsp;
+<SYNC Start=68931><P Class=KRCC>
+for helper functions and strings that you're
+<SYNC Start=70860><P Class=KRCC>
+&nbsp;
+<SYNC Start=70861><P Class=KRCC>
+going to need. And again, leaving a placeholder image is fine for now</BODY>
+</SAMI>

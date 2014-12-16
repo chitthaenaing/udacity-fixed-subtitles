@@ -1,0 +1,50 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=370><P Class=KRCC>
+We start by right-clicking on our package name to create the new activity from
+<SYNC Start=4070><P Class=KRCC>
+&nbsp;
+<SYNC Start=4071><P Class=KRCC>
+the Blank Activity with Fragment template. So
+<SYNC Start=7620><P Class=KRCC>
+&nbsp;
+<SYNC Start=7621><P Class=KRCC>
+for name, we use DetailActivity, and again, the
+<SYNC Start=11950><P Class=KRCC>
+&nbsp;
+<SYNC Start=11951><P Class=KRCC>
+hierarchical parent of this class is going to be our main activity. So as you
+<SYNC Start=17930><P Class=KRCC>
+&nbsp;
+<SYNC Start=17931><P Class=KRCC>
+can see, we now have a new
+<SYNC Start=19840><P Class=KRCC>
+&nbsp;
+<SYNC Start=19841><P Class=KRCC>
+DetailActivity along with the XML for activity_detail and
+<SYNC Start=25380><P Class=KRCC>
+&nbsp;
+<SYNC Start=25381><P Class=KRCC>
+a fragment associated with that activity. Great! You're
+<SYNC Start=29070><P Class=KRCC>
+&nbsp;
+<SYNC Start=29071><P Class=KRCC>
+done. But we still aren't launching our new activity.</BODY>
+</SAMI>

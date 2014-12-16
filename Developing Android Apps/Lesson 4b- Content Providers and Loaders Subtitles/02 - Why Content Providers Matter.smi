@@ -1,0 +1,210 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=470><P Class=KRCC>
+Before we go ahead and build a content provider
+<SYNC Start=2400><P Class=KRCC>
+&nbsp;
+<SYNC Start=2401><P Class=KRCC>
+you wouldn't be out of line to ask, well why.
+<SYNC Start=5280><P Class=KRCC>
+&nbsp;
+<SYNC Start=7250><P Class=KRCC>
+The simplest answer is that it allows you to
+<SYNC Start=9060><P Class=KRCC>
+&nbsp;
+<SYNC Start=9061><P Class=KRCC>
+share your data safely and efficiently across app boundaries by
+<SYNC Start=12540><P Class=KRCC>
+&nbsp;
+<SYNC Start=12541><P Class=KRCC>
+abstracting the underlying data source, be it SQLite like
+<SYNC Start=15520><P Class=KRCC>
+&nbsp;
+<SYNC Start=15521><P Class=KRCC>
+this or files or really anything else. So that other
+<SYNC Start=19080><P Class=KRCC>
+&nbsp;
+<SYNC Start=19081><P Class=KRCC>
+apps can access it without really needing to understand how
+<SYNC Start=21870><P Class=KRCC>
+&nbsp;
+<SYNC Start=21871><P Class=KRCC>
+you stored it. In fact, the calendar, SMS, and contacts
+<SYNC Start=25650><P Class=KRCC>
+&nbsp;
+<SYNC Start=25651><P Class=KRCC>
+APIs work that way, using shared content providers.
+<SYNC Start=29620><P Class=KRCC>
+&nbsp;
+<SYNC Start=29621><P Class=KRCC>
+We're going to share our weather database later, but if
+<SYNC Start=31780><P Class=KRCC>
+&nbsp;
+<SYNC Start=31781><P Class=KRCC>
+you're not planning to expose your app's data, you're
+<SYNC Start=34370><P Class=KRCC>
+&nbsp;
+<SYNC Start=34371><P Class=KRCC>
+probably thinking you can skip this bit, right? Well,
+<SYNC Start=38160><P Class=KRCC>
+&nbsp;
+<SYNC Start=38161><P Class=KRCC>
+almost, in a lot of cases you could,
+<SYNC Start=40770><P Class=KRCC>
+&nbsp;
+<SYNC Start=40771><P Class=KRCC>
+but really shouldn't. For example, in Sunshine we're using
+<SYNC Start=44970><P Class=KRCC>
+&nbsp;
+<SYNC Start=44971><P Class=KRCC>
+SQ Lite. But you could be storing data in
+<SYNC Start=47380><P Class=KRCC>
+&nbsp;
+<SYNC Start=47381><P Class=KRCC>
+files, dynamic run-time data or even just a different
+<SYNC Start=50680><P Class=KRCC>
+&nbsp;
+<SYNC Start=50681><P Class=KRCC>
+database library. By using content providers, it's easier for
+<SYNC Start=55040><P Class=KRCC>
+&nbsp;
+<SYNC Start=55041><P Class=KRCC>
+you to potentially switch out the data source and
+<SYNC Start=57380><P Class=KRCC>
+&nbsp;
+<SYNC Start=57381><P Class=KRCC>
+much easier for someone other than you to manage
+<SYNC Start=59740><P Class=KRCC>
+&nbsp;
+<SYNC Start=59741><P Class=KRCC>
+the UI layer code without them having to understand
+<SYNC Start=62410><P Class=KRCC>
+&nbsp;
+<SYNC Start=62411><P Class=KRCC>
+the depths of your data storage implementation. On the
+<SYNC Start=65459><P Class=KRCC>
+&nbsp;
+<SYNC Start=65460><P Class=KRCC>
+UI layer, it's a generic mechanism that returns cursors.
+<SYNC Start=69070><P Class=KRCC>
+&nbsp;
+<SYNC Start=69071><P Class=KRCC>
+The same of those returned by SQLite databases. So,
+<SYNC Start=72270><P Class=KRCC>
+&nbsp;
+<SYNC Start=72271><P Class=KRCC>
+if your data layer implementation changes, then your content provider
+<SYNC Start=75690><P Class=KRCC>
+&nbsp;
+<SYNC Start=75691><P Class=KRCC>
+is effected. Still, it's just you writing the code right
+<SYNC Start=79390><P Class=KRCC>
+&nbsp;
+<SYNC Start=79391><P Class=KRCC>
+now and that's a lot of boilerplate for the sake of
+<SYNC Start=81520><P Class=KRCC>
+&nbsp;
+<SYNC Start=81521><P Class=KRCC>
+following a neat design pattern. Well, keep in mind that
+<SYNC Start=84690><P Class=KRCC>
+&nbsp;
+<SYNC Start=84691><P Class=KRCC>
+as far as the framework is concerned, all data is handled
+<SYNC Start=87730><P Class=KRCC>
+&nbsp;
+<SYNC Start=87731><P Class=KRCC>
+through content providers. So, if you want to interact with
+<SYNC Start=91027><P Class=KRCC>
+&nbsp;
+<SYNC Start=91028><P Class=KRCC>
+anything outside of your app, such as sending data to a
+<SYNC Start=93790><P Class=KRCC>
+&nbsp;
+<SYNC Start=93791><P Class=KRCC>
+widget or returning search results from the newer app, you'll need
+<SYNC Start=97770><P Class=KRCC>
+&nbsp;
+<SYNC Start=97771><P Class=KRCC>
+a content provider for that too. In fact, that's how the
+<SYNC Start=100770><P Class=KRCC>
+&nbsp;
+<SYNC Start=100771><P Class=KRCC>
+Google play store and Gmail widgets work. As well as the
+<SYNC Start=103760><P Class=KRCC>
+&nbsp;
+<SYNC Start=103761><P Class=KRCC>
+ability to get search results from Google Play. Similarly, there's a bunch
+<SYNC Start=107920><P Class=KRCC>
+&nbsp;
+<SYNC Start=107921><P Class=KRCC>
+of APIs designed to optimize the process of synching and querying data,
+<SYNC Start=111960><P Class=KRCC>
+&nbsp;
+<SYNC Start=111961><P Class=KRCC>
+and updating UI accordingly. And all of them also expect content providers.
+<SYNC Start=116580><P Class=KRCC>
+&nbsp;
+<SYNC Start=120490><P Class=KRCC>
+That includes sync adapters and cursor loaders. Which make your
+<SYNC Start=123950><P Class=KRCC>
+&nbsp;
+<SYNC Start=123951><P Class=KRCC>
+app able to efficiently sync with your server, load data in
+<SYNC Start=127140><P Class=KRCC>
+&nbsp;
+<SYNC Start=127141><P Class=KRCC>
+your UI layer, and which include built in content observers that
+<SYNC Start=130360><P Class=KRCC>
+&nbsp;
+<SYNC Start=130361><P Class=KRCC>
+will update your UI automatically when the underlying data changes. You
+<SYNC Start=134167><P Class=KRCC>
+&nbsp;
+<SYNC Start=134168><P Class=KRCC>
+could, of course, build all of that yourself but at
+<SYNC Start=137680><P Class=KRCC>
+&nbsp;
+<SYNC Start=137681><P Class=KRCC>
+a certain point the advantage you gained by not writing a
+<SYNC Start=140350><P Class=KRCC>
+&nbsp;
+<SYNC Start=140351><P Class=KRCC>
+content provider to begin with is lost in the process of
+<SYNC Start=143280><P Class=KRCC>
+&nbsp;
+<SYNC Start=143281><P Class=KRCC>
+having to recreate all of the useful clusters that utilize it.
+<SYNC Start=146900><P Class=KRCC>
+&nbsp;
+<SYNC Start=146901><P Class=KRCC>
+We'll take a look at publishing your content provider and using Lotus
+<SYNC Start=150160><P Class=KRCC>
+&nbsp;
+<SYNC Start=150161><P Class=KRCC>
+to access it efficiently later in this lesson. And we'll explore sync adapters
+<SYNC Start=153980><P Class=KRCC>
+&nbsp;
+<SYNC Start=153981><P Class=KRCC>
+in lesson six when we look at doing efficient background updates. But
+<SYNC Start=157820><P Class=KRCC>
+&nbsp;
+<SYNC Start=157821><P Class=KRCC>
+first, Dan is going to show you how to actually build a content provider.</BODY>
+</SAMI>

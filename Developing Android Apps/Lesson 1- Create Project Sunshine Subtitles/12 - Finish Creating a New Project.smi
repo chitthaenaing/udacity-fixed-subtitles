@@ -1,0 +1,142 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=410><P Class=KRCC>
+Thanks Rado, for telling us about the importance of proper dessert selection.
+<SYNC Start=4410><P Class=KRCC>
+&nbsp;
+<SYNC Start=4411><P Class=KRCC>
+Let's choose our dessert now. At the current time,
+<SYNC Start=6950><P Class=KRCC>
+&nbsp;
+<SYNC Start=6951><P Class=KRCC>
+choosing Gingerbread covers 99% of the devices active on the Google Play store.
+<SYNC Start=12190><P Class=KRCC>
+&nbsp;
+<SYNC Start=12191><P Class=KRCC>
+It's also the cutout for using Google Play services, for things like maps and
+<SYNC Start=15920><P Class=KRCC>
+&nbsp;
+<SYNC Start=15921><P Class=KRCC>
+location, and the Android support library. The support library package
+<SYNC Start=19830><P Class=KRCC>
+&nbsp;
+<SYNC Start=19831><P Class=KRCC>
+offers an implementation of UI features that were added in later releases. But
+<SYNC Start=24230><P Class=KRCC>
+&nbsp;
+<SYNC Start=24231><P Class=KRCC>
+now can be used on older versions of the platform, like Gingerbread.
+<SYNC Start=27230><P Class=KRCC>
+&nbsp;
+<SYNC Start=27231><P Class=KRCC>
+We pick the latest version of Gingerbread at API level 10, because it contains
+<SYNC Start=31728><P Class=KRCC>
+&nbsp;
+<SYNC Start=31729><P Class=KRCC>
+bug fixes that API level 9 doesn't have. Then we go ahead and click Next. We're
+<SYNC Start=36540><P Class=KRCC>
+&nbsp;
+<SYNC Start=36541><P Class=KRCC>
+presented with a list of templates that we can choose from in order to create
+<SYNC Start=40020><P Class=KRCC>
+&nbsp;
+<SYNC Start=40021><P Class=KRCC>
+our new app. We're going to pick the Blank Activity with Fragment Template.
+<SYNC Start=44440><P Class=KRCC>
+&nbsp;
+<SYNC Start=45470><P Class=KRCC>
+For background context, an activity serves as the presentation layer for our UI.
+<SYNC Start=50630><P Class=KRCC>
+&nbsp;
+<SYNC Start=50631><P Class=KRCC>
+And the fragment within it represents a behavior or portion of the screen.
+<SYNC Start=54620><P Class=KRCC>
+&nbsp;
+<SYNC Start=54621><P Class=KRCC>
+Go ahead and click Next. We call our activity main activity. And the layout
+<SYNC Start=59221><P Class=KRCC>
+&nbsp;
+<SYNC Start=59222><P Class=KRCC>
+comes from the activity_main XML file. In similar fashion, the Fragments layout
+<SYNC Start=64519><P Class=KRCC>
+&nbsp;
+<SYNC Start=64520><P Class=KRCC>
+comes from the fragment_main XML file. Then we go ahead and hit Finish.
+<SYNC Start=69060><P Class=KRCC>
+&nbsp;
+<SYNC Start=69061><P Class=KRCC>
+You should have your newly created Sunshine app with the files on the left here.
+<SYNC Start=72680><P Class=KRCC>
+&nbsp;
+<SYNC Start=72681><P Class=KRCC>
+Make sure you wait for the Gradel Build to finish. If you still see errors,
+<SYNC Start=76170><P Class=KRCC>
+&nbsp;
+<SYNC Start=76171><P Class=KRCC>
+you can check the Guide and Instructor notes below on how to troubleshoot.
+<SYNC Start=79450><P Class=KRCC>
+&nbsp;
+<SYNC Start=79451><P Class=KRCC>
+As a tip, you can check your Min and Target SDK versions in the build out Gradle
+<SYNC Start=83620><P Class=KRCC>
+&nbsp;
+<SYNC Start=83621><P Class=KRCC>
+file located under the app Source folder. We want the compile SDK version and
+<SYNC Start=88030><P Class=KRCC>
+&nbsp;
+<SYNC Start=88031><P Class=KRCC>
+the target SDK version to point to the latest table version of the platform.
+<SYNC Start=92130><P Class=KRCC>
+&nbsp;
+<SYNC Start=92131><P Class=KRCC>
+In this case, it's 19 and not L. Once you have no errors,
+<SYNC Start=96040><P Class=KRCC>
+&nbsp;
+<SYNC Start=96041><P Class=KRCC>
+we can add a custom app icon that'll be more fitting for
+<SYNC Start=98960><P Class=KRCC>
+&nbsp;
+<SYNC Start=98961><P Class=KRCC>
+our weather app. Right-click on the app folder and go to New Image Asset.
+<SYNC Start=102610><P Class=KRCC>
+&nbsp;
+<SYNC Start=102611><P Class=KRCC>
+Download the icon that we provide in the link below, then go ahead and
+<SYNC Start=105640><P Class=KRCC>
+&nbsp;
+<SYNC Start=105641><P Class=KRCC>
+find that icon. And here you can see a preview of our temporary app icon.
+<SYNC Start=110592><P Class=KRCC>
+&nbsp;
+<SYNC Start=110593><P Class=KRCC>
+We're going to get a better one in less than five. Then go ahead and
+<SYNC Start=113240><P Class=KRCC>
+&nbsp;
+<SYNC Start=113241><P Class=KRCC>
+click Next and Finish. And the new icon shows up in the Drawable folders.
+<SYNC Start=117450><P Class=KRCC>
+&nbsp;
+<SYNC Start=117451><P Class=KRCC>
+Go ahead and try it yourself. Make sure you're using the same settings as we
+<SYNC Start=120700><P Class=KRCC>
+&nbsp;
+<SYNC Start=120701><P Class=KRCC>
+have by checking the link below. Click here when you're done.</BODY>
+</SAMI>

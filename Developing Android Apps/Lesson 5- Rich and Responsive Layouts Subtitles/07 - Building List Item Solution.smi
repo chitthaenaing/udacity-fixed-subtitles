@@ -1,0 +1,182 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=140><P Class=KRCC>
+To build up this list item we created a horizontal linear layout with three
+<SYNC Start=3920><P Class=KRCC>
+&nbsp;
+<SYNC Start=3921><P Class=KRCC>
+children. The first child is an image view. The second child is a vertical
+<SYNC Start=8470><P Class=KRCC>
+&nbsp;
+<SYNC Start=8471><P Class=KRCC>
+linear layout composed of two text views stacked on top of each other.
+<SYNC Start=11980><P Class=KRCC>
+&nbsp;
+<SYNC Start=11981><P Class=KRCC>
+The third child is the same. It's a vertical linear layout composed of
+<SYNC Start=15200><P Class=KRCC>
+&nbsp;
+<SYNC Start=15201><P Class=KRCC>
+the two temperature text views stacked on top of each other.
+<SYNC Start=17480><P Class=KRCC>
+&nbsp;
+<SYNC Start=17481><P Class=KRCC>
+Now you might be wondering why we didn't use a relative layout.
+<SYNC Start=20370><P Class=KRCC>
+&nbsp;
+<SYNC Start=20371><P Class=KRCC>
+Because that would give us less layers of hierarchy. Well, relative layouts
+<SYNC Start=24354><P Class=KRCC>
+&nbsp;
+<SYNC Start=24355><P Class=KRCC>
+are good if you want to specify that one view should be to the right of another,
+<SYNC Start=29100><P Class=KRCC>
+&nbsp;
+<SYNC Start=29101><P Class=KRCC>
+or on top of another view. Relative layouts are also good if you want a view to
+<SYNC Start=33545><P Class=KRCC>
+&nbsp;
+<SYNC Start=33546><P Class=KRCC>
+be aligned to the parents left, top, right or bottom. But it's harder in this
+<SYNC Start=37923><P Class=KRCC>
+&nbsp;
+<SYNC Start=37924><P Class=KRCC>
+case to center these two text views within the vertical height allocated by this
+<SYNC Start=42042><P Class=KRCC>
+&nbsp;
+<SYNC Start=42043><P Class=KRCC>
+image view. It's easier with the linear layout here and here, so if the image
+<SYNC Start=46190><P Class=KRCC>
+&nbsp;
+<SYNC Start=46191><P Class=KRCC>
+was any taller, these two text views would still stay vertically centered. And
+<SYNC Start=50140><P Class=KRCC>
+&nbsp;
+<SYNC Start=50141><P Class=KRCC>
+this is what it looks like in the Device Preview within Android Studio.
+<SYNC Start=53860><P Class=KRCC>
+&nbsp;
+<SYNC Start=53861><P Class=KRCC>
+I want to point out one thing about this horizontal linear layout,
+<SYNC Start=56530><P Class=KRCC>
+&nbsp;
+<SYNC Start=56531><P Class=KRCC>
+which has three children. The image view, the vertical linear layout, and
+<SYNC Start=59880><P Class=KRCC>
+&nbsp;
+<SYNC Start=59881><P Class=KRCC>
+the other vertical linear layout. The second child actually has a width of zero
+<SYNC Start=64483><P Class=KRCC>
+&nbsp;
+<SYNC Start=64484><P Class=KRCC>
+DP but a weight of one. That means that any horizontal space that's not taken up
+<SYNC Start=69110><P Class=KRCC>
+&nbsp;
+<SYNC Start=69111><P Class=KRCC>
+by other children will be distributed among views that have assigned weights. So
+<SYNC Start=74470><P Class=KRCC>
+&nbsp;
+<SYNC Start=74471><P Class=KRCC>
+if we look at this third child, it has a width of wrap content and
+<SYNC Start=78430><P Class=KRCC>
+&nbsp;
+<SYNC Start=78431><P Class=KRCC>
+a weight of zero. If we gave it a weight of one,
+<SYNC Start=81000><P Class=KRCC>
+&nbsp;
+<SYNC Start=81001><P Class=KRCC>
+then it would stretch out like this. Basically the icon is a fixed width, and
+<SYNC Start=85070><P Class=KRCC>
+&nbsp;
+<SYNC Start=85071><P Class=KRCC>
+then the remaining horizontal space is divided among these two children.
+<SYNC Start=88560><P Class=KRCC>
+&nbsp;
+<SYNC Start=88561><P Class=KRCC>
+Since they both have a weight one, it's distributed equally. But if you look at
+<SYNC Start=91970><P Class=KRCC>
+&nbsp;
+<SYNC Start=91971><P Class=KRCC>
+the wire frames, these temperature views are actually aligned to the right. So
+<SYNC Start=95840><P Class=KRCC>
+&nbsp;
+<SYNC Start=95841><P Class=KRCC>
+all we need is for the width to be wrap content, and for the weight to be zero.
+<SYNC Start=99930><P Class=KRCC>
+&nbsp;
+<SYNC Start=99931><P Class=KRCC>
+Then any remaining horizontal space will be assigned to this middle element,
+<SYNC Start=103690><P Class=KRCC>
+&nbsp;
+<SYNC Start=103691><P Class=KRCC>
+with a weight of one. And this is the code for the xml layout.
+<SYNC Start=106480><P Class=KRCC>
+&nbsp;
+<SYNC Start=106481><P Class=KRCC>
+We have a linear layout in horizontal orientation. The width is match parent to
+<SYNC Start=110770><P Class=KRCC>
+&nbsp;
+<SYNC Start=110771><P Class=KRCC>
+match the width of the screen, and each list item has wrap content on its
+<SYNC Start=114590><P Class=KRCC>
+&nbsp;
+<SYNC Start=114591><P Class=KRCC>
+height. But it does have a minimum height at least of this attribute,
+<SYNC Start=118230><P Class=KRCC>
+&nbsp;
+<SYNC Start=118231><P Class=KRCC>
+list preferred item height. We specify gravity to be center vertical so that
+<SYNC Start=122140><P Class=KRCC>
+&nbsp;
+<SYNC Start=122141><P Class=KRCC>
+all of its children are vertically centered within it. We also specify a little
+<SYNC Start=125790><P Class=KRCC>
+&nbsp;
+<SYNC Start=125791><P Class=KRCC>
+bit of padding. Inside of it, we add an image view, which has wrap content for
+<SYNC Start=130120><P Class=KRCC>
+&nbsp;
+<SYNC Start=130121><P Class=KRCC>
+height and width. And we specify the source as this placeholder drawable.
+<SYNC Start=134630><P Class=KRCC>
+&nbsp;
+<SYNC Start=134631><P Class=KRCC>
+Next we have the vertical linear layout, where the width is zero DP and
+<SYNC Start=137720><P Class=KRCC>
+&nbsp;
+<SYNC Start=137721><P Class=KRCC>
+the weight is one. We specify a little bit of padding between this view and
+<SYNC Start=141643><P Class=KRCC>
+&nbsp;
+<SYNC Start=141644><P Class=KRCC>
+the icon beside it. Within the linear layout,
+<SYNC Start=144060><P Class=KRCC>
+&nbsp;
+<SYNC Start=144061><P Class=KRCC>
+we have the date_textview as well as the forecast_textview. Beside that,
+<SYNC Start=148390><P Class=KRCC>
+&nbsp;
+<SYNC Start=148391><P Class=KRCC>
+we have another vertical linear layout with the high temperature_textview and
+<SYNC Start=151930><P Class=KRCC>
+&nbsp;
+<SYNC Start=151931><P Class=KRCC>
+the low temperature_textview. And that's it.</BODY>
+</SAMI>

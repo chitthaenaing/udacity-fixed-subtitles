@@ -1,0 +1,46 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=350><P Class=KRCC>
+All right. Now for a little fun exercise. If data that we needed to store
+<SYNC Start=4730><P Class=KRCC>
+&nbsp;
+<SYNC Start=4731><P Class=KRCC>
+included images or other binary data, how would
+<SYNC Start=8180><P Class=KRCC>
+&nbsp;
+<SYNC Start=8181><P Class=KRCC>
+we store it? Would we put the raw
+<SYNC Start=10580><P Class=KRCC>
+&nbsp;
+<SYNC Start=10581><P Class=KRCC>
+data in the database? Would we store files
+<SYNC Start=13530><P Class=KRCC>
+&nbsp;
+<SYNC Start=13531><P Class=KRCC>
+into a public folder on the device? Or
+<SYNC Start=16590><P Class=KRCC>
+&nbsp;
+<SYNC Start=16591><P Class=KRCC>
+would we store the files in a private
+<SYNC Start=18340><P Class=KRCC>
+&nbsp;
+<SYNC Start=18341><P Class=KRCC>
+folder, and reference the location in the database?</BODY>
+</SAMI>

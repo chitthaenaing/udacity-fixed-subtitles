@@ -1,0 +1,90 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=320><P Class=KRCC>
+Before we go any further, I need to
+<SYNC Start=1800><P Class=KRCC>
+&nbsp;
+<SYNC Start=1801><P Class=KRCC>
+jump in here. Catherine has already said that
+<SYNC Start=4110><P Class=KRCC>
+&nbsp;
+<SYNC Start=4111><P Class=KRCC>
+the refresh button is for debugging only, but
+<SYNC Start=6410><P Class=KRCC>
+&nbsp;
+<SYNC Start=6411><P Class=KRCC>
+let's look at why. In real life, you
+<SYNC Start=8600><P Class=KRCC>
+&nbsp;
+<SYNC Start=8601><P Class=KRCC>
+should always seek to eliminate the refresh button
+<SYNC Start=10720><P Class=KRCC>
+&nbsp;
+<SYNC Start=10721><P Class=KRCC>
+from your app. A good app should work
+<SYNC Start=12970><P Class=KRCC>
+&nbsp;
+<SYNC Start=12971><P Class=KRCC>
+like a good butler, giving you what you want before you even have to ask for
+<SYNC Start=16560><P Class=KRCC>
+&nbsp;
+<SYNC Start=19360><P Class=KRCC>
+it.
+<SYNC Start=19860><P Class=KRCC>
+&nbsp;
+<SYNC Start=21720><P Class=KRCC>
+Much like the Save button, it's a relic of a
+<SYNC Start=23720><P Class=KRCC>
+&nbsp;
+<SYNC Start=23721><P Class=KRCC>
+bygone age. That's the best a reassuring safety blanket for those
+<SYNC Start=27370><P Class=KRCC>
+&nbsp;
+<SYNC Start=27371><P Class=KRCC>
+of us who grew up with floppy disks. With the ability
+<SYNC Start=30370><P Class=KRCC>
+&nbsp;
+<SYNC Start=30371><P Class=KRCC>
+to run background tasks or send messages directly from the server
+<SYNC Start=33670><P Class=KRCC>
+&nbsp;
+<SYNC Start=33671><P Class=KRCC>
+to our app, there's really no reason to force users
+<SYNC Start=36860><P Class=KRCC>
+&nbsp;
+<SYNC Start=36861><P Class=KRCC>
+to manually hit refresh. But the app is up to date
+<SYNC Start=39960><P Class=KRCC>
+&nbsp;
+<SYNC Start=39961><P Class=KRCC>
+and sync with the cloud should be a given. But like
+<SYNC Start=43300><P Class=KRCC>
+&nbsp;
+<SYNC Start=43301><P Class=KRCC>
+we said, this is for debugging, so like print line it's
+<SYNC Start=47230><P Class=KRCC>
+&nbsp;
+<SYNC Start=47231><P Class=KRCC>
+acceptable for this particular purpose. Let's also take a look at
+<SYNC Start=51370><P Class=KRCC>
+&nbsp;
+<SYNC Start=51371><P Class=KRCC>
+our background threading model, which of the following is potential an issue?</BODY>
+</SAMI>

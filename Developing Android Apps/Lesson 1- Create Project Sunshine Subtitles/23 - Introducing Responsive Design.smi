@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=620><P Class=KRCC>
+Imagine spending hours, crafting the perfect layout. What happens to
+<SYNC Start=4970><P Class=KRCC>
+&nbsp;
+<SYNC Start=4971><P Class=KRCC>
+that layout, when you rotate the device, into a landscape orientation?
+<SYNC Start=9540><P Class=KRCC>
+&nbsp;
+<SYNC Start=9541><P Class=KRCC>
+Or when it's run on a device, with a much larger screen? The good news,
+<SYNC Start=13850><P Class=KRCC>
+&nbsp;
+<SYNC Start=13851><P Class=KRCC>
+is that Android provides excellent tools to help you with layouts.
+<SYNC Start=17400><P Class=KRCC>
+&nbsp;
+<SYNC Start=17401><P Class=KRCC>
+You'll want to understand them to make your app look amazing across the wide
+<SYNC Start=21150><P Class=KRCC>
+&nbsp;
+<SYNC Start=21151><P Class=KRCC>
+variety of phones, tablets and other devices you'll want your app to work on.</BODY>
+</SAMI>

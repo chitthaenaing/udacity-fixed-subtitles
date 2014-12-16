@@ -1,0 +1,42 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=120><P Class=KRCC>
+This is a good time to revisit our final detailed wire frame.
+<SYNC Start=4110><P Class=KRCC>
+&nbsp;
+<SYNC Start=4111><P Class=KRCC>
+For each weather forecast, we're going to need to store at least the date,
+<SYNC Start=8160><P Class=KRCC>
+&nbsp;
+<SYNC Start=8161><P Class=KRCC>
+the condition, the high and low temperature,
+<SYNC Start=11710><P Class=KRCC>
+&nbsp;
+<SYNC Start=11711><P Class=KRCC>
+the humidity. The wind speed and direction, and the barometric pressure.
+<SYNC Start=17130><P Class=KRCC>
+&nbsp;
+<SYNC Start=17131><P Class=KRCC>
+Since our database will use row to represent each forecast day, we'll store
+<SYNC Start=22380><P Class=KRCC>
+&nbsp;
+<SYNC Start=22381><P Class=KRCC>
+each piece of data associated with the forecast in a separate column.</BODY>
+</SAMI>

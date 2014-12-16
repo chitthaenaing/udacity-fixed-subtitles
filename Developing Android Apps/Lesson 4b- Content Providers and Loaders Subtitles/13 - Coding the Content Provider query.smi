@@ -1,0 +1,98 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=80><P Class=KRCC>
+Let's continue coding our content provider. Query will be
+<SYNC Start=3130><P Class=KRCC>
+&nbsp;
+<SYNC Start=3131><P Class=KRCC>
+the most complex of the required content provider methods.
+<SYNC Start=6250><P Class=KRCC>
+&nbsp;
+<SYNC Start=7280><P Class=KRCC>
+We begin with the bones of the query operation.
+<SYNC Start=9730><P Class=KRCC>
+&nbsp;
+<SYNC Start=10810><P Class=KRCC>
+We use our SURI matcher object once again to
+<SYNC Start=13600><P Class=KRCC>
+&nbsp;
+<SYNC Start=13601><P Class=KRCC>
+switch on the type of URI. This is the
+<SYNC Start=16149><P Class=KRCC>
+&nbsp;
+<SYNC Start=16150><P Class=KRCC>
+only function where we will have to fill out
+<SYNC Start=18050><P Class=KRCC>
+&nbsp;
+<SYNC Start=18051><P Class=KRCC>
+every type of URI in the content provider. Several
+<SYNC Start=21540><P Class=KRCC>
+&nbsp;
+<SYNC Start=21541><P Class=KRCC>
+of them are used for querying only. We'll implement
+<SYNC Start=25300><P Class=KRCC>
+&nbsp;
+<SYNC Start=25301><P Class=KRCC>
+the basic weather query first. For this query, we
+<SYNC Start=29060><P Class=KRCC>
+&nbsp;
+<SYNC Start=29061><P Class=KRCC>
+just pass through all of the parameters to the
+<SYNC Start=30900><P Class=KRCC>
+&nbsp;
+<SYNC Start=30901><P Class=KRCC>
+database. Pretty simple stuff. Let's fix these parameters so
+<SYNC Start=34540><P Class=KRCC>
+&nbsp;
+<SYNC Start=34541><P Class=KRCC>
+they make some sense. So the strings here is
+<SYNC Start=36760><P Class=KRCC>
+&nbsp;
+<SYNC Start=36761><P Class=KRCC>
+actually a projection. S is a selection. The next
+<SYNC Start=40650><P Class=KRCC>
+&nbsp;
+<SYNC Start=40651><P Class=KRCC>
+array is selectionArgs. In the last string is sort
+<SYNC Start=43970><P Class=KRCC>
+&nbsp;
+<SYNC Start=43971><P Class=KRCC>
+order that matches a lot better. At the bottom
+<SYNC Start=47710><P Class=KRCC>
+&nbsp;
+<SYNC Start=47711><P Class=KRCC>
+of the function, we're going to set the notification
+<SYNC Start=50480><P Class=KRCC>
+&nbsp;
+<SYNC Start=50481><P Class=KRCC>
+URI for our cursor to the one that was passed into the function.
+<SYNC Start=54710><P Class=KRCC>
+&nbsp;
+<SYNC Start=54711><P Class=KRCC>
+This causes the cursor to register a content observer. To watch for changes that
+<SYNC Start=59790><P Class=KRCC>
+&nbsp;
+<SYNC Start=59791><P Class=KRCC>
+happen to that URI and any of its descendents. By descendents
+<SYNC Start=65830><P Class=KRCC>
+&nbsp;
+<SYNC Start=65831><P Class=KRCC>
+I mean any URI that begins with this path. But, we still need to test this.</BODY>
+</SAMI>

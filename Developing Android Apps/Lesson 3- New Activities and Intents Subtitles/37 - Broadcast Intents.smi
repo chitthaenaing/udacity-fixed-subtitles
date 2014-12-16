@@ -1,0 +1,86 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=330><P Class=KRCC>
+We've talked about using intents within Sunshine to start activities and send
+<SYNC Start=4098><P Class=KRCC>
+&nbsp;
+<SYNC Start=4099><P Class=KRCC>
+data between apps. But what if you want to broadcast a message to
+<SYNC Start=7390><P Class=KRCC>
+&nbsp;
+<SYNC Start=7391><P Class=KRCC>
+many apps? For example, the system will broadcast a message, saying that the
+<SYNC Start=11630><P Class=KRCC>
+&nbsp;
+<SYNC Start=11631><P Class=KRCC>
+device is charging or that it's just finished rebooting. To do that ourselves,
+<SYNC Start=16180><P Class=KRCC>
+&nbsp;
+<SYNC Start=19780><P Class=KRCC>
+we use the SendBroadcast method to broadcast an intent. And those broadcasts
+<SYNC Start=24350><P Class=KRCC>
+&nbsp;
+<SYNC Start=24351><P Class=KRCC>
+are received by broadcast receivers, typically
+<SYNC Start=26900><P Class=KRCC>
+&nbsp;
+<SYNC Start=26901><P Class=KRCC>
+referred to as simply, receivers. Using intent
+<SYNC Start=30430><P Class=KRCC>
+&nbsp;
+<SYNC Start=30431><P Class=KRCC>
+filters, like the ones we saw earlier, they indicate which broadcast they're
+<SYNC Start=34010><P Class=KRCC>
+&nbsp;
+<SYNC Start=34011><P Class=KRCC>
+interested in. So if we return to our envelope metaphor from earlier, in
+<SYNC Start=37960><P Class=KRCC>
+&nbsp;
+<SYNC Start=41070><P Class=KRCC>
+the case of a broadcast intent, your
+<SYNC Start=43080><P Class=KRCC>
+&nbsp;
+<SYNC Start=43081><P Class=KRCC>
+envelope is basically addressed to any broadcast receiver
+<SYNC Start=47140><P Class=KRCC>
+&nbsp;
+<SYNC Start=47141><P Class=KRCC>
+that's interested in knowing that this event has
+<SYNC Start=49170><P Class=KRCC>
+&nbsp;
+<SYNC Start=49171><P Class=KRCC>
+happened. And it does that using intent filter.
+<SYNC Start=51940><P Class=KRCC>
+&nbsp;
+<SYNC Start=56490><P Class=KRCC>
+So intents, which are broadcast, are transmitted to every
+<SYNC Start=59670><P Class=KRCC>
+&nbsp;
+<SYNC Start=59671><P Class=KRCC>
+app with a broadcast receiver that has an intent
+<SYNC Start=61980><P Class=KRCC>
+&nbsp;
+<SYNC Start=61981><P Class=KRCC>
+filter telling the system your ideas are intriguing to
+<SYNC Start=65349><P Class=KRCC>
+&nbsp;
+<SYNC Start=65350><P Class=KRCC>
+me and I wish to subscribe to end user.</BODY>
+</SAMI>

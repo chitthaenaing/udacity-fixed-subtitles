@@ -1,0 +1,110 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=620><P Class=KRCC>
+If you open up the documentation, you can see a
+<SYNC Start=2560><P Class=KRCC>
+&nbsp;
+<SYNC Start=2561><P Class=KRCC>
+couple of examples of typical screen widths. Then it suggests how
+<SYNC Start=6100><P Class=KRCC>
+&nbsp;
+<SYNC Start=6101><P Class=KRCC>
+you can setup your layout folders, so that you can
+<SYNC Start=8260><P Class=KRCC>
+&nbsp;
+<SYNC Start=8261><P Class=KRCC>
+have a different mean activity layout for tablets versus for handsets.
+<SYNC Start=12100><P Class=KRCC>
+&nbsp;
+<SYNC Start=12101><P Class=KRCC>
+And here we define tablets as having a smallest width
+<SYNC Start=14940><P Class=KRCC>
+&nbsp;
+<SYNC Start=14941><P Class=KRCC>
+of at least 600 dp. To customize the UI further, we
+<SYNC Start=18380><P Class=KRCC>
+&nbsp;
+<SYNC Start=18381><P Class=KRCC>
+can create a layout-sw720dp folder. That way, we can have a
+<SYNC Start=22400><P Class=KRCC>
+&nbsp;
+<SYNC Start=22401><P Class=KRCC>
+different main activity layout for ten inch tablets versus for seven
+<SYNC Start=25680><P Class=KRCC>
+&nbsp;
+<SYNC Start=25681><P Class=KRCC>
+inch tablets versus for handsets. So back to
+<SYNC Start=29140><P Class=KRCC>
+&nbsp;
+<SYNC Start=29141><P Class=KRCC>
+our quiz. We need to define activity_main.xml file in
+<SYNC Start=33130><P Class=KRCC>
+&nbsp;
+<SYNC Start=33131><P Class=KRCC>
+our base layout folder so that we can accomplish
+<SYNC Start=35630><P Class=KRCC>
+&nbsp;
+<SYNC Start=35631><P Class=KRCC>
+this layout on the phone. This layout applies to
+<SYNC Start=37840><P Class=KRCC>
+&nbsp;
+<SYNC Start=37841><P Class=KRCC>
+both phone, portrait, and landscape, so we don't need
+<SYNC Start=40840><P Class=KRCC>
+&nbsp;
+<SYNC Start=40841><P Class=KRCC>
+a special version of the layout in the layout
+<SYNC Start=42755><P Class=KRCC>
+&nbsp;
+<SYNC Start=42756><P Class=KRCC>
+lan folder. We do also need to declare activitymain.xml
+<SYNC Start=46704><P Class=KRCC>
+&nbsp;
+<SYNC Start=46705><P Class=KRCC>
+in the layout-sw600dp folder. That way it will override
+<SYNC Start=50680><P Class=KRCC>
+&nbsp;
+<SYNC Start=50681><P Class=KRCC>
+the one pane UI and use a two pane UI in this case. It will be
+<SYNC Start=54240><P Class=KRCC>
+&nbsp;
+<SYNC Start=54241><P Class=KRCC>
+picked up on devices that have greater than
+<SYNC Start=56430><P Class=KRCC>
+&nbsp;
+<SYNC Start=56431><P Class=KRCC>
+600 gp in both width and height. That
+<SYNC Start=58760><P Class=KRCC>
+&nbsp;
+<SYNC Start=58761><P Class=KRCC>
+means seven inch and ten inch devices in
+<SYNC Start=61440><P Class=KRCC>
+&nbsp;
+<SYNC Start=61441><P Class=KRCC>
+both portrait and landscape mode. And lastly, we
+<SYNC Start=64140><P Class=KRCC>
+&nbsp;
+<SYNC Start=64141><P Class=KRCC>
+don't need layout-sw720dp because we don't have different
+<SYNC Start=67870><P Class=KRCC>
+&nbsp;
+<SYNC Start=67871><P Class=KRCC>
+layouts for seven inch versus ten inch devices.</BODY>
+</SAMI>

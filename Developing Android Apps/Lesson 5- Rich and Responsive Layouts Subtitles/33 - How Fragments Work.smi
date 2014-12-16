@@ -1,0 +1,218 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=1090><P Class=KRCC>
+So if we treat fragments as mini activities, each with
+<SYNC Start=4000><P Class=KRCC>
+&nbsp;
+<SYNC Start=4001><P Class=KRCC>
+its own independent life cycle in UI, how does that compare
+<SYNC Start=7510><P Class=KRCC>
+&nbsp;
+<SYNC Start=7511><P Class=KRCC>
+to the life cycle of a real activity? Well as
+<SYNC Start=10200><P Class=KRCC>
+&nbsp;
+<SYNC Start=10201><P Class=KRCC>
+you might expect the basic life cycle events are much the
+<SYNC Start=13490><P Class=KRCC>
+&nbsp;
+<SYNC Start=13491><P Class=KRCC>
+same as the parent activity, and as it moves through
+<SYNC Start=16140><P Class=KRCC>
+&nbsp;
+<SYNC Start=16141><P Class=KRCC>
+the cycles of starts, resumes, pauses, and stops those same life
+<SYNC Start=20288><P Class=KRCC>
+&nbsp;
+<SYNC Start=20289><P Class=KRCC>
+cycle events will be triggered within the fragment itself. So,
+<SYNC Start=23930><P Class=KRCC>
+&nbsp;
+<SYNC Start=23931><P Class=KRCC>
+in most cases, you can simply move anything that you would
+<SYNC Start=26140><P Class=KRCC>
+&nbsp;
+<SYNC Start=26141><P Class=KRCC>
+have put into the activities life cycle handles,
+<SYNC Start=29080><P Class=KRCC>
+&nbsp;
+<SYNC Start=29081><P Class=KRCC>
+into the corresponding fragment handles. With, of course, a
+<SYNC Start=32259><P Class=KRCC>
+&nbsp;
+<SYNC Start=32260><P Class=KRCC>
+couple of exceptions. Rather than building your UI here
+<SYNC Start=35460><P Class=KRCC>
+&nbsp;
+<SYNC Start=35461><P Class=KRCC>
+and onCreate, fragments introduced a new event specifically for
+<SYNC Start=40990><P Class=KRCC>
+&nbsp;
+<SYNC Start=40991><P Class=KRCC>
+this. OnCreate view is where you construct or inflate
+<SYNC Start=44260><P Class=KRCC>
+&nbsp;
+<SYNC Start=44261><P Class=KRCC>
+your UI, hook up to any data sources, and
+<SYNC Start=46470><P Class=KRCC>
+&nbsp;
+<SYNC Start=46471><P Class=KRCC>
+return it to the parent activity, which can then
+<SYNC Start=48440><P Class=KRCC>
+&nbsp;
+<SYNC Start=48441><P Class=KRCC>
+integrate it into its view hierarchy. There's a corresponding
+<SYNC Start=51692><P Class=KRCC>
+&nbsp;
+<SYNC Start=51693><P Class=KRCC>
+onDestroy view handler, which is called immediately before the
+<SYNC Start=54630><P Class=KRCC>
+&nbsp;
+<SYNC Start=54631><P Class=KRCC>
+fragment is added to the backstack, independent of the
+<SYNC Start=57240><P Class=KRCC>
+&nbsp;
+<SYNC Start=57241><P Class=KRCC>
+parent activity. Now keep in mind that the fragment
+<SYNC Start=60060><P Class=KRCC>
+&nbsp;
+<SYNC Start=60061><P Class=KRCC>
+manager can add any fragment transactions adding, removing, or replacing
+<SYNC Start=64450><P Class=KRCC>
+&nbsp;
+<SYNC Start=64451><P Class=KRCC>
+fragments to the back stack, with a single parent
+<SYNC Start=66720><P Class=KRCC>
+&nbsp;
+<SYNC Start=66721><P Class=KRCC>
+activity's actives. So a fragment can move through this
+<SYNC Start=70040><P Class=KRCC>
+&nbsp;
+<SYNC Start=70041><P Class=KRCC>
+cycle multiple times independent of the host activity. So
+<SYNC Start=73484><P Class=KRCC>
+&nbsp;
+<SYNC Start=73485><P Class=KRCC>
+onDestroy view is, where you should clean up any resources,
+<SYNC Start=76570><P Class=KRCC>
+&nbsp;
+<SYNC Start=76571><P Class=KRCC>
+specifically related to the UI, such as bitmaps in
+<SYNC Start=79870><P Class=KRCC>
+&nbsp;
+<SYNC Start=79871><P Class=KRCC>
+memory, cursors to data, anything like that to help ensure
+<SYNC Start=83470><P Class=KRCC>
+&nbsp;
+<SYNC Start=83471><P Class=KRCC>
+that your app's memory footprint isn't bloated by data that's
+<SYNC Start=86060><P Class=KRCC>
+&nbsp;
+<SYNC Start=86061><P Class=KRCC>
+not needed when the fragment isn't visible. Now as soon
+<SYNC Start=89950><P Class=KRCC>
+&nbsp;
+<SYNC Start=89951><P Class=KRCC>
+as the fragment is returned from the back stack, onCreate
+<SYNC Start=92860><P Class=KRCC>
+&nbsp;
+<SYNC Start=92861><P Class=KRCC>
+view is called, and you can re-create the UI and
+<SYNC Start=95360><P Class=KRCC>
+&nbsp;
+<SYNC Start=95361><P Class=KRCC>
+reconnect data sources before your fragment transitions through the rest
+<SYNC Start=98820><P Class=KRCC>
+&nbsp;
+<SYNC Start=98821><P Class=KRCC>
+of the life cycle to become active again. And because
+<SYNC Start=101810><P Class=KRCC>
+&nbsp;
+<SYNC Start=101811><P Class=KRCC>
+a fragment can only exist within an activity,
+<SYNC Start=103870><P Class=KRCC>
+&nbsp;
+<SYNC Start=105480><P Class=KRCC>
+we also need callbacks to tell us when a
+<SYNC Start=107280><P Class=KRCC>
+&nbsp;
+<SYNC Start=107281><P Class=KRCC>
+fragment is attached and detached from its parent. OnAttach
+<SYNC Start=111900><P Class=KRCC>
+&nbsp;
+<SYNC Start=111901><P Class=KRCC>
+is your opportunity to get a reference to the
+<SYNC Start=113930><P Class=KRCC>
+&nbsp;
+<SYNC Start=113931><P Class=KRCC>
+parent activity. While, onDetach is the last thing that
+<SYNC Start=117360><P Class=KRCC>
+&nbsp;
+<SYNC Start=117361><P Class=KRCC>
+happens, even after your fragment has technically been destroyed.
+<SYNC Start=121430><P Class=KRCC>
+&nbsp;
+<SYNC Start=121431><P Class=KRCC>
+Now, the final piece of the puzzle is onActivity
+<SYNC Start=123779><P Class=KRCC>
+&nbsp;
+<SYNC Start=123780><P Class=KRCC>
+created. This notifies our fragment that the parent activity
+<SYNC Start=127060><P Class=KRCC>
+&nbsp;
+<SYNC Start=127061><P Class=KRCC>
+has completed its own create handler and represents the point
+<SYNC Start=129990><P Class=KRCC>
+&nbsp;
+<SYNC Start=129991><P Class=KRCC>
+at which we can safely interact with its UI. Potentially
+<SYNC Start=132900><P Class=KRCC>
+&nbsp;
+<SYNC Start=132901><P Class=KRCC>
+including other fragments. Now, just like the activity lifecyle we
+<SYNC Start=136460><P Class=KRCC>
+&nbsp;
+<SYNC Start=136461><P Class=KRCC>
+discussed in lesson three, once the fragment is no longer
+<SYNC Start=139410><P Class=KRCC>
+&nbsp;
+<SYNC Start=139411><P Class=KRCC>
+visible, there's a chance it will be terminated with no
+<SYNC Start=142040><P Class=KRCC>
+&nbsp;
+<SYNC Start=142041><P Class=KRCC>
+further code being executed. That can happen, after onStop, in
+<SYNC Start=145730><P Class=KRCC>
+&nbsp;
+<SYNC Start=145731><P Class=KRCC>
+the case of the activity being terminated while the fragment
+<SYNC Start=148680><P Class=KRCC>
+&nbsp;
+<SYNC Start=148681><P Class=KRCC>
+is part of that activity's view hierarchy, or after onDestroy
+<SYNC Start=152270><P Class=KRCC>
+&nbsp;
+<SYNC Start=152271><P Class=KRCC>
+view, if the fragment has already been placed
+<SYNC Start=154360><P Class=KRCC>
+&nbsp;
+<SYNC Start=154361><P Class=KRCC>
+in the back stack, once the activity is destroyed.</BODY>
+</SAMI>

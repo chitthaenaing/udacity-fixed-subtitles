@@ -1,0 +1,58 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=470><P Class=KRCC>
+In the forecast fragment class, we modify the
+<SYNC Start=2880><P Class=KRCC>
+&nbsp;
+<SYNC Start=2881><P Class=KRCC>
+onOptionsItemSelected method. When the Refresh menu item is selected,
+<SYNC Start=8134><P Class=KRCC>
+&nbsp;
+<SYNC Start=8135><P Class=KRCC>
+we create a new FetchWeatherTask and then we call
+<SYNC Start=11129><P Class=KRCC>
+&nbsp;
+<SYNC Start=11130><P Class=KRCC>
+execute on it. While the call is no longer
+<SYNC Start=13489><P Class=KRCC>
+&nbsp;
+<SYNC Start=13490><P Class=KRCC>
+blocking the UI thread because it's an AsyncTask, the
+<SYNC Start=16487><P Class=KRCC>
+&nbsp;
+<SYNC Start=16488><P Class=KRCC>
+app will still crash. If we check the logs,
+<SYNC Start=19390><P Class=KRCC>
+&nbsp;
+<SYNC Start=19391><P Class=KRCC>
+we see that the app crashed. This time though,
+<SYNC Start=21920><P Class=KRCC>
+&nbsp;
+<SYNC Start=21921><P Class=KRCC>
+with a security expression. It says Permission denied and
+<SYNC Start=26030><P Class=KRCC>
+&nbsp;
+<SYNC Start=26031><P Class=KRCC>
+ask if you're missing the INTERNET permission or not. And indeed,
+<SYNC Start=29810><P Class=KRCC>
+&nbsp;
+<SYNC Start=29811><P Class=KRCC>
+we are missing the INTERNET permission, so we need to request it.</BODY>
+</SAMI>

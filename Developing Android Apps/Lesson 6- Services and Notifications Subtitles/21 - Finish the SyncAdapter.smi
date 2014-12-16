@@ -1,0 +1,70 @@
+<SAMI>
+<HEAD>
+<TITLE></TITLE>
+<STYLE TYPE="text/css">
+<!--
+P { margin-left:16pt; margin-right:16pt; margin-bottom:16pt;
+        margin-top:16pt; font-size:18pt; text-align:center;
+        font-family:arial; font-weight:bold; color:#f0f0f0;
+        }
+.KRCC { Name:KR; lang:ko-KR; SAMIType:CC; }
+.ENCC { Name:EN; lang:en-US; SAMIType:CC; }
+#STDPrn { Name:Standard Print; }
+#LargePrn { Name:Large Print; font-size:20pt; }
+#SmallPrn { Name:Small Print; font-size:10pt; }
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<SYNC Start=200><P Class=KRCC>
+All right, you're done. Lets look at the
+<SYNC Start=3330><P Class=KRCC>
+&nbsp;
+<SYNC Start=3331><P Class=KRCC>
+solution. We'll begin by adding a log tag
+<SYNC Start=6490><P Class=KRCC>
+&nbsp;
+<SYNC Start=6491><P Class=KRCC>
+into our abstract threaded SyncAdapter. Since this stuff
+<SYNC Start=10160><P Class=KRCC>
+&nbsp;
+<SYNC Start=10161><P Class=KRCC>
+runs in the background, it's really helpful to have
+<SYNC Start=12880><P Class=KRCC>
+&nbsp;
+<SYNC Start=12881><P Class=KRCC>
+some logging. Since we ultimately want to run
+<SYNC Start=15550><P Class=KRCC>
+&nbsp;
+<SYNC Start=15551><P Class=KRCC>
+the SyncAdapter in undetected mode. Let's pull the location
+<SYNC Start=19330><P Class=KRCC>
+&nbsp;
+<SYNC Start=19331><P Class=KRCC>
+query from our utility class. And then we
+<SYNC Start=22610><P Class=KRCC>
+&nbsp;
+<SYNC Start=22611><P Class=KRCC>
+paste in the code from our existing sunshine service.
+<SYNC Start=26140><P Class=KRCC>
+&nbsp;
+<SYNC Start=26141><P Class=KRCC>
+We'll have to patch a few things up. We'll have to call getContext to
+<SYNC Start=30050><P Class=KRCC>
+&nbsp;
+<SYNC Start=30051><P Class=KRCC>
+get the current context, for example. Note that I copied over ad location at
+<SYNC Start=34590><P Class=KRCC>
+&nbsp;
+<SYNC Start=34591><P Class=KRCC>
+the same time I copied over the primary function. And then finally, we'll fix
+<SYNC Start=39770><P Class=KRCC>
+&nbsp;
+<SYNC Start=39771><P Class=KRCC>
+update weather to use the new helper
+<SYNC Start=42210><P Class=KRCC>
+&nbsp;
+<SYNC Start=42211><P Class=KRCC>
+function in our SyncAdapter. Let's run this.</BODY>
+</SAMI>
