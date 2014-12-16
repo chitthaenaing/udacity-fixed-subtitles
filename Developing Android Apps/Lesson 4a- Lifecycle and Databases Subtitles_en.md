@@ -2,8 +2,11 @@
 01 - Introduction to Lesson 4
 =============================
 
->> The goal is to ensure your app provides a seamless, efficient experience for
+ The goal is to ensure your app provides a seamless, efficient experience for
 your users, even when networks may be slow or unavailable
+
+
+
 
 
 02 - Why We Need an Activity Lifecycle
@@ -39,6 +42,9 @@ And that means understanding the lifecycle of an activity and the signals we
 get from the framework to indicate its progress through the lifetime.
 
 
+
+
+
 03 - The Android Activity Lifecycle
 ===================================
 
@@ -59,6 +65,9 @@ quickly move through these states. Create, Start, Resume, one after the other
 But within the full application lifetime, from when onCreate is first called and
 till the app is finally terminated. It will move through the active lifetime and
 the physical lifetime, many times. Let's look at those in a little more detail.
+
+
+
 
 
 04 - Active and Visible Lifetimes
@@ -92,6 +101,9 @@ free resources. But as we know on Android life cycles work a little differently.
 So, let's take a closer look at exactly how that works now.
 
 
+
+
+
 05 - Lifecycle Events
 =====================
 
@@ -102,11 +114,17 @@ Whats the sequence of these lifecycle events that your activity goes through,
 simply by changing its orientation.
 
 
+
+
+
 06 - Lifecycle Events Solution
 ==============================
 
 Starting with tear down, the app will first be paused, stopped, destroyed and
 then recreated, restarted and resumed.
+
+
+
 
 
 07 - Activity Termination
@@ -119,6 +137,9 @@ Can you figure out, which of the following lifecycle event handlers is the last
 one guaranteed to be called, before your app maybe terminated by the runtime?
 
 
+
+
+
 08 - Activity Termination Solution
 ==================================
 
@@ -127,6 +148,9 @@ is at risk of being terminated. But if you're supporting pre-Honeycomb devices,
 you should prepare for termination, as early as after on paused.
 [BLANK_AUDIO]
 Let's take a closer look at how you should prepare for an untimely app death.
+
+
+
 
 
 09 - How to Prepare for Termination
@@ -149,6 +173,9 @@ app may be killed eminently. So we need to clean up any resources that
 need an orderly tear down such as closing any open connections or sockets.
 
 
+
+
+
 10 - What To Do in OnPauseOnStop
 ================================
 
@@ -158,6 +185,9 @@ resources. Particularly, anything that could continue draining the battery.
 That includes anything that's being used exclusively to update the UI. So, what
 are some examples of listeners or updates that should be paused or disconnected
 when onpause or onstop are received? Put your answer in the text box below.
+
+
+
 
 
 11 - What To Do in OnPauseOnStop Solution
@@ -171,6 +201,9 @@ all. We'll have a look at some solutions to that problem in lesson six.
 Keep in mind that when you're activity is paused,
 it's still visible. It's just obscured by something else, usually a dialog box.
 But it's not stopped. So, don't stop drawing your UI when you receive on pause
+
+
+
 
 
 12 - Activity Lifecycle Recap
@@ -188,6 +221,9 @@ it will get torn down instantly. That's actually exactly what happens when
 you use a simple hits back from within their activity.
 If you're still not convinced, check out the video in the instructor notes.
 Where I explain my reasoning with a little more, color.
+
+
+
 
 
 13 - Maintaining State
@@ -212,6 +248,9 @@ the resource management happening under the covers. That's enough of the why,
 let's go back to Dan and see how to put this theory into practice.
 
 
+
+
+
 14 - Bundles to Save App State
 ==============================
 
@@ -230,6 +269,9 @@ If the user backgrounds your app using the Home key or the App Switcher,
 the next time your activity is created, it should resume from the current state.
 
 
+
+
+
 15 - Good Android Citizen
 =========================
 
@@ -238,6 +280,9 @@ important to be a good Android citizen. This means adhering to the principle of
 minimizing network activity and having an app that works seamlessly between
 offline and online states. We're going to make that happen by creating a cache
 data model that is shared between the various activities of Sunshine.
+
+
+
 
 
 16 - Storing Data in Android
@@ -286,12 +331,18 @@ the Detail view. We can use a slightly more complex query to return a range of
 dates, which is similar to what we do on the main forecast ListView.
 
 
+
+
+
 17 - SQLite Databases
 =====================
 
 Okay. Here's a slightly more complicated SQL query. See the instructor notes for
 some resources that you can use to help parse the SQL statement. One note,
 max is the name of the column that stores the high temperature for the day.
+
+
+
 
 
 18 - SQLite Databases - Solution
@@ -302,6 +353,9 @@ We're using a descending order for this column, which will place the largest
 value at the beginning of the query. The limit statement tells SQLite to
 only return a single row. We return a row that has the largest value.
 If we wanted to get the most recent high, we could order by max desc, date desc.
+
+
+
 
 
 19 - More on Storing Data in Android
@@ -324,6 +378,9 @@ a brief intro into storage on Android. If you want to learn more,
 go to developer.android.com and search on Data Storage.
 
 
+
+
+
 20 - Final Detail Wireframe
 ===========================
 
@@ -333,6 +390,9 @@ the condition, the high and low temperature,
 the humidity. The wind speed and direction, and the barometric pressure.
 Since our database will use row to represent each forecast day, we'll store
 each piece of data associated with the forecast in a separate column.
+
+
+
 
 
 21 - WeatherContract
@@ -348,6 +408,9 @@ The inner classes within our contract class will be used to define tables.
 Each table will implement base columns because the columns represented by base
 columns are useful. The ID column, in particular, must be part of our table
 in order for our content provider integration to work later on in this lesson
+
+
+
 
 
 22 - Our First Table
@@ -367,6 +430,9 @@ don't actually contain data types, it's useful to annotate that in
 the variable names and/or the comments to make our contract more explicit.
 
 
+
+
+
 23 - Columns
 ============
 
@@ -377,6 +443,9 @@ Contain the table name and contain the names of each column. Note: the idea of
 each row in the location entry class, will be stored in WeatherEntry.
 
 
+
+
+
 24 - Columns Solution
 =====================
 
@@ -385,6 +454,9 @@ you won't be able to actually run this code to test any of these solutions yet.
 But don't worry, we'll be testing soon. Here's our solution.
 We begin with our unique table name. The rest of the inner class,
 lists the columns we're going to use to store our data.
+
+
+
 
 
 25 - Create Database with SQLiteOpenHelper
@@ -447,12 +519,18 @@ This allows us to insert new data from the open weather EPI easily.
 Preserving existing keys and updating the value as the forecast changes.
 
 
+
+
+
 26 - LocationEntry
 ==================
 
 Create a matching location entry table-creating query from the location entry
 contract, using the weather entry one as a model. The good news is that this
 is a simpler query. And if you really hate databases, just move to the solution.
+
+
+
 
 
 27 - LocationEntry Solution
@@ -462,6 +540,9 @@ A much simpler table. Just a standard primary key, a few values, and
 a few constraints. Note that we use ON CONFLICT IGNORE. This means in insert
 into the database with the same key will not actually update the database at
 all. And therefore will also not return an ID in the Android helper functions.
+
+
+
 
 
 28 - SQLiteOpenHelper onUpgrade method
@@ -479,6 +560,9 @@ ages ago. Since we are going to be using our database as a cache for web data
 and not for user generated content, we'll drop the tables. This is helpful if we
 want to change the database in the future. If we were using user data, we'd do
 something like use alter table to add new columns. So, now we have a database.
+
+
+
 
 
 29 - JUnit testing
@@ -531,6 +615,9 @@ if it doesn't match our dummy data. And now, we get to run our tests again.
 And they passed.
 
 
+
+
+
 30 - InsertReadDbTest
 =====================
 
@@ -541,6 +628,9 @@ ID of the data we just inserted. Also note that I can use this short syntax for
 weather entry, because I added this import at the top of the file.
 Alright, so we insert that provided data that I gave you into our database, and
 verify that we can read it back out again.
+
+
+
 
 
 31 - InsertReadDbTest Solution
@@ -561,12 +651,18 @@ least we know all the basic stuff works, and just remember, without these tests,
 you wouldn't have been able to run this code for a very, very long time.
 
 
+
+
+
 32 - Simplify Tests
 ===================
 
 All right. Now for a little bit of an open ended exercise.
 How could we simplify our test code? Write up a solution. A hint here is
 that we can take advantage of the read property of the content value structure.
+
+
+
 
 
 33 - Simplify Tests
@@ -605,6 +701,9 @@ see if it still works after the refactoring. And there we are, test passed. Now,
 it'd probably be useful for us to actually print out some more data so
 we can see what was being tested. But, this simplification to our
 test is going to help us as we move forward. We're not done with testing yet.
+
+
+
 
 
 34 - Simplify Tests

@@ -12,21 +12,27 @@ the intent framework and even learning how to use
 activities that come from other apps within your own.
 
 
+
+
+
 02 - What to do next
 ====================
 
 Hey, Dan. want to see our weather app, so far, that we've been building?
->> Pretty cool. But I want something more.
->> Well, we're not done yet. We just started
+ Pretty cool. But I want something more.
+ Well, we're not done yet. We just started
 two lessons ago. Give us a break. But fair
 enough, there's still a bunch more work left to
 do. What do you think we should do next?
->> Well for starters, let's make the list
+ Well for starters, let's make the list
 item do something when you click on it.
->> Well, since you seem to be the expert on clicking on
+ Well, since you seem to be the expert on clicking on
 list items, why don't you do it? I'm going to go eat some jellybeans.
->> I think Catherine was mocking me there.
+ I think Catherine was mocking me there.
 Speaking of mocks, let's go do some UI.
+
+
+
 
 
 03 - Sunshine App UX Mocks
@@ -42,6 +48,9 @@ things that weather nerds love such as barometric pressure and that
 navigators love such as wind speed and direction eventually, but baby steps.
 
 
+
+
+
 04 - List Item Click Listener
 =============================
 
@@ -52,6 +61,9 @@ a look at the ListView documentation. What
 method is used to wire up behavior on a list item when it is clicked?
 
 
+
+
+
 05 - List Item Click Listener
 =============================
 
@@ -59,6 +71,9 @@ The answer is setOnItemClickListener. We should register
 an OnItemClickListener with the list view via the
 setOnItemClickListener method. Then, when an item in the
 list view is clicked, the callback is invoked.
+
+
+
 
 
 06 - ItemClickListener and Toast
@@ -80,6 +95,9 @@ Hint. You can get the forecast by getting an item from the forecast adapter,
 at the position given by the on item click listener.
 
 
+
+
+
 07 - ItemClickListener and Toast Solution
 =========================================
 
@@ -92,6 +110,9 @@ fragment. However, it won't do anything unless
 we also show the toast. Displaying a toast
 is useful to see how an Android interaction works. But this method should
 really be used to start our detail activity. This is what we'll do next.
+
+
+
 
 
 08 - Create New Activity
@@ -116,6 +137,9 @@ and look at how the activity is declared in the
 Android manifest file.
 
 
+
+
+
 09 - Create New Activity
 ========================
 
@@ -127,6 +151,9 @@ can see, we now have a new
 DetailActivity along with the XML for activity_detail and
 a fragment associated with that activity. Great! You're
 done. But we still aren't launching our new activity.
+
+
+
 
 
 10 - Intents Framework
@@ -146,6 +173,9 @@ app is the simplest example. [SOUND]
 With your intent explicitly indicating the target
 using the context and a class name of the activity. Intents that use the
 name of the component you're targeting directly, are known as explicit intents.
+
+
+
 
 
 11 - Intents as Envelopes
@@ -183,6 +213,9 @@ details of some of the intents supported by native
 apps in Common Intents page of the Android developer site.
 
 
+
+
+
 12 - Launch DetailActivity
 ==========================
 
@@ -193,6 +226,9 @@ with an intent to launch the detail activity.
 You'll need to pass in weather forecast data for the detail activity to
 display. For more information, see the intent
 extra constants defined in the intent class.
+
+
+
 
 
 13 - Launch DetailActivity
@@ -212,6 +248,9 @@ item on the adapter at the given position. Once
 we've added the intent, we just start the activity.
 
 
+
+
+
 14 - Display Content in DetailActivity
 ======================================
 
@@ -219,6 +258,9 @@ Once the Detail Activity is launched, it shows Hello World. Instead,
 we want to read the forecast data from the Intent, and display
 it. Make the appropriate changes in the app, so it matches
 the mocks. Then, verify the behavior by compiling and running the app.
+
+
+
 
 
 15 - Display Content in DetailActivity
@@ -238,16 +280,22 @@ view, as you can see we pulled the forecast string from the
 intent find our rootView and then set the text to that forecast string
 
 
+
+
+
 16 - It works
 =============
 
 Woo Hoo. Clicking our list items works.
->> Woo Hoo. [CLAP]
->> Our app is awesome.
->> Yeah.
->> But clicking on the settings menu does nothing. Whomp whomp. #sadtrombone.
->> Mm, don't do that again. Let me save
+ Woo Hoo. [CLAP]
+ Our app is awesome.
+ Yeah.
+ But clicking on the settings menu does nothing. Whomp whomp. #sadtrombone.
+ Mm, don't do that again. Let me save
 you from Dan. And let's go build the settings now.
+
+
+
 
 
 17 - Settings UX
@@ -278,6 +326,9 @@ which is linked below. It contains a workflow diagram that could help you.
 Very few roads often lead to making something a setting.
 
 
+
+
+
 18 - Preferences
 ================
 
@@ -305,6 +356,9 @@ This information is located in the developer API guide, for
 storage options, which is also linked below.
 
 
+
+
+
 19 - Create SettingsActivity
 ============================
 
@@ -325,6 +379,9 @@ later, you'd be able to understand better what the wizard is doing.
 Check these items off when you're done.
 
 
+
+
+
 20 - Create SettingsActivity
 ============================
 
@@ -334,6 +391,9 @@ We give it an activity named Settings, which is declared in the Strings file.
 We also declare the main activity as the parent activity. That way,
 when you hit the up button in the settings activity,
 it will return back to the main activity.
+
+
+
 
 
 21 - Launch SettingsActivity
@@ -350,6 +410,9 @@ then, you can go into the SettingsActivity. Complete the task and
 then verify that your app behavior is like this.
 
 
+
+
+
 22 - Launch SettingsActivity
 ============================
 
@@ -362,6 +425,9 @@ We don't call StartActivity for result because we're
 not expecting a result from the SettingsActivity. Similarly
 in the detail activity class, when the settings menu
 is selected, we launch a new intent to SettingsActivity.
+
+
+
 
 
 23 - Location Setting XML
@@ -411,6 +477,9 @@ like this.
 When you're done with these steps check them off and continue
 
 
+
+
+
 24 - Modify SettingsActivity
 ============================
 
@@ -436,6 +505,9 @@ is now this value. Make these changes in your app.
 See the instructor notes for the lines of code you need.
 
 
+
+
+
 25 - Use SharedPreferences
 ==========================
 
@@ -451,6 +523,9 @@ to figure out how to do it. Once
 you've made the change, check the box to continue.
 
 
+
+
+
 26 - Use SharedPreferences Solution
 ===================================
 
@@ -458,6 +533,9 @@ Within the forecast fragment class, when the refresh menu item is selected,
 we read from SharedPreferences. Since they are key-value pairs, we get their
 value stored for the location key. If there's no value stored then we fall back
 to the default location. Then we pass the location into the fetch weather task.
+
+
+
 
 
 27 - Update Data on Activity Start
@@ -483,6 +561,9 @@ can change the location to be the pairs postal code. We hit OK, and
 then return to the main list, and then we see that the weather data has updated.
 
 
+
+
+
 28 - Temperature Units Setting
 ==============================
 
@@ -503,6 +584,9 @@ If you switch to imperial and then you go back to
 the forecast list, then you see that all the temperatures now
 are in Fahrenheit. Once it works, answer this question. Which subclass
 of preference did you use?
+
+
+
 
 
 29 - Temperature Units Setting Solution
@@ -536,6 +620,9 @@ left as metric. Then we return the formatted string for display in
 the UI. That completes the code for saving the temperature unit setting.
 
 
+
+
+
 30 - Debug Breakpoints
 ======================
 
@@ -557,24 +644,30 @@ It triggers this breakpoint in the ListPreference case. We hit Play to continue,
 and then we see that, Imperial is now the preference summary.
 
 
+
+
+
 31 - Launching Implicit Intents
 ===============================
 
 Hey Dan, we finished the settings. Do you want to check it out?
->> Oh, great.
->> Wait. What's with all this stuff right here?
->> I'm glad you asked. All this stuff will help me demonstrate the
+ Oh, great.
+ Wait. What's with all this stuff right here?
+ I'm glad you asked. All this stuff will help me demonstrate the
 power of implicit intents. Leveraging other
 apps to get functionality for your app
 for fee. For example, why would you write a bar code scanning app,
 when you can just launch an intent to do it for you. [SOUND].
->> Or a camera app, where you can just launch
+ Or a camera app, where you can just launch
 an intent to fire a photo. [SOUND] And of course, it would make no sense to
 write a phone app just to dial a phone number, you would just call the intent.
->> Wait, I need that.
->> In other words, don't reinvent the wheel. Lazy programmers make fewer
+ Wait, I need that.
+ In other words, don't reinvent the wheel. Lazy programmers make fewer
 mistakes. Now, let's go implement an
 implicit intent. Raydo? Dan's being implicit again.
+
+
+
 
 
 32 - Add Map Location Intent
@@ -585,6 +678,9 @@ will be handled by any maps app that's available on your device. If there
 is no map app on your device, handle this case gracefully to avoid a
 crash. You might want to recall that
 we use SharedPreferences to store the preferred location.
+
+
+
 
 
 33 - Add Map Location Intent Solution
@@ -604,6 +700,9 @@ in the data URI. The format of the data URI was from the documentation
 page on common intents. Where you can append a postal code as a query parameter.
 Finally, we start an activity with [SOUND] this intent. Note
 that we only start the activity, if the activity resolves successfully.
+
+
+
 
 
 34 - Intent Resolution
@@ -627,6 +726,9 @@ match. If multiple activities match, as in the case
 with the web url, the user is given a choice.
 
 
+
+
+
 35 - Share Intent is Awesome
 ============================
 
@@ -634,8 +736,8 @@ One of the most used implicit intents
 in Android is the share intent. It's [LAUGH]
 awesome. It's a great way to waste time
 for both you and your friends. [SOUND] [LAUGH].
->> Dan!
->> You can leverage your favorite apps to share photos, texts,
+ Dan!
+ You can leverage your favorite apps to share photos, texts,
 videos and general links. And the best part is you don't have
 to even know what the user's favorite apps are. Just tell
 Android what data you want to share and it shows your users
@@ -658,6 +760,9 @@ right of this one that contains the last application
 shared to. Add a ShareActionProvider to the fragment within
 DetailActivity. It will share weather in the following format.
 Yes, it's just the string we passed into the view plus #SunshineApp.
+
+
+
 
 
 36 - Share Intent Solution
@@ -712,6 +817,9 @@ this whenever the data you want to share changes.
 And that's it. You've now added a ShareActionProvider into Sunshine.
 
 
+
+
+
 37 - Broadcast Intents
 ======================
 
@@ -732,6 +840,9 @@ So intents, which are broadcast, are transmitted to every
 app with a broadcast receiver that has an intent
 filter telling the system your ideas are intriguing to
 me and I wish to subscribe to end user.
+
+
+
 
 
 38 - Intent Filters
@@ -782,6 +893,9 @@ before starting that process? Should it be
 a manifest receiver or a broadcast receiver?
 
 
+
+
+
 39 - Intent Filters Solution
 ============================
 
@@ -795,6 +909,9 @@ device has internet connectivity. Would it change behavior of the
 user experience when you're connected to a car or desk dock?
 
 
+
+
+
 40 - Lesson 3 Recap
 ===================
 
@@ -806,6 +923,9 @@ going to learn about the activity life cycle and make
 our apps that much more useful by saving data. We'll
 begin to databases and learn about content providers, but
 first let's take another journey into the history of Android.
+
+
+
 
 
 41 - Storytime Android Distribution Platform

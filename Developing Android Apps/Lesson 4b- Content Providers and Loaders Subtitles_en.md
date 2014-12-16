@@ -24,6 +24,9 @@ query to select the data for a specific date, rather than a range of
 days which in this case also contains more information for the viewer to see.
 
 
+
+
+
 02 - Why Content Providers Matter
 =================================
 
@@ -77,6 +80,9 @@ in lesson six when we look at doing efficient background updates. But
 first, Dan is going to show you how to actually build a content provider.
 
 
+
+
+
 03 - Creating a Content Provider
 ================================
 
@@ -101,6 +107,9 @@ get the values by their numerical index instead of
 having to use getColumnIndex to look up each
 column index. All right, it's time to code some
 more Sunshine. Let's code a content provider.
+
+
+
 
 
 04 - Adding Content Provider to our Contract
@@ -153,11 +162,17 @@ the URI structure form our code as well and
 places all the knowledge in one place within the contract.
 
 
+
+
+
 05 - Adding LocationEntry with ID UriBuilder
 ============================================
 
 Add code to build a URI for querying the
 location by ID within the LocationEntry part of the WeatherContract.
+
+
+
 
 
 06 - Adding LocationEntry Solution
@@ -167,6 +182,9 @@ All right, you're done! Let's look at the solution. This exercise
 is pretty short. And it looks just like the way we
 did the build weather URI, earlier. Once again, we just
 use content URIs with appended ID, to append the ID of the record.
+
+
+
 
 
 07 - Create WeatherProvider
@@ -192,6 +210,9 @@ you can very, very easily match any of the URI's
 that we would want to pass in to our content provider.
 
 
+
+
+
 08 - Write the UriMatcher
 =========================
 
@@ -199,6 +220,9 @@ In the previous explanation of our content URIs,
 I showed the five URI types we would use
 in this app, fill out the build URI
 match function. Note that you cannot test this, yet.
+
+
+
 
 
 09 - Write the UriMatcher
@@ -217,6 +241,9 @@ always a long integer, it makes perfect sense to use the pound sign pattern.
 Now we can add our class variable. [BLANK_AUDIO}
 
 
+
+
+
 10 - Write the UriMatcher
 =========================
 
@@ -231,6 +258,9 @@ our database as strings, just to be consistent.
 Finally, we have the location URIs. Since the ID in the database is
 always a long integer, it makes perfect sense to use the pound sign pattern.
 Now we can add our class variable. [BLANK_AUDIO}
+
+
+
 
 
 11 - Coding the Content Provider
@@ -258,6 +288,9 @@ Let's rename test create DB, to test delete DB.
 So we can start with a clean slate. We'll just leave the M context dot delete
 database line in there. We'll leave the other
 test the same, we'll get to it soon.
+
+
+
 
 
 12 - Coding ContentProvider getType
@@ -291,6 +324,9 @@ there are only two to add, and they
 really look just like the ones in WeatherContract.
 
 
+
+
+
 13 - Coding the Content Provider query
 ======================================
 
@@ -316,6 +352,9 @@ happen to that URI and any of its descendents. By descendents
 I mean any URI that begins with this path. But, we still need to test this.
 
 
+
+
+
 14 - CodingContentProviderqueryTestDELETE
 =========================================
 
@@ -336,12 +375,18 @@ And the test still passes. [LAUGH] Again, it's very easy to substitute
 out something that calls directly to the database with a content provider.
 
 
+
+
+
 15 - Implement Location and Location-ID
 =======================================
 
 Implement the queries for location and location ID in
 our content provider. Note that content URIs contains a
 function to get the ID from a standard URI that contains an ID on the end of it.
+
+
+
 
 
 16 - Implement Location-ID Solution
@@ -379,6 +424,9 @@ to do some of the more complicated
 things in the provider. Let's talk about joins.
 
 
+
+
+
 17 - Add a Join query
 =====================
 
@@ -411,6 +459,9 @@ a different selection. Finally, we add the function
 into the query routine of our content provider.
 
 
+
+
+
 18 - Testing our Join
 =====================
 
@@ -440,6 +491,9 @@ expect this test to fail. Let's try it and indeed it fails. So
 we're pretty sure that our tests are actually doing what we expect them to.
 
 
+
+
+
 19 - Add the Other Join query Quiz
 ==================================
 
@@ -447,6 +501,9 @@ All right. You know what time it is. Time to implement the query
 for WEATHER WITH LOCATION AND DATE in our content provider. Remember, we defined
 functions to get the location query and date from a URI in our
 weather contract. Also, write a test to make sure you got the answer write.
+
+
+
 
 
 20 - Add the Other Join query Solution
@@ -481,6 +538,9 @@ content provider yet. After all, we're not writing
 any data into the database through our content provider
 
 
+
+
+
 21 - Add the Other Join query Solution
 ======================================
 
@@ -511,6 +571,9 @@ see if that's really true by running our tests.
 all of the queries, but we're not done with our
 content provider yet. After all, we're not writing
 any data into the database through our content provider
+
+
+
 
 
 22 - Coding the Content Provider Inserting
@@ -570,6 +633,9 @@ insert using our content provider. And our test passed. Well, you know what
 time it is. Time for you to write some of this as well.
 
 
+
+
+
 23 - Coding ContentProvider Finish Inserting
 ============================================
 
@@ -578,6 +644,9 @@ the location URI. And notify any registered Contentobserver of the
 change. It might help you to know that you can
 use getContext() getContentResolver() .notifyChange(uri, null)
 to notify any registered observers.
+
+
+
 
 
 24 - Coding ContentProvider Finish Inserting
@@ -596,6 +665,9 @@ We've now finished insert. However, of course,
 we're never done without also adding a test.
 
 
+
+
+
 25 - Coding ContentProvider Finish Inserting
 ============================================
 
@@ -610,6 +682,9 @@ into our function. To notify any observers that need
 to know that UI has changed. And that's it.
 We've now finished insert. However, of course,
 we're never done without also adding a test.
+
+
+
 
 
 26 - Coding the ContentProvider Testing
@@ -642,6 +717,9 @@ in Sunshine. But it's really important to know.
 So, I suggest you actually implement these functions.
 
 
+
+
+
 27 - Updating and Deleting
 ==========================
 
@@ -649,6 +727,9 @@ The update and delete methods look a lot like the
 insert method, except they update and delete and neither actually returns
 a URI upon completion, but instead, the number of rows affected.
 Also, make sure to notify our ContentObservers while you're at it
+
+
+
 
 
 28 - Updating and Deleting Solution
@@ -719,6 +800,9 @@ are finished, just waiting to attach our UI.
 Let's go through and attach some of our UI.
 
 
+
+
+
 29 - Efficient Updates Inserts
 ==============================
 
@@ -742,6 +826,9 @@ and then rely on the finally statement to end the
 transaction. In the default case, we just call the super
 class. Remember, it does the insert, just not optimally. And
 that's it, that's all we have to do to implement bulkInsert.
+
+
+
 
 
 30 - Inserts with the ContentProvider DELETE
@@ -788,6 +875,9 @@ but it's not going to do anything but try and read some
 Jason. So we want to make it do something beyond that. [SOUND]
 
 
+
+
+
 31 - Inserts with the ContentProvider
 =====================================
 
@@ -795,6 +885,9 @@ All right. Now for the fun part. Code the method below
 to insert the location into the location table if it doesn't
 already exist. Return the ID of the location. Now you can
 do this the easy way using a query followed by an insert.
+
+
+
 
 
 32 - Inserts with the ContentProvider
@@ -811,6 +904,9 @@ construct a query containing the location setting to see if
 it's in the database yet. If it's not, then the query
 will return an empty set and we should insert the new
 city name, location setting, latitude, and longitude into the database together.
+
+
+
 
 
 33 - Finishing the FetchWeatherTask
@@ -834,6 +930,9 @@ we now have a whole bunch of data that
 needs to be inserted. Guess what we're going to do next?
 
 
+
+
+
 34 - BulkInserts with the ContentProvider
 =========================================
 
@@ -843,6 +942,9 @@ ContentProvider to insert the vector of content
 value objects into the database. [LAUGH]
 Don't worry, we're really almost done with
 inserting data. Next is the fun part that makes this all worth it.
+
+
+
 
 
 35 - BulkInserts with the ContentProvider
@@ -857,6 +959,9 @@ our backend will update efficiently. But we
 really need a way to update the front
 end without introducing framerate jitter. Fortunately, Android
 offers a pattern for that known as Loaders.
+
+
+
 
 
 36 - Loaders are Awesome
@@ -892,6 +997,9 @@ loader by extending a think task loader directly. You
 can find out more in the instructor notes below.
 
 
+
+
+
 37 - Disadvantages Quiz
 =======================
 
@@ -901,6 +1009,9 @@ database from the UI code. What are the disadvantages
 in directly querying the database from the UI code?
 The query could take a long time. It could
 be terminated before it completes. Or there are no disadvantages.
+
+
+
 
 
 38 - Disadvantages Solution
@@ -916,6 +1027,9 @@ We noted how things like AsyncTask are bound to
 the UI, so something as little as an orientation
 change could kill the query. So that's another definite
 yes. So the third option is just a non-starter.
+
+
+
 
 
 39 - Using Loaders in our App
@@ -965,6 +1079,9 @@ using the support library version of all of
 these classes, otherwise we won't get Android 2.3 compatibility.
 
 
+
+
+
 40 - Moving to Multiple Text Views
 ==================================
 
@@ -977,6 +1094,9 @@ onto the existing list_item_forecast layout, since it contains
 only a text view, which means there is no view group to add additional views to.
 I recommend deleting list_item_forecast and creating a new
 file if you want to use the visual editor.
+
+
+
 
 
 41 - Moving to Multiple Text Views
@@ -1028,6 +1148,9 @@ a lot you can do with the layout editor and with different kinds
 of layouts. We'll be learning more about that in the next lesson. Alright,
 we finally get to start hooking this up to our UX. Let's go
 back to forecast fragment.
+
+
+
 
 
 42 - Simple CursorAdapter
@@ -1102,6 +1225,9 @@ that same problem I had before. We can't
 do anything to get to the detail activity. Well, I'm going to have you fix that.
 
 
+
+
+
 43 - Fixing our Call to DetailActivity
 ======================================
 
@@ -1109,6 +1235,9 @@ Fix the intent call, to lauch our detail activity, by pulling
 data from the cursor and using our formatting utility functions to
 build our EXTRA_TEXT string. We can use the adapter to get
 our cursor. This adapter is passed into our On Item click listener.
+
+
+
 
 
 44 - Fixing our Call to DetailActivity
@@ -1137,6 +1266,9 @@ Something that was observing with the
 content observer and would actually update.
 [BLANK_AUDIO]
 When we changed our setting.
+
+
+
 
 
 45 - The User Changed their Mind
@@ -1187,6 +1319,9 @@ problem. Obviously when we change settings here,
 it doesn't affect anything, so we need to fix that. That's where you come in.
 
 
+
+
+
 46 - Implement Details
 ======================
 
@@ -1207,6 +1342,9 @@ actually get the current location settings from the utility function. So
 all you really need is the date. I hope that helps.
 
 
+
+
+
 47 - Storing Images or Binary Data
 ==================================
 
@@ -1217,6 +1355,9 @@ data in the database? Would we store files
 into a public folder on the device? Or
 would we store the files in a private
 folder, and reference the location in the database?
+
+
+
 
 
 48 - Storing Images or Binary Data
@@ -1244,6 +1385,9 @@ can store metadata in the database and store files in
 a private folder. This is what Android does in the gallery.
 
 
+
+
+
 49 - Making your ContentProvider Accessible
 ===========================================
 
@@ -1266,6 +1410,9 @@ the same approach, used by many of the native content providers,
 including the Contacts Database, Media Store, Calendar and Call Log.
 
 
+
+
+
 50 - 3rd Party Content Providers
 ================================
 
@@ -1273,6 +1420,9 @@ Explore the Native Content Providers linked to in
 the instructor notes below. What's the name for the
 static constant used to find the content URI
 for accessing audio stored on the internal data store?
+
+
+
 
 
 51 - 3rd Party Content Providers Solution
@@ -1284,23 +1434,29 @@ To access audio media stored in the internal data store, you'd use the
 INTERNAL_CONTENT_URI provided in the MediaStore.Audio.Media class.
 
 
+
+
+
 52 - Lesson 4 Recap with Reto and Dan
 =====================================
 
 So, Rato, what have we learned in this lesson?
->> Well, I learned that I do not want to write
+ Well, I learned that I do not want to write
 databases and content providers. What did you learn in this lesson?
->> Well, J unit tests are awesome, and building
+ Well, J unit tests are awesome, and building
 the back end framework of our apps is the
 most glorious of work. It's an absolutely vital part
 of creating a robust app with a great user experience.
->> And I also learned that Dan cannot do an English accent.
->> [SOUND]. Fortunately, you can get ready to welcome back Katherine
+ And I also learned that Dan cannot do an English accent.
+ [SOUND]. Fortunately, you can get ready to welcome back Katherine
 for lesson 5, where we'll shatter our activity into fragments, use
 our content providers to populate more complex UIs, and build layouts
 that work as well on tablets as they do on phones.
->> Which seems like a convenient segway
+ Which seems like a convenient segway
 into the history and evolution of Android hardware,
+
+
+
 
 
 53 - Storytime Android Hardware

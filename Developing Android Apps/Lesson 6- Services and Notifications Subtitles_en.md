@@ -16,6 +16,9 @@ be introduced to the notification framework to send messages
 to your users when your app isn't in the foreground.
 
 
+
+
+
 02 - Sunshine in the Background
 ===============================
 
@@ -48,6 +51,9 @@ the foreground. But even more importantly, we want the app to get
 regular updates in the background with minimal battery drain. That will
 be especially important later in this
 lesson when we introduce weather notifications.
+
+
+
 
 
 03 - App Lifecycle and Services
@@ -128,6 +134,9 @@ background tasks or the sync adapter which you'll learn about
 later in this lesson. Perfect for performing background data synchronization
 
 
+
+
+
 04 - Application Priority
 =========================
 
@@ -162,6 +171,9 @@ with all of that in mind, consider these four apps. What do you
 think is the priority order of each of these apps, according to the system.
 
 
+
+
+
 05 - Application Priority
 =========================
 
@@ -173,6 +185,9 @@ camera app are. Of those two, the Music app
 must have been in the foreground for longer than
 the camera. So it's got a slightly lower priority,
 though neither are in any danger of being killed.
+
+
+
 
 
 06 - Using Services
@@ -199,6 +214,9 @@ and call it from ForecastFragment. You can start a service using an intent with
 the StartService method. It will help to remember how to use explicit intents.
 
 
+
+
+
 07 - Using Services
 ===================
 
@@ -223,6 +241,9 @@ putting the parameter into an intent extra.
 All right, let's take a look at how that runs. And when we
 hit the refresh button, it'll use our new service. Pretty nice. And we
 really can't tell any difference, which is how we'd expect things to be.
+
+
+
 
 
 08 - Using Alarms
@@ -256,6 +277,9 @@ your broadcast receiver. I recommend setting the alarm to something absurdly
 short, like five seconds, so you can easily test that it's working.
 
 
+
+
+
 09 - Using Alarms
 =================
 
@@ -285,6 +309,9 @@ we could still be more efficient in our use
 of phone resources. Rato can tell us more about that.
 
 
+
+
+
 10 - Transferring Data Efficiently
 ==================================
 
@@ -310,6 +337,9 @@ this big cookie? Or a large number of
 small downloads, as illustrated by lots of little cookies.
 
 
+
+
+
 11 - Transferring Data Efficiently
 ==================================
 
@@ -324,6 +354,9 @@ to the big cookie model of all of that work up front.
 So, overall, this is a better solution. But let's take a closer look at the big
 cookie model. And to do that, we really
 need to understand the underlying cell radio state machine.
+
+
+
 
 
 12 - The Cell Radio
@@ -375,6 +408,9 @@ this app is running, what is the percentage of time that
 the cell radio is able to go back to its idle state?
 
 
+
+
+
 13 - The Cell Radio
 ===================
 
@@ -382,6 +418,9 @@ That's right, whenever this app is running, it's
 keeping the cell radio powered on continuously. In
 fact, the radio updates alone are enough to
 prevent the radio from ever returning to idle.
+
+
+
 
 
 14 - Big Cookie Model
@@ -405,6 +444,9 @@ to the previous on demand approach, you can see it's
 now idle nearly two thirds of the time. Even
 the active radio percentage has significantly dropped, thanks to improved
 download efficiency as a result of transmitting more data in one shot
+
+
+
 
 
 15 - Data Transfer Best Practices
@@ -437,6 +479,9 @@ linked to from that front page? Every story available, but none
 of the images? Or every story and every image currently available?
 
 
+
+
+
 16 - Data Transfer Best Practices
 =================================
 
@@ -452,6 +497,9 @@ to be read as the user starts
 browsing through the app. You can then incrementally
 download more articles each time the user moves
 into an area you haven't pre-fetched for yet.
+
+
+
 
 
 17 - Introducing SyncAdapters
@@ -492,6 +540,9 @@ store account information, or has logic to retry
 your request? Select all of these that match.
 
 
+
+
+
 18 - Introducing SyncAdapters
 =============================
 
@@ -502,6 +553,9 @@ the wire. There's no standard synchronization protocol.
 And while they're to tied to AccountManager, they've nothing to do with storing
 account information. However, they will auto
 retry requests, if network conditions are spotty.
+
+
+
 
 
 19 - Implementing a SyncAdapter
@@ -610,6 +664,9 @@ we'll add another helper function to our sync adaptor,
 to make it easier to test our sync adaptor.
 
 
+
+
+
 20 - Finish the SyncAdapter
 ===========================
 
@@ -630,6 +687,9 @@ involvement of the user. Finally, make the
 sync adaptor run when we call Update Weather.
 
 
+
+
+
 21 - Finish the SyncAdapter
 ===========================
 
@@ -646,6 +706,9 @@ get the current context, for example. Note that I copied over ad location at
 the same time I copied over the primary function. And then finally, we'll fix
 update weather to use the new helper
 function in our SyncAdapter. Let's run this.
+
+
+
 
 
 22 - Scheduled Synchronization
@@ -701,6 +764,9 @@ for the SyncAdapter, do an initial immediate
 sync, or set an interval in milliseconds.
 
 
+
+
+
 23 - Scheduled Synchronization
 ==============================
 
@@ -709,6 +775,9 @@ enable automatic sync for the sync adapter.
 You don't need to schedule an immediate
 sync, although it's nice for users, as we did. And, this is a minor
 note, you don't set the interval in milliseconds, but instead set it in seconds.
+
+
+
 
 
 24 - Google cloud messaging
@@ -742,6 +811,9 @@ tier that pulls the source and notifies your installed app instances
 when it notices a change. Now we're not going to set up a
 server in this lesson, but you can see the full details for
 using Google cloud messaging from the developer guide linked to instructor nets.
+
+
+
 
 
 25 - Notifications
@@ -788,6 +860,9 @@ explicit intent to our main activity is
 a good idea here. There's lots of documentation on this you'll want to read.
 
 
+
+
+
 26 - Notifications
 ==================
 
@@ -808,6 +883,9 @@ that we pass into the notification manager. Finally we call
 the notification manager with the built intent from our builder,
 with a notify function. One of the great things about notification manager is
 it can be used from any thread even though it is displaying UI.
+
+
+
 
 
 27 - The Power of Notifications
@@ -836,6 +914,9 @@ permanently. So check out the instruction
 that's below for links to the design guide in creating good notifications.
 
 
+
+
+
 28 - Turning Weather Notifications OnOff
 ========================================
 
@@ -845,6 +926,9 @@ preference. We'll do this by adding a
 new preference to the app settings to turn off notifications. And then, use
 that preference to turn off the notification.
 Hint, you're going to want to use a CheckBoxPreference
+
+
+
 
 
 29 - Turning Weather Notifications OnOff
@@ -862,6 +946,9 @@ Now we won't display notifications if the user doesn't want us
 to, which is a great thing for an app to do.
 
 
+
+
+
 30 - Delete Old Weather Data
 ============================
 
@@ -869,6 +956,9 @@ One of the things you may have noticed, is that our app database continues
 to grow forever, eventually filling up the device. This is a great way to
 get out app uninstalled. So let's fix this. Add code to delete weather data that
 is more than one day old. Use the Calendar function to do data arithmetic.
+
+
+
 
 
 31 - Delete Old Weather Data - Solution
@@ -886,6 +976,9 @@ delete everything less than or equal to that day.
 Done. It's always good to clean up after yourself.
 
 
+
+
+
 32 - Update Map Intent
 ======================
 
@@ -897,6 +990,9 @@ do the same thing with location queries. Unfortunately,
 they don't always agree. Implement maps using the coordinates
 stored in the location table. You'll want to start
 by moving the menu code from MainActivity to WeatherFragment.
+
+
+
 
 
 33 - Update Map Intent - Solution
@@ -940,6 +1036,9 @@ And I hope the practices you've learned building Sunshine
 will help you in all of your future applications
 
 
+
+
+
 34 - Lesson 6 Recap
 ===================
 
@@ -951,6 +1050,9 @@ creating rich notifications, all ways to provide a
 great user experience, even when your app isn't visible.
 Join me now for the final story time, as
 I take you into a possible future for Android.
+
+
+
 
 
 35 - Storytime Future of Android
@@ -1007,21 +1109,24 @@ to control everything around us. We've taken
 the first step into that future. I can't wait to see what you do next.
 
 
+
+
+
 36 - Congratulations Android Party
 ==================================
 
 [SOUND].
->> [LAUGH]
->> Content providers.
->> Congratulations, everyone, you've finished building the Sunshine App.
->> But there's always room for more sunshine.
->> There is, Dan, but now it's time
+ [LAUGH]
+ Content providers.
+ Congratulations, everyone, you've finished building the Sunshine App.
+ But there's always room for more sunshine.
+ There is, Dan, but now it's time
 for the students to go build their final project.
->> And you can get a lot of the resources you
+ And you can get a lot of the resources you
 need to build really great mobile apps at the Android developer site.
->> And stay tuned for more from us and Udacity.
->> For now, I think it's
+ And stay tuned for more from us and Udacity.
+ For now, I think it's
 time to celebrate with some cake.
->> Woohoo.
->> Lemon tarts.
+ Woohoo.
+ Lemon tarts.
 [MUSIC]

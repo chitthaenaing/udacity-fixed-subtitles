@@ -2,7 +2,10 @@
 01 - Welcome to Developing Android Apps
 =======================================
 
->> Sure.
+ Sure.
+
+
+
 
 
 02 - Introducing Your Instructors
@@ -19,14 +22,14 @@ And that's why I shifted over to developer relations so
 I can help people like you really build something great. Throughout this course,
 I'll be helping you implement your very first app.
 [BLANK_AUDIO]
->> My name is Dan Gauthan. I've been a developer advocate at Google for
+ My name is Dan Gauthan. I've been a developer advocate at Google for
 four years and I've worn a lot of hats here. My goal is to keep us on track to
 make Sunshine, something that had some resemblance to a production quality app.
 I'll introduce Android design patterns and principles. Many of which are often
 missed by new Android developers. You'll learn to lean on the framework,
 focusing on what makes your app unique instead of reinventing the wheel.
 [BLANK_AUDIO]
->> I'm Rado Mya, and I've been a developer advocate at Google for five years.
+ I'm Rado Mya, and I've been a developer advocate at Google for five years.
 I started working on Androids so long ago that back then there were no devices.
 All we had to work with were an emulator, a beater SDK, and
 an almost fanatical devotion to the platform. I'll be joining you from here,
@@ -38,10 +41,16 @@ the time you finished this course you'll know more than just how to create yet
 another app. You'll know how to build great apps that focus on the user.
 
 
+
+
+
 03 - Are you ready for this course
 ==================================
 
 [BLANK_AUDIO]
+
+
+
 
 
 04 - Introducing Project Sunshine
@@ -63,6 +72,9 @@ building a weather app? We chose the weather app because it's a simple concept,
 which touches most of the core APIs we want to teach and everyone can relate to
 weather, unless you're in a bunker. By the end of the course, you'll be able
 to use those APIs and concepts to build your own app for your final project.
+
+
+
 
 
 05 - Course Goals and Prerequisites
@@ -92,6 +104,9 @@ Android's history. For now, let's get back to building that weather app.
 So, we'll cross to Dan, to take a look at some mocks.
 
 
+
+
+
 06 - Introducing More Sunshine
 ==============================
 
@@ -101,6 +116,9 @@ Remember, as we progress through this course and build this app together, you
 should be thinking about the app you want to create. There are too many weather
 apps already after all. By the end of the course, you could be ready to tackle
 the final project. Using all your new Android know how to build your own app.
+
+
+
 
 
 07 - Installing Android Studio
@@ -120,6 +138,9 @@ set up properly. You can search online for people who have a similar issue or
 there's a troubleshooting link included below. If you still need help, you can
 ask a question in our discussion forum as well. Once you install it, open it and
 you can check for updates before proceeding. Check this box when you're done.
+
+
+
 
 
 08 - Create a New Android Studio Project
@@ -159,6 +180,9 @@ SDK to be the latest version. Even though target SDK is already selected for
 you, it's important to know the distinction between min and target SDK
 
 
+
+
+
 09 - Select a Minimum and Target SDK
 ====================================
 
@@ -195,6 +219,9 @@ test as soon as possible when new platform releases roll out so you can take
 advantage of every new platform optimization and improvement it has to offer.
 
 
+
+
+
 10 - Select a Target SDK
 ========================
 
@@ -203,12 +230,18 @@ based on this graph, which version of Android should be the target SDK to
 provide the best experience on the largest number of devices.
 
 
+
+
+
 11 - Select a Target SDK Solution
 =================================
 
 That's right. While setting Froyo as a minimum SDK, would allow us to support
 experience for users on all phones including the newest KitKat releases,
 we need to set our target SDK to the latest build, which is KitKat.
+
+
+
 
 
 12 - Finish Creating a New Project
@@ -247,6 +280,9 @@ Go ahead and try it yourself. Make sure you're using the same settings as we
 have by checking the link below. Click here when you're done.
 
 
+
+
+
 13 - Install HAXM
 =================
 
@@ -265,6 +301,9 @@ there'll be an extras folder containing an Intel folder with the HAXM folder.
 Then, we click on the DMG file, open it up and
 then continue. Step through this installer, and the default values are fine.
 Once installation is complete, you can close all the windows.
+
+
+
 
 
 14 - Launching Sunshine and Creating an AVD
@@ -296,6 +335,9 @@ you can go into the Emulator Control Tab. There you'll see different options for
 simulating behavior on your AVD, such as for telephony and for
 location. Now that the Hello world app runs on the emulator,
 let's see what goes on behind the scenes to make the app run.
+
+
+
 
 
 15 - Android Software Stack and Gradle
@@ -337,6 +379,9 @@ it uses ADB again to launch the app by sending a stock command via the remote
 shell, by identifying the package and class name of your main activity.
 
 
+
+
+
 16 - Debugging with a Physical Device
 =====================================
 
@@ -353,6 +398,9 @@ Also, set up your computer to detect your device. Check the instructor notes for
 more details. We're going to continue using a device because it's faster and
 smoother for development. But if you don't have one,
 that's okay. You can continue using the emulator that we created previously.
+
+
+
 
 
 17 - Launching on  a Device
@@ -377,6 +425,9 @@ it on the device. And now we see it running in our phones. Woo hoo! Fist bump!
 We're on a roll. Let's go find Dan so that we can build up the sunshine UI. Woo!
 
 
+
+
+
 18 - Start to Build the App
 ===========================
 
@@ -384,6 +435,9 @@ Let's build up the UI for the weather app. We've created our Android project.
 And understand more about basic tools. So let's go to the user interface for
 Sunshine. Specifically, we're building the initial screen.
 A list of forecasts for the next several days.
+
+
+
 
 
 19 - Create a User Interface
@@ -425,6 +479,9 @@ case the single textView is used to display the weather information replicated
 throughout the list. We'll get into much more detail about list view later on.
 
 
+
+
+
 20 - UI Element Quiz
 ====================
 
@@ -438,6 +495,9 @@ a few of the basic android user interface views,
 Katherine will show you how to start making some sunshine.
 
 
+
+
+
 21 - Add ListItem XML
 =====================
 
@@ -449,6 +509,9 @@ define a text view as the root view, then assign it an ID list item forecast
 text view. Give it a minimum height, so that the list item isn't too short for
 tapping on and vertically center the text within that item. Go ahead and
 try it yourself now. And check the box when you're done.
+
+
+
 
 
 22 - Add ListItem XML
@@ -465,6 +528,9 @@ gravity so that the text inside the text view will be centered vertically.
 Lastly, we specify ID, which we gave you earlier. Great. Now we have a list item
 
 
+
+
+
 23 - Introducing Responsive Design
 ==================================
 
@@ -474,6 +540,9 @@ Or when it's run on a device, with a much larger screen? The good news,
 is that Android provides excellent tools to help you with layouts.
 You'll want to understand them to make your app look amazing across the wide
 variety of phones, tablets and other devices you'll want your app to work on.
+
+
+
 
 
 24 - Why AbsoluteLayout Is Evil
@@ -502,6 +571,9 @@ GridLayout, they can dynamically resize and
 adapt to any screen, following the principles of responsive design.
 
 
+
+
+
 25 - Responsive Design Thinking
 ===============================
 
@@ -515,6 +587,9 @@ build your layouts to be reasonably flexible or within a common device size.
 Then you can set break points, providing alternative layouts for
 those various sizes. Think about it this way,
 small phone, large phone, medium tablet, and large tablet.
+
+
+
 
 
 26 - Layout Managers
@@ -536,6 +611,9 @@ possibilities. We'll explore these layouts in greater detail when we build more
 complex screens. For now, let's get back to building our forecast list.
 
 
+
+
+
 27 - ScrollViews vs ListViews
 =============================
 
@@ -554,6 +632,9 @@ The answer might not be immediately obvious but think about ways in which you
 can be more efficient in your use of the views used to display the entire list.
 
 
+
+
+
 28 - Scroll Views vs ListViews
 ==============================
 
@@ -563,6 +644,9 @@ it's never been seen. We want to try and create a way, that we only need to use,
 as many views as are currently visible in the screen plus one on either end,
 to make sure we can scroll without flickering. To do that,
 Android uses List View. So, let's take a closer look at that now.
+
+
+
 
 
 29 - ListView  Recycling
@@ -596,6 +680,9 @@ controlling how each of these elements is laid out. Be it a list or
 a grid in these particular instances.
 
 
+
+
+
 30 - Add ListView to layout
 ===========================
 
@@ -612,6 +699,9 @@ a RelativeLayout. After you make the changes, compile and
 run your app. You'll be a little underwhelmed with the blank screen, but
 that's okay. That's because we haven't populated the list view with data yet,
 and that will come in a later step. Check the box when you're done.
+
+
+
 
 
 31 - Add ListView to layout
@@ -631,6 +721,9 @@ listview_forecast, onto the ListView. And then, since this layout only contains
 one child, we can simplify the layout by changing this into a FrameLayout.
 
 
+
+
+
 32 - Create Some Fake Data
 ==========================
 
@@ -642,12 +735,18 @@ shown in the wire frames. For example, the Today List item will be
 represented as a string shown here. When you're done, check the box and submit.
 
 
+
+
+
 33 - Create Some Fake Data
 ==========================
 
 At this point, we should have created some fake data to display in our list.
 We created an array of stings to represent each weather forecast item and
 then returned it into an array list.
+
+
+
 
 
 34 - Adapters
@@ -686,6 +785,9 @@ do that, and return it to the ListView. And now we have the list item for
 Charlie and position two in the list. And we have our complete list
 
 
+
+
+
 35 - Initialize the Adapter
 ===========================
 
@@ -714,6 +816,9 @@ which is the array list of forecast data that we defined earlier.
 Now go ahead and initialize your adapter. Check this box when you're done.
 
 
+
+
+
 36 - Initialize the Adapter Solution
 ====================================
 
@@ -721,6 +826,9 @@ When you've declared your array adapter of strings, it should look something
 like this. We pass in a context, which is this fragment's parent activity,
 as well as the ID of the list item layout, and the ID of the text view we
 want to populate. And lastly, we pass in the forecast data.
+
+
+
 
 
 37 - Finding Views findViewById
@@ -757,6 +865,9 @@ can call find view by ID on. Then set the adapter on it. If you want an example,
 you can see one in the link below. Check the boxes when you're done.
 
 
+
+
+
 38 - Finding Views findViewById
 ===============================
 
@@ -768,11 +879,17 @@ the ListView based on the weekForecast data. Note that the rootView here
 refers to the root view of the fragment, which we just inflated up above here.
 
 
+
+
+
 39 - Great Work
 ===============
 
 And now we have this beautiful list of weather data in our app. Great job.
 High five. [SOUND]
+
+
+
 
 
 40 - Lesson One Recap
@@ -788,6 +905,9 @@ only just gotten started. The app we've got so far is using static mock data.
 So join us in lesson two to learn how to hook it up to real weather data.
 But before that, take a moment to cleanse your palate with
 a brief interlude exploring the history and evolution of the Android ecosystem.
+
+
+
 
 
 41 - Storytime Android Platform

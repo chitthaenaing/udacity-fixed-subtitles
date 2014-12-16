@@ -12,6 +12,9 @@ screens. But first I'd like to tell you a
 little more about the principles behind great Android design.
 
 
+
+
+
 02 - Android Design Principles
 ==============================
 
@@ -61,6 +64,9 @@ own creative vision. Deviation from the guidelines is encouraged,
 but when you do do so, deviate with purpose.
 
 
+
+
+
 03 - Enjoyable Apps
 ===================
 
@@ -72,11 +78,17 @@ the app contributes to your enjoyment using
 it and click this box when you're done.
 
 
+
+
+
 04 - Enjoyable Apps
 ===================
 
 Thank you for posting your favorite apps on the forum, we'll be checking
 in on them periodically. But for now, let's get back to building Sunshine.
+
+
+
 
 
 05 - Recap on Views and ViewGroups
@@ -174,6 +186,9 @@ and then later build up the tablet UI. Then we'll receive a set of visual marks
 red lines and assets, all of this will help us build a pixel perfect layout
 
 
+
+
+
 06 - Building List Item
 =======================
 
@@ -216,6 +231,9 @@ this task, don't worry about the font color, or
 font size, or any other visual details until later.
 After you compile and run, the app should look
 something like this. Check this box when you're done.
+
+
+
 
 
 07 - Building List Item Solution
@@ -264,6 +282,9 @@ we have another vertical linear layout with the high temperature_textview and
 the low temperature_textview. And that's it.
 
 
+
+
+
 08 - Building Todays List Item
 ==============================
 
@@ -276,6 +297,9 @@ we callled this list item date text view. So we use those same ID's for
 the elements in this XML file. You'll see why when we introduce view holders
 later. After you've finished adding it, make sure the app still compiles.
 You won't see any visual difference until the next step.
+
+
+
 
 
 09 - Building Todays List Item
@@ -308,6 +332,9 @@ center horizontal so that the icon and the weather forecast
 text view within it are also centered horizontally.
 
 
+
+
+
 10 - CursorAdapter
 ==================
 
@@ -329,6 +356,9 @@ The newView method knows how to return a new list
 item layout, but doesn't contain data yet. The bindView method knows
 how to take an existing layout and update
 it with the data pointed to by the cursor
+
+
+
 
 
 11 - Create ForecastAdapter
@@ -370,6 +400,9 @@ promised you that cursor adapters could handle multiple item view types,
 so we'll do that in the next step.
 
 
+
+
+
 12 - Create ForecastAdapter
 ===========================
 
@@ -385,6 +418,9 @@ so that it can be displayed in the text view. Then we do the
 same for the low temperature value. In the forecast fragment class, in the on
 create view method, we remove the use of the simple cursor adapter. Instead, we
 use the new forecast adapter and then we set it on the list view.
+
+
+
 
 
 13 - Two Item View Types
@@ -420,6 +456,9 @@ days. Go ahead and make these changes in your app and
 then finish the To Do. Check this box when you're done.
 
 
+
+
+
 14 - Two Item View Types
 ========================
 
@@ -431,6 +470,9 @@ layout xml file list item forecast today. If the
 list type is for a future day, then we
 use this resource ID. This points to the list
 item forecast layout xml. Then we inflate that layout.
+
+
+
 
 
 15 - Using the ViewHolder Pattern
@@ -464,6 +506,9 @@ the Date View, the Description View etc. Go ahead and define a View
 Holder class and update your adapter to use it. When you compile and
 run, you may not see that noticeable of a difference. But now your
 list will perform better when it scales to hundreds or thousands of items.
+
+
+
 
 
 16 - Formatting Strings
@@ -501,6 +546,9 @@ And remember, use this notation going forward
 for when you need to format strings
 
 
+
+
+
 17 - Coding the Details Screen
 ==============================
 
@@ -529,6 +577,9 @@ hooked up, so all the right information is displayed on screen. You can
 use the code snippets provided below
 for helper functions and strings that you're
 going to need. And again, leaving a placeholder image is fine for now
+
+
+
 
 
 18 - Coding the Details Screen
@@ -596,6 +647,9 @@ properly for the UI. This involved copying over
 the strings and the utility method from the gist.
 
 
+
+
+
 19 - Optimizing Layouts
 =======================
 
@@ -616,6 +670,9 @@ than ten nested views or over 80 views in
 total. That probably sounds like a lot, but let's
 open up the Hierarchy Viewer tool in Android studio and
 see just how quickly that can add up
+
+
+
 
 
 20 - Hierarchy Viewer
@@ -656,6 +713,9 @@ about, it also checks from
 everything from accessibility problems, missing translations,
 and hard coded strings. You can find all the things lint checks
 for at the developer tools page linked to in the instructor notes
+
+
+
 
 
 21 - Responsive Design
@@ -704,6 +764,9 @@ UI often has an impact on the phone
 design, as well as the architectural decisions made here.
 
 
+
+
+
 22 - Splitting Devices into Buckets
 ===================================
 
@@ -735,6 +798,9 @@ So we need a consistent unit of measure to define physical
 size, and in Android we call that density-independent pixels or dips
 or dp for short. That way, a 48 dp button will
 be the same physical size across all these different screen densities.
+
+
+
 
 
 23 - Resource Folder Qualifiers
@@ -792,6 +858,9 @@ But, since Android 3.2, the new smallest width qualifier has
 given us much more fine grain control over our layouts.
 
 
+
+
+
 24 - Screen Density Size
 ========================
 
@@ -805,6 +874,9 @@ And, the pixel density should always refer to one
 of our buckets, LDPI, MDPI, HDPI, XHDPI, or XXHDPI.
 
 
+
+
+
 25 - Screen Density Size
 ========================
 
@@ -815,6 +887,9 @@ density of 252 dpi, which is hdpi, whereas
 the Nexus 5, which was released three years after
 the Nexus One, has a much higher screen
 density, 445 dots per inch. That makes it xxhdpi.
+
+
+
 
 
 26 - Images for Different Densities
@@ -844,6 +919,9 @@ by 48 pixels. The one for HDPI is 1.5 times
 the size of this one. From an XHDPI device,
 the icon is two times the size of the MDPI
 one, and for an XXHDPI device, the icon is the three times the size of this one.
+
+
+
 
 
 27 - Adding Images to the App
@@ -898,6 +976,9 @@ you can also remove any images you hard coded
 into the layout XML, because they'll be populated dynamically now.
 
 
+
+
+
 28 - Adding Images to the App
 =============================
 
@@ -929,6 +1010,9 @@ that value now. Otherwise, on app launch, it will load
 up the placeholder image and then flash to the actual
 icon. Now that the wire frame implementation for the phone
 UI is pretty much complete, let's look at the tablet UI.
+
+
+
 
 
 29 - Tablet UX Mocks
@@ -966,6 +1050,9 @@ looks like the other days. There's no special
 today layout on the tablet. So hopefully it's clear
 how we're going to approach implementing this tablet behavior and
 we're going to step through it slowly, one by one
+
+
+
 
 
 30 - Why Do We Need Fragments
@@ -1021,11 +1108,17 @@ any act with multiple activities and replace it
 with a single activity that's host to multiple fragments.
 
 
+
+
+
 31 - Why We Dont Only Use Fragments
 ===================================
 
 Think about how that might work. What are some of the reasons
 you may not want to create only a single activity within your application?
+
+
+
 
 
 32 - Why We Dont Only Use Fragments
@@ -1043,6 +1136,9 @@ single activity includes both sensitive information and information that's safe
 to share. A good rule of thumb is to create a
 new activity whenever the context changes. For example, displaying a
 different kind of data, while switching from viewing to entering data.
+
+
+
 
 
 33 - How Fragments Work
@@ -1100,6 +1196,9 @@ view, if the fragment has already been placed
 in the back stack, once the activity is destroyed.
 
 
+
+
+
 34 - Try the fragment manager
 =============================
 
@@ -1111,6 +1210,9 @@ a new instance of the details fragment. Keep in
 mind that this transaction should allow the user to reverse
 the transaction using the Back button. And in this
 case, we'll be calling this code from within an activity.
+
+
+
 
 
 35 - Try the Fragment Manager
@@ -1125,6 +1227,9 @@ Now you can actually chain another of changes within the same
 transaction, so it's also possible to achieve much of the same
 effect by first removing the contents of container A and adding fragment
 B to that container.
+
+
+
 
 
 36 - Fragments with No UI
@@ -1148,6 +1253,9 @@ bound to the lifetime of the activity, which don't
 need to be interrupted every time the device rotates.
 
 
+
+
+
 37 - Sunshine Resource Folders
 ==============================
 
@@ -1158,6 +1266,9 @@ activity main layout file, so that we can accomplish
 a one pane UI on phones, and a 2 pane UI on tablets. You can select from
 these options for this quiz. You can use the
 link provided below to help you answer the question.
+
+
+
 
 
 38 - Sunshine Resource Folders
@@ -1185,6 +1296,9 @@ means seven inch and ten inch devices in
 both portrait and landscape mode. And lastly, we
 don't need layout-sw720dp because we don't have different
 layouts for seven inch versus ten inch devices.
+
+
+
 
 
 39 - Smallest Width Qualifier
@@ -1220,6 +1334,9 @@ over these two. Since the detail layout is not defined
 here, it will fall back to a less specific folder, which
 is this one. Then for the main.xml file, it's not declared
 in either of these, so it falls back to this one.
+
+
+
 
 
 40 - Build 2-Pane Tablet UI
@@ -1316,6 +1433,9 @@ from being hardcoded in the layout. But once this data's populated
 dynamically in a later section, it should show up again.
 
 
+
+
+
 41 - Handle List Item Click
 ===========================
 
@@ -1370,6 +1490,9 @@ is what the app should look like when you're done. When you
 tap on a different date, it updates the detail pane. You can
 remove any hard coded data because
 the layout should be populated dynamically now.
+
+
+
 
 
 42 - Handle List Item Click
@@ -1429,6 +1552,9 @@ for the activity class, the getParentActivityIntent method was only added in API
 level 16. And you can check that version 16 maps to jelly bean.
 
 
+
+
+
 43 - Activated List Item Style
 ==============================
 
@@ -1475,6 +1601,9 @@ web pane mode, we see just the press state, because
 tapping on an item brings you to the details screen.
 
 
+
+
+
 44 - Activated List Item Style
 ==============================
 
@@ -1493,6 +1622,9 @@ The two files have a different number of styles. If it's not declared in
 a higher folder, then it will just fall back to the Base style.
 
 
+
+
+
 45 - Restore Scroll Position on Rotation
 ========================================
 
@@ -1505,6 +1637,9 @@ is killed, when it's restored, we should
 read the position back from the Bundle. If the list isn't populated at
 that time, then we should wait for the onLoadFinished callback to use a
 position to scroll to the selected item. Check these boxes when you're done.
+
+
+
 
 
 46 - Restore Scroll Position on Rotation
@@ -1521,6 +1656,9 @@ cursor is swapped. Then, we can tell the list view to set selection
 on that position, and that position will be scrolled into view.
 
 
+
+
+
 47 - Alternate Detail Layout
 ============================
 
@@ -1535,6 +1673,9 @@ fragment detail layout in. In order to achieve this layout on phone
 portrait, and this layout for phone landscape and tablet.
 
 
+
+
+
 48 - Alternate Detail Layout
 ============================
 
@@ -1546,6 +1687,9 @@ work fine because of this folder, but then tablet
 portrait would fall back to this layout so we
 should just define it in the layout sw600dp folder
 so that all tablets regardless of orientation use this layout
+
+
+
 
 
 49 - Wide Detail Fragment
@@ -1576,6 +1720,9 @@ In the next coding task, we're going to make
 the today list item look more like the other items in the list for the tablet.
 
 
+
+
+
 50 - Wide Detail Fragment
 =========================
 
@@ -1587,6 +1734,9 @@ to override the fragment detail layout. In the values-land
 and values-sw600dp folders, we create res.xml files. In both files,
 we alias fragment detail through fragment detail wide. And
 now we have a more responsive layout to wider screens.
+
+
+
 
 
 51 - Today Item on Tablet
@@ -1618,6 +1768,9 @@ the fragment manager and pass it the fragment ID.
 Finish changing the code so the app looks like this.
 
 
+
+
+
 52 - Today Item on Tablet
 =========================
 
@@ -1630,6 +1783,9 @@ where the forecast adapter is initialized. So we set the Boolean here,
 as well. The reason we have this code here is because it's
 a public method. So, in the future, it could be called before or
 after this method.
+
+
+
 
 
 53 - Visual Mocks
@@ -1647,6 +1803,9 @@ visual mocks. How did we come up with these values?
 Well we used the Android design guide, which has information on
 metrics and grids, and we adapted them to fit our
 app's needs. You can click on the link for more info.
+
+
+
 
 
 54 - Action Bar
@@ -1690,6 +1849,9 @@ through honeycomb. And then for ice cream sandwich
 and above, it goes through the framework
 implementation of the action bar. You can see
 the code for the two files below. Go ahead and make these two changes now.
+
+
+
 
 
 55 - Implementing Redlines
@@ -1750,6 +1912,9 @@ code file. This is what is looks like when you're done. These
 items looks polished, but we haven't gotten to the today item yet.
 
 
+
+
+
 56 - Implementing Redlines on Your Own
 ======================================
 
@@ -1761,6 +1926,9 @@ you go back to the Sunshine app, you can see
 the bounds for all the views, including padding and margin.
 When you're done, feel free to check with our implementation
 at the link provided below, then check the box to continue
+
+
+
 
 
 57 - Additional App UI Changes
@@ -1778,6 +1946,9 @@ so that the today layout is auto selected when you first launch the
 app. Also, this should just say today instead of having the full date. That
 way, it'll look more like the other items. As you play around with the
 app, feel free to make changes you think would help improve the user experience.
+
+
+
 
 
 58 - Coding Task on Accessibility
@@ -1805,6 +1976,9 @@ accessibility issue in the app. Then please share
 what you did in the class discussion forum.
 
 
+
+
+
 59 - Coding Task on Accessibility
 =================================
 
@@ -1817,6 +1991,9 @@ forecast from the cursor, we also set it as a content
 description on the icon. Similarly, in the detail fragment, once we
 get the weather forecast, we set that as the content description
 on the icon. Now clicking on the image speaks the weather description out loud.
+
+
+
 
 
 60 - Sizing Your Custom Views
@@ -1885,6 +2062,9 @@ height values. If you don't call these setMeasureDimension method, your
 app will as soon as your view is laid out.
 
 
+
+
+
 61 - Create Your Own View
 =========================
 
@@ -1898,11 +2078,17 @@ onMeasure method and set your dimensions. Click here when you're done,
 and, you're ready to get started drawing the contents of your gear.
 
 
+
+
+
 62 - Create Your Own View
 =========================
 
 Excellent. Now let's get started putting
 some actual content into our custom view.
+
+
+
 
 
 63 - Draw Your Own View
@@ -1943,11 +2129,17 @@ using it it's full package name and class name in the XML
 like this. Run it and then post a screenshot of your new view into the forum.
 
 
+
+
+
 64 - Draw Your Own View
 =======================
 
 Thanks. Now take the opportunity to browse the forum
 and see what other students have managed to create.
+
+
+
 
 
 65 - Custom View Accessiblity
@@ -1973,10 +2165,16 @@ value, the accessibility event. Go ahead and add accessibility handlers
 to your view and then click here when you're done.
 
 
+
+
+
 66 - Custom View Accessibility Solution
 =======================================
 
 Perfect. Now our views look good, and are accessible to everyone.
+
+
+
 
 
 67 - Input Events in Custom Views
@@ -2005,6 +2203,9 @@ like a button and works kind of like a button, you should probably just go ahead
 and use a button, but I think this non sequitur has gone on long enough.
 
 
+
+
+
 68 - Lesson 5 Recap
 ===================
 
@@ -2017,6 +2218,9 @@ six where we take our foreground-only app and discover how to
 make it update and trigger notifications from the background, all
 without draining your battery. But first, join me back at Google
 for another story from the Android history books.
+
+
+
 
 
 69 - Storytime Android Open Source Project

@@ -11,6 +11,9 @@ permission system, Network I/O, and how to move
 time consuming tasks off the main UI thread.
 
 
+
+
+
 02 - Review Data Provided by Open Weather Map
 =============================================
 
@@ -33,6 +36,9 @@ freezing rain, or even volcanic ash. I don't know
 about you, but hopefully that doesn't happen too often.
 
 
+
+
+
 03 - Try Out Web Queries
 ========================
 
@@ -40,6 +46,9 @@ Take a moment now to become familiar with the API by going
 back to the main page, and looking at the different queries and
 the different parameters supported. Just modify the query params in the URL
 address bar. Check the box floating in the clouds when you're done.
+
+
+
 
 
 04 - Find the Query We Want
@@ -60,6 +69,9 @@ do the conversion ourself. Enter the URL
 that fulfills these requirements in the box below,
 
 
+
+
+
 05 - Find the Query We Want
 ===========================
 
@@ -67,6 +79,9 @@ For the Mountainview post code 94043, this is what the query would
 look like. We set the mode to be JSON format, temperature units
 to be in metric, and the count param to be seven days
 of forecast data. Let's take this url and use it in our app
+
+
+
 
 
 06 - HTTP Request for Weather Data
@@ -86,6 +101,9 @@ the GitHub gist below. After you've taken a
 look at it, check this box to continue.
 
 
+
+
+
 07 - HTTP Requests
 ==================
 
@@ -101,6 +119,9 @@ Http Url Connection class because it's general purpose and light
 weight, and it's been optimized to suit the needs of
 most Android apps. To learn more about connecting to the
 network, see the training guide and blog post link below.
+
+
+
 
 
 08 - Logcat
@@ -122,6 +143,9 @@ then you all these log messages here, which is what
 we saw with adb logcat. Now try viewing the logs
 yourself with either of those methods. If you do both,
 then you get brownie points. Check this box to proceed.
+
+
+
 
 
 09 - Logging on Android
@@ -153,6 +177,9 @@ error messages that you really need to see will either roll of the
 logs or it will get lost in the sea of unimportant log messages.
 
 
+
+
+
 10 - Network Call
 =================
 
@@ -174,6 +201,9 @@ this quiz question. You're using a device that's running
 honeycomb or later. Use the emulator if needed.
 
 
+
+
+
 11 - What caused the crash Solution
 ===================================
 
@@ -193,6 +223,9 @@ app. It's within the placeholder fragment class, in the onCreateView method. And
 it happens in main activity.java file, in line 116. So
 if we go back to the code, on that line you can see that urlConnection.connect
 actually caused the error, and that we can't do that on the main thread.
+
+
+
 
 
 12 - Main Thread vs Background Thread
@@ -224,6 +257,9 @@ developer's site you can try to check stackoverflow.com. It's a question
 and answer site that many Android developers use as a valuable resource.
 So chances are likely that someone has
 already asked a similar question that you have.
+
+
+
 
 
 13 - Main Thread vs Background Thread
@@ -265,6 +301,9 @@ so it's okay to specify that as void. And the third type is type of results
 that we'll be sending back to the main thread through the onPostExecute method
 
 
+
+
+
 14 - Which Thread for AsyncTask
 ===============================
 
@@ -278,6 +317,9 @@ onPostExecute is optional as well as some other methods. For each
 method, tell us whether it's on the main or background thread.
 You have a 50% chance of getting each one correct or a 100%
 if you actually go check the java doc, so go do that now.
+
+
+
 
 
 15 - Which Thread for AsyncTask
@@ -307,6 +349,9 @@ the background thread, then it calls onPostExecute
 with the results on the main thread.
 
 
+
+
+
 16 - Move to AsyncTask
 ======================
 
@@ -330,6 +375,9 @@ look something like this. There really should be no difference except it
 doesn't crash now. In the next step we will add code to execute
 the task. And later in the lesson, we'll do JSON parsing and updating
 the UI. In the meantime though, make these initial changes to your code.
+
+
+
 
 
 17 - Move to AsyncTask
@@ -357,6 +405,9 @@ we want these two to be in sync. If you ever rename the
 class then it will throw an exception unless you also update it here.
 
 
+
+
+
 18 - Add Refresh Button
 =======================
 
@@ -368,6 +419,9 @@ can execute the task any time we wanted by
 interacting with the UI somehow. So, we're going to add
 a Refresh menu option for debugging. A warning, though,
 this menu option should not shift in the final app.
+
+
+
 
 
 19 - Why AsyncTask is Not Optimal
@@ -393,6 +447,9 @@ acceptable for this particular purpose. Let's also take a look at
 our background threading model, which of the following is potential an issue?
 
 
+
+
+
 20 - Why AsyncTask is Not Optimal
 =================================
 
@@ -405,6 +462,9 @@ the transfer is happening on a thread whose lifetime is tied
 explicitly to a UI component, in this case an activity. So
 if the activity is terminated by something like a screen rotation,
 the transfer will also be terminated.
+
+
+
 
 
 21 - Better Ways to Sync
@@ -433,6 +493,9 @@ look at these approaches to invisibly updating
 your app from the background a little
 later. For now, keep in mind that the Refresh button and the new thread
 solution is just a place holder while we hook up the rest of the app.
+
+
+
 
 
 22 - Menu Buttons
@@ -474,6 +537,9 @@ The only Menu option that should show up below the Settings
 menu is the Help menu. Check out the link for more details.
 
 
+
+
+
 23 - Refresh Button
 ===================
 
@@ -493,6 +559,9 @@ item. Inflating it will be in the coding test after
 this. See how the menu main.xml is implemented as an
 example. For an additional hint, see the menu training guide
 below. When you're done, you can click on this box here.
+
+
+
 
 
 24 - Refresh Button
@@ -518,6 +587,9 @@ if it's a proper name or if it's for debugging like this one,
 then you can indicate to the translator that they can skip over this strings
 
 
+
+
+
 25 - Refresh Button Behavior
 ============================
 
@@ -530,6 +602,9 @@ If needed, you can look at mainactivity.java for reference. If you get
 stuck and don't see the menu item appear, try to answer
 this question first: what fragment method do you need to call in
 order to report that it has menu options to display?
+
+
+
 
 
 26 - Refresh Button Behavior
@@ -559,6 +634,9 @@ over the activity and fragment life cycle methods in more detail in later
 lessons, but if you want, you can read the documentation linked below for now.
 
 
+
+
+
 27 - Execute AsyncTask
 ======================
 
@@ -566,6 +644,9 @@ Now modify the code so that when the Refresh menu item
 is selected, it executes the FetchWeatherTask. But hang on. When you
 tap on the Refresh button, it actually crashes. Why don't you
 go check the logs to see what error is causing this.
+
+
+
 
 
 28 - Execute AsyncTask
@@ -581,6 +662,9 @@ we see that the app crashed. This time though,
 with a security expression. It says Permission denied and
 ask if you're missing the INTERNET permission or not. And indeed,
 we are missing the INTERNET permission, so we need to request it.
+
+
+
 
 
 29 - Permissions
@@ -622,6 +706,9 @@ permissions in these instances to
 similarly restrict access to sensitive information.
 
 
+
+
+
 30 - Permissions in the Manifest
 ================================
 
@@ -629,6 +716,9 @@ Take a moment to explore the
 security section of developers.android.com. Which of these
 following activities can only be done
 after declaring a uses-permission in the manifest?
+
+
+
 
 
 31 - Permissions in the Manifest
@@ -645,6 +735,9 @@ access. However, UI can only access the user's current location
 if it explicitly declares a user's permission.
 
 
+
+
+
 32 - Adding Internet Permission
 ===============================
 
@@ -656,6 +749,9 @@ the permission that you used. Run the app
 again, to ensure that it doesn't crash. You can
 also log the output of the network call, to
 verify that you got the weather data back correctly.
+
+
+
 
 
 33 - Adding Internet Permission
@@ -674,6 +770,9 @@ going to use the command line. These are the real time logs, and then if I
 hit refresh, then I see the weather data here. The verbose log, and this is our
 log tag fetch weather task. Here's the forecastJsonStr,
 and this is all the output from the server.
+
+
+
 
 
 34 - Postal Code Param
@@ -697,6 +796,9 @@ make it easier in the future if we ever
 have to make these options configurable by the user.
 If you want to verify that the URL is built up properly. After
 you do these tasks, you can use verbose logging to print it out.
+
+
+
 
 
 35 - Postal Code Param
@@ -726,6 +828,9 @@ menu we tap Refresh. Then we see the log
 tag FetchWeatherTask with our UI printed out. It says
 
 
+
+
+
 36 - Identify Desired JSON Attributes
 =====================================
 
@@ -747,10 +852,16 @@ looking at the leaf nodes. Make your selections below on which
 attributes we'll need in order to display the list of forecasts
 
 
+
+
+
 37 - Identify Desired JSON Attributes
 =====================================
 
 And here the attributes we care about to display a list of forecasts in our app.
+
+
+
 
 
 38 - Parse Out the Max Temp
@@ -774,6 +885,9 @@ you paste your answer here. Or you can use
 the Udacity IDE. Whichever feels more natural to you.
 
 
+
+
+
 39 - Parse Out the Max Temp
 ===========================
 
@@ -785,6 +899,9 @@ look like. We change the JSON string into a JSON
 object. Then we look for the list array. Within that
 we find the day we care about. Then we look
 for the temp node. And then find the max temperature.
+
+
+
 
 
 40 - JSON Parsing
@@ -804,6 +921,9 @@ forecasts. You can log the output to check that the array
 is correct. The format of one day's forecast should look like this.
 
 
+
+
+
 41 - JSON Parsing
 =================
 
@@ -819,6 +939,9 @@ any Json exceptions if there's a problem with parsing. We
 wanted to verify that the string array of forecast data
 is correct. So, within the getWeatherDataFromJson method, we added some
 logging statements to print out each element of the array.
+
+
+
 
 
 42 - Update the Adapter
@@ -850,6 +973,9 @@ array. That way you can call the clear
 method or the add method on this list collection.
 
 
+
+
+
 43 - Update the Adapter
 =======================
 
@@ -870,6 +996,9 @@ the next seven days for your location. Even though we hit
 Refresh, we don't have any verbose logging statements being printed
 out here. We don't need them anymore, because we have a
 way to check that our code is correct by looking at the UI now.
+
+
+
 
 
 44 - Source Code for ArrayAdapter
@@ -931,6 +1060,9 @@ more you learn about the platform the
 better of an Android developer you can become.
 
 
+
+
+
 45 - Take a Screenshot
 ======================
 
@@ -952,6 +1084,9 @@ then you can share it out to anyone you want.
 You can show them what an awesome app you're building.
 
 
+
+
+
 46 - Done
 =========
 
@@ -969,6 +1104,9 @@ Over to beta now, while I take a quick nap
 on this Done pillow. I'll see you in lesson three.
 
 
+
+
+
 47 - Lesson 2 Recap
 ===================
 
@@ -980,6 +1118,9 @@ of network I/O. Join us again in lesson three,
 where we'll create more activities and learn how to navigate
 between them. But first, come with me as I take
 you on another voyage in to the history of Android
+
+
+
 
 
 48 - Storytime Android Consumer Platform
